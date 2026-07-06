@@ -85,3 +85,101 @@ reload only — `localStorage` satisfies that with zero new dependencies.
 requirement.
 
 **Approved by:** User
+
+---
+
+## Decision #4 — Quiz feedback timing: advance on submit, review at end
+
+**Date:** 2026-07-06
+
+**Decision:** Submitting a quiz answer records it and advances immediately;
+correct answers and explanations are shown only in the end-of-quiz review,
+not per-question.
+
+**Alternatives considered:** Immediate correct/incorrect reveal after each
+question.
+
+**Why rejected (for this slice):** Advancing without feedback mirrors
+actual PMP exam conditions — there is no per-question feedback on test
+day. An immediate-feedback "practice mode" is a legitimate but separate
+feature, not a default behavior of the quiz engine.
+
+**Tradeoffs:** Learners do not find out what they missed until the quiz
+completes; the end-of-quiz review (missed questions with correct answers
+and explanations) is the single feedback point.
+
+**Evidence:** Slice 2 success conditions specified "on submit: record
+correct/incorrect, advance to the next question"; the implementation and
+its tests already enforce that no answer/explanation is visible before
+submit.
+
+**Revisit:** If/when a Practice Mode slice is planned.
+
+**Approved by:** User
+
+---
+
+## Decision #5 — Content Studio scope: local import/validation tool, not a generator
+
+**Date:** 2026-07-06
+
+**Decision:** Content Studio is a local import/validation tool for content
+authored externally (by Claude in chat) and pasted in by the User. It
+validates pasted content against the existing schemas and writes to
+`data/questions.json` / `data/lessons.json`. It is not a live AI content
+generator.
+
+**Alternatives considered:**
+1. A read-only content viewer.
+2. Skipping the feature entirely.
+
+**Why rejected:**
+1–2. The question/lesson bank needs to scale well beyond MVP seed content
+to be useful for real exam prep, and hand-editing JSON doesn't scale. A
+live generator is not an option regardless: it would violate the
+constitution's no-AI-API-dependency rule (Section 2).
+
+**Tradeoffs:** An import tool is a new maintenance surface whose
+validation logic must stay in sync with the data-contract tests; content
+quality still depends entirely on the externally authored material and the
+User's review — the tool checks shape, not correctness.
+
+**Evidence:** Constitution Section 1 (local-first, no AI API in MVP) and
+Section 2 (never call a paid AI API) constrain the design space to
+local tooling; the existing data-contract tests define the validation
+rules the tool must apply.
+
+**Revisit:** Scope and success conditions to be specified per slice before
+implementation (ChatGPT + User per the RACI).
+
+**Approved by:** User
+
+---
+
+## Decision #6 — Defer per-domain correct ≤ total check in quizHistory.js validation
+
+**Date:** 2026-07-06
+
+**Decision:** `isValidEntry()` in `src/quiz/quizHistory.js` checks
+type/shape (including entry-level `score <= total`) but not that each
+domain tally's `correct <= total`. This stricter per-domain check is
+deferred, not added now.
+
+**Alternatives considered:** Adding the stricter check now.
+
+**Why deferred:** Not a blocker for Slice 3; low risk since the only
+writer (`buildHistoryEntry`) already guarantees this invariant internally —
+it increments a domain's `correct` and `total` together, so it cannot
+produce a tally where `correct > total`.
+
+**Tradeoffs:** A hand-edited or externally corrupted stored history entry
+with an impossible domain tally would pass validation and flow into
+aggregate stats rather than being discarded.
+
+**Evidence:** `buildHistoryEntry` is the single write path to
+`pmp-quiz-history-v1`; loadHistory's existing shape validation plus the
+entry-level `score <= total` check bound the damage of malformed data.
+
+**Revisit:** If a second write path to history is ever introduced.
+
+**Approved by:** User (via ChatGPT review, 2026-07-06)
