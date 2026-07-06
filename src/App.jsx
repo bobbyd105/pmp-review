@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import QuestionBank from './components/QuestionBank.jsx'
 import Quiz from './components/Quiz.jsx'
+import Dashboard from './components/Dashboard.jsx'
+
+const VIEWS = [
+  { id: 'quiz', label: 'Quiz' },
+  { id: 'browse', label: 'Browse questions' },
+  { id: 'dashboard', label: 'Dashboard' },
+]
 
 export default function App() {
   const [view, setView] = useState('quiz')
@@ -10,25 +17,22 @@ export default function App() {
       <header className="app-header">
         <h1>PMP Study Platform</h1>
         <nav className="app-nav" aria-label="Main">
-          <button
-            type="button"
-            className={view === 'quiz' ? 'nav-button active' : 'nav-button'}
-            aria-pressed={view === 'quiz'}
-            onClick={() => setView('quiz')}
-          >
-            Quiz
-          </button>
-          <button
-            type="button"
-            className={view === 'browse' ? 'nav-button active' : 'nav-button'}
-            aria-pressed={view === 'browse'}
-            onClick={() => setView('browse')}
-          >
-            Browse questions
-          </button>
+          {VIEWS.map(({ id, label }) => (
+            <button
+              key={id}
+              type="button"
+              className={view === id ? 'nav-button active' : 'nav-button'}
+              aria-pressed={view === id}
+              onClick={() => setView(id)}
+            >
+              {label}
+            </button>
+          ))}
         </nav>
       </header>
-      {view === 'quiz' ? <Quiz /> : <QuestionBank />}
+      {view === 'quiz' && <Quiz />}
+      {view === 'browse' && <QuestionBank />}
+      {view === 'dashboard' && <Dashboard />}
     </main>
   )
 }
