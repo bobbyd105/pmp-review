@@ -1,0 +1,170 @@
+[
+  {
+    "id": "q001",
+    "eco_domain": "People",
+    "eco_task": "Task 1: Manage conflict",
+    "question": "Two senior developers on your team disagree about which database technology to use, and the dispute has begun delaying sprint work. Both have valid technical arguments. What should the project manager do first?",
+    "options": [
+      "Escalate the decision to the sponsor so work can resume immediately",
+      "Facilitate a meeting where both developers evaluate the options against the project's documented requirements",
+      "Choose the technology yourself since the schedule is slipping",
+      "Reassign one of the developers to a different work stream to remove the conflict"
+    ],
+    "correct_answer": "Facilitate a meeting where both developers evaluate the options against the project's documented requirements",
+    "explanation": "Conflict over technical approach is best resolved collaboratively, close to the source, using objective criteria. Facilitating a requirements-based evaluation addresses the root cause and preserves team ownership. Escalating, deciding unilaterally, or removing a team member avoids the conflict rather than managing it, and each weakens team empowerment."
+  },
+  {
+    "id": "q002",
+    "eco_domain": "People",
+    "eco_task": "Task 2: Lead a team",
+    "question": "A project team has just formed and members are polite but hesitant to challenge each other's ideas, resulting in shallow design discussions. According to the Tuckman model, what stage is the team in, and what should the project manager do?",
+    "options": [
+      "Norming; step back and let the team self-organize",
+      "Forming; provide clear direction and create opportunities for members to build trust",
+      "Storming; mediate the underlying disagreements directly",
+      "Performing; delegate more authority to the team"
+    ],
+    "correct_answer": "Forming; provide clear direction and create opportunities for members to build trust",
+    "explanation": "Polite, guarded behavior with little open debate is characteristic of the forming stage, when members are still orienting themselves. The leader's role at this stage is directive: clarify goals and roles and deliberately build psychological safety so the team can move through storming productively. The other options match later stages the team has not reached."
+  },
+  {
+    "id": "q003",
+    "eco_domain": "People",
+    "eco_task": "Task 4: Empower team members and stakeholders",
+    "question": "During a hybrid project, a team member repeatedly asks the project manager to approve routine, low-risk technical decisions before proceeding. This is slowing delivery. What is the best response?",
+    "options": [
+      "Continue approving each decision to maintain control over quality",
+      "Ask the team lead to make the approvals instead of the project manager",
+      "Agree on decision-making boundaries with the team member so routine decisions within them need no approval",
+      "Raise the behavior as a performance concern in the team member's next review"
+    ],
+    "correct_answer": "Agree on decision-making boundaries with the team member so routine decisions within them need no approval",
+    "explanation": "Empowerment means giving team members defined authority and clarity about what they can decide on their own. Setting explicit decision boundaries builds autonomy while keeping genuinely high-risk decisions visible. Routing every approval through the PM or team lead keeps the bottleneck, and treating a request for guidance as a performance problem punishes the behavior instead of fixing the system."
+  },
+  {
+    "id": "q004",
+    "eco_domain": "People",
+    "eco_task": "Task 6: Build a team",
+    "question": "A project requires a machine-learning skill set that no current team member has. The work begins in three months, the budget is constrained, and the organization wants to retain capability after the project ends. What is the best option?",
+    "options": [
+      "Hire an external contractor for the duration of the project",
+      "Upskill an interested internal team member through training and mentoring before the work begins",
+      "Outsource the entire work package to a specialist vendor",
+      "Delay the project until a qualified employee can be recruited"
+    ],
+    "correct_answer": "Upskill an interested internal team member through training and mentoring before the work begins",
+    "explanation": "With three months of lead time, a constrained budget, and an explicit goal of retaining capability in-house, developing an internal team member satisfies all three constraints. Contractors and vendors cost more and take the knowledge with them when they leave, and delaying the project is unnecessary given the available lead time."
+  },
+  {
+    "id": "q005",
+    "eco_domain": "Process",
+    "eco_task": "Task 1: Execute project with the urgency required to deliver business value",
+    "question": "A product owner tells the team that a regulatory deadline has moved up, and only a subset of the planned features can be delivered in time. How should the team decide what to build first?",
+    "options": [
+      "Build the features in the order they appear in the original plan",
+      "Prioritize the features that deliver the highest business value and are required for compliance, delivering incrementally",
+      "Ask each stakeholder to vote on their favorite features",
+      "Extend working hours so the full original scope can still be delivered"
+    ],
+    "correct_answer": "Prioritize the features that deliver the highest business value and are required for compliance, delivering incrementally",
+    "explanation": "When time is fixed, scope must be sequenced by value — compliance-mandatory items first, then highest-value features, delivered incrementally so value lands before the deadline. Following the original order ignores the changed constraint, stakeholder popularity voting is not a value measure, and mandating overtime risks quality and team health without guaranteeing the deadline."
+  },
+  {
+    "id": "q006",
+    "eco_domain": "Process",
+    "eco_task": "Task 3: Assess and manage risks",
+    "question": "During risk review, the team identifies that a key supplier may be acquired by a competitor, which could interrupt component deliveries. The probability is low but the impact would be severe. What should the project manager do?",
+    "options": [
+      "Accept the risk because the probability is low",
+      "Record the risk in the risk register with a planned response, such as qualifying an alternate supplier, and assign an owner",
+      "Immediately switch to a different supplier to eliminate the risk",
+      "Add cost contingency equal to the full impact of the risk"
+    ],
+    "correct_answer": "Record the risk in the risk register with a planned response, such as qualifying an alternate supplier, and assign an owner",
+    "explanation": "A low-probability, high-impact threat warrants a documented response and a named owner — mitigation through an alternate supplier reduces impact if the risk materializes. Passive acceptance ignores the severe impact, switching suppliers immediately incurs certain cost to avoid an uncertain event, and reserving the full impact amount ties up contingency without reducing the risk."
+  },
+  {
+    "id": "q007",
+    "eco_domain": "Process",
+    "eco_task": "Task 6: Plan and manage schedule",
+    "question": "Halfway through a predictive project, a critical-path activity is two weeks late. The sponsor insists the end date cannot move, and no additional budget is available. Which schedule compression technique should the project manager evaluate first?",
+    "options": [
+      "Crashing, by adding more resources to critical-path activities",
+      "Fast tracking, by performing critical-path activities in parallel where dependencies allow",
+      "Reducing scope without consulting stakeholders",
+      "Extending the schedule baseline by two weeks"
+    ],
+    "correct_answer": "Fast tracking, by performing critical-path activities in parallel where dependencies allow",
+    "explanation": "With no additional budget, fast tracking is the compression technique to evaluate first because it re-sequences existing work in parallel at no direct added cost, accepting some rework risk. Crashing adds resources and therefore cost, cutting scope without stakeholder agreement violates change control, and extending the baseline contradicts the fixed end date."
+  },
+  {
+    "id": "q008",
+    "eco_domain": "Process",
+    "eco_task": "Task 10: Manage project changes",
+    "question": "A stakeholder emails the project manager asking for a \"small\" enhancement while the team is mid-iteration on a predictive project. The stakeholder says it is too minor to bother the change control board. What should the project manager do?",
+    "options": [
+      "Implement the change quietly since it is small and keeps the stakeholder satisfied",
+      "Reject the change because the baseline is already approved",
+      "Assess the change's impact and submit it through the change control process",
+      "Ask the team to implement it only if they finish their planned work early"
+    ],
+    "correct_answer": "Assess the change's impact and submit it through the change control process",
+    "explanation": "In a predictive environment every change to baselined scope goes through integrated change control, regardless of perceived size — 'small' changes are how scope creep starts. Impact assessment may show the change is trivial or costly; either way the CCB decides with full information. Implementing it quietly bypasses governance, and outright rejection or 'if there's time' both skip the required assessment."
+  },
+  {
+    "id": "q009",
+    "eco_domain": "Process",
+    "eco_task": "Task 8: Plan and manage scope",
+    "question": "During backlog refinement on an adaptive project, the product owner keeps adding items directly to the current sprint, and the team's velocity is dropping. What should the project manager (acting as facilitator) do?",
+    "options": [
+      "Coach the product owner to add new items to the product backlog for prioritization in the next sprint planning, protecting the current sprint's commitment",
+      "Ask the team to absorb the extra items by working weekends",
+      "Freeze the product backlog entirely until the release is complete",
+      "Escalate the product owner's behavior to the sponsor"
+    ],
+    "correct_answer": "Coach the product owner to add new items to the product backlog for prioritization in the next sprint planning, protecting the current sprint's commitment",
+    "explanation": "In adaptive delivery, scope changes are welcomed — but through the backlog, not by disrupting the sprint in flight. Coaching the product owner on this working agreement protects the team's commitment while keeping the product responsive to change. Overtime and backlog freezes attack the symptom, and escalation skips the collaborative fix that is available."
+  },
+  {
+    "id": "q010",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 1: Plan and manage project compliance",
+    "question": "A project handling customer data will launch in a new region with stricter privacy regulations than the team has worked under before. What should the project manager do first?",
+    "options": [
+      "Proceed with the existing privacy controls since they satisfied previous regulators",
+      "Identify the new regulatory requirements, assess the gap against current practices, and incorporate required actions into the project plan",
+      "Purchase insurance to cover potential compliance penalties",
+      "Delegate all compliance responsibility to the legal department"
+    ],
+    "correct_answer": "Identify the new regulatory requirements, assess the gap against current practices, and incorporate required actions into the project plan",
+    "explanation": "Compliance planning starts with understanding what the new jurisdiction actually requires, measuring the gap, and building closure of that gap into the plan. Assuming old controls transfer is untested, insurance transfers financial consequences but not the legal obligation to comply, and legal can advise but the project still owns building compliance into its deliverables."
+  },
+  {
+    "id": "q011",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 2: Evaluate and deliver project benefits and value",
+    "question": "Six months after a new internal tool launched, the sponsor asks whether the project actually delivered its promised benefits. Adoption data was never defined during planning. What should have been done to prevent this situation?",
+    "options": [
+      "A benefits management plan with measurable benefit metrics and owners should have been established during project initiation and planning",
+      "The project should have run longer so benefits could be observed before closure",
+      "The sponsor should have been surveyed for satisfaction at closure",
+      "A lessons-learned session should have been held after go-live"
+    ],
+    "correct_answer": "A benefits management plan with measurable benefit metrics and owners should have been established during project initiation and planning",
+    "explanation": "Benefits must be defined, made measurable, and assigned owners early — in the business case and benefits management plan — so realization can be tracked after delivery. Extending the project confuses project duration with benefits realization (which usually continues after closure), and satisfaction surveys or lessons learned capture perceptions and process improvements, not measured benefit delivery."
+  },
+  {
+    "id": "q012",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 3: Evaluate and address external business environment changes",
+    "question": "Midway through a two-year project, a new tariff significantly raises the cost of imported hardware the project depends on. What should the project manager do first?",
+    "options": [
+      "Continue executing the plan since the baseline was already approved",
+      "Assess the impact of the tariff on the project's cost, schedule, and business case, and recommend options to the appropriate decision makers",
+      "Absorb the increase by cutting the quality assurance budget",
+      "Terminate the project because the external environment changed"
+    ],
+    "correct_answer": "Assess the impact of the tariff on the project's cost, schedule, and business case, and recommend options to the appropriate decision makers",
+    "explanation": "External environment changes call for impact assessment first: quantify the effect on cost, schedule, and — critically — whether the business case still holds, then bring options (re-source, re-baseline, descope, or escalate) to those with decision authority. Ignoring the change, silently cutting quality, or unilaterally terminating all skip the assessment that should drive the decision."
+  }
+]

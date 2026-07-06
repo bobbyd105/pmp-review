@@ -3,11 +3,99 @@
 <head>
 <meta charset="utf-8">
 <title>PMP Study Platform — App Map</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 60rem; margin: 0 auto; padding: 1rem; line-height: 1.5; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; }
+  th, td { border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f0f0f0; }
+  code { background: #f5f5f5; padding: 0 0.2rem; }
+</style>
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>No components exist yet. This file will be updated after each vertical
-slice per docs/project_constitution.md Section 4 and Section 5 (Definition
-of Done).</p>
+<p>Last updated: 2026-07-06 (Slice 1 — Question Bank data foundation).
+Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
+
+<h2>Application shell</h2>
+<table>
+  <tr><th>File</th><th>Purpose</th><th>Parent</th><th>Children</th><th>Data read/written</th></tr>
+  <tr>
+    <td><code>index.html</code></td>
+    <td>Vite entry page; mounts the React app at <code>#root</code></td>
+    <td>—</td>
+    <td><code>src/main.jsx</code></td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><code>src/main.jsx</code></td>
+    <td>React bootstrap: renders <code>App</code> into the DOM under StrictMode; loads global CSS</td>
+    <td><code>index.html</code></td>
+    <td><code>src/App.jsx</code></td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><code>src/App.jsx</code></td>
+    <td>Top-level layout: page header plus the QuestionBank section</td>
+    <td><code>src/main.jsx</code></td>
+    <td><code>QuestionBank</code></td>
+    <td>None</td>
+  </tr>
+</table>
+
+<h2>Components</h2>
+<table>
+  <tr><th>Component</th><th>Purpose</th><th>Parent</th><th>Children</th><th>Data read/written</th><th>Dependencies</th></tr>
+  <tr>
+    <td><code>src/components/QuestionBank.jsx</code></td>
+    <td>Loads the question bank and renders one QuestionCard per question, with a total count</td>
+    <td><code>App</code></td>
+    <td><code>QuestionCard</code> (one per question)</td>
+    <td>Reads <code>data/questions.json</code> (static import at build time). Writes nothing.</td>
+    <td>React; <code>QuestionCard</code></td>
+  </tr>
+  <tr>
+    <td><code>src/components/QuestionCard.jsx</code></td>
+    <td>Displays a single question: ECO domain/task badges, prompt, options, and a Show/Hide answer toggle revealing correct answer + explanation</td>
+    <td><code>QuestionBank</code></td>
+    <td>None</td>
+    <td>Receives one question object as a <code>question</code> prop. Local UI state only (<code>showAnswer</code> boolean). Writes nothing.</td>
+    <td>React (<code>useState</code>)</td>
+  </tr>
+</table>
+
+<h2>Data sources</h2>
+<table>
+  <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
+  <tr>
+    <td><code>data/questions.json</code></td>
+    <td>Question bank seed data: 12 original PMP-style questions across all 3 ECO domains (People, Process, Business Environment). Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
+    <td><code>QuestionBank</code>; both test files</td>
+  </tr>
+</table>
+
+<h2>Tests</h2>
+<table>
+  <tr><th>File</th><th>Covers</th></tr>
+  <tr>
+    <td><code>src/__tests__/questions.data.test.js</code></td>
+    <td>Data contract for <code>data/questions.json</code>: ≥10 questions, ≥3 ECO domains, valid domain names, all required fields present, unique ids, ≥2 unique options each, correct_answer present in options</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/QuestionBank.test.jsx</code></td>
+    <td>QuestionBank rendering (every prompt + option), question count, answers hidden by default, toggle show/hide behavior, per-question toggle independence, no console.error during render</td>
+  </tr>
+</table>
+
+<h2>Related docs</h2>
+<ul>
+  <li><code>docs/progress.md</code> — current state</li>
+  <li><code>docs/project_constitution.md</code> — non-negotiables (local-first, JSON seed data, DoD ordering)</li>
+  <li><code>docs/ai_collaboration_agreement.md</code> — roles and context-load protocol</li>
+</ul>
+
+<h2>Not built yet</h2>
+<p>Quiz Engine, scoring, answer selection, and persistence are explicitly out of
+scope of Slice 1 — display only. No routing, no state library, no backend.</p>
 </body>
 </html>
