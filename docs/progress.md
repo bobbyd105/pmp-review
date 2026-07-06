@@ -10,7 +10,7 @@ v0.5 — Slice 4 complete (Lessons data foundation)
 - Slice 2 — Quiz Engine (v0.3, merged via PR #2)
 - Slice 3 — Progress Tracking + Dashboard (v0.4, merged via PR #3)
 - Slice 4 — Lessons data foundation (v0.5):
-  - decision_log.md Decision #4: Lessons schema — flat JSON records with
+  - decision_log.md Decision #7: Lessons schema — flat JSON records with
     markdown-text body and by-id question cross-references; markdown
     rendered as a minimal built-in subset (paragraphs, bold, bullet lists),
     no markdown library, no HTML injection
@@ -33,7 +33,7 @@ v0.5 — Slice 4 complete (Lessons data foundation)
     errors/warnings
 
 ## Files Modified
-- docs/decision_log.md (Decision #4 added)
+- docs/decision_log.md (Decision #7 added; #4–#6 backfilled on main separately)
 - data/lessons.json (added)
 - src/components/Lessons.jsx, src/components/LessonCard.jsx (added)
 - src/__tests__/lessons.data.test.js, src/__tests__/Lessons.test.jsx (added)
@@ -49,7 +49,7 @@ v0.5 — Slice 4 complete (Lessons data foundation)
   ids; questions.json remains the single source of truth for question
   content and knows nothing about lessons.
 - Markdown-capable lesson bodies rendered via a minimal inline subset
-  (decision_log.md #4) — upgrading to a full markdown renderer is a future
+  (decision_log.md #7) — upgrading to a full markdown renderer is a future
   logged decision, not a schema change.
 
 ## Known Issues
@@ -59,7 +59,7 @@ None blocking.
 - `correct_answer` stored as exact option string (decision_log.md #1).
 - No clear/export for quiz history (carried from v0.4).
 - Lesson body markdown beyond paragraphs/bold/bullets renders as literal
-  text until a fuller renderer is adopted (decision_log.md #4 revisit
+  text until a fuller renderer is adopted (decision_log.md #7 revisit
   trigger: when full curriculum content is authored).
 
 ## Content Accuracy Note

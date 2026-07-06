@@ -1,5 +1,5 @@
 // Renders the markdown subset the lesson schema commits to (decision_log.md
-// #4): paragraphs separated by blank lines, "- " bullet lists, and **bold**.
+// #7): paragraphs separated by blank lines, "- " bullet lists, and **bold**.
 // Everything is emitted as React elements — no HTML injection surface.
 
 function renderInline(text, keyPrefix) {

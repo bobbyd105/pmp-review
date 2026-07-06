@@ -79,7 +79,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/components/LessonCard.jsx</code></td>
-    <td>Displays a single lesson: title, ECO domain/task tags, body rendered from the markdown subset (paragraphs, bold, bullet lists — see decision_log.md #4), and the resolved related-question prompts</td>
+    <td>Displays a single lesson: title, ECO domain/task tags, body rendered from the markdown subset (paragraphs, bold, bullet lists — see decision_log.md #7), and the resolved related-question prompts</td>
     <td><code>Lessons</code></td>
     <td>None</td>
     <td>Receives one lesson object + pre-resolved related question objects as props. No state, writes nothing.</td>
@@ -143,7 +143,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>data/lessons.json</code></td>
-    <td>Lesson seed data (Slice 4): 3 original ECO-aligned lessons across People, Process, and Business Environment. Schema locked by decision_log.md #4; full curriculum content to be authored separately (Claude-chat's lane per the RACI) and added later. Relationship to Question Bank: lessons reference questions by id — questions.json is the single source of truth for question content.</td>
+    <td>Lesson seed data (Slice 4): 3 original ECO-aligned lessons across People, Process, and Business Environment. Schema locked by decision_log.md #7; full curriculum content to be authored separately (Claude-chat's lane per the RACI) and added later. Relationship to Question Bank: lessons reference questions by id — questions.json is the single source of truth for question content.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>title</code>, <code>body</code> (markdown-capable text), optional <code>related_question_ids[]</code> whose entries must exist in <code>data/questions.json</code> (enforced by test)</td>
     <td><code>Lessons</code>; <code>lessons.data.test.js</code></td>
   </tr>
