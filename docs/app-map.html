@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-06 (Slice 1 — Question Bank data foundation).
+<p>Last updated: 2026-07-06 (Slice 2 — Quiz Engine).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus the QuestionBank section</td>
+    <td>Top-level layout: page header plus a two-button view toggle between Quiz and QuestionBank (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>QuestionBank</code></td>
-    <td>None</td>
+    <td><code>Quiz</code>, <code>QuestionBank</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | browse)</td>
   </tr>
 </table>
 
@@ -54,12 +54,46 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>React; <code>QuestionCard</code></td>
   </tr>
   <tr>
+    <td><code>src/components/Quiz.jsx</code></td>
+    <td>Quiz session orchestrator: start screen (configurable question count, default 5), one-question-at-a-time flow, resume-from-storage on load</td>
+    <td><code>App</code></td>
+    <td><code>QuizQuestion</code>, <code>QuizResults</code></td>
+    <td>Reads <code>data/questions.json</code>; reads/writes quiz session state in <code>localStorage</code> via <code>quizSession.js</code></td>
+    <td>React; <code>src/quiz/quizSession.js</code></td>
+  </tr>
+  <tr>
+    <td><code>src/components/QuizQuestion.jsx</code></td>
+    <td>Presents one quiz question with radio-selectable options and a Submit button (disabled until a selection); never renders the correct answer or explanation</td>
+    <td><code>Quiz</code></td>
+    <td>None</td>
+    <td>Receives one question object as a prop; local <code>selected</code> state only</td>
+    <td>React (<code>useState</code>)</td>
+  </tr>
+  <tr>
+    <td><code>src/components/QuizResults.jsx</code></td>
+    <td>Completion screen: score (X/N), review list of missed questions (your answer, correct answer, explanation), Start-new-quiz button</td>
+    <td><code>Quiz</code></td>
+    <td>None</td>
+    <td>Receives completed session + question bank as props. Writes nothing (parent clears storage on restart).</td>
+    <td>React; <code>quizSession.js</code> selectors (<code>getScore</code>, <code>getMissed</code>)</td>
+  </tr>
+  <tr>
     <td><code>src/components/QuestionCard.jsx</code></td>
     <td>Displays a single question: ECO domain/task badges, prompt, options, and a Show/Hide answer toggle revealing correct answer + explanation</td>
     <td><code>QuestionBank</code></td>
     <td>None</td>
     <td>Receives one question object as a <code>question</code> prop. Local UI state only (<code>showAnswer</code> boolean). Writes nothing.</td>
     <td>React (<code>useState</code>)</td>
+  </tr>
+</table>
+
+<h2>Logic modules</h2>
+<table>
+  <tr><th>File</th><th>Purpose</th><th>Consumed by</th></tr>
+  <tr>
+    <td><code>src/quiz/quizSession.js</code></td>
+    <td>Pure quiz-session engine (no React): random no-repeat question selection (Fisher-Yates, injectable rng), submit/advance state transitions, score and missed-question selectors, and localStorage save/load/clear with validation that rejects corrupt or stale stored sessions. Storage key: <code>pmp-quiz-session-v1</code>.</td>
+    <td><code>Quiz</code>, <code>QuizResults</code>; unit-tested directly</td>
   </tr>
 </table>
 
@@ -70,7 +104,13 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>data/questions.json</code></td>
     <td>Question bank seed data: 12 original PMP-style questions across all 3 ECO domains (People, Process, Business Environment). Local JSON per constitution Section 3 — no database, no API.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
-    <td><code>QuestionBank</code>; both test files</td>
+    <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
+  </tr>
+  <tr>
+    <td><code>localStorage</code> key <code>pmp-quiz-session-v1</code></td>
+    <td>In-progress/completed quiz session state (per decision_log.md Decision #3): survives page reload; cleared on Start new quiz</td>
+    <td>Object: <code>questionIds[]</code>, <code>currentIndex</code>, <code>results[]</code> of <code>{questionId, selected, correct}</code>. Score is derived, not stored.</td>
+    <td><code>quizSession.js</code> only (components never touch localStorage directly)</td>
   </tr>
 </table>
 
@@ -85,17 +125,26 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>src/__tests__/QuestionBank.test.jsx</code></td>
     <td>QuestionBank rendering (every prompt + option), question count, answers hidden by default, toggle show/hide behavior, per-question toggle independence, no console.error during render</td>
   </tr>
+  <tr>
+    <td><code>src/__tests__/quizSession.test.js</code></td>
+    <td>Engine unit tests: selection count/no-repeats/default-5/cap-at-bank-size, scoring correctness (mixed, all-wrong, all-right), post-completion submits ignored, localStorage round-trip, rejection of corrupt/stale/inconsistent stored sessions</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/Quiz.test.jsx</code></td>
+    <td>Quiz component: default + configurable count, no answer/explanation visible before submit (including after selecting), submit-records-and-advances, final score + missed-question review, perfect-score case, persistence across simulated reload (mid-session and completed), Start-new-quiz reset</td>
+  </tr>
 </table>
 
 <h2>Related docs</h2>
 <ul>
   <li><code>docs/progress.md</code> — current state</li>
+  <li><code>docs/decision_log.md</code> — why: schema freeze for Slice 2, JSON over SQLite, localStorage persistence</li>
   <li><code>docs/project_constitution.md</code> — non-negotiables (local-first, JSON seed data, DoD ordering)</li>
   <li><code>docs/ai_collaboration_agreement.md</code> — roles and context-load protocol</li>
 </ul>
 
 <h2>Not built yet</h2>
-<p>Quiz Engine, scoring, answer selection, and persistence are explicitly out of
-scope of Slice 1 — display only. No routing, no state library, no backend.</p>
+<p>Diagnostics, adaptive recommendations, progress tracking across sessions,
+lessons/curriculum. No routing, no state library, no backend.</p>
 </body>
 </html>
