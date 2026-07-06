@@ -306,3 +306,59 @@ body {
   margin-bottom: 0;
   padding-left: 1.25rem;
 }
+
+.lessons-count {
+  color: #52606d;
+  font-size: 0.9rem;
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lesson-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.lesson-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-body p {
+  color: #3e4c59;
+}
+
+.lesson-body ul {
+  color: #3e4c59;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lesson-related {
+  margin-top: 1rem;
+  border-left: 3px solid #1c64d9;
+  background: #f0f5ff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.lesson-related h4 {
+  margin: 0 0 0.5rem;
+}
+
+.lesson-related ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}

@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-06 (Slice 3 — Progress Tracking + Dashboard).
+<p>Last updated: 2026-07-06 (Slice 4 — Lessons data foundation).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus a three-button view toggle between Quiz, QuestionBank, and Dashboard (no router)</td>
+    <td>Top-level layout: page header plus a four-button view toggle between Quiz, QuestionBank, Dashboard, and Lessons (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code></td>
-    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard)</td>
+    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons)</td>
   </tr>
 </table>
 
@@ -68,6 +68,22 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>None</td>
     <td>Reads quiz history from <code>localStorage</code> via <code>quizHistory.js</code> (read-only; never writes)</td>
     <td>React; <code>quizHistory.js</code> (<code>loadHistory</code>, <code>getAggregateStats</code>)</td>
+  </tr>
+  <tr>
+    <td><code>src/components/Lessons.jsx</code></td>
+    <td>Loads the lesson set and renders one LessonCard per lesson, resolving each lesson's <code>related_question_ids</code> against the question bank (dangling ids are skipped, never crash)</td>
+    <td><code>App</code></td>
+    <td><code>LessonCard</code> (one per lesson)</td>
+    <td>Reads <code>data/lessons.json</code> and <code>data/questions.json</code> (static imports). Writes nothing.</td>
+    <td>React; <code>LessonCard</code></td>
+  </tr>
+  <tr>
+    <td><code>src/components/LessonCard.jsx</code></td>
+    <td>Displays a single lesson: title, ECO domain/task tags, body rendered from the markdown subset (paragraphs, bold, bullet lists — see decision_log.md #4), and the resolved related-question prompts</td>
+    <td><code>Lessons</code></td>
+    <td>None</td>
+    <td>Receives one lesson object + pre-resolved related question objects as props. No state, writes nothing.</td>
+    <td>React only (markdown subset rendered inline, no library, no HTML injection)</td>
   </tr>
   <tr>
     <td><code>src/components/QuizQuestion.jsx</code></td>
@@ -126,6 +142,12 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>quizSession.js</code> only (components never touch localStorage directly)</td>
   </tr>
   <tr>
+    <td><code>data/lessons.json</code></td>
+    <td>Lesson seed data (Slice 4): 3 original ECO-aligned lessons across People, Process, and Business Environment. Schema locked by decision_log.md #4; full curriculum content to be authored separately (Claude-chat's lane per the RACI) and added later. Relationship to Question Bank: lessons reference questions by id — questions.json is the single source of truth for question content.</td>
+    <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>title</code>, <code>body</code> (markdown-capable text), optional <code>related_question_ids[]</code> whose entries must exist in <code>data/questions.json</code> (enforced by test)</td>
+    <td><code>Lessons</code>; <code>lessons.data.test.js</code></td>
+  </tr>
+  <tr>
     <td><code>localStorage</code> key <code>pmp-quiz-history-v1</code></td>
     <td>Append-only history of completed quizzes (Slice 3). One entry per completed quiz; never overwritten, only appended. Independent of the session key.</td>
     <td>Array of: <code>completedAt</code> (ISO), <code>score</code>, <code>total</code>, <code>domains</code> map of <code>{correct, total}</code> per eco_domain, <code>missedQuestionIds[]</code>. Aggregates are derived, not stored.</td>
@@ -160,6 +182,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>src/__tests__/Dashboard.test.jsx</code></td>
     <td>Dashboard: empty state with no history, empty state (not crash) on corrupt history, aggregate stats display, per-domain table, most-recent quiz section</td>
   </tr>
+  <tr>
+    <td><code>src/__tests__/lessons.data.test.js</code></td>
+    <td>Data contract for <code>data/lessons.json</code>: ≥3 lessons, ≥2 ECO domains, valid domain names, required fields, substantive bodies (length + no placeholder markers), unique ids with no question-id collisions, referential integrity of <code>related_question_ids</code> against questions.json, linkage exercised by at least one lesson</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/Lessons.test.jsx</code></td>
+    <td>Lessons rendering: every title + domain/task tags, lesson count, full body content present, markdown subset (bold → strong, "- " → list items, no raw markers leaked), related questions shown as the actual prompts from questions.json, no console.error</td>
+  </tr>
 </table>
 
 <h2>Related docs</h2>
@@ -171,8 +201,9 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 </ul>
 
 <h2>Not built yet</h2>
-<p>Diagnostics, adaptive recommendations, lessons/curriculum, history
-management (clearing/exporting quiz history). No routing, no state library,
-no backend.</p>
+<p>Full curriculum content (seed lessons only for now — authored separately
+per the RACI), diagnostics, adaptive recommendations, history management
+(clearing/exporting quiz history), richer markdown rendering
+(tables/images/code). No routing, no state library, no backend.</p>
 </body>
 </html>
