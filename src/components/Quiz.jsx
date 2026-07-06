@@ -11,6 +11,7 @@ import {
   submitAnswer,
   getScore,
 } from '../quiz/quizSession.js'
+import { recordCompletedQuiz } from '../quiz/quizHistory.js'
 import QuizQuestion from './QuizQuestion.jsx'
 import QuizResults from './QuizResults.jsx'
 
@@ -80,7 +81,13 @@ export default function Quiz() {
       <QuizQuestion
         key={question.id}
         question={question}
-        onSubmit={(selected) => setSession(submitAnswer(session, questions, selected))}
+        onSubmit={(selected) => {
+          const next = submitAnswer(session, questions, selected)
+          // Record history exactly at the transition into the completed
+          // state, so reloading a finished session never re-records it.
+          if (isComplete(next)) recordCompletedQuiz(next, questions)
+          setSession(next)
+        }}
       />
     </section>
   )

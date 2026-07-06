@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-06 (Slice 2 — Quiz Engine).
+<p>Last updated: 2026-07-06 (Slice 3 — Progress Tracking + Dashboard).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus a two-button view toggle between Quiz and QuestionBank (no router)</td>
+    <td>Top-level layout: page header plus a three-button view toggle between Quiz, QuestionBank, and Dashboard (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>Quiz</code>, <code>QuestionBank</code></td>
-    <td>Local UI state only (<code>view</code>: quiz | browse)</td>
+    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard)</td>
   </tr>
 </table>
 
@@ -58,8 +58,16 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Quiz session orchestrator: start screen (configurable question count, default 5), one-question-at-a-time flow, resume-from-storage on load</td>
     <td><code>App</code></td>
     <td><code>QuizQuestion</code>, <code>QuizResults</code></td>
-    <td>Reads <code>data/questions.json</code>; reads/writes quiz session state in <code>localStorage</code> via <code>quizSession.js</code></td>
-    <td>React; <code>src/quiz/quizSession.js</code></td>
+    <td>Reads <code>data/questions.json</code>; reads/writes quiz session state in <code>localStorage</code> via <code>quizSession.js</code>; appends one history entry via <code>quizHistory.js</code> at the moment the final answer is submitted</td>
+    <td>React; <code>src/quiz/quizSession.js</code>; <code>src/quiz/quizHistory.js</code></td>
+  </tr>
+  <tr>
+    <td><code>src/components/Dashboard.jsx</code></td>
+    <td>Progress view: total quizzes taken, overall accuracy, per-domain accuracy table, and the most recent quiz result; clear empty state when no history exists</td>
+    <td><code>App</code></td>
+    <td>None</td>
+    <td>Reads quiz history from <code>localStorage</code> via <code>quizHistory.js</code> (read-only; never writes)</td>
+    <td>React; <code>quizHistory.js</code> (<code>loadHistory</code>, <code>getAggregateStats</code>)</td>
   </tr>
   <tr>
     <td><code>src/components/QuizQuestion.jsx</code></td>
@@ -95,6 +103,11 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Pure quiz-session engine (no React): random no-repeat question selection (Fisher-Yates, injectable rng), submit/advance state transitions, score and missed-question selectors, and localStorage save/load/clear with validation that rejects corrupt or stale stored sessions. Storage key: <code>pmp-quiz-session-v1</code>.</td>
     <td><code>Quiz</code>, <code>QuizResults</code>; unit-tested directly</td>
   </tr>
+  <tr>
+    <td><code>src/quiz/quizHistory.js</code></td>
+    <td>Persistent quiz history (no React): builds one entry per completed quiz (timestamp, score, total, per-domain correct/total, missed question ids), append-only localStorage persistence with corrupt-data degradation to empty, and aggregate stats (total quizzes, overall accuracy, per-domain accuracy from summed tallies). Storage key: <code>pmp-quiz-history-v1</code> — separate from and never touching the session key.</td>
+    <td><code>Quiz</code> (append on completion), <code>Dashboard</code> (read + aggregate); unit-tested directly</td>
+  </tr>
 </table>
 
 <h2>Data sources</h2>
@@ -111,6 +124,12 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>In-progress/completed quiz session state (per decision_log.md Decision #3): survives page reload; cleared on Start new quiz</td>
     <td>Object: <code>questionIds[]</code>, <code>currentIndex</code>, <code>results[]</code> of <code>{questionId, selected, correct}</code>. Score is derived, not stored.</td>
     <td><code>quizSession.js</code> only (components never touch localStorage directly)</td>
+  </tr>
+  <tr>
+    <td><code>localStorage</code> key <code>pmp-quiz-history-v1</code></td>
+    <td>Append-only history of completed quizzes (Slice 3). One entry per completed quiz; never overwritten, only appended. Independent of the session key.</td>
+    <td>Array of: <code>completedAt</code> (ISO), <code>score</code>, <code>total</code>, <code>domains</code> map of <code>{correct, total}</code> per eco_domain, <code>missedQuestionIds[]</code>. Aggregates are derived, not stored.</td>
+    <td><code>quizHistory.js</code> only</td>
   </tr>
 </table>
 
@@ -131,7 +150,15 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/__tests__/Quiz.test.jsx</code></td>
-    <td>Quiz component: default + configurable count, no answer/explanation visible before submit (including after selecting), submit-records-and-advances, final score + missed-question review, perfect-score case, persistence across simulated reload (mid-session and completed), Start-new-quiz reset</td>
+    <td>Quiz component: default + configurable count, no answer/explanation visible before submit (including after selecting), submit-records-and-advances, final score + missed-question review, perfect-score case, persistence across simulated reload (mid-session and completed), Start-new-quiz reset, exactly-one history entry per completion (accumulating, and not re-recorded on reload)</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/quizHistory.test.js</code></td>
+    <td>History unit tests: entry building (timestamp, score, per-domain breakdown, missed ids), accumulation across multiple completions, reload persistence, session-key isolation, corrupt-data degradation, aggregate math (summed-tallies vs averaged-percentages distinction, empty history, multi-domain)</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/Dashboard.test.jsx</code></td>
+    <td>Dashboard: empty state with no history, empty state (not crash) on corrupt history, aggregate stats display, per-domain table, most-recent quiz section</td>
   </tr>
 </table>
 
@@ -144,7 +171,8 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 </ul>
 
 <h2>Not built yet</h2>
-<p>Diagnostics, adaptive recommendations, progress tracking across sessions,
-lessons/curriculum. No routing, no state library, no backend.</p>
+<p>Diagnostics, adaptive recommendations, lessons/curriculum, history
+management (clearing/exporting quiz history). No routing, no state library,
+no backend.</p>
 </body>
 </html>

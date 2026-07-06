@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event'
 import Quiz from '../components/Quiz.jsx'
 import questions from '../../data/questions.json'
 import { STORAGE_KEY } from '../quiz/quizSession.js'
+import { loadHistory } from '../quiz/quizHistory.js'
 
 const bankById = new Map(questions.map((q) => [q.id, q]))
 
@@ -151,6 +152,43 @@ describe('Quiz', () => {
     cleanup()
     render(<Quiz />)
     expect(screen.getByText('Score: 0/1')).toBeInTheDocument()
+  })
+
+  it('appends one history entry per completed quiz, accumulating across quizzes', async () => {
+    const user = userEvent.setup()
+    render(<Quiz />)
+
+    await startQuiz(user, 2)
+    expect(loadHistory()).toHaveLength(0) // nothing recorded mid-quiz
+    await answerCurrent(user, { correctly: true })
+    expect(loadHistory()).toHaveLength(0)
+    await answerCurrent(user, { correctly: false })
+    let history = loadHistory()
+    expect(history).toHaveLength(1)
+    expect(history[0].score).toBe(1)
+    expect(history[0].total).toBe(2)
+
+    // Second quiz accumulates rather than overwriting.
+    await user.click(screen.getByRole('button', { name: 'Start new quiz' }))
+    await startQuiz(user, 1)
+    await answerCurrent(user, { correctly: true })
+    history = loadHistory()
+    expect(history).toHaveLength(2)
+    expect(history[1].score).toBe(1)
+    expect(history[1].total).toBe(1)
+  })
+
+  it('does not re-record history when a completed session is reloaded', async () => {
+    const user = userEvent.setup()
+    render(<Quiz />)
+    await startQuiz(user, 1)
+    await answerCurrent(user, { correctly: true })
+    expect(loadHistory()).toHaveLength(1)
+
+    cleanup()
+    render(<Quiz />)
+    expect(screen.getByText('Score: 1/1')).toBeInTheDocument()
+    expect(loadHistory()).toHaveLength(1)
   })
 
   it('starts fresh after "Start new quiz" clears the stored session', async () => {
