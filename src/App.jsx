@@ -2,11 +2,13 @@ import { useState } from 'react'
 import QuestionBank from './components/QuestionBank.jsx'
 import Quiz from './components/Quiz.jsx'
 import Dashboard from './components/Dashboard.jsx'
+import Lessons from './components/Lessons.jsx'
 
 const VIEWS = [
   { id: 'quiz', label: 'Quiz' },
   { id: 'browse', label: 'Browse questions' },
   { id: 'dashboard', label: 'Dashboard' },
+  { id: 'lessons', label: 'Lessons' },
 ]
 
 export default function App() {
@@ -33,6 +35,7 @@ export default function App() {
       {view === 'quiz' && <Quiz />}
       {view === 'browse' && <QuestionBank />}
       {view === 'dashboard' && <Dashboard />}
+      {view === 'lessons' && <Lessons />}
     </main>
   )
 }
