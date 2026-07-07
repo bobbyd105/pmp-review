@@ -1,7 +1,7 @@
 # Progress
 
 ## Current Version
-v0.5 — Slice 4 complete (Lessons data foundation)
+v0.6 — Slice 5 complete (Content Studio)
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -9,48 +9,53 @@ v0.5 — Slice 4 complete (Lessons data foundation)
 - Slice 1 — Question Bank data foundation (v0.2, merged via PR #2)
 - Slice 2 — Quiz Engine (v0.3, merged via PR #2)
 - Slice 3 — Progress Tracking + Dashboard (v0.4, merged via PR #3)
-- Slice 4 — Lessons data foundation (v0.5):
-  - decision_log.md Decision #7: Lessons schema — flat JSON records with
-    markdown-text body and by-id question cross-references; markdown
-    rendered as a minimal built-in subset (paragraphs, bold, bullet lists),
-    no markdown library, no HTML injection
-  - `data/lessons.json`: 3 original, substantive seed lessons across all
-    3 ECO domains (conflict management, schedule compression, benefits
-    realization), each linking to real question ids. Schema: id,
-    eco_domain, eco_task, title, body, optional related_question_ids[].
-    Full curriculum content is deliberately NOT in this slice — it will be
-    authored separately (Claude-chat's lane per the RACI) and added later.
-  - `Lessons` / `LessonCard` components: title, domain/task tags, rendered
-    body, related questions shown as the actual prompt text resolved from
-    questions.json at render time (dangling ids skipped, never crash)
-  - `App` gained "Lessons" as the fourth nav view
-  - questions.json and all Quiz/Dashboard behavior untouched (condition 8)
-  - Tests: 62 Vitest tests passing (49 prior + 8 lesson data-contract +
-    5 Lessons rendering)
-  - Verified in headless Chromium: 3 lesson cards render with bold/list
-    markdown and 5 related-question links, no raw markdown markers leak,
-    Quiz/Browse/Dashboard views regression-checked, zero console
-    errors/warnings
+- Slice 4 — Lessons data foundation (v0.5, merged via PR #4)
+- Governance: direct-to-main commit policy added to
+  docs/ai_collaboration_agreement.md v1.5 (Section 7) — documentation
+  backfills explicitly approved in-session may bypass a PR; everything
+  else goes through Review/Approve
+- Slice 5 — Content Studio (v0.6):
+  - decision_log.md Decision #8: validate-and-display snippet flow, no
+    direct file write — the tool never touches data/questions.json or
+    data/lessons.json; on valid input it shows a ready-to-paste snippet
+    and says so explicitly (refines Decision #5's "writes to" wording)
+  - `src/studio/contentValidator.js`: pure validation module mirroring
+    the questions.data.test.js and lessons.data.test.js contracts —
+    required fields, valid ECO domains, ≥2 unique options,
+    correct_answer ∈ options, lesson body length/placeholder rules,
+    cross-file id uniqueness (both directions), related_question_ids
+    referential integrity. Every rejection names the exact problem.
+  - `ContentStudio` component: fifth nav view — Question/Lesson toggle,
+    paste textarea, Validate button, specific error list on failure,
+    snippet + "Nothing has been saved" notice + copy-to-clipboard on
+    success. Additive only; reads existing data solely for duplicate
+    and reference checks.
+  - Tests: 104 Vitest tests passing (62 prior + 31 validator +
+    11 ContentStudio, covering valid input and each rejection case)
+  - Verified in headless Chromium: parse/missing-field/duplicate-id/
+    bad-domain/dangling-ref errors named on screen, valid snippet +
+    not-saved notice + clipboard copy work, all five views regression-
+    checked, zero console errors/warnings
 
 ## Files Modified
-- docs/decision_log.md (Decision #7 added; #4–#6 backfilled on main separately)
-- data/lessons.json (added)
-- src/components/Lessons.jsx, src/components/LessonCard.jsx (added)
-- src/__tests__/lessons.data.test.js, src/__tests__/Lessons.test.jsx (added)
-- src/App.jsx (modified — fourth nav view), src/index.css (lesson styles)
+- docs/ai_collaboration_agreement.md (v1.5 — direct-to-main policy,
+  committed separately)
+- docs/decision_log.md (Decision #8 added)
+- src/studio/contentValidator.js (added)
+- src/components/ContentStudio.jsx (added)
+- src/__tests__/contentValidator.test.js,
+  src/__tests__/ContentStudio.test.jsx (added)
+- src/App.jsx (modified — fifth nav view), src/index.css (studio styles)
 - package.json (version bump)
-- docs/app-map.html (updated — Lessons components, lessons.json data
-  source and its relationship to Question Bank, tests)
+- docs/app-map.html (updated — ContentStudio, contentValidator, tests)
 - docs/progress.md (this file)
 
 ## Architecture Changes
-- Second JSON seed file (`data/lessons.json`) following the questions.json
-  pattern. Cross-references go one direction: lessons reference question
-  ids; questions.json remains the single source of truth for question
-  content and knows nothing about lessons.
-- Markdown-capable lesson bodies rendered via a minimal inline subset
-  (decision_log.md #7) — upgrading to a full markdown renderer is a future
-  logged decision, not a schema change.
+- First `src/studio/` module: validation logic lives in a pure,
+  React-free module so it can be unit-tested directly and stays in
+  lock-step with the data-contract tests it mirrors. The JSON seed
+  files remain read-only static imports everywhere (Decision #8) — no
+  write path was added.
 
 ## Known Issues
 None blocking.
@@ -59,22 +64,24 @@ None blocking.
 - `correct_answer` stored as exact option string (decision_log.md #1).
 - No clear/export for quiz history (carried from v0.4).
 - Lesson body markdown beyond paragraphs/bold/bullets renders as literal
-  text until a fuller renderer is adopted (decision_log.md #7 revisit
-  trigger: when full curriculum content is authored).
+  text until a fuller renderer is adopted (decision_log.md #7).
+- Content Studio validation rules are intentionally duplicated from the
+  data-contract tests (the tests remain the source of truth); if the
+  schema changes, both must be updated together — the validator's tests
+  run against the real data files to catch drift.
 
 ## Content Accuracy Note
-The 3 seed lessons are original teaching content aligned to the ECO, but
-per the User's note they are schema-proving seeds — full curriculum will be
-authored separately. Constitution Section 10 manual accuracy spot-check
-(questions AND lessons) remains pending User review.
+Constitution Section 10 manual accuracy spot-check (questions AND
+lessons) remains pending User review. Content Studio checks shape, not
+correctness — content quality still depends on authored material and
+User review (Decision #5).
 
 ## Current Status
-Slice 4 built, tested, and documented on branch
-`claude/question-bank-data-ybigll`, rebuilt from main after PR #3 merged
-(Slices 1–3 are on main). Pushed for review — no PR opened for this slice
-per instruction. Awaiting Review and User approval.
+Slice 5 built, tested, and documented on branch
+`claude/content-studio-prompt-helper-441p0f`. Prompt Helper (Slice 6)
+follows on the same branch per this session's spec. Pushed for review —
+no PR opened, per instruction.
 
 ## Next Recommended Task
-Full curriculum content authoring (Claude-chat lane, added via a later
-step per the User), or history management (clear/export) — spec to be
-written by ChatGPT + User before implementation.
+Prompt Helper (Slice 6, this branch), then full curriculum content
+authoring (Claude-chat lane) using Content Studio for intake.

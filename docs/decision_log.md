@@ -233,3 +233,50 @@ formatting (tables, images, code blocks) or a module hierarchy, upgrade the
 renderer/schema then, as a new logged decision.
 
 **Approved by:** User
+
+---
+
+## Decision #8 — Content Studio output: validate-and-display snippet, no direct file write
+
+**Date:** 2026-07-07
+
+**Decision:** Content Studio validates pasted question/lesson JSON and, on
+success, displays a ready-to-paste snippet plus explicit instructions for
+which file (`data/questions.json` or `data/lessons.json`) and where (end of
+the array) to add it. It never writes to the JSON files itself, and it
+states that plainly in the UI so there is no ambiguity about whether
+content was saved. This refines Decision #5, which loosely said the tool
+"writes to" the JSON files before the write mechanism had been designed.
+
+**Alternatives considered:**
+1. A local dev-server write endpoint (a Vite dev-only middleware that
+   appends validated entries to the JSON files), unavailable in a static
+   production build.
+2. Browser-side writes via the File System Access API.
+
+**Why rejected:**
+1. A dev-only endpoint makes the same UI behave differently in `npm run
+   dev` vs. a static build — a silent-failure trap for exactly one user —
+   and puts programmatic writes on the seed files, whose corruption would
+   break every view. It also bypasses the User's review moment: hand-adding
+   the snippet and seeing the git diff *is* the approval step for new
+   content, per the agreement's User-as-final-authority rule.
+2. File System Access API is Chromium-only, requires re-granting file
+   permissions per session, and still amounts to the app rewriting its own
+   seed files — same corruption risk, more ceremony.
+
+**Tradeoffs:** One manual paste per new entry. Acceptable at MVP scale,
+where content arrives in small, User-reviewed batches; batching many
+entries at once is a future revisit, not a current requirement.
+
+**Evidence:** Decision #3 already established that this browser app has no
+write path to local files; every existing data flow treats the JSON seeds
+as read-only static imports. The snippet flow keeps that single pattern
+intact with zero new dependencies.
+
+**Revisit:** If content volume makes per-entry pasting a real bottleneck
+(e.g. bulk-importing a full curriculum), or if SQLite is adopted per
+constitution Section 3 — a real write layer changes this calculus.
+
+**Approved by:** User (scope pre-approved in this session's slice spec,
+which delegated the write-mechanism choice to the implementer)
