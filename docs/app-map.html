@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-06 (Slice 4 — Lessons data foundation).
+<p>Last updated: 2026-07-07 (Slice 6 — Prompt Helper).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus a four-button view toggle between Quiz, QuestionBank, Dashboard, and Lessons (no router)</td>
+    <td>Top-level layout: page header plus a six-button view toggle between Quiz, QuestionBank, Dashboard, Lessons, ContentStudio, and PromptHelper (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code></td>
-    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons)</td>
+    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons | studio | prompts)</td>
   </tr>
 </table>
 
@@ -86,6 +86,22 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>React only (markdown subset rendered inline, no library, no HTML injection)</td>
   </tr>
   <tr>
+    <td><code>src/components/ContentStudio.jsx</code></td>
+    <td>Local authoring aid: validates one pasted question/lesson JSON object and, when valid, shows a ready-to-paste snippet plus an explicit "Nothing has been saved" notice — it never writes to the data files (decision_log.md #8)</td>
+    <td><code>App</code></td>
+    <td>None</td>
+    <td>Reads <code>data/questions.json</code> and <code>data/lessons.json</code> (static imports) only for duplicate-id and related-id checks. Writes nothing — output is a snippet the User pastes into the JSON file manually. Copies snippet via <code>navigator.clipboard</code>.</td>
+    <td>React (<code>useState</code>); <code>src/studio/contentValidator.js</code></td>
+  </tr>
+  <tr>
+    <td><code>src/components/PromptHelper.jsx</code></td>
+    <td>Static copy/paste prompt library (product brief: "copy/paste prompts only"): renders one card per prompt with title, when-to-use description, full text, and a copy-to-clipboard button with per-card "Copied!" feedback; never calls any API</td>
+    <td><code>App</code></td>
+    <td>None</td>
+    <td>Reads <code>data/prompts.json</code> (static import). Writes nothing except the clipboard via <code>navigator.clipboard</code>. Local UI state only (<code>copiedId</code>).</td>
+    <td>React (<code>useState</code>)</td>
+  </tr>
+  <tr>
     <td><code>src/components/QuizQuestion.jsx</code></td>
     <td>Presents one quiz question with radio-selectable options and a Submit button (disabled until a selection); never renders the correct answer or explanation</td>
     <td><code>Quiz</code></td>
@@ -124,6 +140,11 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Persistent quiz history (no React): builds one entry per completed quiz (timestamp, score, total, per-domain correct/total, missed question ids), append-only localStorage persistence with corrupt-data degradation to empty, and aggregate stats (total quizzes, overall accuracy, per-domain accuracy from summed tallies). Storage key: <code>pmp-quiz-history-v1</code> — separate from and never touching the session key.</td>
     <td><code>Quiz</code> (append on completion), <code>Dashboard</code> (read + aggregate); unit-tested directly</td>
   </tr>
+  <tr>
+    <td><code>src/studio/contentValidator.js</code></td>
+    <td>Pure validation for Content Studio (no React): JSON parse with specific error messages, question/lesson rules mirroring the data-contract tests (required fields, valid ECO domains, ≥2 unique options, correct_answer must match an option, lesson body length/placeholder checks, cross-file id uniqueness in both directions, related_question_ids referential integrity), canonical-field-order snippet serialization. Additive only — never mutates the data it checks against.</td>
+    <td><code>ContentStudio</code>; unit-tested directly</td>
+  </tr>
 </table>
 
 <h2>Data sources</h2>
@@ -146,6 +167,12 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Lesson seed data (Slice 4): 3 original ECO-aligned lessons across People, Process, and Business Environment. Schema locked by decision_log.md #7; full curriculum content to be authored separately (Claude-chat's lane per the RACI) and added later. Relationship to Question Bank: lessons reference questions by id — questions.json is the single source of truth for question content.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>title</code>, <code>body</code> (markdown-capable text), optional <code>related_question_ids[]</code> whose entries must exist in <code>data/questions.json</code> (enforced by test)</td>
     <td><code>Lessons</code>; <code>lessons.data.test.js</code></td>
+  </tr>
+  <tr>
+    <td><code>data/prompts.json</code></td>
+    <td>Prompt library seed data (Slice 6): 8 curated PMP-study prompts with [bracketed] fill-in slots, for the User to paste into an external AI chat of their choice. Plain local text — the app never executes them or calls any API (constitution Section 2). Standalone: no cross-references to questions or lessons.</td>
+    <td>Array of objects: <code>id</code>, <code>title</code>, <code>description</code> (when to use it), <code>prompt</code> (the copyable text)</td>
+    <td><code>PromptHelper</code>; <code>prompts.data.test.js</code></td>
   </tr>
   <tr>
     <td><code>localStorage</code> key <code>pmp-quiz-history-v1</code></td>
@@ -190,6 +217,22 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>src/__tests__/Lessons.test.jsx</code></td>
     <td>Lessons rendering: every title + domain/task tags, lesson count, full body content present, markdown subset (bold → strong, "- " → list items, no raw markers leaked), related questions shown as the actual prompts from questions.json, no console.error</td>
   </tr>
+  <tr>
+    <td><code>src/__tests__/contentValidator.test.js</code></td>
+    <td>Validator unit tests against the real data files: parse errors (empty, malformed, array, scalar), valid question/lesson acceptance, and every rejection case with its exact message — missing/unexpected/empty fields, bad eco_domain, duplicate id vs both files, options rules, correct_answer mismatch, lesson body length/placeholder, dangling/duplicate related_question_ids, snippet field ordering, no mutation of existing data</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/ContentStudio.test.jsx</code></td>
+    <td>ContentStudio component: type toggle + form render, never-writes disclosure shown, specific on-screen errors (parse, missing field, duplicate id, dangling related id), valid flow shows snippet + target file + "Nothing has been saved", clipboard copy with feedback, stale result cleared on input change, existing data untouched, no console.error</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/prompts.data.test.js</code></td>
+    <td>Data contract for <code>data/prompts.json</code>: ≥5 prompts, all required fields non-empty strings, unique ids, substantive prompt text, and no embedded URLs (static text only, nothing to call)</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/PromptHelper.test.jsx</code></td>
+    <td>PromptHelper component: every prompt rendered with title/description/exact text, prompt count + no-AI-call disclosure shown, one copy button per prompt, clipboard receives the exact prompt text with "Copied!" feedback, feedback moves between cards, no console.error</td>
+  </tr>
 </table>
 
 <h2>Related docs</h2>
@@ -202,8 +245,9 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 
 <h2>Not built yet</h2>
 <p>Full curriculum content (seed lessons only for now — authored separately
-per the RACI), diagnostics, adaptive recommendations, history management
-(clearing/exporting quiz history), richer markdown rendering
-(tables/images/code). No routing, no state library, no backend.</p>
+per the RACI, with Content Studio as the intake path), diagnostics,
+adaptive recommendations, history management (clearing/exporting quiz
+history), richer markdown rendering (tables/images/code). No routing, no
+state library, no backend, no AI API integration (constitution Section 2).</p>
 </body>
 </html>

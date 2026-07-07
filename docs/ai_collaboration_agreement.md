@@ -1,7 +1,7 @@
 # PMP Study Platform — AI Collaboration Agreement
 
-**Version:** 1.4
-**Last Updated:** 2026-06-30
+**Version:** 1.5
+**Last Updated:** 2026-07-07
 **Canonical path:** `docs/ai_collaboration_agreement.md`
 **Status:** Draft for User review (incorporates ChatGPT's review round)
 **Applies to:** User, ChatGPT, Claude, Codex
@@ -182,6 +182,14 @@ Since Claude and ChatGPT cannot see each other's sessions:
   — Claude should not assume it has seen the current app-map unless one of those happened in
   this conversation
 
+### Direct-to-main commits
+
+Direct commits to main (bypassing a PR) are permitted only for
+documentation backfills explicitly approved by the User in that session —
+e.g. correcting a decision log gap. All implementation changes, and any
+other documentation change, go through a PR and the normal Review/Approve
+steps. This exception itself should be used rarely; when in doubt, open a PR.
+
 ---
 
 ## 8. Required Context Load Before Implementation
@@ -280,6 +288,7 @@ not updated as a side effect of any single task, unlike `progress.md`.
 | 2026-06-30 | v1.2: added Required Context Load Before Implementation (Section 8) and standard prompt prefix; clarified Claude's app-map.html access depends on session repo access | User-specified enforcement mechanism for context loading |
 | 2026-06-30 | v1.3: staged the context load (progress.md + app-map.html first, full codebase only as scoped by app-map), and noted that auto-loaded rules files (CLAUDE.md etc.) should carry this requirement structurally rather than relying on the prompt prefix every session | No API access means no automatic per-turn injection; the User shouldn't be the sole enforcement mechanism |
 | 2026-06-30 | v1.4: confirmed via Anthropic/OpenAI docs that Claude Code reads `CLAUDE.md` and Codex reads `AGENTS.md` automatically at session start; confirmed Claude Code falls back to `AGENTS.md` when no `CLAUDE.md` exists, so a single root `AGENTS.md` covers both tools | Verified product behavior rather than relying on assumption; reduces duplicate-file maintenance cost |
+| 2026-07-07 | v1.5: added Direct-to-main commits policy (Section 7) — documentation backfills explicitly approved by the User in-session may bypass a PR; everything else goes through the normal Review/Approve PR flow | The decision-log backfill (#4–#6) went directly to main; the exception needed to be written down and bounded rather than left as precedent |
 
 **Parked, not adopted yet:** ChatGPT proposed this agreement's structure (Constitution →
 Product Brief → Architecture Map → Decision Log → Progress → Next Actions → Agent Skills →

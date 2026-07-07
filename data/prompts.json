@@ -1,0 +1,50 @@
+[
+  {
+    "id": "p001",
+    "title": "Generate practice questions on an ECO task",
+    "description": "Use in an external AI chat to get fresh, original practice questions for a weak area.",
+    "prompt": "Generate 5 original PMP-style practice questions on [ECO task, e.g. \"Manage conflict\"]. Requirements: situational multiple-choice with 4 options each, exactly one best answer, no reuse or close paraphrase of PMI's copyrighted exam content, and a short explanation of why the correct answer beats each distractor. Aim the difficulty at the real exam: every option should be plausible, with the best answer determined by the PMI mindset rather than by obvious elimination."
+  },
+  {
+    "id": "p002",
+    "title": "Explain a concept for the exam",
+    "description": "For when a term or process keeps tripping you up.",
+    "prompt": "Explain [concept, e.g. \"schedule compression\"] like I'm studying for the PMP exam. Cover: what it is in plain language, when a project manager actually uses it, how the exam typically tests it (including common trap answers), and a one-line memory hook. Keep it under 300 words."
+  },
+  {
+    "id": "p003",
+    "title": "Compare two commonly confused terms",
+    "description": "Side-by-side breakdown of look-alike concepts.",
+    "prompt": "I keep confusing [term A] and [term B] while studying for the PMP exam. Compare them in a short table (definition, who owns it, when it happens, exam keywords that signal each one), then give me one practice scenario where choosing between them is the whole question, and tell me the answer only after asking me to commit to one."
+  },
+  {
+    "id": "p004",
+    "title": "Situational drill: what should the PM do first?",
+    "description": "Interactive rep of the exam's most common question shape.",
+    "prompt": "Give me one realistic project scenario involving [ECO task or domain] and ask me what the project manager should do FIRST, with 4 plausible options. Wait for my answer. Then tell me whether I was right, and explain the PMI-mindset reasoning that ranks the options — especially why the runner-up option is second and not first. Repeat with a new scenario until I say stop."
+  },
+  {
+    "id": "p005",
+    "title": "Diagnose why my answer was wrong",
+    "description": "Paste a missed question from the quiz review screen to understand the gap.",
+    "prompt": "I'm studying for the PMP exam and missed this practice question. Question: [paste question and options]. I chose: [your answer]. The correct answer was: [correct answer]. Explain the reasoning gap between my choice and the correct one, name the PMI principle or mindset rule I ignored, and give me a quick check I can run on similar questions before answering."
+  },
+  {
+    "id": "p006",
+    "title": "PMI mindset check for a domain",
+    "description": "Recalibrate on how PMI expects a PM to think before a study session.",
+    "prompt": "Summarize the PMI mindset for the [People / Process / Business Environment] domain of the PMP exam: the default postures the exam rewards (e.g. facilitate before escalate, prevention over correction), the answer patterns that are almost always wrong, and 5 keyword-to-instinct pairs (when the question says X, my first instinct should be Y)."
+  },
+  {
+    "id": "p007",
+    "title": "Study plan from my dashboard results",
+    "description": "Turn per-domain accuracy from the Dashboard into a focused plan.",
+    "prompt": "Here are my PMP practice-quiz results by ECO domain: [paste per-domain accuracy from the Dashboard, e.g. \"People 85%, Process 60%, Business Environment 70%\"]. Build me a one-week study plan that weights time toward my weakest areas, names specific ECO tasks to review per day, and ends each day with a 5-question self-check topic. Assume about [N] minutes of study per day."
+  },
+  {
+    "id": "p008",
+    "title": "Draft a new question for Content Studio",
+    "description": "Author question JSON externally, then validate it in the Content Studio tab.",
+    "prompt": "Write ONE original PMP-style practice question on [ECO task] as a single JSON object with exactly these fields: \"id\" (I'll replace it), \"eco_domain\" (one of \"People\", \"Process\", \"Business Environment\"), \"eco_task\", \"question\", \"options\" (array of 4 distinct strings), \"correct_answer\" (must exactly match one option), \"explanation\". The scenario must be original — no reuse or close paraphrase of PMI's copyrighted material. Output only the JSON object, no commentary, so I can paste it into a validation tool."
+  }
+]
