@@ -478,3 +478,66 @@ body {
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+.prompt-helper h2 {
+  margin-bottom: 0.25rem;
+}
+
+.prompt-intro {
+  color: #52606d;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.prompt-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.prompt-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.prompt-title {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.prompt-description {
+  color: #52606d;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.prompt-text {
+  background: #f5f7fa;
+  border: 1px solid #d9e2ec;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+
+.prompt-copy {
+  margin-top: 0.75rem;
+  background: #1c64d9;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.prompt-copy:hover {
+  background: #1a56ba;
+}

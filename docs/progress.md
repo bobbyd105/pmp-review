@@ -1,7 +1,7 @@
 # Progress
 
 ## Current Version
-v0.6 — Slice 5 complete (Content Studio)
+v0.7 — Slice 6 complete (Prompt Helper)
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -30,32 +30,48 @@ v0.6 — Slice 5 complete (Content Studio)
     snippet + "Nothing has been saved" notice + copy-to-clipboard on
     success. Additive only; reads existing data solely for duplicate
     and reference checks.
-  - Tests: 104 Vitest tests passing (62 prior + 31 validator +
-    11 ContentStudio, covering valid input and each rejection case)
   - Verified in headless Chromium: parse/missing-field/duplicate-id/
     bad-domain/dangling-ref errors named on screen, valid snippet +
-    not-saved notice + clipboard copy work, all five views regression-
-    checked, zero console errors/warnings
+    not-saved notice + clipboard copy work, zero console errors
+- Slice 6 — Prompt Helper (v0.7):
+  - `data/prompts.json`: 8 curated PMP-study prompts (practice-question
+    generation, concept explainers, situational drills, missed-question
+    diagnosis, PMI mindset checks, dashboard-driven study plan, and two
+    Content Studio authoring prompts) — static local text with
+    [bracketed] fill-in slots, per the product brief's "copy/paste
+    prompts only"
+  - `PromptHelper` component: sixth nav view — browsable prompt cards
+    (title, when-to-use description, full text) each with a
+    copy-to-clipboard button and per-card "Copied!" feedback; UI states
+    plainly that the app never calls an AI
+  - Tests: 114 Vitest tests passing (104 after Slice 5 + 5 prompts
+    data-contract incl. a no-URLs/static-text check + 5 PromptHelper
+    rendering/copy)
+  - Verified in headless Chromium: all 8 prompt cards render, clipboard
+    receives the exact prompt text with per-card feedback, all six views
+    regression-checked, zero console errors/warnings, and zero external
+    network requests observed (constitution Section 2)
 
 ## Files Modified
-- docs/ai_collaboration_agreement.md (v1.5 — direct-to-main policy,
-  committed separately)
-- docs/decision_log.md (Decision #8 added)
-- src/studio/contentValidator.js (added)
-- src/components/ContentStudio.jsx (added)
-- src/__tests__/contentValidator.test.js,
-  src/__tests__/ContentStudio.test.jsx (added)
-- src/App.jsx (modified — fifth nav view), src/index.css (studio styles)
-- package.json (version bump)
-- docs/app-map.html (updated — ContentStudio, contentValidator, tests)
-- docs/progress.md (this file)
+- Slice 5: docs/decision_log.md (Decision #8),
+  src/studio/contentValidator.js, src/components/ContentStudio.jsx,
+  src/__tests__/contentValidator.test.js + ContentStudio.test.jsx,
+  src/App.jsx, src/index.css, package.json, docs/app-map.html,
+  docs/progress.md
+- Slice 6: data/prompts.json (added),
+  src/components/PromptHelper.jsx (added),
+  src/__tests__/prompts.data.test.js + PromptHelper.test.jsx (added),
+  src/App.jsx (sixth nav view), src/index.css (prompt styles),
+  package.json (version bump), docs/app-map.html, docs/progress.md
 
 ## Architecture Changes
-- First `src/studio/` module: validation logic lives in a pure,
-  React-free module so it can be unit-tested directly and stays in
-  lock-step with the data-contract tests it mirrors. The JSON seed
-  files remain read-only static imports everywhere (Decision #8) — no
-  write path was added.
+- Slice 5: first `src/studio/` module — validation logic in a pure,
+  React-free module, unit-tested directly. JSON seed files remain
+  read-only static imports everywhere (Decision #8); no write path.
+- Slice 6: third JSON seed file (`data/prompts.json`) following the
+  questions.json/lessons.json pattern (static import + data-contract
+  test). Prompts are standalone text — no cross-references to questions
+  or lessons, no execution, no external calls.
 
 ## Known Issues
 None blocking.
@@ -69,19 +85,25 @@ None blocking.
   data-contract tests (the tests remain the source of truth); if the
   schema changes, both must be updated together — the validator's tests
   run against the real data files to catch drift.
+- Six flat nav buttons is approaching the point where grouping (study
+  views vs. authoring tools) is worth considering — cosmetic, not
+  blocking.
 
 ## Content Accuracy Note
 Constitution Section 10 manual accuracy spot-check (questions AND
 lessons) remains pending User review. Content Studio checks shape, not
-correctness — content quality still depends on authored material and
-User review (Decision #5).
+correctness. The 8 prompts are meta-content (study instructions, not
+exam content) but merit the same User read-through for tone and
+usefulness.
 
 ## Current Status
-Slice 5 built, tested, and documented on branch
-`claude/content-studio-prompt-helper-441p0f`. Prompt Helper (Slice 6)
-follows on the same branch per this session's spec. Pushed for review —
-no PR opened, per instruction.
+Slices 5 and 6 built, tested, and documented on branch
+`claude/content-studio-prompt-helper-441p0f` (three commits: governance
+policy, Content Studio, Prompt Helper). Pushed for review — no PR
+opened, per instruction. Awaiting Review and User approval.
 
 ## Next Recommended Task
-Prompt Helper (Slice 6, this branch), then full curriculum content
-authoring (Claude-chat lane) using Content Studio for intake.
+Full curriculum content authoring (Claude-chat lane), now with Content
+Studio as the intake/validation path and Prompt Helper's authoring
+prompts as the starting templates; or history management (clear/export)
+— spec to be written by ChatGPT + User before implementation.

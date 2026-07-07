@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-07 (Slice 5 — Content Studio).
+<p>Last updated: 2026-07-07 (Slice 6 — Prompt Helper).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus a five-button view toggle between Quiz, QuestionBank, Dashboard, Lessons, and ContentStudio (no router)</td>
+    <td>Top-level layout: page header plus a six-button view toggle between Quiz, QuestionBank, Dashboard, Lessons, ContentStudio, and PromptHelper (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code></td>
-    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons | studio)</td>
+    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons | studio | prompts)</td>
   </tr>
 </table>
 
@@ -92,6 +92,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>None</td>
     <td>Reads <code>data/questions.json</code> and <code>data/lessons.json</code> (static imports) only for duplicate-id and related-id checks. Writes nothing — output is a snippet the User pastes into the JSON file manually. Copies snippet via <code>navigator.clipboard</code>.</td>
     <td>React (<code>useState</code>); <code>src/studio/contentValidator.js</code></td>
+  </tr>
+  <tr>
+    <td><code>src/components/PromptHelper.jsx</code></td>
+    <td>Static copy/paste prompt library (product brief: "copy/paste prompts only"): renders one card per prompt with title, when-to-use description, full text, and a copy-to-clipboard button with per-card "Copied!" feedback; never calls any API</td>
+    <td><code>App</code></td>
+    <td>None</td>
+    <td>Reads <code>data/prompts.json</code> (static import). Writes nothing except the clipboard via <code>navigator.clipboard</code>. Local UI state only (<code>copiedId</code>).</td>
+    <td>React (<code>useState</code>)</td>
   </tr>
   <tr>
     <td><code>src/components/QuizQuestion.jsx</code></td>
@@ -161,6 +169,12 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>Lessons</code>; <code>lessons.data.test.js</code></td>
   </tr>
   <tr>
+    <td><code>data/prompts.json</code></td>
+    <td>Prompt library seed data (Slice 6): 8 curated PMP-study prompts with [bracketed] fill-in slots, for the User to paste into an external AI chat of their choice. Plain local text — the app never executes them or calls any API (constitution Section 2). Standalone: no cross-references to questions or lessons.</td>
+    <td>Array of objects: <code>id</code>, <code>title</code>, <code>description</code> (when to use it), <code>prompt</code> (the copyable text)</td>
+    <td><code>PromptHelper</code>; <code>prompts.data.test.js</code></td>
+  </tr>
+  <tr>
     <td><code>localStorage</code> key <code>pmp-quiz-history-v1</code></td>
     <td>Append-only history of completed quizzes (Slice 3). One entry per completed quiz; never overwritten, only appended. Independent of the session key.</td>
     <td>Array of: <code>completedAt</code> (ISO), <code>score</code>, <code>total</code>, <code>domains</code> map of <code>{correct, total}</code> per eco_domain, <code>missedQuestionIds[]</code>. Aggregates are derived, not stored.</td>
@@ -211,6 +225,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>src/__tests__/ContentStudio.test.jsx</code></td>
     <td>ContentStudio component: type toggle + form render, never-writes disclosure shown, specific on-screen errors (parse, missing field, duplicate id, dangling related id), valid flow shows snippet + target file + "Nothing has been saved", clipboard copy with feedback, stale result cleared on input change, existing data untouched, no console.error</td>
   </tr>
+  <tr>
+    <td><code>src/__tests__/prompts.data.test.js</code></td>
+    <td>Data contract for <code>data/prompts.json</code>: ≥5 prompts, all required fields non-empty strings, unique ids, substantive prompt text, and no embedded URLs (static text only, nothing to call)</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/PromptHelper.test.jsx</code></td>
+    <td>PromptHelper component: every prompt rendered with title/description/exact text, prompt count + no-AI-call disclosure shown, one copy button per prompt, clipboard receives the exact prompt text with "Copied!" feedback, feedback moves between cards, no console.error</td>
+  </tr>
 </table>
 
 <h2>Related docs</h2>
@@ -223,8 +245,9 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 
 <h2>Not built yet</h2>
 <p>Full curriculum content (seed lessons only for now — authored separately
-per the RACI), diagnostics, adaptive recommendations, history management
-(clearing/exporting quiz history), richer markdown rendering
-(tables/images/code). No routing, no state library, no backend.</p>
+per the RACI, with Content Studio as the intake path), diagnostics,
+adaptive recommendations, history management (clearing/exporting quiz
+history), richer markdown rendering (tables/images/code). No routing, no
+state library, no backend, no AI API integration (constitution Section 2).</p>
 </body>
 </html>

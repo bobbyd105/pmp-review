@@ -4,6 +4,7 @@ import Quiz from './components/Quiz.jsx'
 import Dashboard from './components/Dashboard.jsx'
 import Lessons from './components/Lessons.jsx'
 import ContentStudio from './components/ContentStudio.jsx'
+import PromptHelper from './components/PromptHelper.jsx'
 
 const VIEWS = [
   { id: 'quiz', label: 'Quiz' },
@@ -11,6 +12,7 @@ const VIEWS = [
   { id: 'dashboard', label: 'Dashboard' },
   { id: 'lessons', label: 'Lessons' },
   { id: 'studio', label: 'Content Studio' },
+  { id: 'prompts', label: 'Prompt Helper' },
 ]
 
 export default function App() {
@@ -39,6 +41,7 @@ export default function App() {
       {view === 'dashboard' && <Dashboard />}
       {view === 'lessons' && <Lessons />}
       {view === 'studio' && <ContentStudio />}
+      {view === 'prompts' && <PromptHelper />}
     </main>
   )
 }
