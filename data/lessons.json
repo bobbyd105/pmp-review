@@ -94,5 +94,69 @@
   "title": "Evaluating Status, Not Just Reporting It",
   "body": "Status reporting informs stakeholders what's happening. Status *evaluation* — this task — is the analytical step before that: comparing actual performance against the baseline across schedule, cost, scope, and quality, and using that comparison to decide whether action is needed.\n\nThe exam expects familiarity with forecasting metrics that extend EVM into 'where are we headed': **Estimate at Completion (EAC)** projects total cost based on performance so far, and **Estimate to Complete (ETC)** projects remaining cost from today forward. A negative schedule variance that's worsening across three consecutive reporting periods isn't just a number to report upward — it's a signal requiring root-cause investigation and a corrective action plan.\n\nExam trap: treating a trend as something to simply continue monitoring and reporting. If the trend is worsening across multiple periods, the expected response is evaluation leading to action, not passive observation.",
   "related_question_ids": ["q030"]
+},
+{
+  "id": "l013",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 1: Define and establish project governance",
+  "title": "Governance: Who Decides What",
+  "body": "Governance is the structure of decision rights — who can approve what, at what threshold, and who gets escalated to when the answer isn't clear. The exam tests whether you recognize governance gaps as a distinct problem from communication problems or scope problems.\n\nA classic scenario: a change request exceeding a budget threshold arrives, and nobody is sure who has authority to approve it. The failure here isn't the change itself — it's that decision rights were never clearly established. The fix is defining and documenting governance (who approves what, escalation paths, review cadences) going forward, not the project manager unilaterally deciding out of convenience, and not rejecting the request simply because authority is unclear.\n\nGovernance also covers the structures around project oversight — steering committees, phase-gate reviews, and reporting lines to sponsors. The exam expects you to know that governance should be established early, ideally at initiation, and revisited if the organizational structure or stakeholder landscape changes mid-project. A project without clear governance tends to surface its gaps at the worst possible moment — during a high-stakes decision under time pressure.",
+  "related_question_ids": ["q020"]
+},
+{
+  "id": "l014",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 2: Plan and manage project compliance",
+  "title": "Compliance: Planning for Rules You Didn't Write",
+  "body": "Compliance covers legal, regulatory, safety, and organizational-policy requirements that exist independent of the project's own objectives — the project must operate within them, not negotiate them away. The exam expects a proactive posture: identifying applicable compliance requirements during planning, not discovering them reactively during execution or, worse, during an audit.\n\nA frequent scenario: a project expanding into a new region encounters stricter data-privacy laws than the team originally planned for. The correct response is to identify the new regulatory requirements, conduct a gap analysis against current practice, and incorporate the necessary changes into the project plan — not to proceed as planned and address compliance only if someone raises it.\n\nCompliance planning also includes building in verification activities (audits, control checks) rather than assuming compliance once satisfied stays satisfied. Regulatory environments change, and the exam rewards recognizing compliance as an ongoing planning and monitoring activity, not a one-time checkbox at project initiation.",
+  "related_question_ids": ["q010"]
+},
+{
+  "id": "l015",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 3: Manage and control changes",
+  "title": "Change Control: Why Every Change Goes Through the Process",
+  "body": "Change control exists to protect the project's baselines from uncontrolled drift. The exam trap here is almost always a 'small' or 'reasonable-sounding' change request that a well-meaning team member wants to slip in without going through formal review — the correct answer is nearly always to assess impact and submit it through change control anyway, regardless of how minor it seems.\n\nWhy this matters: small unauthorized changes compound. A project that lets minor scope additions bypass review one at a time ends up with significant, unplanned scope growth with no corresponding adjustment to schedule or budget — classic scope creep, just distributed across many small decisions instead of one big one.\n\nThe formal process is consistent regardless of project type: assess the impact on scope, schedule, cost, and quality; route it through the appropriate change control board or authority; get a documented decision (approve, reject, or defer) before implementation. This applies even in adaptive/agile contexts — the mechanism looks different (backlog reprioritization instead of a formal CCB), but the discipline of assessing impact before acting is the same.",
+  "related_question_ids": ["q008"]
+},
+{
+  "id": "l016",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 4: Remove impediments and manage issues",
+  "title": "Impediments and Issues: Two Sides of the Same Task",
+  "body": "This task merges what used to be two separate concerns: removing things blocking the team (impediments) and formally tracking problems that have already materialized (issues). The exam expects active ownership of both, not passive waiting.\n\nFor impediments — a team blocked on an external department's approval, for instance — the correct response is to proactively engage the source of the blocker and help remove it, not wait for it to resolve on its own or quietly work around it by reassigning tasks.\n\nFor issues — a problem that's already impacting delivery — the discipline is formal: log it in an issue register, assign an owner, set a target resolution date, and track it to closure. This is different from just fixing something informally and mentioning it in a status report; informal fixes don't create accountability or a record for future reference. It's also different from escalating immediately without any analysis — issue management expects understanding the problem first, then deciding whether escalation, direct resolution, or another path is appropriate.\n\nThe common thread: both impediments and issues require the project manager to take active ownership rather than defer resolution to time or hope.",
+  "related_question_ids": ["q018", "q021"]
+},
+{
+  "id": "l017",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 5: Plan and manage risk",
+  "title": "Risk Management Fundamentals",
+  "body": "Risk management moved into the Business Environment domain in the current ECO, reflecting that risks are fundamentally about the project's relationship with an uncertain external and internal environment, not just a scheduling or technical concern.\n\nCore process: identify risks, assess probability and impact (often via a probability-impact matrix), and plan responses. For threats, the four standard response strategies are avoid (eliminate the risk entirely), mitigate (reduce probability or impact), transfer (shift the risk to a third party, e.g. insurance or a subcontract), and accept (acknowledge and do nothing further, usually for low-priority risks). Opportunities have a parallel set: exploit, enhance, share, and accept.\n\nA frequently tested scenario: a low-probability, high-impact risk is identified, such as a sole-source supplier failing to deliver. The correct response is a documented risk response — for example, qualifying an alternate supplier in advance — with a named risk owner, not simply noting the risk and moving on.\n\nException handling matters too: a risk that materializes becomes an issue, and should transition into issue management (Task 4) rather than continuing to be tracked purely as a hypothetical risk.",
+  "related_question_ids": ["q006"]
+},
+{
+  "id": "l018",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 6: Continuous improvement",
+  "title": "Continuous Improvement: Fixing the Process, Not Just the Symptom",
+  "body": "Continuous improvement is about recognizing when a recurring problem is actually a process defect, not a series of unrelated incidents. The exam signal is repetition: the same type of defect, delay, or miscommunication happening across multiple iterations or phases despite being individually resolved each time.\n\nThe correct response is root cause analysis — asking why the same problem keeps recurring — followed by a change to the underlying process, not simply continuing to fix each instance as it appears. Fixing the symptom repeatedly without addressing the cause guarantees the pattern continues.\n\nThis connects directly to retrospectives in adaptive environments and lessons-learned reviews in predictive ones — both are structured mechanisms for surfacing exactly this kind of pattern. The exam expects you to recognize that continuous improvement isn't a separate activity bolted onto the end of a project; it's an ongoing discipline that should be acting on real signals (recurring defects, repeated schedule slips) as they emerge, not just at project closure.",
+  "related_question_ids": ["q024"]
+},
+{
+  "id": "l019",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 7: Support organizational change",
+  "title": "Supporting Organizational Change Beyond the Project",
+  "body": "Projects often exist to deliver a change to the organization — a new tool, process, or structure — and the exam expects you to recognize that delivering the thing is not the same as the organization actually adopting it. Quiet non-adoption (staff continuing to use an old system, or ignoring a new process) is a classic signal of unmanaged organizational change resistance.\n\nThe correct response addresses the human side of change: understand the source of resistance, involve early adopters as champions, and close skills or support gaps through targeted training — not mandating compliance through a hard cutoff, escalating to individual managers, or simply removing access to the old way of doing things without addressing why people are avoiding the new one.\n\nThis task draws on organizational change management concepts (e.g., recognizing stages of individual and organizational adoption) that sit outside the project's technical deliverables but are squarely within the project manager's responsibility when the project's success depends on the change actually sticking.",
+  "related_question_ids": ["q016"]
+},
+{
+  "id": "l020",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 8: Evaluate external business environment changes",
+  "title": "Watching the Environment Outside the Project",
+  "body": "Projects don't run in a vacuum — regulatory shifts, market conditions, currency fluctuations, new competitor moves, or changes in organizational strategy can all affect a project's scope, viability, or priority even though none of them originate inside the project itself.\n\nThe exam expects a proactive monitoring posture: when an external condition changes — for example, a tariff increase raising a key input's cost — the project manager should assess the impact on cost, schedule, and the business case, then recommend options to decision-makers, rather than absorbing the impact silently or treating it as someone else's problem to notice.\n\nThis task is closely linked to Task 2 (compliance) and Task 1 (governance) — an external change often requires both a technical response (updating the plan) and a governance response (getting the right people to formally decide how to proceed) at the same time. The project manager's role is less about predicting external change and more about maintaining the awareness and escalation discipline to respond quickly when it happens.",
+  "related_question_ids": ["q012"]
 }
 ]

@@ -418,5 +418,19 @@
   ],
   "correct_answer": "Investigate the root cause and develop a corrective action plan",
   "explanation": "A consistently worsening trend across multiple periods is a signal for evaluation leading to action, not passive monitoring. Adjusting the baseline to match reality (rebaselining) is a separate, more drastic step usually reserved for approved scope changes, not a default response to a variance trend."
+},
+{
+  "id": "q031",
+  "eco_domain": "People",
+  "eco_task": "Task 6: Manage stakeholder expectations",
+  "question": "A stakeholder was originally told a feature would ship by a specific date, but changing circumstances now make that date unrealistic. What should the project manager do?",
+  "options": [
+    "Say nothing and hope the delay isn't noticed until closer to the date",
+    "Proactively communicate the change, the reasons behind it, and the revised timeline as soon as it becomes clear",
+    "Continue promising the original date to avoid disappointing the stakeholder",
+    "Quietly reduce scope to hit the original date without informing the stakeholder"
+  ],
+  "correct_answer": "Proactively communicate the change, the reasons behind it, and the revised timeline as soon as it becomes clear",
+  "explanation": "Managing stakeholder expectations means keeping expectations current with reality as circumstances change, communicated proactively and transparently — not preserving a stakeholder's comfort in the short term by delaying bad news or silently altering scope."
 }
 ]
