@@ -6,7 +6,9 @@ v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 existing content remapped to the July 2026 ECO structure per Decision #10;
 Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 26 ECO tasks has at least one question AND at least one lesson (31 questions,
-26 lessons total; 26 of 26 tasks have both)
+26 lessons total; 26 of 26 tasks have both). Phase 2 People depth batch 1
+adds 7 questions across underrepresented tasks (38 questions total; People
+now 18Q/8L).
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -109,6 +111,12 @@ Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
   Bank totals now: 31 questions, 26 lessons (People 11Q/8L, Process
   11Q/10L, Business Environment 9Q/8L). No task is Questions-only,
   Lesson-only, or empty. All 114 tests pass with zero test-file changes.
+- Phase 2 People depth batch 1: appended 7 questions (q042–q048), one for
+  each underrepresented People task (Tasks 1, 2, 4, 5, 6, 7, and 8).
+  People now has 18 questions across its 8 tasks: Task 3 remains at 4 and
+  every other task has 2. Bank totals are now 38 questions and 26 lessons
+  (People 18Q/8L, Process 11Q/10L, Business Environment 9Q/8L). Existing
+  test files were unchanged; all 114 tests pass.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -163,12 +171,14 @@ four commits: (1) the July 2026 ECO remap (re-labeling pass +
 content_plan.md), (2) Phase 1 breadth coverage (6 questions, 6 lessons),
 (3) Business Environment lesson coverage + People Task 6 question
 (8 lessons, 1 question), and (4) the final 6 lessons closing the last
-Questions-only tasks (People 3/4/8, Process 2/5/7). Pushed, not merged —
-PR #7 updates automatically. Breadth is now complete: all 26 ECO tasks
-have both a question and a lesson (31 questions, 26 lessons).
+Questions-only tasks (People 3/4/8, Process 2/5/7). PR #7 merged to main.
+Breadth is complete: all 26 ECO tasks have both a
+question and a lesson. Phase 2 People depth batch 1 is on
+`content/people-depth-batch1`, adding one question to each underrepresented
+People task (38 questions, 26 lessons total).
 
 ## Next Recommended Task
-Full curriculum content authoring (Claude-chat lane), now with Content
-Studio as the intake/validation path and Prompt Helper's authoring
-prompts as the starting templates; or history management (clear/export)
-— spec to be written by ChatGPT + User before implementation.
+Continue Phase 2 curriculum depth authoring (Claude-chat lane), using
+Content Studio as the intake/validation path and Prompt Helper's authoring
+prompts as starting templates; or history management (clear/export) — spec
+to be written by ChatGPT + User before implementation.

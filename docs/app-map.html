@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-07 (Slice 6 — Prompt Helper).
+<p>Last updated: 2026-07-10 (Phase 2 People depth batch 1).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -152,7 +152,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
   <tr>
     <td><code>data/questions.json</code></td>
-    <td>Question bank seed data: 12 original PMP-style questions across all 3 ECO domains (People, Process, Business Environment). Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Question bank data: 38 original PMP-style questions across all 3 ECO domains (People 18, Process 11, Business Environment 9). Phase 1 breadth covers every ECO task; Phase 2 People depth batch 1 adds one question to each underrepresented People task. Local JSON per constitution Section 3 — no database, no API.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
     <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
   </tr>

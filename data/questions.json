@@ -432,5 +432,103 @@
   ],
   "correct_answer": "Proactively communicate the change, the reasons behind it, and the revised timeline as soon as it becomes clear",
   "explanation": "Managing stakeholder expectations means keeping expectations current with reality as circumstances change, communicated proactively and transparently — not preserving a stakeholder's comfort in the short term by delaying bad news or silently altering scope."
+},
+{
+  "id": "q042",
+  "eco_domain": "People",
+  "eco_task": "Task 1: Develop a common vision",
+  "question": "A team has two technically valid approaches to a problem and is deadlocked choosing between them based purely on technical preference. What should the project manager do?",
+  "options": [
+    "Let the team continue debating until they reach technical consensus on their own",
+    "Facilitate a discussion connecting each option back to the project's actual business objective to guide the decision",
+    "Choose the technically simpler option to end the deadlock quickly",
+    "Escalate the technical decision to a senior architect outside the team"
+  ],
+  "correct_answer": "Facilitate a discussion connecting each option back to the project's actual business objective to guide the decision",
+  "explanation": "When a team is deadlocked on a purely technical basis, reconnecting the decision to the project's vision and business objective often resolves what technical debate alone cannot — the two options may serve the actual goal very differently even if both are technically sound."
+},
+{
+  "id": "q043",
+  "eco_domain": "People",
+  "eco_task": "Task 2: Manage conflicts",
+  "question": "A disagreement between two team leads over resource priorities has become personal, and other team members are now hesitant to speak openly in meetings. What should the project manager do first?",
+  "options": [
+    "Wait for the tension to resolve naturally once the resource question is settled",
+    "Address the interpersonal behavior directly and separately from the underlying resource disagreement",
+    "Reassign one of the team leads to reduce friction",
+    "Avoid the topic in meetings until the leads resolve it privately"
+  ],
+  "correct_answer": "Address the interpersonal behavior directly and separately from the underlying resource disagreement",
+  "explanation": "Once conflict affects team psychological safety, the interpersonal harm needs direct attention on its own — separating the people problem from the resource problem — rather than assuming resolving the original disagreement will also repair the damage to the team."
+},
+{
+  "id": "q044",
+  "eco_domain": "People",
+  "eco_task": "Task 4: Engage stakeholders",
+  "question": "A stakeholder with significant approval authority joins the project mid-stream, after major planning decisions have already been made without their input. What should the project manager do?",
+  "options": [
+    "Proceed as planned since the major decisions are already finalized",
+    "Proactively brief the new stakeholder and incorporate their input going forward, even though some decisions predate their involvement",
+    "Wait for the stakeholder to raise concerns before engaging them",
+    "Ask the new stakeholder to accept the existing plan without discussion"
+  ],
+  "correct_answer": "Proactively brief the new stakeholder and incorporate their input going forward, even though some decisions predate their involvement",
+  "explanation": "A newly joined, influential stakeholder still needs proactive engagement — bringing them up to speed and genuinely incorporating their input going forward — rather than treating prior decisions as closed to their influence entirely."
+},
+{
+  "id": "q045",
+  "eco_domain": "People",
+  "eco_task": "Task 5: Align stakeholder expectations",
+  "question": "Two departments receiving the same deliverable have different, unstated definitions of what \"done\" means for it. What should the project manager do?",
+  "options": [
+    "Use whichever department's definition was assumed during planning",
+    "Facilitate both departments to a single, explicit shared definition of done before the work is considered complete",
+    "Let each department apply their own definition independently",
+    "Avoid the topic since both definitions are reasonable"
+  ],
+  "correct_answer": "Facilitate both departments to a single, explicit shared definition of done before the work is considered complete",
+  "explanation": "Unstated, conflicting definitions of completion are an alignment gap that needs resolving explicitly and early — before delivery, not discovered as a dispute after the fact."
+},
+{
+  "id": "q046",
+  "eco_domain": "People",
+  "eco_task": "Task 6: Manage stakeholder expectations",
+  "question": "A stakeholder's expectations were accurate at project kickoff but have since drifted unrealistic based on informal rumors from other channels. What should the project manager do?",
+  "options": [
+    "Wait until the next scheduled status meeting to correct the record",
+    "Proactively correct the record as soon as the drift is noticed, rather than waiting for a scheduled touchpoint",
+    "Ignore it since the original expectations were accurate at the time they were set",
+    "Ask a team member to informally correct the rumor instead of addressing it directly"
+  ],
+  "correct_answer": "Proactively correct the record as soon as the drift is noticed, rather than waiting for a scheduled touchpoint",
+  "explanation": "Managing expectations means correcting drift as soon as it's noticed, not batching the correction into the next scheduled update — the longer inaccurate expectations persist, the more they shape decisions and reactions downstream."
+},
+{
+  "id": "q047",
+  "eco_domain": "People",
+  "eco_task": "Task 7: Help ensure knowledge transfer",
+  "question": "A project is transitioning its deliverable to an operations team at closure, but operations staff have not been included in any handover activity so far. What should the project manager do?",
+  "options": [
+    "Hand over final documentation only, since that captures everything they need",
+    "Plan structured knowledge transfer sessions with operations staff before the transition is considered complete",
+    "Assume operations will reach out with questions if something is unclear after transition",
+    "Skip formal handover since the project is technically closing"
+  ],
+  "correct_answer": "Plan structured knowledge transfer sessions with operations staff before the transition is considered complete",
+  "explanation": "Knowledge transfer at transition requires active, structured sessions with the receiving team — documentation alone consistently under-transfers the tacit knowledge operations staff will actually need."
+},
+{
+  "id": "q048",
+  "eco_domain": "People",
+  "eco_task": "Task 8: Plan and manage communication",
+  "question": "An executive stakeholder wants only high-level summaries, while the technical team needs detailed specifications — but both currently receive the same generic report. What should the project manager do?",
+  "options": [
+    "Continue sending one report to keep communication simple and consistent",
+    "Tailor communication content and format separately for each audience's actual needs",
+    "Send the technical team's detailed version to everyone so nothing is missed",
+    "Ask the executive to read the detailed version if they want more context"
+  ],
+  "correct_answer": "Tailor communication content and format separately for each audience's actual needs",
+  "explanation": "Effective communication planning matches content and format to audience needs — a single generic report serving neither audience well is a planning failure, not an acceptable simplification."
 }
 ]
