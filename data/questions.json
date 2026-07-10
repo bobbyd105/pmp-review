@@ -166,5 +166,173 @@
     ],
     "correct_answer": "Assess the impact of the tariff on the project's cost, schedule, and business case, and recommend options to the appropriate decision makers",
     "explanation": "External environment changes call for impact assessment first: quantify the effect on cost, schedule, and — critically — whether the business case still holds, then bring options (re-source, re-baseline, descope, or escalate) to those with decision authority. Ignoring the change, silently cutting quality, or unilaterally terminating all skip the assessment that should drive the decision."
-  }
+  },
+  {
+  "id": "q013",
+  "eco_domain": "People",
+  "eco_task": "Task 9: Collaborate with stakeholders",
+  "question": "A key steering committee stakeholder has stopped attending governance meetings for the past month, causing delayed approvals. What should the project manager do first?",
+  "options": [
+    "Escalate the attendance issue to the stakeholder's manager",
+    "Have a direct conversation with the stakeholder to understand why they've disengaged and adjust the engagement approach",
+    "Remove the stakeholder from the governance meeting invite list to reduce friction",
+    "Send more detailed email summaries in place of their attendance"
+  ],
+  "correct_answer": "Have a direct conversation with the stakeholder to understand why they've disengaged and adjust the engagement approach",
+  "explanation": "Disengagement usually signals a mismatch between the stakeholder's needs and the current engagement approach — competing priorities, unclear value, or format that doesn't fit their schedule. Understanding the root cause first, directly, lets the PM adjust engagement rather than escalate or route around a person who still holds real approval authority."
+},
+{
+  "id": "q014",
+  "eco_domain": "Process",
+  "eco_task": "Task 2: Manage communications",
+  "question": "A project team distributed across four time zones reports repeatedly missing critical decisions made in synchronous meetings. What is the best response?",
+  "options": [
+    "Schedule additional synchronous meetings at rotating times to share the inconvenience fairly",
+    "Establish a written, asynchronous record of decisions with a defined escalation path for urgent items",
+    "Require all team members to attend meetings regardless of local time",
+    "Ask the team members in inconvenient time zones to rely on colleagues to relay information informally"
+  ],
+  "correct_answer": "Establish a written, asynchronous record of decisions with a defined escalation path for urgent items",
+  "explanation": "The root problem is a communication method mismatched to a distributed team, not a scheduling fairness problem. A durable, asynchronous decision record with a clear escalation path solves the actual gap; rotating inconvenience or relying on informal relay just redistributes or ignores the same underlying flaw."
+},
+{
+  "id": "q015",
+  "eco_domain": "Process",
+  "eco_task": "Task 11: Plan and manage procurement",
+  "question": "A project needs to procure a component with clearly defined, stable specifications that are unlikely to change. Which contract type is generally most appropriate?",
+  "options": [
+    "Time and materials",
+    "Fixed-price",
+    "Cost-reimbursable with no fee cap",
+    "An open-ended retainer"
+  ],
+  "correct_answer": "Fixed-price",
+  "explanation": "Fixed-price contracts fit well-defined, stable scope because both parties can price the work confidently upfront, shifting cost-overrun risk to the seller. Time and materials and open-ended cost-reimbursable arrangements are better suited to uncertain or evolving scope, where the buyer needs flexibility rather than price certainty."
+},
+{
+  "id": "q016",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 4: Support organizational change",
+  "question": "A new project management tool is being rolled out, and staff are quietly continuing to use the old system instead. What should the project manager do first?",
+  "options": [
+    "Mandate immediate compliance with a hard cutoff date for the old system",
+    "Understand the source of resistance, involve early adopters, and provide targeted training and support",
+    "Escalate non-compliance to each team member's direct manager",
+    "Disable access to the old system without further communication"
+  ],
+  "correct_answer": "Understand the source of resistance, involve early adopters, and provide targeted training and support",
+  "explanation": "Quiet non-adoption is a classic organizational change management signal, not a compliance problem to be forced through. Understanding resistance, using early adopters as champions, and closing the skills/support gap addresses why people are avoiding the change, rather than just penalizing the symptom."
+},
+{
+  "id": "q017",
+  "eco_domain": "People",
+  "eco_task": "Task 11: Engage and support virtual teams",
+  "question": "Team members in remote offices report they frequently learn about decisions after the fact because most discussion happens informally among colleagues who share an office. What should the project manager do?",
+  "options": [
+    "Ask the co-located staff to relay decisions to remote team members informally",
+    "Establish structured communication norms and tools that give every team member equal access to decisions, regardless of location",
+    "Require all team members to relocate to a single office",
+    "Document decisions only after they are finalized to avoid slowing down the co-located team"
+  ],
+  "correct_answer": "Establish structured communication norms and tools that give every team member equal access to decisions, regardless of location",
+  "explanation": "Virtual team engagement requires deliberately designed communication structures so location doesn't determine who's informed or included. Relying on informal relay preserves the inequity rather than fixing it."
+},
+{
+  "id": "q018",
+  "eco_domain": "People",
+  "eco_task": "Task 7: Address and remove impediments, obstacles, and blockers for the team",
+  "question": "The development team has been blocked for three days waiting on approval from an external department, and the delay is putting the current iteration at risk. What should the project manager do first?",
+  "options": [
+    "Wait for the approval to come through naturally to avoid overstepping into another department's process",
+    "Have the team work on unrelated tasks until the blocker clears",
+    "Proactively engage the external department to understand and help remove the blocker",
+    "Remove the blocked work from the iteration without further action"
+  ],
+  "correct_answer": "Proactively engage the external department to understand and help remove the blocker",
+  "explanation": "Removing impediments is an active PM responsibility, not something to wait out. Proactively engaging the source of the blocker directly addresses the obstacle rather than absorbing the delay passively."
+},
+{
+  "id": "q019",
+  "eco_domain": "Process",
+  "eco_task": "Task 13: Determine appropriate project methodology/methods and practices",
+  "question": "A project has stable, well-documented regulatory requirements, a customer who is unavailable for frequent feedback, and strict compliance sign-off gates. Which approach best fits these characteristics?",
+  "options": [
+    "A fully adaptive (Scrum) approach with short iterative feedback loops",
+    "A predictive approach with defined phases and formal sign-off gates",
+    "A hybrid approach favoring maximum customer collaboration",
+    "No formal methodology, allowing the team to self-organize entirely"
+  ],
+  "correct_answer": "A predictive approach with defined phases and formal sign-off gates",
+  "explanation": "Stable requirements, low customer availability, and strict compliance gates are the classic signals favoring a predictive approach. Adaptive approaches assume frequent stakeholder engagement and tolerate evolving requirements — neither is present here."
+},
+{
+  "id": "q020",
+  "eco_domain": "Process",
+  "eco_task": "Task 14: Establish project governance structure",
+  "question": "Midway through a project, a change request exceeding the budget threshold is submitted, but it's unclear who has authority to approve it. What is the best response?",
+  "options": [
+    "The project manager approves it directly to avoid delay",
+    "Clarify and document the governance structure, including decision rights and escalation paths, going forward",
+    "Reject the change request since approval authority is unclear",
+    "Ask the requester to resubmit through a different process"
+  ],
+  "correct_answer": "Clarify and document the governance structure, including decision rights and escalation paths, going forward",
+  "explanation": "Ambiguous decision rights are a governance gap. The fix is establishing and documenting who has authority over which decisions, not the PM unilaterally assuming authority or simply blocking the request."
+},
+{
+  "id": "q021",
+  "eco_domain": "Process",
+  "eco_task": "Task 15: Manage project issues",
+  "question": "A critical issue has emerged that is already impacting the project's delivery date. What should the project manager do first?",
+  "options": [
+    "Fix it informally and mention it in the next status report",
+    "Log the issue in the issue register, assign an owner, and set a target resolution date",
+    "Wait to see if the issue resolves itself before taking action",
+    "Escalate immediately to the sponsor without further analysis"
+  ],
+  "correct_answer": "Log the issue in the issue register, assign an owner, and set a target resolution date",
+  "explanation": "Formal issue management means logging, assigning ownership, and tracking resolution — not handling it informally or skipping straight to escalation before understanding it."
+},
+{
+  "id": "q022",
+  "eco_domain": "Process",
+  "eco_task": "Task 7: Plan and manage quality of products/deliverables",
+  "question": "A deliverable meets every documented functional requirement, but the customer reports it's difficult to use in practice. What does this indicate?",
+  "options": [
+    "The requirements documentation was unnecessary",
+    "Meeting requirements (conformance) is not the same as fitness for use (quality); usability should have been validated earlier",
+    "The customer's expectations are outside the project's responsibility",
+    "The deliverable should be rejected and rebuilt from scratch"
+  ],
+  "correct_answer": "Meeting requirements (conformance) is not the same as fitness for use (quality); usability should have been validated earlier",
+  "explanation": "Quality management distinguishes conformance to requirements from actual fitness for use. This gap signals a need for earlier validation (e.g. usability testing, customer feedback loops), not just documentation compliance."
+},
+{
+  "id": "q023",
+  "eco_domain": "Process",
+  "eco_task": "Task 17: Plan and manage project/phase closure or transition",
+  "question": "A project is terminated early due to a funding cut before any deliverables are completed. What should the project manager still do?",
+  "options": [
+    "Skip formal closure activities since the project didn't finish successfully",
+    "Perform formal closure activities: document lessons learned, release resources, and formally close out the project",
+    "Leave the project open indefinitely in case funding is restored",
+    "Only close out the financial records and skip the rest"
+  ],
+  "correct_answer": "Perform formal closure activities: document lessons learned, release resources, and formally close out the project",
+  "explanation": "Closure discipline applies regardless of whether a project ends in success or early termination. Lessons learned, resource release, and formal closure are owed to the organization either way."
+},
+{
+  "id": "q024",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 5: Employ continuous process improvement",
+  "question": "The same type of defect keeps recurring across multiple iterations despite being fixed each time it appears. What should the project manager do?",
+  "options": [
+    "Continue fixing each instance as it appears, since that resolves the immediate problem",
+    "Conduct root cause analysis and update the underlying process to prevent recurrence",
+    "Assign a dedicated team member to catch the defect before release each time",
+    "Accept the defect as a known limitation of the product"
+  ],
+  "correct_answer": "Conduct root cause analysis and update the underlying process to prevent recurrence",
+  "explanation": "Recurring defects signal a process problem, not an isolated bug. Continuous improvement means addressing the root cause and updating the process, rather than repeatedly treating the symptom."
+}
 ]

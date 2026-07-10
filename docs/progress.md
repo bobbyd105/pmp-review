@@ -1,7 +1,8 @@
 # Progress
 
 ## Current Version
-v0.7 — Slice 6 complete (Prompt Helper)
+v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
+(8 questions, 2 lessons) via the direct-PR pipeline per Decision #9
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -51,6 +52,17 @@ v0.7 — Slice 6 complete (Prompt Helper)
     receives the exact prompt text with per-card feedback, all six views
     regression-checked, zero console errors/warnings, and zero external
     network requests observed (constitution Section 2)
+- Curriculum content batch 2: 8 questions (q017–q024) and 2 lessons
+  (l005–l006) appended to data/questions.json and data/lessons.json.
+  Added via the direct-PR pipeline (appended directly to the JSON files,
+  validated by the existing data-contract test suite), NOT through Content
+  Studio, per decision_log.md Decision #9 — Content Studio is now reserved
+  for occasional single ad-hoc additions, while bulk batches go through the
+  normal PR/Review/Merge flow. New content covers virtual teams,
+  impediment removal, methodology tailoring, governance, issue management,
+  quality/conformance, project closure, and continuous improvement. All 114
+  existing tests plus the data-contract tests pass with zero test-file
+  changes.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -94,13 +106,15 @@ Constitution Section 10 manual accuracy spot-check (questions AND
 lessons) remains pending User review. Content Studio checks shape, not
 correctness. The 8 prompts are meta-content (study instructions, not
 exam content) but merit the same User read-through for tone and
-usefulness.
+usefulness. Batch 2's 8 questions and 2 lessons likewise passed the
+data-contract tests (shape only) and still need the User's manual
+accuracy spot-check against the current ECO before merge.
 
 ## Current Status
-Slices 5 and 6 built, tested, and documented on branch
-`claude/content-studio-prompt-helper-441p0f` (three commits: governance
-policy, Content Studio, Prompt Helper). Pushed for review — no PR
-opened, per instruction. Awaiting Review and User approval.
+Slices 5 and 6 built, tested, and documented; merged to main (PR #5).
+Curriculum content batch 2 (8 questions, 2 lessons) added on a review
+branch via the direct-PR pipeline per Decision #9 — committed and pushed,
+no PR opened yet, awaiting Review and User approval.
 
 ## Next Recommended Task
 Full curriculum content authoring (Claude-chat lane), now with Content
