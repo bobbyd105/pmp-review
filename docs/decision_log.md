@@ -280,3 +280,23 @@ constitution Section 3 — a real write layer changes this calculus.
 
 **Approved by:** User (scope pre-approved in this session's slice spec,
 which delegated the write-mechanism choice to the implementer)
+
+---
+
+## Decision #9 — Content Studio's role narrowed to ad-hoc additions; bulk content goes through the PR pipeline
+
+**Decision:** Content Studio's role narrowed: bulk curriculum content
+(batches authored in Claude chat) goes through the normal PR pipeline —
+appended directly to questions.json/lessons.json, validated by the
+existing data-contract test suite, standard Review/Merge. Content Studio
+itself is reserved for occasional single, ad-hoc additions outside a
+planned content batch.
+
+**Alternatives considered:** routing all content, including bulk batches,
+through Content Studio's one-at-a-time paste flow.
+
+**Rejected because:** real friction at the actual content volume needed
+(150+ questions), with no added safety over what the existing test suite
+already provides.
+
+**Approved by:** User
