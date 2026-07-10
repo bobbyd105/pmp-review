@@ -4,10 +4,9 @@
 v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 (8 questions, 2 lessons) via the direct-PR pipeline per Decision #9; all
 existing content remapped to the July 2026 ECO structure per Decision #10;
-Phase 1 ECO breadth coverage — all 26 tasks have ≥1 question; Business
-Environment lesson coverage now complete and People Task 6 gap closed
-(31 questions, 20 lessons total; 20 of 26 tasks have both a question and
-a lesson)
+Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
+26 ECO tasks has at least one question AND at least one lesson (31 questions,
+26 lessons total; 26 of 26 tasks have both)
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -99,14 +98,17 @@ a lesson)
   lessons (l013–l020, one per Business Environment task) and 1 question
   (q031, People Task 6). This closes Business Environment's zero-lesson
   gap entirely (0 → 8) and gives People Task 6 (previously lesson-only)
-  a question. Bank totals now: 31 questions, 20 lessons (People 11Q/5L,
-  Process 11Q/7L, Business Environment 9Q/8L). NOTE: this batch does NOT
-  reach "every task has both a question and a lesson" — every task now
-  has a question, but 6 tasks are still Questions-only with no lesson
-  (People Tasks 3/4/8, Process Tasks 2/5/7). 20 of 26 tasks have both.
-  Those 6 lesson gaps are the remaining breadth item, tracked in
-  content_plan.md Open items. All 114 tests pass with zero test-file
-  changes.
+  a question. Bank totals after this batch: 31 questions, 20 lessons
+  (People 11Q/5L, Process 11Q/7L, Business Environment 9Q/8L). At this
+  point 6 tasks were still Questions-only (People Tasks 3/4/8, Process
+  Tasks 2/5/7) — 20 of 26 tasks had both.
+- Close remaining lesson gaps (People 3/4/8, Process 2/5/7): appended 6
+  lessons (l021–l026), one per remaining Questions-only task. Re-counting
+  the actual files confirms every one of the 26 ECO tasks now has at least
+  one question AND at least one lesson — breadth is complete on both sides.
+  Bank totals now: 31 questions, 26 lessons (People 11Q/8L, Process
+  11Q/10L, Business Environment 9Q/8L). No task is Questions-only,
+  Lesson-only, or empty. All 114 tests pass with zero test-file changes.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -157,12 +159,13 @@ accuracy spot-check against the current ECO before merge.
 ## Current Status
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
 to main (PR #6). Branch `content/eco-2026-remap` (open as PR #7) now holds
-three commits: (1) the July 2026 ECO remap (re-labeling pass +
+four commits: (1) the July 2026 ECO remap (re-labeling pass +
 content_plan.md), (2) Phase 1 breadth coverage (6 questions, 6 lessons),
-and (3) Business Environment lesson coverage + People Task 6 question
-(8 lessons, 1 question). Pushed, not merged — PR #7 updates automatically.
-Remaining breadth gap: 6 tasks (People 3/4/8, Process 2/5/7) still lack a
-lesson.
+(3) Business Environment lesson coverage + People Task 6 question
+(8 lessons, 1 question), and (4) the final 6 lessons closing the last
+Questions-only tasks (People 3/4/8, Process 2/5/7). Pushed, not merged —
+PR #7 updates automatically. Breadth is now complete: all 26 ECO tasks
+have both a question and a lesson (31 questions, 26 lessons).
 
 ## Next Recommended Task
 Full curriculum content authoring (Claude-chat lane), now with Content

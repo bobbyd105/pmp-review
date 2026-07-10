@@ -158,5 +158,53 @@
   "title": "Watching the Environment Outside the Project",
   "body": "Projects don't run in a vacuum — regulatory shifts, market conditions, currency fluctuations, new competitor moves, or changes in organizational strategy can all affect a project's scope, viability, or priority even though none of them originate inside the project itself.\n\nThe exam expects a proactive monitoring posture: when an external condition changes — for example, a tariff increase raising a key input's cost — the project manager should assess the impact on cost, schedule, and the business case, then recommend options to decision-makers, rather than absorbing the impact silently or treating it as someone else's problem to notice.\n\nThis task is closely linked to Task 2 (compliance) and Task 1 (governance) — an external change often requires both a technical response (updating the plan) and a governance response (getting the right people to formally decide how to proceed) at the same time. The project manager's role is less about predicting external change and more about maintaining the awareness and escalation discipline to respond quickly when it happens.",
   "related_question_ids": ["q012"]
+},
+{
+  "id": "l021",
+  "eco_domain": "People",
+  "eco_task": "Task 3: Lead the project team",
+  "title": "Leading a Team: Style, Empowerment, and Formation",
+  "body": "Leading a team spans several things the old ECO split into separate tasks: adapting leadership style, empowering the team to make decisions, and understanding how a newly formed team develops over time.\n\nOn leadership style: the exam consistently rewards **servant leadership** — removing obstacles, coaching, and enabling the team's own judgment — over directive, command-and-control management. When a team faces a decision within their expertise, the exam-preferred answer is usually to empower them to decide, with agreed boundaries, rather than the project manager deciding for them.\n\nOn team formation: Tuckman's stages (forming, storming, norming, performing, adjourning) describe a predictable arc. A newly formed team that's polite but hesitant to challenge each other's ideas is in **forming** — this is normal, not a warning sign, and doesn't call for intervention. A team in active conflict over approach is likely in **storming**, which also often needs facilitation rather than suppression, since some friction is a necessary part of the team finding its way to norming.\n\nException: virtual and hybrid teams don't always move through these stages the same way as co-located teams, and leading them well means deliberately building the trust and shared context that happens more naturally in person.",
+  "related_question_ids": ["q002", "q003", "q004", "q017"]
+},
+{
+  "id": "l022",
+  "eco_domain": "People",
+  "eco_task": "Task 4: Engage stakeholders",
+  "title": "Engaging Stakeholders, Not Just Informing Them",
+  "body": "Engagement is active participation, not passive awareness. A stakeholder who receives regular status emails but is never asked for input is informed, not engaged — and the exam distinguishes these deliberately.\n\nThe classic failure scenario: an influential stakeholder group stops attending governance meetings, and approvals start slipping. The instinct to escalate their absence or route around them misses the actual question — why did engagement break down? The correct first move is a direct conversation to understand what's changed for them and adjust the engagement approach accordingly, rather than assuming disengagement is a compliance problem to enforce.\n\nStakeholder engagement is also not static. New stakeholders emerge, priorities shift, and influence changes as a project moves through phases — effective engagement means re-assessing the stakeholder landscape periodically, not building one engagement plan at kickoff and never revisiting it.",
+  "related_question_ids": ["q013"]
+},
+{
+  "id": "l023",
+  "eco_domain": "People",
+  "eco_task": "Task 8: Plan and manage communication",
+  "title": "Matching Communication Method to the Actual Problem",
+  "body": "Communication failures on the exam are almost always a mismatch between method and situation, not a lack of effort. A distributed team missing critical decisions made in synchronous meetings doesn't need more meetings scheduled at fairer times — it needs a different communication method entirely: a durable, asynchronous, written record with a clear escalation path for anything urgent.\n\nThe planning side of this task means deliberately choosing communication methods (synchronous vs. asynchronous, push vs. pull, formal vs. informal) based on the audience, urgency, and the nature of the information — not defaulting to whatever channel is most convenient for the sender.\n\nA related exam pattern: when the same message needs to reach people across time zones, roles, or seniority levels, no single channel works for everyone. Planning communication well means anticipating this rather than reactively adding more channels each time a gap surfaces.",
+  "related_question_ids": ["q014"]
+},
+{
+  "id": "l024",
+  "eco_domain": "Process",
+  "eco_task": "Task 2: Develop and manage project scope",
+  "title": "Scope: Defined Once, Managed Continuously",
+  "body": "Defining scope happens largely upfront — decomposing deliverables, writing a scope statement, building a WBS. Managing scope is what happens for the rest of the project: controlling additions, preventing drift, and validating that what's been built actually matches what was defined.\n\nThe most tested failure mode is **scope creep** — small, seemingly reasonable additions that bypass formal review because each one feels too minor to bother with. The correct handling is always the same regardless of size: assess the impact and route it through change control (see Business Environment Task 3) before implementing it, even for a 'small' enhancement mid-iteration in an otherwise predictive project.\n\nIn adaptive contexts, scope management looks different mechanically — a product backlog absorbs new items rather than a formal change request — but the discipline is the same: new work displaces other planned work rather than being silently added on top without acknowledging the tradeoff. A product owner adding urgent items directly into an already-committed sprint, disrupting velocity, is a scope management failure the exam expects you to redirect toward proper backlog prioritization for the next sprint.",
+  "related_question_ids": ["q009"]
+},
+{
+  "id": "l025",
+  "eco_domain": "Process",
+  "eco_task": "Task 5: Plan and manage procurement",
+  "title": "Choosing the Right Contract for the Right Risk",
+  "body": "Contract type selection is really risk allocation — deciding which party absorbs the risk of cost or schedule uncertainty. The exam expects you to match contract type to how well-defined the work is.\n\n**Fixed-price** contracts fit stable, well-understood scope: both parties can price confidently, and the risk of cost overrun shifts to the seller. **Time and materials** and **cost-reimbursable** arrangements fit uncertain or evolving scope, where the buyer needs flexibility and accepts more of the cost-overrun risk in exchange for that flexibility.\n\nA frequently tested scenario: a component with clearly defined, stable specifications unlikely to change is best procured under a fixed-price contract — not time and materials, which is better suited to work that can't be fully specified upfront.\n\nBeyond contract type, procurement planning includes make-or-buy analysis, source selection criteria, and — critically — procurement is not 'done' once a contract is signed. It requires ongoing management through delivery and formal contract closure at the end, which connects directly to overall project closure (Process Task 10).",
+  "related_question_ids": ["q015"]
+},
+{
+  "id": "l026",
+  "eco_domain": "Process",
+  "eco_task": "Task 7: Plan and optimize quality of products/deliverables",
+  "title": "Quality: Conformance Isn't the Same as Fitness for Use",
+  "body": "This is one of the most consistently tested distinctions on the exam. **Conformance to requirements** means the deliverable does everything the documentation said it should. **Fitness for use** (or quality, more broadly) means it actually works well for the people using it. A deliverable can satisfy the first and fail the second.\n\nThe classic scenario: a team ships something that meets every documented functional requirement, but users find it difficult to use in practice. This isn't a requirements-writing failure to fix retroactively — it's a signal that usability validation (user testing, feedback loops) should have happened earlier, before the gap became expensive to fix.\n\nThe exam also expects a preference for **prevention over inspection** — building quality in through good process, standards, and design, rather than relying on catching defects at the end through testing and rework. This connects to continuous improvement (Business Environment Task 6): a defect that keeps recurring across iterations despite being fixed each time signals a process gap, not a series of unrelated bugs, and calls for root-cause analysis rather than repeated individual fixes.",
+  "related_question_ids": ["q022"]
 }
 ]
