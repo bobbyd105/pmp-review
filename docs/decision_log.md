@@ -300,3 +300,30 @@ through Content Studio's one-at-a-time paste flow.
 already provides.
 
 **Approved by:** User
+
+---
+
+## Decision #10 — Remap all existing content to the July 2026 ECO structure
+
+**Decision:** PMI updated the PMP Exam Content Outline effective July 9,
+2026: domain weights changed (People 42%->33%, Process 50%->41%, Business
+Environment 8%->26%), and the task list consolidated from 35 tasks to 26.
+All existing question/lesson `eco_domain` and `eco_task` fields were
+written against the retired 2021 ECO and have been remapped to the new
+structure (see commit for the full mapping). Some items changed domain,
+not just task label — notably risk, change control, and governance moved
+from Process to Business Environment; communications moved from Process to
+People; value/benefits moved from Business Environment to Process;
+impediments/issues merged into one Business Environment task.
+
+**Alternatives considered:** leaving old labels in place and only updating
+new content going forward.
+
+**Rejected because:** mixed old/new task labels in the same data file would
+make coverage tracking meaningless and could mislabel Dashboard's
+per-domain accuracy stats for existing quiz history.
+
+**Evidence:** PMI's official ECO PDF (pmi.org, July 2026 revision),
+cross-checked directly, not from training-data memory.
+
+**Approved by:** User

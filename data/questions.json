@@ -2,7 +2,7 @@
   {
     "id": "q001",
     "eco_domain": "People",
-    "eco_task": "Task 1: Manage conflict",
+    "eco_task": "Task 2: Manage conflicts",
     "question": "Two senior developers on your team disagree about which database technology to use, and the dispute has begun delaying sprint work. Both have valid technical arguments. What should the project manager do first?",
     "options": [
       "Escalate the decision to the sponsor so work can resume immediately",
@@ -16,7 +16,7 @@
   {
     "id": "q002",
     "eco_domain": "People",
-    "eco_task": "Task 2: Lead a team",
+    "eco_task": "Task 3: Lead the project team",
     "question": "A project team has just formed and members are polite but hesitant to challenge each other's ideas, resulting in shallow design discussions. According to the Tuckman model, what stage is the team in, and what should the project manager do?",
     "options": [
       "Norming; step back and let the team self-organize",
@@ -30,7 +30,7 @@
   {
     "id": "q003",
     "eco_domain": "People",
-    "eco_task": "Task 4: Empower team members and stakeholders",
+    "eco_task": "Task 3: Lead the project team",
     "question": "During a hybrid project, a team member repeatedly asks the project manager to approve routine, low-risk technical decisions before proceeding. This is slowing delivery. What is the best response?",
     "options": [
       "Continue approving each decision to maintain control over quality",
@@ -44,7 +44,7 @@
   {
     "id": "q004",
     "eco_domain": "People",
-    "eco_task": "Task 6: Build a team",
+    "eco_task": "Task 3: Lead the project team",
     "question": "A project requires a machine-learning skill set that no current team member has. The work begins in three months, the budget is constrained, and the organization wants to retain capability after the project ends. What is the best option?",
     "options": [
       "Hire an external contractor for the duration of the project",
@@ -58,7 +58,7 @@
   {
     "id": "q005",
     "eco_domain": "Process",
-    "eco_task": "Task 1: Execute project with the urgency required to deliver business value",
+    "eco_task": "Task 3: Help ensure value-based delivery",
     "question": "A product owner tells the team that a regulatory deadline has moved up, and only a subset of the planned features can be delivered in time. How should the team decide what to build first?",
     "options": [
       "Build the features in the order they appear in the original plan",
@@ -71,8 +71,8 @@
   },
   {
     "id": "q006",
-    "eco_domain": "Process",
-    "eco_task": "Task 3: Assess and manage risks",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 5: Plan and manage risk",
     "question": "During risk review, the team identifies that a key supplier may be acquired by a competitor, which could interrupt component deliveries. The probability is low but the impact would be severe. What should the project manager do?",
     "options": [
       "Accept the risk because the probability is low",
@@ -86,7 +86,7 @@
   {
     "id": "q007",
     "eco_domain": "Process",
-    "eco_task": "Task 6: Plan and manage schedule",
+    "eco_task": "Task 8: Plan and manage schedule",
     "question": "Halfway through a predictive project, a critical-path activity is two weeks late. The sponsor insists the end date cannot move, and no additional budget is available. Which schedule compression technique should the project manager evaluate first?",
     "options": [
       "Crashing, by adding more resources to critical-path activities",
@@ -99,8 +99,8 @@
   },
   {
     "id": "q008",
-    "eco_domain": "Process",
-    "eco_task": "Task 10: Manage project changes",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 3: Manage and control changes",
     "question": "A stakeholder emails the project manager asking for a \"small\" enhancement while the team is mid-iteration on a predictive project. The stakeholder says it is too minor to bother the change control board. What should the project manager do?",
     "options": [
       "Implement the change quietly since it is small and keeps the stakeholder satisfied",
@@ -114,7 +114,7 @@
   {
     "id": "q009",
     "eco_domain": "Process",
-    "eco_task": "Task 8: Plan and manage scope",
+    "eco_task": "Task 2: Develop and manage project scope",
     "question": "During backlog refinement on an adaptive project, the product owner keeps adding items directly to the current sprint, and the team's velocity is dropping. What should the project manager (acting as facilitator) do?",
     "options": [
       "Coach the product owner to add new items to the product backlog for prioritization in the next sprint planning, protecting the current sprint's commitment",
@@ -128,7 +128,7 @@
   {
     "id": "q010",
     "eco_domain": "Business Environment",
-    "eco_task": "Task 1: Plan and manage project compliance",
+    "eco_task": "Task 2: Plan and manage project compliance",
     "question": "A project handling customer data will launch in a new region with stricter privacy regulations than the team has worked under before. What should the project manager do first?",
     "options": [
       "Proceed with the existing privacy controls since they satisfied previous regulators",
@@ -141,8 +141,8 @@
   },
   {
     "id": "q011",
-    "eco_domain": "Business Environment",
-    "eco_task": "Task 2: Evaluate and deliver project benefits and value",
+    "eco_domain": "Process",
+    "eco_task": "Task 3: Help ensure value-based delivery",
     "question": "Six months after a new internal tool launched, the sponsor asks whether the project actually delivered its promised benefits. Adoption data was never defined during planning. What should have been done to prevent this situation?",
     "options": [
       "A benefits management plan with measurable benefit metrics and owners should have been established during project initiation and planning",
@@ -156,7 +156,7 @@
   {
     "id": "q012",
     "eco_domain": "Business Environment",
-    "eco_task": "Task 3: Evaluate and address external business environment changes",
+    "eco_task": "Task 8: Evaluate external business environment changes",
     "question": "Midway through a two-year project, a new tariff significantly raises the cost of imported hardware the project depends on. What should the project manager do first?",
     "options": [
       "Continue executing the plan since the baseline was already approved",
@@ -170,7 +170,7 @@
   {
   "id": "q013",
   "eco_domain": "People",
-  "eco_task": "Task 9: Collaborate with stakeholders",
+  "eco_task": "Task 4: Engage stakeholders",
   "question": "A key steering committee stakeholder has stopped attending governance meetings for the past month, causing delayed approvals. What should the project manager do first?",
   "options": [
     "Escalate the attendance issue to the stakeholder's manager",
@@ -183,8 +183,8 @@
 },
 {
   "id": "q014",
-  "eco_domain": "Process",
-  "eco_task": "Task 2: Manage communications",
+  "eco_domain": "People",
+  "eco_task": "Task 8: Plan and manage communication",
   "question": "A project team distributed across four time zones reports repeatedly missing critical decisions made in synchronous meetings. What is the best response?",
   "options": [
     "Schedule additional synchronous meetings at rotating times to share the inconvenience fairly",
@@ -198,7 +198,7 @@
 {
   "id": "q015",
   "eco_domain": "Process",
-  "eco_task": "Task 11: Plan and manage procurement",
+  "eco_task": "Task 5: Plan and manage procurement",
   "question": "A project needs to procure a component with clearly defined, stable specifications that are unlikely to change. Which contract type is generally most appropriate?",
   "options": [
     "Time and materials",
@@ -212,7 +212,7 @@
 {
   "id": "q016",
   "eco_domain": "Business Environment",
-  "eco_task": "Task 4: Support organizational change",
+  "eco_task": "Task 7: Support organizational change",
   "question": "A new project management tool is being rolled out, and staff are quietly continuing to use the old system instead. What should the project manager do first?",
   "options": [
     "Mandate immediate compliance with a hard cutoff date for the old system",
@@ -226,7 +226,7 @@
 {
   "id": "q017",
   "eco_domain": "People",
-  "eco_task": "Task 11: Engage and support virtual teams",
+  "eco_task": "Task 3: Lead the project team",
   "question": "Team members in remote offices report they frequently learn about decisions after the fact because most discussion happens informally among colleagues who share an office. What should the project manager do?",
   "options": [
     "Ask the co-located staff to relay decisions to remote team members informally",
@@ -239,8 +239,8 @@
 },
 {
   "id": "q018",
-  "eco_domain": "People",
-  "eco_task": "Task 7: Address and remove impediments, obstacles, and blockers for the team",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 4: Remove impediments and manage issues",
   "question": "The development team has been blocked for three days waiting on approval from an external department, and the delay is putting the current iteration at risk. What should the project manager do first?",
   "options": [
     "Wait for the approval to come through naturally to avoid overstepping into another department's process",
@@ -254,7 +254,7 @@
 {
   "id": "q019",
   "eco_domain": "Process",
-  "eco_task": "Task 13: Determine appropriate project methodology/methods and practices",
+  "eco_task": "Task 1: Develop an integrated project management plan and plan delivery",
   "question": "A project has stable, well-documented regulatory requirements, a customer who is unavailable for frequent feedback, and strict compliance sign-off gates. Which approach best fits these characteristics?",
   "options": [
     "A fully adaptive (Scrum) approach with short iterative feedback loops",
@@ -267,8 +267,8 @@
 },
 {
   "id": "q020",
-  "eco_domain": "Process",
-  "eco_task": "Task 14: Establish project governance structure",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 1: Define and establish project governance",
   "question": "Midway through a project, a change request exceeding the budget threshold is submitted, but it's unclear who has authority to approve it. What is the best response?",
   "options": [
     "The project manager approves it directly to avoid delay",
@@ -281,8 +281,8 @@
 },
 {
   "id": "q021",
-  "eco_domain": "Process",
-  "eco_task": "Task 15: Manage project issues",
+  "eco_domain": "Business Environment",
+  "eco_task": "Task 4: Remove impediments and manage issues",
   "question": "A critical issue has emerged that is already impacting the project's delivery date. What should the project manager do first?",
   "options": [
     "Fix it informally and mention it in the next status report",
@@ -296,7 +296,7 @@
 {
   "id": "q022",
   "eco_domain": "Process",
-  "eco_task": "Task 7: Plan and manage quality of products/deliverables",
+  "eco_task": "Task 7: Plan and optimize quality of products/deliverables",
   "question": "A deliverable meets every documented functional requirement, but the customer reports it's difficult to use in practice. What does this indicate?",
   "options": [
     "The requirements documentation was unnecessary",
@@ -310,7 +310,7 @@
 {
   "id": "q023",
   "eco_domain": "Process",
-  "eco_task": "Task 17: Plan and manage project/phase closure or transition",
+  "eco_task": "Task 10: Manage project closure",
   "question": "A project is terminated early due to a funding cut before any deliverables are completed. What should the project manager still do?",
   "options": [
     "Skip formal closure activities since the project didn't finish successfully",
@@ -324,7 +324,7 @@
 {
   "id": "q024",
   "eco_domain": "Business Environment",
-  "eco_task": "Task 5: Employ continuous process improvement",
+  "eco_task": "Task 6: Continuous improvement",
   "question": "The same type of defect keeps recurring across multiple iterations despite being fixed each time it appears. What should the project manager do?",
   "options": [
     "Continue fixing each instance as it appears, since that resolves the immediate problem",
