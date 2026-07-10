@@ -334,5 +334,89 @@
   ],
   "correct_answer": "Conduct root cause analysis and update the underlying process to prevent recurrence",
   "explanation": "Recurring defects signal a process problem, not an isolated bug. Continuous improvement means addressing the root cause and updating the process, rather than repeatedly treating the symptom."
+},
+{
+  "id": "q025",
+  "eco_domain": "People",
+  "eco_task": "Task 1: Develop a common vision",
+  "question": "A team is completing tasks correctly and on schedule, but their prioritization choices are increasingly misaligned with the project's actual business objective. What is the most likely underlying cause?",
+  "options": [
+    "The team lacks the technical skill to complete the work correctly",
+    "The team doesn't have a clear connection between their day-to-day work and the project's larger vision",
+    "The project schedule is too aggressive",
+    "The requirements documentation is incomplete"
+  ],
+  "correct_answer": "The team doesn't have a clear connection between their day-to-day work and the project's larger vision",
+  "explanation": "Correct execution with misaligned prioritization is a classic sign that the team is following requirements without understanding the purpose behind them. Reconnecting the team to the project's vision — not just re-explaining requirements — addresses the actual gap."
+},
+{
+  "id": "q026",
+  "eco_domain": "People",
+  "eco_task": "Task 5: Align stakeholder expectations",
+  "question": "An executive sponsor expects quarterly incremental releases, while a key end-user stakeholder group is expecting a single major release. Both expectations have existed for weeks without anyone noticing the conflict. What should the project manager do?",
+  "options": [
+    "Proceed with whichever expectation was stated first",
+    "Facilitate a session to reconcile both groups on a single shared definition of the release approach",
+    "Let each group continue operating under their own assumption until it becomes a problem",
+    "Escalate the disagreement to senior leadership immediately without attempting to resolve it directly"
+  ],
+  "correct_answer": "Facilitate a session to reconcile both groups on a single shared definition of the release approach",
+  "explanation": "Aligning stakeholder expectations means proactively resolving conflicting assumptions before they collide in practice, through direct facilitation — not deferring to seniority, letting the conflict persist, or escalating before attempting resolution."
+},
+{
+  "id": "q027",
+  "eco_domain": "People",
+  "eco_task": "Task 7: Help ensure knowledge transfer",
+  "question": "A team member with deep, undocumented knowledge of a critical system is transitioning off the project in two weeks. What should the project manager do?",
+  "options": [
+    "Accept the knowledge loss as a normal cost of team transitions",
+    "Proactively arrange knowledge transfer — pairing, handover sessions, documentation — before they leave",
+    "Ask the remaining team to reach out to the departing member informally after they've left if needed",
+    "Extend their departure date indefinitely until a replacement is fully trained"
+  ],
+  "correct_answer": "Proactively arrange knowledge transfer — pairing, handover sessions, documentation — before they leave",
+  "explanation": "Knowledge transfer is an active responsibility, not something to leave to chance or address only after the person has already left. A known, foreseeable transition is exactly when to schedule structured handover activities."
+},
+{
+  "id": "q028",
+  "eco_domain": "Process",
+  "eco_task": "Task 4: Plan and manage resources",
+  "question": "A specialist is allocated across three concurrent projects at a combined 150% of capacity, putting one project's schedule at risk. What should the project manager do?",
+  "options": [
+    "Ask the specialist to work overtime to cover all three commitments",
+    "Resolve the overallocation through resource leveling or negotiating priorities with the other project managers",
+    "Remove the specialist from this project without further discussion",
+    "Ignore the conflict since resource allocation is outside the PM's authority"
+  ],
+  "correct_answer": "Resolve the overallocation through resource leveling or negotiating priorities with the other project managers",
+  "explanation": "Overallocation is a resource planning problem to actively resolve — leveling the load or negotiating priorities across projects — rather than something to absorb through overtime or dismiss as outside the PM's responsibility."
+},
+{
+  "id": "q029",
+  "eco_domain": "Process",
+  "eco_task": "Task 6: Plan and manage finance",
+  "question": "A project's Cost Performance Index (CPI) is calculated at 0.8. What does this indicate?",
+  "options": [
+    "The project is ahead of schedule",
+    "The project is spending more than the value of work actually completed",
+    "The project is exactly on budget",
+    "The project's scope has increased"
+  ],
+  "correct_answer": "The project is spending more than the value of work actually completed",
+  "explanation": "CPI = EV / AC. A CPI below 1.0 means less value has been earned than the cost spent to earn it — the project is over budget for the work performed. CPI says nothing directly about schedule status, which is measured separately by SPI."
+},
+{
+  "id": "q030",
+  "eco_domain": "Process",
+  "eco_task": "Task 9: Evaluate project status",
+  "question": "Schedule variance has been negative and worsening across three consecutive reporting periods. What should the project manager do?",
+  "options": [
+    "Continue reporting the trend in status updates without further action",
+    "Investigate the root cause and develop a corrective action plan",
+    "Wait one more reporting period to confirm the trend is real",
+    "Adjust the baseline to reflect the new trend"
+  ],
+  "correct_answer": "Investigate the root cause and develop a corrective action plan",
+  "explanation": "A consistently worsening trend across multiple periods is a signal for evaluation leading to action, not passive monitoring. Adjusting the baseline to match reality (rebaselining) is a separate, more drastic step usually reserved for approved scope changes, not a default response to a variance trend."
 }
 ]

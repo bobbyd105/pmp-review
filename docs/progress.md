@@ -3,7 +3,9 @@
 ## Current Version
 v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 (8 questions, 2 lessons) via the direct-PR pipeline per Decision #9; all
-existing content remapped to the July 2026 ECO structure per Decision #10
+existing content remapped to the July 2026 ECO structure per Decision #10;
+Phase 1 ECO breadth coverage complete — all 26 tasks have ≥1 item
+(30 questions, 12 lessons total)
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -78,6 +80,19 @@ existing content remapped to the July 2026 ECO structure per Decision #10
   valid strings). Note: 6 empty tasks (People 1/5/7, Process 4/6/9) are
   marked "name pending" in content_plan.md — their official ECO labels were
   not in the remap mapping and were not guessed.
+- Phase 1 ECO breadth coverage: appended 6 questions (q025–q030) and 6
+  lessons (l007–l012) covering the 6 previously-empty tasks — People
+  Task 1 (Develop a common vision), Task 5 (Align stakeholder
+  expectations), Task 7 (Help ensure knowledge transfer); Process Task 4
+  (Plan and manage resources), Task 6 (Plan and manage finance), Task 9
+  (Evaluate project status). Their official ECO names (previously "name
+  pending" in content_plan.md) are now filled in, and content_plan.md
+  counts were re-tallied from the actual files. Every one of the 26 ECO
+  tasks now has at least one item — breadth is complete. Bank totals: 30
+  questions, 12 lessons (People 10Q/5L, Process 11Q/7L, Business
+  Environment 9Q/0L). All 114 tests pass with zero test-file changes.
+  Top remaining gap: Business Environment has zero lessons despite being
+  ~26% of the exam — the priority for the next (depth) batch.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -127,10 +142,11 @@ accuracy spot-check against the current ECO before merge.
 
 ## Current Status
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
-to main (PR #6). July 2026 ECO remap committed on branch
-`content/eco-2026-remap` — a re-labeling pass over existing content plus
-`docs/content_plan.md`, no new questions or lessons. Not merged, no PR
-opened yet; awaiting Review and User approval.
+to main (PR #6). Branch `content/eco-2026-remap` now holds two commits:
+(1) the July 2026 ECO remap (re-labeling pass + content_plan.md), and
+(2) Phase 1 breadth coverage (6 questions, 6 lessons filling the last
+empty tasks). Pushed, not merged, no PR opened yet — User will confirm
+when the remap and this breadth commit are ready to go together.
 
 ## Next Recommended Task
 Full curriculum content authoring (Claude-chat lane), now with Content

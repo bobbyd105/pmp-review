@@ -46,5 +46,53 @@
   "title": "Closing a Project — Even When It Doesn't Finish the Way You Planned",
   "body": "Closure is a formal set of activities, not just 'the project is over.' The exam tests whether you know closure applies regardless of how the project ends — successful completion, early termination, or cancellation all require the same discipline.\n\nCore closure activities: obtain formal acceptance of deliverables; document lessons learned; release project resources; archive project documents; complete contract closure with vendors; support transition of the deliverable into operations or the next phase.\n\nA common exam trap: a project is cancelled midway due to funding cuts, and a distractor suggests skipping closure since the project 'didn't succeed.' That's wrong. Formal closure is owed to the organization whether the project delivered its full scope or was terminated early.\n\nAnother trap: assuming closure is purely administrative. Lessons learned exist to improve future projects — the exam values this as a real deliverable, not a formality to rush through.",
   "related_question_ids": ["q023"]
+},
+{
+  "id": "l007",
+  "eco_domain": "People",
+  "eco_task": "Task 1: Develop a common vision",
+  "title": "Anchoring the Team to a Shared Vision",
+  "body": "Requirements tell a team what to build. Vision tells them why it matters. The exam distinguishes these: a team that's executing tasks correctly but doesn't understand how the work connects to the larger business objective will make locally-sensible decisions that are globally wrong — over-polishing a low-priority feature, under-investing in something that actually drives the outcome.\n\nDeveloping a common vision means the project manager actively connects day-to-day work back to the project's purpose — not as a one-time kickoff speech, but as an ongoing thread through planning, standups, and decisions. When priorities get renegotiated mid-project, a team anchored to the vision can reason about tradeoffs themselves instead of waiting for top-down direction on every call.\n\nExam trap: assuming vision-setting is a one-time charter activity. The charter documents the vision; the project manager's job is keeping it alive and referenced as the project evolves, especially when scope or priorities shift.",
+  "related_question_ids": ["q025"]
+},
+{
+  "id": "l008",
+  "eco_domain": "People",
+  "eco_task": "Task 5: Align stakeholder expectations",
+  "title": "Aligning Expectations Before They Collide",
+  "body": "Align is not the same as manage (Task 6). Aligning happens early and proactively — getting multiple stakeholders' expectations consistent with each other *before* conflicting assumptions turn into a conflict. Managing expectations is the ongoing work of handling expectations once they're already set, including when reality diverges from them.\n\nA classic alignment failure: an executive sponsor expects incremental quarterly releases while an end-user stakeholder group is expecting one polished major release. Neither expectation is wrong on its own — they're just incompatible, and nobody has reconciled them yet. The project manager's job is to surface this kind of mismatch early, often through structured stakeholder analysis or facilitated workshops, and get a single shared definition of success before planning locks in around one assumption.\n\nExam trap: treating expectation alignment as a single meeting rather than continuous stakeholder analysis. New stakeholders join, circumstances change, and re-alignment is often needed at each phase gate, not just at kickoff.",
+  "related_question_ids": ["q026"]
+},
+{
+  "id": "l009",
+  "eco_domain": "People",
+  "eco_task": "Task 7: Help ensure knowledge transfer",
+  "title": "Knowledge Transfer as an Active Responsibility",
+  "body": "Knowledge transfer is not something that happens automatically through documentation sitting in a shared drive. The exam tests whether you treat it as an active, planned responsibility — pairing, structured handover sessions, and communities of practice, not just 'write it down somewhere.'\n\nThe highest-risk moment is when someone with critical undocumented knowledge is about to leave the project — through planned rotation, resignation, or role change. The correct response is proactive capture and transfer before departure, not accepting the loss as an unavoidable cost of turnover.\n\nThis task sits in the People domain deliberately: knowledge transfer is fundamentally about how people share understanding with each other, not just a documentation deliverable. A project manager who only thinks of this as 'update the wiki' misses the interpersonal mechanisms — mentoring, shadowing, structured Q&A — that actually move tacit knowledge between people.",
+  "related_question_ids": ["q027"]
+},
+{
+  "id": "l010",
+  "eco_domain": "Process",
+  "eco_task": "Task 4: Plan and manage resources",
+  "title": "Planning and Leveling Resources",
+  "body": "Resource management covers both physical resources (equipment, materials, facilities) and team resources (people and their availability). The exam scenario that shows up repeatedly: a specialist is allocated across multiple concurrent projects at a combined workload exceeding 100% capacity, putting at least one schedule at risk.\n\nThe correct response is resource leveling or negotiating priorities across the competing projects — not asking the specialist to absorb the gap through overtime, and not simply removing them from one project without addressing the underlying conflict. Overallocation is a planning problem to actively resolve, not a burden to pass down to an individual.\n\nGood resource planning also means securing resource commitments early and maintaining a resource calendar that reflects real availability — including planned time off, other project commitments, and organizational holidays — rather than assuming 100% availability by default.",
+  "related_question_ids": ["q028"]
+},
+{
+  "id": "l011",
+  "eco_domain": "Process",
+  "eco_task": "Task 6: Plan and manage finance",
+  "title": "Budgeting and Earned Value Basics",
+  "body": "Financial planning goes beyond a single budget number — it includes cost estimating (analogous, parametric, or bottom-up techniques), building a time-phased cost baseline, and reconciling planned spending against funding limits that may arrive on their own schedule.\n\nOnce a project is underway, **Earned Value Management (EVM)** is the primary tool the exam expects you to reason with. Three core numbers: Planned Value (PV, what should have been done by now), Earned Value (EV, what was actually accomplished, valued at planned cost), and Actual Cost (AC, what was actually spent).\n\nFrom these: **Cost Performance Index (CPI) = EV / AC**. A CPI below 1.0 means the project is spending more than the value of work actually completed — over budget for the work performed. **Schedule Performance Index (SPI) = EV / PV**. An SPI below 1.0 means less work is being completed than planned — behind schedule.\n\nExam trap: confusing 'behind schedule' with 'over budget.' A project can be ahead of schedule and over budget simultaneously, or behind schedule and under budget — SPI and CPI are independent measures, and a scenario question expects you to read the specific number given, not assume one implies the other.",
+  "related_question_ids": ["q029"]
+},
+{
+  "id": "l012",
+  "eco_domain": "Process",
+  "eco_task": "Task 9: Evaluate project status",
+  "title": "Evaluating Status, Not Just Reporting It",
+  "body": "Status reporting informs stakeholders what's happening. Status *evaluation* — this task — is the analytical step before that: comparing actual performance against the baseline across schedule, cost, scope, and quality, and using that comparison to decide whether action is needed.\n\nThe exam expects familiarity with forecasting metrics that extend EVM into 'where are we headed': **Estimate at Completion (EAC)** projects total cost based on performance so far, and **Estimate to Complete (ETC)** projects remaining cost from today forward. A negative schedule variance that's worsening across three consecutive reporting periods isn't just a number to report upward — it's a signal requiring root-cause investigation and a corrective action plan.\n\nExam trap: treating a trend as something to simply continue monitoring and reporting. If the trend is worsening across multiple periods, the expected response is evaluation leading to action, not passive observation.",
+  "related_question_ids": ["q030"]
 }
 ]
