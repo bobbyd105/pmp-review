@@ -1,6 +1,13 @@
 # Progress
 
 ## Current Version
+Current working state: v0.7 runtime plus an uncommitted curriculum
+architecture/planning slice. The 59-unit coverage catalog, validation, and
+read-only Curriculum Coverage screen are complete. No production lessons or
+questions were changed, and no commit/push was made per the audit mission.
+
+Prior v0.7 summary follows.
+
 v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 (8 questions, 2 lessons) via the direct-PR pipeline per Decision #9; all
 existing content remapped to the July 2026 ECO structure per Decision #10;
@@ -11,6 +18,27 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 155Q/10L, Business Environment 99Q/8L).
 
 ## Completed Work
+- Curriculum architecture audit and planning infrastructure (working tree,
+  2026-07-13):
+  - Inventoried all 11 local reference PDFs and produced a machine-readable
+    source-topic index without committing source files or copied text.
+  - Audited repository models, UI, prompts, validation, all 384 questions,
+    and all 26 lessons.
+  - Defined one canonical curriculum catalog surfaced through a 59-unit
+    Comprehensive Course, the existing 26-lesson ECO Review track, and
+    shared reference/assessment layers.
+  - Added `data/content_coverage.json`: 13 modules and 59 concept units;
+    each has ECO, PMBOK, and source mappings. Ratings: 9 Strong, 29 Partial,
+    11 Thin, 10 Missing. Lifecycle: 30 Existing anchors, 29 Planned, 0
+    Approved, 0 Implemented.
+  - Added lesson, question, and metadata generation contracts plus working
+    progress/decision/resume logs.
+  - Added pure coverage validation/derivation logic and the seventh app view,
+    Curriculum Coverage, with module/strength/status filters, lesson/source
+    mappings, and derived ECO-aligned question counts.
+  - Validation: 14 test files / 123 tests pass; production build passes;
+    rendered headless-browser check confirms 59 cards, filters, mappings,
+    four expected AI gap cards, and zero console errors.
 - Repository governance established: docs/ai_collaboration_agreement.md,
   docs/project_constitution.md
 - Slice 1 — Question Bank data foundation (v0.2, merged via PR #2)
@@ -216,6 +244,14 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   All 114 tests pass with the file-scoped Question Bank timeout.
 
 ## Files Modified
+- Curriculum architecture/planning slice: `README.md`,
+  `data/content_coverage.json`, `docs/content/*`, `docs/working/*`,
+  `src/coverage/contentCoverage.js`,
+  `src/components/CurriculumCoverage.jsx`,
+  `src/__tests__/contentCoverage.test.js`,
+  `src/__tests__/CurriculumCoverage.test.jsx`, `src/App.jsx`,
+  `src/index.css`, `docs/content_plan.md`, `docs/app-map.html`, and
+  `docs/progress.md`.
 - Slice 5: docs/decision_log.md (Decision #8),
   src/studio/contentValidator.js, src/components/ContentStudio.jsx,
   src/__tests__/contentValidator.test.js + ContentStudio.test.jsx,
@@ -228,6 +264,11 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   package.json (version bump), docs/app-map.html, docs/progress.md
 
 ## Architecture Changes
+- Curriculum planning: one canonical catalog with separate Comprehensive
+  Course and ECO Review tracks. Coverage strength is separate from content
+  lifecycle. Question counts are derived from ECO mappings and labeled as
+  coarse alignment, not direct concept mastery. Production question/lesson
+  schemas remain unchanged pending a separate User-approved migration.
 - Slice 5: first `src/studio/` module — validation logic in a pure,
   React-free module, unit-tested directly. JSON seed files remain
   read-only static imports everywhere (Decision #8); no write path.
@@ -237,7 +278,13 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   or lessons, no execution, no external calls.
 
 ## Known Issues
-None blocking.
+- **Content-quality blocker:** 371/384 questions place the correct answer in
+  option B, and 349/384 make the correct answer the longest option. Quiz
+  scores are therefore vulnerable to non-content cues. No question was
+  changed during this audit; remediation requires a dedicated reviewed
+  migration.
+- Production build emits a large-chunk warning because the full local
+  content bank is statically bundled. It is non-blocking for the local MVP.
 
 ## Technical Debt
 - `correct_answer` stored as exact option string (decision_log.md #1).
@@ -253,6 +300,11 @@ None blocking.
   blocking.
 
 ## Content Accuracy Note
+The curriculum audit validates structure and traceability, not the factual
+accuracy of every lesson/question. Source-derived planning language is
+original, and the local PDFs/planning maps remain ignored. New concept
+lessons/questions require the review contracts under `docs/content/`.
+
 Constitution Section 10 manual accuracy spot-check (questions AND
 lessons) remains pending User review. Content Studio checks shape, not
 correctness. The 8 prompts are meta-content (study instructions, not
@@ -262,6 +314,11 @@ data-contract tests (shape only) and still need the User's manual
 accuracy spot-check against the current ECO before merge.
 
 ## Current Status
+Curriculum architecture audit Phases 0-11 are complete in the working tree.
+The architecture checkpoint passed without requiring changes to
+`data/questions.json` or `data/lessons.json`. Planning infrastructure is
+read-only and validated. No commit or push was performed.
+
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
 to main (PR #6). Branch `content/eco-2026-remap` (open as PR #7) now holds
 four commits: (1) the July 2026 ECO remap (re-labeling pass +
@@ -285,6 +342,14 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
+Current recommendation: User/architecture review of the 59-unit catalog and
+metadata contracts. After approval, remediate the question bank's
+answer-position/length bias before using quiz scores for adaptive learning.
+Then approve and author Priority A concept units in small batches. Do not
+generate more broad ECO question volume until concept objectives and mappings
+are approved.
+
+Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using
 Content Studio as the intake/validation path and Prompt Helper's authoring
 prompts as starting templates; or history management (clear/export) — spec

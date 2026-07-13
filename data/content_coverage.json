@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-13",
+  "coverage_ratings": ["Strong", "Partial", "Thin", "Missing"],
+  "lifecycle_statuses": ["Existing", "Planned", "Approved", "Implemented"],
+  "counting_note": "Question counts are derived at runtime from unique questions matching any listed ECO mapping. They indicate ECO alignment, not direct concept mastery.",
+  "modules": [
+    { "id": "M01", "title": "Project Management Foundations", "sequence": 1 },
+    { "id": "M02", "title": "Principles and PMP Mindset", "sequence": 2 },
+    { "id": "M03", "title": "Life Cycles, Approaches, and Tailoring", "sequence": 3 },
+    { "id": "M04", "title": "PMBOK 8 Structural Model", "sequence": 4 },
+    { "id": "M05", "title": "Governance and Integration", "sequence": 5 },
+    { "id": "M06", "title": "Scope and Quality", "sequence": 6 },
+    { "id": "M07", "title": "Schedule Management", "sequence": 7 },
+    { "id": "M08", "title": "Finance and Value Measurement", "sequence": 8 },
+    { "id": "M09", "title": "Stakeholder and Communications Management", "sequence": 9 },
+    { "id": "M10", "title": "Resources, Teams, Leadership, and Conflict", "sequence": 10 },
+    { "id": "M11", "title": "Risk and Uncertainty", "sequence": 11 },
+    { "id": "M12", "title": "Agile Mindset, Frameworks, and Product Delivery", "sequence": 12 },
+    { "id": "M13", "title": "AI in Project Management", "sequence": 13 }
+  ],
+  "curriculum_units": [
+    {
+      "id": "C001", "module_id": "M01", "title": "What Makes Work a Project?", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["domain:Governance", "focus:Initiating"], "source_refs": ["S2", "S4"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C002", "module_id": "M01", "title": "Value, Benefits, and Project Success", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 3: Help ensure value-based delivery" }],
+      "pmbok_mappings": ["principle:Focus on Value", "domain:Governance"], "source_refs": ["S2", "S3", "S8", "S10"], "existing_lesson_ids": ["l003"]
+    },
+    {
+      "id": "C003", "module_id": "M01", "title": "Project vs. Program vs. Portfolio vs. Operations", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 1: Define and establish project governance" }],
+      "pmbok_mappings": ["domain:Governance", "reference:Value Delivery System"], "source_refs": ["S2"], "existing_lesson_ids": ["l013"]
+    },
+    {
+      "id": "C004", "module_id": "M01", "title": "Projects as Vehicles for Change", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 7: Support organizational change" }],
+      "pmbok_mappings": ["domain:Governance", "principle:Adopt a Holistic View"], "source_refs": ["S2", "S3"], "existing_lesson_ids": ["l019"]
+    },
+    {
+      "id": "C005", "module_id": "M01", "title": "Phases, Deliverables, and Acceptance", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 10: Manage project closure" }],
+      "pmbok_mappings": ["focus:Closing", "process:Close Project or Phase", "process:Validate Scope"], "source_refs": ["S2", "S4", "S8"], "existing_lesson_ids": ["l006"]
+    },
+    {
+      "id": "C006", "module_id": "M01", "title": "Project vs. Product Management", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 3: Help ensure value-based delivery" }],
+      "pmbok_mappings": ["domain:Governance", "reference:Product Management"], "source_refs": ["S2", "S10"], "existing_lesson_ids": ["l003"]
+    },
+    {
+      "id": "C007", "module_id": "M01", "title": "Risks, Issues, Assumptions, and Constraints", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 5: Plan and manage risk" }, { "domain": "Business Environment", "task": "Task 4: Remove impediments and manage issues" }],
+      "pmbok_mappings": ["domain:Risk", "process:Identify Risks", "reference:Issue Log"], "source_refs": ["S2", "S5", "S8"], "existing_lesson_ids": ["l016", "l017"]
+    },
+    {
+      "id": "C008", "module_id": "M01", "title": "Leadership vs. Management", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["domain:Resources", "principle:Be an Accountable Leader"], "source_refs": ["S2", "S3", "S9"], "existing_lesson_ids": ["l021"]
+    },
+    {
+      "id": "C009", "module_id": "M01", "title": "PMOs and Organizational Structures", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 1: Define and establish project governance" }],
+      "pmbok_mappings": ["domain:Governance", "reference:Organizational Systems"], "source_refs": ["S2", "S8"], "existing_lesson_ids": ["l013"]
+    },
+    {
+      "id": "C010", "module_id": "M02", "title": "The PMP Decision-Making Mindset", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["principle:Be an Accountable Leader", "principle:Focus on Value"], "source_refs": ["S3", "S9", "S10"], "existing_lesson_ids": ["l021"]
+    },
+    {
+      "id": "C011", "module_id": "M02", "title": "Holistic and Systems Thinking", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["principle:Adopt a Holistic View", "domain:Governance"], "source_refs": ["S3", "S5"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C012", "module_id": "M02", "title": "Value-Driven Delivery", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 3: Help ensure value-based delivery" }],
+      "pmbok_mappings": ["principle:Focus on Value", "domain:Governance"], "source_refs": ["S3", "S8", "S10"], "existing_lesson_ids": ["l003"]
+    },
+    {
+      "id": "C013", "module_id": "M02", "title": "Building Quality In", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 7: Plan and optimize quality of products/deliverables" }],
+      "pmbok_mappings": ["principle:Embed Quality into Processes and Deliverables", "process:Manage Quality Assurance"], "source_refs": ["S3", "S8", "S10"], "existing_lesson_ids": ["l026"]
+    },
+    {
+      "id": "C014", "module_id": "M02", "title": "Accountability and Ethical Leadership", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["principle:Be an Accountable Leader", "domain:Resources"], "source_refs": ["S3", "S9", "S11"], "existing_lesson_ids": ["l021"]
+    },
+    {
+      "id": "C015", "module_id": "M02", "title": "Empowered Teams and Culture", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["principle:Build an Empowered Culture", "domain:Resources"], "source_refs": ["S3", "S9"], "existing_lesson_ids": ["l021"]
+    },
+    {
+      "id": "C016", "module_id": "M02", "title": "Sustainability Across the Project", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 8: Evaluate external business environment changes" }],
+      "pmbok_mappings": ["principle:Integrate Sustainability within All Project Areas", "domain:Governance"], "source_refs": ["S3", "S11"], "existing_lesson_ids": ["l020"]
+    },
+    {
+      "id": "C017", "module_id": "M03", "title": "Project Life Cycles and Phase Gates", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["approach:Life Cycle", "focus:Initiating", "focus:Closing"], "source_refs": ["S2", "S4", "S8"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C018", "module_id": "M03", "title": "Predictive Delivery", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["approach:Predictive", "focus:Planning"], "source_refs": ["S4", "S8"], "existing_lesson_ids": ["l005", "l015"]
+    },
+    {
+      "id": "C019", "module_id": "M03", "title": "Iterative and Incremental Delivery", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["approach:Iterative", "approach:Incremental"], "source_refs": ["S4", "S9", "S10"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C020", "module_id": "M03", "title": "Adaptive Delivery", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["approach:Adaptive", "focus:Executing"], "source_refs": ["S4", "S9", "S10"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C021", "module_id": "M03", "title": "Hybrid Delivery", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["approach:Hybrid", "domain:Governance"], "source_refs": ["S4", "S10"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C022", "module_id": "M03", "title": "Tailoring the Approach", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["approach:Tailoring", "domain:Governance"], "source_refs": ["S4", "S8", "S10"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C023", "module_id": "M04", "title": "PMBOK 8 Domains and Focus Areas", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["reference:PMBOK 8 Process Map", "domain:Governance", "focus:Planning"], "source_refs": ["S1", "S5", "S8"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C024", "module_id": "M05", "title": "Charter, Business Case, and Benefits Plan", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 1: Define and establish project governance" }, { "domain": "Process", "task": "Task 3: Help ensure value-based delivery" }],
+      "pmbok_mappings": ["process:Initiate Project or Phase", "domain:Governance"], "source_refs": ["S8", "S2", "S6"], "existing_lesson_ids": ["l003", "l013"]
+    },
+    {
+      "id": "C025", "module_id": "M05", "title": "Integrated Project Management Plan", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["process:Integrate and Align Project Plans", "reference:Project Management Plan"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C026", "module_id": "M05", "title": "Project Execution and Knowledge", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 7: Help ensure knowledge transfer" }],
+      "pmbok_mappings": ["process:Manage Project Execution", "process:Manage Project Knowledge"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l009"]
+    },
+    {
+      "id": "C027", "module_id": "M05", "title": "Monitoring Performance and Managing Change", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 9: Evaluate project status" }, { "domain": "Business Environment", "task": "Task 3: Manage and control changes" }],
+      "pmbok_mappings": ["process:Monitor and Control Project Performance", "process:Assess and Implement Changes"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l012", "l015"]
+    },
+    {
+      "id": "C028", "module_id": "M05", "title": "Project and Phase Closure", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 10: Manage project closure" }],
+      "pmbok_mappings": ["process:Close Project or Phase", "focus:Closing"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l006"]
+    },
+    {
+      "id": "C029", "module_id": "M05", "title": "Procurement, Contracts, and Sourcing", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 5: Plan and manage procurement" }],
+      "pmbok_mappings": ["process:Plan Sourcing Strategy", "domain:Governance"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l025"]
+    },
+    {
+      "id": "C030", "module_id": "M06", "title": "Requirements Elicitation and Analysis", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 2: Develop and manage project scope" }],
+      "pmbok_mappings": ["process:Elicit and Analyze Requirements", "domain:Scope"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l024"]
+    },
+    {
+      "id": "C031", "module_id": "M06", "title": "Product Scope vs. Project Scope", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 2: Develop and manage project scope" }],
+      "pmbok_mappings": ["process:Define Scope", "domain:Scope"], "source_refs": ["S5", "S8"], "existing_lesson_ids": ["l024"]
+    },
+    {
+      "id": "C032", "module_id": "M06", "title": "Scope Statements, WBS, and Baselines", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 2: Develop and manage project scope" }],
+      "pmbok_mappings": ["process:Develop Scope Structure", "reference:Scope Baseline"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l024"]
+    },
+    {
+      "id": "C033", "module_id": "M06", "title": "Scope Validation and Control", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 2: Develop and manage project scope" }],
+      "pmbok_mappings": ["process:Validate Scope", "process:Monitor and Control Scope"], "source_refs": ["S8", "S6"], "existing_lesson_ids": ["l024", "l026"]
+    },
+    {
+      "id": "C034", "module_id": "M06", "title": "Quality Planning, Assurance, and Control", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 7: Plan and optimize quality of products/deliverables" }],
+      "pmbok_mappings": ["process:Manage Quality Assurance", "principle:Embed Quality into Processes and Deliverables"], "source_refs": ["S3", "S8", "S10"], "existing_lesson_ids": ["l026"]
+    },
+    {
+      "id": "C035", "module_id": "M07", "title": "Building the Project Schedule", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 8: Plan and manage schedule" }],
+      "pmbok_mappings": ["process:Develop Schedule", "domain:Schedule"], "source_refs": ["S8", "S10"], "existing_lesson_ids": ["l002"]
+    },
+    {
+      "id": "C036", "module_id": "M07", "title": "Critical Path, Float, and Compression", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 8: Plan and manage schedule" }],
+      "pmbok_mappings": ["process:Develop Schedule", "reference:Critical Path"], "source_refs": ["S8", "S10"], "existing_lesson_ids": ["l002"]
+    },
+    {
+      "id": "C037", "module_id": "M08", "title": "Cost Estimating and Budgeting", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 6: Plan and manage finance" }],
+      "pmbok_mappings": ["process:Estimate Costs", "process:Develop Budget"], "source_refs": ["S8", "S10"], "existing_lesson_ids": ["l011"]
+    },
+    {
+      "id": "C038", "module_id": "M08", "title": "Earned Value Interpretation", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 6: Plan and manage finance" }, { "domain": "Process", "task": "Task 9: Evaluate project status" }],
+      "pmbok_mappings": ["process:Monitor and Control Finances", "reference:Earned Value Management"], "source_refs": ["S8", "S10"], "existing_lesson_ids": ["l011", "l012"]
+    },
+    {
+      "id": "C039", "module_id": "M08", "title": "Financial Selection Metrics and Forecasting", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 3: Help ensure value-based delivery" }, { "domain": "Process", "task": "Task 6: Plan and manage finance" }],
+      "pmbok_mappings": ["domain:Finance", "reference:NPV IRR ROI", "process:Monitor and Control Finances"], "source_refs": ["S8", "S10"], "existing_lesson_ids": ["l003", "l011", "l012"]
+    },
+    {
+      "id": "C040", "module_id": "M09", "title": "Identifying and Analyzing Stakeholders", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "People", "task": "Task 4: Engage stakeholders" }],
+      "pmbok_mappings": ["process:Identify Stakeholders", "domain:Stakeholders"], "source_refs": ["S8", "S5"], "existing_lesson_ids": ["l022"]
+    },
+    {
+      "id": "C041", "module_id": "M09", "title": "Engagement and Communications", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 4: Engage stakeholders" }, { "domain": "People", "task": "Task 8: Plan and manage communication" }],
+      "pmbok_mappings": ["process:Plan Stakeholder Engagement", "process:Plan Communications Management", "domain:Stakeholders"], "source_refs": ["S8", "S9"], "existing_lesson_ids": ["l008", "l022", "l023"]
+    },
+    {
+      "id": "C042", "module_id": "M10", "title": "Resource Planning and Acquisition", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 4: Plan and manage resources" }],
+      "pmbok_mappings": ["process:Plan Resource Management", "process:Estimate Resources", "process:Acquire Resources"], "source_refs": ["S8", "S5"], "existing_lesson_ids": ["l010"]
+    },
+    {
+      "id": "C043", "module_id": "M10", "title": "Team Leadership and Development", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["process:Lead the Team", "domain:Resources"], "source_refs": ["S8", "S9", "S3"], "existing_lesson_ids": ["l021"]
+    },
+    {
+      "id": "C044", "module_id": "M10", "title": "Conflict Resolution and Negotiation", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 2: Manage conflicts" }, { "domain": "People", "task": "Task 6: Manage stakeholder expectations" }],
+      "pmbok_mappings": ["process:Lead the Team", "reference:Conflict Management"], "source_refs": ["S8", "S9", "S2"], "existing_lesson_ids": ["l001", "l004"]
+    },
+    {
+      "id": "C045", "module_id": "M11", "title": "Risk Planning and Identification", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 5: Plan and manage risk" }],
+      "pmbok_mappings": ["process:Plan Risk Management", "process:Identify Risks"], "source_refs": ["S8", "S5"], "existing_lesson_ids": ["l017"]
+    },
+    {
+      "id": "C046", "module_id": "M11", "title": "Risk Analysis and Response Strategies", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 5: Plan and manage risk" }],
+      "pmbok_mappings": ["process:Perform Risk Analysis", "process:Plan Risk Responses"], "source_refs": ["S8", "S10"], "existing_lesson_ids": ["l017"]
+    },
+    {
+      "id": "C047", "module_id": "M11", "title": "Monitoring Risks and Managing Issues", "lesson_type": "concept", "coverage_rating": "Strong", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 5: Plan and manage risk" }, { "domain": "Business Environment", "task": "Task 4: Remove impediments and manage issues" }],
+      "pmbok_mappings": ["process:Monitor Risks", "reference:Issue Log"], "source_refs": ["S8", "S2", "S10"], "existing_lesson_ids": ["l016", "l017"]
+    },
+    {
+      "id": "C048", "module_id": "M12", "title": "Agile Values, Principles, and Mindset", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["approach:Adaptive", "reference:Agile Values and Principles"], "source_refs": ["S9", "S10", "S4"], "existing_lesson_ids": ["l005", "l021"]
+    },
+    {
+      "id": "C049", "module_id": "M12", "title": "Scrum Roles, Events, and Artifacts", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["approach:Adaptive", "reference:Scrum"], "source_refs": ["S9", "S10"], "existing_lesson_ids": ["l021"]
+    },
+    {
+      "id": "C050", "module_id": "M12", "title": "Kanban, Lean, and Flow", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 6: Continuous improvement" }],
+      "pmbok_mappings": ["approach:Adaptive", "reference:Kanban and Lean"], "source_refs": ["S9", "S10"], "existing_lesson_ids": ["l018"]
+    },
+    {
+      "id": "C051", "module_id": "M12", "title": "Product Vision, Backlogs, and User Stories", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "People", "task": "Task 1: Develop a common vision" }, { "domain": "Process", "task": "Task 2: Develop and manage project scope" }],
+      "pmbok_mappings": ["approach:Adaptive", "domain:Scope", "reference:Product Backlog"], "source_refs": ["S9", "S10", "S8"], "existing_lesson_ids": ["l007", "l024"]
+    },
+    {
+      "id": "C052", "module_id": "M12", "title": "Agile Estimation and Forecasting", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 9: Evaluate project status" }],
+      "pmbok_mappings": ["approach:Adaptive", "domain:Schedule", "reference:Velocity and Throughput"], "source_refs": ["S9", "S10"], "existing_lesson_ids": ["l012"]
+    },
+    {
+      "id": "C053", "module_id": "M12", "title": "MVP, MMF, and Early Value", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 3: Help ensure value-based delivery" }],
+      "pmbok_mappings": ["approach:Adaptive", "principle:Focus on Value", "reference:MVP and MMF"], "source_refs": ["S10", "S9"], "existing_lesson_ids": ["l003"]
+    },
+    {
+      "id": "C054", "module_id": "M12", "title": "Servant Leadership and Self-Organizing Teams", "lesson_type": "concept", "coverage_rating": "Partial", "lifecycle_status": "Existing",
+      "eco_mappings": [{ "domain": "People", "task": "Task 3: Lead the project team" }],
+      "pmbok_mappings": ["approach:Adaptive", "domain:Resources", "reference:Servant Leadership"], "source_refs": ["S9", "S3"], "existing_lesson_ids": ["l021"]
+    },
+    {
+      "id": "C055", "module_id": "M12", "title": "Hybrid Integration", "lesson_type": "concept", "coverage_rating": "Thin", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 1: Develop an integrated project management plan and plan delivery" }],
+      "pmbok_mappings": ["approach:Hybrid", "domain:Governance"], "source_refs": ["S4", "S10", "S8"], "existing_lesson_ids": ["l005"]
+    },
+    {
+      "id": "C056", "module_id": "M13", "title": "AI Foundations for Project Managers", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 8: Evaluate external business environment changes" }],
+      "pmbok_mappings": ["reference:Artificial Intelligence", "domain:Governance"], "source_refs": ["S2", "S11"], "existing_lesson_ids": ["l020"]
+    },
+    {
+      "id": "C057", "module_id": "M13", "title": "Automation, Assistance, and Augmentation", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 6: Continuous improvement" }],
+      "pmbok_mappings": ["reference:AI Adoption Levels", "domain:Governance"], "source_refs": ["S11"], "existing_lesson_ids": ["l018"]
+    },
+    {
+      "id": "C058", "module_id": "M13", "title": "Responsible AI and Human Accountability", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Business Environment", "task": "Task 2: Plan and manage project compliance" }],
+      "pmbok_mappings": ["reference:Responsible AI", "principle:Be an Accountable Leader"], "source_refs": ["S11", "S3"], "existing_lesson_ids": ["l014"]
+    },
+    {
+      "id": "C059", "module_id": "M13", "title": "AI Use Cases Across the Project Life Cycle", "lesson_type": "concept", "coverage_rating": "Missing", "lifecycle_status": "Planned",
+      "eco_mappings": [{ "domain": "Process", "task": "Task 9: Evaluate project status" }],
+      "pmbok_mappings": ["reference:AI Use Cases", "focus:Planning", "focus:Monitoring and Controlling"], "source_refs": ["S11"], "existing_lesson_ids": ["l012"]
+    }
+  ]
+}

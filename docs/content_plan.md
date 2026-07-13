@@ -28,6 +28,30 @@ and `data/lessons.json` — not estimated.
   26 questions (q271–q296), exactly one per ECO task. Phase 12 adds 88
   questions (q297–q384) across all three domains.
 
+## Concept-level curriculum architecture
+
+ECO breadth is not the same as comprehensive instructional coverage. The
+architecture audit adds a 59-unit, 13-module Comprehensive Course plan in
+`data/content_coverage.json` while preserving the 26 current lessons as an
+ECO Review track.
+
+Current concept-unit assessment:
+
+| Coverage strength | Units |
+|---|---:|
+| Strong | 9 |
+| Partial | 29 |
+| Thin | 11 |
+| Missing | 10 |
+| **Total** | **59** |
+
+Lifecycle state is tracked separately: 30 units have an Existing lesson
+anchor and 29 require a dedicated Planned unit. None is marked Approved or
+Implemented because architecture work does not self-approve curriculum.
+See `docs/content/coverage_matrix.md` and
+`docs/content/curriculum_model.md` for mappings, dependencies, and the
+build sequence.
+
 ## Domain weighting (current, July 2026 ECO)
 
 | Domain | Exam weight | Tasks | Questions | Lessons |
@@ -101,3 +125,10 @@ closed.
 - **Cross-references:** at the end of every future content phase, regenerate
   every lesson's `related_question_ids` from exact `eco_domain` + `eco_task`
   matches, then validate that no lesson has an empty match set.
+- **Concept depth:** prioritize Missing structural units (foundations,
+  PMBOK 8 map, Scrum, sustainability, and AI), then Thin predictive/agile
+  mechanics. Do not add production content until unit objectives and
+  metadata are User-approved.
+- **Question quality:** remediate answer-position and answer-length cues in
+  a dedicated reviewed slice before treating quiz scores as calibrated
+  mastery evidence; see `docs/content/question_bank_audit.md`.

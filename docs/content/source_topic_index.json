@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-07-13",
+  "handling": "Local-only research sources. Do not commit source files or reproduce source text.",
+  "sources": [
+    {
+      "id": "S1",
+      "file": "00_PMBOK+8+Process+Chart.pdf",
+      "pages": 2,
+      "primary_topics": ["pmbok8-process-map", "performance-domains", "focus-areas"],
+      "curriculum_roles": ["structure", "reference-sheet"],
+      "overlaps": ["S5", "S8"]
+    },
+    {
+      "id": "S2",
+      "file": "03_PM+Terms (1).pdf",
+      "pages": 33,
+      "primary_topics": ["foundations", "value", "program-portfolio-operations", "governance", "pmo", "organizational-structures", "leadership", "ai-foundations"],
+      "curriculum_roles": ["foundation", "glossary"],
+      "overlaps": ["S3", "S4", "S5", "S9", "S11"]
+    },
+    {
+      "id": "S3",
+      "file": "04_PM+Principles.pdf",
+      "pages": 25,
+      "primary_topics": ["holistic-view", "value", "quality", "accountable-leadership", "sustainability", "empowered-culture"],
+      "curriculum_roles": ["principles", "mindset"],
+      "overlaps": ["S2", "S5", "S9", "S10", "S11"]
+    },
+    {
+      "id": "S4",
+      "file": "05_PM+Approaches.pdf",
+      "pages": 24,
+      "primary_topics": ["life-cycles", "phases", "phase-gates", "predictive", "adaptive", "hybrid", "tailoring"],
+      "curriculum_roles": ["course-foundation", "approach-selection"],
+      "overlaps": ["S2", "S8", "S9", "S10"]
+    },
+    {
+      "id": "S5",
+      "file": "06_Project+Performance+Domains.pdf",
+      "pages": 25,
+      "primary_topics": ["governance", "scope", "schedule", "finance", "stakeholders", "resources", "risk"],
+      "curriculum_roles": ["domain-overview", "integration"],
+      "overlaps": ["S1", "S8"]
+    },
+    {
+      "id": "S6",
+      "file": "07_Common+ITTOs.pdf",
+      "pages": 23,
+      "primary_topics": ["eef", "opa", "project-documents", "project-management-plan", "common-tools", "change-requests", "work-performance-flow"],
+      "curriculum_roles": ["shared-pattern-layer", "reference-sheet"],
+      "overlaps": ["S8"]
+    },
+    {
+      "id": "S7",
+      "file": "08.1_AI+Prompt+to+use+for+template.pdf",
+      "pages": 1,
+      "primary_topics": ["prompting", "template-completion"],
+      "curriculum_roles": ["prompt-helper"],
+      "overlaps": ["S11"]
+    },
+    {
+      "id": "S8",
+      "file": "08.2_PMBOK+Process+Presentation.pdf",
+      "pages": 348,
+      "primary_topics": ["pmbok8-processes", "governance", "scope", "schedule", "finance", "stakeholders", "resources", "risk", "quality", "procurement", "change-control", "closure"],
+      "curriculum_roles": ["process-encyclopedia", "predictive-depth"],
+      "overlaps": ["S1", "S5", "S6", "S10"]
+    },
+    {
+      "id": "S9",
+      "file": "09_Agile+Mindset+and+leadership.pdf",
+      "pages": 127,
+      "primary_topics": ["agile-mindset", "scrum", "kanban", "lean", "xp", "scaled-agile", "servant-leadership", "team-dynamics", "conflict"],
+      "curriculum_roles": ["agile-foundation", "leadership-depth"],
+      "overlaps": ["S2", "S3", "S4", "S10"]
+    },
+    {
+      "id": "S10",
+      "file": "10_Agile+Product,+Delivery+and+Hybrid.pdf",
+      "pages": 129,
+      "primary_topics": ["adaptive-planning", "product-backlog", "user-stories", "estimation", "mvp-mmf", "flow-metrics", "evm", "pert", "risk", "retrospectives", "hybrid"],
+      "curriculum_roles": ["agile-product-depth", "formula-source", "hybrid-depth"],
+      "overlaps": ["S4", "S8", "S9"]
+    },
+    {
+      "id": "S11",
+      "file": "11_AI+Slides.pdf",
+      "pages": 22,
+      "primary_topics": ["ai-adoption", "automation", "assistance", "augmentation", "responsible-ai", "bias", "privacy", "accountability", "safety", "copyright", "ai-use-cases"],
+      "curriculum_roles": ["ai-module", "responsible-use-reference"],
+      "overlaps": ["S2", "S7"]
+    }
+  ]
+}
