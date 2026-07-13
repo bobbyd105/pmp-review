@@ -1958,5 +1958,215 @@
     ],
     "correct_answer": "Complete administrative and contract closure activities, including final vendor payments and performance evaluations, before formally closing the project",
     "explanation": "Project closure includes both administrative closure and contract closure; customer acceptance of deliverables is necessary but not sufficient on its own, since open vendor contracts represent unfinished obligations and unresolved organizational process assets like performance evaluations. Closing the project while contracts remain open leaves loose ends that can create legal or financial exposure. Handing contract closure off entirely to procurement, without project manager oversight, risks losing accountability for the project's overall closure."
+  },
+  {
+    "id": "q141",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 1: Define and establish project governance",
+    "question": "A project is launched without a clearly defined decision-making authority: it's unclear whether the project manager, steering committee, or sponsor has final say on scope trade-off decisions. Three weeks in, a scope trade-off decision stalls because no one is sure who can approve it. What should the project manager do?",
+    "options": [
+      "Make the decision unilaterally going forward, since someone needs to keep the project moving",
+      "Work with the sponsor to define and document a governance structure, including clear decision authority levels, and communicate it to the team",
+      "Ask the steering committee to approve every future decision, regardless of size, to avoid ambiguity",
+      "Continue operating without formal governance, resolving authority questions case by case as they arise"
+    ],
+    "correct_answer": "Work with the sponsor to define and document a governance structure, including clear decision authority levels, and communicate it to the team",
+    "explanation": "A stalled decision due to unclear authority is a governance gap, and the fix is to define and document decision rights at the appropriate levels, not to informally absorb all authority or push everything upward. Taking unilateral authority without agreement risks later disputes over legitimacy. Routing every decision through the steering committee, however small, creates unnecessary bottlenecks that governance structures are meant to avoid."
+  },
+  {
+    "id": "q142",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 1: Define and establish project governance",
+    "question": "The project's governance framework specifies that any change over $50,000 requires steering committee approval, but a project manager recently approved a $60,000 change alone to avoid delaying the team, planning to inform the committee afterward. What is the primary concern with this action?",
+    "options": [
+      "There is no concern, since the change was ultimately beneficial to the project",
+      "It bypassed the defined governance threshold, undermining the authority structure meant to ensure appropriate oversight of significant decisions",
+      "The concern is only that the committee might have rejected the change, not the process itself",
+      "The concern is that the project manager should have asked the team to approve it collectively instead"
+    ],
+    "correct_answer": "It bypassed the defined governance threshold, undermining the authority structure meant to ensure appropriate oversight of significant decisions",
+    "explanation": "The core issue is procedural: governance thresholds exist so decisions of a certain magnitude get appropriate oversight before they happen, and bypassing that regardless of outcome erodes the credibility of the governance structure itself. Judging the action only on whether the change turned out well ignores that governance protects against decisions that could go wrong, not just ones that did. Team approval isn't a substitute for the specific oversight body the governance framework designates."
+  },
+  {
+    "id": "q143",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 2: Plan and manage project compliance",
+    "question": "A project operates in a highly regulated industry, and midway through execution, the compliance officer flags that a new regulatory requirement, published two months ago, was never incorporated into the project's compliance plan. What should the project manager do first?",
+    "options": [
+      "Wait for the next scheduled compliance audit to formally address the gap",
+      "Assess the new requirement's impact on scope, schedule, and deliverables, then update the compliance plan and relevant baselines through change control",
+      "Assume the compliance officer will handle the update independently without project manager involvement",
+      "Ignore the new requirement since the project's original compliance plan was approved before it was published"
+    ],
+    "correct_answer": "Assess the new requirement's impact on scope, schedule, and deliverables, then update the compliance plan and relevant baselines through change control",
+    "explanation": "Regulatory compliance requirements can change during a project's life cycle, and when they do, the project manager needs to assess impact and formally integrate the change, since compliance plans aren't static once approved. Waiting for a scheduled audit risks operating out of compliance for an extended period. Assuming someone else will handle it, or dismissing it because it postdates the original plan, both ignore the project manager's responsibility for ongoing compliance management."
+  },
+  {
+    "id": "q144",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 2: Plan and manage project compliance",
+    "question": "A team member proposes a workaround that would speed up testing but would skip a data-handling step required by an internal compliance policy. The workaround has never caused a documented issue on past projects. What should the project manager do?",
+    "options": [
+      "Approve the workaround, since it has apparently been safe on prior projects",
+      "Decline the workaround and confirm with the compliance function whether an exception process exists, rather than deciding informally",
+      "Allow the workaround only for this project's lower-risk components",
+      "Let the team member decide independently, since they proposed the workaround"
+    ],
+    "correct_answer": "Decline the workaround and confirm with the compliance function whether an exception process exists, rather than deciding informally",
+    "explanation": "Compliance requirements shouldn't be waived based on informal precedent or an individual project manager's risk judgment; if there's a legitimate case for an exception, it should go through whatever formal exception process the compliance function provides. Approving it based on past luck ignores that the absence of a documented issue isn't the same as the workaround being compliant. Delegating the decision to the team member who proposed it, or partially applying it to 'lower-risk' components without any formal review, both sidestep the actual compliance authority."
+  },
+  {
+    "id": "q145",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 3: Manage and control changes",
+    "question": "A change request has been submitted and reviewed, but the project manager notices it lacks any documented impact analysis on schedule or cost, only a brief justification for why the change is needed. What should happen before the change is presented for approval?",
+    "options": [
+      "Present the change for approval as-is, since the justification alone is sufficient for the change control board to decide",
+      "Complete a full impact analysis across scope, schedule, cost, quality, and risk before submitting the change for a formal decision",
+      "Approve the change directly without board review, since the request appears reasonable",
+      "Reject the change automatically due to incomplete documentation, without requesting the missing analysis"
+    ],
+    "correct_answer": "Complete a full impact analysis across scope, schedule, cost, quality, and risk before submitting the change for a formal decision",
+    "explanation": "A change request needs a documented impact analysis so decision-makers can weigh the true cost of approval, not just the stated justification for wanting the change. Presenting it without that analysis effectively asks the board to approve blind. Approving it directly without board review bypasses the defined authority for changes of this nature, while rejecting it outright, without first requesting the missing analysis, discards a request that might still be worth pursuing once properly documented."
+  },
+  {
+    "id": "q146",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 3: Manage and control changes",
+    "question": "An approved change was implemented three weeks ago, but the project manager discovers the schedule and cost baselines were never formally updated to reflect it, meaning current performance reports are being measured against outdated baselines. What should be done?",
+    "options": [
+      "Continue reporting against the original baselines, since re-baselining could confuse stakeholders",
+      "Update the baselines to reflect the approved change and reissue performance reports based on the corrected baselines",
+      "Wait until the next major milestone to update baselines, to avoid frequent revisions",
+      "Adjust only the cost baseline, since the schedule impact was considered minor at the time of approval"
+    ],
+    "correct_answer": "Update the baselines to reflect the approved change and reissue performance reports based on the corrected baselines",
+    "explanation": "Once a change is approved, its impact needs to be reflected in the relevant baselines promptly, or all subsequent performance measurement becomes inaccurate and potentially misleading to stakeholders. Continuing to report against stale baselines to avoid confusion actually compounds the problem by making performance data unreliable. Updating only one baseline when both schedule and cost were affected leaves the reporting only partially corrected."
+  },
+  {
+    "id": "q147",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 5: Plan and manage risk",
+    "question": "A risk register was created at project initiation and has not been updated since, even though the project has since entered a new phase with different technical challenges. What should the project manager do?",
+    "options": [
+      "Leave the risk register as-is, since major risks are typically identified only at the start of a project",
+      "Facilitate a risk reassessment with the team to identify new risks relevant to the current phase and update the register and response plans accordingly",
+      "Ask a single team member to update the register independently without a broader review",
+      "Wait until a risk actually materializes before revisiting the register"
+    ],
+    "correct_answer": "Facilitate a risk reassessment with the team to identify new risks relevant to the current phase and update the register and response plans accordingly",
+    "explanation": "Risk identification and analysis is iterative throughout a project, and a new phase with different technical challenges is exactly the kind of trigger that should prompt a fresh, team-based reassessment. Treating the original register as final ignores how much project context has changed. Assigning the update to one person alone, or waiting for a risk to actually occur, both forfeit the proactive value that risk management is meant to provide."
+  },
+  {
+    "id": "q148",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 5: Plan and manage risk",
+    "question": "A previously identified risk (a key vendor's financial instability) has just materialized: the vendor has announced a serious cash-flow issue. The risk register shows a response plan was defined months ago. What should the project manager do?",
+    "options": [
+      "Develop a brand-new response from scratch, since circumstances may have changed since the original plan was written",
+      "Execute the predefined risk response plan, adapting it as needed based on the vendor's current specific situation",
+      "Wait to see whether the vendor's situation resolves on its own before taking any action",
+      "Escalate the issue without referring to the existing response plan, treating it as an unplanned crisis"
+    ],
+    "correct_answer": "Execute the predefined risk response plan, adapting it as needed based on the vendor's current specific situation",
+    "explanation": "The value of proactive risk planning is having a response ready to execute when the risk actually occurs, adapted to the specifics of the situation rather than discarded or reinvented from zero. Starting over from scratch wastes the planning work already done and costs valuable response time. Waiting to see if the situation resolves itself treats a materialized risk as still hypothetical, and treating it as an unplanned crisis ignores that this exact risk was already anticipated and has a documented plan."
+  },
+  {
+    "id": "q149",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 6: Continuous improvement",
+    "question": "After several sprints, the team's retrospectives keep surfacing the same recurring process complaint (unclear handoffs between design and development), but no concrete process change has ever been implemented as a result. What should the project manager do?",
+    "options": [
+      "Continue holding retrospectives as scheduled, since simply surfacing the issue is the main value of the practice",
+      "Work with the team to define and implement a specific process improvement addressing the handoff issue, then track whether it resolves the recurring complaint",
+      "Stop holding retrospectives, since they haven't led to any resolution so far",
+      "Assign one team member to unilaterally decide and implement a fix without broader team input"
+    ],
+    "correct_answer": "Work with the team to define and implement a specific process improvement addressing the handoff issue, then track whether it resolves the recurring complaint",
+    "explanation": "Continuous improvement requires acting on what retrospectives surface, not just repeating the ritual of identifying the same issue without ever closing the loop with an actual process change. Discontinuing retrospectives because past ones haven't led to change addresses the symptom (wasted time) rather than the root cause (no follow-through). A unilateral fix without team input skips the collaborative process that usually produces improvements the team will actually adopt."
+  },
+  {
+    "id": "q150",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 6: Continuous improvement",
+    "question": "A process improvement was implemented last quarter to reduce defect rates, and early data suggests defects have dropped. What should the project manager do to confirm this is a genuine, sustainable improvement?",
+    "options": [
+      "Declare success immediately based on the early positive data and move on to the next improvement initiative",
+      "Continue monitoring the metric over a longer period and across varying conditions before concluding the improvement is genuinely effective",
+      "Revert the process change since one data point isn't sufficient evidence either way",
+      "Ask team members informally whether they feel the change helped, rather than relying on data"
+    ],
+    "correct_answer": "Continue monitoring the metric over a longer period and across varying conditions before concluding the improvement is genuinely effective",
+    "explanation": "A single encouraging data point after a process change needs to be confirmed over a longer window and varying conditions before it's treated as a durable improvement rather than natural variation. Declaring success immediately risks a false conclusion if the early drop was coincidental. Reverting the change prematurely, on equally thin evidence, discards a potentially real improvement, and relying only on informal impressions instead of the actual metric undercuts the point of measuring the change in the first place."
+  },
+  {
+    "id": "q151",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 7: Support organizational change",
+    "question": "A project will require significant changes to how a business unit operates once delivered, but the project manager notices no organizational change management activities (communication, training, adoption support) have been planned, only technical delivery milestones. What should the project manager do?",
+    "options": [
+      "Assume the business unit will adapt naturally once the deliverable is in place",
+      "Work with the sponsor and business unit leadership to plan organizational change management activities alongside the technical delivery plan",
+      "Focus solely on technical delivery, since organizational adoption falls outside the project manager's responsibility",
+      "Delay planning change management activities until after go-live, to focus resources on technical delivery first"
+    ],
+    "correct_answer": "Work with the sponsor and business unit leadership to plan organizational change management activities alongside the technical delivery plan",
+    "explanation": "Supporting organizational change means planning for adoption, communication, and training as part of project delivery, not treating technical completion as automatically translating into business unit acceptance. Assuming natural adaptation, or treating adoption as entirely outside scope, both risk a technically successful project that fails to achieve its intended business outcome. Waiting until after go-live to start change management activities misses the preparation window when adoption support is most effective."
+  },
+  {
+    "id": "q152",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 7: Support organizational change",
+    "question": "Frontline staff who will use a new system after go-live have expressed anxiety and resistance in informal conversations, fearing the change will make their roles redundant. What should the project manager do?",
+    "options": [
+      "Avoid addressing the concerns directly, since they are based on informal conversations rather than formal feedback",
+      "Work with leadership and communications resources to directly address the concerns with clear, honest information about role impacts",
+      "Reassure staff that nothing about their roles will change, regardless of what is actually planned",
+      "Proceed with go-live as scheduled, treating staff resistance as a natural and temporary reaction that will pass on its own"
+    ],
+    "correct_answer": "Work with leadership and communications resources to directly address the concerns with clear, honest information about role impacts",
+    "explanation": "Resistance rooted in genuine anxiety about role impact needs direct, honest engagement, since unaddressed fear tends to grow and can undermine adoption regardless of the technical quality of the delivered solution. Dismissing informal signals as not warranting a response ignores real information about how the change will land. Offering blanket reassurance that isn't actually true, just to calm anxiety in the moment, risks a worse trust breakdown when reality doesn't match what was promised."
+  },
+  {
+    "id": "q153",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 8: Evaluate external business environment changes",
+    "question": "Partway through a multi-year project, a new industry standard is published that will affect how the project's deliverable needs to be certified before release. What should the project manager do?",
+    "options": [
+      "Continue with the current plan, since standards are advisory and not mandatory to follow",
+      "Assess the new standard's impact on the project's requirements and certification path, and initiate change control if adjustments are needed",
+      "Wait until the deliverable is complete to check whether it meets the new standard",
+      "Delegate the assessment of the new standard entirely to the certification body without project manager involvement"
+    ],
+    "correct_answer": "Assess the new standard's impact on the project's requirements and certification path, and initiate change control if adjustments are needed",
+    "explanation": "External environmental factors like industry standards can shift during a long project, and the project manager needs to proactively assess their impact on requirements and certification, adjusting the plan through change control as needed. Assuming the standard doesn't matter because it isn't mandatory ignores the real risk of a deliverable failing certification later. Waiting until the deliverable is complete to check compliance risks discovering a costly gap far too late to address efficiently."
+  },
+  {
+    "id": "q154",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 8: Evaluate external business environment changes",
+    "question": "A macroeconomic shift causes a key raw material's price to rise sharply, well beyond what was assumed in the project's cost baseline. The change has not yet materially affected the current phase's budget. What should the project manager do?",
+    "options": [
+      "Take no action until the price increase actually affects the current phase's spending",
+      "Analyze the potential impact on remaining phases and proactively update the risk register and communicate a possible cost exposure to the sponsor",
+      "Immediately request additional budget from the sponsor without further analysis",
+      "Assume the price will return to previous levels before it affects the project"
+    ],
+    "correct_answer": "Analyze the potential impact on remaining phases and proactively update the risk register and communicate a possible cost exposure to the sponsor",
+    "explanation": "Monitoring the external business environment means acting on a relevant shift as soon as it's identified, analyzing likely downstream impact and communicating exposure proactively, rather than waiting for the effect to show up in the current phase's numbers. Requesting more budget immediately, without first analyzing the actual expected impact, risks an inaccurate or premature ask. Assuming the price will simply recover is an unsupported bet rather than a risk-managed response."
+  },
+  {
+    "id": "q155",
+    "eco_domain": "Process",
+    "eco_task": "Task 3: Help ensure value-based delivery",
+    "question": "A feature ranked highly in the backlog by initial stakeholder input has, after three sprints, shown low actual usage in the released increments and minimal measurable business impact, while a lower-ranked feature has generated strong engagement wherever it was piloted. What should the project manager encourage the team to do?",
+    "options": [
+      "Continue building out the originally highly-ranked feature as planned, since it was already prioritized at initiation",
+      "Reassess backlog priority using the actual value data observed so far, and consider re-prioritizing the higher-engagement feature",
+      "Discard the underperforming feature immediately without further analysis",
+      "Maintain the original prioritization until the full backlog is delivered, then evaluate value at project closure"
+    ],
+    "correct_answer": "Reassess backlog priority using the actual value data observed so far, and consider re-prioritizing the higher-engagement feature",
+    "explanation": "Value-based delivery means using real evidence of delivered value to continuously reprioritize work, rather than treating initial estimates as fixed once the project is underway. Sticking with the original ranking despite contrary evidence ignores the entire point of incremental delivery, which is to learn and adapt. Waiting until project closure to evaluate value defers the adjustment until it's too late to act on, while discarding the underperforming feature outright, without further analysis, skips understanding why it underperformed before deciding its fate."
   }
 ]

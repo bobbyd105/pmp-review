@@ -17,16 +17,18 @@ and `data/lessons.json` — not estimated.
   round 2 added 34 questions (q049–q082) across all three domains. Phase 3
   added 26 questions (q083–q108), exactly one per ECO task. Phase 4 adds 32
   questions (q109–q140) across People and Process, bringing every People
-  task and nine Process tasks to 6 questions.
+  task and nine Process tasks to 6 questions. Phase 5 adds 15 questions
+  (q141–q155), bringing every Process task and seven Business Environment
+  tasks to 6 questions.
 
 ## Domain weighting (current, July 2026 ECO)
 
 | Domain | Exam weight | Tasks | Questions | Lessons |
 |---|---|---|---|---|
 | People | 33% | 8 | 48 | 8 |
-| Process | 41% | 10 | 59 | 10 |
-| Business Environment | 26% | 8 | 33 | 8 |
-| **Total** | **100%** | **26** | **140** | **26** |
+| Process | 41% | 10 | 60 | 10 |
+| Business Environment | 26% | 8 | 47 | 8 |
+| **Total** | **100%** | **26** | **155** | **26** |
 
 Business Environment carries roughly a quarter of the exam (26%), not
 one-twelfth (8%) as under the 2021 ECO. Its earlier zero-lesson gap is now
@@ -58,7 +60,7 @@ closed.
 |---|---|---|---|---|
 | Process | Task 1: Develop an integrated project management plan and plan delivery | 6 | 1 | Q+L |
 | Process | Task 2: Develop and manage project scope | 6 | 1 | Q+L |
-| Process | Task 3: Help ensure value-based delivery | 5 | 1 | Q+L |
+| Process | Task 3: Help ensure value-based delivery | 6 | 1 | Q+L |
 | Process | Task 4: Plan and manage resources | 6 | 1 | Q+L |
 | Process | Task 5: Plan and manage procurement | 6 | 1 | Q+L |
 | Process | Task 6: Plan and manage finance | 6 | 1 | Q+L |
@@ -71,23 +73,22 @@ closed.
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| Business Environment | Task 1: Define and establish project governance | 4 | 1 | Q+L |
-| Business Environment | Task 2: Plan and manage project compliance | 4 | 1 | Q+L |
-| Business Environment | Task 3: Manage and control changes | 4 | 1 | Q+L |
+| Business Environment | Task 1: Define and establish project governance | 6 | 1 | Q+L |
+| Business Environment | Task 2: Plan and manage project compliance | 6 | 1 | Q+L |
+| Business Environment | Task 3: Manage and control changes | 6 | 1 | Q+L |
 | Business Environment | Task 4: Remove impediments and manage issues | 5 | 1 | Q+L |
-| Business Environment | Task 5: Plan and manage risk | 4 | 1 | Q+L |
-| Business Environment | Task 6: Continuous improvement | 4 | 1 | Q+L |
-| Business Environment | Task 7: Support organizational change | 4 | 1 | Q+L |
-| Business Environment | Task 8: Evaluate external business environment changes | 4 | 1 | Q+L |
+| Business Environment | Task 5: Plan and manage risk | 6 | 1 | Q+L |
+| Business Environment | Task 6: Continuous improvement | 6 | 1 | Q+L |
+| Business Environment | Task 7: Support organizational change | 6 | 1 | Q+L |
+| Business Environment | Task 8: Evaluate external business environment changes | 6 | 1 | Q+L |
 
 ## Open items
 
 - **Breadth: complete.** All 26 tasks now have at least one question and at
   least one lesson. No Questions-only, Lesson-only, or No-content tasks
   remain.
-- **Question depth:** every People task has 6 questions. Nine Process tasks
-  have 6 and Process Task 3 has 5. Business Environment remains at 4 per
-  task except Task 4, which has 5.
+- **Question depth:** every People and Process task has 6 questions. Seven
+  Business Environment tasks have 6; Task 4 has 5.
 - **Lesson depth:** every task has exactly one lesson except where noted;
   adding depth per task is the Phase 2 counterpart to question depth.
 - **Cross-references:** at the end of every future content phase, regenerate
