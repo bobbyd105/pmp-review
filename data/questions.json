@@ -3414,5 +3414,369 @@
     ],
     "correct_answer": "Monitor the situation closely, assess potential impact and response options, and communicate the emerging risk to the sponsor proactively",
     "explanation": "A credible external signal like growing news coverage of potential trade restrictions is worth monitoring and assessing proactively, even before anything is formally enacted, so the project can communicate exposure and prepare response options ahead of time rather than being caught flat-footed. Waiting for formal restrictions to be enacted before acting forgoes the lead time that proactive monitoring provides. Assuming the coverage is purely speculative dismisses a legitimate external risk signal without evaluating it, while switching suppliers immediately without analysis is an overreaction that could incur unnecessary cost and disruption if the restrictions never materialize."
+  },
+  {
+    "id": "q245",
+    "eco_domain": "People",
+    "eco_task": "Task 1: Develop a common vision",
+    "question": "A project manager is leading a project where the sponsor's stated vision emphasizes speed to market, but the technical lead's informal comments to the team consistently emphasize long-term architectural soundness over speed. Neither has said the other's priority is wrong, but the team is receiving mixed signals about what to optimize for. What should the project manager do?",
+    "options": [
+      "Let the team infer which priority matters more based on whichever person they interact with most",
+      "Facilitate a conversation between the sponsor and technical lead to explicitly reconcile the two priorities into a single, coherent vision the team can act on",
+      "Instruct the team to prioritize the sponsor's speed-to-market vision by default, since the sponsor has ultimate authority",
+      "Avoid raising the tension since neither party has explicitly said the other is wrong"
+    ],
+    "correct_answer": "Facilitate a conversation between the sponsor and technical lead to explicitly reconcile the two priorities into a single, coherent vision the team can act on",
+    "explanation": "Two respected voices emphasizing different priorities, even without open conflict, creates exactly the kind of ambiguity a common vision is supposed to eliminate, so it needs direct reconciliation rather than being left for the team to sort out informally. Letting the team infer priority based on proximity or personality produces inconsistent behavior across the team. Defaulting to the sponsor's priority without an explicit conversation skips the technical lead's legitimate concern and risks a vision that isn't actually informed by both perspectives."
+  },
+  {
+    "id": "q246",
+    "eco_domain": "People",
+    "eco_task": "Task 2: Manage conflicts",
+    "question": "A conflict has arisen not between two individuals but between two whole sub-teams, each blaming the other for a missed integration point, with each sub-team's members reinforcing their own side's narrative in private conversations. What should the project manager do?",
+    "options": [
+      "Meet separately with each sub-team's members individually until the tension fades naturally",
+      "Bring representatives from both sub-teams together in a structured session focused on facts and the integration point itself, rather than blame",
+      "Publicly assign blame to whichever sub-team appears more at fault, to bring closure to the dispute",
+      "Merge the two sub-teams into one to force collaboration and eliminate the separate identities driving the conflict"
+    ],
+    "correct_answer": "Bring representatives from both sub-teams together in a structured session focused on facts and the integration point itself, rather than blame",
+    "explanation": "Inter-team conflict reinforced by in-group narratives needs a structured, fact-focused session that shifts the conversation away from blame and toward the actual technical issue, since separate meetings risk each side's narrative hardening further without ever being tested against the other's account. Publicly assigning blame escalates the conflict and damages the losing team's morale without necessarily being accurate. Forcibly merging the teams is a drastic structural change that doesn't address the underlying disagreement and could create new coordination problems."
+  },
+  {
+    "id": "q247",
+    "eco_domain": "People",
+    "eco_task": "Task 3: Lead the project team",
+    "question": "A project manager notices that team members increasingly wait for explicit direction before starting new tasks, even when previous norms encouraged proactive initiative. On investigation, the project manager realizes their own recent tendency to closely review and correct early-stage work may be discouraging independent action. What should the project manager do?",
+    "options": [
+      "Continue the current level of oversight, since catching issues early is generally beneficial",
+      "Reflect on how the review approach may be affecting team initiative, and adjust toward giving the team more autonomy on early-stage work while still providing feedback at appropriate checkpoints",
+      "Instruct the team directly to 'be more proactive' without changing the leadership behavior that may be causing the pattern",
+      "Assume the pattern is unrelated to leadership style and look for a different explanation"
+    ],
+    "correct_answer": "Reflect on how the review approach may be affecting team initiative, and adjust toward giving the team more autonomy on early-stage work while still providing feedback at appropriate checkpoints",
+    "explanation": "Effective team leadership includes recognizing when the leader's own behavior is shaping team dynamics, and a shift toward waiting for direction after a change in oversight style is a signal worth acting on directly. Continuing the same oversight level ignores plausible cause and effect the project manager has already identified. Telling the team to 'be more proactive' without changing the behavior that may be discouraging it addresses the symptom with words rather than the actual cause, and assuming the pattern is unrelated dismisses a connection that's reasonably well-supported by the project manager's own observation."
+  },
+  {
+    "id": "q248",
+    "eco_domain": "People",
+    "eco_task": "Task 4: Engage stakeholders",
+    "question": "A stakeholder map was built primarily around organizational titles, but the project manager observes that an administrative assistant to a senior executive seems to have significant informal influence over what actually reaches that executive's attention. What should the project manager do?",
+    "options": [
+      "Disregard the administrative assistant's role in the stakeholder analysis, since their formal title doesn't indicate authority",
+      "Recognize the assistant's informal influence in the stakeholder analysis and consider appropriate engagement, alongside the formal stakeholder hierarchy",
+      "Approach the executive directly and ask them to instruct the assistant to stop filtering information",
+      "Assume informal influence isn't worth accounting for in a formal stakeholder analysis"
+    ],
+    "correct_answer": "Recognize the assistant's informal influence in the stakeholder analysis and consider appropriate engagement, alongside the formal stakeholder hierarchy",
+    "explanation": "Stakeholder analysis should capture actual influence over outcomes, which can exist independently of formal title, and an assistant who genuinely shapes what reaches a key executive's attention is a real, practical stakeholder worth engaging appropriately. Disregarding them because of their formal title misses a channel that could materially affect how information and requests are received. Asking the executive to instruct the assistant differently addresses a symptom in a way that could create friction, without acknowledging the legitimate value the assistant's informal role plays in effective, respectful engagement."
+  },
+  {
+    "id": "q249",
+    "eco_domain": "People",
+    "eco_task": "Task 5: Align stakeholder expectations",
+    "question": "A steering committee approved a set of success metrics at project initiation, but eighteen months later, as the project nears completion, several committee members have changed, and the new members seem to have different informal expectations that were never reconciled with the original metrics. What should the project manager do?",
+    "options": [
+      "Continue reporting against the originally approved metrics, since they were formally agreed upon regardless of committee membership changes",
+      "Proactively revisit the approved success metrics with the current committee to confirm they still reflect what will be used to judge the project's success",
+      "Adopt whatever the newer committee members seem to expect, without reconciling it against the original formal metrics",
+      "Wait until the final project review to discover whether the metrics still match expectations"
+    ],
+    "correct_answer": "Proactively revisit the approved success metrics with the current committee to confirm they still reflect what will be used to judge the project's success",
+    "explanation": "A significant change in the stakeholder body responsible for judging success is a reasonable trigger to confirm the originally approved metrics are still the shared basis for evaluation, rather than assuming formal approval from long ago automatically holds regardless of who's now doing the judging. Continuing to report against the original metrics without checking risks a mismatch discovered too late to address. Silently adopting new members' informal expectations without reconciling them against the documented metrics abandons the formal basis the project has actually been managed against, and waiting until the final review to find out risks discovering the gap when it's far too late to do anything about it."
+  },
+  {
+    "id": "q250",
+    "eco_domain": "People",
+    "eco_task": "Task 6: Manage stakeholder expectations",
+    "question": "A stakeholder consistently interprets every project update optimistically, even when the underlying content includes caveats and risk flags, leading them to describe the project as 'ahead of schedule' to their own leadership when it is not. What should the project manager do?",
+    "options": [
+      "Continue sending the same reports and let the stakeholder's own misinterpretation be their responsibility to correct",
+      "Adjust the communication approach to make risks and caveats more explicit and harder to overlook, and follow up directly to confirm accurate understanding",
+      "Stop including caveats or risk flags in reports to this stakeholder, since they tend to be misread anyway",
+      "Ask a colleague to independently inform the stakeholder's leadership of the accurate status instead"
+    ],
+    "correct_answer": "Adjust the communication approach to make risks and caveats more explicit and harder to overlook, and follow up directly to confirm accurate understanding",
+    "explanation": "When a stakeholder consistently misreads accurate reporting in an optimistic direction, the responsible move is to adapt the communication itself to be harder to misinterpret and to directly confirm understanding, rather than treating the misreading as solely the stakeholder's problem. Continuing the same reports and leaving correction entirely to the stakeholder risks the inaccurate optimistic narrative propagating further to their leadership. Removing caveats entirely goes the wrong direction, since it would make the reports less accurate rather than more clearly understood, and routing around the stakeholder to inform their leadership directly bypasses the relationship in a way likely to damage trust."
+  },
+  {
+    "id": "q251",
+    "eco_domain": "People",
+    "eco_task": "Task 7: Help ensure knowledge transfer",
+    "question": "A project's institutional knowledge is concentrated in a shared team chat history spanning thousands of messages, with no organized documentation, and a new team member joining next month will need to get up to speed quickly. What should the project manager do?",
+    "options": [
+      "Direct the new team member to read through the entire chat history on their own to absorb the context",
+      "Have current team members extract and organize the key decisions and context from the chat history into structured documentation before the new member joins",
+      "Assume the new team member will pick up necessary context naturally through ongoing conversations after joining",
+      "Skip any knowledge transfer preparation, since the chat history technically already contains the information"
+    ],
+    "correct_answer": "Have current team members extract and organize the key decisions and context from the chat history into structured documentation before the new member joins",
+    "explanation": "Unstructured chat history technically containing information isn't the same as usable knowledge transfer; someone needs to extract and organize the genuinely important context into a form a new person can actually absorb efficiently. Asking the new member to read thousands of unorganized messages themselves is an inefficient and unrealistic way to onboard someone. Assuming they'll pick things up naturally through ongoing conversation risks a slow, patchy ramp-up with gaps in understanding, and treating the raw chat log itself as sufficient preparation confuses the existence of information with its actual accessibility."
+  },
+  {
+    "id": "q252",
+    "eco_domain": "People",
+    "eco_task": "Task 8: Plan and manage communication",
+    "question": "A project's communication plan was designed assuming all stakeholders spoke the same primary language, but the project has since expanded to include stakeholders whose primary language differs, and some have quietly stopped engaging as actively in written updates. What should the project manager do?",
+    "options": [
+      "Continue with the existing communication approach, since translating materials would add cost and delay",
+      "Assess whether language is a barrier to engagement for the affected stakeholders, and adapt communication (e.g., translation, simplified language, or alternate formats) accordingly",
+      "Assume the reduced engagement reflects disinterest in the project rather than a language barrier",
+      "Ask a bilingual team member to informally interpret on an ad hoc basis whenever it happens to come up, without a defined plan"
+    ],
+    "correct_answer": "Assess whether language is a barrier to engagement for the affected stakeholders, and adapt communication (e.g., translation, simplified language, or alternate formats) accordingly",
+    "explanation": "A shift in engagement that coincides with expanding to stakeholders with a different primary language is worth directly assessing for a language barrier, since effective communication planning needs to account for how the actual audience will receive information, not just how it was originally designed for a more homogeneous group. Keeping the existing approach solely to avoid added cost risks continued disengagement from stakeholders who genuinely can't access the material well. Assuming disinterest rather than checking for a language barrier risks misdiagnosing a solvable problem, and relying on ad hoc, undefined interpretation leaves language support to chance rather than a reliable part of the communication plan."
+  },
+  {
+    "id": "q253",
+    "eco_domain": "Process",
+    "eco_task": "Task 1: Develop an integrated project management plan and plan delivery",
+    "question": "A project's integrated plan calls for monthly steering committee reviews, but the committee has begun meeting only sporadically, sometimes skipping two months at a time, without a formal change to the plan's governance cadence. What should the project manager do?",
+    "options": [
+      "Continue operating as if monthly reviews are happening, since the plan formally still specifies that cadence",
+      "Raise the gap between the documented cadence and actual practice with the committee, and formally update the plan's governance section if the new cadence is intentional and acceptable",
+      "Silently adjust internal planning to the sporadic actual cadence without updating the documented plan",
+      "Escalate the missed meetings as a serious violation requiring disciplinary action against committee members"
+    ],
+    "correct_answer": "Raise the gap between the documented cadence and actual practice with the committee, and formally update the plan's governance section if the new cadence is intentional and acceptable",
+    "explanation": "A documented governance cadence that has quietly drifted from actual practice creates a gap between the approved plan and reality, and the appropriate fix is to surface it and either restore the documented cadence or formally update the plan to match an intentional change. Continuing to act as though the original cadence is happening, when it isn't, means planning against an inaccurate assumption. Silently adjusting internal expectations without updating the actual plan leaves the documented governance structure misleading for anyone who relies on it, and escalating straight to discipline assumes bad faith without first understanding why the cadence changed."
+  },
+  {
+    "id": "q254",
+    "eco_domain": "Process",
+    "eco_task": "Task 2: Develop and manage project scope",
+    "question": "A project's scope baseline references a third-party data source that the team assumed would remain freely accessible, but a review finds the terms of use actually prohibit the specific commercial use the project intends. What should the project manager do?",
+    "options": [
+      "Proceed with the current plan, since the data source has been usable so far without any issue",
+      "Reassess the scope's reliance on this data source given the terms-of-use conflict, and route any needed scope adjustments through change control",
+      "Continue using the data source as planned and address the terms-of-use conflict only if it is formally challenged",
+      "Quietly switch to a different data source without evaluating whether it meets the same requirements"
+    ],
+    "correct_answer": "Reassess the scope's reliance on this data source given the terms-of-use conflict, and route any needed scope adjustments through change control",
+    "explanation": "A newly discovered legal or licensing conflict with something the scope depends on is a material issue that needs formal reassessment and, if necessary, a scope adjustment through change control, not simply continuing on the assumption that things have worked so far. Proceeding as planned despite a known terms-of-use violation creates real legal exposure. Continuing until formally challenged treats a known compliance issue as acceptable until caught, which is a much riskier position than addressing it proactively, and quietly switching sources without verifying the replacement meets the same requirements risks trading one unassessed risk for another."
+  },
+  {
+    "id": "q255",
+    "eco_domain": "Process",
+    "eco_task": "Task 3: Help ensure value-based delivery",
+    "question": "A team has adopted the practice of demoing completed work at the end of every sprint, but stakeholder attendance and engagement at demos has been steadily declining, suggesting the practice may no longer be delivering its intended value-validation purpose. What should the project manager do?",
+    "options": [
+      "Continue holding demos exactly as before, since the practice is a standard part of the team's process",
+      "Investigate why stakeholder engagement has declined and adapt the demo format, timing, or audience to restore its value as a feedback and validation mechanism",
+      "Cancel demos entirely, since declining attendance suggests they are no longer useful",
+      "Make demo attendance mandatory for all stakeholders regardless of the underlying reason for declining engagement"
+    ],
+    "correct_answer": "Investigate why stakeholder engagement has declined and adapt the demo format, timing, or audience to restore its value as a feedback and validation mechanism",
+    "explanation": "The point of a demo is stakeholder feedback that validates whether delivered work has real value, so declining engagement is a signal to investigate and adapt the practice, not to keep running it unchanged or abandon it outright. Continuing exactly as before ignores a clear signal that the practice isn't achieving its purpose anymore. Cancelling demos entirely discards a potentially still-valuable mechanism without first understanding what's driving the decline, and forcing attendance without addressing the underlying cause treats a symptom (low turnout) without understanding why people have disengaged in the first place."
+  },
+  {
+    "id": "q256",
+    "eco_domain": "Process",
+    "eco_task": "Task 4: Plan and manage resources",
+    "question": "A project's resource plan for the next quarter assumes continued access to a specialized testing lab, but the facilities team has just announced the lab will be under renovation for six weeks during that window, with no advance notice built into the original plan. What should the project manager do?",
+    "options": [
+      "Wait until the renovation actually begins to see how much impact it truly has before making any changes",
+      "Assess the impact of the lab's unavailability on the schedule and identify alternatives (a different facility, adjusted sequencing, or a schedule change) proactively",
+      "Assume the renovation will be delayed or cancelled and continue planning as if the lab will remain available",
+      "Cancel all testing activities planned for that window without exploring any alternative options"
+    ],
+    "correct_answer": "Assess the impact of the lab's unavailability on the schedule and identify alternatives (a different facility, adjusted sequencing, or a schedule change) proactively",
+    "explanation": "A confirmed, dated facility unavailability is a known constraint that should be proactively assessed for its schedule impact and addressed with real alternatives, rather than waited out or assumed away. Waiting until the renovation begins to gauge impact wastes the lead time currently available to plan around it. Assuming the renovation might not actually happen is an unfounded bet against an announced plan, and cancelling all related testing activities without exploring alternatives discards work that might still be achievable through resequencing or a different facility."
+  },
+  {
+    "id": "q257",
+    "eco_domain": "Process",
+    "eco_task": "Task 5: Plan and manage procurement",
+    "question": "A vendor proposal includes pricing that seems unusually favorable compared to every other bid received, well below what the underlying scope of work would normally cost. What should the project manager do before proceeding with this vendor?",
+    "options": [
+      "Select the vendor immediately, since the lower price benefits the project's budget",
+      "Investigate the reason for the unusually low bid (e.g., scope misunderstanding, quality shortcuts, or financial distress) before making a selection decision",
+      "Disqualify the bid automatically for being suspiciously low, without further inquiry",
+      "Ask the vendor to raise their price to match the average of other bids before considering them further"
+    ],
+    "correct_answer": "Investigate the reason for the unusually low bid (e.g., scope misunderstanding, quality shortcuts, or financial distress) before making a selection decision",
+    "explanation": "An unusually low bid relative to comparable proposals is worth investigating before selection, since it could reflect a genuine cost advantage, but could equally reflect a scope misunderstanding, planned quality shortcuts, or vendor financial distress that would create real risk if selected. Selecting immediately based on price alone skips understanding what's actually driving the difference. Disqualifying it automatically without inquiry discards a bid that might turn out to be legitimately strong, and asking the vendor to simply raise their price to match others addresses appearance rather than understanding the underlying reason for the discrepancy."
+  },
+  {
+    "id": "q258",
+    "eco_domain": "Process",
+    "eco_task": "Task 6: Plan and manage finance",
+    "question": "A project's cost baseline was set using estimates in one currency, but the project now involves significant spend in a second currency whose exchange rate has been volatile. The financial plan has no mechanism to account for exchange rate fluctuation. What should the project manager do?",
+    "options": [
+      "Continue using the original single-currency baseline and address any exchange-related variance only if it becomes significant",
+      "Work with finance to incorporate exchange rate risk into the financial plan, such as through a dedicated reserve or hedging consideration",
+      "Convert all remaining budget to the second currency immediately to simplify future tracking",
+      "Ignore currency risk since exchange rates generally revert to historical averages over time"
+    ],
+    "correct_answer": "Work with finance to incorporate exchange rate risk into the financial plan, such as through a dedicated reserve or hedging consideration",
+    "explanation": "A known source of financial risk, like volatile exchange rate exposure on real project spend, should be incorporated into financial planning proactively, whether through a specific reserve or another appropriate mechanism, rather than being left unaddressed until it causes a visible variance. Waiting for the variance to become significant means reacting to a risk that was foreseeable. Converting all remaining budget immediately doesn't hedge the risk, it simply locks in a snapshot exchange rate that could still move unfavorably relative to actual spend timing, and assuming exchange rates will revert to historical averages is a speculative bet rather than sound financial risk management."
+  },
+  {
+    "id": "q259",
+    "eco_domain": "Process",
+    "eco_task": "Task 7: Plan and optimize quality of products/deliverables",
+    "question": "A project's quality plan defines acceptance criteria primarily in terms of functional correctness, but recent customer feedback on a similar past product highlighted usability, not functional bugs, as the main satisfaction driver. What should the project manager consider for this project's quality approach?",
+    "options": [
+      "Continue relying solely on functional correctness criteria, since it is the most objectively measurable quality dimension",
+      "Incorporate usability-focused quality criteria and validation methods (e.g., usability testing) alongside functional correctness, informed by the past feedback",
+      "Wait until this project's own customer feedback arrives before considering any change to quality criteria",
+      "Assume this project's context is different enough that the past feedback isn't relevant"
+    ],
+    "correct_answer": "Incorporate usability-focused quality criteria and validation methods (e.g., usability testing) alongside functional correctness, informed by the past feedback",
+    "explanation": "Relevant feedback from a similar past product is valuable lessons-learned input for shaping this project's quality approach, and since it points specifically to usability rather than functional bugs as the real satisfaction driver, quality planning should incorporate usability validation, not rely solely on functional correctness because it's easier to measure. Waiting for this project's own feedback to arrive means potentially repeating the same mistake before learning from it, when the information to prevent it is already available. Assuming the past feedback isn't relevant, without actually evaluating the similarity, discards a specific, applicable lesson without justification."
+  },
+  {
+    "id": "q260",
+    "eco_domain": "Process",
+    "eco_task": "Task 8: Plan and manage schedule",
+    "question": "A schedule includes a series of activities compressed tightly together with zero float between them, based on best-case duration estimates for each. The project manager is reviewing this before finalizing the baseline. What concern should be raised?",
+    "options": [
+      "No concern, since zero float indicates an efficiently optimized schedule",
+      "The lack of any float creates significant schedule risk, since any single activity running even slightly long will delay the whole remaining sequence, and this should be reconsidered before baselining",
+      "Float is only a concern for activities on the critical path, so non-critical activities with zero float don't need review",
+      "The schedule should be compressed further to save even more time, since the team has clearly demonstrated it can work with tight sequencing"
+    ],
+    "correct_answer": "The lack of any float creates significant schedule risk, since any single activity running even slightly long will delay the whole remaining sequence, and this should be reconsidered before baselining",
+    "explanation": "A schedule built entirely on best-case estimates with zero float anywhere is fragile, since even a minor overrun on any single activity cascades into the whole downstream sequence with no buffer to absorb it, and this is worth flagging before the schedule becomes the approved baseline. Treating zero float as evidence of efficient optimization mistakes a fragile plan for a well-designed one. The float concern actually applies most directly to activities on the critical path, meaning it's a real concern here, not a lesser one, and compressing the schedule even further would only increase the fragility rather than address it."
+  },
+  {
+    "id": "q261",
+    "eco_domain": "Process",
+    "eco_task": "Task 9: Evaluate project status",
+    "question": "A stakeholder asks the project manager for a single number representing 'percent complete' for a complex project with multiple parallel workstreams at very different stages of progress. What is the most appropriate way to respond?",
+    "options": [
+      "Provide a rough guess based on overall impression, since a precise number isn't realistically calculable",
+      "Provide a calculated aggregate figure (e.g., based on earned value or weighted work package completion), along with context on what it does and doesn't capture across the different workstreams",
+      "Refuse to provide any single number, since a single figure inherently oversimplifies a complex project",
+      "Report the percent complete of whichever workstream happens to be furthest along, since it reflects positive progress"
+    ],
+    "correct_answer": "Provide a calculated aggregate figure (e.g., based on earned value or weighted work package completion), along with context on what it does and doesn't capture across the different workstreams",
+    "explanation": "A single percent-complete figure can be legitimately calculated using a consistent method like earned value or weighted completion, and providing it along with context about what it aggregates gives the stakeholder something both useful and honest about its limitations. A rough impressionistic guess isn't grounded in any actual measurement and risks being misleading despite sounding precise. Refusing to provide any number risks being unhelpful when a reasonably informative figure is genuinely calculable, and reporting only the most advanced workstream's completion, without context, actively misrepresents the project's true overall status."
+  },
+  {
+    "id": "q262",
+    "eco_domain": "Process",
+    "eco_task": "Task 10: Manage project closure",
+    "question": "At project closure, the project manager is finalizing the archive of project records but notices that some documents exist in multiple, slightly different versions across different storage locations, with no clear indication of which is final. What should be done before closure is considered complete?",
+    "options": [
+      "Archive all versions of every document as found, without resolving which is authoritative",
+      "Identify and designate the authoritative final version of each document, and archive a clean, clearly labeled set as the official project record",
+      "Archive only the most recently modified version of each document, without verifying it is actually the correct final version",
+      "Skip archiving the affected documents entirely, since determining the correct version would take too much time at this stage"
+    ],
+    "correct_answer": "Identify and designate the authoritative final version of each document, and archive a clean, clearly labeled set as the official project record",
+    "explanation": "A closure archive is meant to serve as a clear, trustworthy historical record, so ambiguity about which version of a document is authoritative should be resolved before archiving, rather than passed along unresolved. Archiving every version without designation leaves future readers to guess which is correct. Assuming the most recently modified version is automatically the correct one, without verification, risks archiving an incomplete draft or an accidental edit as if it were final, and skipping the affected documents entirely leaves real gaps in the project's official record."
+  },
+  {
+    "id": "q263",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 1: Define and establish project governance",
+    "question": "A project's governance framework specifies escalation paths for schedule and cost issues but has no defined path for escalating stakeholder relationship issues, and one is now emerging with a difficult external partner. What should the project manager do?",
+    "options": [
+      "Handle the stakeholder relationship issue entirely on their own, since the governance framework doesn't specify a path for this category",
+      "Identify the most appropriate existing escalation path or governance body to handle the issue, and recommend the governance framework be updated to explicitly cover this gap",
+      "Wait for the relationship issue to develop into a schedule or cost issue before invoking any formal escalation path",
+      "Escalate to the highest available authority regardless of whether they are the appropriate body for this type of issue"
+    ],
+    "correct_answer": "Identify the most appropriate existing escalation path or governance body to handle the issue, and recommend the governance framework be updated to explicitly cover this gap",
+    "explanation": "A gap in the governance framework, where a real category of issue has no defined escalation path, is worth addressing pragmatically by identifying the most appropriate existing structure to use now, while also flagging the gap for a proper fix. Handling it entirely alone assumes the project manager has sole authority over an issue that may genuinely need broader organizational involvement. Waiting for the relationship issue to manifest as a schedule or cost problem delays action on something that may be addressable, and possibly resolvable, well before it reaches that point, and escalating to the highest authority regardless of fit risks routing the issue to people without the right context or mandate to actually help."
+  },
+  {
+    "id": "q264",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 2: Plan and manage project compliance",
+    "question": "A compliance requirement mandates a specific data retention period, but the project's technical architecture, as currently designed, would make it difficult to selectively delete data at the end of that period without also deleting unrelated data. What should the project manager do?",
+    "options": [
+      "Proceed with the current architecture and address the deletion challenge only once the retention period is reached",
+      "Raise the architectural conflict with the compliance requirement now, and work with the technical team to adjust the design to support compliant selective deletion",
+      "Retain all data indefinitely, since selective deletion appears technically difficult",
+      "Assume the compliance requirement will be waived once the practical difficulty is explained to regulators"
+    ],
+    "correct_answer": "Raise the architectural conflict with the compliance requirement now, and work with the technical team to adjust the design to support compliant selective deletion",
+    "explanation": "A known conflict between a compliance requirement and the current technical design should be addressed proactively while the architecture can still reasonably be adjusted, since compliance requirements generally aren't something a technical difficulty excuses. Waiting until the retention period is reached to deal with it risks discovering the problem when it's much harder and more expensive to fix. Retaining all data indefinitely to avoid the deletion challenge directly violates the retention requirement rather than resolving the underlying conflict, and assuming a regulator will simply waive the requirement due to technical difficulty is an unfounded and risky assumption to build a compliance plan around."
+  },
+  {
+    "id": "q265",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 3: Manage and control changes",
+    "question": "A change control board consistently approves nearly every change request submitted, with very little scrutiny or pushback, and the project manager notices scope has grown substantially as a result over several months. What should the project manager do?",
+    "options": [
+      "Continue submitting change requests as before, since the board's approval process is technically being followed",
+      "Raise the pattern of low-scrutiny approvals with the board, and work to ensure future change requests receive genuine impact analysis and evaluation before being presented",
+      "Stop submitting change requests through the board and simply implement changes directly, since board review doesn't appear to be adding real value",
+      "Blame the board's approvals for the scope growth without examining whether the requests themselves were being properly analyzed before submission"
+    ],
+    "correct_answer": "Raise the pattern of low-scrutiny approvals with the board, and work to ensure future change requests receive genuine impact analysis and evaluation before being presented",
+    "explanation": "A change control process that technically exists but isn't providing real scrutiny has effectively stopped functioning as intended, and the fix is to address that directly with the board while also ensuring requests are properly analyzed before submission, since a rubber-stamp process on either end contributes to uncontrolled scope growth. Continuing to submit requests as before accepts a broken process at face value. Bypassing the board entirely removes formal oversight altogether rather than fixing the actual scrutiny problem, and placing blame solely on the board without examining the quality of the submitted requests ignores that the project manager's own submissions are part of the same process."
+  },
+  {
+    "id": "q266",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 4: Remove impediments and manage issues",
+    "question": "A project team reports that a critical dependency on another team's deliverable is blocked, but that other team reports to a different division with a separate reporting structure, and there's no existing forum where the two teams' leadership regularly interact. What should the project manager do?",
+    "options": [
+      "Wait for the two divisions to naturally coordinate on their own, since the project manager has no formal authority over the other division",
+      "Proactively initiate direct communication with the other team's leadership to resolve the blocking dependency, escalating through appropriate organizational channels if needed",
+      "Accept the blocked status as an unavoidable consequence of organizational structure and remove the dependent work from the schedule",
+      "Wait for the issue to be raised at the next scheduled cross-division meeting, whenever that may occur"
+    ],
+    "correct_answer": "Proactively initiate direct communication with the other team's leadership to resolve the blocking dependency, escalating through appropriate organizational channels if needed",
+    "explanation": "A blocking cross-division dependency, even one outside the project manager's direct authority, still needs proactive action to resolve, whether through direct outreach or escalation through the right organizational channel, since removing impediments doesn't stop at organizational boundaries the project manager doesn't formally control. Waiting for natural coordination to happen risks the blockage persisting indefinitely with no one actively driving resolution. Accepting the block as unavoidable and simply removing the dependent work abandons value the project presumably needs, and waiting for an unscheduled or infrequent cross-division meeting treats an active blocker as something that can wait for routine housekeeping."
+  },
+  {
+    "id": "q267",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 5: Plan and manage risk",
+    "question": "A risk was assessed early in the project as low probability and low impact, and was accordingly given minimal monitoring. Circumstances have since changed significantly (a key dependency shifted), but the original low-priority classification was never revisited. What should the project manager do?",
+    "options": [
+      "Leave the risk's classification and monitoring level unchanged, since it was properly assessed using the information available at the time",
+      "Reassess the risk's probability and impact given the changed circumstances, and adjust its classification and monitoring level accordingly",
+      "Assume the original low-priority assessment remains valid unless the risk actually materializes",
+      "Remove the risk from active tracking entirely, since it was originally deemed low priority"
+    ],
+    "correct_answer": "Reassess the risk's probability and impact given the changed circumstances, and adjust its classification and monitoring level accordingly",
+    "explanation": "Risk assessments reflect the circumstances at the time they were made, and a significant change like a shifted key dependency is exactly the kind of trigger that should prompt reassessment of a risk's probability, impact, and appropriate monitoring level, even one originally classified as low priority. Leaving the classification unchanged because the original assessment was reasonable at the time ignores that the underlying circumstances it was based on have since changed. Assuming it remains valid until it materializes defeats the purpose of proactive risk management, and removing it from tracking entirely discards visibility into something that may now warrant closer attention."
+  },
+  {
+    "id": "q268",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 6: Continuous improvement",
+    "question": "An organization has a formal continuous improvement program that requires teams to submit improvement ideas quarterly, but the project team has been submitting the same superficial suggestions repeatedly just to satisfy the requirement, without genuine reflection. What should the project manager do?",
+    "options": [
+      "Continue the current pattern, since the formal requirement is technically being satisfied each quarter",
+      "Facilitate a more genuine reflection process with the team to surface real improvement opportunities, rather than treating the submission as a compliance exercise",
+      "Stop submitting anything, since the current submissions aren't providing real value anyway",
+      "Delegate the task of writing submissions to a single team member without broader team input, to reduce the time spent on it"
+    ],
+    "correct_answer": "Facilitate a more genuine reflection process with the team to surface real improvement opportunities, rather than treating the submission as a compliance exercise",
+    "explanation": "A continuous improvement requirement that's being satisfied only superficially has stopped serving its actual purpose, and the fix is to facilitate genuine reflection so real opportunities surface, not to keep treating the process as a box-checking exercise or abandon it because the current version of it is hollow. Continuing the current pattern wastes an opportunity that's meant to have real organizational value. Stopping submissions entirely creates a compliance problem without addressing the actual issue, which is depth of reflection, not the existence of the requirement, and delegating to a single person without team input is likely to produce the same kind of superficial output the current pattern already shows."
+  },
+  {
+    "id": "q269",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 7: Support organizational change",
+    "question": "A new workflow is being introduced that will require staff across three different departments to adopt shared terminology and processes that each department currently defines somewhat differently. Early feedback suggests each department assumes their own version of the terminology is the standard one. What should the project manager do?",
+    "options": [
+      "Let each department continue using its own terminology informally, as long as the new workflow's technical requirements are met",
+      "Facilitate a cross-department session to establish and document a single shared terminology and process definition before full rollout",
+      "Impose one department's terminology on the others without a joint discussion, based on whichever department is largest",
+      "Proceed with rollout as planned and address terminology confusion only if it causes a reported problem"
+    ],
+    "correct_answer": "Facilitate a cross-department session to establish and document a single shared terminology and process definition before full rollout",
+    "explanation": "Supporting organizational change across departments that each assume their own terminology is standard requires actively reconciling that mismatch before rollout, since unaddressed terminology confusion tends to cause real miscommunication and adoption problems once the shared workflow is actually in use. Letting each department continue with its own informal terminology risks ongoing confusion at exactly the points where the departments need to interact. Imposing one department's terminology without a joint conversation risks resentment and resistance from the other departments, and waiting for a reported problem before addressing a foreseeable point of confusion misses the chance to prevent it proactively."
+  },
+  {
+    "id": "q270",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 8: Evaluate external business environment changes",
+    "question": "A significant new open-source library has emerged that could replace a costly proprietary component the project currently plans to use, but adopting it would require some rework and isn't strictly necessary for the project to succeed as currently scoped. What should the project manager do?",
+    "options": [
+      "Ignore the new library entirely, since the current proprietary component already meets the project's needs",
+      "Evaluate the new library's potential cost and value tradeoffs against the current approach, and present the option to relevant stakeholders for a decision",
+      "Switch to the new library immediately without further evaluation, since open-source options are generally preferable to proprietary ones",
+      "Delay any evaluation of the new library until the current proprietary contract is up for renewal"
+    ],
+    "correct_answer": "Evaluate the new library's potential cost and value tradeoffs against the current approach, and present the option to relevant stakeholders for a decision",
+    "explanation": "A relevant external development that could meaningfully change the project's cost or approach is worth evaluating and surfacing to stakeholders for an informed decision, even when it isn't strictly necessary for current scope, since that's exactly the kind of environmental scanning that can create real value if pursued deliberately. Ignoring it outright forecloses a potentially valuable option without ever assessing it. Switching immediately without evaluation assumes open-source is automatically better without actually weighing the real tradeoffs and rework cost, and delaying evaluation until contract renewal misses the chance to make an informed decision with adequate lead time, rather than being rushed by a renewal deadline."
   }
 ]
