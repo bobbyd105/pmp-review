@@ -19,16 +19,17 @@ and `data/lessons.json` — not estimated.
   questions (q109–q140) across People and Process, bringing every People
   task and nine Process tasks to 6 questions. Phase 5 adds 15 questions
   (q141–q155), bringing every Process task and seven Business Environment
-  tasks to 6 questions.
+  tasks to 6 questions. Phase 6 adds 19 questions (q156–q174): one per
+  People and Process task, plus Business Environment Task 4.
 
 ## Domain weighting (current, July 2026 ECO)
 
 | Domain | Exam weight | Tasks | Questions | Lessons |
 |---|---|---|---|---|
-| People | 33% | 8 | 48 | 8 |
-| Process | 41% | 10 | 60 | 10 |
-| Business Environment | 26% | 8 | 47 | 8 |
-| **Total** | **100%** | **26** | **155** | **26** |
+| People | 33% | 8 | 56 | 8 |
+| Process | 41% | 10 | 70 | 10 |
+| Business Environment | 26% | 8 | 48 | 8 |
+| **Total** | **100%** | **26** | **174** | **26** |
 
 Business Environment carries roughly a quarter of the exam (26%), not
 one-twelfth (8%) as under the 2021 ECO. Its earlier zero-lesson gap is now
@@ -45,29 +46,29 @@ closed.
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| People | Task 1: Develop a common vision | 6 | 1 | Q+L |
-| People | Task 2: Manage conflicts | 6 | 1 | Q+L |
-| People | Task 3: Lead the project team | 6 | 1 | Q+L |
-| People | Task 4: Engage stakeholders | 6 | 1 | Q+L |
-| People | Task 5: Align stakeholder expectations | 6 | 1 | Q+L |
-| People | Task 6: Manage stakeholder expectations | 6 | 1 | Q+L |
-| People | Task 7: Help ensure knowledge transfer | 6 | 1 | Q+L |
-| People | Task 8: Plan and manage communication | 6 | 1 | Q+L |
+| People | Task 1: Develop a common vision | 7 | 1 | Q+L |
+| People | Task 2: Manage conflicts | 7 | 1 | Q+L |
+| People | Task 3: Lead the project team | 7 | 1 | Q+L |
+| People | Task 4: Engage stakeholders | 7 | 1 | Q+L |
+| People | Task 5: Align stakeholder expectations | 7 | 1 | Q+L |
+| People | Task 6: Manage stakeholder expectations | 7 | 1 | Q+L |
+| People | Task 7: Help ensure knowledge transfer | 7 | 1 | Q+L |
+| People | Task 8: Plan and manage communication | 7 | 1 | Q+L |
 
 ## Process (10 tasks, 41%)
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| Process | Task 1: Develop an integrated project management plan and plan delivery | 6 | 1 | Q+L |
-| Process | Task 2: Develop and manage project scope | 6 | 1 | Q+L |
-| Process | Task 3: Help ensure value-based delivery | 6 | 1 | Q+L |
-| Process | Task 4: Plan and manage resources | 6 | 1 | Q+L |
-| Process | Task 5: Plan and manage procurement | 6 | 1 | Q+L |
-| Process | Task 6: Plan and manage finance | 6 | 1 | Q+L |
-| Process | Task 7: Plan and optimize quality of products/deliverables | 6 | 1 | Q+L |
-| Process | Task 8: Plan and manage schedule | 6 | 1 | Q+L |
-| Process | Task 9: Evaluate project status | 6 | 1 | Q+L |
-| Process | Task 10: Manage project closure | 6 | 1 | Q+L |
+| Process | Task 1: Develop an integrated project management plan and plan delivery | 7 | 1 | Q+L |
+| Process | Task 2: Develop and manage project scope | 7 | 1 | Q+L |
+| Process | Task 3: Help ensure value-based delivery | 7 | 1 | Q+L |
+| Process | Task 4: Plan and manage resources | 7 | 1 | Q+L |
+| Process | Task 5: Plan and manage procurement | 7 | 1 | Q+L |
+| Process | Task 6: Plan and manage finance | 7 | 1 | Q+L |
+| Process | Task 7: Plan and optimize quality of products/deliverables | 7 | 1 | Q+L |
+| Process | Task 8: Plan and manage schedule | 7 | 1 | Q+L |
+| Process | Task 9: Evaluate project status | 7 | 1 | Q+L |
+| Process | Task 10: Manage project closure | 7 | 1 | Q+L |
 
 ## Business Environment (8 tasks, 26%)
 
@@ -76,7 +77,7 @@ closed.
 | Business Environment | Task 1: Define and establish project governance | 6 | 1 | Q+L |
 | Business Environment | Task 2: Plan and manage project compliance | 6 | 1 | Q+L |
 | Business Environment | Task 3: Manage and control changes | 6 | 1 | Q+L |
-| Business Environment | Task 4: Remove impediments and manage issues | 5 | 1 | Q+L |
+| Business Environment | Task 4: Remove impediments and manage issues | 6 | 1 | Q+L |
 | Business Environment | Task 5: Plan and manage risk | 6 | 1 | Q+L |
 | Business Environment | Task 6: Continuous improvement | 6 | 1 | Q+L |
 | Business Environment | Task 7: Support organizational change | 6 | 1 | Q+L |
@@ -87,8 +88,8 @@ closed.
 - **Breadth: complete.** All 26 tasks now have at least one question and at
   least one lesson. No Questions-only, Lesson-only, or No-content tasks
   remain.
-- **Question depth:** every People and Process task has 6 questions. Seven
-  Business Environment tasks have 6; Task 4 has 5.
+- **Question depth:** every People and Process task has 7 questions. Every
+  Business Environment task has 6.
 - **Lesson depth:** every task has exactly one lesson except where noted;
   adding depth per task is the Phase 2 counterpart to question depth.
 - **Cross-references:** at the end of every future content phase, regenerate
