@@ -13,17 +13,20 @@ and `data/lessons.json` — not estimated.
 
 - **Every one of the 26 ECO tasks has at least one question AND at least one
   lesson.** Breadth is complete on both sides — all 26 of 26 tasks are Q+L.
-- Phase 2 depth batch 1 adds one question to every Process task. Process
+- Phase 2 People depth batch 1 adds one question to each underrepresented
+  People task. People now has 18 questions across all 8 tasks; Task 3 stays
+  at 4 while each of the other seven tasks increases from 1 to 2.
+- Phase 2 Process depth batch 1 adds one question to every Process task. Process
   now has 21 questions across all 10 tasks.
 
 ## Domain weighting (current, July 2026 ECO)
 
 | Domain | Exam weight | Tasks | Questions | Lessons |
 |---|---|---|---|---|
-| People | 33% | 8 | 11 | 8 |
+| People | 33% | 8 | 18 | 8 |
 | Process | 41% | 10 | 21 | 10 |
 | Business Environment | 26% | 8 | 9 | 8 |
-| **Total** | **100%** | **26** | **41** | **26** |
+| **Total** | **100%** | **26** | **48** | **26** |
 
 Business Environment carries roughly a quarter of the exam (26%), not
 one-twelfth (8%) as under the 2021 ECO. Its earlier zero-lesson gap is now
@@ -40,14 +43,14 @@ closed.
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| People | Task 1: Develop a common vision | 1 | 1 | Q+L |
-| People | Task 2: Manage conflicts | 1 | 1 | Q+L |
+| People | Task 1: Develop a common vision | 2 | 1 | Q+L |
+| People | Task 2: Manage conflicts | 2 | 1 | Q+L |
 | People | Task 3: Lead the project team | 4 | 1 | Q+L |
-| People | Task 4: Engage stakeholders | 1 | 1 | Q+L |
-| People | Task 5: Align stakeholder expectations | 1 | 1 | Q+L |
-| People | Task 6: Manage stakeholder expectations | 1 | 1 | Q+L |
-| People | Task 7: Help ensure knowledge transfer | 1 | 1 | Q+L |
-| People | Task 8: Plan and manage communication | 1 | 1 | Q+L |
+| People | Task 4: Engage stakeholders | 2 | 1 | Q+L |
+| People | Task 5: Align stakeholder expectations | 2 | 1 | Q+L |
+| People | Task 6: Manage stakeholder expectations | 2 | 1 | Q+L |
+| People | Task 7: Help ensure knowledge transfer | 2 | 1 | Q+L |
+| People | Task 8: Plan and manage communication | 2 | 1 | Q+L |
 
 ## Process (10 tasks, 41%)
 
@@ -85,6 +88,8 @@ closed.
 - **Question depth:** Phase 2 depth batch 1 is complete for Process: every
   Process task received one additional question, taking the domain from 11
   to 21 questions. Process Task 3 now has 3 questions; its other nine tasks
-  have 2 each. Most People and Business Environment tasks remain at one.
+  have 2 each. People depth batch 1 is also complete: People Task 3 remains
+  at 4 questions and each of its other seven tasks now has 2. Most Business
+  Environment tasks remain at one question.
 - **Lesson depth:** every task has exactly one lesson except where noted;
   adding depth per task is the Phase 2 counterpart to question depth.
