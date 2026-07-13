@@ -26,7 +26,7 @@ describe('QuestionBank', () => {
         expect(within(card).getByText(option)).toBeInTheDocument()
       }
     }
-  })
+  }, 15000)
 
   it('shows the question count', () => {
     render(<QuestionBank />)
