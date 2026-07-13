@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-10 (Phase 2 Process and People depth batches 1).
+<p>Last updated: 2026-07-13 (Phase 2 depth round 2 + regenerated lesson links).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -152,7 +152,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
   <tr>
     <td><code>data/questions.json</code></td>
-    <td>Question bank data: 48 original PMP-style questions across all 3 ECO domains (People 18, Process 21, Business Environment 9). Phase 1 breadth covers every ECO task; Phase 2 Process depth batch 1 added 10 questions (<code>q032–q041</code>), one per Process task, and People depth batch 1 added 7 questions (<code>q042–q048</code>) across its underrepresented tasks. Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Question bank data: 82 original PMP-style questions across all 3 ECO domains (People 26, Process 31, Business Environment 25). Phase 1 established breadth; Phase 2 round 1 added Process and People depth, and round 2 added <code>q049–q082</code> across all three domains. Every ECO task now has at least 3 questions. Local JSON per constitution Section 3 — no database, no API.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
     <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
   </tr>
@@ -164,7 +164,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>data/lessons.json</code></td>
-    <td>Lesson seed data (Slice 4): 3 original ECO-aligned lessons across People, Process, and Business Environment. Schema locked by decision_log.md #7; full curriculum content to be authored separately (Claude-chat's lane per the RACI) and added later. Relationship to Question Bank: lessons reference questions by id — questions.json is the single source of truth for question content.</td>
+    <td>26 ECO-aligned lessons, one per task. Schema locked by decision_log.md #7. Each lesson's <code>related_question_ids</code> is regenerated at the end of a content phase from exact <code>eco_domain</code> + <code>eco_task</code> matches; questions.json remains the single source of truth for question content.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>title</code>, <code>body</code> (markdown-capable text), optional <code>related_question_ids[]</code> whose entries must exist in <code>data/questions.json</code> (enforced by test)</td>
     <td><code>Lessons</code>; <code>lessons.data.test.js</code></td>
   </tr>

@@ -6,10 +6,10 @@ v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 existing content remapped to the July 2026 ECO structure per Decision #10;
 Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 26 ECO tasks has at least one question AND at least one lesson (31 questions,
-26 lessons total; 26 of 26 tasks have both). Phase 2 depth batch 1 is
-complete for Process and People: 10 Process questions and 7 People
-questions were added (48 questions total; People 18Q/8L, Process 21Q/10L,
-Business Environment 9Q/8L).
+26 lessons total; 26 of 26 tasks have both). Phase 2 depth rounds 1 and 2
+are complete: the bank now contains 82 questions and 26 lessons (People
+26Q/8L, Process 31Q/10L, Business Environment 25Q/8L), with at least 3
+questions for every ECO task.
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -125,6 +125,17 @@ Business Environment 9Q/8L).
   are now 48 questions and 26 lessons (People 18Q/8L, Process 21Q/10L,
   Business Environment 9Q/8L). Reconciled with `main` after PR #9 merged;
   all 114 tests pass with zero test-file changes.
+- Phase 2 depth round 2: appended 34 questions (q049–q082) across Process,
+  People, and Business Environment. Actual-file recount: 82 questions and
+  26 lessons (People 26Q/8L, Process 31Q/10L, Business Environment
+  25Q/8L). Every task now has at least 3 questions; People Task 3 has 5,
+  Process Task 3 and Business Environment Task 4 have 4, and all others
+  have 3. All 114 tests pass with zero test-file changes.
+- Lesson-question cross-references regenerated for all 26 lessons from
+  exact `eco_domain` + `eco_task` matches. No lesson has an empty
+  `related_question_ids` array; link counts range from 3 to 5 and total 82.
+  This regeneration plus the empty-match check is now the standard final
+  step at the end of every future content phase.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -181,12 +192,15 @@ content_plan.md), (2) Phase 1 breadth coverage (6 questions, 6 lessons),
 (8 lessons, 1 question), and (4) the final 6 lessons closing the last
 Questions-only tasks (People 3/4/8, Process 2/5/7). PR #7 merged to main.
 Breadth is complete: all 26 ECO tasks have both a question and a lesson.
-Phase 2 Process depth batch 1 (q032–q041) merged via PR #9. Phase 2 People
-depth batch 1 (q042–q048) is on `content/people-depth-batch1` in PR #10.
-The combined bank contains 48 questions and 26 lessons.
+Phase 2 Process depth batch 1 (q032–q041) merged via PR #9 and People depth
+batch 1 (q042–q048) merged via PR #10. Phase 2 round 2 (q049–q082) is now
+on main across all three domains. The combined bank contains 82 questions
+and 26 lessons, and every lesson's related questions have been regenerated
+from exact domain/task matching.
 
 ## Next Recommended Task
-Continue Phase 2 curriculum depth authoring (Claude-chat lane), using
+Continue curriculum lesson depth authoring (Claude-chat lane), using
 Content Studio as the intake/validation path and Prompt Helper's authoring
 prompts as starting templates; or history management (clear/export) — spec
-to be written by ChatGPT + User before implementation.
+to be written by ChatGPT + User before implementation. End every future
+content phase by regenerating and validating lesson-question references.

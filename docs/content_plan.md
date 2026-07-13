@@ -13,20 +13,18 @@ and `data/lessons.json` — not estimated.
 
 - **Every one of the 26 ECO tasks has at least one question AND at least one
   lesson.** Breadth is complete on both sides — all 26 of 26 tasks are Q+L.
-- Phase 2 People depth batch 1 adds one question to each underrepresented
-  People task. People now has 18 questions across all 8 tasks; Task 3 stays
-  at 4 while each of the other seven tasks increases from 1 to 2.
-- Phase 2 Process depth batch 1 adds one question to every Process task. Process
-  now has 21 questions across all 10 tasks.
+- Phase 2 depth round 1 added 10 Process questions and 7 People questions.
+  Round 2 added 34 questions (q049–q082) across Process, People, and
+  Business Environment. The bank now has at least 3 questions per task.
 
 ## Domain weighting (current, July 2026 ECO)
 
 | Domain | Exam weight | Tasks | Questions | Lessons |
 |---|---|---|---|---|
-| People | 33% | 8 | 18 | 8 |
-| Process | 41% | 10 | 21 | 10 |
-| Business Environment | 26% | 8 | 9 | 8 |
-| **Total** | **100%** | **26** | **48** | **26** |
+| People | 33% | 8 | 26 | 8 |
+| Process | 41% | 10 | 31 | 10 |
+| Business Environment | 26% | 8 | 25 | 8 |
+| **Total** | **100%** | **26** | **82** | **26** |
 
 Business Environment carries roughly a quarter of the exam (26%), not
 one-twelfth (8%) as under the 2021 ECO. Its earlier zero-lesson gap is now
@@ -43,53 +41,53 @@ closed.
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| People | Task 1: Develop a common vision | 2 | 1 | Q+L |
-| People | Task 2: Manage conflicts | 2 | 1 | Q+L |
-| People | Task 3: Lead the project team | 4 | 1 | Q+L |
-| People | Task 4: Engage stakeholders | 2 | 1 | Q+L |
-| People | Task 5: Align stakeholder expectations | 2 | 1 | Q+L |
-| People | Task 6: Manage stakeholder expectations | 2 | 1 | Q+L |
-| People | Task 7: Help ensure knowledge transfer | 2 | 1 | Q+L |
-| People | Task 8: Plan and manage communication | 2 | 1 | Q+L |
+| People | Task 1: Develop a common vision | 3 | 1 | Q+L |
+| People | Task 2: Manage conflicts | 3 | 1 | Q+L |
+| People | Task 3: Lead the project team | 5 | 1 | Q+L |
+| People | Task 4: Engage stakeholders | 3 | 1 | Q+L |
+| People | Task 5: Align stakeholder expectations | 3 | 1 | Q+L |
+| People | Task 6: Manage stakeholder expectations | 3 | 1 | Q+L |
+| People | Task 7: Help ensure knowledge transfer | 3 | 1 | Q+L |
+| People | Task 8: Plan and manage communication | 3 | 1 | Q+L |
 
 ## Process (10 tasks, 41%)
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| Process | Task 1: Develop an integrated project management plan and plan delivery | 2 | 1 | Q+L |
-| Process | Task 2: Develop and manage project scope | 2 | 1 | Q+L |
-| Process | Task 3: Help ensure value-based delivery | 3 | 1 | Q+L |
-| Process | Task 4: Plan and manage resources | 2 | 1 | Q+L |
-| Process | Task 5: Plan and manage procurement | 2 | 1 | Q+L |
-| Process | Task 6: Plan and manage finance | 2 | 1 | Q+L |
-| Process | Task 7: Plan and optimize quality of products/deliverables | 2 | 1 | Q+L |
-| Process | Task 8: Plan and manage schedule | 2 | 1 | Q+L |
-| Process | Task 9: Evaluate project status | 2 | 1 | Q+L |
-| Process | Task 10: Manage project closure | 2 | 1 | Q+L |
+| Process | Task 1: Develop an integrated project management plan and plan delivery | 3 | 1 | Q+L |
+| Process | Task 2: Develop and manage project scope | 3 | 1 | Q+L |
+| Process | Task 3: Help ensure value-based delivery | 4 | 1 | Q+L |
+| Process | Task 4: Plan and manage resources | 3 | 1 | Q+L |
+| Process | Task 5: Plan and manage procurement | 3 | 1 | Q+L |
+| Process | Task 6: Plan and manage finance | 3 | 1 | Q+L |
+| Process | Task 7: Plan and optimize quality of products/deliverables | 3 | 1 | Q+L |
+| Process | Task 8: Plan and manage schedule | 3 | 1 | Q+L |
+| Process | Task 9: Evaluate project status | 3 | 1 | Q+L |
+| Process | Task 10: Manage project closure | 3 | 1 | Q+L |
 
 ## Business Environment (8 tasks, 26%)
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| Business Environment | Task 1: Define and establish project governance | 1 | 1 | Q+L |
-| Business Environment | Task 2: Plan and manage project compliance | 1 | 1 | Q+L |
-| Business Environment | Task 3: Manage and control changes | 1 | 1 | Q+L |
-| Business Environment | Task 4: Remove impediments and manage issues | 2 | 1 | Q+L |
-| Business Environment | Task 5: Plan and manage risk | 1 | 1 | Q+L |
-| Business Environment | Task 6: Continuous improvement | 1 | 1 | Q+L |
-| Business Environment | Task 7: Support organizational change | 1 | 1 | Q+L |
-| Business Environment | Task 8: Evaluate external business environment changes | 1 | 1 | Q+L |
+| Business Environment | Task 1: Define and establish project governance | 3 | 1 | Q+L |
+| Business Environment | Task 2: Plan and manage project compliance | 3 | 1 | Q+L |
+| Business Environment | Task 3: Manage and control changes | 3 | 1 | Q+L |
+| Business Environment | Task 4: Remove impediments and manage issues | 4 | 1 | Q+L |
+| Business Environment | Task 5: Plan and manage risk | 3 | 1 | Q+L |
+| Business Environment | Task 6: Continuous improvement | 3 | 1 | Q+L |
+| Business Environment | Task 7: Support organizational change | 3 | 1 | Q+L |
+| Business Environment | Task 8: Evaluate external business environment changes | 3 | 1 | Q+L |
 
 ## Open items
 
 - **Breadth: complete.** All 26 tasks now have at least one question and at
   least one lesson. No Questions-only, Lesson-only, or No-content tasks
   remain.
-- **Question depth:** Phase 2 depth batch 1 is complete for Process: every
-  Process task received one additional question, taking the domain from 11
-  to 21 questions. Process Task 3 now has 3 questions; its other nine tasks
-  have 2 each. People depth batch 1 is also complete: People Task 3 remains
-  at 4 questions and each of its other seven tasks now has 2. Most Business
-  Environment tasks remain at one question.
+- **Question depth:** every task now has at least 3 questions. People Task
+  3 has 5; Process Task 3 and Business Environment Task 4 have 4; all other
+  tasks have 3.
 - **Lesson depth:** every task has exactly one lesson except where noted;
   adding depth per task is the Phase 2 counterpart to question depth.
+- **Cross-references:** at the end of every future content phase, regenerate
+  every lesson's `related_question_ids` from exact `eco_domain` + `eco_task`
+  matches, then validate that no lesson has an empty match set.
