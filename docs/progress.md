@@ -6,9 +6,9 @@ v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 existing content remapped to the July 2026 ECO structure per Decision #10;
 Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 26 ECO tasks has at least one question AND at least one lesson (31 questions,
-26 lessons total; 26 of 26 tasks have both). Phase 10 questions are added:
-the bank now contains 270 questions and 26 lessons (People 88Q/8L, Process
-110Q/10L, Business Environment 72Q/8L).
+26 lessons total; 26 of 26 tasks have both). Phase 11 questions are added:
+the bank now contains 296 questions and 26 lessons (People 96Q/8L, Process
+120Q/10L, Business Environment 80Q/8L).
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -200,6 +200,13 @@ the bank now contains 270 questions and 26 lessons (People 88Q/8L, Process
   manual timeout arguments as additional full-bank tests cross the default.
   The requested `beforeAll` placement was tested but did not affect timeouts
   in the installed Vitest runtime. All 114 tests pass.
+- Phase 11 questions: appended 26 questions (q271–q296), exactly one per ECO
+  task across all three domains. Every People and Process task now has 12
+  questions; every Business Environment task has 10. Actual-file recount:
+  296 questions and 26 lessons (People 96Q/8L, Process 120Q/10L, Business
+  Environment 80Q/8L). Reformatted both JSON files, regenerated all 26
+  lessons' exact domain/task question links, and confirmed no empty arrays.
+  All 114 tests pass with the file-scoped Question Bank timeout.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -264,7 +271,8 @@ Business Environment Task 4. Phase 7 adds q175–q192 across People and
 Process. Phase 8 adds q193–q218, exactly one question per ECO task. The
 Phase 9 batch adds q219–q244, also exactly one question per ECO task. The
 Phase 10 batch adds q245–q270, also exactly one question per ECO task. The
-combined bank contains 270 questions and
+Phase 11 batch adds q271–q296, also exactly one question per ECO task. The
+combined bank contains 296 questions and
 26 lessons, and every lesson's related questions have been regenerated
 from exact domain/task matching.
 
