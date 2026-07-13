@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (Phase 10 questions + file-scoped Question Bank test timeout).
+<p>Last updated: 2026-07-13 (Phase 11 questions + regenerated lesson links).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -152,7 +152,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
   <tr>
     <td><code>data/questions.json</code></td>
-    <td>Question bank data: 270 original PMP-style questions across all 3 ECO domains (People 88, Process 110, Business Environment 72). Phase 1 established breadth; Phase 2 added depth through <code>q082</code>; Phases 3–5 added <code>q083–q155</code>; Phase 6 added <code>q156–q174</code>; Phase 7 added <code>q175–q192</code>; Phase 8 added <code>q193–q218</code>; Phase 9 added <code>q219–q244</code>; Phase 10 added <code>q245–q270</code>. Every People and Process task now has 11 questions, and every Business Environment task has 9. Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Question bank data: 296 original PMP-style questions across all 3 ECO domains (People 96, Process 120, Business Environment 80). Phase 1 established breadth; Phase 2 added depth through <code>q082</code>; Phases 3–5 added <code>q083–q155</code>; Phase 6 added <code>q156–q174</code>; Phase 7 added <code>q175–q192</code>; Phase 8 added <code>q193–q218</code>; Phase 9 added <code>q219–q244</code>; Phase 10 added <code>q245–q270</code>; Phase 11 added <code>q271–q296</code>. Every People and Process task now has 12 questions, and every Business Environment task has 10. Local JSON per constitution Section 3 — no database, no API.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
     <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
   </tr>
