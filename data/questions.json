@@ -2168,5 +2168,271 @@
     ],
     "correct_answer": "Reassess backlog priority using the actual value data observed so far, and consider re-prioritizing the higher-engagement feature",
     "explanation": "Value-based delivery means using real evidence of delivered value to continuously reprioritize work, rather than treating initial estimates as fixed once the project is underway. Sticking with the original ranking despite contrary evidence ignores the entire point of incremental delivery, which is to learn and adapt. Waiting until project closure to evaluate value defers the adjustment until it's too late to act on, while discarding the underperforming feature outright, without further analysis, skips understanding why it underperformed before deciding its fate."
+  },
+  {
+    "id": "q156",
+    "eco_domain": "People",
+    "eco_task": "Task 1: Develop a common vision",
+    "question": "A project manager notices that during planning sessions, junior team members rarely voice opinions about the project's direction, even when asked directly, while senior members dominate the conversation. The project manager suspects the resulting 'shared vision' may not actually reflect the full team's understanding. What should be done?",
+    "options": [
+      "Proceed with the vision as agreed by the vocal senior members, since they have the most relevant experience",
+      "Use structured techniques (e.g., anonymous input, small breakout groups, round-robin input) to surface junior members' perspectives before finalizing the vision",
+      "Ask junior members privately after the session whether they agree, without changing how future sessions are run",
+      "Assume silence indicates agreement and move forward without further verification"
+    ],
+    "correct_answer": "Use structured techniques (e.g., anonymous input, small breakout groups, round-robin input) to surface junior members' perspectives before finalizing the vision",
+    "explanation": "A genuinely shared vision requires input from the whole team, and when a power dynamic is suppressing some voices, the project manager needs to actively change the format to surface those views, not just proceed with whoever spoke up. Assuming silence means agreement is a common but risky misread of group dynamics. Asking privately after the fact might surface concerns, but doesn't fix the recurring pattern for future sessions."
+  },
+  {
+    "id": "q157",
+    "eco_domain": "People",
+    "eco_task": "Task 2: Manage conflicts",
+    "question": "Two team members have a personality clash that occasionally surfaces as passive-aggressive comments in meetings, even though their actual work output is unaffected. Other team members have started to notice the tension. What is the most appropriate project manager response?",
+    "options": [
+      "Ignore the behavior since work output remains unaffected",
+      "Address the behavior privately with each individual, and if needed, facilitate a direct conversation between them to reset team norms",
+      "Publicly call out the passive-aggressive comments in the next team meeting to discourage the behavior",
+      "Separate the two team members permanently onto different workstreams without discussing the underlying issue"
+    ],
+    "correct_answer": "Address the behavior privately with each individual, and if needed, facilitate a direct conversation between them to reset team norms",
+    "explanation": "Interpersonal friction that's starting to affect team atmosphere, even without a visible output impact, is worth addressing early through private conversations and, if needed, a facilitated discussion, rather than waiting for it to escalate. Ignoring it because output is unaffected misses that team cohesion and morale matter too. Public callouts risk embarrassing both individuals and are unlikely to produce genuine resolution."
+  },
+  {
+    "id": "q158",
+    "eco_domain": "People",
+    "eco_task": "Task 3: Lead the project team",
+    "question": "A newly formed project team is technically skilled but has never worked together before, and early sprints show frequent miscommunication and duplicated work. What should the project manager prioritize in the team's early weeks?",
+    "options": [
+      "Focus exclusively on technical task assignments, assuming coordination will improve naturally over time",
+      "Invest time in team-building activities and establishing clear working agreements (roles, communication norms, definition of done) early on",
+      "Increase the frequency of status meetings without addressing the underlying coordination gaps",
+      "Assign a single team member to coordinate all communication between the others informally"
+    ],
+    "correct_answer": "Invest time in team-building activities and establishing clear working agreements (roles, communication norms, definition of done) early on",
+    "explanation": "A newly formed team benefits from deliberately establishing shared norms and working agreements early, since this is a normal part of team development and directly addresses the miscommunication and duplicated work being observed. Assuming coordination will improve naturally on its own often just extends the rough patch. More meetings without addressing the actual coordination gap adds overhead without fixing the root cause, and routing all communication through one informal coordinator creates a bottleneck and single point of failure."
+  },
+  {
+    "id": "q159",
+    "eco_domain": "People",
+    "eco_task": "Task 4: Engage stakeholders",
+    "question": "A stakeholder engagement plan classifies a particular department head as 'keep satisfied' (high influence, lower current interest). Recently, that department head has begun attending every project meeting and asking detailed questions, suggesting rising interest. What should the project manager do?",
+    "options": [
+      "Continue treating the stakeholder according to the original classification, since engagement plans are typically set once at the start",
+      "Reassess the stakeholder's classification given the apparent increase in interest, and adjust the engagement approach accordingly",
+      "Discourage the department head from attending future meetings to keep engagement effort manageable",
+      "Assume the increased attendance is temporary and requires no change to the engagement plan"
+    ],
+    "correct_answer": "Reassess the stakeholder's classification given the apparent increase in interest, and adjust the engagement approach accordingly",
+    "explanation": "Stakeholder engagement plans should be revisited as stakeholder behavior changes, since a shift toward higher visible interest is a meaningful signal worth acting on, potentially moving the stakeholder toward a 'manage closely' approach. Sticking to the original classification despite observed change treats the plan as more fixed than it should be. Discouraging attendance actively works against engaging a stakeholder who is showing more interest, which runs counter to good stakeholder management."
+  },
+  {
+    "id": "q160",
+    "eco_domain": "People",
+    "eco_task": "Task 5: Align stakeholder expectations",
+    "question": "A product owner and a key customer stakeholder each have a different mental model of what 'minimum viable product' means for the upcoming release, and this has only become apparent through a tense conversation in the current sprint review. What is the best next step?",
+    "options": [
+      "Let the two parties continue to work it out between themselves without direct project manager involvement",
+      "Facilitate a session to explicitly define and document what MVP means for this release, with both parties present",
+      "Adopt the product owner's definition, since they are the internal authority on the backlog",
+      "Postpone the discussion until the release is closer to avoid disrupting current sprint work"
+    ],
+    "correct_answer": "Facilitate a session to explicitly define and document what MVP means for this release, with both parties present",
+    "explanation": "A term like 'MVP' can mean very different things to different stakeholders, and once a mismatch surfaces, it needs an explicit, documented, jointly-agreed definition rather than being left to informal resolution or unilateral interpretation. Deferring to the product owner's definition alone risks leaving the customer stakeholder's expectations unaddressed. Postponing the conversation only delays a disagreement that will resurface, likely with less time to resolve it well."
+  },
+  {
+    "id": "q161",
+    "eco_domain": "People",
+    "eco_task": "Task 6: Manage stakeholder expectations",
+    "question": "A stakeholder has been told the project is 'on track' in several consecutive status meetings, but the project manager privately knows that a growing risk could push the schedule out significantly if it materializes. What should the project manager do?",
+    "options": [
+      "Continue reporting 'on track' status until the risk actually materializes, to avoid causing unnecessary concern",
+      "Proactively communicate the risk, its potential impact, and the mitigation plan to the stakeholder, even though the schedule hasn't slipped yet",
+      "Only mention the risk if the stakeholder specifically asks about it",
+      "Downplay the risk's likelihood when reporting, to keep the stakeholder relationship positive"
+    ],
+    "correct_answer": "Proactively communicate the risk, its potential impact, and the mitigation plan to the stakeholder, even though the schedule hasn't slipped yet",
+    "explanation": "Managing stakeholder expectations well means surfacing known risks proactively and with appropriate context, rather than waiting for a problem to become real before disclosing it. Continuing to report 'on track' while sitting on a growing known risk sets the stakeholder up for an unpleasant surprise, and waiting to be asked treats transparency as optional rather than a core responsibility. Downplaying the risk's likelihood to preserve the relationship in the short term tends to damage trust more severely if the risk later materializes."
+  },
+  {
+    "id": "q162",
+    "eco_domain": "People",
+    "eco_task": "Task 7: Help ensure knowledge transfer",
+    "question": "A project is transitioning from an external contracting team to an internal team for ongoing maintenance. The contract with the external team ends in two weeks, and only a single high-level architecture document has been provided so far. What should the project manager do?",
+    "options": [
+      "Accept the single document as sufficient, since detailed documentation is rarely realistic from external contractors",
+      "Negotiate structured knowledge-transfer sessions and detailed documentation deliverables with the external team before the contract ends",
+      "Let the internal team learn the system independently after the external team departs, through trial and error",
+      "Extend the external contract indefinitely until the internal team feels fully prepared, regardless of cost"
+    ],
+    "correct_answer": "Negotiate structured knowledge-transfer sessions and detailed documentation deliverables with the external team before the contract ends",
+    "explanation": "With a firm contract end date and a known documentation gap, the responsible move is to actively negotiate the transfer deliverables and sessions needed while the external team is still contractually engaged and available. Accepting a single high-level document as sufficient risks a costly maintenance gap once the external team is gone. Letting the internal team learn through trial and error after the fact is a much more expensive and risky way to close the same gap that structured transfer could close now."
+  },
+  {
+    "id": "q163",
+    "eco_domain": "People",
+    "eco_task": "Task 8: Plan and manage communication",
+    "question": "The project's communication plan specifies monthly written status reports to the executive sponsor, but a major delivery risk has just emerged that the sponsor would likely want to know about well before the next scheduled report is due. What should the project manager do?",
+    "options": [
+      "Wait for the next scheduled monthly report, since deviating from the communication plan could set an inconsistent precedent",
+      "Communicate the emerging risk to the sponsor promptly, outside the regular reporting cadence, given its significance",
+      "Include a brief note about the risk in the next monthly report only, without any interim communication",
+      "Assume the sponsor will hear about the risk informally through other channels"
+    ],
+    "correct_answer": "Communicate the emerging risk to the sponsor promptly, outside the regular reporting cadence, given its significance",
+    "explanation": "A communication plan's regular cadence is a baseline, not a ceiling; significant emerging risks warrant communication outside the normal schedule so the sponsor can act on current information rather than month-old news. Waiting for the next scheduled report treats a time-sensitive risk as routine. Assuming the sponsor will hear about it informally leaves something important to chance rather than the project manager's direct responsibility."
+  },
+  {
+    "id": "q164",
+    "eco_domain": "Process",
+    "eco_task": "Task 1: Develop an integrated project management plan and plan delivery",
+    "question": "During execution, the project manager notices that the risk management plan and the schedule management plan reference two different assumptions about vendor lead times, even though both were part of the same approved integrated project management plan. What should be done?",
+    "options": [
+      "Leave both assumptions in place since the overall plan was already approved as a package",
+      "Identify and correct the inconsistency between the subsidiary plans, since an approved integrated plan should be internally consistent",
+      "Update only the plan that appears easier to change, regardless of which assumption is more accurate",
+      "Wait until a vendor delay actually occurs before reconciling the two assumptions"
+    ],
+    "correct_answer": "Identify and correct the inconsistency between the subsidiary plans, since an approved integrated plan should be internally consistent",
+    "explanation": "An integrated project management plan is supposed to be internally consistent across its subsidiary plans, so a discovered contradiction, even in an already-approved plan, needs to be resolved rather than left standing. Assuming approval as a package guarantees internal consistency is a mistaken assumption in this case, since the inconsistency clearly exists. Waiting for an actual vendor delay to force the reconciliation risks executing against an inaccurate assumption in the meantime."
+  },
+  {
+    "id": "q165",
+    "eco_domain": "Process",
+    "eco_task": "Task 2: Develop and manage project scope",
+    "question": "During scope validation, a customer representative rejects a completed deliverable, stating it doesn't meet their expectations, even though it matches the documented acceptance criteria exactly. What should the project manager do first?",
+    "options": [
+      "Immediately begin rework based on the customer's verbal feedback, regardless of the documented criteria",
+      "Review the documented acceptance criteria with the customer representative to clarify the actual point of disagreement before deciding on next steps",
+      "Insist the deliverable is complete since it meets the documented criteria, and close scope validation regardless of the objection",
+      "Escalate the disagreement to the sponsor immediately without first discussing it with the customer representative"
+    ],
+    "correct_answer": "Review the documented acceptance criteria with the customer representative to clarify the actual point of disagreement before deciding on next steps",
+    "explanation": "When a deliverable meets documented criteria but a stakeholder still objects, the first step is to clarify exactly where the disconnect lies, whether it's a genuine criteria gap, a misunderstanding, or new expectations that were never captured. Immediately reworking based on verbal feedback risks scope creep without understanding what's actually needed. Insisting the deliverable is done and closing validation over the objection ignores that the customer's satisfaction, not just the checklist, is the real goal of scope validation."
+  },
+  {
+    "id": "q166",
+    "eco_domain": "Process",
+    "eco_task": "Task 3: Help ensure value-based delivery",
+    "question": "A sponsor asks the team to prioritize completing as many backlog items as possible before the next demo, regardless of which specific items are delivered, to show progress. The team knows a few lower-effort, lower-value items could inflate the completed count without delivering much real business value. What should the project manager do?",
+    "options": [
+      "Direct the team to prioritize the lower-effort items to maximize the visible count, as the sponsor requested",
+      "Discuss with the sponsor what 'progress' should actually mean, and recommend prioritizing based on delivered value rather than item count",
+      "Let the team decide independently which items to prioritize without further sponsor discussion",
+      "Split effort evenly across all backlog items regardless of value or effort"
+    ],
+    "correct_answer": "Discuss with the sponsor what 'progress' should actually mean, and recommend prioritizing based on delivered value rather than item count",
+    "explanation": "Value-based delivery means guiding prioritization toward actual business value delivered, not a raw completed-item count that can be gamed with low-effort, low-value work. Simply complying with the sponsor's literal request risks optimizing for an appearance of progress rather than real outcomes, so it's worth surfacing that distinction directly. Leaving the decision to the team without addressing the sponsor's framing risks a mismatch between what's delivered and what the sponsor actually expects to see."
+  },
+  {
+    "id": "q167",
+    "eco_domain": "Process",
+    "eco_task": "Task 4: Plan and manage resources",
+    "question": "A specialized team member with a unique skill set (the only person who can perform a certain integration task) is planned to work on unrelated project tasks for the next two sprints, while their unique skill won't be needed again until sprint 6. What resource planning concern should the project manager evaluate?",
+    "options": [
+      "No concern exists, since the team member has other valid work to do in the interim",
+      "Whether other pressing needs for that unique skill might arise in the interim, and whether the plan adequately protects the team member's availability for sprint 6",
+      "Whether to release the team member from the project entirely since their skill isn't needed for two sprints",
+      "Whether to assign the unique skill task to a less qualified team member to keep the specialist fully utilized on other work"
+    ],
+    "correct_answer": "Whether other pressing needs for that unique skill might arise in the interim, and whether the plan adequately protects the team member's availability for sprint 6",
+    "explanation": "When a resource has a rare, hard-to-replace skill, resource planning should proactively confirm that their time is genuinely protected for when the skill is needed again, since competing demands or reassignment risk are more consequential for unique resources than for interchangeable ones. Assuming no concern exists overlooks that risk. Releasing the specialist from the project entirely discards a resource the project will specifically need again in sprint 6, and reassigning the unique task to someone less qualified undermines the very reason the specialist was needed in the first place."
+  },
+  {
+    "id": "q168",
+    "eco_domain": "Process",
+    "eco_task": "Task 5: Plan and manage procurement",
+    "question": "A signed contract with a vendor doesn't clearly specify what happens if the vendor misses an intermediate delivery milestone, only the final delivery date. The vendor has just missed an intermediate milestone by two weeks. What should the project manager do?",
+    "options": [
+      "Assume no contractual consequence applies since only the final date was specified, and take no formal action",
+      "Review the contract with procurement/legal support to determine appropriate options, and formally document the missed milestone and its potential impact on the final date",
+      "Terminate the contract immediately due to the missed milestone",
+      "Informally ask the vendor to catch up without any formal documentation of the miss"
+    ],
+    "correct_answer": "Review the contract with procurement/legal support to determine appropriate options, and formally document the missed milestone and its potential impact on the final date",
+    "explanation": "A missed intermediate milestone, even without an explicit contractual penalty clause, still needs to be formally documented and assessed for its knock-on effect on the final delivery date, with input from whoever manages the contractual relationship. Assuming there's no consequence and doing nothing risks letting a real schedule threat go unmanaged. Terminating the contract outright over one missed intermediate milestone is a disproportionate response without first exploring other options, and handling it purely informally leaves no record if the pattern continues."
+  },
+  {
+    "id": "q169",
+    "eco_domain": "Process",
+    "eco_task": "Task 6: Plan and manage finance",
+    "question": "A project's funding was approved in a single lump sum at initiation, but the organization has since moved to a phase-gate funding model for all active projects. What should the project manager consider regarding the current project's financial management?",
+    "options": [
+      "Continue with the original lump-sum funding arrangement unchanged, since it was approved before the new model existed",
+      "Engage with finance/governance stakeholders to understand whether the project should transition to the new phase-gate model and what that would mean for reporting and approvals",
+      "Ignore the organizational change entirely, since it doesn't legally obligate the already-approved project to change",
+      "Unilaterally restructure the project's funding into phases without consulting the governance or finance function"
+    ],
+    "correct_answer": "Engage with finance/governance stakeholders to understand whether the project should transition to the new phase-gate model and what that would mean for reporting and approvals",
+    "explanation": "An organizational shift in funding approach is a relevant external factor worth clarifying with the appropriate finance and governance stakeholders, even for an already-funded project, since it may affect ongoing reporting expectations or approval checkpoints. Assuming nothing needs to change, in either direction, skips a conversation that could reveal new obligations or opportunities. Unilaterally changing the funding structure without governance involvement oversteps the project manager's authority over an organizational financial process."
+  },
+  {
+    "id": "q170",
+    "eco_domain": "Process",
+    "eco_task": "Task 7: Plan and optimize quality of products/deliverables",
+    "question": "The quality management plan specifies a specific test coverage threshold, but the team has recently discovered that a class of edge cases the threshold doesn't address is causing intermittent production issues. What should the project manager do?",
+    "options": [
+      "Maintain the existing coverage threshold, since it was formally approved as part of the quality management plan",
+      "Work with the team to update the quality management plan and testing approach to address the newly discovered edge case category",
+      "Address the edge cases informally through ad hoc fixes without updating the quality plan",
+      "Lower the coverage threshold since the current one is clearly insufficient anyway"
+    ],
+    "correct_answer": "Work with the team to update the quality management plan and testing approach to address the newly discovered edge case category",
+    "explanation": "New information about a quality gap, specifically that the existing threshold doesn't catch a real class of production issues, should feed back into an update of the quality management plan and testing approach, since quality planning is meant to evolve with what's actually being learned. Keeping the plan unchanged despite known evidence of its insufficiency lets a known problem continue. Ad hoc fixes without updating the plan risk losing the improvement institutionally, and lowering the threshold moves in the wrong direction entirely."
+  },
+  {
+    "id": "q171",
+    "eco_domain": "Process",
+    "eco_task": "Task 8: Plan and manage schedule",
+    "question": "A dependency mapping review reveals that two activities previously scheduled in parallel actually have a hidden dependency: one cannot start until specific output from the other is available, which wasn't recognized during original schedule development. What should the project manager do?",
+    "options": [
+      "Leave the schedule as originally built, since the activities have already been planned to run in parallel",
+      "Update the schedule to reflect the newly identified dependency, and reassess the impact on the critical path and finish date",
+      "Instruct both activities to proceed in parallel anyway, and address any resulting issues if they occur",
+      "Remove one of the two activities from the schedule to eliminate the dependency conflict"
+    ],
+    "correct_answer": "Update the schedule to reflect the newly identified dependency, and reassess the impact on the critical path and finish date",
+    "explanation": "A newly discovered logical dependency between activities needs to be reflected in the schedule network, since an inaccurate dependency structure undermines the reliability of the critical path and finish date. Leaving the schedule unchanged despite knowing it's wrong just preserves an inaccurate plan. Proceeding in parallel anyway despite a genuine dependency risks a real execution failure, since the downstream activity would start without its required input, and removing a real activity from the schedule doesn't make its underlying dependency go away."
+  },
+  {
+    "id": "q172",
+    "eco_domain": "Process",
+    "eco_task": "Task 9: Evaluate project status",
+    "question": "A status dashboard shows all key metrics green, but the project manager, in informal conversations with the team, senses growing frustration and disengagement that isn't reflected anywhere in the formal metrics. What should the project manager do?",
+    "options": [
+      "Trust the dashboard's green status as the authoritative measure of project health and disregard the informal signals",
+      "Investigate the team sentiment further, since qualitative signals can reveal issues that quantitative status metrics don't capture",
+      "Wait for team sentiment to show up in a formal metric before taking any action",
+      "Report the dashboard as green in the next status update without mentioning the informal observations"
+    ],
+    "correct_answer": "Investigate the team sentiment further, since qualitative signals can reveal issues that quantitative status metrics don't capture",
+    "explanation": "Evaluating project status well means combining quantitative dashboards with qualitative signals like team sentiment, since metrics such as schedule or cost performance don't capture morale, burnout risk, or emerging disengagement that can eventually surface as real problems. Treating the dashboard as the sole source of truth ignores a category of risk that formal metrics often miss until it's already causing damage. Waiting for sentiment to eventually register in a formal metric means acting only after the underlying issue has already had time to compound."
+  },
+  {
+    "id": "q173",
+    "eco_domain": "Process",
+    "eco_task": "Task 10: Manage project closure",
+    "question": "At project closure, the project manager is compiling final documentation but realizes that several change requests approved mid-project were never formally logged in the change log, only discussed and implemented informally. What should be done before the project is closed?",
+    "options": [
+      "Close the project without addressing the gap, since the changes were already implemented successfully",
+      "Reconstruct and formally document the approved changes in the change log as part of closure, to ensure an accurate historical record",
+      "Leave the change log incomplete and note the gap for whoever audits the project in the future",
+      "Delete references to the undocumented changes from other project records to keep documentation consistent"
+    ],
+    "correct_answer": "Reconstruct and formally document the approved changes in the change log as part of closure, to ensure an accurate historical record",
+    "explanation": "Project closure includes finalizing accurate documentation as an organizational process asset, so a known gap in the change log should be reconstructed and formally recorded before closure, even if the changes themselves were already successfully implemented. Closing the project with the gap unaddressed, or explicitly leaving it for a future auditor, both hand off a problem that's more efficiently fixed now while context is still fresh. Removing references to the changes elsewhere would actually make the documentation less accurate, not more consistent."
+  },
+  {
+    "id": "q174",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 4: Remove impediments and manage issues",
+    "question": "A recurring issue keeps blocking a specific team's progress: a shared testing environment is frequently unavailable due to conflicts with another team's usage schedule. Both teams report the issue in different meetings, but no one has taken ownership of resolving the underlying scheduling conflict. What should the project manager do?",
+    "options": [
+      "Wait for the two teams to resolve the scheduling conflict between themselves informally",
+      "Take ownership of coordinating a resolution, such as a shared environment schedule or escalating for additional environment capacity, since the impediment is blocking progress",
+      "Advise the affected team to work around the unavailability using less reliable local testing methods indefinitely",
+      "Log the issue in the issue register without following up further, since it has already been reported in meetings"
+    ],
+    "correct_answer": "Take ownership of coordinating a resolution, such as a shared environment schedule or escalating for additional environment capacity, since the impediment is blocking progress",
+    "explanation": "Removing impediments is a core project manager responsibility, especially when an issue spans two teams and neither has clear ownership to resolve it alone; the project manager is well-positioned to coordinate a fix or escalate for more capacity. Waiting for the teams to sort it out informally has already failed, since the issue keeps recurring without resolution. Merely logging the issue without follow-through, or accepting an unreliable workaround as a long-term state, both leave the actual blocker in place."
   }
 ]
