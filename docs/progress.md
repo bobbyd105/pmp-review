@@ -6,9 +6,9 @@ v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 existing content remapped to the July 2026 ECO structure per Decision #10;
 Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 26 ECO tasks has at least one question AND at least one lesson (31 questions,
-26 lessons total; 26 of 26 tasks have both). Phase 6 questions are added:
-the bank now contains 174 questions and 26 lessons (People 56Q/8L, Process
-70Q/10L, Business Environment 48Q/8L).
+26 lessons total; 26 of 26 tasks have both). Phase 7 questions are added:
+the bank now contains 192 questions and 26 lessons (People 64Q/8L, Process
+80Q/10L, Business Environment 48Q/8L).
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -166,6 +166,13 @@ the bank now contains 174 questions and 26 lessons (People 56Q/8L, Process
   Process 70Q/10L, Business Environment 48Q/8L). Reformatted both JSON
   files, regenerated all 26 lessons' exact domain/task question links, and
   confirmed no empty arrays. All 114 tests pass with zero test-file changes.
+- Phase 7 questions: appended 18 questions (q175–q192), one for every
+  People and Process task. Every People and Process task now has 8
+  questions; every Business Environment task remains at 6. Actual-file
+  recount: 192 questions and 26 lessons (People 64Q/8L, Process 80Q/10L,
+  Business Environment 48Q/8L). Reformatted both JSON files, regenerated
+  all 26 lessons' exact domain/task question links, and confirmed no empty
+  arrays. All 114 tests pass with zero test-file changes.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -226,7 +233,8 @@ Phase 2 depth is complete through q082. Phase 3 adds q083–q108, exactly one
 question per ECO task across all three domains. Phase 4 adds q109–q140
 across People and Process. Phase 5 adds q141–q155 across Process and
 Business Environment. Phase 6 adds q156–q174 across People, Process, and
-Business Environment Task 4. The combined bank contains 174 questions and
+Business Environment Task 4. Phase 7 adds q175–q192 across People and
+Process. The combined bank contains 192 questions and
 26 lessons, and every lesson's related questions have been regenerated
 from exact domain/task matching.
 

@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (Phase 6 questions + regenerated lesson links).
+<p>Last updated: 2026-07-13 (Phase 7 questions + regenerated lesson links).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -152,7 +152,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
   <tr>
     <td><code>data/questions.json</code></td>
-    <td>Question bank data: 174 original PMP-style questions across all 3 ECO domains (People 56, Process 70, Business Environment 48). Phase 1 established breadth; Phase 2 added depth through <code>q082</code>; Phases 3–5 added <code>q083–q155</code>; Phase 6 added <code>q156–q174</code>. Every People and Process task now has 7 questions, and every Business Environment task has 6. Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Question bank data: 192 original PMP-style questions across all 3 ECO domains (People 64, Process 80, Business Environment 48). Phase 1 established breadth; Phase 2 added depth through <code>q082</code>; Phases 3–5 added <code>q083–q155</code>; Phase 6 added <code>q156–q174</code>; Phase 7 added <code>q175–q192</code>. Every People and Process task now has 8 questions, and every Business Environment task has 6. Local JSON per constitution Section 3 — no database, no API.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
     <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
   </tr>
