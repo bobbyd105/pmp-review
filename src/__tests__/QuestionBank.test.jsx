@@ -6,6 +6,8 @@ import questions from '../../data/questions.json'
 
 let consoleErrorSpy
 
+vi.setConfig({ testTimeout: 15000 })
+
 beforeEach(() => {
   consoleErrorSpy = vi.spyOn(console, 'error')
 })
@@ -26,7 +28,7 @@ describe('QuestionBank', () => {
         expect(within(card).getByText(option)).toBeInTheDocument()
       }
     }
-  }, 15000)
+  })
 
   it('shows the question count', () => {
     render(<QuestionBank />)
