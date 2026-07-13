@@ -1146,5 +1146,369 @@
     ],
     "correct_answer": "Proactively begin assessing and adapting the plan ahead of the regulation's effective date",
     "explanation": "A known future regulatory change with a defined effective date should trigger proactive planning now, not a reactive scramble once it takes effect. Waiting wastes the lead time the announcement actually provides."
+  },
+  {
+    "id": "q083",
+    "eco_domain": "Process",
+    "eco_task": "Task 1: Develop an integrated project management plan and plan delivery",
+    "question": "A project applies the same level of planning detail to work happening next week and work happening eight months from now, even though requirements for the distant work are still highly uncertain. What planning approach would address this?",
+    "options": [
+      "Plan everything at the same level of detail regardless of timing",
+      "Rolling wave planning — detailed planning for near-term work, high-level planning for distant work that gets progressively elaborated",
+      "Delay all planning until requirements are fully certain across the entire project",
+      "Plan only the near-term work and leave distant work entirely undefined"
+    ],
+    "correct_answer": "Rolling wave planning — detailed planning for near-term work, high-level planning for distant work that gets progressively elaborated",
+    "explanation": "Rolling wave planning matches planning detail to how much is actually known — precise for near-term work, high-level for distant work refined as it approaches. Applying uniform detail regardless of certainty wastes effort on plans likely to change."
+  },
+  {
+    "id": "q084",
+    "eco_domain": "Process",
+    "eco_task": "Task 2: Develop and manage project scope",
+    "question": "Internal QA has signed off that a deliverable meets all technical specifications, and the team considers scope validation complete. What is missing?",
+    "options": [
+      "Nothing — technical sign-off satisfies scope validation",
+      "Formal validation and acceptance from the customer or sponsor, which is distinct from internal quality control",
+      "A second internal QA review for confirmation",
+      "Scope validation is unnecessary once technical specifications are met"
+    ],
+    "correct_answer": "Formal validation and acceptance from the customer or sponsor, which is distinct from internal quality control",
+    "explanation": "Validating scope means obtaining formal customer or sponsor acceptance — a distinct step from control quality, which is an internal technical check. Meeting specifications internally doesn't substitute for the external acceptance scope validation requires."
+  },
+  {
+    "id": "q085",
+    "eco_domain": "Process",
+    "eco_task": "Task 3: Help ensure value-based delivery",
+    "question": "A feature was released three months ago, but no one has measured whether it actually achieved its intended business outcome. What does this indicate?",
+    "options": [
+      "The team's job is complete once the feature is delivered",
+      "Value delivery isn't confirmed by shipping alone — measuring actual outcomes after release is necessary to know if value was really achieved",
+      "Outcome measurement is the responsibility of a separate business team, not the project",
+      "This is only a concern if a stakeholder specifically requests the data"
+    ],
+    "correct_answer": "Value delivery isn't confirmed by shipping alone — measuring actual outcomes after release is necessary to know if value was really achieved",
+    "explanation": "Shipping a feature isn't the same as confirming it delivered value. Ensuring value-based delivery includes validating actual outcomes after release, not treating delivery itself as the finish line."
+  },
+  {
+    "id": "q086",
+    "eco_domain": "Process",
+    "eco_task": "Task 4: Plan and manage resources",
+    "question": "To hit an aggressive deadline, the team has worked significant overtime for several consecutive months, and productivity has begun visibly declining. What should the project manager do?",
+    "options": [
+      "Continue the current overtime approach since the deadline is still the priority",
+      "Adjust the plan and resourcing to restore a sustainable pace, since continued overtime is now reducing productivity",
+      "Add even more overtime to compensate for the productivity decline",
+      "Wait for the team to adjust on their own"
+    ],
+    "correct_answer": "Adjust the plan and resourcing to restore a sustainable pace, since continued overtime is now reducing productivity",
+    "explanation": "Resource planning includes sustaining a pace the team can maintain — visibly declining productivity from sustained overtime is a signal to adjust the plan, not push harder, since the current approach is now working against itself."
+  },
+  {
+    "id": "q087",
+    "eco_domain": "Process",
+    "eco_task": "Task 5: Plan and manage procurement",
+    "question": "A statement of work is vague about exactly which deliverables are included, and the vendor and project team now disagree about what's covered under the current price. What does this indicate?",
+    "options": [
+      "The vendor is acting in bad faith",
+      "The SOW should have clearly and unambiguously defined deliverables during procurement planning to prevent this dispute",
+      "Disputes like this are unavoidable and don't reflect a planning gap",
+      "The project team should simply accept the vendor's interpretation to move forward"
+    ],
+    "correct_answer": "The SOW should have clearly and unambiguously defined deliverables during procurement planning to prevent this dispute",
+    "explanation": "Ambiguous deliverable definitions in a statement of work create exactly this kind of dispute. Clear, unambiguous scope definition during procurement planning is what prevents it, rather than resolving disagreements reactively after the fact."
+  },
+  {
+    "id": "q088",
+    "eco_domain": "Process",
+    "eco_task": "Task 6: Plan and manage finance",
+    "question": "A risk event that was explicitly identified and planned for occurs, and the project manager uses the project's contingency reserve to cover the cost. Is this appropriate?",
+    "options": [
+      "No, contingency reserve should never be used once a project is underway",
+      "Yes, contingency reserve exists specifically for identified, planned-for risks, unlike management reserve which covers unknown-unknowns",
+      "No, this should have come from management reserve instead",
+      "Yes, but only with executive approval regardless of the amount"
+    ],
+    "correct_answer": "Yes, contingency reserve exists specifically for identified, planned-for risks, unlike management reserve which covers unknown-unknowns",
+    "explanation": "Contingency reserve is set aside for known, identified risks and is appropriately used when one of those risks occurs. Management reserve, by contrast, covers unforeseen risks and typically requires separate authorization to access."
+  },
+  {
+    "id": "q089",
+    "eco_domain": "Process",
+    "eco_task": "Task 7: Plan and optimize quality of products/deliverables",
+    "question": "Several different defect types have been logged, and the project manager wants to focus improvement effort where it will have the greatest impact. What technique is most appropriate?",
+    "options": [
+      "Address defects in the order they were logged",
+      "Use Pareto analysis to identify and prioritize the defect categories occurring most frequently",
+      "Address only the most recently reported defect type",
+      "Distribute effort evenly across all defect types regardless of frequency"
+    ],
+    "correct_answer": "Use Pareto analysis to identify and prioritize the defect categories occurring most frequently",
+    "explanation": "Pareto analysis (roughly, 80% of problems come from 20% of causes) helps prioritize improvement effort toward the defect categories with the greatest impact, rather than treating all defect types as equally worth addressing."
+  },
+  {
+    "id": "q090",
+    "eco_domain": "Process",
+    "eco_task": "Task 8: Plan and manage schedule",
+    "question": "Two sequential critical-path activities require a mandatory two-day gap between them for material curing. How should this be reflected in the schedule?",
+    "options": [
+      "As float, since there's a gap between the two activities",
+      "As lag on the finish-to-start dependency between the two activities",
+      "It should be removed to compress the schedule",
+      "It should be treated as a separate, unrelated activity"
+    ],
+    "correct_answer": "As lag on the finish-to-start dependency between the two activities",
+    "explanation": "A mandatory waiting period between two dependent activities is lag, not float — float is unused schedule flexibility, while lag is a required delay built into the dependency itself and shouldn't be compressed away without addressing the underlying constraint (e.g., curing time)."
+  },
+  {
+    "id": "q091",
+    "eco_domain": "Process",
+    "eco_task": "Task 9: Evaluate project status",
+    "question": "A minor negative schedule variance well within the project's pre-agreed variance threshold is triggering the same escalation process as major variances. What should change?",
+    "options": [
+      "Nothing — all negative variances should be escalated identically",
+      "Apply the agreed variance thresholds to determine what actually warrants escalation",
+      "Eliminate variance thresholds entirely and escalate everything",
+      "Stop tracking minor variances altogether"
+    ],
+    "correct_answer": "Apply the agreed variance thresholds to determine what actually warrants escalation",
+    "explanation": "Variance thresholds exist precisely to distinguish which variances warrant escalation. Treating every negative variance identically regardless of magnitude defeats the purpose of having agreed thresholds in the first place."
+  },
+  {
+    "id": "q092",
+    "eco_domain": "Process",
+    "eco_task": "Task 10: Manage project closure",
+    "question": "A project is formally closed and deliverables accepted, but procurement records and contract closure documentation were never finalized with the vendor. What is the concern?",
+    "options": [
+      "None, since the deliverables were already accepted",
+      "Contract and procurement closure is a required part of project closure and shouldn't be skipped even after deliverable acceptance",
+      "Contract closure is the vendor's responsibility, not the project's",
+      "This only matters if a dispute arises later"
+    ],
+    "correct_answer": "Contract and procurement closure is a required part of project closure and shouldn't be skipped even after deliverable acceptance",
+    "explanation": "Deliverable acceptance and formal contract closure are separate steps. Skipping contract/procurement closure leaves loose ends — final payments, liability release, documentation — that proper closure discipline requires addressing regardless of acceptance status."
+  },
+  {
+    "id": "q093",
+    "eco_domain": "People",
+    "eco_task": "Task 1: Develop a common vision",
+    "question": "A project charter contains a clear vision statement, but most team members have never read it and can't articulate the project's purpose beyond their individual tasks. What should the project manager do?",
+    "options": [
+      "Assume the documented vision is sufficient since it exists in the charter",
+      "Actively communicate and reinforce the vision with the team on an ongoing basis, not just rely on the charter existing",
+      "Ask team members to read the charter on their own time",
+      "Focus only on task-level clarity, since vision is a leadership-level concern"
+    ],
+    "correct_answer": "Actively communicate and reinforce the vision with the team on an ongoing basis, not just rely on the charter existing",
+    "explanation": "A vision documented but never communicated doesn't function as a shared vision. Developing common vision requires actively reinforcing it with the team, not assuming a charter document does that work on its own."
+  },
+  {
+    "id": "q094",
+    "eco_domain": "People",
+    "eco_task": "Task 2: Manage conflicts",
+    "question": "A team member frequently agrees publicly with decisions they privately disagree with, and poor decisions have resulted more than once because concerns were never raised. What should the project manager do?",
+    "options": [
+      "Take the public agreement at face value since no objection was raised",
+      "Create space for dissenting views directly and address the pattern of unvoiced disagreement",
+      "Wait for the team member to raise concerns unprompted",
+      "Replace the team member with someone more vocal"
+    ],
+    "correct_answer": "Create space for dissenting views directly and address the pattern of unvoiced disagreement",
+    "explanation": "Silent disagreement that surfaces only after poor outcomes is a conflict-avoidance pattern worth addressing directly — creating psychological safety for dissent addresses the root cause, rather than assuming public agreement reflects genuine consensus."
+  },
+  {
+    "id": "q095",
+    "eco_domain": "People",
+    "eco_task": "Task 3: Lead the project team",
+    "question": "Most of the team operates at a high, self-directed level, but a newly onboarded member unfamiliar with the domain is struggling without more explicit guidance. What should the project manager do?",
+    "options": [
+      "Apply the same light-touch leadership style to the new member as the rest of the team",
+      "Adapt leadership style to the individual, providing more directive support for the new member",
+      "Wait for the new member to adjust to the team's existing pace on their own",
+      "Reassign the new member to a different project"
+    ],
+    "correct_answer": "Adapt leadership style to the individual, providing more directive support for the new member",
+    "explanation": "Leadership style should adapt to the individual's needs, not just the team's overall maturity level. A struggling new member benefits from more directive support even within an otherwise high-performing, self-directed team."
+  },
+  {
+    "id": "q096",
+    "eco_domain": "People",
+    "eco_task": "Task 4: Engage stakeholders",
+    "question": "A stakeholder is being asked for input on every minor project decision and has recently stopped responding to requests altogether. What does this suggest?",
+    "options": [
+      "The stakeholder should be replaced with someone more responsive",
+      "Engagement should be right-sized to the stakeholder's actual level of interest and influence, rather than over-consulting on every decision",
+      "The stakeholder was never truly interested in the project",
+      "Continue the same level of engagement since responsiveness will likely return"
+    ],
+    "correct_answer": "Engagement should be right-sized to the stakeholder's actual level of interest and influence, rather than over-consulting on every decision",
+    "explanation": "Over-consulting a stakeholder on decisions that don't warrant their involvement can lead to engagement fatigue and disengagement. Calibrating engagement to actual interest and influence is more effective than maximizing consultation indiscriminately."
+  },
+  {
+    "id": "q097",
+    "eco_domain": "People",
+    "eco_task": "Task 5: Align stakeholder expectations",
+    "question": "Two team members both believe they are responsible for the same deliverable, while a related deliverable has no owner at all. What should the project manager do?",
+    "options": [
+      "Let the team members work out ownership between themselves informally",
+      "Proactively clarify and align role and responsibility expectations across the team",
+      "Assign the unowned deliverable to whichever team member has more capacity",
+      "Address this only if the ambiguity causes a missed deadline"
+    ],
+    "correct_answer": "Proactively clarify and align role and responsibility expectations across the team",
+    "explanation": "Overlapping and gapped ownership both stem from unclear role expectations. Proactively aligning responsibility across the team addresses the root cause, rather than waiting for the ambiguity to cause a visible problem."
+  },
+  {
+    "id": "q098",
+    "eco_domain": "People",
+    "eco_task": "Task 6: Manage stakeholder expectations",
+    "question": "A stakeholder was told a deliverable would include a specific capability, but scope negotiations since then quietly removed it, and no one has told the stakeholder directly. What should the project manager do?",
+    "options": [
+      "Wait for the stakeholder to notice the change on their own",
+      "Proactively inform the stakeholder of the change to their expectation as soon as possible",
+      "Avoid the topic since the change was already approved through scope negotiations",
+      "Let a different team member deliver the news"
+    ],
+    "correct_answer": "Proactively inform the stakeholder of the change to their expectation as soon as possible",
+    "explanation": "An approved scope change doesn't remove the need to update the affected stakeholder's expectations. Leaving them to discover the change themselves — rather than proactively informing them — is a managed-expectations failure."
+  },
+  {
+    "id": "q099",
+    "eco_domain": "People",
+    "eco_task": "Task 7: Help ensure knowledge transfer",
+    "question": "A subject matter expert has agreed to answer questions after their official end date, but no formal arrangement or time allocation exists for this support. What is the risk?",
+    "options": [
+      "None, since the expert has already agreed informally to help",
+      "Informal, undefined arrangements are unreliable — a formal arrangement with defined scope and time should be established instead",
+      "Formal arrangements are unnecessary once someone has verbally agreed to help",
+      "This is only a concern if the expert becomes unavailable"
+    ],
+    "correct_answer": "Informal, undefined arrangements are unreliable — a formal arrangement with defined scope and time should be established instead",
+    "explanation": "An undefined, informal post-departure support arrangement is fragile and easy to deprioritize on the departing expert's side. Formalizing scope and time makes the knowledge transfer arrangement dependable rather than a loose verbal understanding."
+  },
+  {
+    "id": "q100",
+    "eco_domain": "People",
+    "eco_task": "Task 8: Plan and manage communication",
+    "question": "The team uses five different communication tools simultaneously, and members report missing important messages scattered across all of them. What should the project manager do?",
+    "options": [
+      "Add a sixth tool to consolidate notifications from the other five",
+      "Consolidate and standardize communication channels to match the team's actual needs",
+      "Ask team members to check all five tools more frequently",
+      "Accept this as a normal cost of using modern collaboration tools"
+    ],
+    "correct_answer": "Consolidate and standardize communication channels to match the team's actual needs",
+    "explanation": "Channel proliferation, not lack of effort, is usually the actual cause of missed messages. Planning communication well means consolidating to a standardized, manageable set of channels rather than adding more tools or asking people to monitor more surfaces."
+  },
+  {
+    "id": "q101",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 1: Define and establish project governance",
+    "question": "Every decision, regardless of size or risk, must go through the full steering committee approval cycle, causing significant delays even for routine, low-risk choices. What should change?",
+    "options": [
+      "Continue requiring full committee approval for all decisions to maintain consistency",
+      "Establish tiered decision-making authority so low-risk, low-threshold decisions can be made without the full cycle",
+      "Eliminate the steering committee process entirely",
+      "Route all decisions through the project manager alone instead"
+    ],
+    "correct_answer": "Establish tiered decision-making authority so low-risk, low-threshold decisions can be made without the full cycle",
+    "explanation": "Effective governance scales the rigor of the approval process to the risk and size of the decision. Requiring identical process for every decision, regardless of stakes, creates unnecessary delay for routine choices that don't need full committee review."
+  },
+  {
+    "id": "q102",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 2: Plan and manage project compliance",
+    "question": "During execution, the team discovers the project is subject to a data protection regulation in a jurisdiction that wasn't identified during initial compliance planning. What should the project manager do?",
+    "options": [
+      "Continue under the original compliance plan since it was approved at initiation",
+      "Promptly assess the newly discovered requirement's impact and update the compliance and project plans accordingly",
+      "Wait until the next phase gate to address the gap",
+      "Assume the regulation doesn't meaningfully apply since it wasn't caught initially"
+    ],
+    "correct_answer": "Promptly assess the newly discovered requirement's impact and update the compliance and project plans accordingly",
+    "explanation": "A newly discovered compliance requirement needs prompt assessment and plan updates, regardless of when it's discovered — treating the original compliance plan as final despite new information leaves the project exposed to a real regulatory gap."
+  },
+  {
+    "id": "q103",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 3: Manage and control changes",
+    "question": "An expedited emergency-change process, intended only for urgent situations, is being used routinely to bypass the normal change review process for non-urgent requests. What should the project manager do?",
+    "options": [
+      "Continue allowing the expedited process to be used for convenience",
+      "Restrict the expedited process to genuine emergencies and route non-urgent changes through standard change control",
+      "Eliminate the expedited process entirely since it's being misused",
+      "Allow the practice to continue as long as changes are still being tracked somewhere"
+    ],
+    "correct_answer": "Restrict the expedited process to genuine emergencies and route non-urgent changes through standard change control",
+    "explanation": "Using an emergency process for routine, non-urgent changes undermines the review discipline the standard change control process provides. The expedited path should be reserved for genuine emergencies only."
+  },
+  {
+    "id": "q104",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 4: Remove impediments and manage issues",
+    "question": "Team members are escalating routine issues to senior leadership immediately, without first attempting to resolve them at the team level. What should the project manager do?",
+    "options": [
+      "Encourage continued escalation to keep leadership fully informed",
+      "Establish clear escalation criteria so only issues genuinely requiring higher-level intervention are escalated",
+      "Discourage all escalation regardless of severity",
+      "Take no action, since more visibility for leadership is generally beneficial"
+    ],
+    "correct_answer": "Establish clear escalation criteria so only issues genuinely requiring higher-level intervention are escalated",
+    "explanation": "Escalating routine, team-resolvable issues wastes senior leadership's time and can signal the team isn't empowered to handle its own problems. Clear escalation criteria ensure only issues that genuinely need higher-level attention reach that level."
+  },
+  {
+    "id": "q105",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 5: Plan and manage risk",
+    "question": "The risk register was last updated at project initiation, and several major project changes have occurred since then without any corresponding risk reassessment. What should the project manager do?",
+    "options": [
+      "Leave the risk register as-is since it was properly completed at initiation",
+      "Revisit and update risk identification and assessment, especially given the significant changes since then",
+      "Wait until project closure to do a final risk review",
+      "Assume no new risks have emerged since none have materialized yet"
+    ],
+    "correct_answer": "Revisit and update risk identification and assessment, especially given the significant changes since then",
+    "explanation": "Risk management is an ongoing activity, not a one-time initiation exercise — significant project changes are exactly the trigger that should prompt reassessing the risk register, not waiting for a risk to materialize or for closure to review it."
+  },
+  {
+    "id": "q106",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 6: Continuous improvement",
+    "question": "A process change was implemented following a retrospective, but no one has measured whether it actually reduced the recurring problem it was meant to address. What is the gap?",
+    "options": [
+      "Implementing the change is sufficient evidence of improvement",
+      "The actual effect of the change should be measured to confirm the improvement is genuinely working",
+      "Measurement is unnecessary if the team believes the change helped",
+      "This should only be measured if the problem recurs again"
+    ],
+    "correct_answer": "The actual effect of the change should be measured to confirm the improvement is genuinely working",
+    "explanation": "Implementing a process change isn't the same as confirming it worked. Continuous improvement requires measuring actual impact, not assuming the intended fix achieved its goal just because it was implemented."
+  },
+  {
+    "id": "q107",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 7: Support organizational change",
+    "question": "Change champions were identified and active early in a rollout, but leadership has since stopped providing them dedicated time for the role, and adoption momentum has stalled. What does this indicate?",
+    "options": [
+      "Change champions are only needed at the very start of a rollout",
+      "Ongoing leadership support and dedicated time for change champions is necessary to sustain adoption momentum, not just at the start",
+      "The stalled momentum is unrelated to the champions' reduced involvement",
+      "The rollout should be restarted from the beginning"
+    ],
+    "correct_answer": "Ongoing leadership support and dedicated time for change champions is necessary to sustain adoption momentum, not just at the start",
+    "explanation": "Change champions need sustained support throughout a rollout, not just at kickoff. Withdrawing their dedicated time partway through removes exactly the mechanism that was maintaining adoption momentum."
+  },
+  {
+    "id": "q108",
+    "eco_domain": "Business Environment",
+    "eco_task": "Task 8: Evaluate external business environment changes",
+    "question": "A significant shift in interest rates has changed the cost of financing for the project, but this hasn't been communicated to those responsible for the business case or funding approval. What should the project manager do?",
+    "options": [
+      "Take no action, since interest rates are outside the project's control",
+      "Proactively communicate the financial shift to those managing the business case and funding decisions so viability can be reassessed",
+      "Wait until the next scheduled funding review to raise it",
+      "Assume the finance team is already aware without confirming"
+    ],
+    "correct_answer": "Proactively communicate the financial shift to those managing the business case and funding decisions so viability can be reassessed",
+    "explanation": "An external financial shift that affects project viability needs prompt communication to those who manage the business case, even though the shift itself is outside the project's control — being unable to control a change doesn't mean it can be left unaddressed."
   }
 ]
