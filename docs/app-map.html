@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (Phase 12 questions + regenerated lesson links).
+<p>Last updated: 2026-07-13 (curriculum architecture audit + read-only coverage planning view).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus a six-button view toggle between Quiz, QuestionBank, Dashboard, Lessons, ContentStudio, and PromptHelper (no router)</td>
+    <td>Top-level layout: page header plus a seven-button view toggle between Quiz, QuestionBank, Dashboard, Lessons, ContentStudio, PromptHelper, and CurriculumCoverage (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code></td>
-    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons | studio | prompts)</td>
+    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code>, <code>CurriculumCoverage</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons | studio | prompts | coverage)</td>
   </tr>
 </table>
 
@@ -102,6 +102,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>React (<code>useState</code>)</td>
   </tr>
   <tr>
+    <td><code>src/components/CurriculumCoverage.jsx</code></td>
+    <td>Seventh read-only planning view: summarizes the 59-unit curriculum catalog, filters by module/coverage strength/lifecycle, and shows ECO/PMBOK mappings, existing lesson mappings, source references, and derived ECO-aligned question counts</td>
+    <td><code>App</code></td>
+    <td>None</td>
+    <td>Reads <code>data/content_coverage.json</code>, questions, lessons, and <code>docs/content/source_topic_index.json</code> via static imports. Local filter state only; writes nothing.</td>
+    <td>React (<code>useState</code>); <code>src/coverage/contentCoverage.js</code></td>
+  </tr>
+  <tr>
     <td><code>src/components/QuizQuestion.jsx</code></td>
     <td>Presents one quiz question with radio-selectable options and a Submit button (disabled until a selection); never renders the correct answer or explanation</td>
     <td><code>Quiz</code></td>
@@ -145,6 +153,11 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Pure validation for Content Studio (no React): JSON parse with specific error messages, question/lesson rules mirroring the data-contract tests (required fields, valid ECO domains, ≥2 unique options, correct_answer must match an option, lesson body length/placeholder checks, cross-file id uniqueness in both directions, related_question_ids referential integrity), canonical-field-order snippet serialization. Additive only — never mutates the data it checks against.</td>
     <td><code>ContentStudio</code>; unit-tested directly</td>
   </tr>
+  <tr>
+    <td><code>src/coverage/contentCoverage.js</code></td>
+    <td>Pure planning-catalog validation and derivation: validates modules, units, ratings/statuses, ECO mappings, PMBOK namespaces, source/lesson references, and duplicates; derives aligned questions, lesson objects, summary totals, and filtered unit lists without mutation.</td>
+    <td><code>CurriculumCoverage</code>; unit-tested directly against the real catalog</td>
+  </tr>
 </table>
 
 <h2>Data sources</h2>
@@ -173,6 +186,18 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Prompt library seed data (Slice 6): 8 curated PMP-study prompts with [bracketed] fill-in slots, for the User to paste into an external AI chat of their choice. Plain local text — the app never executes them or calls any API (constitution Section 2). Standalone: no cross-references to questions or lessons.</td>
     <td>Array of objects: <code>id</code>, <code>title</code>, <code>description</code> (when to use it), <code>prompt</code> (the copyable text)</td>
     <td><code>PromptHelper</code>; <code>prompts.data.test.js</code></td>
+  </tr>
+  <tr>
+    <td><code>data/content_coverage.json</code></td>
+    <td>Machine-readable curriculum planning catalog: 13 modules and 59 concept units for the Comprehensive Course. Keeps coverage strength separate from lifecycle and requires ECO, PMBOK, and source mappings. Question counts are deliberately derived, not stored.</td>
+    <td>Object with schema/version enums, <code>modules[]</code>, and <code>curriculum_units[]</code> containing id, module, title/type, rating/status, mappings, source refs, and existing lesson ids.</td>
+    <td><code>CurriculumCoverage</code>; <code>contentCoverage.test.js</code></td>
+  </tr>
+  <tr>
+    <td><code>docs/content/source_topic_index.json</code></td>
+    <td>Machine-readable metadata for the 11 local-only sources. Stores stable source IDs, filenames, page counts, topic/role tags, and overlaps; contains no copied source text.</td>
+    <td>Object with <code>sources[]</code>: id, file, pages, primary_topics, curriculum_roles, overlaps.</td>
+    <td><code>CurriculumCoverage</code>; coverage validation/tests</td>
   </tr>
   <tr>
     <td><code>localStorage</code> key <code>pmp-quiz-history-v1</code></td>
@@ -233,6 +258,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>src/__tests__/PromptHelper.test.jsx</code></td>
     <td>PromptHelper component: every prompt rendered with title/description/exact text, prompt count + no-AI-call disclosure shown, one copy button per prompt, clipboard receives the exact prompt text with "Copied!" feedback, feedback moves between cards, no console.error</td>
   </tr>
+  <tr>
+    <td><code>src/__tests__/contentCoverage.test.js</code></td>
+    <td>Real 59-unit catalog validation; rejects duplicate/missing/unknown module, ECO, source, lesson, rating/status references; verifies derived multi-ECO question counts, lesson resolution, summaries, filters, and no mutation.</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/CurriculumCoverage.test.jsx</code></td>
+    <td>Read-only screen summary, all-unit render, mappings/source/lesson/count display, and combined module/strength/lifecycle filters.</td>
+  </tr>
 </table>
 
 <h2>Related docs</h2>
@@ -241,13 +274,17 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <li><code>docs/decision_log.md</code> — why: schema freeze for Slice 2, JSON over SQLite, localStorage persistence</li>
   <li><code>docs/project_constitution.md</code> — non-negotiables (local-first, JSON seed data, DoD ordering)</li>
   <li><code>docs/ai_collaboration_agreement.md</code> — roles and context-load protocol</li>
+  <li><code>docs/content/curriculum_model.md</code> — canonical course/ECO-review/reference/assessment architecture</li>
+  <li><code>docs/content/coverage_matrix.md</code> — concept-level strengths, gaps, mappings, and priorities</li>
+  <li><code>docs/content/curriculum_audit_report.md</code> — final audit findings and roadmap</li>
+  <li><code>docs/working/</code> — resumable phase progress, working decisions, and next actions</li>
 </ul>
 
 <h2>Not built yet</h2>
-<p>Full curriculum content (seed lessons only for now — authored separately
-per the RACI, with Content Studio as the intake path), diagnostics,
-adaptive recommendations, history management (clearing/exporting quiz
-history), richer markdown rendering (tables/images/code). No routing, no
-state library, no backend, no AI API integration (constitution Section 2).</p>
+<p>The 59 planned Comprehensive Course concept lessons, objective-level
+question mappings, direct difficulty/calibration metadata, diagnostics,
+adaptive recommendations, spaced repetition, history management
+(clearing/exporting quiz history), and richer lesson rendering. No routing,
+state library, backend, or AI API integration (constitution Section 2).</p>
 </body>
 </html>
