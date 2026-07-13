@@ -2434,5 +2434,257 @@
     ],
     "correct_answer": "Take ownership of coordinating a resolution, such as a shared environment schedule or escalating for additional environment capacity, since the impediment is blocking progress",
     "explanation": "Removing impediments is a core project manager responsibility, especially when an issue spans two teams and neither has clear ownership to resolve it alone; the project manager is well-positioned to coordinate a fix or escalate for more capacity. Waiting for the teams to sort it out informally has already failed, since the issue keeps recurring without resolution. Merely logging the issue without follow-through, or accepting an unreliable workaround as a long-term state, both leave the actual blocker in place."
+  },
+  {
+    "id": "q175",
+    "eco_domain": "People",
+    "eco_task": "Task 1: Develop a common vision",
+    "question": "A project manager is leading a merger-related initiative where two formerly competing teams must now collaborate. Team A's members repeatedly reference 'our way of doing things' in planning meetings, subtly excluding Team B's input. What is the most effective way to build a genuinely shared vision here?",
+    "options": [
+      "Adopt Team A's existing way of working as the default, since they raised it first and most confidently",
+      "Facilitate a joint session explicitly designed to surface and blend both teams' practices and concerns into a new shared vision, rather than defaulting to either legacy approach",
+      "Alternate which team's preferences are used from meeting to meeting to keep things fair",
+      "Avoid raising the tension directly and let the vision emerge organically over time"
+    ],
+    "correct_answer": "Facilitate a joint session explicitly designed to surface and blend both teams' practices and concerns into a new shared vision, rather than defaulting to either legacy approach",
+    "explanation": "Merging two team cultures into one shared vision requires deliberately designed collaboration that gives both groups real ownership, not defaulting to whichever group speaks with more confidence. Letting Team A's framing win by default, even unintentionally, risks Team B disengaging from a vision they never helped shape. Avoiding the tension and hoping it resolves organically tends to let one group's implicit dominance persist rather than actually build something shared."
+  },
+  {
+    "id": "q176",
+    "eco_domain": "People",
+    "eco_task": "Task 2: Manage conflicts",
+    "question": "A disagreement between two team members over how to interpret a requirement has escalated to the point where each has stopped responding to the other's messages entirely, and shared work has stalled as a result. What should the project manager do?",
+    "options": [
+      "Wait for the individuals to resume communication on their own once emotions settle",
+      "Meet with each person individually first to understand their perspective, then bring them together in a structured, facilitated conversation focused on the specific requirement in question",
+      "Reassign the shared work to other team members permanently to avoid the conflict entirely",
+      "Send a group message to the whole team reminding everyone to communicate professionally, without addressing the two individuals directly"
+    ],
+    "correct_answer": "Meet with each person individually first to understand their perspective, then bring them together in a structured, facilitated conversation focused on the specific requirement in question",
+    "explanation": "A stalled conflict that has escalated to non-communication needs direct, structured intervention, starting with understanding each side's perspective before facilitating a focused resolution conversation. Waiting for it to resolve on its own risks continued delay on shared work that has already stalled. A generic team-wide reminder doesn't address the specific dispute or restore the working relationship between the two individuals involved."
+  },
+  {
+    "id": "q177",
+    "eco_domain": "People",
+    "eco_task": "Task 3: Lead the project team",
+    "question": "A project manager notices that one team member consistently takes on far more than their fair share of visible, high-profile tasks, while quieter team members are left with routine work, even though their skills would suit more visible assignments. What should the project manager do?",
+    "options": [
+      "Leave task assignment as-is, since the high performer is delivering good results",
+      "Deliberately rebalance visible opportunities across the team based on skill and development potential, not just who volunteers most assertively",
+      "Publicly praise only the high performer to reinforce their continued high output",
+      "Reduce the high performer's workload without offering the freed-up opportunities to anyone else"
+    ],
+    "correct_answer": "Deliberately rebalance visible opportunities across the team based on skill and development potential, not just who volunteers most assertively",
+    "explanation": "Leading a team well includes ensuring opportunities and development aren't monopolized by whoever is most assertive about claiming visible work, since that pattern can quietly erode morale and growth for quieter, equally capable members. Leaving it as-is rewards assertiveness over actual team development. Publicly praising only the high performer reinforces the imbalance rather than addressing it, and simply reducing their workload without redistributing opportunity wastes a chance to develop others."
+  },
+  {
+    "id": "q178",
+    "eco_domain": "People",
+    "eco_task": "Task 4: Engage stakeholders",
+    "question": "A newly identified stakeholder, a regulatory liaison, was not part of the original stakeholder register but surfaces mid-project with authority to block release if certain conditions aren't met. What should the project manager do first?",
+    "options": [
+      "Add the stakeholder to the register, assess their influence and requirements, and build an engagement approach around their authority",
+      "Proceed with the current plan, treating the liaison as a lower priority since they weren't part of original planning",
+      "Ask the sponsor to override the liaison's authority so the project isn't delayed",
+      "Wait until closer to release to engage the liaison, since their conditions might not end up being relevant"
+    ],
+    "correct_answer": "Add the stakeholder to the register, assess their influence and requirements, and build an engagement approach around their authority",
+    "explanation": "A newly discovered stakeholder with genuine authority over release needs to be formally captured and engaged promptly, regardless of when they were identified, since their influence is real whether or not they appeared in the original register. Treating them as lower priority ignores the actual power they hold over the outcome. Asking the sponsor to override a regulatory authority isn't a realistic or appropriate way to manage a compliance-related stakeholder, and delaying engagement risks discovering unmet conditions too late to address them."
+  },
+  {
+    "id": "q179",
+    "eco_domain": "People",
+    "eco_task": "Task 5: Align stakeholder expectations",
+    "question": "Two co-sponsors of a project have differing views on how success will be measured at the end: one focuses on user adoption numbers, the other on cost savings. Neither has explicitly disagreed with the other, but their public comments about the project reflect these different framings. What should the project manager do?",
+    "options": [
+      "Let both framings coexist in public communication, since both sponsors are technically correct about different benefits",
+      "Facilitate a conversation between the co-sponsors to agree on a single, documented set of success measures the project will be evaluated against",
+      "Choose whichever measure is easier to report on and use it exclusively going forward",
+      "Avoid raising the topic since the two sponsors haven't directly disagreed yet"
+    ],
+    "correct_answer": "Facilitate a conversation between the co-sponsors to agree on a single, documented set of success measures the project will be evaluated against",
+    "explanation": "Even without open disagreement, divergent framings of success from co-sponsors create ambiguity about what the project is actually being measured against, and it's worth resolving proactively before it becomes a dispute at closure. Letting both framings coexist indefinitely risks the project being judged against inconsistent criteria depending on who's asked. Picking whichever is easier to report doesn't reflect a real alignment, it just avoids the harder conversation."
+  },
+  {
+    "id": "q180",
+    "eco_domain": "People",
+    "eco_task": "Task 6: Manage stakeholder expectations",
+    "question": "A stakeholder has repeatedly asked for a feature that was explicitly descoped early in the project, apparently having forgotten or missed the original decision. This is the third time they've raised it. What is the best way to manage this recurring expectation gap?",
+    "options": [
+      "Continue re-explaining the descoping decision each time it comes up, without changing the underlying communication approach",
+      "Provide the stakeholder with a clear, easily referenceable summary of scope decisions and their rationale, so they have something concrete to check going forward",
+      "Ignore the request the next time it's raised, since it has already been addressed twice",
+      "Reopen the descoping decision to satisfy the stakeholder, since they clearly still want the feature"
+    ],
+    "correct_answer": "Provide the stakeholder with a clear, easily referenceable summary of scope decisions and their rationale, so they have something concrete to check going forward",
+    "explanation": "When the same expectation gap keeps resurfacing, the fix is to give the stakeholder a durable, easy-to-reference record of the decision and its rationale, rather than repeating the same verbal explanation each time with no lasting artifact. Ignoring the next request risks the stakeholder feeling dismissed rather than informed. Reopening an already-justified descoping decision just to end the repeated questions undermines the integrity of the original scope decision for the wrong reason."
+  },
+  {
+    "id": "q181",
+    "eco_domain": "People",
+    "eco_task": "Task 7: Help ensure knowledge transfer",
+    "question": "A project is being handed off between two internal teams: the build team and the support team. The build team has been documenting as they go, but the support team reports that the documentation is too technical and doesn't address the operational scenarios they'll actually encounter. What should the project manager do?",
+    "options": [
+      "Accept the documentation as sufficient, since it accurately describes the technical build",
+      "Facilitate a working session between the build and support teams to translate and supplement the documentation with operationally focused content",
+      "Ask the support team to independently rewrite the documentation in a format that works for them",
+      "Delay handoff indefinitely until the build team produces documentation the support team considers perfect"
+    ],
+    "correct_answer": "Facilitate a working session between the build and support teams to translate and supplement the documentation with operationally focused content",
+    "explanation": "Effective knowledge transfer means the receiving team can actually use what's handed off, so when documentation is technically accurate but doesn't serve the support team's operational needs, the fix is a collaborative session that bridges that gap directly. Accepting the documentation as-is ignores the stated usability problem. Asking the support team to rewrite it alone loses the build team's specific technical knowledge in the process, and an indefinite delay for 'perfect' documentation isn't a realistic standard to hold handoff to."
+  },
+  {
+    "id": "q182",
+    "eco_domain": "People",
+    "eco_task": "Task 8: Plan and manage communication",
+    "question": "A stakeholder group prefers detailed written reports, while another prefers brief verbal updates in person, and the current communication plan sends the same detailed written report to everyone regardless of preference. Several stakeholders in the verbal-preference group have stopped reading the reports altogether. What should the project manager do?",
+    "options": [
+      "Continue with the single report format for consistency and administrative simplicity",
+      "Tailor the communication approach and format to each stakeholder group's documented preference, as part of the communication management plan",
+      "Switch entirely to verbal updates for all stakeholders, since it appears to be the more popular format",
+      "Reduce the frequency of reports to the disengaged group, assuming they simply want less communication overall"
+    ],
+    "correct_answer": "Tailor the communication approach and format to each stakeholder group's documented preference, as part of the communication management plan",
+    "explanation": "Effective stakeholder communication means matching format and frequency to what each group will actually engage with, not applying a single format uniformly regardless of demonstrated preference. Keeping the single format for administrative ease ignores that it's already failing to reach part of the audience. Switching entirely to verbal updates just shifts the same mismatch onto the written-preference group instead of solving it, and assuming disengagement means wanting less communication misreads a format problem as a volume problem."
+  },
+  {
+    "id": "q183",
+    "eco_domain": "Process",
+    "eco_task": "Task 1: Develop an integrated project management plan and plan delivery",
+    "question": "The project management plan was developed assuming a purely predictive delivery approach, but midway through, the team has started using iterative sprints for a subset of the work informally, without any update to the overall plan. What should the project manager do?",
+    "options": [
+      "Let the informal iterative approach continue without documenting it, since it seems to be working",
+      "Formally update the project management plan to reflect the hybrid approach now actually in use, including how the two delivery methods will be integrated and reported",
+      "Instruct the team to abandon the iterative approach and return strictly to the original predictive plan",
+      "Create two entirely separate, disconnected plans for the predictive and iterative portions of work"
+    ],
+    "correct_answer": "Formally update the project management plan to reflect the hybrid approach now actually in use, including how the two delivery methods will be integrated and reported",
+    "explanation": "When the actual delivery approach has drifted from what's documented, the project management plan needs to be updated to reflect reality and define how the hybrid approach will be integrated, since an out-of-date plan undermines governance and reporting accuracy. Leaving it undocumented, even if it's working operationally, creates a gap between what's approved and what's actually happening. Forcing a return to a purely predictive approach ignores that the shift may be genuinely appropriate for that subset of work, and running two disconnected plans defeats the purpose of an integrated plan."
+  },
+  {
+    "id": "q184",
+    "eco_domain": "Process",
+    "eco_task": "Task 2: Develop and manage project scope",
+    "question": "A requirement in the scope baseline is written ambiguously enough that two developers have implemented it in contradictory ways, and the inconsistency was only caught during integration testing. What should the project manager ensure happens as a result?",
+    "options": [
+      "Have the developers informally agree on one interpretation between themselves, without updating the requirement documentation",
+      "Clarify and formally update the ambiguous requirement in the documentation, then verify both implementations against the clarified version",
+      "Accept whichever implementation was completed first as the correct interpretation",
+      "Remove the requirement from scope entirely to avoid further ambiguity"
+    ],
+    "correct_answer": "Clarify and formally update the ambiguous requirement in the documentation, then verify both implementations against the clarified version",
+    "explanation": "An ambiguous requirement that produced contradictory implementations needs to be clarified in the actual documentation, not just resolved verbally between the two developers involved, so the same ambiguity doesn't cause the same problem again elsewhere. Accepting whichever implementation came first as correct is arbitrary and ignores which interpretation actually matches the intended requirement. Removing the requirement entirely discards something that was presumably needed, rather than fixing the actual clarity problem."
+  },
+  {
+    "id": "q185",
+    "eco_domain": "Process",
+    "eco_task": "Task 3: Help ensure value-based delivery",
+    "question": "After delivering an increment, user analytics show a feature is being used in a way the team never anticipated, revealing an unmet need that wasn't in the original backlog. What should the project manager encourage the team to do with this information?",
+    "options": [
+      "Disregard the unexpected usage pattern since it wasn't part of the original planned scope",
+      "Bring the observed usage pattern to the product owner as input for potentially reprioritizing the backlog to address the newly revealed need",
+      "Immediately build a solution for the unexpected need without validating it further with the product owner or stakeholders",
+      "Restrict the feature's usage to only the originally intended use case to keep behavior consistent with the plan"
+    ],
+    "correct_answer": "Bring the observed usage pattern to the product owner as input for potentially reprioritizing the backlog to address the newly revealed need",
+    "explanation": "Value-based delivery means treating real usage data as valuable evidence for reprioritization, since it can reveal genuine needs the original backlog didn't anticipate. Disregarding it because it wasn't originally planned discards useful, real-world signal about where value actually lies. Immediately building a solution without validating the observation with the product owner risks investing effort based on an incomplete read of the data, and artificially restricting usage to the 'intended' case suppresses a need users are already expressing."
+  },
+  {
+    "id": "q186",
+    "eco_domain": "Process",
+    "eco_task": "Task 4: Plan and manage resources",
+    "question": "A resource plan assumes a team member will be available at 100% capacity for the project, but the project manager learns the person has also just been assigned to a separate initiative at 50% capacity by their functional manager, without any coordination between the two. What should the project manager do?",
+    "options": [
+      "Assume the team member will manage both commitments on their own without raising it further",
+      "Raise the conflicting allocation with the functional manager and the other project to jointly resolve the over-allocation before it affects delivery",
+      "Silently reduce this project's expectations of the team member without formally updating the resource plan",
+      "Wait until the team member falls behind on deliverables before addressing the allocation conflict"
+    ],
+    "correct_answer": "Raise the conflicting allocation with the functional manager and the other project to jointly resolve the over-allocation before it affects delivery",
+    "explanation": "A discovered over-allocation, where a team member is committed beyond 100% capacity across two efforts, needs to be surfaced and resolved with the parties who can actually adjust it, before it causes a real delivery problem. Assuming the individual will manage it themselves puts an unreasonable burden on them and ignores that the conflict is a planning failure, not a performance issue. Waiting until they visibly fall behind means addressing the conflict only after it has already caused damage, and quietly lowering expectations without updating the resource plan leaves the plan inaccurate for future reference."
+  },
+  {
+    "id": "q187",
+    "eco_domain": "Process",
+    "eco_task": "Task 5: Plan and manage procurement",
+    "question": "During procurement planning, the team is deciding between building a capability in-house versus buying an existing vendor solution. Initial cost estimates favor building in-house, but the team hasn't yet considered the ongoing maintenance burden of a custom solution. What should the project manager ensure happens before the make-or-buy decision is finalized?",
+    "options": [
+      "Finalize the decision based on the initial upfront cost comparison, since it already favors building in-house",
+      "Include total cost of ownership, including ongoing maintenance and support burden, in the make-or-buy analysis before finalizing the decision",
+      "Default to buying the vendor solution automatically, since custom builds are generally considered riskier",
+      "Skip further analysis and let the team that will do the work decide unilaterally"
+    ],
+    "correct_answer": "Include total cost of ownership, including ongoing maintenance and support burden, in the make-or-buy analysis before finalizing the decision",
+    "explanation": "A sound make-or-buy decision needs to weigh total cost of ownership, not just upfront cost, since a custom in-house build can look cheaper initially but carry a substantially higher ongoing maintenance burden that changes the real economics. Finalizing on initial cost alone risks a decision that looks good today but is expensive for years afterward. Defaulting to buying regardless of the specifics substitutes a general assumption for actual analysis of this specific case."
+  },
+  {
+    "id": "q188",
+    "eco_domain": "Process",
+    "eco_task": "Task 6: Plan and manage finance",
+    "question": "A project's cost baseline includes a management reserve for unknown risks, and partway through the project, the sponsor asks to use part of that reserve to fund a new feature request that wasn't part of the original scope. What should the project manager explain to the sponsor?",
+    "options": [
+      "Agree without objection, since management reserve is generally available for the sponsor to use as they see fit",
+      "Explain that management reserve is intended for unforeseen risks, not planned scope additions, and that funding new scope should go through the change control and budgeting process instead",
+      "Refuse the request outright and end the conversation without offering an alternative path",
+      "Use contingency reserve instead of management reserve, without mentioning the distinction to the sponsor"
+    ],
+    "correct_answer": "Explain that management reserve is intended for unforeseen risks, not planned scope additions, and that funding new scope should go through the change control and budgeting process instead",
+    "explanation": "Management reserve exists specifically for unforeseen risk, and using it to fund a known, plannable scope addition undermines its purpose and leaves the project less protected against genuine unknowns later. Agreeing without explaining the distinction lets a category error in financial management go unaddressed. Refusing outright without offering the correct path (formal change control and budget request) leaves the sponsor's underlying need unresolved, and swapping in contingency reserve without transparency about the distinction misses an opportunity to correctly educate the sponsor on reserve types."
+  },
+  {
+    "id": "q189",
+    "eco_domain": "Process",
+    "eco_task": "Task 7: Plan and optimize quality of products/deliverables",
+    "question": "A quality audit reveals that the team has been passing acceptance tests but skipping a documented step in the quality management plan (an independent design review) due to time pressure, without raising this as a formal deviation. What should the project manager do?",
+    "options": [
+      "Accept the current practice since acceptance tests are still passing, indicating adequate quality",
+      "Address the undocumented deviation directly with the team, and either reinstate the review or formally update the quality plan if the step is no longer warranted",
+      "Quietly remove the design review step from the quality plan to match what the team has already been doing",
+      "Escalate the team for disciplinary action without first understanding why the step was skipped"
+    ],
+    "correct_answer": "Address the undocumented deviation directly with the team, and either reinstate the review or formally update the quality plan if the step is no longer warranted",
+    "explanation": "An undocumented deviation from the quality plan needs to be addressed directly, either by reinstating the skipped step or by formally deciding, with proper rationale, that it's no longer needed, rather than being silently accepted because other quality signals look fine. Accepting the status quo ignores that acceptance tests may not catch what the design review was specifically meant to catch. Quietly rewriting the plan to match current practice avoids the harder question of whether the step was actually still needed, and jumping straight to discipline skips understanding the root cause, which was time pressure."
+  },
+  {
+    "id": "q190",
+    "eco_domain": "Process",
+    "eco_task": "Task 8: Plan and manage schedule",
+    "question": "A schedule was built using duration estimates provided by team members, but the project manager later learns those estimates didn't account for planned holidays and a company-wide training week that falls within the project timeline. What should the project manager do?",
+    "options": [
+      "Leave the schedule as-is, since the estimates were provided in good faith by the team",
+      "Update the schedule to account for the known holidays and training week, and reassess the impact on the finish date",
+      "Instruct the team to work through the holidays and training week to preserve the original schedule",
+      "Wait until the affected weeks arrive to see how much delay actually occurs before making any changes"
+    ],
+    "correct_answer": "Update the schedule to account for the known holidays and training week, and reassess the impact on the finish date",
+    "explanation": "A schedule built on estimates that overlooked known, fixed non-working time needs to be corrected proactively, since the holidays and training week are already certain to occur and their impact is fully knowable now. Leaving the schedule unchanged despite this known gap sets the project up for a predictable and avoidable slip. Instructing the team to work through planned time off isn't an appropriate way to preserve an inaccurate schedule, and waiting to see how much delay occurs squanders the chance to plan for something that's already certain."
+  },
+  {
+    "id": "q191",
+    "eco_domain": "Process",
+    "eco_task": "Task 9: Evaluate project status",
+    "question": "A project's earned value metrics look healthy overall, but a closer look shows one individual work package is significantly behind, offset by another that is significantly ahead, making the aggregate numbers appear normal. What should the project manager do?",
+    "options": [
+      "Rely on the healthy aggregate metrics and consider the project status fine as reported",
+      "Investigate the underperforming work package specifically, since aggregate metrics can mask problems that are offsetting rather than resolved",
+      "Average out the two work packages informally without further investigation into the cause of either variance",
+      "Reassign the ahead-of-schedule work package's resources to slow it down and better match the aggregate expectation"
+    ],
+    "correct_answer": "Investigate the underperforming work package specifically, since aggregate metrics can mask problems that are offsetting rather than resolved",
+    "explanation": "Aggregate status metrics can hide meaningful variance at the work package level, where one area's overperformance offsets another's underperformance without either issue actually being resolved, so it's worth looking below the aggregate when this pattern is visible. Trusting the healthy top-line number alone risks missing a real, specific problem that needs attention. Deliberately slowing down the ahead-of-schedule work package to 'match' the other is a bizarre response that sacrifices real progress instead of addressing the actual underperformance."
+  },
+  {
+    "id": "q192",
+    "eco_domain": "Process",
+    "eco_task": "Task 10: Manage project closure",
+    "question": "At closure, several deliverables were formally accepted, but two low-priority backlog items were never completed and were informally agreed to be dropped in a conversation between the product owner and the team, without any documented decision. What should the project manager do before finalizing closure?",
+    "options": [
+      "Close the project without further action, since the informal agreement is presumably sufficient",
+      "Formally document the decision to not complete the two items, including rationale and appropriate approval, as part of the closure documentation",
+      "Insist the two items must be completed before closure, overriding the informal agreement",
+      "Leave the two items open indefinitely in the backlog with no closure-related documentation at all"
+    ],
+    "correct_answer": "Formally document the decision to not complete the two items, including rationale and appropriate approval, as part of the closure documentation",
+    "explanation": "Closure requires a clean, documented record of what was and wasn't delivered against the approved scope, so an informal decision to drop remaining items needs to be formally captured with rationale and appropriate approval before the project is considered closed. Closing without documenting it leaves an ambiguous gap in the project's final record. Insisting the items be completed overrides a legitimate prioritization decision already made by the appropriate people, and leaving the items open indefinitely without documentation fails to actually close out the project's scope."
   }
 ]
