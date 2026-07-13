@@ -6,9 +6,9 @@ v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 existing content remapped to the July 2026 ECO structure per Decision #10;
 Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 26 ECO tasks has at least one question AND at least one lesson (31 questions,
-26 lessons total; 26 of 26 tasks have both). Phase 11 questions are added:
-the bank now contains 296 questions and 26 lessons (People 96Q/8L, Process
-120Q/10L, Business Environment 80Q/8L).
+26 lessons total; 26 of 26 tasks have both). Phase 12 questions are added:
+the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
+155Q/10L, Business Environment 99Q/8L).
 
 ## Completed Work
 - Repository governance established: docs/ai_collaboration_agreement.md,
@@ -207,6 +207,13 @@ the bank now contains 296 questions and 26 lessons (People 96Q/8L, Process
   Environment 80Q/8L). Reformatted both JSON files, regenerated all 26
   lessons' exact domain/task question links, and confirmed no empty arrays.
   All 114 tests pass with the file-scoped Question Bank timeout.
+- Phase 12 questions: appended 88 questions (q297–q384) across all three
+  domains. Actual-file recount: 384 questions and 26 lessons (People
+  130Q/8L, Process 155Q/10L, Business Environment 99Q/8L). Task depths are
+  intentionally uneven: People 16–17, Process 15–16, and Business
+  Environment 12–13. Reformatted both JSON files, regenerated all 26
+  lessons' exact domain/task question links, and confirmed no empty arrays.
+  All 114 tests pass with the file-scoped Question Bank timeout.
 
 ## Files Modified
 - Slice 5: docs/decision_log.md (Decision #8),
@@ -272,7 +279,8 @@ Process. Phase 8 adds q193–q218, exactly one question per ECO task. The
 Phase 9 batch adds q219–q244, also exactly one question per ECO task. The
 Phase 10 batch adds q245–q270, also exactly one question per ECO task. The
 Phase 11 batch adds q271–q296, also exactly one question per ECO task. The
-combined bank contains 296 questions and
+Phase 12 batch adds q297–q384 across all three domains. The combined bank
+contains 384 questions and
 26 lessons, and every lesson's related questions have been regenerated
 from exact domain/task matching.
 
