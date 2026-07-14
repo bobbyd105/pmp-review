@@ -18,6 +18,12 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
+$gitCleanlinessHelper = Join-Path (Split-Path -Parent $PSScriptRoot) ".ai\workflow\git-cleanliness.ps1"
+if (-not (Test-Path -LiteralPath $gitCleanlinessHelper -PathType Leaf)) {
+    throw "Required workflow file not found: $gitCleanlinessHelper"
+}
+. $gitCleanlinessHelper
+
 $script:ProviderRegistry = @{
     orchestrator = @{
         "claude-code" = [pscustomobject]@{
@@ -37,7 +43,8 @@ $script:ProviderRegistry = @{
 
 $script:RequiredWorkflowFiles = @(
     ".ai/workflow/orchestrator-prompt.md",
-    ".ai/workflow/batch-result.schema.json"
+    ".ai/workflow/batch-result.schema.json",
+    ".ai/workflow/git-cleanliness.ps1"
 )
 
 function Invoke-CheckedCommand {
@@ -172,15 +179,13 @@ function Get-GitSnapshot {
         throw "Unable to determine the current Git branch."
     }
 
-    $status = @(& git status --porcelain=v1 --untracked-files=all)
-    if ($LASTEXITCODE -ne 0) {
-        throw "Unable to inspect the Git working tree."
-    }
+    $cleanliness = Get-GitCleanlinessSnapshot
 
     return [pscustomobject]@{
         Branch = $branch
-        IsClean = $status.Count -eq 0
-        StatusLines = $status
+        IsClean = $cleanliness.IsClean
+        BlockingEntries = $cleanliness.BlockingEntries
+        RuntimeEntries = $cleanliness.RuntimeEntries
     }
 }
 
@@ -212,12 +217,15 @@ function Invoke-SmokeTest {
     if ($git.Branch -ne $Plan.branch) {
         Write-Warning "Normal execution will stop until the current branch matches '$($Plan.branch)'."
     }
+    foreach ($entry in $git.RuntimeEntries) {
+        Write-Host "[INFO] Controller runtime file excluded from cleanliness validation: $($entry.Path)"
+    }
     if ($git.IsClean) {
-        Write-Host "[PASS] Git working tree is clean."
+        Write-Host "[PASS] Git working tree has no blocking changes."
     }
     else {
-        Write-Warning "Git working tree is not clean. Normal execution will stop."
-        $git.StatusLines | ForEach-Object { Write-Host "       $_" }
+        Write-Warning "Git working tree contains blocking changes. Normal execution will stop."
+        $git.BlockingEntries | ForEach-Object { Write-Host "       $($_.Status) $($_.Path)" }
     }
 
     Write-Host ""
@@ -299,31 +307,6 @@ function Test-PathMatchesAny {
         }
     }
     return $false
-}
-
-function Get-ChangedPaths {
-    $lines = & git status --porcelain=v1 --untracked-files=all
-    if ($LASTEXITCODE -ne 0) {
-        throw "Unable to read Git working tree status."
-    }
-
-    $paths = @()
-    foreach ($line in $lines) {
-        if ([string]::IsNullOrWhiteSpace($line)) { continue }
-        $path = $line.Substring(3).Trim()
-        if ($path.Contains(" -> ")) {
-            $path = ($path -split " -> ")[-1]
-        }
-        $paths += $path.Replace("\", "/")
-    }
-    return @($paths | Sort-Object -Unique)
-}
-
-function Assert-CleanStart {
-    $dirty = Get-ChangedPaths
-    if ($dirty.Count -gt 0) {
-        throw "Workflow must start from a clean working tree. Uncommitted paths: $($dirty -join ', ')"
-    }
 }
 
 function Assert-Branch {

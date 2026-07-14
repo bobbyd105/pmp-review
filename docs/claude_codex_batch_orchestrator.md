@@ -79,6 +79,29 @@ Real runs should copy the examples to untracked or task-specific files, such as:
 
 The run directory should be committed only when its contents are useful project records and contain no machine-specific paths, credentials, or excessive logs.
 
+### Runtime files and Git cleanliness
+
+The controller treats `.ai/workflow/current-state*.json` and
+`.ai/workflow/master-plan*.json` as controller-owned execution artifacts when
+it evaluates Git cleanliness. These files are created or updated to start and
+resume a run, so allowing them to block the clean-start gate would make the
+controller block itself.
+
+The exclusion is deliberately narrow: it applies only to those two filename
+families directly under `.ai/workflow/`. Every other modified, staged,
+conflicted, deleted, or untracked path remains blocking. Git status is read
+directly from NUL-delimited `git status --porcelain` output so the controller
+reports repository paths without custom substring or rename-arrow parsing.
+
+Run the focused cleanliness regression tests with:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\.ai\workflow\git-cleanliness.tests.ps1
+```
+
+The tests cover a clean repository, runtime-only artifacts, an unrelated
+modified tracked file, and an unrelated untracked file.
+
 ## Provider configuration
 
 Every master plan must identify both providers:
@@ -114,7 +137,8 @@ available. It:
 - verifies the orchestrator prompt and result schema exist;
 - accepts only `claude-code` plus `codex-cli` and resolves their commands;
 - checks `git`, `claude`, `codex`, and, with `-OpenPullRequest`, `gh` on PATH;
-- reports the current and configured branches and the working-tree state;
+- reports the current and configured branches, excluded controller runtime
+  files, and any remaining blocking working-tree paths;
 - prints the fresh-session, worker, validation, checkpoint, push, final-gate,
   and draft-PR commands it would perform.
 
@@ -175,7 +199,8 @@ A checkpoint commit is allowed only when all required conditions pass:
 - No unresolved critical or high-severity Claude findings remain.
 - No temporary, debug, secret, or generated junk files are present.
 - Required `docs/progress.md` and `docs/app-map.html` updates are complete when applicable.
-- The working tree contains only the accepted batch changes.
+- The working tree contains only the accepted batch changes plus the narrowly
+  excluded controller-owned master-plan/current-state runtime files.
 
 Checkpoint commit format:
 

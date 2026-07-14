@@ -33,6 +33,19 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
     fresh Claude session per batch, Codex worker, independent validation,
     allowed/forbidden path enforcement, passed-batch checkpoint commits, and
     one final draft PR under User merge authority.
+  - Follow-up live-validation fix (2026-07-14): clean-tree validation now
+    excludes only `.ai/workflow/current-state*.json` and
+    `.ai/workflow/master-plan*.json`, because those controller-owned runtime
+    files must exist and state may change during a run. All other porcelain
+    status entries remain blocking. Status paths are parsed directly from
+    NUL-delimited `git status --porcelain` output, and four dependency-free
+    PowerShell regressions cover clean, runtime-only, modified tracked, and
+    unrelated untracked cases.
+  - Follow-up validation: all three PowerShell files parse; all four focused
+    cleanliness cases pass; both example and live smoke configurations exit
+    `0`; the full suite passes 18 files / 139 tests; production build passes
+    with the existing non-blocking large-chunk warning; `git diff --check`
+    passes.
   - Validation: PowerShell parser passes; example smoke test exits 0; an
     unsupported-worker smoke fixture exits 1 with the supported value named;
     full suite 18 files / 139 tests passes; production build passes with the
@@ -306,6 +319,8 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 
 ## Files Modified
 - Batch-orchestrator refinement: `scripts/run-agent-workflow.ps1`,
+  `.ai/workflow/git-cleanliness.ps1`,
+  `.ai/workflow/git-cleanliness.tests.ps1`,
   `.ai/workflow/master-plan.example.json`,
   `.ai/workflow/orchestrator-prompt.md`,
   `docs/claude_codex_batch_orchestrator.md`, `docs/app-map.html`, and this file.
@@ -345,6 +360,9 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   supports only Claude Code and Codex CLI. The fixed registry is a fail-closed
   dispatch boundary, not a plugin system. `-SmokeTest` returns before every
   mutation path and provides an observable preflight for later live runs.
+  Cleanliness classification is isolated in a workflow helper: only the two
+  controller runtime JSON filename families are excluded, while every other
+  Git porcelain entry remains a hard stop for normal execution.
 - The production curriculum now has a separate validated concept-lesson
   catalog. It is an authored content source but has no runtime UI consumer yet;
   the existing ECO lesson schema and the 59-unit planning catalog are unchanged.

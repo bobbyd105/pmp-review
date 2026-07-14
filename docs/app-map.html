@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (batch-orchestrator provider and smoke-test refinement).
+<p>Last updated: 2026-07-14 (batch-orchestrator runtime cleanliness refinement).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -170,8 +170,13 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>scripts/run-agent-workflow.ps1</code></td>
-    <td>Bounded Windows batch controller. Reads explicit <code>claude-code</code>/<code>codex-cli</code> provider IDs, runs one fresh Claude Code orchestration session per approved batch, independently validates results and paths, owns checkpoint commits/pushes and one final draft PR, and fails closed for unsupported providers. <code>-SmokeTest</code> performs a read-only configuration/file/command/Git preflight and prints every planned action before any live run.</td>
+    <td>Bounded Windows batch controller. Reads explicit <code>claude-code</code>/<code>codex-cli</code> provider IDs, runs one fresh Claude Code orchestration session per approved batch, independently validates results and paths, owns checkpoint commits/pushes and one final draft PR, and fails closed for unsupported providers. <code>-SmokeTest</code> performs a read-only configuration/file/command/Git preflight and prints every planned action before any live run. Clean-tree checks exclude only controller-owned <code>current-state*.json</code>/<code>master-plan*.json</code> runtime files under <code>.ai/workflow/</code>.</td>
     <td><code>.ai/workflow/</code> plan/state/prompt/result contracts; local <code>git</code>, <code>claude</code>, <code>codex</code>, and optional <code>gh</code> commands</td>
+  </tr>
+  <tr>
+    <td><code>.ai/workflow/git-cleanliness.ps1</code></td>
+    <td>Fail-closed Git cleanliness helper. Parses NUL-delimited <code>git status --porcelain</code> records into actual paths, excludes the two controller runtime JSON filename families, and leaves every other modified, staged, conflicted, deleted, or untracked entry blocking.</td>
+    <td><code>run-agent-workflow.ps1</code>; focused PowerShell regression script</td>
   </tr>
   <tr>
     <td><code>.ai/workflow/master-plan.example.json</code> and related workflow contracts</td>
@@ -266,6 +271,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 <h2>Tests</h2>
 <table>
   <tr><th>File</th><th>Covers</th></tr>
+  <tr>
+    <td><code>.ai/workflow/git-cleanliness.tests.ps1</code></td>
+    <td>Dependency-free temporary-repository regression cases proving clean and runtime-only trees pass while unrelated modified tracked and unrelated untracked files block with the actual path named.</td>
+  </tr>
   <tr>
     <td><code>src/__tests__/questions.data.test.js</code></td>
     <td>Data contract for <code>data/questions.json</code>: ≥10 questions, ≥3 ECO domains, valid domain names, all required fields present, unique ids, ≥2 unique options each, correct_answer present in options</td>
