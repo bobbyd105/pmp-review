@@ -1,0 +1,53 @@
+{
+  "feature_id": "PMP-EXAMPLE",
+  "title": "Example bounded feature",
+  "branch": "feature/example-bounded-feature",
+  "base_branch": "main",
+  "status": "approved",
+  "max_total_batches": 8,
+  "final_validation_commands": [
+    "npm test",
+    "npm run build"
+  ],
+  "pull_request": {
+    "open_as_draft": true,
+    "title": "PMP-EXAMPLE: Example bounded feature"
+  },
+  "batches": [
+    {
+      "id": "B01",
+      "title": "Add the domain behavior",
+      "objective": "Implement one coherent, independently testable behavior without changing unrelated runtime areas.",
+      "allowed_paths": [
+        "src/example/**",
+        "tests/example/**",
+        "docs/progress.md",
+        "docs/app-map.html",
+        ".ai/workflow/runs/PMP-EXAMPLE/**"
+      ],
+      "forbidden_paths": [
+        ".env*",
+        "auth/**",
+        "migrations/**",
+        ".github/**"
+      ],
+      "acceptance_criteria": [
+        "The approved behavior is implemented exactly as specified.",
+        "New behavior has focused tests.",
+        "Existing behavior remains unchanged outside the approved slice.",
+        "No critical or high-severity review findings remain."
+      ],
+      "validation_commands": [
+        "npm test",
+        "npm run build"
+      ],
+      "max_codex_attempts": 4,
+      "human_stop_conditions": [
+        "Requirements are ambiguous.",
+        "A destructive migration or irreversible data change is required.",
+        "Secrets or authentication configuration must change.",
+        "The implementation must expand beyond allowed paths."
+      ]
+    }
+  ]
+}
