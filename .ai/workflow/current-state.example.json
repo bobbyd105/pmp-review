@@ -1,0 +1,13 @@
+{
+  "feature_id": "PMP-EXAMPLE",
+  "branch": "feature/example-bounded-feature",
+  "status": "ready",
+  "last_completed_batch": null,
+  "last_checkpoint_commit": null,
+  "next_batch": "B01",
+  "attempts_for_current_batch": 0,
+  "completed_batches": [],
+  "open_blockers": [],
+  "pull_request_url": null,
+  "updated_at": null
+}
