@@ -20,6 +20,22 @@ Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 155Q/10L, Business Environment 99Q/8L).
 
+## Milestone — Multi-Agent Orchestration Operational
+
+PR #22 established and verified an end-to-end bounded workflow:
+
+PowerShell controller
+→ fresh Claude Code orchestrator session
+→ Codex CLI implementation worker
+→ Claude review
+→ independent validation
+→ checkpoint commit
+→ workflow state advancement
+
+The documentation-only B01 verification completed successfully. Future work
+should use this infrastructure for real bounded project batches rather than
+expanding the orchestration system without a demonstrated need.
+
 ## Completed Work
 - Claude-Codex batch orchestrator refinement (PR #22, 2026-07-13):
   - Added required master-plan provider IDs: `claude-code` orchestrator and
