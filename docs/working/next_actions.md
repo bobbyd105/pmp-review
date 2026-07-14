@@ -17,12 +17,24 @@
 - Approve the sidecar-first metadata migration direction.
 - Confirm that question-bank quality remediation precedes adaptive evidence.
 
-## Recommended next implementation pass
+## Tracked follow-up — Length-bias remediation
 
-Create a dedicated question-bank quality remediation and metadata-readiness
-slice. It should establish stable option identity and bank-quality controls,
-then remediate the 371/384 option-B and 349/384 longest-answer defects with
-manual correctness review. It should not generate new lessons or questions.
+**Status:** Known and tracked, but not scheduled. No target date is set; revisit
+when content-authoring capacity allows.
+
+`docs/content/length_bias_report.md` documents the current state: 315/384
+questions exceed the 1.3 correct-answer/average-distractor ratio, and 364/384
+have a strictly longest correct answer.
+
+Remediation requires editorial wording changes to option text. The content
+author should address the report in reviewed batches by trimming over-elaborate
+correct answers and/or extending thin distractors. This is content judgment and
+must not be performed as a mechanical rewrite.
+
+`src/__tests__/lengthBias.test.js` will continue to report this condition as
+unresolved until the editorial pass is complete. That result is expected and is
+not a build blocker. Answer-position bias has already been remediated separately
+and remains protected by its hard distribution guard.
 
 ## Later sequence
 

@@ -349,7 +349,12 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   Length bias remains: 364/384 questions (94.8%) have a strictly longest
   correct answer, and 315/384 exceed the 1.3 correct/average-distractor ratio.
   Editorial wording remediation remains required before quiz scores can be
-  treated as strong content evidence.
+  treated as strong content evidence. This follow-up is tracked but not
+  scheduled; no target date is set. A content author must address it in reviewed
+  batches by trimming over-elaborate correct answers and/or extending thin
+  distractors, not through a mechanical rewrite. The `lengthBias.test.js`
+  unresolved signal is expected until that pass is complete and is not a build
+  blocker.
 - Production build emits a large-chunk warning because the full local
   content bank is statically bundled. It is non-blocking for the local MVP.
 
@@ -410,11 +415,12 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-Current recommendation: perform the dedicated editorial length-bias remediation
-for the worst-first flagged question list, then enable a hard <=40%
-strict-longest acceptance gate. In parallel, review and author knowledge checks
-and direct question mappings for c001-c010 before exposing the Foundation Block
-in a learner-facing Comprehensive Course view.
+Current tracked follow-up: revisit editorial length-bias remediation when
+content-authoring capacity allows; it is not yet scheduled. After the reviewed
+batch pass, enable a hard <=40% strict-longest acceptance gate. Independently,
+review and author knowledge checks and direct question mappings for c001-c010
+before exposing the Foundation Block in a learner-facing Comprehensive Course
+view.
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using
