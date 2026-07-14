@@ -24,6 +24,27 @@ Definition of Done order: Code -> Tests -> Docs -> Map -> Commit. Do not
 commit until docs/progress.md and docs/app-map.html are updated to reflect
 the change.
 
+## Bounded Claude–Codex batch orchestration
+
+When a User-approved master plan is executed through
+`scripts/run-agent-workflow.ps1`, Claude Code is the bounded orchestrator and
+Codex CLI is the implementation worker. Read
+`docs/claude_codex_batch_orchestrator.md` and
+`.ai/workflow/orchestrator-prompt.md` before participating in that workflow.
+
+The controller, not either agent, owns commits, pushes, session lifecycle, and
+the final draft PR. Claude and Codex must not commit or push during a managed
+batch.
+
+A managed batch may receive an automated checkpoint commit only after Claude's
+review and the controller's independent gate both pass. This checkpoint is a
+recoverable work record, not User approval to merge. The User remains the sole
+merge and product authority.
+
+Hard stops for a managed batch include ambiguous requirements, scope expansion,
+secrets or authentication changes, destructive migrations, irreversible data
+changes, forbidden-path edits, or unresolved critical/high review findings.
+
 ## Standard content batch checklist
 
 Whenever new questions or lessons are added to data/questions.json or

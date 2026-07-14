@@ -1,0 +1,67 @@
+{
+  "feature_id": "claude-codex-batch-orchestrator",
+  "title": "Verify Claude-Codex Batch Orchestration",
+  "branch": "feature/claude-codex-batch-orchestrator",
+  "base_branch": "main",
+  "status": "approved",
+
+  "providers": {
+    "orchestrator": "claude-code",
+    "worker": "codex-cli"
+  },
+
+  "max_total_batches": 1,
+
+  "final_validation_commands": [
+    "npm test",
+    "npm run build",
+    "git diff --check"
+  ],
+
+  "pull_request": {
+    "open_as_draft": false,
+    "title": "Verify Claude-Codex Batch Orchestration"
+  },
+
+  "batches": [
+    {
+      "id": "B01",
+      "title": "Live orchestration verification",
+      "objective": "Verify that the Claude→Codex orchestration workflow operates correctly end-to-end by making a documentation-only change. Do not modify runtime code, curriculum content, tests, or application behavior.",
+
+      "allowed_paths": [
+        "docs/claude_codex_batch_orchestrator.md",
+        "docs/progress.md",
+        ".ai/workflow/results/**"
+      ],
+
+      "forbidden_paths": [
+        "src/**",
+        "data/**",
+        "public/**",
+        "package.json",
+        "package-lock.json",
+        "docs/project_constitution.md",
+        "docs/ai_collaboration_agreement.md"
+      ],
+
+      "validation_commands": [
+        "npm test",
+        "npm run build",
+        "git diff --check"
+      ],
+
+      "acceptance_criteria": [
+        "A concise 'Live orchestration verified' note is added to the orchestration documentation.",
+        "No runtime application files are modified.",
+        "No curriculum or question content is modified.",
+        "Validation commands pass.",
+        "Claude reports no critical or high-severity findings.",
+        "One checkpoint commit is created.",
+        "The checkpoint is pushed to the existing feature branch."
+      ],
+
+      "max_attempts": 3
+    }
+  ]
+}

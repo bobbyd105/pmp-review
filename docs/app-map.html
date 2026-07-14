@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (answer-bias closeout and Foundation Block ingestion).
+<p>Last updated: 2026-07-14 (batch-orchestrator Claude launcher compatibility refinement).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -168,6 +168,26 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Pure answer-length analysis plus report generator: measures Unicode character length, correct/average-distractor ratios, strict-longest rate, worst-first ratio flags, and remediation status without changing content.</td>
     <td><code>npm run questions:report-length-bias</code>; <code>lengthBias.test.js</code></td>
   </tr>
+  <tr>
+    <td><code>scripts/run-agent-workflow.ps1</code></td>
+    <td>Bounded Windows batch controller. Reads explicit <code>claude-code</code>/<code>codex-cli</code> provider IDs, runs one fresh Claude Code orchestration session per approved batch, independently validates results and paths, owns checkpoint commits/pushes and one final draft PR, and fails closed for unsupported providers or Claude CLI capabilities. <code>-SmokeTest</code> performs a read-only configuration/file/command/Git preflight and prints every planned action before any live run. Clean-tree checks exclude only controller-owned <code>current-state*.json</code>/<code>master-plan*.json</code> runtime files under <code>.ai/workflow/</code>.</td>
+    <td><code>.ai/workflow/</code> plan/state/prompt/result contracts; local <code>git</code>, <code>claude</code>, <code>codex</code>, and optional <code>gh</code> commands</td>
+  </tr>
+  <tr>
+    <td><code>.ai/workflow/claude-launcher.ps1</code></td>
+    <td>Claude Code launcher boundary: resolves a non-terminating Windows entry point, detects help/version capabilities, selects supported print/version flags, fails closed when required flags are absent, constructs probe arguments, and sends prompt content through stdin so prompt text cannot become CLI options.</td>
+    <td><code>run-agent-workflow.ps1</code>; focused launcher construction tests</td>
+  </tr>
+  <tr>
+    <td><code>.ai/workflow/git-cleanliness.ps1</code></td>
+    <td>Fail-closed Git cleanliness helper. Parses NUL-delimited <code>git status --porcelain</code> records into actual paths, excludes the two controller runtime JSON filename families, and leaves every other modified, staged, conflicted, deleted, or untracked entry blocking.</td>
+    <td><code>run-agent-workflow.ps1</code>; focused PowerShell regression script</td>
+  </tr>
+  <tr>
+    <td><code>.ai/workflow/master-plan.example.json</code> and related workflow contracts</td>
+    <td>Example approved batch plan with explicit provider configuration, resumable state shape, schema-validated batch result contract, and the bounded orchestrator prompt. These are automation inputs, not application runtime data.</td>
+    <td><code>run-agent-workflow.ps1</code>; one fresh Claude Code session per eligible batch</td>
+  </tr>
 </table>
 
 <h2>Data sources</h2>
@@ -256,6 +276,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 <h2>Tests</h2>
 <table>
   <tr><th>File</th><th>Covers</th></tr>
+  <tr>
+    <td><code>.ai/workflow/claude-launcher.tests.ps1</code></td>
+    <td>Dependency-free launcher construction tests for Windows native/<code>.cmd</code> selection, preferred and fallback flags, unsupported-capability failure, tool-disabled probe arguments, and keeping prompt content such as <code>--check</code> out of argv.</td>
+  </tr>
+  <tr>
+    <td><code>.ai/workflow/git-cleanliness.tests.ps1</code></td>
+    <td>Dependency-free temporary-repository regression cases proving clean and runtime-only trees pass while unrelated modified tracked and unrelated untracked files block with the actual path named.</td>
+  </tr>
   <tr>
     <td><code>src/__tests__/questions.data.test.js</code></td>
     <td>Data contract for <code>data/questions.json</code>: ≥10 questions, ≥3 ECO domains, valid domain names, all required fields present, unique ids, ≥2 unique options each, correct_answer present in options</td>
@@ -346,6 +374,8 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <li><code>docs/content/glossary_model.md</code>, <code>formula_model.md</code>, and <code>reference_sheet_model.md</code> — shared knowledge asset contracts</li>
   <li><code>docs/content/adaptive_learning_model.md</code>, <code>question_metadata_model.md</code>, and <code>lesson_metadata_model.md</code> — future learner-state and metadata boundaries</li>
   <li><code>docs/content/content_pipeline.md</code> and <code>repository_future_state.md</code> — production checkpoints and no-move-yet scalability design</li>
+  <li><code>docs/claude_codex_batch_orchestrator.md</code> — bounded controller model, provider configuration, smoke-test command, gates, and failure behavior</li>
+  <li><code>docs/decisions/2026-07-13-claude-codex-batch-orchestration.md</code> — approved fresh-session Claude/Codex orchestration decision</li>
   <li><code>docs/working/</code> — resumable phase progress, working decisions, and next actions</li>
 </ul>
 
