@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (knowledge layer and content production framework).
+<p>Last updated: 2026-07-13 (answer-bias closeout and Foundation Block ingestion).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -158,6 +158,16 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Pure planning-catalog validation and derivation: validates modules, units, ratings/statuses, ECO mappings, PMBOK namespaces, source/lesson references, and duplicates; derives aligned questions, lesson objects, summary totals, and filtered unit lists without mutation.</td>
     <td><code>CurriculumCoverage</code>; unit-tested directly against the real catalog</td>
   </tr>
+  <tr>
+    <td><code>scripts/shuffle-question-options.mjs</code></td>
+    <td>Seeded, deterministic question-option reorder. Assigns correct-answer positions evenly within each option-count group, deterministically orders distractors, preserves <code>correct_answer</code> as an exact string, and is idempotent for a committed seed.</td>
+    <td><code>npm run questions:shuffle-options</code>; <code>answerDistribution.test.js</code></td>
+  </tr>
+  <tr>
+    <td><code>scripts/report-length-bias.mjs</code></td>
+    <td>Pure answer-length analysis plus report generator: measures Unicode character length, correct/average-distractor ratios, strict-longest rate, worst-first ratio flags, and remediation status without changing content.</td>
+    <td><code>npm run questions:report-length-bias</code>; <code>lengthBias.test.js</code></td>
+  </tr>
 </table>
 
 <h2>Data sources</h2>
@@ -165,7 +175,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
   <tr>
     <td><code>data/questions.json</code></td>
-    <td>Question bank data: 384 original PMP-style questions across all 3 ECO domains (People 130, Process 155, Business Environment 99). Phase 1 established breadth; Phase 2 added depth through <code>q082</code>; Phases 3–5 added <code>q083–q155</code>; Phase 6 added <code>q156–q174</code>; Phase 7 added <code>q175–q192</code>; Phase 8 added <code>q193–q218</code>; Phase 9 added <code>q219–q244</code>; Phase 10 added <code>q245–q270</code>; Phase 11 added <code>q271–q296</code>; Phase 12 added <code>q297–q384</code>. People tasks now have 16–17 questions, Process tasks have 15–16, and Business Environment tasks have 12–13. Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Question bank data: 384 original PMP-style questions across all 3 ECO domains (People 130, Process 155, Business Environment 99). Phase 1 established breadth; Phase 2 added depth through <code>q082</code>; Phases 3–5 added <code>q083–q155</code>; Phase 6 added <code>q156–q174</code>; Phase 7 added <code>q175–q192</code>; Phase 8 added <code>q193–q218</code>; Phase 9 added <code>q219–q244</code>; Phase 10 added <code>q245–q270</code>; Phase 11 added <code>q271–q296</code>; Phase 12 added <code>q297–q384</code>. People tasks now have 16–17 questions, Process tasks have 15–16, and Business Environment tasks have 12–13. Option order is generated reproducibly with seed <code>pmp-options-v1</code>; all four correct-answer positions contain 96 questions. Local JSON per constitution Section 3 — no database, no API.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
     <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
   </tr>
@@ -180,6 +190,12 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>26 ECO-aligned lessons, one per task. Schema locked by decision_log.md #7. Each lesson's <code>related_question_ids</code> is regenerated at the end of a content phase from exact <code>eco_domain</code> + <code>eco_task</code> matches; questions.json remains the single source of truth for question content.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>title</code>, <code>body</code> (markdown-capable text), optional <code>related_question_ids[]</code> whose entries must exist in <code>data/questions.json</code> (enforced by test)</td>
     <td><code>Lessons</code>; <code>lessons.data.test.js</code></td>
+  </tr>
+  <tr>
+    <td><code>data/concept_lessons.json</code></td>
+    <td>Ten Authored production concept lessons (c001-c010) forming the Foundation Block. Supplied module/ECO/PMBOK/focus-area/approach mappings and source references are preserved. Knowledge checks, related production questions, and reusable glossary/reference/formula links remain intentionally pending.</td>
+    <td>Array of concept records with structured objectives, sections, terms, exam traps, flashcards, mappings, deferred-reference arrays, <code>knowledge_checks</code> status, and source refs.</td>
+    <td><code>conceptLessons.data.test.js</code> only. No runtime UI consumer yet.</td>
   </tr>
   <tr>
     <td><code>data/prompts.json</code></td>
@@ -243,6 +259,18 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <tr>
     <td><code>src/__tests__/questions.data.test.js</code></td>
     <td>Data contract for <code>data/questions.json</code>: ≥10 questions, ≥3 ECO domains, valid domain names, all required fields present, unique ids, ≥2 unique options each, correct_answer present in options</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/answerDistribution.test.js</code></td>
+    <td>Hard answer-position guard: no correct-answer position may exceed 40% of the bank; also proves the committed seeded output is reproducible and idempotent.</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/lengthBias.test.js</code></td>
+    <td>Length-bias measurement regression: proves a bank over the 40% strict-longest target is flagged, verifies worst-first ratio sorting, and prevents the committed generated report from drifting from the question bank.</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/conceptLessons.data.test.js</code></td>
+    <td>Foundation Block contract: exact c001-c010 identity, required content shapes, module/PMBOK/focus-area/approach enums, live ECO mappings, intentionally deferred assessment/reference arrays, and valid source refs.</td>
   </tr>
   <tr>
     <td><code>src/__tests__/QuestionBank.test.jsx</code></td>
@@ -310,6 +338,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <li><code>docs/ai_collaboration_agreement.md</code> — roles and context-load protocol</li>
   <li><code>docs/content/curriculum_model.md</code> — canonical course/ECO-review/reference/assessment architecture</li>
   <li><code>docs/content/coverage_matrix.md</code> — concept-level strengths, gaps, mappings, and priorities</li>
+  <li><code>docs/content/length_bias_report.md</code> — generated answer-length measurements and worst-first editorial remediation list</li>
   <li><code>docs/content/curriculum_audit_report.md</code> — final audit findings and roadmap</li>
   <li><code>docs/content/knowledge_layer_report.md</code> — final knowledge-layer outcomes, risks, and implementation order</li>
   <li><code>docs/content/knowledge_graph.md</code> — graph semantics, dependencies, traversal, and governance</li>
@@ -321,13 +350,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 </ul>
 
 <h2>Not built yet</h2>
-<p>The 59 planned Comprehensive Course concept lessons, reviewed production
-objective mappings, stable question option IDs, calibrated difficulty,
+<p>Forty-nine planned Comprehensive Course concept lessons beyond the authored
+ten-lesson Foundation Block, reviewed production objective mappings, stable question option IDs, calibrated difficulty,
 diagnostics, adaptive recommendation algorithms, spaced repetition, history management
 (clearing/exporting quiz history), and richer lesson rendering. No routing,
 state library, backend, or AI API integration (constitution Section 2).</p>
-<p>The new knowledge/objective/glossary/formula/reference catalogs are validated
-planning inputs only; no current runtime screen consumes them and no lifecycle
-record was changed to Approved or Implemented.</p>
+<p>The knowledge/objective/glossary/formula/reference catalogs remain validated
+planning inputs only. The ten concept lessons are Authored assets, but no current
+runtime screen consumes them; pending assessment links remain incomplete and no
+canonical lifecycle record was changed to Approved or Implemented.</p>
 </body>
 </html>

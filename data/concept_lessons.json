@@ -1,0 +1,871 @@
+[
+  {
+    "id": "c001",
+    "lesson_type": "concept",
+    "title": "Projects, Programs, Portfolios, and Operations",
+    "module": "PM Foundations",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Initiating"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 1: Define and establish project governance"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define project, program, portfolio, and operations, and explain how they relate.",
+      "Distinguish project work from ongoing operational work using concrete examples.",
+      "Explain why portfolio management is about doing the right projects while project management is about doing projects right."
+    ],
+    "sections": [
+      {
+        "title": "Definition",
+        "content": "A **project** is a temporary endeavor undertaken to create a unique product, service, or result. Temporary means it has a defined start and end; unique means the outcome differs in some meaningful way from anything produced before, even if the process resembles past work."
+      },
+      {
+        "title": "Programs vs. Portfolios",
+        "content": "A **program** is a group of related projects, subsidiary programs, and program activities managed together to obtain benefits not available from managing them individually. Programs exist because coordinating related work creates value the individual projects couldn't achieve alone.\n\nA **portfolio** is a collection of projects, programs, and operations managed as a group to achieve strategic objectives. Portfolio management is about doing the *right* projects; project management is about doing projects *right*."
+      },
+      {
+        "title": "Operations",
+        "content": "**Operations** are ongoing, repetitive work that sustains the business (running a factory line, processing payroll). Projects end; operations continue. A project frequently ends by handing its output into ongoing operations.\n\nA useful way to think about the relationship: a portfolio contains programs and projects aligned to strategy; a program coordinates related projects for shared benefit; a project delivers a specific, bounded outcome; and operations absorb and sustain what the project produced."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Watch for scenarios that test whether you can tell a project apart from operational work (a one-time system migration is a project; the ongoing IT helpdesk that supports it afterward is operations), and whether a described activity belongs at the project, program, or portfolio level based on its scope and strategic framing."
+      }
+    ],
+    "key_terms": [
+      "project",
+      "program",
+      "portfolio",
+      "operations",
+      "temporary",
+      "unique",
+      "strategic alignment"
+    ],
+    "exam_traps": [
+      "Assuming any large or complex initiative is automatically a 'program' — the defining feature is coordinated related projects for shared benefit, not size alone.",
+      "Confusing 'doing projects right' (project management) with 'doing the right projects' (portfolio management) — the exam tests this distinction directly.",
+      "Treating a project's handoff to operations as the project's failure rather than its normal, intended conclusion."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Project",
+        "definition": "A temporary endeavor undertaken to create a unique product, service, or result."
+      },
+      {
+        "term": "Program",
+        "definition": "A group of related projects and activities managed together for benefits not available from managing them individually."
+      },
+      {
+        "term": "Portfolio",
+        "definition": "A collection of projects, programs, and operations managed as a group to achieve strategic objectives."
+      },
+      {
+        "term": "Operations",
+        "definition": "Ongoing, repetitive work that sustains the business, distinct from the temporary nature of a project."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S2",
+      "S5"
+    ]
+  },
+  {
+    "id": "c002",
+    "lesson_type": "concept",
+    "title": "PMBOK 8 Domains, Focus Areas, and the 40-Process Map",
+    "module": "PMBOK 8 Structural Model",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Scope",
+      "Schedule",
+      "Finance",
+      "Stakeholders",
+      "Resources",
+      "Risk"
+    ],
+    "focus_areas": [
+      "Initiating",
+      "Planning",
+      "Executing",
+      "Monitoring and Controlling",
+      "Closing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 1: Define and establish project governance"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Name and describe the seven PMBOK 8 Performance Domains and the five Focus Areas.",
+      "Explain how Performance Domains (the 'what') and Focus Areas (the 'when') form a two-axis structure.",
+      "Describe the role of the 40 non-prescriptive processes within that structure."
+    ],
+    "sections": [
+      {
+        "title": "Two Intersecting Axes",
+        "content": "PMBOK 8 organizes project management along two intersecting axes, and understanding both is foundational to everything else in this course."
+      },
+      {
+        "title": "Performance Domains (the What)",
+        "content": "**Performance Domains** describe seven areas of practice that matter throughout a project: **Governance, Scope, Schedule, Finance, Stakeholders, Resources, and Risk**. These replaced PMBOK 7's more abstract eight domains, and before that, PMBOK 6's ten knowledge areas — each edition reorganizing the same underlying body of practice."
+      },
+      {
+        "title": "Focus Areas (the When)",
+        "content": "**Focus Areas** describe five lifecycle groupings: **Initiating, Planning, Executing, Monitoring and Controlling, and Closing**. These are the same five Process Groups long-time practitioners will recognize, reframed as approach-agnostic — they apply whether a project is predictive, agile, or hybrid, not just a waterfall sequence."
+      },
+      {
+        "title": "The 40-Process Map",
+        "content": "Where the two axes intersect, PMBOK 8 places **40 non-prescriptive processes** — practices with recognizable inputs, tools/techniques, and outputs (ITTOs), but framed as *options to tailor*, not mandatory steps. This is a deliberate middle ground: PMBOK 6 was criticized as too rigid with 49 prescriptive processes; PMBOK 7 was criticized as too abstract with no process detail at all."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "The key skill isn't memorizing all 40 processes — it's recognizing which Performance Domain and Focus Area a described activity belongs to, and understanding that the process itself is a *tailorable option*, not a required checklist step."
+      }
+    ],
+    "key_terms": [
+      "performance domains",
+      "focus areas",
+      "process groups",
+      "non-prescriptive processes",
+      "ITTO",
+      "tailoring"
+    ],
+    "exam_traps": [
+      "Treating the 40 processes as mandatory steps rather than tailorable options.",
+      "Confusing Performance Domains (what areas matter) with Focus Areas (when in the lifecycle).",
+      "Assuming Focus Areas imply a strict sequential waterfall — they're approach-agnostic and apply to agile and hybrid work too."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Performance Domain",
+        "definition": "One of seven areas of practice (Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk) critical throughout a project."
+      },
+      {
+        "term": "Focus Area",
+        "definition": "One of five lifecycle groupings (Initiating, Planning, Executing, Monitoring and Controlling, Closing) — the renamed Process Groups."
+      },
+      {
+        "term": "Non-prescriptive process",
+        "definition": "A tailorable practice with recognizable ITTOs, offered as an option rather than a mandatory step."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S1",
+      "S8"
+    ]
+  },
+  {
+    "id": "c003",
+    "lesson_type": "concept",
+    "title": "Project Phases, Deliverables, and Phase Gates",
+    "module": "Life Cycles and Tailoring",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Schedule"
+    ],
+    "focus_areas": [
+      "Initiating",
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define project life cycle, phase, and phase gate.",
+      "Compare sequential, overlapping, and iterative phase relationships.",
+      "Explain the changing cost of change across a project's life cycle and why it justifies phase gates."
+    ],
+    "sections": [
+      {
+        "title": "Life Cycle and Phases",
+        "content": "A **project life cycle** is the series of phases a project passes through from start to finish. A **phase** is a collection of logically related project activities culminating in the completion of one or more deliverables."
+      },
+      {
+        "title": "Phase Relationships",
+        "content": "Phases can be organized in different relationships:\n- **Sequential** — one phase finishes before the next starts\n- **Overlapping** — a phase starts before the prior one finishes, used to compress schedule\n- **Iterative** — phases repeat as understanding deepens, refining the product incrementally"
+      },
+      {
+        "title": "Phase Gates",
+        "content": "A **phase gate** (stage gate, phase review, kill point) is a review at the end of a phase where a decision is made: continue, continue with modifications, end the project, or repeat the phase. Phase gates exist to prevent bad investments from continuing purely on momentum."
+      },
+      {
+        "title": "The Changing Cost of Change",
+        "content": "Early in a project, changes are relatively cheap because little has been built yet. As the project progresses, the cost of making a change (or fixing a defect) rises sharply. This justifies planning rigor early and using phase gates to catch problems while they're still cheap to fix."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Phase-gate scenarios often test whether you'd recommend continuing a struggling project (sunk cost reasoning is a trap) versus making a governance-based go/no-go call using current data."
+      }
+    ],
+    "key_terms": [
+      "life cycle",
+      "phase",
+      "phase gate",
+      "kill point",
+      "sequential phases",
+      "overlapping phases",
+      "cost of change"
+    ],
+    "exam_traps": [
+      "Sunk cost reasoning — recommending continuation because of resources already spent, rather than evaluating current data.",
+      "Assuming phase gates only exist in predictive projects.",
+      "Confusing 'phase' (project-specific, variable count) with 'Focus Area' (fixed, universal five)."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Phase gate",
+        "definition": "A review at the end of a phase to decide whether to continue, modify, end, or repeat."
+      },
+      {
+        "term": "Sequential phases",
+        "definition": "Phases where one finishes before the next starts."
+      },
+      {
+        "term": "Cost of change",
+        "definition": "The tendency for the cost of making changes or fixing defects to rise as a project progresses."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S4",
+      "S8"
+    ]
+  },
+  {
+    "id": "c004",
+    "lesson_type": "concept",
+    "title": "The Six Project Management Principles",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Initiating"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 1: Develop a common vision"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "List and briefly explain each of the six PMBOK 8 principles.",
+      "Apply the principles as a tiebreaker when multiple exam answer choices seem technically defensible.",
+      "Explain why principles are decision-making lenses rather than rigid rules."
+    ],
+    "sections": [
+      {
+        "title": "From Twelve to Six",
+        "content": "PMBOK 8 consolidates project management principles down to **six**, refined from the twelve introduced in PMBOK 7 to reduce overlap and make them easier to apply under exam pressure."
+      },
+      {
+        "title": "The Six Principles",
+        "content": "1. **Adopt a Holistic View** — see the project within its broader context.\n2. **Focus on Value** — every activity should connect to intended outcomes.\n3. **Embed Quality Into Processes and Deliverables** — build quality in rather than inspecting for it later.\n4. **Be an Accountable Leader** — take ownership regardless of formal authority.\n5. **Integrate Sustainability Within All Project Areas** — consider environmental, social, and economic impact.\n6. **Build an Empowered Culture** — foster a team that's trusted to make decisions within its scope."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "These aren't rigid rules — they're decision-making lenses. When multiple options seem plausible, the answer reflecting proactive ownership, value-focus, and empowerment over rigid rule-following is usually the intended one."
+      }
+    ],
+    "key_terms": [
+      "holistic view",
+      "value focus",
+      "embedded quality",
+      "accountable leadership",
+      "sustainability",
+      "empowered culture"
+    ],
+    "exam_traps": [
+      "Picking the answer that follows a rigid process step over the one reflecting better judgment and value focus.",
+      "Treating 'embed quality' as only a Quality-domain concept.",
+      "Assuming an empowered team means no accountability — principles 4 and 6 work together."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Focus on Value",
+        "definition": "Ensure every project activity contributes to intended outcomes, not just deliverables."
+      },
+      {
+        "term": "Accountable Leader",
+        "definition": "Demonstrating responsibility and ethical conduct regardless of formal authority level."
+      },
+      {
+        "term": "Empowered Culture",
+        "definition": "A team environment where people are trusted and capable of making decisions within their scope."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S3"
+    ]
+  },
+  {
+    "id": "c005",
+    "lesson_type": "concept",
+    "title": "Project Charter, Business Case, and Benefits Plan",
+    "module": "Governance and Integration",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Finance"
+    ],
+    "focus_areas": [
+      "Initiating"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 1: Define and establish project governance"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Explain the purpose of the business case, project charter, and benefits management plan.",
+      "Describe why charter approval functions as a hard gate before planning begins.",
+      "Distinguish delivering a project successfully from realizing its intended benefits."
+    ],
+    "sections": [
+      {
+        "title": "Business Case",
+        "content": "The **business case** answers whether the project is worth doing at all: it documents the business need, analyzes feasible options, and provides the justification for investing organizational resources."
+      },
+      {
+        "title": "Project Charter",
+        "content": "The **project charter** formally authorizes the project's existence and gives the project manager authority to apply organizational resources. Without a charter, a project manager has no formal standing to commit resources — this is why charter approval is treated as a hard gate before real planning begins."
+      },
+      {
+        "title": "Benefits Management Plan",
+        "content": "The **benefits management plan** describes how and when the benefits promised in the business case will actually be delivered and measured — often extending beyond the project's own end date. This plan typically names a benefits owner responsible for tracking realization after the project team has moved on."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Business case justifies investment → charter authorizes the project → project delivers outputs → benefits plan tracks whether those outputs produced the promised value. Exam scenarios test whether you recognize a project can be delivered successfully while still failing to realize its intended benefits."
+      }
+    ],
+    "key_terms": [
+      "business case",
+      "project charter",
+      "benefits management plan",
+      "benefits realization",
+      "project authorization",
+      "benefits owner"
+    ],
+    "exam_traps": [
+      "Equating on-time/on-budget delivery with project success — benefits realization is a separate, later measure.",
+      "Assuming the project manager can commit resources before the charter is approved.",
+      "Forgetting the benefits management plan's tracking often continues after the project itself has closed."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Business case",
+        "definition": "The document justifying the business need and investment for a project."
+      },
+      {
+        "term": "Project charter",
+        "definition": "The document formally authorizing a project and granting the project manager authority to apply resources."
+      },
+      {
+        "term": "Benefits management plan",
+        "definition": "Describes how and when a project's promised benefits will be delivered and measured, including after closure."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c006",
+    "lesson_type": "concept",
+    "title": "Integrated Project Management Plan and Baselines",
+    "module": "Governance and Integration",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define the integrated project management plan and its subsidiary plans.",
+      "Define scope, schedule, and cost baselines and explain their role in measuring performance.",
+      "Explain why internal consistency across subsidiary plans is the core purpose of integration."
+    ],
+    "sections": [
+      {
+        "title": "What the Integrated Plan Is",
+        "content": "The **project management plan** is the document that describes how the project will be executed, monitored, controlled, and closed. It's not one document but an integrated collection of subsidiary plans (scope, schedule, cost, quality, resources, communications, risk, procurement, stakeholder) that must work together coherently."
+      },
+      {
+        "title": "Subsidiary Plans and Baselines",
+        "content": "A **baseline** is the approved version of a plan component used as a basis for comparing actual performance — most commonly the **scope baseline**, **schedule baseline**, and **cost baseline**. A baseline only changes through formal change control; it isn't simply updated whenever work shifts."
+      },
+      {
+        "title": "Why Integration Matters",
+        "content": "Integration means the subsidiary plans agree with each other: the schedule reflects the approved scope, the budget reflects the approved schedule, and so on. A discovered inconsistency between subsidiary plans — even one each specialist developed correctly in isolation — needs to be reconciled before the plan is trustworthy."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Watch for scenarios describing a conflict between two subsidiary plans or between current performance and a baseline. The correct response is almost always to reconcile through the integrated plan and formal change control, not to let one subsidiary plan quietly override another."
+      }
+    ],
+    "key_terms": [
+      "integrated project management plan",
+      "subsidiary plan",
+      "baseline",
+      "scope baseline",
+      "schedule baseline",
+      "cost baseline"
+    ],
+    "exam_traps": [
+      "Treating subsidiary plans as independent silos rather than parts of one coherent integrated plan.",
+      "Confusing a 'plan' (intended approach) with a 'baseline' (the approved reference point performance is measured against).",
+      "Assuming a baseline can be informally adjusted to match actual progress rather than only through formal change control."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Baseline",
+        "definition": "The approved version of a plan component used as a basis for comparing actual performance."
+      },
+      {
+        "term": "Integrated project management plan",
+        "definition": "The coherent collection of subsidiary plans describing how a project will be executed, monitored, controlled, and closed."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c007",
+    "lesson_type": "concept",
+    "title": "Common ITTO Patterns: EEFs, OPAs, Plans, and Documents",
+    "module": "Common ITTO Layer",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define Enterprise Environmental Factors (EEFs) and Organizational Process Assets (OPAs).",
+      "Recognize the repeating ITTO (input-tool/technique-output) pattern across processes.",
+      "Distinguish the project management plan from project documents as two different categories of output."
+    ],
+    "sections": [
+      {
+        "title": "The ITTO Pattern",
+        "content": "Nearly every PMBOK process follows the same shape: **Inputs** (what you need to start), **Tools and Techniques** (how you do the work), and **Outputs** (what you produce). Recognizing this repeating pattern is more valuable than memorizing every process's specific ITTO list."
+      },
+      {
+        "title": "Enterprise Environmental Factors (EEFs)",
+        "content": "**EEFs** are conditions, not under the project team's direct control, that influence, constrain, or direct the project — organizational culture, market conditions, government regulations, infrastructure, and similar external or internal environmental factors."
+      },
+      {
+        "title": "Organizational Process Assets (OPAs)",
+        "content": "**OPAs** are the organization's own accumulated assets — templates, historical information, lessons learned repositories, policies, and procedures — available to help plan and execute the project."
+      },
+      {
+        "title": "Plans vs. Documents",
+        "content": "The **project management plan** describes how the project will be managed. **Project documents** (like the risk register, issue log, or stakeholder register) are working records used throughout execution but aren't themselves part of the formal management plan."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "When a scenario names a specific factor (a new regulation, a company template), classifying it correctly as an EEF or OPA is often the real test — regulations and market conditions are EEFs; templates and lessons-learned repositories are OPAs."
+      }
+    ],
+    "key_terms": [
+      "EEF",
+      "OPA",
+      "ITTO",
+      "project management plan",
+      "project documents"
+    ],
+    "exam_traps": [
+      "Confusing EEFs (external/internal conditions outside the team's control) with OPAs (the organization's own accumulated assets).",
+      "Assuming ITTOs must be memorized process-by-process rather than recognized as a repeating input-tool-output pattern.",
+      "Treating project documents as part of the formal management plan rather than separate working records."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "EEF",
+        "definition": "A condition outside the project team's direct control that influences, constrains, or directs the project."
+      },
+      {
+        "term": "OPA",
+        "definition": "An organization's own accumulated assets — templates, historical data, lessons learned — available to support the project."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c008",
+    "lesson_type": "concept",
+    "title": "Work Performance Data, Information, and Reports",
+    "module": "Governance and Integration",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 9: Evaluate project status"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define work performance data, work performance information, and work performance reports.",
+      "Explain the escalating hierarchy from raw data to contextualized information to formatted reports.",
+      "Describe how this hierarchy supports the Monitoring and Controlling focus area."
+    ],
+    "sections": [
+      {
+        "title": "An Escalating Hierarchy",
+        "content": "Project status flows through three increasingly processed stages, and confusing them is a common exam trap."
+      },
+      {
+        "title": "Work Performance Data",
+        "content": "**Work performance data** is the raw, unanalyzed observations and measurements collected during execution — hours worked, defects found, costs incurred. It's not yet interpreted."
+      },
+      {
+        "title": "Work Performance Information",
+        "content": "**Work performance information** is the data after it's been analyzed and put in context — comparing actual to planned, calculating variances, identifying trends. This is what actually informs decisions."
+      },
+      {
+        "title": "Work Performance Reports",
+        "content": "**Work performance reports** are the physical or electronic representation of performance information, compiled to support decision-making, raise issues, or communicate status to stakeholders."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "A scenario describing raw numbers being collected is testing 'data.' A scenario describing analysis, variance, or trend identification is testing 'information.' A scenario describing something being formatted and distributed to stakeholders is testing 'reports.'"
+      }
+    ],
+    "key_terms": [
+      "work performance data",
+      "work performance information",
+      "work performance reports"
+    ],
+    "exam_traps": [
+      "Treating data, information, and reports as interchangeable terms rather than a defined hierarchy.",
+      "Assuming raw data alone is sufficient for a status update without analysis or context.",
+      "Confusing 'information' (analyzed) with 'reports' (formatted and distributed) — information feeds into reports, it isn't the same artifact."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Work performance data",
+        "definition": "Raw, unanalyzed observations and measurements collected during project execution."
+      },
+      {
+        "term": "Work performance information",
+        "definition": "Performance data after analysis and contextualization, such as calculated variances or trends."
+      },
+      {
+        "term": "Work performance reports",
+        "definition": "The compiled, formatted representation of performance information used for decision-making and communication."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c009",
+    "lesson_type": "concept",
+    "title": "PMO Types and Organizational Structures",
+    "module": "PM Foundations",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Initiating"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 1: Define and establish project governance"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define a PMO and describe its three common types.",
+      "Explain how organizational structure affects project manager authority.",
+      "Distinguish weak, balanced, and strong matrix structures."
+    ],
+    "sections": [
+      {
+        "title": "What a PMO Does",
+        "content": "A **Project Management Office (PMO)** is an organizational structure that standardizes project-related governance and facilitates the sharing of resources, methodologies, tools, and techniques across projects."
+      },
+      {
+        "title": "Three PMO Types",
+        "content": "- **Supportive** — advisory role, provides templates and best practices, low control\n- **Controlling** — requires compliance with specific frameworks or methodologies, moderate control\n- **Directive** — takes direct control of projects, providing project management experience and resources, high control"
+      },
+      {
+        "title": "Organizational Structures and PM Authority",
+        "content": "A project manager's authority varies significantly by structure: in a **functional** structure, authority is low and resources report to functional managers; in a **projectized** structure, authority is high and resources report directly to the project manager; a **matrix** structure sits in between, with weak, balanced, and strong variants reflecting increasing project manager authority."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "A scenario naming a specific structure or PMO type is testing whether you know how much real authority the project manager holds in that context — this frequently determines whether the 'right' answer involves the project manager deciding directly or negotiating with a functional manager."
+      }
+    ],
+    "key_terms": [
+      "PMO",
+      "supportive PMO",
+      "controlling PMO",
+      "directive PMO",
+      "functional structure",
+      "matrix structure",
+      "projectized structure"
+    ],
+    "exam_traps": [
+      "Assuming all PMOs have direct control over projects — a supportive PMO's role is largely advisory.",
+      "Confusing matrix strength (weak/balanced/strong) with the project manager's actual formal authority, which varies significantly across that spectrum.",
+      "Assuming a projectized structure has no PMO involvement — a PMO can still exist to standardize practice even where the PM holds high authority."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Directive PMO",
+        "definition": "A PMO type that takes direct control of projects, providing project management experience and resources."
+      },
+      {
+        "term": "Strong matrix",
+        "definition": "An organizational structure where the project manager holds significant authority, though resources still have a functional reporting line."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S2",
+      "S5"
+    ]
+  },
+  {
+    "id": "c010",
+    "lesson_type": "concept",
+    "title": "Project vs. Product Management",
+    "module": "PM Foundations",
+    "production_group": "Foundation Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Initiating"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish project manager responsibilities from product manager responsibilities.",
+      "Explain how product thinking (ongoing value delivery) differs from project thinking (bounded deliverable).",
+      "Describe why product-centric organizations blend both roles."
+    ],
+    "sections": [
+      {
+        "title": "Two Related but Different Roles",
+        "content": "A **project manager** and a **product manager** are complementary roles with different time horizons, and confusing them is a common exam trap."
+      },
+      {
+        "title": "Project Manager Focus",
+        "content": "The project manager is responsible for delivering a specific, bounded outcome within defined constraints — scope, schedule, cost, quality, resources, risk. Their responsibility typically ends when the project closes."
+      },
+      {
+        "title": "Product Manager Focus",
+        "content": "The product manager is responsible for a product's ongoing vision, strategy, and value delivery across its entire life cycle, which continues well beyond any single project. They own the 'why' behind what gets built, informed by market and user needs."
+      },
+      {
+        "title": "Where They Intersect",
+        "content": "In product-centric and agile organizations, these roles work closely together: the product manager (often via a product owner role) prioritizes what has value, while the project manager (or equivalent delivery lead) ensures the work is planned and executed effectively."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "A scenario testing whether a decision belongs to 'the project manager' or 'the product owner/manager' is usually testing whether you understand this project-bounded versus product-lifecycle distinction, not just organizational titles."
+      }
+    ],
+    "key_terms": [
+      "project manager",
+      "product manager",
+      "product thinking",
+      "product life cycle",
+      "value stream"
+    ],
+    "exam_traps": [
+      "Assuming a project manager's responsibility extends to product vision — that's typically the product manager's domain.",
+      "Assuming these roles are interchangeable rather than complementary with different time horizons.",
+      "Forgetting that a product's life cycle continues after any single project delivering into it has closed."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Product manager",
+        "definition": "Owns a product's ongoing vision, strategy, and value delivery across its entire life cycle."
+      },
+      {
+        "term": "Product life cycle",
+        "definition": "The full span of a product's existence, continuing beyond any single project delivering into it."
+      }
+    ],
+    "knowledge_checks": {
+      "status": "pending"
+    },
+    "related_question_ids": [],
+    "source_refs": [
+      "S2",
+      "S10"
+    ]
+  }
+]
