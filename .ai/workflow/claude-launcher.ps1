@@ -116,7 +116,8 @@ function Get-ClaudeCliCapabilities {
 function New-ClaudeLaunchCommand {
     param(
         [Parameter(Mandatory = $true)]$LaunchSpec,
-        [switch]$DisableTools
+        [switch]$DisableTools,
+        [string[]]$AllowedTools = @()
     )
 
     $arguments = @([string]$LaunchSpec.PrintFlag)
@@ -125,6 +126,9 @@ function New-ClaudeLaunchCommand {
             throw "Claude CLI does not advertise '--tools'; a tool-disabled prompt probe cannot run safely."
         }
         $arguments += @("$($LaunchSpec.ToolsFlag)=")
+    }
+    if (@($AllowedTools).Count -gt 0) {
+        $arguments += @("--allowedTools") + @($AllowedTools)
     }
 
     return [pscustomobject]@{
@@ -139,10 +143,11 @@ function Invoke-ClaudePrompt {
     param(
         [Parameter(Mandatory = $true)]$LaunchSpec,
         [Parameter(Mandatory = $true)][string]$Prompt,
-        [switch]$DisableTools
+        [switch]$DisableTools,
+        [string[]]$AllowedTools = @()
     )
 
-    $launch = New-ClaudeLaunchCommand -LaunchSpec $LaunchSpec -DisableTools:$DisableTools
+    $launch = New-ClaudeLaunchCommand -LaunchSpec $LaunchSpec -DisableTools:$DisableTools -AllowedTools $AllowedTools
     $arguments = @($launch.Arguments)
     $displayArguments = @($arguments | ForEach-Object { if ($_ -eq "") { '""' } else { $_ } }) -join " "
     Write-Host "> $($launch.Command) $displayArguments <prompt via stdin>"

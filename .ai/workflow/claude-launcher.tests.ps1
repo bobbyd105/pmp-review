@@ -117,6 +117,13 @@ Assert-Equal -Name "probe argument count" -Actual @($probeLaunch.Arguments).Coun
 Assert-Equal -Name "probe tools argument" -Actual @($probeLaunch.Arguments)[1] -Expected "--tools="
 Write-Host "[PASS] tool-disabled probe uses advertised flags only"
 
+$allowedToolsLaunch = New-ClaudeLaunchCommand -LaunchSpec $modern -AllowedTools @("Bash(codex *)", "Edit(.ai/workflow/runs/feature/results/B01-result.json)")
+Assert-Equal -Name "allowedTools argument count" -Actual @($allowedToolsLaunch.Arguments).Count -Expected 4
+Assert-Equal -Name "allowedTools flag position" -Actual @($allowedToolsLaunch.Arguments)[1] -Expected "--allowedTools"
+Assert-Equal -Name "allowedTools first entry" -Actual @($allowedToolsLaunch.Arguments)[2] -Expected "Bash(codex *)"
+Assert-Equal -Name "allowedTools second entry" -Actual @($allowedToolsLaunch.Arguments)[3] -Expected "Edit(.ai/workflow/runs/feature/results/B01-result.json)"
+Write-Host "[PASS] allowedTools are appended as a single flag with each entry as its own argument"
+
 Assert-Throws -Name "unsupported Claude CLI fails closed" -ExpectedMessage "non-interactive print flag" -Action {
     $null = New-ClaudeLaunchSpec -Command "claude" -HelpText "Usage: claude [prompt]" -Version "unknown"
 }

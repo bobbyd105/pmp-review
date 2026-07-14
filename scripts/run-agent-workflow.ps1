@@ -247,7 +247,9 @@ function Invoke-SmokeTest {
         }
 
         Write-Host "- Batch $($batch.id): $($batch.title)"
-        $claudeLaunch = New-ClaudeLaunchCommand -LaunchSpec $ClaudeCapabilities
+        $previewResultPath = Get-BatchResultPath -RunsRoot $RunsRoot -FeatureId $Plan.feature_id -BatchId $batch.id
+        $previewAllowedTools = Get-ClaudeBatchAllowedTools -Providers $Providers -Batch $batch -ResultPath $previewResultPath
+        $claudeLaunch = New-ClaudeLaunchCommand -LaunchSpec $ClaudeCapabilities -AllowedTools $previewAllowedTools
         Write-Host "  > <generated prompt for $($batch.id)> | $($claudeLaunch.Command) $(@($claudeLaunch.Arguments) -join ' ')"
         Write-Host "    $($Providers.Orchestrator.DisplayName) delegates implementation to $($Providers.Worker.DisplayName) using '$($Providers.Worker.Command)'."
         foreach ($command in @($batch.validation_commands)) {
@@ -382,6 +384,33 @@ function Assert-BatchResult {
     }
 }
 
+function Get-BatchResultPath {
+    param(
+        [Parameter(Mandatory = $true)][string]$RunsRoot,
+        [Parameter(Mandatory = $true)][string]$FeatureId,
+        [Parameter(Mandatory = $true)][string]$BatchId
+    )
+
+    return Join-Path (Join-Path (Join-Path $RunsRoot $FeatureId) "results") "$BatchId-result.json"
+}
+
+function Get-ClaudeBatchAllowedTools {
+    param(
+        [Parameter(Mandatory = $true)]$Providers,
+        [Parameter(Mandatory = $true)]$Batch,
+        [Parameter(Mandatory = $true)][string]$ResultPath
+    )
+
+    $tools = [System.Collections.Generic.List[string]]::new()
+    $tools.Add("Bash($($Providers.Worker.Command) *)")
+    $tools.Add("Bash(git diff*)")
+    foreach ($command in @($Batch.validation_commands)) {
+        $tools.Add("Bash($([string]$command)*)")
+    }
+    $tools.Add("Edit($($ResultPath.Replace('\', '/')))")
+    return @($tools | Select-Object -Unique)
+}
+
 function Invoke-ClaudeBatch {
     param(
         [Parameter(Mandatory = $true)]$Plan,
@@ -418,8 +447,10 @@ function Invoke-ClaudeBatch {
     $prompt = $basePrompt + [Environment]::NewLine + [Environment]::NewLine +
         "## Controller payload" + [Environment]::NewLine +
         '```json' + [Environment]::NewLine + $payload + [Environment]::NewLine + '```'
+    $allowedTools = Get-ClaudeBatchAllowedTools -Providers $Providers -Batch $Batch -ResultPath $ResultPath
     Write-Host "Starting fresh $($Providers.Orchestrator.DisplayName) session for batch $($Batch.id)..."
-    $launchResult = Invoke-ClaudePrompt -LaunchSpec $ClaudeCapabilities -Prompt $prompt
+    Write-Host "  Allowed tools: $($allowedTools -join ', ')"
+    $launchResult = Invoke-ClaudePrompt -LaunchSpec $ClaudeCapabilities -Prompt $prompt -AllowedTools $allowedTools
     $launchResult.Output | ForEach-Object { Write-Host ([string]$_) }
     if ($launchResult.ExitCode -ne 0) {
         throw "$($Providers.Orchestrator.DisplayName) exited with code $($launchResult.ExitCode) for batch $($Batch.id)."
@@ -505,7 +536,7 @@ foreach ($batch in $plan.batches) {
         continue
     }
 
-    $resultPath = Join-Path $resultDirectory "$($batch.id)-result.json"
+    $resultPath = Get-BatchResultPath -RunsRoot $RunsRoot -FeatureId $plan.feature_id -BatchId $batch.id
     if (Test-Path -LiteralPath $resultPath) {
         Remove-Item -LiteralPath $resultPath -Force
     }
