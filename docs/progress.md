@@ -1,13 +1,11 @@
 # Progress
 
 ## Current Version
-Current working state: v0.7 runtime plus the completed curriculum architecture
-baseline and an uncommitted knowledge-layer/content-production framework. The
-local slice adds 59 concept graph records, 59 planned lessons with 118
-objectives, representative glossary/formula catalogs, 12 reference-sheet
-definitions, adaptive/metadata/pipeline/future-state models, and validation.
-No production lessons or questions were changed. No commit or push was made
-for the knowledge-layer mission.
+Current working state: v0.7 runtime plus the merged curriculum architecture and
+knowledge-layer baseline. This closeout balances all 384 questions across the
+four correct-answer positions, adds reproducible answer-bias measurement, and
+ingests the complete ten-lesson Foundation Block (c001-c010) as Authored concept
+assets. Knowledge checks and direct production-question links remain pending.
 
 Prior v0.7 summary follows.
 
@@ -21,7 +19,29 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 155Q/10L, Business Environment 99Q/8L).
 
 ## Completed Work
-- Knowledge Layer & Content Production Framework (local working tree,
+- Answer-bias closeout and Foundation Block ingestion (2026-07-13):
+  - Reordered option arrays deterministically with the committed
+    `pmp-options-v1` seed. Correct-answer text and all question wording are
+    unchanged; positions are exactly balanced at 96 / 96 / 96 / 96.
+  - Added a hard answer-position distribution guard (no position may exceed
+    40%) and a reproducibility/idempotence check.
+  - Added character-length measurement and a generated worst-first report.
+    315/384 questions exceed the 1.3 correct/average-distractor ratio and
+    364/384 (94.8%) have a strictly longest correct answer. This remains an
+    explicit editorial remediation blocker; no wording changed in this slice.
+  - Added `data/concept_lessons.json` with the supplied c001-c010 Foundation
+    Block records, preserving empty glossary/reference/formula links, pending
+    knowledge checks, and empty related-question links.
+  - Added validation for required fields, exact unique IDs, Foundation Block
+    membership, module/PMBOK/focus-area/approach enums, current ECO mappings,
+    deferred assessment fields, and source references.
+  - Recorded the single-author/single-reviewer approval workflow in Decision
+    #11 and marked the ten assets Authored in the coverage matrix without
+    changing canonical unit lifecycle statuses.
+  - Validation: focused 3 files / 9 tests pass; full suite 18 files / 139 tests
+    passes; production build passes with the existing non-blocking large-chunk
+    warning.
+- Knowledge Layer & Content Production Framework (merged via PR #21,
   2026-07-13):
   - Added a canonical 59-concept graph with reciprocal hierarchy/related
     relationships, acyclic prerequisites, ECO/PMBOK mappings, and planned/
@@ -267,6 +287,11 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   All 114 tests pass with the file-scoped Question Bank timeout.
 
 ## Files Modified
+- Answer-bias/Foundation closeout: `data/questions.json`,
+  `data/concept_lessons.json`, `scripts/shuffle-question-options.mjs`,
+  `scripts/report-length-bias.mjs`, three focused tests,
+  `docs/content/length_bias_report.md`, `docs/content/coverage_matrix.md`,
+  `docs/decision_log.md`, `package.json`, `docs/app-map.html`, and this file.
 - Knowledge layer: `data/knowledge_graph.json`,
   `data/learning_objectives.json`, `data/glossary_catalog.json`,
   `data/formula_catalog.json`, `data/reference_sheet_catalog.json`,
@@ -294,6 +319,11 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   package.json (version bump), docs/app-map.html, docs/progress.md
 
 ## Architecture Changes
+- The production curriculum now has a separate validated concept-lesson
+  catalog. It is an authored content source but has no runtime UI consumer yet;
+  the existing ECO lesson schema and the 59-unit planning catalog are unchanged.
+  Question option order is now a reproducible generated property, while answer
+  length is an independently generated quality signal.
 - Knowledge layer: concepts and objectives now form the canonical instructional
   dependency layer between the coverage catalog and future lessons/questions.
   Taxonomy, prerequisites, and related links are distinct. Shared glossary,
@@ -314,11 +344,12 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   or lessons, no execution, no external calls.
 
 ## Known Issues
-- **Content-quality blocker:** 371/384 questions place the correct answer in
-  option B, and 349/384 make the correct answer the longest option. Quiz
-  scores are therefore vulnerable to non-content cues. No question was
-  changed during this audit; remediation requires a dedicated reviewed
-  migration.
+- **Content-quality blocker (partially resolved):** correct-answer positions
+  are now exactly balanced at 96 per position and protected by a hard test.
+  Length bias remains: 364/384 questions (94.8%) have a strictly longest
+  correct answer, and 315/384 exceed the 1.3 correct/average-distractor ratio.
+  Editorial wording remediation remains required before quiz scores can be
+  treated as strong content evidence.
 - Production build emits a large-chunk warning because the full local
   content bank is statically bundled. It is non-blocking for the local MVP.
 
@@ -350,11 +381,11 @@ data-contract tests (shape only) and still need the User's manual
 accuracy spot-check against the current ECO before merge.
 
 ## Current Status
-Knowledge-layer Phases 0-13 are complete in the local working tree. The prior
-curriculum architecture is preserved and extended rather than repeated.
-Planning infrastructure is read-only and validated; `data/questions.json` and
-`data/lessons.json` remain unchanged. No commit or push was performed for this
-mission.
+Knowledge-layer Phases 0-13 and their curriculum architecture baseline are
+merged on main via PR #21. The current closeout branch adds deterministic
+question option ordering, the length-bias report, and the Authored Foundation
+Block. `data/lessons.json` remains unchanged; concept lessons are isolated in
+`data/concept_lessons.json` and are not yet rendered by the app.
 
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
 to main (PR #6). Branch `content/eco-2026-remap` (open as PR #7) now holds
@@ -379,12 +410,11 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-Current recommendation: User/architecture review of the concept graph,
-objectives, mastery hypotheses, shared asset schemas, and sidecar metadata
-direction. After approval, run a separate question-bank quality remediation and
-metadata-readiness slice to fix answer-position/length bias before any quiz
-score becomes adaptive evidence. Only then migrate reviewed objective mappings
-and approve Priority A concept content in small batches.
+Current recommendation: perform the dedicated editorial length-bias remediation
+for the worst-first flagged question list, then enable a hard <=40%
+strict-longest acceptance gate. In parallel, review and author knowledge checks
+and direct question mappings for c001-c010 before exposing the Foundation Block
+in a learner-facing Comprehensive Course view.
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using

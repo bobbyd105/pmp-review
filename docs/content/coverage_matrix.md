@@ -20,6 +20,10 @@ Coverage is measured at the **concept-unit level**, not by ECO task counts alone
 
 No unit is marked Approved or Implemented in this audit because architecture work cannot self-approve production curriculum.
 
+**Authored** is tracked separately for production draft assets. It means the
+lesson record exists and validates; it does not mean its canonical concept unit
+is Implemented or that assessment assets are complete.
+
 ### Question-count caveat
 
 The count shown is derived from unique questions matching the unit’s ECO mappings. It is **ECO-aligned support**, not proof that every question directly assesses the concept. Direct objective/question mappings require a future reviewed metadata migration.
@@ -40,6 +44,26 @@ The complete many-to-many ECO and PMBOK mappings, source references, and lesson 
 | Dedicated planned units | 29 |
 | Approved | 0 |
 | Implemented comprehensive units | 0 |
+
+## Foundation Block authored assets
+
+The Foundation Block is fully authored as a coherent prerequisite group. These
+ten records preserve the supplied module tags, mappings, and source references.
+Knowledge checks and related production-question links remain pending, so the
+canonical unit lifecycle matrix below is unchanged.
+
+| Lesson ID | Title | Module tag | Asset status |
+|---|---|---|---|
+| c001 | Projects, Programs, Portfolios, and Operations | PM Foundations | Authored |
+| c002 | PMBOK 8 Domains, Focus Areas, and the 40-Process Map | PMBOK 8 Structural Model | Authored |
+| c003 | Project Phases, Deliverables, and Phase Gates | Life Cycles and Tailoring | Authored |
+| c004 | The Six Project Management Principles | Principles and PMP Mindset | Authored |
+| c005 | Project Charter, Business Case, and Benefits Plan | Governance and Integration | Authored |
+| c006 | Integrated Project Management Plan and Baselines | Governance and Integration | Authored |
+| c007 | Common ITTO Patterns: EEFs, OPAs, Plans, and Documents | Common ITTO Layer | Authored |
+| c008 | Work Performance Data, Information, and Reports | Governance and Integration | Authored |
+| c009 | PMO Types and Organizational Structures | PM Foundations | Authored |
+| c010 | Project vs. Product Management | PM Foundations | Authored |
 
 ## Module summary
 
