@@ -67,6 +67,8 @@ The executable workflow uses:
 - `.ai/workflow/current-state.example.json` — resumable state contract.
 - `.ai/workflow/batch-result.schema.json` — result contract Claude must satisfy.
 - `.ai/workflow/orchestrator-prompt.md` — prompt template for each fresh Claude session.
+- `.ai/workflow/claude-launcher.ps1` — Claude CLI capability detection and
+  prompt transport.
 - `scripts/run-agent-workflow.ps1` — Windows controller.
 
 Real runs should copy the examples to untracked or task-specific files, such as:
@@ -121,6 +123,31 @@ OpenAI API, local-model, or generic plugin integration exists. Supporting a
 future provider would require one reviewed registry entry and its explicit
 invocation behavior; arbitrary commands are never accepted from plan JSON.
 
+### Claude CLI launcher compatibility
+
+Before smoke or live execution, the controller inspects `claude --help`,
+selects the advertised `--print` flag (falling back to `-p`), then invokes the
+advertised version flag and reports the installed version. It fails closed if
+the installed CLI does not advertise a supported non-interactive print or
+version flag. No version-specific flag such as `--check` is hardcoded.
+
+On Windows, command discovery prefers a native or `.cmd` Claude entry point
+over the npm PowerShell shim because the shim calls `exit` after Claude returns.
+The generated orchestration prompt is sent through standard input, not placed
+in the CLI argument list. Consequently prompt content such as the approved
+validation command `git diff --check` cannot be reinterpreted as a Claude CLI
+option.
+
+Run the focused launcher construction tests with:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\.ai\workflow\claude-launcher.tests.ps1
+```
+
+The tests cover Windows entry-point selection, current long flags, short-flag
+fallback, fail-closed unsupported capabilities, tool-disabled probe command
+construction, and proof that prompt text never enters argv.
+
 ## Safe smoke test
 
 Run the included example configuration from the repository root:
@@ -136,6 +163,8 @@ available. It:
 - parses the master plan, workflow state, and batch-result schema;
 - verifies the orchestrator prompt and result schema exist;
 - accepts only `claude-code` plus `codex-cli` and resolves their commands;
+- detects and reports the installed Claude CLI version, supported print flag,
+  and stdin prompt transport;
 - checks `git`, `claude`, `codex`, and, with `-OpenPullRequest`, `gh` on PATH;
 - reports the current and configured branches, excluded controller runtime
   files, and any remaining blocking working-tree paths;
@@ -159,6 +188,8 @@ file or provider field is missing, a provider is unsupported, or a required
 command cannot be found. Common command failures are:
 
 - `claude` missing: install/configure Claude Code and ensure `claude` is on PATH;
+- Claude capability failure: update Claude Code to a version that advertises
+  `--print` or `-p` plus `--version` or `-v`;
 - `codex` missing: install/configure Codex CLI and ensure `codex` is on PATH;
 - `git` missing: install Git and ensure `git` is on PATH;
 - `gh` missing: install GitHub CLI, or omit `-OpenPullRequest` when only checking

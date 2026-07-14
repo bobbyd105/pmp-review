@@ -18,11 +18,17 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-$gitCleanlinessHelper = Join-Path (Split-Path -Parent $PSScriptRoot) ".ai\workflow\git-cleanliness.ps1"
-if (-not (Test-Path -LiteralPath $gitCleanlinessHelper -PathType Leaf)) {
-    throw "Required workflow file not found: $gitCleanlinessHelper"
+$workflowRoot = Join-Path (Split-Path -Parent $PSScriptRoot) ".ai\workflow"
+$workflowHelpers = @(
+    (Join-Path $workflowRoot "git-cleanliness.ps1"),
+    (Join-Path $workflowRoot "claude-launcher.ps1")
+)
+foreach ($helper in $workflowHelpers) {
+    if (-not (Test-Path -LiteralPath $helper -PathType Leaf)) {
+        throw "Required workflow file not found: $helper"
+    }
+    . $helper
 }
-. $gitCleanlinessHelper
 
 $script:ProviderRegistry = @{
     orchestrator = @{
@@ -44,7 +50,8 @@ $script:ProviderRegistry = @{
 $script:RequiredWorkflowFiles = @(
     ".ai/workflow/orchestrator-prompt.md",
     ".ai/workflow/batch-result.schema.json",
-    ".ai/workflow/git-cleanliness.ps1"
+    ".ai/workflow/git-cleanliness.ps1",
+    ".ai/workflow/claude-launcher.ps1"
 )
 
 function Invoke-CheckedCommand {
@@ -194,6 +201,7 @@ function Invoke-SmokeTest {
         [Parameter(Mandatory = $true)]$Plan,
         [Parameter(Mandatory = $true)]$State,
         [Parameter(Mandatory = $true)]$Providers,
+        [Parameter(Mandatory = $true)]$ClaudeCapabilities,
         [Parameter(Mandatory = $true)][string[]]$RequiredCommands
     )
 
@@ -205,6 +213,8 @@ function Invoke-SmokeTest {
     }
     Write-Host "[PASS] Orchestrator provider: $($Providers.Orchestrator.Id) -> $($Providers.Orchestrator.Command)"
     Write-Host "[PASS] Worker provider: $($Providers.Worker.Id) -> $($Providers.Worker.Command)"
+    Write-Host "[PASS] Claude CLI version: $($ClaudeCapabilities.Version)"
+    Write-Host "[PASS] Claude launch mode: $($ClaudeCapabilities.PrintFlag), prompt via $($ClaudeCapabilities.PromptTransport)"
 
     foreach ($name in $RequiredCommands) {
         $resolved = Get-Command $name -ErrorAction Stop
@@ -237,7 +247,8 @@ function Invoke-SmokeTest {
         }
 
         Write-Host "- Batch $($batch.id): $($batch.title)"
-        Write-Host "  > $($Providers.Orchestrator.Command) -p <generated prompt for $($batch.id)>"
+        $claudeLaunch = New-ClaudeLaunchCommand -LaunchSpec $ClaudeCapabilities
+        Write-Host "  > <generated prompt for $($batch.id)> | $($claudeLaunch.Command) $(@($claudeLaunch.Arguments) -join ' ')"
         Write-Host "    $($Providers.Orchestrator.DisplayName) delegates implementation to $($Providers.Worker.DisplayName) using '$($Providers.Worker.Command)'."
         foreach ($command in @($batch.validation_commands)) {
             Write-Host "  > $command"
@@ -377,7 +388,8 @@ function Invoke-ClaudeBatch {
         [Parameter(Mandatory = $true)]$State,
         [Parameter(Mandatory = $true)]$Batch,
         [Parameter(Mandatory = $true)][string]$ResultPath,
-        [Parameter(Mandatory = $true)]$Providers
+        [Parameter(Mandatory = $true)]$Providers,
+        [Parameter(Mandatory = $true)]$ClaudeCapabilities
     )
 
     $basePrompt = Get-Content -LiteralPath ".ai/workflow/orchestrator-prompt.md" -Raw
@@ -407,12 +419,10 @@ function Invoke-ClaudeBatch {
         "## Controller payload" + [Environment]::NewLine +
         '```json' + [Environment]::NewLine + $payload + [Environment]::NewLine + '```'
     Write-Host "Starting fresh $($Providers.Orchestrator.DisplayName) session for batch $($Batch.id)..."
-    $orchestratorCommand = $Providers.Orchestrator.Command
-    $output = & $orchestratorCommand -p $prompt 2>&1
-    $exitCode = $LASTEXITCODE
-    $output | ForEach-Object { Write-Host $_ }
-    if ($exitCode -ne 0) {
-        throw "$($Providers.Orchestrator.DisplayName) exited with code $exitCode for batch $($Batch.id)."
+    $launchResult = Invoke-ClaudePrompt -LaunchSpec $ClaudeCapabilities -Prompt $prompt
+    $launchResult.Output | ForEach-Object { Write-Host ([string]$_) }
+    if ($launchResult.ExitCode -ne 0) {
+        throw "$($Providers.Orchestrator.DisplayName) exited with code $($launchResult.ExitCode) for batch $($Batch.id)."
     }
     if (-not (Test-Path -LiteralPath $ResultPath)) {
         throw "Claude did not write the required batch result: $ResultPath"
@@ -458,6 +468,7 @@ try {
     $providers = Resolve-ProviderConfiguration -Plan $plan
     $requiredCommands = Get-RequiredCommandNames -Providers $providers -IncludeGitHubCli:$OpenPullRequest
     Assert-CommandsAvailable -Names $requiredCommands
+    $claudeCapabilities = Get-ClaudeCliCapabilities -Command $providers.Orchestrator.Command
 }
 catch {
     if ($SmokeTest) {
@@ -469,7 +480,7 @@ catch {
 
 if ($SmokeTest) {
     try {
-        Invoke-SmokeTest -Plan $plan -State $state -Providers $providers -RequiredCommands $requiredCommands
+        Invoke-SmokeTest -Plan $plan -State $state -Providers $providers -ClaudeCapabilities $claudeCapabilities -RequiredCommands $requiredCommands
         exit 0
     }
     catch {
@@ -500,7 +511,7 @@ foreach ($batch in $plan.batches) {
     }
 
     try {
-        Invoke-ClaudeBatch -Plan $plan -State $state -Batch $batch -ResultPath $resultPath -Providers $providers
+        Invoke-ClaudeBatch -Plan $plan -State $state -Batch $batch -ResultPath $resultPath -Providers $providers -ClaudeCapabilities $claudeCapabilities
         $result = Read-JsonFile $resultPath
         Assert-BatchResult -Result $result -FeatureId $plan.feature_id -BatchId $batch.id
         Invoke-ValidationCommands -Commands @($batch.validation_commands)

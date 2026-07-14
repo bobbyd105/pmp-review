@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-14 (batch-orchestrator runtime cleanliness refinement).
+<p>Last updated: 2026-07-14 (batch-orchestrator Claude launcher compatibility refinement).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -170,8 +170,13 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>scripts/run-agent-workflow.ps1</code></td>
-    <td>Bounded Windows batch controller. Reads explicit <code>claude-code</code>/<code>codex-cli</code> provider IDs, runs one fresh Claude Code orchestration session per approved batch, independently validates results and paths, owns checkpoint commits/pushes and one final draft PR, and fails closed for unsupported providers. <code>-SmokeTest</code> performs a read-only configuration/file/command/Git preflight and prints every planned action before any live run. Clean-tree checks exclude only controller-owned <code>current-state*.json</code>/<code>master-plan*.json</code> runtime files under <code>.ai/workflow/</code>.</td>
+    <td>Bounded Windows batch controller. Reads explicit <code>claude-code</code>/<code>codex-cli</code> provider IDs, runs one fresh Claude Code orchestration session per approved batch, independently validates results and paths, owns checkpoint commits/pushes and one final draft PR, and fails closed for unsupported providers or Claude CLI capabilities. <code>-SmokeTest</code> performs a read-only configuration/file/command/Git preflight and prints every planned action before any live run. Clean-tree checks exclude only controller-owned <code>current-state*.json</code>/<code>master-plan*.json</code> runtime files under <code>.ai/workflow/</code>.</td>
     <td><code>.ai/workflow/</code> plan/state/prompt/result contracts; local <code>git</code>, <code>claude</code>, <code>codex</code>, and optional <code>gh</code> commands</td>
+  </tr>
+  <tr>
+    <td><code>.ai/workflow/claude-launcher.ps1</code></td>
+    <td>Claude Code launcher boundary: resolves a non-terminating Windows entry point, detects help/version capabilities, selects supported print/version flags, fails closed when required flags are absent, constructs probe arguments, and sends prompt content through stdin so prompt text cannot become CLI options.</td>
+    <td><code>run-agent-workflow.ps1</code>; focused launcher construction tests</td>
   </tr>
   <tr>
     <td><code>.ai/workflow/git-cleanliness.ps1</code></td>
@@ -271,6 +276,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 <h2>Tests</h2>
 <table>
   <tr><th>File</th><th>Covers</th></tr>
+  <tr>
+    <td><code>.ai/workflow/claude-launcher.tests.ps1</code></td>
+    <td>Dependency-free launcher construction tests for Windows native/<code>.cmd</code> selection, preferred and fallback flags, unsupported-capability failure, tool-disabled probe arguments, and keeping prompt content such as <code>--check</code> out of argv.</td>
+  </tr>
   <tr>
     <td><code>.ai/workflow/git-cleanliness.tests.ps1</code></td>
     <td>Dependency-free temporary-repository regression cases proving clean and runtime-only trees pass while unrelated modified tracked and unrelated untracked files block with the actual path named.</td>
