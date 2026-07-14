@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-13",
+  "status": "representative-schema-validation",
+  "completeness_note": "Representative entries only. This catalog is not a complete PMP glossary and does not authorize production publication.",
+  "entries": [
+    {
+      "id": "G-PROJECT",
+      "term": "Project",
+      "definition": "A temporary endeavor undertaken to create a unique result and enable intended value.",
+      "common_confusion": "A recurring operational process can produce deliverables but is not temporary or unique in the same way.",
+      "exam_trap": "Treating any organized work as a project without checking temporary and unique characteristics.",
+      "related_concept_ids": [
+        "C001"
+      ],
+      "related_lesson_ids": [
+        "PL-C001"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "project foundations"
+        }
+      ]
+    },
+    {
+      "id": "G-PROGRAM",
+      "term": "Program",
+      "definition": "A coordinated group of related projects and activities managed together to obtain benefits unavailable from separate management.",
+      "common_confusion": "A large project is not automatically a program.",
+      "exam_trap": "Choosing program governance solely because work is complex or long.",
+      "related_concept_ids": [
+        "C003"
+      ],
+      "related_lesson_ids": [
+        "PL-C003"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "program and portfolio distinctions"
+        }
+      ]
+    },
+    {
+      "id": "G-PORTFOLIO",
+      "term": "Portfolio",
+      "definition": "Projects, programs, and other work grouped to support strategic objectives and investment decisions.",
+      "common_confusion": "Portfolio components need not be operationally related.",
+      "exam_trap": "Assuming portfolio management coordinates shared delivery dependencies like program management.",
+      "related_concept_ids": [
+        "C003"
+      ],
+      "related_lesson_ids": [
+        "PL-C003"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [
+        "F-ROI",
+        "F-NPV"
+      ],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "program and portfolio distinctions"
+        }
+      ]
+    },
+    {
+      "id": "G-OPERATIONS",
+      "term": "Operations",
+      "definition": "Ongoing, repeatable work that sustains the organization, products, or services.",
+      "common_confusion": "Operational improvement may be delivered through a project, but the resulting ongoing process remains operations.",
+      "exam_trap": "Keeping a project open indefinitely because its output continues to operate.",
+      "related_concept_ids": [
+        "C001",
+        "C003"
+      ],
+      "related_lesson_ids": [
+        "PL-C001",
+        "PL-C003"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "projects and operations"
+        }
+      ]
+    },
+    {
+      "id": "G-PMO",
+      "term": "Project Management Office (PMO)",
+      "definition": "An organizational structure that standardizes, supports, controls, or directs project-management practices according to its mandate.",
+      "common_confusion": "PMO authority varies; not every PMO directs project managers.",
+      "exam_trap": "Escalating every decision to the PMO without checking governance and authority.",
+      "related_concept_ids": [
+        "C009"
+      ],
+      "related_lesson_ids": [
+        "PL-C009"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-ORG-STRUCTURES"
+      ],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "PMO types"
+        },
+        {
+          "source_id": "S8",
+          "topic": "governance"
+        }
+      ]
+    },
+    {
+      "id": "G-BUSINESS-CASE",
+      "term": "Business case",
+      "definition": "The justification for an initiative based on expected value, feasibility, costs, benefits, risks, and alternatives.",
+      "common_confusion": "The charter authorizes a project; the business case explains why it should be pursued.",
+      "exam_trap": "Using the business case as the detailed execution plan.",
+      "related_concept_ids": [
+        "C024"
+      ],
+      "related_lesson_ids": [
+        "PL-C024"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [
+        "F-ROI",
+        "F-NPV"
+      ],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "governance and value"
+        },
+        {
+          "source_id": "S8",
+          "topic": "initiation"
+        }
+      ]
+    },
+    {
+      "id": "G-WBS",
+      "term": "Work breakdown structure (WBS)",
+      "definition": "A hierarchical decomposition of the total project scope into manageable components.",
+      "common_confusion": "A WBS organizes scope, not calendar dates or the organization chart.",
+      "exam_trap": "Treating an activity list or schedule as the scope baseline.",
+      "related_concept_ids": [
+        "C032"
+      ],
+      "related_lesson_ids": [
+        "PL-C032"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "scope structure"
+        }
+      ]
+    },
+    {
+      "id": "G-CRITICAL-PATH",
+      "term": "Critical path",
+      "definition": "The longest-duration path through a schedule network that determines the earliest project completion under the current model.",
+      "common_confusion": "Critical does not mean most important or most expensive.",
+      "exam_trap": "Assuming the critical path never changes after schedule updates.",
+      "related_concept_ids": [
+        "C036"
+      ],
+      "related_lesson_ids": [
+        "PL-C036"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [
+        "F-TOTAL-FLOAT"
+      ],
+      "related_reference_sheet_ids": [
+        "R-FORMULA-SHEET"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "schedule network analysis"
+        },
+        {
+          "source_id": "S10",
+          "topic": "schedule formulas"
+        }
+      ]
+    },
+    {
+      "id": "G-EARNED-VALUE",
+      "term": "Earned value (EV)",
+      "definition": "The budgeted value of work actually completed at a point in time.",
+      "common_confusion": "EV is not the amount spent and is not the planned value of scheduled work.",
+      "exam_trap": "Comparing EV to budget at completion without considering the question being asked.",
+      "related_concept_ids": [
+        "C038"
+      ],
+      "related_lesson_ids": [
+        "PL-C038"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [
+        "F-CPI",
+        "F-SPI",
+        "F-EAC"
+      ],
+      "related_reference_sheet_ids": [
+        "R-FORMULA-SHEET"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value management"
+        },
+        {
+          "source_id": "S10",
+          "topic": "EVM formulas"
+        }
+      ]
+    },
+    {
+      "id": "G-RISK-APPETITE",
+      "term": "Risk appetite",
+      "definition": "The amount and type of risk an organization is willing to pursue or retain in support of objectives.",
+      "common_confusion": "Appetite is broader than a specific measurable risk threshold.",
+      "exam_trap": "Applying the project manager's personal tolerance instead of organizational guidance.",
+      "related_concept_ids": [
+        "C045"
+      ],
+      "related_lesson_ids": [
+        "PL-C045"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [
+        "F-EMV"
+      ],
+      "related_reference_sheet_ids": [
+        "R-RISK-RESPONSES"
+      ],
+      "source_references": [
+        {
+          "source_id": "S5",
+          "topic": "risk appetite and tolerance"
+        }
+      ]
+    },
+    {
+      "id": "G-SCRUM-MASTER",
+      "term": "Scrum Master",
+      "definition": "A Scrum accountability focused on establishing Scrum, improving team effectiveness, coaching, and removing organizational impediments.",
+      "common_confusion": "The Scrum Master is not the team's task-assigning project manager.",
+      "exam_trap": "Making the Scrum Master the owner of product priority or individual work assignments.",
+      "related_concept_ids": [
+        "C049",
+        "C054"
+      ],
+      "related_lesson_ids": [
+        "PL-C049",
+        "PL-C054"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-SCRUM-QUICK-REFERENCE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S9",
+          "topic": "Scrum accountabilities"
+        }
+      ]
+    },
+    {
+      "id": "G-PRODUCT-BACKLOG",
+      "term": "Product backlog",
+      "definition": "An ordered, evolving collection of work needed to improve a product and pursue product goals.",
+      "common_confusion": "A backlog is not a frozen predictive scope baseline.",
+      "exam_trap": "Treating every requested item as committed work regardless of value, readiness, or priority.",
+      "related_concept_ids": [
+        "C049",
+        "C051"
+      ],
+      "related_lesson_ids": [
+        "PL-C049",
+        "PL-C051"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-SCRUM-QUICK-REFERENCE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S9",
+          "topic": "Scrum artifacts"
+        },
+        {
+          "source_id": "S10",
+          "topic": "backlog management"
+        }
+      ]
+    },
+    {
+      "id": "G-WIP",
+      "term": "Work in progress (WIP)",
+      "definition": "Work that has started but has not yet reached the defined completion point in a flow system.",
+      "common_confusion": "Starting more work can reduce flow rather than increase throughput.",
+      "exam_trap": "Optimizing individual utilization while ignoring queue growth and cycle time.",
+      "related_concept_ids": [
+        "C050",
+        "C052"
+      ],
+      "related_lesson_ids": [
+        "PL-C050",
+        "PL-C052"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [
+        "F-LITTLES-LAW"
+      ],
+      "related_reference_sheet_ids": [
+        "R-AGILE-COMPARISON",
+        "R-FORMULA-SHEET"
+      ],
+      "source_references": [
+        {
+          "source_id": "S9",
+          "topic": "Kanban flow"
+        },
+        {
+          "source_id": "S10",
+          "topic": "flow metrics"
+        }
+      ]
+    },
+    {
+      "id": "G-RESPONSIBLE-AI",
+      "term": "Responsible AI",
+      "definition": "The governed use of AI with human accountability and controls for privacy, bias, transparency, safety, security, copyright, and impact.",
+      "common_confusion": "Human review alone is not sufficient if data, authority, or audit controls are absent.",
+      "exam_trap": "Delegating final accountability to an AI system because its recommendation appears confident.",
+      "related_concept_ids": [
+        "C058",
+        "C059"
+      ],
+      "related_lesson_ids": [
+        "PL-C058",
+        "PL-C059"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-RESPONSIBLE-AI-CHECKLIST"
+      ],
+      "source_references": [
+        {
+          "source_id": "S11",
+          "topic": "responsible AI and human accountability"
+        }
+      ]
+    }
+  ]
+}

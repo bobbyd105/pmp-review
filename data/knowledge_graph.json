@@ -1,0 +1,2211 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-13",
+  "canonical_catalog": "data/content_coverage.json",
+  "relationship_semantics": {
+    "parent_child": "Broader/narrower instructional concept hierarchy; not a mastery dependency by itself.",
+    "prerequisite": "Knowledge that should be mastered before the concept is introduced.",
+    "related": "A non-hierarchical connection useful for comparison, transfer, or retrieval.",
+    "lesson_namespace": "PL-C### identifies a planned concept lesson and does not reserve a production lesson ID."
+  },
+  "concepts": [
+    {
+      "id": "C001",
+      "title": "What Makes Work a Project?",
+      "parent_concept_ids": [],
+      "child_concept_ids": [
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009"
+      ],
+      "prerequisite_concept_ids": [],
+      "related_concept_ids": [],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Governance",
+        "focus:Initiating"
+      ],
+      "related_lesson_ids": [
+        "PL-C001"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [
+        "G-PROJECT",
+        "G-OPERATIONS"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C002",
+      "title": "Value, Benefits, and Project Success",
+      "parent_concept_ids": [],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001"
+      ],
+      "related_concept_ids": [
+        "C012"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 3: Help ensure value-based delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Focus on Value",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C002"
+      ],
+      "existing_lesson_ids": [
+        "l003"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C003",
+      "title": "Project vs. Program vs. Portfolio vs. Operations",
+      "parent_concept_ids": [
+        "C001"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001"
+      ],
+      "related_concept_ids": [],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 1: Define and establish project governance"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Governance",
+        "reference:Value Delivery System"
+      ],
+      "related_lesson_ids": [
+        "PL-C003"
+      ],
+      "existing_lesson_ids": [
+        "l013"
+      ],
+      "related_glossary_ids": [
+        "G-PROGRAM",
+        "G-PORTFOLIO",
+        "G-OPERATIONS"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C004",
+      "title": "Projects as Vehicles for Change",
+      "parent_concept_ids": [
+        "C001"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001",
+        "C002"
+      ],
+      "related_concept_ids": [
+        "C019"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 7: Support organizational change"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Governance",
+        "principle:Adopt a Holistic View"
+      ],
+      "related_lesson_ids": [
+        "PL-C004"
+      ],
+      "existing_lesson_ids": [
+        "l019"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C005",
+      "title": "Phases, Deliverables, and Acceptance",
+      "parent_concept_ids": [
+        "C001"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001",
+        "C017"
+      ],
+      "related_concept_ids": [
+        "C028"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 10: Manage project closure"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "focus:Closing",
+        "process:Close Project or Phase",
+        "process:Validate Scope"
+      ],
+      "related_lesson_ids": [
+        "PL-C005"
+      ],
+      "existing_lesson_ids": [
+        "l006"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C006",
+      "title": "Project vs. Product Management",
+      "parent_concept_ids": [
+        "C001"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001",
+        "C002"
+      ],
+      "related_concept_ids": [],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 3: Help ensure value-based delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Governance",
+        "reference:Product Management"
+      ],
+      "related_lesson_ids": [
+        "PL-C006"
+      ],
+      "existing_lesson_ids": [
+        "l003"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C007",
+      "title": "Risks, Issues, Assumptions, and Constraints",
+      "parent_concept_ids": [
+        "C001"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001"
+      ],
+      "related_concept_ids": [
+        "C047"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 5: Plan and manage risk"
+        },
+        {
+          "domain": "Business Environment",
+          "task": "Task 4: Remove impediments and manage issues"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Risk",
+        "process:Identify Risks",
+        "reference:Issue Log"
+      ],
+      "related_lesson_ids": [
+        "PL-C007"
+      ],
+      "existing_lesson_ids": [
+        "l016",
+        "l017"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C008",
+      "title": "Leadership vs. Management",
+      "parent_concept_ids": [
+        "C001"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001"
+      ],
+      "related_concept_ids": [
+        "C043"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Resources",
+        "principle:Be an Accountable Leader"
+      ],
+      "related_lesson_ids": [
+        "PL-C008"
+      ],
+      "existing_lesson_ids": [
+        "l021"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C009",
+      "title": "PMOs and Organizational Structures",
+      "parent_concept_ids": [
+        "C001"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001"
+      ],
+      "related_concept_ids": [
+        "C024",
+        "C026"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 1: Define and establish project governance"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Governance",
+        "reference:Organizational Systems"
+      ],
+      "related_lesson_ids": [
+        "PL-C009"
+      ],
+      "existing_lesson_ids": [
+        "l013"
+      ],
+      "related_glossary_ids": [
+        "G-PMO"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-ORG-STRUCTURES"
+      ]
+    },
+    {
+      "id": "C010",
+      "title": "The PMP Decision-Making Mindset",
+      "parent_concept_ids": [],
+      "child_concept_ids": [
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C015",
+        "C016"
+      ],
+      "prerequisite_concept_ids": [
+        "C001",
+        "C002"
+      ],
+      "related_concept_ids": [
+        "C014"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Be an Accountable Leader",
+        "principle:Focus on Value"
+      ],
+      "related_lesson_ids": [
+        "PL-C010"
+      ],
+      "existing_lesson_ids": [
+        "l021"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C011",
+      "title": "Holistic and Systems Thinking",
+      "parent_concept_ids": [
+        "C010"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C001",
+        "C010"
+      ],
+      "related_concept_ids": [
+        "C023"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Adopt a Holistic View",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C011"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C012",
+      "title": "Value-Driven Delivery",
+      "parent_concept_ids": [
+        "C010"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C002",
+        "C010"
+      ],
+      "related_concept_ids": [
+        "C002"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 3: Help ensure value-based delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Focus on Value",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C012"
+      ],
+      "existing_lesson_ids": [
+        "l003"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C013",
+      "title": "Building Quality In",
+      "parent_concept_ids": [
+        "C010"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C010"
+      ],
+      "related_concept_ids": [
+        "C034"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 7: Plan and optimize quality of products/deliverables"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Embed Quality into Processes and Deliverables",
+        "process:Manage Quality Assurance"
+      ],
+      "related_lesson_ids": [
+        "PL-C013"
+      ],
+      "existing_lesson_ids": [
+        "l026"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C014",
+      "title": "Accountability and Ethical Leadership",
+      "parent_concept_ids": [
+        "C010"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C008",
+        "C010"
+      ],
+      "related_concept_ids": [
+        "C010",
+        "C058"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Be an Accountable Leader",
+        "domain:Resources"
+      ],
+      "related_lesson_ids": [
+        "PL-C014"
+      ],
+      "existing_lesson_ids": [
+        "l021"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C015",
+      "title": "Empowered Teams and Culture",
+      "parent_concept_ids": [
+        "C010"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C008",
+        "C010"
+      ],
+      "related_concept_ids": [
+        "C054"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Build an Empowered Culture",
+        "domain:Resources"
+      ],
+      "related_lesson_ids": [
+        "PL-C015"
+      ],
+      "existing_lesson_ids": [
+        "l021"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C016",
+      "title": "Sustainability Across the Project",
+      "parent_concept_ids": [
+        "C010"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C010"
+      ],
+      "related_concept_ids": [
+        "C058"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 8: Evaluate external business environment changes"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "principle:Integrate Sustainability within All Project Areas",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C016"
+      ],
+      "existing_lesson_ids": [
+        "l020"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C017",
+      "title": "Project Life Cycles and Phase Gates",
+      "parent_concept_ids": [],
+      "child_concept_ids": [
+        "C018",
+        "C019",
+        "C020",
+        "C021",
+        "C022"
+      ],
+      "prerequisite_concept_ids": [
+        "C001"
+      ],
+      "related_concept_ids": [
+        "C022"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Life Cycle",
+        "focus:Initiating",
+        "focus:Closing"
+      ],
+      "related_lesson_ids": [
+        "PL-C017"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C018",
+      "title": "Predictive Delivery",
+      "parent_concept_ids": [
+        "C017"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C017"
+      ],
+      "related_concept_ids": [
+        "C020"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Predictive",
+        "focus:Planning"
+      ],
+      "related_lesson_ids": [
+        "PL-C018"
+      ],
+      "existing_lesson_ids": [
+        "l005",
+        "l015"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C019",
+      "title": "Iterative and Incremental Delivery",
+      "parent_concept_ids": [
+        "C017"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C017"
+      ],
+      "related_concept_ids": [
+        "C004",
+        "C020"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Iterative",
+        "approach:Incremental"
+      ],
+      "related_lesson_ids": [
+        "PL-C019"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C020",
+      "title": "Adaptive Delivery",
+      "parent_concept_ids": [
+        "C017"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C017"
+      ],
+      "related_concept_ids": [
+        "C018",
+        "C019"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "focus:Executing"
+      ],
+      "related_lesson_ids": [
+        "PL-C020"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C021",
+      "title": "Hybrid Delivery",
+      "parent_concept_ids": [
+        "C017"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C018",
+        "C020"
+      ],
+      "related_concept_ids": [
+        "C055"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Hybrid",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C021"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C022",
+      "title": "Tailoring the Approach",
+      "parent_concept_ids": [
+        "C017"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C017",
+        "C018",
+        "C020"
+      ],
+      "related_concept_ids": [
+        "C017"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Tailoring",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C022"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C023",
+      "title": "PMBOK 8 Domains and Focus Areas",
+      "parent_concept_ids": [],
+      "child_concept_ids": [
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C028",
+        "C029",
+        "C030",
+        "C031",
+        "C032",
+        "C033",
+        "C034",
+        "C035",
+        "C036",
+        "C037",
+        "C038",
+        "C039",
+        "C040",
+        "C041",
+        "C042",
+        "C043",
+        "C044",
+        "C045",
+        "C046",
+        "C047"
+      ],
+      "prerequisite_concept_ids": [
+        "C017",
+        "C022"
+      ],
+      "related_concept_ids": [
+        "C011"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "reference:PMBOK 8 Process Map",
+        "domain:Governance",
+        "focus:Planning"
+      ],
+      "related_lesson_ids": [
+        "PL-C023"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-PMBOK-PROCESS-MAP"
+      ]
+    },
+    {
+      "id": "C024",
+      "title": "Charter, Business Case, and Benefits Plan",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C002",
+        "C023"
+      ],
+      "related_concept_ids": [
+        "C009",
+        "C029"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 1: Define and establish project governance"
+        },
+        {
+          "domain": "Process",
+          "task": "Task 3: Help ensure value-based delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Initiate Project or Phase",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C024"
+      ],
+      "existing_lesson_ids": [
+        "l003",
+        "l013"
+      ],
+      "related_glossary_ids": [
+        "G-BUSINESS-CASE"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-ITTO-PATTERNS"
+      ]
+    },
+    {
+      "id": "C025",
+      "title": "Integrated Project Management Plan",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C023",
+        "C024"
+      ],
+      "related_concept_ids": [
+        "C027"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Integrate and Align Project Plans",
+        "reference:Project Management Plan"
+      ],
+      "related_lesson_ids": [
+        "PL-C025"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-ITTO-PATTERNS"
+      ]
+    },
+    {
+      "id": "C026",
+      "title": "Project Execution and Knowledge",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C025"
+      ],
+      "related_concept_ids": [
+        "C009"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 7: Help ensure knowledge transfer"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Manage Project Execution",
+        "process:Manage Project Knowledge"
+      ],
+      "related_lesson_ids": [
+        "PL-C026"
+      ],
+      "existing_lesson_ids": [
+        "l009"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C027",
+      "title": "Monitoring Performance and Managing Change",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C025",
+        "C026"
+      ],
+      "related_concept_ids": [
+        "C025",
+        "C059"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 9: Evaluate project status"
+        },
+        {
+          "domain": "Business Environment",
+          "task": "Task 3: Manage and control changes"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Monitor and Control Project Performance",
+        "process:Assess and Implement Changes"
+      ],
+      "related_lesson_ids": [
+        "PL-C027"
+      ],
+      "existing_lesson_ids": [
+        "l012",
+        "l015"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C028",
+      "title": "Project and Phase Closure",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C025",
+        "C027"
+      ],
+      "related_concept_ids": [
+        "C005"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 10: Manage project closure"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Close Project or Phase",
+        "focus:Closing"
+      ],
+      "related_lesson_ids": [
+        "PL-C028"
+      ],
+      "existing_lesson_ids": [
+        "l006"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C029",
+      "title": "Procurement, Contracts, and Sourcing",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C024"
+      ],
+      "related_concept_ids": [
+        "C024",
+        "C044"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 5: Plan and manage procurement"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Plan Sourcing Strategy",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C029"
+      ],
+      "existing_lesson_ids": [
+        "l025"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-CONTRACT-COMPARISON"
+      ]
+    },
+    {
+      "id": "C030",
+      "title": "Requirements Elicitation and Analysis",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C023"
+      ],
+      "related_concept_ids": [
+        "C051"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 2: Develop and manage project scope"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Elicit and Analyze Requirements",
+        "domain:Scope"
+      ],
+      "related_lesson_ids": [
+        "PL-C030"
+      ],
+      "existing_lesson_ids": [
+        "l024"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C031",
+      "title": "Product Scope vs. Project Scope",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C030"
+      ],
+      "related_concept_ids": [
+        "C032"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 2: Develop and manage project scope"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Define Scope",
+        "domain:Scope"
+      ],
+      "related_lesson_ids": [
+        "PL-C031"
+      ],
+      "existing_lesson_ids": [
+        "l024"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C032",
+      "title": "Scope Statements, WBS, and Baselines",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C030",
+        "C031"
+      ],
+      "related_concept_ids": [
+        "C031"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 2: Develop and manage project scope"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Develop Scope Structure",
+        "reference:Scope Baseline"
+      ],
+      "related_lesson_ids": [
+        "PL-C032"
+      ],
+      "existing_lesson_ids": [
+        "l024"
+      ],
+      "related_glossary_ids": [
+        "G-WBS"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C033",
+      "title": "Scope Validation and Control",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C032"
+      ],
+      "related_concept_ids": [
+        "C034"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 2: Develop and manage project scope"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Validate Scope",
+        "process:Monitor and Control Scope"
+      ],
+      "related_lesson_ids": [
+        "PL-C033"
+      ],
+      "existing_lesson_ids": [
+        "l024",
+        "l026"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C034",
+      "title": "Quality Planning, Assurance, and Control",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C013",
+        "C032"
+      ],
+      "related_concept_ids": [
+        "C013",
+        "C033"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 7: Plan and optimize quality of products/deliverables"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Manage Quality Assurance",
+        "principle:Embed Quality into Processes and Deliverables"
+      ],
+      "related_lesson_ids": [
+        "PL-C034"
+      ],
+      "existing_lesson_ids": [
+        "l026"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-ITTO-PATTERNS"
+      ]
+    },
+    {
+      "id": "C035",
+      "title": "Building the Project Schedule",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C032"
+      ],
+      "related_concept_ids": [
+        "C036"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 8: Plan and manage schedule"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Develop Schedule",
+        "domain:Schedule"
+      ],
+      "related_lesson_ids": [
+        "PL-C035"
+      ],
+      "existing_lesson_ids": [
+        "l002"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [
+        "F-PERT-BETA"
+      ],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C036",
+      "title": "Critical Path, Float, and Compression",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C035"
+      ],
+      "related_concept_ids": [
+        "C035"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 8: Plan and manage schedule"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Develop Schedule",
+        "reference:Critical Path"
+      ],
+      "related_lesson_ids": [
+        "PL-C036"
+      ],
+      "existing_lesson_ids": [
+        "l002"
+      ],
+      "related_glossary_ids": [
+        "G-CRITICAL-PATH"
+      ],
+      "related_formula_ids": [
+        "F-PERT-BETA",
+        "F-TOTAL-FLOAT"
+      ],
+      "related_reference_sheet_ids": [
+        "R-FORMULA-SHEET"
+      ]
+    },
+    {
+      "id": "C037",
+      "title": "Cost Estimating and Budgeting",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C023"
+      ],
+      "related_concept_ids": [
+        "C038"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 6: Plan and manage finance"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Estimate Costs",
+        "process:Develop Budget"
+      ],
+      "related_lesson_ids": [
+        "PL-C037"
+      ],
+      "existing_lesson_ids": [
+        "l011"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C038",
+      "title": "Earned Value Interpretation",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C037"
+      ],
+      "related_concept_ids": [
+        "C037"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 6: Plan and manage finance"
+        },
+        {
+          "domain": "Process",
+          "task": "Task 9: Evaluate project status"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Monitor and Control Finances",
+        "reference:Earned Value Management"
+      ],
+      "related_lesson_ids": [
+        "PL-C038"
+      ],
+      "existing_lesson_ids": [
+        "l011",
+        "l012"
+      ],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "related_formula_ids": [
+        "F-CPI",
+        "F-SPI",
+        "F-EAC"
+      ],
+      "related_reference_sheet_ids": [
+        "R-FORMULA-SHEET"
+      ]
+    },
+    {
+      "id": "C039",
+      "title": "Financial Selection Metrics and Forecasting",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C002",
+        "C037",
+        "C038"
+      ],
+      "related_concept_ids": [
+        "C053"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 3: Help ensure value-based delivery"
+        },
+        {
+          "domain": "Process",
+          "task": "Task 6: Plan and manage finance"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "domain:Finance",
+        "reference:NPV IRR ROI",
+        "process:Monitor and Control Finances"
+      ],
+      "related_lesson_ids": [
+        "PL-C039"
+      ],
+      "existing_lesson_ids": [
+        "l003",
+        "l011",
+        "l012"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [
+        "F-ROI",
+        "F-NPV"
+      ],
+      "related_reference_sheet_ids": [
+        "R-FORMULA-SHEET"
+      ]
+    },
+    {
+      "id": "C040",
+      "title": "Identifying and Analyzing Stakeholders",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C023"
+      ],
+      "related_concept_ids": [
+        "C041"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 4: Engage stakeholders"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Identify Stakeholders",
+        "domain:Stakeholders"
+      ],
+      "related_lesson_ids": [
+        "PL-C040"
+      ],
+      "existing_lesson_ids": [
+        "l022"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-STAKEHOLDER-MODELS"
+      ]
+    },
+    {
+      "id": "C041",
+      "title": "Engagement and Communications",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C040"
+      ],
+      "related_concept_ids": [
+        "C040"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 4: Engage stakeholders"
+        },
+        {
+          "domain": "People",
+          "task": "Task 8: Plan and manage communication"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Plan Stakeholder Engagement",
+        "process:Plan Communications Management",
+        "domain:Stakeholders"
+      ],
+      "related_lesson_ids": [
+        "PL-C041"
+      ],
+      "existing_lesson_ids": [
+        "l008",
+        "l022",
+        "l023"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [
+        "F-COMMUNICATION-CHANNELS"
+      ],
+      "related_reference_sheet_ids": [
+        "R-STAKEHOLDER-MODELS",
+        "R-COMMUNICATION-METHODS",
+        "R-FORMULA-SHEET"
+      ]
+    },
+    {
+      "id": "C042",
+      "title": "Resource Planning and Acquisition",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C023",
+        "C025"
+      ],
+      "related_concept_ids": [
+        "C043"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 4: Plan and manage resources"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Plan Resource Management",
+        "process:Estimate Resources",
+        "process:Acquire Resources"
+      ],
+      "related_lesson_ids": [
+        "PL-C042"
+      ],
+      "existing_lesson_ids": [
+        "l010"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C043",
+      "title": "Team Leadership and Development",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C008",
+        "C014",
+        "C015"
+      ],
+      "related_concept_ids": [
+        "C008",
+        "C042"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Lead the Team",
+        "domain:Resources"
+      ],
+      "related_lesson_ids": [
+        "PL-C043"
+      ],
+      "existing_lesson_ids": [
+        "l021"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-LEADERSHIP-STYLES"
+      ]
+    },
+    {
+      "id": "C044",
+      "title": "Conflict Resolution and Negotiation",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C040",
+        "C043"
+      ],
+      "related_concept_ids": [
+        "C029"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 2: Manage conflicts"
+        },
+        {
+          "domain": "People",
+          "task": "Task 6: Manage stakeholder expectations"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Lead the Team",
+        "reference:Conflict Management"
+      ],
+      "related_lesson_ids": [
+        "PL-C044"
+      ],
+      "existing_lesson_ids": [
+        "l001",
+        "l004"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-LEADERSHIP-STYLES"
+      ]
+    },
+    {
+      "id": "C045",
+      "title": "Risk Planning and Identification",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C007",
+        "C023"
+      ],
+      "related_concept_ids": [
+        "C046"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 5: Plan and manage risk"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Plan Risk Management",
+        "process:Identify Risks"
+      ],
+      "related_lesson_ids": [
+        "PL-C045"
+      ],
+      "existing_lesson_ids": [
+        "l017"
+      ],
+      "related_glossary_ids": [
+        "G-RISK-APPETITE"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-RISK-RESPONSES"
+      ]
+    },
+    {
+      "id": "C046",
+      "title": "Risk Analysis and Response Strategies",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C045"
+      ],
+      "related_concept_ids": [
+        "C045"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 5: Plan and manage risk"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Perform Risk Analysis",
+        "process:Plan Risk Responses"
+      ],
+      "related_lesson_ids": [
+        "PL-C046"
+      ],
+      "existing_lesson_ids": [
+        "l017"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [
+        "F-EMV"
+      ],
+      "related_reference_sheet_ids": [
+        "R-RISK-RESPONSES",
+        "R-FORMULA-SHEET"
+      ]
+    },
+    {
+      "id": "C047",
+      "title": "Monitoring Risks and Managing Issues",
+      "parent_concept_ids": [
+        "C023"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C027",
+        "C045",
+        "C046"
+      ],
+      "related_concept_ids": [
+        "C007"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 5: Plan and manage risk"
+        },
+        {
+          "domain": "Business Environment",
+          "task": "Task 4: Remove impediments and manage issues"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "process:Monitor Risks",
+        "reference:Issue Log"
+      ],
+      "related_lesson_ids": [
+        "PL-C047"
+      ],
+      "existing_lesson_ids": [
+        "l016",
+        "l017"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-RISK-RESPONSES"
+      ]
+    },
+    {
+      "id": "C048",
+      "title": "Agile Values, Principles, and Mindset",
+      "parent_concept_ids": [],
+      "child_concept_ids": [
+        "C049",
+        "C050",
+        "C051",
+        "C052",
+        "C053",
+        "C054",
+        "C055"
+      ],
+      "prerequisite_concept_ids": [
+        "C010",
+        "C017",
+        "C020"
+      ],
+      "related_concept_ids": [
+        "C054"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "reference:Agile Values and Principles"
+      ],
+      "related_lesson_ids": [
+        "PL-C048"
+      ],
+      "existing_lesson_ids": [
+        "l005",
+        "l021"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-AGILE-COMPARISON"
+      ]
+    },
+    {
+      "id": "C049",
+      "title": "Scrum Roles, Events, and Artifacts",
+      "parent_concept_ids": [
+        "C048"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C048"
+      ],
+      "related_concept_ids": [
+        "C051"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "reference:Scrum"
+      ],
+      "related_lesson_ids": [
+        "PL-C049"
+      ],
+      "existing_lesson_ids": [
+        "l021"
+      ],
+      "related_glossary_ids": [
+        "G-SCRUM-MASTER",
+        "G-PRODUCT-BACKLOG"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-SCRUM-QUICK-REFERENCE",
+        "R-AGILE-COMPARISON"
+      ]
+    },
+    {
+      "id": "C050",
+      "title": "Kanban, Lean, and Flow",
+      "parent_concept_ids": [
+        "C048"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C048"
+      ],
+      "related_concept_ids": [
+        "C052"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 6: Continuous improvement"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "reference:Kanban and Lean"
+      ],
+      "related_lesson_ids": [
+        "PL-C050"
+      ],
+      "existing_lesson_ids": [
+        "l018"
+      ],
+      "related_glossary_ids": [
+        "G-WIP"
+      ],
+      "related_formula_ids": [
+        "F-LITTLES-LAW"
+      ],
+      "related_reference_sheet_ids": [
+        "R-AGILE-COMPARISON"
+      ]
+    },
+    {
+      "id": "C051",
+      "title": "Product Vision, Backlogs, and User Stories",
+      "parent_concept_ids": [
+        "C048"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C002",
+        "C030",
+        "C048"
+      ],
+      "related_concept_ids": [
+        "C030",
+        "C049"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 1: Develop a common vision"
+        },
+        {
+          "domain": "Process",
+          "task": "Task 2: Develop and manage project scope"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "domain:Scope",
+        "reference:Product Backlog"
+      ],
+      "related_lesson_ids": [
+        "PL-C051"
+      ],
+      "existing_lesson_ids": [
+        "l007",
+        "l024"
+      ],
+      "related_glossary_ids": [
+        "G-PRODUCT-BACKLOG"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C052",
+      "title": "Agile Estimation and Forecasting",
+      "parent_concept_ids": [
+        "C048"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C035",
+        "C048",
+        "C050"
+      ],
+      "related_concept_ids": [
+        "C050"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 9: Evaluate project status"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "domain:Schedule",
+        "reference:Velocity and Throughput"
+      ],
+      "related_lesson_ids": [
+        "PL-C052"
+      ],
+      "existing_lesson_ids": [
+        "l012"
+      ],
+      "related_glossary_ids": [
+        "G-WIP"
+      ],
+      "related_formula_ids": [
+        "F-LITTLES-LAW"
+      ],
+      "related_reference_sheet_ids": [
+        "R-FORMULA-SHEET"
+      ]
+    },
+    {
+      "id": "C053",
+      "title": "MVP, MMF, and Early Value",
+      "parent_concept_ids": [
+        "C048"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C002",
+        "C048",
+        "C051"
+      ],
+      "related_concept_ids": [
+        "C039"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 3: Help ensure value-based delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "principle:Focus on Value",
+        "reference:MVP and MMF"
+      ],
+      "related_lesson_ids": [
+        "PL-C053"
+      ],
+      "existing_lesson_ids": [
+        "l003"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C054",
+      "title": "Servant Leadership and Self-Organizing Teams",
+      "parent_concept_ids": [
+        "C048"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C014",
+        "C015",
+        "C048"
+      ],
+      "related_concept_ids": [
+        "C015",
+        "C048"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "People",
+          "task": "Task 3: Lead the project team"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Adaptive",
+        "domain:Resources",
+        "reference:Servant Leadership"
+      ],
+      "related_lesson_ids": [
+        "PL-C054"
+      ],
+      "existing_lesson_ids": [
+        "l021"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C055",
+      "title": "Hybrid Integration",
+      "parent_concept_ids": [
+        "C048"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C018",
+        "C020",
+        "C022",
+        "C048"
+      ],
+      "related_concept_ids": [
+        "C021"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 1: Develop an integrated project management plan and plan delivery"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "approach:Hybrid",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C055"
+      ],
+      "existing_lesson_ids": [
+        "l005"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C056",
+      "title": "AI Foundations for Project Managers",
+      "parent_concept_ids": [],
+      "child_concept_ids": [
+        "C057",
+        "C058",
+        "C059"
+      ],
+      "prerequisite_concept_ids": [
+        "C010",
+        "C017"
+      ],
+      "related_concept_ids": [
+        "C057"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 8: Evaluate external business environment changes"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "reference:Artificial Intelligence",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C056"
+      ],
+      "existing_lesson_ids": [
+        "l020"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C057",
+      "title": "Automation, Assistance, and Augmentation",
+      "parent_concept_ids": [
+        "C056"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C056"
+      ],
+      "related_concept_ids": [
+        "C056"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 6: Continuous improvement"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "reference:AI Adoption Levels",
+        "domain:Governance"
+      ],
+      "related_lesson_ids": [
+        "PL-C057"
+      ],
+      "existing_lesson_ids": [
+        "l018"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    },
+    {
+      "id": "C058",
+      "title": "Responsible AI and Human Accountability",
+      "parent_concept_ids": [
+        "C056"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C014",
+        "C056"
+      ],
+      "related_concept_ids": [
+        "C014",
+        "C016"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Business Environment",
+          "task": "Task 2: Plan and manage project compliance"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "reference:Responsible AI",
+        "principle:Be an Accountable Leader"
+      ],
+      "related_lesson_ids": [
+        "PL-C058"
+      ],
+      "existing_lesson_ids": [
+        "l014"
+      ],
+      "related_glossary_ids": [
+        "G-RESPONSIBLE-AI"
+      ],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [
+        "R-RESPONSIBLE-AI-CHECKLIST"
+      ]
+    },
+    {
+      "id": "C059",
+      "title": "AI Use Cases Across the Project Life Cycle",
+      "parent_concept_ids": [
+        "C056"
+      ],
+      "child_concept_ids": [],
+      "prerequisite_concept_ids": [
+        "C022",
+        "C027",
+        "C056",
+        "C058"
+      ],
+      "related_concept_ids": [
+        "C027"
+      ],
+      "related_eco_tasks": [
+        {
+          "domain": "Process",
+          "task": "Task 9: Evaluate project status"
+        }
+      ],
+      "related_pmbok_mappings": [
+        "reference:AI Use Cases",
+        "focus:Planning",
+        "focus:Monitoring and Controlling"
+      ],
+      "related_lesson_ids": [
+        "PL-C059"
+      ],
+      "existing_lesson_ids": [
+        "l012"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": []
+    }
+  ]
+}

@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (curriculum architecture audit + read-only coverage planning view).
+<p>Last updated: 2026-07-13 (knowledge layer and content production framework).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -194,6 +194,36 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>CurriculumCoverage</code>; <code>contentCoverage.test.js</code></td>
   </tr>
   <tr>
+    <td><code>data/knowledge_graph.json</code></td>
+    <td>Planning-only instructional graph for all 59 canonical concepts. Separates broader/narrower hierarchy, acyclic prerequisites, reciprocal related concepts, and glossary/formula/reference relationships while mirroring ECO/PMBOK mappings from the coverage catalog.</td>
+    <td>Object with schema/relationship semantics and <code>concepts[]</code>: id/title, parent/child/prerequisite/related concept IDs, ECO/PMBOK mappings, planned/existing lesson IDs, and shared asset IDs.</td>
+    <td><code>knowledgeLayer.data.test.js</code>; future knowledge/adaptive loaders. No current runtime UI reads it.</td>
+  </tr>
+  <tr>
+    <td><code>data/learning_objectives.json</code></td>
+    <td>Planning registry for 59 concept lessons and 118 measurable objectives. Defines prerequisites, competencies, Bloom level, mastery-threshold hypothesis, estimated time, and difficulty without reserving production lesson IDs.</td>
+    <td>Object with enums/approval note and <code>planned_lessons[]</code>; planned IDs use <code>PL-C###</code>, objectives use <code>C###-O#</code>.</td>
+    <td><code>knowledgeLayer.data.test.js</code>; future lesson, assessment, and adaptive metadata. No current runtime UI reads it.</td>
+  </tr>
+  <tr>
+    <td><code>data/glossary_catalog.json</code></td>
+    <td>Representative 14-entry glossary schema-validation set with definitions, confusions, exam traps, relationships, and source pointers. Explicitly incomplete and not Approved production content.</td>
+    <td>Object with <code>entries[]</code>: semantic ID, term/definition/guidance, concept/lesson/question/formula/reference IDs, source references.</td>
+    <td><code>knowledgeLayer.data.test.js</code>; future glossary and remediation views.</td>
+  </tr>
+  <tr>
+    <td><code>data/formula_catalog.json</code></td>
+    <td>Representative 10-formula schema-validation set covering variables, interpretation, direction guidance, memory tips, mistakes, relationships, and source pointers. Requires technical review before production use.</td>
+    <td>Object with <code>formulas[]</code>: semantic ID, equation, variables, interpretation, comparison guidance, tips/mistakes, lesson/question/glossary/source links.</td>
+    <td><code>knowledgeLayer.data.test.js</code>; future formula and worked-example views.</td>
+  </tr>
+  <tr>
+    <td><code>data/reference_sheet_catalog.json</code></td>
+    <td>Complete planned inventory of 12 reusable retrieval assets: process/ITTO maps, organizational/contract/risk/stakeholder/agile/Scrum/leadership/communication comparisons, formula sheet, and responsible-AI checklist.</td>
+    <td>Object with supported asset types, <code>reference_sheets[]</code>, and required future review metadata.</td>
+    <td><code>knowledgeLayer.data.test.js</code>; future reference-sheet views.</td>
+  </tr>
+  <tr>
     <td><code>docs/content/source_topic_index.json</code></td>
     <td>Machine-readable metadata for the 11 local-only sources. Stores stable source IDs, filenames, page counts, topic/role tags, and overlaps; contains no copied source text.</td>
     <td>Object with <code>sources[]</code>: id, file, pages, primary_topics, curriculum_roles, overlaps.</td>
@@ -266,6 +296,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>src/__tests__/CurriculumCoverage.test.jsx</code></td>
     <td>Read-only screen summary, all-unit render, mappings/source/lesson/count display, and combined module/strength/lifecycle filters.</td>
   </tr>
+  <tr>
+    <td><code>src/__tests__/knowledgeLayer.data.test.js</code></td>
+    <td>Cross-catalog knowledge-layer contract: all 59 concepts and 59 planned lessons/118 objectives; coverage mapping/title synchronization; reciprocal hierarchy/related links; acyclic prerequisites; glossary/formula/reference schemas; and resolution of every concept, lesson, question, source, glossary, formula, and reference ID.</td>
+  </tr>
 </table>
 
 <h2>Related docs</h2>
@@ -277,14 +311,23 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <li><code>docs/content/curriculum_model.md</code> — canonical course/ECO-review/reference/assessment architecture</li>
   <li><code>docs/content/coverage_matrix.md</code> — concept-level strengths, gaps, mappings, and priorities</li>
   <li><code>docs/content/curriculum_audit_report.md</code> — final audit findings and roadmap</li>
+  <li><code>docs/content/knowledge_layer_report.md</code> — final knowledge-layer outcomes, risks, and implementation order</li>
+  <li><code>docs/content/knowledge_graph.md</code> — graph semantics, dependencies, traversal, and governance</li>
+  <li><code>docs/content/curriculum_map.md</code> and <code>knowledge_map.md</code> — Mermaid curriculum, prerequisite, asset, and adaptive-pathway views</li>
+  <li><code>docs/content/glossary_model.md</code>, <code>formula_model.md</code>, and <code>reference_sheet_model.md</code> — shared knowledge asset contracts</li>
+  <li><code>docs/content/adaptive_learning_model.md</code>, <code>question_metadata_model.md</code>, and <code>lesson_metadata_model.md</code> — future learner-state and metadata boundaries</li>
+  <li><code>docs/content/content_pipeline.md</code> and <code>repository_future_state.md</code> — production checkpoints and no-move-yet scalability design</li>
   <li><code>docs/working/</code> — resumable phase progress, working decisions, and next actions</li>
 </ul>
 
 <h2>Not built yet</h2>
-<p>The 59 planned Comprehensive Course concept lessons, objective-level
-question mappings, direct difficulty/calibration metadata, diagnostics,
-adaptive recommendations, spaced repetition, history management
+<p>The 59 planned Comprehensive Course concept lessons, reviewed production
+objective mappings, stable question option IDs, calibrated difficulty,
+diagnostics, adaptive recommendation algorithms, spaced repetition, history management
 (clearing/exporting quiz history), and richer lesson rendering. No routing,
 state library, backend, or AI API integration (constitution Section 2).</p>
+<p>The new knowledge/objective/glossary/formula/reference catalogs are validated
+planning inputs only; no current runtime screen consumes them and no lifecycle
+record was changed to Approved or Implemented.</p>
 </body>
 </html>

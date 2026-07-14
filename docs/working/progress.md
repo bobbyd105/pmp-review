@@ -1,24 +1,33 @@
-# Curriculum Architecture Audit — Working Progress
+# Knowledge Layer & Content Production Framework — Working Progress
 
 ## Current phase
 
-Phase 11 complete; engagement ready for User review.
+Phase 13 complete; engagement ready for User and architecture review.
+
+## Current mission
+
+Transform the completed 59-unit curriculum architecture into the planning
+infrastructure for concepts, objectives, glossary entries, formulas,
+reference sheets, metadata, content production, and future adaptive learning.
+Production lessons and questions remained read-only. All work is local,
+uncommitted, and unpushed.
 
 ## Completed phases
 
-- Phase 0 — working documents established
-- Phase 1 — source library audit
-- Phase 2 — repository and current-content audit
-- Phase 3 — canonical curriculum architecture
-- Phase 4 — coverage matrix and machine-readable coverage catalog
-- Phase 5 — full question-bank audit
-- Phase 6 — full lesson audit
-- Phase 7 — lesson, question, and metadata contracts
-- Checkpoint — architecture validated for planning-only implementation
-- Phase 8 — coverage validation, tests, and read-only dashboard
-- Phase 9 — canonical documentation updates
-- Phase 10 — tests, build, catalog, rendered UI, and visual validation
-- Phase 11 — final audit report and handoff
+- Phase 0 — prior audit, contracts, working logs, and coverage catalog reviewed
+- Phase 1 — 59-concept knowledge graph and dependency diagrams created
+- Phase 2 — 59 planned lesson records and 118 measurable objectives created
+- Phase 3 — representative glossary schema and 14-entry catalog created
+- Phase 4 — representative formula schema and 10-formula catalog created
+- Phase 5 — 12 reusable reference-sheet definitions created
+- Phase 6 — deterministic, local-first adaptive-learning model designed
+- Phase 7 — future question metadata model designed; questions unchanged
+- Phase 8 — future lesson metadata model designed; lessons unchanged
+- Phase 9 — governed content production pipeline and checkpoints documented
+- Phase 10 — curriculum, prerequisite, concept, asset, and adaptive diagrams created
+- Phase 11 — repository future-state organization recommended; no files moved
+- Phase 12 — cross-catalog validation, full tests, build, and protected-file checks passed
+- Phase 13 — working docs, canonical progress/app map, and final report completed
 
 ## Percent complete
 
@@ -26,31 +35,45 @@ Phase 11 complete; engagement ready for User review.
 
 ## Current task
 
-Await User review of the catalog, contracts, and recommended bank-remediation priority.
+Await User/architecture review of graph relationships, learning objectives,
+mastery hypotheses, representative catalogs, metadata models, and recommended
+implementation order.
 
 ## Active files
 
-- `docs/content/source_inventory.md`
-- `docs/content/source_topic_index.json`
-- `docs/content/curriculum_audit_report.md`
-- `docs/progress.md`
-- `docs/app-map.html`
-- `docs/working/next_actions.md`
-- `docs/working/decision_log.md`
-- `docs/working/next_actions.md`
+- `data/knowledge_graph.json`
+- `data/learning_objectives.json`
+- `data/glossary_catalog.json`
+- `data/formula_catalog.json`
+- `data/reference_sheet_catalog.json`
+- `docs/content/knowledge_graph.md`
+- `docs/content/*_model.md`
+- `docs/content/content_pipeline.md`
+- `docs/content/curriculum_map.md`
+- `docs/content/knowledge_map.md`
+- `docs/content/repository_future_state.md`
+- `docs/content/knowledge_layer_report.md`
+- `src/__tests__/knowledgeLayer.data.test.js`
 
 ## Blockers
 
-None. Local source files are readable and remain ignored/untracked. Production lesson and question data are read-only for this engagement.
-
-## Next milestone
-
-User approval decision; then a separately scoped answer-cue remediation slice.
+No implementation blocker. Production use remains intentionally gated on User
+approval, official/source verification, and question-bank cue remediation.
 
 ## Evidence captured
 
-- Active branch: `content/phase12-questions`, one local commit ahead of its remote at audit start.
-- Repository baseline: 384 questions, 26 lessons, 8 prompts, 6 application views.
-- Baseline validation: 12 test files and 114 tests passed.
-- Source library: 11 local PDFs plus two local planning maps; none are repository assets.
-- Question-bank warning: 371/384 correct answers are option B and 349/384 correct answers are the longest option.
+- 59 graph concepts synchronized with `content_coverage.json`
+- 59 planned lessons / 118 unique objectives
+- reciprocal parent/child and related links; acyclic prerequisites
+- 14 glossary examples, 10 formula examples, 12 planned reference sheets
+- focused knowledge-layer contract: 7 tests passed
+- full suite: 15 test files / 130 tests passed
+- production build passed; existing 861.88 kB bundle warning remains non-blocking
+- zero diff in `data/questions.json` and `data/lessons.json`
+- no commit and no push performed
+
+## Next milestone
+
+User/architecture approval decision. After approval, scope a separate
+question-bank quality remediation and metadata-readiness slice before adaptive
+learning or new content production.
