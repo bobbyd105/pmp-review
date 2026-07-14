@@ -65,6 +65,13 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
     unsupported-worker smoke fixture exits 1 with the supported value named;
     full suite 18 files / 139 tests passes; production build passes with the
     existing non-blocking large-chunk warning.
+  - Live orchestration verification (batch B01, 2026-07-14): ran the
+    controller-managed workflow for real (not smoke mode) -- Claude Code
+    invoked Codex CLI as the implementation worker for a documentation-only
+    batch, reviewed the resulting diff against the allowed/forbidden paths,
+    and confirmed the end-to-end Claude-to-Codex handoff works. Added a
+    corresponding note to docs/claude_codex_batch_orchestrator.md. No runtime,
+    curriculum, or test files were touched.
 - Answer-bias closeout and Foundation Block ingestion (2026-07-13):
   - Reordered option arrays deterministically with the committed
     `pmp-options-v1` seed. Correct-answer text and all question wording are

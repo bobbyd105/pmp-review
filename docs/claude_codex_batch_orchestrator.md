@@ -10,6 +10,12 @@ Provider selection is explicit in the master plan, but intentionally narrow:
 Claude Code is the only supported orchestrator and Codex CLI is the only
 supported worker. This is configuration, not a generic provider plugin system.
 
+## Live orchestration verified
+
+On 2026-07-14, batch B01 on `feature/claude-codex-batch-orchestrator`
+verified live orchestration end-to-end: Claude Code successfully invoked Codex
+CLI as the implementation worker for a real, non-smoke batch.
+
 ## Operating model
 
 1. The User approves a feature objective and its batch plan.
