@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-13",
+  "status": "planned",
+  "asset_types": [
+    "process-map",
+    "pattern-guide",
+    "comparison",
+    "strategy-matrix",
+    "model-guide",
+    "quick-reference",
+    "formula-sheet",
+    "checklist"
+  ],
+  "reference_sheets": [
+    {
+      "id": "R-PMBOK-PROCESS-MAP",
+      "title": "PMBOK Domain, Focus Area, and Process Map",
+      "type": "process-map",
+      "purpose": "Orient learners to the structural model and process relationships.",
+      "sections": [
+        "domains",
+        "focus areas",
+        "process placement",
+        "cross-domain flows"
+      ],
+      "related_concept_ids": [
+        "C023"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S1",
+        "S5",
+        "S8"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-ITTO-PATTERNS",
+      "title": "Common ITTO Patterns",
+      "type": "pattern-guide",
+      "purpose": "Teach recurring inputs, tools, outputs, and work-performance flows without rote memorization.",
+      "sections": [
+        "EEFs and OPAs",
+        "plans and documents",
+        "common tools",
+        "change requests",
+        "work performance flow"
+      ],
+      "related_concept_ids": [
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C034"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S6",
+        "S8"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-ORG-STRUCTURES",
+      "title": "Organizational Structures and PMO Authority",
+      "type": "comparison",
+      "purpose": "Compare functional, matrix, project-oriented, and PMO authority patterns.",
+      "sections": [
+        "structure",
+        "project-manager authority",
+        "resource access",
+        "escalation path",
+        "PMO types"
+      ],
+      "related_concept_ids": [
+        "C009"
+      ],
+      "related_glossary_ids": [
+        "G-PMO"
+      ],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S2",
+        "S8"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-CONTRACT-COMPARISON",
+      "title": "Contract and Risk-Allocation Comparison",
+      "type": "comparison",
+      "purpose": "Compare major contract families, incentives, uncertainty, and buyer/seller risk.",
+      "sections": [
+        "fixed price",
+        "cost reimbursable",
+        "time and materials",
+        "incentives",
+        "selection cues"
+      ],
+      "related_concept_ids": [
+        "C029"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S8"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-RISK-RESPONSES",
+      "title": "Threat and Opportunity Response Strategies",
+      "type": "strategy-matrix",
+      "purpose": "Compare response intent, ownership, triggers, residual risk, and contingency.",
+      "sections": [
+        "threat responses",
+        "opportunity responses",
+        "contingent responses",
+        "residual and secondary risks"
+      ],
+      "related_concept_ids": [
+        "C045",
+        "C046",
+        "C047"
+      ],
+      "related_glossary_ids": [
+        "G-RISK-APPETITE"
+      ],
+      "related_formula_ids": [
+        "F-EMV"
+      ],
+      "source_refs": [
+        "S5",
+        "S8",
+        "S10"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-STAKEHOLDER-MODELS",
+      "title": "Stakeholder Analysis Models",
+      "type": "model-guide",
+      "purpose": "Support identification, prioritization, engagement assessment, and ethical interpretation.",
+      "sections": [
+        "power-interest",
+        "power-influence",
+        "salience",
+        "engagement assessment",
+        "limitations"
+      ],
+      "related_concept_ids": [
+        "C040",
+        "C041"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S5",
+        "S8"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-AGILE-COMPARISON",
+      "title": "Agile and Lean Framework Comparison",
+      "type": "comparison",
+      "purpose": "Compare purpose, roles, cadence, flow, and fit across Scrum, Kanban, Lean, XP, and related approaches.",
+      "sections": [
+        "values and principles",
+        "roles",
+        "events and cadence",
+        "artifacts",
+        "flow controls",
+        "selection cautions"
+      ],
+      "related_concept_ids": [
+        "C048",
+        "C049",
+        "C050",
+        "C055"
+      ],
+      "related_glossary_ids": [
+        "G-SCRUM-MASTER",
+        "G-WIP"
+      ],
+      "related_formula_ids": [
+        "F-LITTLES-LAW"
+      ],
+      "source_refs": [
+        "S9",
+        "S10"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-SCRUM-QUICK-REFERENCE",
+      "title": "Scrum Quick Reference",
+      "type": "quick-reference",
+      "purpose": "Provide retrieval support for Scrum accountabilities, events, artifacts, commitments, and common confusions.",
+      "sections": [
+        "accountabilities",
+        "events",
+        "artifacts",
+        "commitments",
+        "anti-patterns"
+      ],
+      "related_concept_ids": [
+        "C049",
+        "C054"
+      ],
+      "related_glossary_ids": [
+        "G-SCRUM-MASTER",
+        "G-PRODUCT-BACKLOG"
+      ],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S9",
+        "S10"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-LEADERSHIP-STYLES",
+      "title": "Leadership, Team Development, and Conflict Styles",
+      "type": "comparison",
+      "purpose": "Compare leadership responses, team-development needs, motivation, conflict, and negotiation choices.",
+      "sections": [
+        "leadership styles",
+        "team development",
+        "motivation",
+        "conflict modes",
+        "negotiation"
+      ],
+      "related_concept_ids": [
+        "C008",
+        "C043",
+        "C044",
+        "C054"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S2",
+        "S3",
+        "S9"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-COMMUNICATION-METHODS",
+      "title": "Communication Methods and Models",
+      "type": "model-guide",
+      "purpose": "Compare interactive, push, pull, formal, informal, channel, and feedback choices.",
+      "sections": [
+        "communication methods",
+        "models and noise",
+        "channel selection",
+        "cultural context",
+        "feedback"
+      ],
+      "related_concept_ids": [
+        "C041"
+      ],
+      "related_glossary_ids": [],
+      "related_formula_ids": [
+        "F-COMMUNICATION-CHANNELS"
+      ],
+      "source_refs": [
+        "S8",
+        "S9"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-FORMULA-SHEET",
+      "title": "PMP Formula and Interpretation Sheet",
+      "type": "formula-sheet",
+      "purpose": "Provide formula retrieval with variables, direction guidance, assumptions, and common traps.",
+      "sections": [
+        "schedule",
+        "cost and EVM",
+        "selection metrics",
+        "risk",
+        "communications",
+        "flow"
+      ],
+      "related_concept_ids": [
+        "C035",
+        "C036",
+        "C038",
+        "C039",
+        "C041",
+        "C046",
+        "C050",
+        "C052"
+      ],
+      "related_glossary_ids": [
+        "G-CRITICAL-PATH",
+        "G-EARNED-VALUE",
+        "G-WIP"
+      ],
+      "related_formula_ids": [
+        "F-COMMUNICATION-CHANNELS",
+        "F-PERT-BETA",
+        "F-TOTAL-FLOAT",
+        "F-CPI",
+        "F-SPI",
+        "F-EAC",
+        "F-EMV",
+        "F-ROI",
+        "F-NPV",
+        "F-LITTLES-LAW"
+      ],
+      "source_refs": [
+        "S8",
+        "S10"
+      ],
+      "lifecycle_status": "Planned"
+    },
+    {
+      "id": "R-RESPONSIBLE-AI-CHECKLIST",
+      "title": "Responsible AI Project Checklist",
+      "type": "checklist",
+      "purpose": "Support human accountability, data protection, bias review, transparency, validation, and auditability.",
+      "sections": [
+        "purpose and authority",
+        "data and privacy",
+        "bias and impact",
+        "validation",
+        "human review",
+        "records and escalation"
+      ],
+      "related_concept_ids": [
+        "C056",
+        "C057",
+        "C058",
+        "C059"
+      ],
+      "related_glossary_ids": [
+        "G-RESPONSIBLE-AI"
+      ],
+      "related_formula_ids": [],
+      "source_refs": [
+        "S11",
+        "S3"
+      ],
+      "lifecycle_status": "Planned"
+    }
+  ],
+  "required_review_metadata": [
+    "technical_reviewer",
+    "source_reviewer",
+    "reviewed_on",
+    "edition_scope",
+    "lifecycle_status"
+  ]
+}

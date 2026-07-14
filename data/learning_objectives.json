@@ -1,0 +1,1835 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-13",
+  "canonical_catalog": "data/content_coverage.json",
+  "status": "planning",
+  "approval_note": "These objectives define instructional infrastructure only. They do not approve lesson drafting or production content.",
+  "bloom_levels": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "difficulty_levels": [
+    "Foundation",
+    "Application",
+    "Advanced"
+  ],
+  "planned_lessons": [
+    {
+      "lesson_id": "PL-C001",
+      "curriculum_unit_id": "C001",
+      "title": "What Makes Work a Project?",
+      "learning_objectives": [
+        {
+          "id": "C001-O1",
+          "statement": "Distinguish project work from operations using temporary endeavor, uniqueness, and value criteria."
+        },
+        {
+          "id": "C001-O2",
+          "statement": "Classify a work request as project, program component, product work, or operations and justify the classification."
+        }
+      ],
+      "prerequisite_knowledge": [],
+      "expected_competencies": [
+        "Distinguish project work from operations using temporary endeavor, uniqueness, and value criteria.",
+        "Classify a work request as project, program component, product work, or operations and justify the classification."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C002",
+      "curriculum_unit_id": "C002",
+      "title": "Value, Benefits, and Project Success",
+      "learning_objectives": [
+        {
+          "id": "C002-O1",
+          "statement": "Explain how outputs, outcomes, benefits, and value differ."
+        },
+        {
+          "id": "C002-O2",
+          "statement": "Select success measures that connect project delivery to intended benefits."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001"
+      ],
+      "expected_competencies": [
+        "Explain how outputs, outcomes, benefits, and value differ.",
+        "Select success measures that connect project delivery to intended benefits."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C003",
+      "curriculum_unit_id": "C003",
+      "title": "Project vs. Program vs. Portfolio vs. Operations",
+      "learning_objectives": [
+        {
+          "id": "C003-O1",
+          "statement": "Distinguish projects, programs, portfolios, and operations by purpose, coordination, and decision horizon."
+        },
+        {
+          "id": "C003-O2",
+          "statement": "Choose the correct management context for a scenario involving related work or strategic investment."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001"
+      ],
+      "expected_competencies": [
+        "Distinguish projects, programs, portfolios, and operations by purpose, coordination, and decision horizon.",
+        "Choose the correct management context for a scenario involving related work or strategic investment."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C004",
+      "curriculum_unit_id": "C004",
+      "title": "Projects as Vehicles for Change",
+      "learning_objectives": [
+        {
+          "id": "C004-O1",
+          "statement": "Explain how projects enable organizational change and adoption."
+        },
+        {
+          "id": "C004-O2",
+          "statement": "Identify change outcomes and transition considerations that belong in project planning."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001",
+        "C002"
+      ],
+      "expected_competencies": [
+        "Explain how projects enable organizational change and adoption.",
+        "Identify change outcomes and transition considerations that belong in project planning."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C005",
+      "curriculum_unit_id": "C005",
+      "title": "Phases, Deliverables, and Acceptance",
+      "learning_objectives": [
+        {
+          "id": "C005-O1",
+          "statement": "Differentiate phases, deliverables, acceptance, transition, and formal closure."
+        },
+        {
+          "id": "C005-O2",
+          "statement": "Determine when phase-gate or acceptance evidence is required before work advances."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001",
+        "C017"
+      ],
+      "expected_competencies": [
+        "Differentiate phases, deliverables, acceptance, transition, and formal closure.",
+        "Determine when phase-gate or acceptance evidence is required before work advances."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C006",
+      "curriculum_unit_id": "C006",
+      "title": "Project vs. Product Management",
+      "learning_objectives": [
+        {
+          "id": "C006-O1",
+          "statement": "Distinguish project management from product management responsibilities and time horizons."
+        },
+        {
+          "id": "C006-O2",
+          "statement": "Identify when product decisions and project delivery decisions must be coordinated."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001",
+        "C002"
+      ],
+      "expected_competencies": [
+        "Distinguish project management from product management responsibilities and time horizons.",
+        "Identify when product decisions and project delivery decisions must be coordinated."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C007",
+      "curriculum_unit_id": "C007",
+      "title": "Risks, Issues, Assumptions, and Constraints",
+      "learning_objectives": [
+        {
+          "id": "C007-O1",
+          "statement": "Differentiate risks, issues, assumptions, and constraints."
+        },
+        {
+          "id": "C007-O2",
+          "statement": "Classify a scenario signal and select the appropriate record or response path."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001"
+      ],
+      "expected_competencies": [
+        "Differentiate risks, issues, assumptions, and constraints.",
+        "Classify a scenario signal and select the appropriate record or response path."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C008",
+      "curriculum_unit_id": "C008",
+      "title": "Leadership vs. Management",
+      "learning_objectives": [
+        {
+          "id": "C008-O1",
+          "statement": "Compare leadership and management behaviors in project contexts."
+        },
+        {
+          "id": "C008-O2",
+          "statement": "Select a leadership or management response appropriate to team need and delivery conditions."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001"
+      ],
+      "expected_competencies": [
+        "Compare leadership and management behaviors in project contexts.",
+        "Select a leadership or management response appropriate to team need and delivery conditions."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C009",
+      "curriculum_unit_id": "C009",
+      "title": "PMOs and Organizational Structures",
+      "learning_objectives": [
+        {
+          "id": "C009-O1",
+          "statement": "Compare PMO types and organizational structures by authority, resource access, and governance role."
+        },
+        {
+          "id": "C009-O2",
+          "statement": "Predict how organizational structure affects the project manager's authority and escalation path."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001"
+      ],
+      "expected_competencies": [
+        "Compare PMO types and organizational structures by authority, resource access, and governance role.",
+        "Predict how organizational structure affects the project manager's authority and escalation path."
+      ],
+      "bloom_taxonomy_level": "Understand",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C010",
+      "curriculum_unit_id": "C010",
+      "title": "The PMP Decision-Making Mindset",
+      "learning_objectives": [
+        {
+          "id": "C010-O1",
+          "statement": "Apply value, accountability, collaboration, and proactive problem solving to PMP-style decisions."
+        },
+        {
+          "id": "C010-O2",
+          "statement": "Reject common exam-response traps such as premature escalation, avoidance, and unapproved action."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001",
+        "C002"
+      ],
+      "expected_competencies": [
+        "Apply value, accountability, collaboration, and proactive problem solving to PMP-style decisions.",
+        "Reject common exam-response traps such as premature escalation, avoidance, and unapproved action."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C011",
+      "curriculum_unit_id": "C011",
+      "title": "Holistic and Systems Thinking",
+      "learning_objectives": [
+        {
+          "id": "C011-O1",
+          "statement": "Explain how project decisions interact across organizational and delivery systems."
+        },
+        {
+          "id": "C011-O2",
+          "statement": "Analyze a local decision for downstream effects on value, risk, quality, and stakeholders."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001",
+        "C010"
+      ],
+      "expected_competencies": [
+        "Explain how project decisions interact across organizational and delivery systems.",
+        "Analyze a local decision for downstream effects on value, risk, quality, and stakeholders."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C012",
+      "curriculum_unit_id": "C012",
+      "title": "Value-Driven Delivery",
+      "learning_objectives": [
+        {
+          "id": "C012-O1",
+          "statement": "Prioritize work and decisions by value rather than output volume."
+        },
+        {
+          "id": "C012-O2",
+          "statement": "Select feedback and measurement practices that protect expected outcomes and benefits."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C002",
+        "C010"
+      ],
+      "expected_competencies": [
+        "Prioritize work and decisions by value rather than output volume.",
+        "Select feedback and measurement practices that protect expected outcomes and benefits."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C013",
+      "curriculum_unit_id": "C013",
+      "title": "Building Quality In",
+      "learning_objectives": [
+        {
+          "id": "C013-O1",
+          "statement": "Differentiate prevention, assurance, control, verification, and acceptance."
+        },
+        {
+          "id": "C013-O2",
+          "statement": "Choose an action that builds quality into the process instead of relying on inspection alone."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C010"
+      ],
+      "expected_competencies": [
+        "Differentiate prevention, assurance, control, verification, and acceptance.",
+        "Choose an action that builds quality into the process instead of relying on inspection alone."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C014",
+      "curriculum_unit_id": "C014",
+      "title": "Accountability and Ethical Leadership",
+      "learning_objectives": [
+        {
+          "id": "C014-O1",
+          "statement": "Apply accountability, ethics, transparency, and stewardship to project decisions."
+        },
+        {
+          "id": "C014-O2",
+          "statement": "Identify when a leader must disclose, escalate, or decline an action to protect stakeholders and integrity."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C008",
+        "C010"
+      ],
+      "expected_competencies": [
+        "Apply accountability, ethics, transparency, and stewardship to project decisions.",
+        "Identify when a leader must disclose, escalate, or decline an action to protect stakeholders and integrity."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C015",
+      "curriculum_unit_id": "C015",
+      "title": "Empowered Teams and Culture",
+      "learning_objectives": [
+        {
+          "id": "C015-O1",
+          "statement": "Explain how empowerment, psychological safety, and clear boundaries support performance."
+        },
+        {
+          "id": "C015-O2",
+          "statement": "Choose team practices that distribute decisions without abandoning accountability."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C008",
+        "C010"
+      ],
+      "expected_competencies": [
+        "Explain how empowerment, psychological safety, and clear boundaries support performance.",
+        "Choose team practices that distribute decisions without abandoning accountability."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C016",
+      "curriculum_unit_id": "C016",
+      "title": "Sustainability Across the Project",
+      "learning_objectives": [
+        {
+          "id": "C016-O1",
+          "statement": "Identify environmental, social, economic, and operational sustainability considerations."
+        },
+        {
+          "id": "C016-O2",
+          "statement": "Evaluate a project decision for lifecycle impacts and stakeholder tradeoffs."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C010"
+      ],
+      "expected_competencies": [
+        "Identify environmental, social, economic, and operational sustainability considerations.",
+        "Evaluate a project decision for lifecycle impacts and stakeholder tradeoffs."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C017",
+      "curriculum_unit_id": "C017",
+      "title": "Project Life Cycles and Phase Gates",
+      "learning_objectives": [
+        {
+          "id": "C017-O1",
+          "statement": "Differentiate project life cycle, development approach, phase, iteration, and phase gate."
+        },
+        {
+          "id": "C017-O2",
+          "statement": "Select a life-cycle structure that fits uncertainty, governance, and delivery needs."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C001"
+      ],
+      "expected_competencies": [
+        "Differentiate project life cycle, development approach, phase, iteration, and phase gate.",
+        "Select a life-cycle structure that fits uncertainty, governance, and delivery needs."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C018",
+      "curriculum_unit_id": "C018",
+      "title": "Predictive Delivery",
+      "learning_objectives": [
+        {
+          "id": "C018-O1",
+          "statement": "Explain the planning, baseline, control, and handoff characteristics of predictive delivery."
+        },
+        {
+          "id": "C018-O2",
+          "statement": "Identify when predictive practices are appropriate and how change should be governed."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C017"
+      ],
+      "expected_competencies": [
+        "Explain the planning, baseline, control, and handoff characteristics of predictive delivery.",
+        "Identify when predictive practices are appropriate and how change should be governed."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C019",
+      "curriculum_unit_id": "C019",
+      "title": "Iterative and Incremental Delivery",
+      "learning_objectives": [
+        {
+          "id": "C019-O1",
+          "statement": "Distinguish iterative learning from incremental delivery."
+        },
+        {
+          "id": "C019-O2",
+          "statement": "Choose iterative, incremental, or combined patterns for a given uncertainty and feedback need."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C017"
+      ],
+      "expected_competencies": [
+        "Distinguish iterative learning from incremental delivery.",
+        "Choose iterative, incremental, or combined patterns for a given uncertainty and feedback need."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C020",
+      "curriculum_unit_id": "C020",
+      "title": "Adaptive Delivery",
+      "learning_objectives": [
+        {
+          "id": "C020-O1",
+          "statement": "Explain adaptive planning, short feedback loops, and evolving scope."
+        },
+        {
+          "id": "C020-O2",
+          "statement": "Select adaptive practices that preserve value, transparency, and stakeholder learning."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C017"
+      ],
+      "expected_competencies": [
+        "Explain adaptive planning, short feedback loops, and evolving scope.",
+        "Select adaptive practices that preserve value, transparency, and stakeholder learning."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C021",
+      "curriculum_unit_id": "C021",
+      "title": "Hybrid Delivery",
+      "learning_objectives": [
+        {
+          "id": "C021-O1",
+          "statement": "Explain why hybrid delivery combines practices rather than merely mixing terminology."
+        },
+        {
+          "id": "C021-O2",
+          "statement": "Identify which components should use predictive or adaptive controls in a hybrid scenario."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C018",
+        "C020"
+      ],
+      "expected_competencies": [
+        "Explain why hybrid delivery combines practices rather than merely mixing terminology.",
+        "Identify which components should use predictive or adaptive controls in a hybrid scenario."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C022",
+      "curriculum_unit_id": "C022",
+      "title": "Tailoring the Approach",
+      "learning_objectives": [
+        {
+          "id": "C022-O1",
+          "statement": "Evaluate context factors that drive tailoring decisions."
+        },
+        {
+          "id": "C022-O2",
+          "statement": "Justify a tailored approach while preserving required governance, quality, and compliance outcomes."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C017",
+        "C018",
+        "C020"
+      ],
+      "expected_competencies": [
+        "Evaluate context factors that drive tailoring decisions.",
+        "Justify a tailored approach while preserving required governance, quality, and compliance outcomes."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C023",
+      "curriculum_unit_id": "C023",
+      "title": "PMBOK 8 Domains and Focus Areas",
+      "learning_objectives": [
+        {
+          "id": "C023-O1",
+          "statement": "Explain how PMBOK domains, focus areas, processes, and principles relate."
+        },
+        {
+          "id": "C023-O2",
+          "statement": "Navigate the structural model to locate the right process or domain for a project need."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C017",
+        "C022"
+      ],
+      "expected_competencies": [
+        "Explain how PMBOK domains, focus areas, processes, and principles relate.",
+        "Navigate the structural model to locate the right process or domain for a project need."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 25,
+      "expected_difficulty": "Foundation"
+    },
+    {
+      "lesson_id": "PL-C024",
+      "curriculum_unit_id": "C024",
+      "title": "Charter, Business Case, and Benefits Plan",
+      "learning_objectives": [
+        {
+          "id": "C024-O1",
+          "statement": "Differentiate the business case, charter, benefits plan, and related authorization artifacts."
+        },
+        {
+          "id": "C024-O2",
+          "statement": "Select the artifact or decision authority needed to initiate or justify work."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C002",
+        "C023"
+      ],
+      "expected_competencies": [
+        "Differentiate the business case, charter, benefits plan, and related authorization artifacts.",
+        "Select the artifact or decision authority needed to initiate or justify work."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C025",
+      "curriculum_unit_id": "C025",
+      "title": "Integrated Project Management Plan",
+      "learning_objectives": [
+        {
+          "id": "C025-O1",
+          "statement": "Explain how subsidiary plans and baselines form an integrated project management plan."
+        },
+        {
+          "id": "C025-O2",
+          "statement": "Identify conflicts and dependencies that must be reconciled across component plans."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C023",
+        "C024"
+      ],
+      "expected_competencies": [
+        "Explain how subsidiary plans and baselines form an integrated project management plan.",
+        "Identify conflicts and dependencies that must be reconciled across component plans."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C026",
+      "curriculum_unit_id": "C026",
+      "title": "Project Execution and Knowledge",
+      "learning_objectives": [
+        {
+          "id": "C026-O1",
+          "statement": "Differentiate project execution, knowledge creation, and knowledge transfer."
+        },
+        {
+          "id": "C026-O2",
+          "statement": "Select practices that capture and reuse explicit and tacit knowledge during delivery."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C025"
+      ],
+      "expected_competencies": [
+        "Differentiate project execution, knowledge creation, and knowledge transfer.",
+        "Select practices that capture and reuse explicit and tacit knowledge during delivery."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C027",
+      "curriculum_unit_id": "C027",
+      "title": "Monitoring Performance and Managing Change",
+      "learning_objectives": [
+        {
+          "id": "C027-O1",
+          "statement": "Trace work performance data through analysis, reporting, and change decisions."
+        },
+        {
+          "id": "C027-O2",
+          "statement": "Choose the correct monitoring or change-control response to a performance signal."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C025",
+        "C026"
+      ],
+      "expected_competencies": [
+        "Trace work performance data through analysis, reporting, and change decisions.",
+        "Choose the correct monitoring or change-control response to a performance signal."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C028",
+      "curriculum_unit_id": "C028",
+      "title": "Project and Phase Closure",
+      "learning_objectives": [
+        {
+          "id": "C028-O1",
+          "statement": "Explain administrative, contractual, financial, knowledge, and transition activities in closure."
+        },
+        {
+          "id": "C028-O2",
+          "statement": "Determine whether evidence supports formal project or phase closure."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C025",
+        "C027"
+      ],
+      "expected_competencies": [
+        "Explain administrative, contractual, financial, knowledge, and transition activities in closure.",
+        "Determine whether evidence supports formal project or phase closure."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C029",
+      "curriculum_unit_id": "C029",
+      "title": "Procurement, Contracts, and Sourcing",
+      "learning_objectives": [
+        {
+          "id": "C029-O1",
+          "statement": "Compare make-or-buy, sourcing, contract risk allocation, selection, and administration decisions."
+        },
+        {
+          "id": "C029-O2",
+          "statement": "Choose a procurement approach or contract family that fits uncertainty and risk ownership."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C024"
+      ],
+      "expected_competencies": [
+        "Compare make-or-buy, sourcing, contract risk allocation, selection, and administration decisions.",
+        "Choose a procurement approach or contract family that fits uncertainty and risk ownership."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C030",
+      "curriculum_unit_id": "C030",
+      "title": "Requirements Elicitation and Analysis",
+      "learning_objectives": [
+        {
+          "id": "C030-O1",
+          "statement": "Select elicitation and analysis techniques appropriate to stakeholder and solution context."
+        },
+        {
+          "id": "C030-O2",
+          "statement": "Evaluate requirements for clarity, traceability, feasibility, and value."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C023"
+      ],
+      "expected_competencies": [
+        "Select elicitation and analysis techniques appropriate to stakeholder and solution context.",
+        "Evaluate requirements for clarity, traceability, feasibility, and value."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C031",
+      "curriculum_unit_id": "C031",
+      "title": "Product Scope vs. Project Scope",
+      "learning_objectives": [
+        {
+          "id": "C031-O1",
+          "statement": "Distinguish product scope from project scope and explain their interaction."
+        },
+        {
+          "id": "C031-O2",
+          "statement": "Classify a requested change by the scope boundary it affects."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C030"
+      ],
+      "expected_competencies": [
+        "Distinguish product scope from project scope and explain their interaction.",
+        "Classify a requested change by the scope boundary it affects."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C032",
+      "curriculum_unit_id": "C032",
+      "title": "Scope Statements, WBS, and Baselines",
+      "learning_objectives": [
+        {
+          "id": "C032-O1",
+          "statement": "Explain how scope statements, WBS elements, work packages, and the scope baseline relate."
+        },
+        {
+          "id": "C032-O2",
+          "statement": "Decompose approved scope into a structure that supports planning and control."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C030",
+        "C031"
+      ],
+      "expected_competencies": [
+        "Explain how scope statements, WBS elements, work packages, and the scope baseline relate.",
+        "Decompose approved scope into a structure that supports planning and control."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C033",
+      "curriculum_unit_id": "C033",
+      "title": "Scope Validation and Control",
+      "learning_objectives": [
+        {
+          "id": "C033-O1",
+          "statement": "Differentiate scope validation from scope control and quality control."
+        },
+        {
+          "id": "C033-O2",
+          "statement": "Select the correct acceptance or change response for a scope scenario."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C032"
+      ],
+      "expected_competencies": [
+        "Differentiate scope validation from scope control and quality control.",
+        "Select the correct acceptance or change response for a scope scenario."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C034",
+      "curriculum_unit_id": "C034",
+      "title": "Quality Planning, Assurance, and Control",
+      "learning_objectives": [
+        {
+          "id": "C034-O1",
+          "statement": "Distinguish quality planning, assurance, control, verification, and acceptance."
+        },
+        {
+          "id": "C034-O2",
+          "statement": "Choose quality practices and evidence appropriate to prevention, process improvement, or deliverable evaluation."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C013",
+        "C032"
+      ],
+      "expected_competencies": [
+        "Distinguish quality planning, assurance, control, verification, and acceptance.",
+        "Choose quality practices and evidence appropriate to prevention, process improvement, or deliverable evaluation."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C035",
+      "curriculum_unit_id": "C035",
+      "title": "Building the Project Schedule",
+      "learning_objectives": [
+        {
+          "id": "C035-O1",
+          "statement": "Sequence activities, estimate durations, and develop a logically coherent schedule model."
+        },
+        {
+          "id": "C035-O2",
+          "statement": "Evaluate schedule assumptions, dependencies, calendars, and resource effects."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C032"
+      ],
+      "expected_competencies": [
+        "Sequence activities, estimate durations, and develop a logically coherent schedule model.",
+        "Evaluate schedule assumptions, dependencies, calendars, and resource effects."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C036",
+      "curriculum_unit_id": "C036",
+      "title": "Critical Path, Float, and Compression",
+      "learning_objectives": [
+        {
+          "id": "C036-O1",
+          "statement": "Calculate and interpret critical path, total float, and schedule compression tradeoffs."
+        },
+        {
+          "id": "C036-O2",
+          "statement": "Select crashing, fast tracking, or no compression based on risk and constraints."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C035"
+      ],
+      "expected_competencies": [
+        "Calculate and interpret critical path, total float, and schedule compression tradeoffs.",
+        "Select crashing, fast tracking, or no compression based on risk and constraints."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    },
+    {
+      "lesson_id": "PL-C037",
+      "curriculum_unit_id": "C037",
+      "title": "Cost Estimating and Budgeting",
+      "learning_objectives": [
+        {
+          "id": "C037-O1",
+          "statement": "Explain estimating, reserves, funding, and budget-baseline development."
+        },
+        {
+          "id": "C037-O2",
+          "statement": "Select an estimating or budgeting response appropriate to available information and uncertainty."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C023"
+      ],
+      "expected_competencies": [
+        "Explain estimating, reserves, funding, and budget-baseline development.",
+        "Select an estimating or budgeting response appropriate to available information and uncertainty."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C038",
+      "curriculum_unit_id": "C038",
+      "title": "Earned Value Interpretation",
+      "learning_objectives": [
+        {
+          "id": "C038-O1",
+          "statement": "Calculate and interpret core earned value indices and forecasts."
+        },
+        {
+          "id": "C038-O2",
+          "statement": "Use EVM results to diagnose performance and recommend a proportional response."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C037"
+      ],
+      "expected_competencies": [
+        "Calculate and interpret core earned value indices and forecasts.",
+        "Use EVM results to diagnose performance and recommend a proportional response."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    },
+    {
+      "lesson_id": "PL-C039",
+      "curriculum_unit_id": "C039",
+      "title": "Financial Selection Metrics and Forecasting",
+      "learning_objectives": [
+        {
+          "id": "C039-O1",
+          "statement": "Interpret ROI, NPV, payback, IRR, and forecast measures for project decisions."
+        },
+        {
+          "id": "C039-O2",
+          "statement": "Compare financial alternatives without treating a single metric as the only decision criterion."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C002",
+        "C037",
+        "C038"
+      ],
+      "expected_competencies": [
+        "Interpret ROI, NPV, payback, IRR, and forecast measures for project decisions.",
+        "Compare financial alternatives without treating a single metric as the only decision criterion."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    },
+    {
+      "lesson_id": "PL-C040",
+      "curriculum_unit_id": "C040",
+      "title": "Identifying and Analyzing Stakeholders",
+      "learning_objectives": [
+        {
+          "id": "C040-O1",
+          "statement": "Identify stakeholders and apply appropriate analysis models."
+        },
+        {
+          "id": "C040-O2",
+          "statement": "Prioritize engagement effort using influence, interest, impact, urgency, and legitimacy."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C023"
+      ],
+      "expected_competencies": [
+        "Identify stakeholders and apply appropriate analysis models.",
+        "Prioritize engagement effort using influence, interest, impact, urgency, and legitimacy."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C041",
+      "curriculum_unit_id": "C041",
+      "title": "Engagement and Communications",
+      "learning_objectives": [
+        {
+          "id": "C041-O1",
+          "statement": "Select communication methods, channels, and engagement strategies for stakeholder needs."
+        },
+        {
+          "id": "C041-O2",
+          "statement": "Evaluate communication effectiveness and adjust the plan based on feedback and context."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C040"
+      ],
+      "expected_competencies": [
+        "Select communication methods, channels, and engagement strategies for stakeholder needs.",
+        "Evaluate communication effectiveness and adjust the plan based on feedback and context."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C042",
+      "curriculum_unit_id": "C042",
+      "title": "Resource Planning and Acquisition",
+      "learning_objectives": [
+        {
+          "id": "C042-O1",
+          "statement": "Plan, estimate, acquire, develop, and control physical and team resources."
+        },
+        {
+          "id": "C042-O2",
+          "statement": "Resolve resource constraints using priorities, calendars, negotiation, and governance."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C023",
+        "C025"
+      ],
+      "expected_competencies": [
+        "Plan, estimate, acquire, develop, and control physical and team resources.",
+        "Resolve resource constraints using priorities, calendars, negotiation, and governance."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C043",
+      "curriculum_unit_id": "C043",
+      "title": "Team Leadership and Development",
+      "learning_objectives": [
+        {
+          "id": "C043-O1",
+          "statement": "Choose leadership, motivation, coaching, and team-development practices for team maturity and context."
+        },
+        {
+          "id": "C043-O2",
+          "statement": "Diagnose team-performance barriers and select a development response."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C008",
+        "C014",
+        "C015"
+      ],
+      "expected_competencies": [
+        "Choose leadership, motivation, coaching, and team-development practices for team maturity and context.",
+        "Diagnose team-performance barriers and select a development response."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C044",
+      "curriculum_unit_id": "C044",
+      "title": "Conflict Resolution and Negotiation",
+      "learning_objectives": [
+        {
+          "id": "C044-O1",
+          "statement": "Compare conflict-resolution and negotiation approaches."
+        },
+        {
+          "id": "C044-O2",
+          "statement": "Select and sequence a response that addresses interests, relationships, authority, and urgency."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C040",
+        "C043"
+      ],
+      "expected_competencies": [
+        "Compare conflict-resolution and negotiation approaches.",
+        "Select and sequence a response that addresses interests, relationships, authority, and urgency."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C045",
+      "curriculum_unit_id": "C045",
+      "title": "Risk Planning and Identification",
+      "learning_objectives": [
+        {
+          "id": "C045-O1",
+          "statement": "Plan risk management and identify threats, opportunities, causes, and effects."
+        },
+        {
+          "id": "C045-O2",
+          "statement": "Write and classify a risk statement with ownership and traceability."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C007",
+        "C023"
+      ],
+      "expected_competencies": [
+        "Plan risk management and identify threats, opportunities, causes, and effects.",
+        "Write and classify a risk statement with ownership and traceability."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C046",
+      "curriculum_unit_id": "C046",
+      "title": "Risk Analysis and Response Strategies",
+      "learning_objectives": [
+        {
+          "id": "C046-O1",
+          "statement": "Select qualitative or quantitative analysis and appropriate threat or opportunity responses."
+        },
+        {
+          "id": "C046-O2",
+          "statement": "Evaluate residual, secondary, and overall project risk after response planning."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C045"
+      ],
+      "expected_competencies": [
+        "Select qualitative or quantitative analysis and appropriate threat or opportunity responses.",
+        "Evaluate residual, secondary, and overall project risk after response planning."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    },
+    {
+      "lesson_id": "PL-C047",
+      "curriculum_unit_id": "C047",
+      "title": "Monitoring Risks and Managing Issues",
+      "learning_objectives": [
+        {
+          "id": "C047-O1",
+          "statement": "Differentiate risk monitoring, issue management, escalation, and response implementation."
+        },
+        {
+          "id": "C047-O2",
+          "statement": "Choose evidence and actions needed to keep risk and issue records current."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C027",
+        "C045",
+        "C046"
+      ],
+      "expected_competencies": [
+        "Differentiate risk monitoring, issue management, escalation, and response implementation.",
+        "Choose evidence and actions needed to keep risk and issue records current."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C048",
+      "curriculum_unit_id": "C048",
+      "title": "Agile Values, Principles, and Mindset",
+      "learning_objectives": [
+        {
+          "id": "C048-O1",
+          "statement": "Explain agile values, principles, mindset, and empirical learning."
+        },
+        {
+          "id": "C048-O2",
+          "statement": "Select behavior consistent with adaptive value delivery rather than ceremonial compliance."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C010",
+        "C017",
+        "C020"
+      ],
+      "expected_competencies": [
+        "Explain agile values, principles, mindset, and empirical learning.",
+        "Select behavior consistent with adaptive value delivery rather than ceremonial compliance."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C049",
+      "curriculum_unit_id": "C049",
+      "title": "Scrum Roles, Events, and Artifacts",
+      "learning_objectives": [
+        {
+          "id": "C049-O1",
+          "statement": "Distinguish Scrum accountabilities, events, artifacts, and commitments."
+        },
+        {
+          "id": "C049-O2",
+          "statement": "Diagnose a Scrum scenario and identify the appropriate accountability or event outcome."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C048"
+      ],
+      "expected_competencies": [
+        "Distinguish Scrum accountabilities, events, artifacts, and commitments.",
+        "Diagnose a Scrum scenario and identify the appropriate accountability or event outcome."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C050",
+      "curriculum_unit_id": "C050",
+      "title": "Kanban, Lean, and Flow",
+      "learning_objectives": [
+        {
+          "id": "C050-O1",
+          "statement": "Explain Lean principles, Kanban practices, WIP limits, and flow measures."
+        },
+        {
+          "id": "C050-O2",
+          "statement": "Use flow signals to identify bottlenecks and select an improvement experiment."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C048"
+      ],
+      "expected_competencies": [
+        "Explain Lean principles, Kanban practices, WIP limits, and flow measures.",
+        "Use flow signals to identify bottlenecks and select an improvement experiment."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C051",
+      "curriculum_unit_id": "C051",
+      "title": "Product Vision, Backlogs, and User Stories",
+      "learning_objectives": [
+        {
+          "id": "C051-O1",
+          "statement": "Connect product vision, roadmap, backlog, epics, features, and user stories."
+        },
+        {
+          "id": "C051-O2",
+          "statement": "Evaluate backlog items for clarity, value, readiness, and traceability."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C002",
+        "C030",
+        "C048"
+      ],
+      "expected_competencies": [
+        "Connect product vision, roadmap, backlog, epics, features, and user stories.",
+        "Evaluate backlog items for clarity, value, readiness, and traceability."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C052",
+      "curriculum_unit_id": "C052",
+      "title": "Agile Estimation and Forecasting",
+      "learning_objectives": [
+        {
+          "id": "C052-O1",
+          "statement": "Compare relative estimation, velocity, throughput, lead time, and cycle time."
+        },
+        {
+          "id": "C052-O2",
+          "statement": "Select and interpret an adaptive forecast without treating estimates as guarantees."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C035",
+        "C048",
+        "C050"
+      ],
+      "expected_competencies": [
+        "Compare relative estimation, velocity, throughput, lead time, and cycle time.",
+        "Select and interpret an adaptive forecast without treating estimates as guarantees."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    },
+    {
+      "lesson_id": "PL-C053",
+      "curriculum_unit_id": "C053",
+      "title": "MVP, MMF, and Early Value",
+      "learning_objectives": [
+        {
+          "id": "C053-O1",
+          "statement": "Distinguish MVP, MMF, prototype, increment, and release concepts."
+        },
+        {
+          "id": "C053-O2",
+          "statement": "Choose the smallest value-bearing delivery strategy that supports learning or benefit realization."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C002",
+        "C048",
+        "C051"
+      ],
+      "expected_competencies": [
+        "Distinguish MVP, MMF, prototype, increment, and release concepts.",
+        "Choose the smallest value-bearing delivery strategy that supports learning or benefit realization."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C054",
+      "curriculum_unit_id": "C054",
+      "title": "Servant Leadership and Self-Organizing Teams",
+      "learning_objectives": [
+        {
+          "id": "C054-O1",
+          "statement": "Apply servant leadership and self-organization within clear goals and constraints."
+        },
+        {
+          "id": "C054-O2",
+          "statement": "Identify when to coach, facilitate, remove impediments, or allow the team to decide."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C014",
+        "C015",
+        "C048"
+      ],
+      "expected_competencies": [
+        "Apply servant leadership and self-organization within clear goals and constraints.",
+        "Identify when to coach, facilitate, remove impediments, or allow the team to decide."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C055",
+      "curriculum_unit_id": "C055",
+      "title": "Hybrid Integration",
+      "learning_objectives": [
+        {
+          "id": "C055-O1",
+          "statement": "Design a coherent hybrid operating model with explicit interfaces and controls."
+        },
+        {
+          "id": "C055-O2",
+          "statement": "Analyze hybrid failure modes caused by conflicting cadences, roles, artifacts, or governance."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C018",
+        "C020",
+        "C022",
+        "C048"
+      ],
+      "expected_competencies": [
+        "Design a coherent hybrid operating model with explicit interfaces and controls.",
+        "Analyze hybrid failure modes caused by conflicting cadences, roles, artifacts, or governance."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    },
+    {
+      "lesson_id": "PL-C056",
+      "curriculum_unit_id": "C056",
+      "title": "AI Foundations for Project Managers",
+      "learning_objectives": [
+        {
+          "id": "C056-O1",
+          "statement": "Explain AI, machine learning, generative AI, and automation at a project-manager level."
+        },
+        {
+          "id": "C056-O2",
+          "statement": "Identify appropriate and inappropriate expectations for AI-supported project work."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C010",
+        "C017"
+      ],
+      "expected_competencies": [
+        "Explain AI, machine learning, generative AI, and automation at a project-manager level.",
+        "Identify appropriate and inappropriate expectations for AI-supported project work."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C057",
+      "curriculum_unit_id": "C057",
+      "title": "Automation, Assistance, and Augmentation",
+      "learning_objectives": [
+        {
+          "id": "C057-O1",
+          "statement": "Differentiate automation, assistance, and augmentation by human involvement and decision authority."
+        },
+        {
+          "id": "C057-O2",
+          "statement": "Select an adoption level that fits task risk, data quality, and oversight needs."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C056"
+      ],
+      "expected_competencies": [
+        "Differentiate automation, assistance, and augmentation by human involvement and decision authority.",
+        "Select an adoption level that fits task risk, data quality, and oversight needs."
+      ],
+      "bloom_taxonomy_level": "Apply",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 30,
+      "expected_difficulty": "Application"
+    },
+    {
+      "lesson_id": "PL-C058",
+      "curriculum_unit_id": "C058",
+      "title": "Responsible AI and Human Accountability",
+      "learning_objectives": [
+        {
+          "id": "C058-O1",
+          "statement": "Apply privacy, bias, transparency, safety, copyright, and human-accountability controls to AI use."
+        },
+        {
+          "id": "C058-O2",
+          "statement": "Evaluate an AI use case and specify review, escalation, and documentation safeguards."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C014",
+        "C056"
+      ],
+      "expected_competencies": [
+        "Apply privacy, bias, transparency, safety, copyright, and human-accountability controls to AI use.",
+        "Evaluate an AI use case and specify review, escalation, and documentation safeguards."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    },
+    {
+      "lesson_id": "PL-C059",
+      "curriculum_unit_id": "C059",
+      "title": "AI Use Cases Across the Project Life Cycle",
+      "learning_objectives": [
+        {
+          "id": "C059-O1",
+          "statement": "Identify AI-supported use cases across initiation, planning, execution, monitoring, and closure."
+        },
+        {
+          "id": "C059-O2",
+          "statement": "Choose an AI-assisted workflow while preserving source validation, decision ownership, and auditability."
+        }
+      ],
+      "prerequisite_knowledge": [
+        "C022",
+        "C027",
+        "C056",
+        "C058"
+      ],
+      "expected_competencies": [
+        "Identify AI-supported use cases across initiation, planning, execution, monitoring, and closure.",
+        "Choose an AI-assisted workflow while preserving source validation, decision ownership, and auditability."
+      ],
+      "bloom_taxonomy_level": "Analyze",
+      "mastery_threshold": {
+        "minimum_score_percent": 80,
+        "minimum_distinct_evidence_items": 3,
+        "objective_requirement": "all"
+      },
+      "estimated_learning_time_minutes": 40,
+      "expected_difficulty": "Advanced"
+    }
+  ]
+}

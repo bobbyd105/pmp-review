@@ -1,10 +1,13 @@
 # Progress
 
 ## Current Version
-Current working state: v0.7 runtime plus an uncommitted curriculum
-architecture/planning slice. The 59-unit coverage catalog, validation, and
-read-only Curriculum Coverage screen are complete. No production lessons or
-questions were changed, and no commit/push was made per the audit mission.
+Current working state: v0.7 runtime plus the completed curriculum architecture
+baseline and an uncommitted knowledge-layer/content-production framework. The
+local slice adds 59 concept graph records, 59 planned lessons with 118
+objectives, representative glossary/formula catalogs, 12 reference-sheet
+definitions, adaptive/metadata/pipeline/future-state models, and validation.
+No production lessons or questions were changed. No commit or push was made
+for the knowledge-layer mission.
 
 Prior v0.7 summary follows.
 
@@ -18,6 +21,26 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 155Q/10L, Business Environment 99Q/8L).
 
 ## Completed Work
+- Knowledge Layer & Content Production Framework (local working tree,
+  2026-07-13):
+  - Added a canonical 59-concept graph with reciprocal hierarchy/related
+    relationships, acyclic prerequisites, ECO/PMBOK mappings, and planned/
+    existing lesson plus glossary/formula/reference links.
+  - Added 59 planned concept-lesson records and 118 measurable objectives with
+    prerequisites, competencies, Bloom levels, mastery thresholds, estimated
+    time, and difficulty hypotheses. Planning IDs do not reserve production
+    lesson IDs.
+  - Added representative catalogs: 14 glossary entries, 10 formulas, and 12
+    planned reference sheets. These validate schemas and are not complete or
+    Approved production content.
+  - Designed local-first adaptive learning, question/lesson target metadata,
+    the governed content pipeline, curriculum/knowledge visual maps, and a
+    no-move-yet repository future state.
+  - Added cross-catalog validation for identity, mappings, reciprocal links,
+    prerequisite cycles, planned lessons/objectives, and shared asset/source
+    references.
+  - Validation: focused 7-test contract passes; full suite 15 files / 130 tests
+    passes; production build passes; production lesson/question diffs are empty.
 - Curriculum architecture audit and planning infrastructure (working tree,
   2026-07-13):
   - Inventoried all 11 local reference PDFs and produced a machine-readable
@@ -244,6 +267,13 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   All 114 tests pass with the file-scoped Question Bank timeout.
 
 ## Files Modified
+- Knowledge layer: `data/knowledge_graph.json`,
+  `data/learning_objectives.json`, `data/glossary_catalog.json`,
+  `data/formula_catalog.json`, `data/reference_sheet_catalog.json`,
+  `docs/content/knowledge_graph.md`, glossary/formula/reference/adaptive/
+  question-metadata/lesson-metadata models, pipeline/maps/future-state/report,
+  `src/__tests__/knowledgeLayer.data.test.js`, `docs/working/*`,
+  `docs/app-map.html`, and `docs/progress.md`.
 - Curriculum architecture/planning slice: `README.md`,
   `data/content_coverage.json`, `docs/content/*`, `docs/working/*`,
   `src/coverage/contentCoverage.js`,
@@ -264,6 +294,12 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   package.json (version bump), docs/app-map.html, docs/progress.md
 
 ## Architecture Changes
+- Knowledge layer: concepts and objectives now form the canonical instructional
+  dependency layer between the coverage catalog and future lessons/questions.
+  Taxonomy, prerequisites, and related links are distinct. Shared glossary,
+  formula, and reference assets use stable semantic IDs. Learner state remains
+  separate, adaptive algorithms are not implemented, and production metadata
+  migration is sidecar-first and still requires User approval.
 - Curriculum planning: one canonical catalog with separate Comprehensive
   Course and ECO Review tracks. Coverage strength is separate from content
   lifecycle. Question counts are derived from ECO mappings and labeled as
@@ -314,10 +350,11 @@ data-contract tests (shape only) and still need the User's manual
 accuracy spot-check against the current ECO before merge.
 
 ## Current Status
-Curriculum architecture audit Phases 0-11 are complete in the working tree.
-The architecture checkpoint passed without requiring changes to
-`data/questions.json` or `data/lessons.json`. Planning infrastructure is
-read-only and validated. No commit or push was performed.
+Knowledge-layer Phases 0-13 are complete in the local working tree. The prior
+curriculum architecture is preserved and extended rather than repeated.
+Planning infrastructure is read-only and validated; `data/questions.json` and
+`data/lessons.json` remain unchanged. No commit or push was performed for this
+mission.
 
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
 to main (PR #6). Branch `content/eco-2026-remap` (open as PR #7) now holds
@@ -342,12 +379,12 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-Current recommendation: User/architecture review of the 59-unit catalog and
-metadata contracts. After approval, remediate the question bank's
-answer-position/length bias before using quiz scores for adaptive learning.
-Then approve and author Priority A concept units in small batches. Do not
-generate more broad ECO question volume until concept objectives and mappings
-are approved.
+Current recommendation: User/architecture review of the concept graph,
+objectives, mastery hypotheses, shared asset schemas, and sidecar metadata
+direction. After approval, run a separate question-bank quality remediation and
+metadata-readiness slice to fix answer-position/length bias before any quiz
+score becomes adaptive evidence. Only then migrate reviewed objective mappings
+and approve Priority A concept content in small batches.
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using

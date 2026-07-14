@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-13",
+  "status": "representative-schema-validation",
+  "completeness_note": "Representative formulas only. Each record requires independent technical review before production use.",
+  "formulas": [
+    {
+      "id": "F-COMMUNICATION-CHANNELS",
+      "name": "Potential communication channels",
+      "formula": "n × (n - 1) / 2",
+      "variables": [
+        {
+          "symbol": "n",
+          "meaning": "number of participants"
+        }
+      ],
+      "interpretation": "The number of possible pairwise communication paths grows quadratically as participants increase.",
+      "comparison_guidance": {
+        "greater_than": "More potential coordination paths and communication complexity.",
+        "less_than": "Fewer potential paths; not proof of better communication."
+      },
+      "memory_tips": [
+        "Choose two people from n; divide the ordered pairs by two."
+      ],
+      "common_mistakes": [
+        "Using n(n+1)/2.",
+        "Treating the result as the number of actual messages."
+      ],
+      "related_lesson_ids": [
+        "PL-C041"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "communication channels"
+        }
+      ]
+    },
+    {
+      "id": "F-PERT-BETA",
+      "name": "PERT beta expected duration",
+      "formula": "(O + 4M + P) / 6",
+      "variables": [
+        {
+          "symbol": "O",
+          "meaning": "optimistic estimate"
+        },
+        {
+          "symbol": "M",
+          "meaning": "most likely estimate"
+        },
+        {
+          "symbol": "P",
+          "meaning": "pessimistic estimate"
+        }
+      ],
+      "interpretation": "A weighted duration estimate that gives the most-likely value four times the weight of each extreme.",
+      "comparison_guidance": {
+        "greater_than": "A higher result indicates a longer expected duration under the supplied estimates.",
+        "less_than": "A lower result indicates a shorter expected duration, not lower uncertainty by itself."
+      },
+      "memory_tips": [
+        "One optimistic, four most likely, one pessimistic; six total weights."
+      ],
+      "common_mistakes": [
+        "Using the triangular average.",
+        "Changing units between estimates."
+      ],
+      "related_lesson_ids": [
+        "PL-C035",
+        "PL-C036"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-CRITICAL-PATH"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "duration estimating"
+        },
+        {
+          "source_id": "S10",
+          "topic": "PERT"
+        }
+      ]
+    },
+    {
+      "id": "F-TOTAL-FLOAT",
+      "name": "Total float",
+      "formula": "LS - ES = LF - EF",
+      "variables": [
+        {
+          "symbol": "LS",
+          "meaning": "late start"
+        },
+        {
+          "symbol": "ES",
+          "meaning": "early start"
+        },
+        {
+          "symbol": "LF",
+          "meaning": "late finish"
+        },
+        {
+          "symbol": "EF",
+          "meaning": "early finish"
+        }
+      ],
+      "interpretation": "The time an activity may slip without delaying the modeled project finish date.",
+      "comparison_guidance": {
+        "greater_than": "More scheduling flexibility under the current network model.",
+        "less_than": "Less flexibility; zero commonly identifies a critical-path activity."
+      },
+      "memory_tips": [
+        "Late minus early, using either starts or finishes."
+      ],
+      "common_mistakes": [
+        "Confusing total float with free float.",
+        "Assuming the network and critical path never change."
+      ],
+      "related_lesson_ids": [
+        "PL-C036"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-CRITICAL-PATH"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "critical path and float"
+        }
+      ]
+    },
+    {
+      "id": "F-CPI",
+      "name": "Cost performance index",
+      "formula": "EV / AC",
+      "variables": [
+        {
+          "symbol": "EV",
+          "meaning": "earned value"
+        },
+        {
+          "symbol": "AC",
+          "meaning": "actual cost"
+        }
+      ],
+      "interpretation": "Cost efficiency: budgeted value earned for each unit of actual cost.",
+      "comparison_guidance": {
+        "greater_than": "Above 1.0 is favorable cost efficiency.",
+        "less_than": "Below 1.0 is unfavorable cost efficiency."
+      },
+      "memory_tips": [
+        "Cost asks what was earned for what was spent."
+      ],
+      "common_mistakes": [
+        "Reversing AC and EV.",
+        "Interpreting a higher CPI as over budget."
+      ],
+      "related_lesson_ids": [
+        "PL-C038"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value management"
+        },
+        {
+          "source_id": "S10",
+          "topic": "EVM formulas"
+        }
+      ]
+    },
+    {
+      "id": "F-SPI",
+      "name": "Schedule performance index",
+      "formula": "EV / PV",
+      "variables": [
+        {
+          "symbol": "EV",
+          "meaning": "earned value"
+        },
+        {
+          "symbol": "PV",
+          "meaning": "planned value"
+        }
+      ],
+      "interpretation": "Schedule efficiency measured in budgeted-value terms.",
+      "comparison_guidance": {
+        "greater_than": "Above 1.0 indicates more value earned than planned by the status date.",
+        "less_than": "Below 1.0 indicates less value earned than planned by the status date."
+      },
+      "memory_tips": [
+        "Schedule compares earned work to planned work."
+      ],
+      "common_mistakes": [
+        "Treating SPI as calendar days.",
+        "Assuming SPI alone predicts final completion."
+      ],
+      "related_lesson_ids": [
+        "PL-C038"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value management"
+        },
+        {
+          "source_id": "S10",
+          "topic": "EVM formulas"
+        }
+      ]
+    },
+    {
+      "id": "F-EAC",
+      "name": "Estimate at completion using CPI",
+      "formula": "BAC / CPI",
+      "variables": [
+        {
+          "symbol": "BAC",
+          "meaning": "budget at completion"
+        },
+        {
+          "symbol": "CPI",
+          "meaning": "cost performance index"
+        }
+      ],
+      "interpretation": "A forecast of total cost when current cost efficiency is expected to continue.",
+      "comparison_guidance": {
+        "greater_than": "EAC above BAC forecasts an overrun.",
+        "less_than": "EAC below BAC forecasts an underrun."
+      },
+      "memory_tips": [
+        "Scale the original budget by expected cost efficiency."
+      ],
+      "common_mistakes": [
+        "Using this variant when past variance is atypical.",
+        "Selecting a formula without checking scenario assumptions."
+      ],
+      "related_lesson_ids": [
+        "PL-C038"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "EVM forecasting"
+        },
+        {
+          "source_id": "S10",
+          "topic": "EAC variants"
+        }
+      ]
+    },
+    {
+      "id": "F-EMV",
+      "name": "Expected monetary value",
+      "formula": "probability × impact",
+      "variables": [
+        {
+          "symbol": "probability",
+          "meaning": "likelihood expressed as a decimal"
+        },
+        {
+          "symbol": "impact",
+          "meaning": "monetary consequence, positive or negative"
+        }
+      ],
+      "interpretation": "Probability-weighted value used to compare uncertain outcomes and roll up decision trees.",
+      "comparison_guidance": {
+        "greater_than": "A larger positive EMV favors opportunity value; a larger absolute negative EMV indicates greater expected loss.",
+        "less_than": "A value nearer zero has less probability-weighted monetary effect."
+      },
+      "memory_tips": [
+        "Chance times consequence."
+      ],
+      "common_mistakes": [
+        "Using percentages as whole numbers.",
+        "Ignoring sign conventions or non-monetary criteria."
+      ],
+      "related_lesson_ids": [
+        "PL-C046"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-RISK-APPETITE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "quantitative risk analysis"
+        }
+      ]
+    },
+    {
+      "id": "F-ROI",
+      "name": "Return on investment",
+      "formula": "(benefit - cost) / cost",
+      "variables": [
+        {
+          "symbol": "benefit",
+          "meaning": "measured return attributable to the investment"
+        },
+        {
+          "symbol": "cost",
+          "meaning": "investment cost"
+        }
+      ],
+      "interpretation": "Relative net return compared with the investment cost.",
+      "comparison_guidance": {
+        "greater_than": "Higher positive ROI is generally more attractive when assumptions and time horizons are comparable.",
+        "less_than": "Lower or negative ROI indicates weaker financial return."
+      },
+      "memory_tips": [
+        "Net benefit over cost."
+      ],
+      "common_mistakes": [
+        "Using benefit/cost without subtracting cost.",
+        "Comparing projects with different timing or risk using ROI alone."
+      ],
+      "related_lesson_ids": [
+        "PL-C039"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-BUSINESS-CASE",
+        "G-PORTFOLIO"
+      ],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "financial selection metrics"
+        }
+      ]
+    },
+    {
+      "id": "F-NPV",
+      "name": "Net present value",
+      "formula": "Σ(CFₜ / (1 + r)ᵗ) - initial investment",
+      "variables": [
+        {
+          "symbol": "CFₜ",
+          "meaning": "cash flow in period t"
+        },
+        {
+          "symbol": "r",
+          "meaning": "discount rate"
+        },
+        {
+          "symbol": "t",
+          "meaning": "time period"
+        }
+      ],
+      "interpretation": "Value today of future cash flows after discounting and subtracting the initial investment.",
+      "comparison_guidance": {
+        "greater_than": "Higher positive NPV generally creates more financial value under the assumptions.",
+        "less_than": "Negative NPV indicates discounted returns do not recover the investment."
+      },
+      "memory_tips": [
+        "Discount future cash, then subtract the initial investment."
+      ],
+      "common_mistakes": [
+        "Ignoring the timing of cash flows.",
+        "Choosing the shortest project without comparing NPV."
+      ],
+      "related_lesson_ids": [
+        "PL-C039"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-BUSINESS-CASE",
+        "G-PORTFOLIO"
+      ],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "financial selection metrics"
+        }
+      ]
+    },
+    {
+      "id": "F-LITTLES-LAW",
+      "name": "Little's Law",
+      "formula": "WIP = throughput × cycle time",
+      "variables": [
+        {
+          "symbol": "WIP",
+          "meaning": "average work in progress"
+        },
+        {
+          "symbol": "throughput",
+          "meaning": "average completion rate"
+        },
+        {
+          "symbol": "cycle time",
+          "meaning": "average time in the system"
+        }
+      ],
+      "interpretation": "A stable-flow relationship connecting inventory, completion rate, and time.",
+      "comparison_guidance": {
+        "greater_than": "At fixed throughput, more WIP implies longer cycle time.",
+        "less_than": "At fixed throughput, less WIP implies shorter cycle time."
+      },
+      "memory_tips": [
+        "Inventory equals rate times time."
+      ],
+      "common_mistakes": [
+        "Applying it to unstable or inconsistently measured systems.",
+        "Mixing time units."
+      ],
+      "related_lesson_ids": [
+        "PL-C050",
+        "PL-C052"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-WIP"
+      ],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "flow metrics"
+        }
+      ]
+    }
+  ]
+}

@@ -67,3 +67,51 @@ This working log records proposals made during the audit. The User remains the f
 - **Evidence:** 123 tests and production build pass; catalog validation has zero errors; rendered filter/mapping/count checks pass with zero console errors; production lesson/question diffs are empty.
 - **Risks carried forward:** question answer-cue bias, unverified official terminology/edition alignment, and lack of direct objective mappings.
 - **Unresolved:** All decisions listed in the final report remain subject to User approval.
+
+## W-009 — Separate taxonomy, prerequisites, and related-concept edges
+
+- **Decision:** The knowledge graph stores parent/child, prerequisite, and reciprocal related links as distinct relationships.
+- **Alternatives considered:** One generic `related_to` edge; module sequence as the only dependency model.
+- **Reasoning:** Taxonomy, learning order, and transfer answer different questions and drive different future UI behavior.
+- **Risks:** Edge review is an instructional judgment; technically valid relationships may still be pedagogically weak.
+- **Unresolved:** User/architecture approval of the 59-node edge set.
+
+## W-010 — Use planning lesson IDs without reserving production IDs
+
+- **Decision:** Pair each concept with `PL-C###`; keep existing `l###` IDs untouched.
+- **Alternatives considered:** Pre-allocate `l027`–`l085`; use concept IDs as production lesson IDs immediately.
+- **Reasoning:** Planning needs stable lesson relationships, while production identity belongs to a later approved migration.
+- **Risks:** A future mapping table is required when a planned lesson becomes production content.
+- **Unresolved:** Production ID and sidecar migration strategy.
+
+## W-011 — Keep glossary and formula population representative
+
+- **Decision:** Validate the architecture with 14 glossary and 10 formula records; define the full reference-sheet backlog without pretending the shared knowledge layer is complete.
+- **Alternatives considered:** Populate a full PMP glossary/formula encyclopedia in this mission; leave catalogs empty.
+- **Reasoning:** The mission explicitly forbids lesson/question production and requests examples only for glossary/formula validation.
+- **Risks:** Consumers must honor the completeness note and not present these catalogs as exhaustive.
+- **Unresolved:** Approval and priority order for production population.
+
+## W-012 — Gate adaptive learning on reviewed objective evidence
+
+- **Decision:** Design adaptive state and pathways only; do not implement algorithms or use current quiz scores as mastery evidence.
+- **Alternatives considered:** ECO-domain recommendation rules now; AI-generated recommendations; immediate spaced repetition.
+- **Reasoning:** The current bank has severe answer cues and no reviewed objective mappings.
+- **Risks:** The architecture remains unproven in runtime until evidence prerequisites are met.
+- **Unresolved:** Approved mastery/confidence policy and scheduling method.
+
+## W-013 — Recommend sidecar metadata before production schema migration
+
+- **Decision:** Define question/lesson target metadata without modifying `questions.json` or `lessons.json`; future inferred mappings must be labeled.
+- **Alternatives considered:** Immediate schema-v2 rewrite; embed planning metadata in content bodies.
+- **Reasoning:** Sidecars preserve stable content and allow bounded mapping review.
+- **Risks:** Loaders temporarily join multiple files and must prevent drift.
+- **Unresolved:** Exact sidecar file boundaries and normalization API.
+
+## W-014 — Document repository future state without moving files
+
+- **Decision:** Recommend scalable `content/knowledge/glossary/formulas/reference/lessons/questions` boundaries but leave the current tree intact.
+- **Alternatives considered:** Immediate reorganization during this documentation/data slice.
+- **Reasoning:** No current runtime consumer requires the move; migration now would create import churn without learner value.
+- **Risks:** Current `data/` directory remains broad until a real migration trigger exists.
+- **Unresolved:** First approved feature that justifies the new directory boundary.
