@@ -327,3 +327,36 @@ per-domain accuracy stats for existing quiz history.
 cross-checked directly, not from training-data memory.
 
 **Approved by:** User
+
+---
+
+## Decision #11 — Conversational User approval is the content review decision
+
+**Date:** 2026-07-13
+
+**Decision:** In this single-author/single-reviewer project, the User's explicit
+approval in the working conversation replaces a separate formal multi-step
+review ceremony for concept lessons c001-c010 and future content batches unless
+this decision is revisited. Automated structural, mapping, and referential
+validation still runs before commit. For c001-c010, conversational approval
+authorizes ingestion as **Authored**; it does not claim that pending knowledge
+checks or related production questions are complete, and it does not mark the
+canonical coverage units Implemented.
+
+**Alternatives considered:** Requiring separate structural, overlap, technical,
+source, instructional, and assessment sign-offs by the same two participants
+after conversational approval had already been given.
+
+**Why rejected:** Repeating the same approval through multiple formal gates
+adds ceremony without adding an independent reviewer. The committed contract
+tests, source references, visible diff, and draft PR preserve an auditable
+review point.
+
+**Tradeoffs:** Conversational approval must be explicit and recorded in the
+decision log or PR. It does not replace automated validation, and it cannot
+turn incomplete assessment assets into complete ones.
+
+**Revisit:** If another author or reviewer joins, content is published outside
+the local repository workflow, or the User requests separate review gates.
+
+**Approved by:** User (explicit closeout instruction in this session)
