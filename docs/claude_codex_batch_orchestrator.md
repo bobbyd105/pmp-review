@@ -6,6 +6,10 @@ This workflow lets Claude Code act as the bounded orchestrator for a feature bra
 
 The User remains the final product and merge authority. Automated checkpoint commits are evidence-bearing recovery points, not approval to merge.
 
+Provider selection is explicit in the master plan, but intentionally narrow:
+Claude Code is the only supported orchestrator and Codex CLI is the only
+supported worker. This is configuration, not a generic provider plugin system.
+
 ## Operating model
 
 1. The User approves a feature objective and its batch plan.
@@ -74,6 +78,71 @@ Real runs should copy the examples to untracked or task-specific files, such as:
 ```
 
 The run directory should be committed only when its contents are useful project records and contain no machine-specific paths, credentials, or excessive logs.
+
+## Provider configuration
+
+Every master plan must identify both providers:
+
+```json
+{
+  "providers": {
+    "orchestrator": "claude-code",
+    "worker": "codex-cli"
+  }
+}
+```
+
+The controller resolves these IDs to the local `claude` and `codex` commands.
+It fails closed when either field is absent, blank, or unsupported. No Gemini,
+OpenAI API, local-model, or generic plugin integration exists. Supporting a
+future provider would require one reviewed registry entry and its explicit
+invocation behavior; arbitrary commands are never accepted from plan JSON.
+
+## Safe smoke test
+
+Run the included example configuration from the repository root:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\run-agent-workflow.ps1 -PlanPath .\.ai\workflow\master-plan.example.json -StatePath .\.ai\workflow\current-state.example.json -SmokeTest -OpenPullRequest
+```
+
+`-OpenPullRequest` is included so the preflight also checks for `gh`. The smoke
+test exits `0` when required configuration, files, providers, and commands are
+available. It:
+
+- parses the master plan, workflow state, and batch-result schema;
+- verifies the orchestrator prompt and result schema exist;
+- accepts only `claude-code` plus `codex-cli` and resolves their commands;
+- checks `git`, `claude`, `codex`, and, with `-OpenPullRequest`, `gh` on PATH;
+- reports the current and configured branches and the working-tree state;
+- prints the fresh-session, worker, validation, checkpoint, push, final-gate,
+  and draft-PR commands it would perform.
+
+The smoke test does **not** invoke Claude or Codex, create run directories or
+result files, edit workflow state, change code or documentation, stage files,
+commit, push, open a PR, delete files, reset, clean, or stash. Branch mismatch
+or a dirty tree is reported as a warning because smoke mode is observational;
+normal execution retains its hard branch-match and clean-tree gates.
+
+A successful run ends with:
+
+```text
+SMOKE TEST PASSED: configuration and required commands are available. No actions were performed.
+```
+
+It exits nonzero with `SMOKE TEST FAILED` when JSON cannot be parsed, a required
+file or provider field is missing, a provider is unsupported, or a required
+command cannot be found. Common command failures are:
+
+- `claude` missing: install/configure Claude Code and ensure `claude` is on PATH;
+- `codex` missing: install/configure Codex CLI and ensure `codex` is on PATH;
+- `git` missing: install Git and ensure `git` is on PATH;
+- `gh` missing: install GitHub CLI, or omit `-OpenPullRequest` when only checking
+  a run that will not open the final PR.
+
+Smoke mode checks command discovery, not authentication. Resolve any login or
+permission problem before a live run; the controller never edits credentials
+or authentication configuration.
 
 ## Batch design rules
 

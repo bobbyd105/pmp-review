@@ -10,11 +10,35 @@ param(
 
     [switch]$OpenPullRequest,
 
-    [switch]$NoPush
+    [switch]$NoPush,
+
+    [switch]$SmokeTest
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+
+$script:ProviderRegistry = @{
+    orchestrator = @{
+        "claude-code" = [pscustomobject]@{
+            Id = "claude-code"
+            DisplayName = "Claude Code"
+            Command = "claude"
+        }
+    }
+    worker = @{
+        "codex-cli" = [pscustomobject]@{
+            Id = "codex-cli"
+            DisplayName = "Codex CLI"
+            Command = "codex"
+        }
+    }
+}
+
+$script:RequiredWorkflowFiles = @(
+    ".ai/workflow/orchestrator-prompt.md",
+    ".ai/workflow/batch-result.schema.json"
+)
 
 function Invoke-CheckedCommand {
     param(
@@ -38,12 +62,197 @@ function Invoke-CheckedCommand {
     }
 }
 
-function Assert-ToolAvailable {
-    param([Parameter(Mandatory = $true)][string]$Name)
+function Assert-WorkflowFilesExist {
+    param([Parameter(Mandatory = $true)][string[]]$Paths)
 
-    if (-not (Get-Command $Name -ErrorAction SilentlyContinue)) {
-        throw "Required command '$Name' was not found on PATH."
+    foreach ($path in $Paths) {
+        if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+            throw "Required workflow file not found: $path"
+        }
     }
+}
+
+function Resolve-ProviderConfiguration {
+    param([Parameter(Mandatory = $true)]$Plan)
+
+    if (-not $Plan.PSObject.Properties.Name.Contains("providers")) {
+        throw "Master plan is missing required 'providers' configuration. Expected orchestrator 'claude-code' and worker 'codex-cli'."
+    }
+
+    foreach ($role in @("orchestrator", "worker")) {
+        if (-not $Plan.providers.PSObject.Properties.Name.Contains($role)) {
+            throw "Master plan providers configuration is missing '$role'."
+        }
+
+        $providerId = [string]$Plan.providers.$role
+        if ([string]::IsNullOrWhiteSpace($providerId)) {
+            throw "Master plan provider '$role' must not be empty."
+        }
+
+        $supported = $script:ProviderRegistry[$role]
+        if (-not $supported.ContainsKey($providerId)) {
+            $supportedIds = @($supported.Keys | Sort-Object) -join ", "
+            throw "Unsupported $role provider '$providerId'. Supported values: $supportedIds."
+        }
+    }
+
+    return [pscustomobject]@{
+        Orchestrator = $script:ProviderRegistry.orchestrator[[string]$Plan.providers.orchestrator]
+        Worker = $script:ProviderRegistry.worker[[string]$Plan.providers.worker]
+    }
+}
+
+function Get-RequiredCommandNames {
+    param(
+        [Parameter(Mandatory = $true)]$Providers,
+        [switch]$IncludeGitHubCli
+    )
+
+    $names = @("git", $Providers.Orchestrator.Command, $Providers.Worker.Command)
+    if ($IncludeGitHubCli) {
+        $names += "gh"
+    }
+    return @($names | Sort-Object -Unique)
+}
+
+function Assert-CommandsAvailable {
+    param([Parameter(Mandatory = $true)][string[]]$Names)
+
+    $missing = @($Names | Where-Object { -not (Get-Command $_ -ErrorAction SilentlyContinue) })
+    if ($missing.Count -gt 0) {
+        throw "Required commands were not found on PATH: $($missing -join ', ')."
+    }
+}
+
+function Assert-WorkflowConfiguration {
+    param(
+        [Parameter(Mandatory = $true)]$Plan,
+        [Parameter(Mandatory = $true)]$State,
+        [switch]$RequirePullRequest
+    )
+
+    foreach ($name in @("feature_id", "title", "branch", "base_branch", "status", "max_total_batches", "batches", "final_validation_commands")) {
+        if (-not $Plan.PSObject.Properties.Name.Contains($name)) {
+            throw "Master plan is missing required property '$name'."
+        }
+    }
+    foreach ($name in @("feature_id", "branch", "status", "completed_batches")) {
+        if (-not $State.PSObject.Properties.Name.Contains($name)) {
+            throw "Workflow state is missing required property '$name'."
+        }
+    }
+
+    if ($Plan.status -ne "approved") {
+        throw "Master plan status must be 'approved' before automation begins."
+    }
+    if ($Plan.feature_id -ne $State.feature_id) {
+        throw "Plan and state feature_id values do not match."
+    }
+    if ($Plan.branch -ne $State.branch) {
+        throw "Plan and state branch values do not match."
+    }
+    if (@($Plan.batches).Count -gt [int]$Plan.max_total_batches) {
+        throw "Plan exceeds max_total_batches."
+    }
+    if ($RequirePullRequest) {
+        if (-not $Plan.PSObject.Properties.Name.Contains("pull_request")) {
+            throw "Master plan is missing required property 'pull_request' for -OpenPullRequest."
+        }
+        foreach ($name in @("open_as_draft", "title")) {
+            if (-not $Plan.pull_request.PSObject.Properties.Name.Contains($name)) {
+                throw "Master plan pull_request configuration is missing '$name'."
+            }
+        }
+    }
+}
+
+function Get-GitSnapshot {
+    $branch = (& git branch --show-current).Trim()
+    if ($LASTEXITCODE -ne 0 -or -not $branch) {
+        throw "Unable to determine the current Git branch."
+    }
+
+    $status = @(& git status --porcelain=v1 --untracked-files=all)
+    if ($LASTEXITCODE -ne 0) {
+        throw "Unable to inspect the Git working tree."
+    }
+
+    return [pscustomobject]@{
+        Branch = $branch
+        IsClean = $status.Count -eq 0
+        StatusLines = $status
+    }
+}
+
+function Invoke-SmokeTest {
+    param(
+        [Parameter(Mandatory = $true)]$Plan,
+        [Parameter(Mandatory = $true)]$State,
+        [Parameter(Mandatory = $true)]$Providers,
+        [Parameter(Mandatory = $true)][string[]]$RequiredCommands
+    )
+
+    Write-Host "=== Claude-Codex workflow smoke test ==="
+    Write-Host "[PASS] Master plan parsed: $((Resolve-Path -LiteralPath $PlanPath).Path)"
+    Write-Host "[PASS] Workflow state parsed: $((Resolve-Path -LiteralPath $StatePath).Path)"
+    foreach ($path in $script:RequiredWorkflowFiles) {
+        Write-Host "[PASS] Required workflow file exists: $path"
+    }
+    Write-Host "[PASS] Orchestrator provider: $($Providers.Orchestrator.Id) -> $($Providers.Orchestrator.Command)"
+    Write-Host "[PASS] Worker provider: $($Providers.Worker.Id) -> $($Providers.Worker.Command)"
+
+    foreach ($name in $RequiredCommands) {
+        $resolved = Get-Command $name -ErrorAction Stop
+        Write-Host "[PASS] Required command found: $name -> $($resolved.Source)"
+    }
+
+    $git = Get-GitSnapshot
+    Write-Host "[INFO] Current Git branch: $($git.Branch)"
+    Write-Host "[INFO] Configured feature branch: $($Plan.branch)"
+    if ($git.Branch -ne $Plan.branch) {
+        Write-Warning "Normal execution will stop until the current branch matches '$($Plan.branch)'."
+    }
+    if ($git.IsClean) {
+        Write-Host "[PASS] Git working tree is clean."
+    }
+    else {
+        Write-Warning "Git working tree is not clean. Normal execution will stop."
+        $git.StatusLines | ForEach-Object { Write-Host "       $_" }
+    }
+
+    Write-Host ""
+    Write-Host "Planned actions (preview only; nothing below is executed):"
+    foreach ($batch in @($Plan.batches)) {
+        if (@($State.completed_batches) -contains $batch.id) {
+            Write-Host "- Skip completed batch $($batch.id): $($batch.title)"
+            continue
+        }
+
+        Write-Host "- Batch $($batch.id): $($batch.title)"
+        Write-Host "  > $($Providers.Orchestrator.Command) -p <generated prompt for $($batch.id)>"
+        Write-Host "    $($Providers.Orchestrator.DisplayName) delegates implementation to $($Providers.Worker.DisplayName) using '$($Providers.Worker.Command)'."
+        foreach ($command in @($batch.validation_commands)) {
+            Write-Host "  > $command"
+        }
+        Write-Host "  > git add --all"
+        Write-Host "  > git commit -m `"checkpoint($($batch.id)): $($batch.title)`""
+        if (-not $NoPush) {
+            Write-Host "  > git push -u origin $($State.branch)"
+        }
+        Write-Host "  > git commit -m `"chore(workflow): advance after $($batch.id)`" (only when state changed)"
+    }
+
+    Write-Host "- Final feature gate"
+    foreach ($command in @($Plan.final_validation_commands)) {
+        Write-Host "  > $command"
+    }
+    if ($OpenPullRequest) {
+        $draftFlag = if ($Plan.pull_request.open_as_draft) { "--draft" } else { "" }
+        Write-Host "  > gh pr create $draftFlag --base $($Plan.base_branch) --head $($Plan.branch) --title `"$($Plan.pull_request.title)`" --body-file <generated pull-request.md>"
+    }
+
+    Write-Host ""
+    Write-Host "SMOKE TEST PASSED: configuration and required commands are available. No actions were performed."
 }
 
 function Read-JsonFile {
@@ -52,7 +261,7 @@ function Read-JsonFile {
     if (-not (Test-Path -LiteralPath $Path)) {
         throw "Required JSON file not found: $Path"
     }
-    return Get-Content -LiteralPath $Path -Raw | ConvertFrom-Json -Depth 100
+    return Get-Content -LiteralPath $Path -Raw | ConvertFrom-Json
 }
 
 function Write-JsonFile {
@@ -184,7 +393,8 @@ function Invoke-ClaudeBatch {
         [Parameter(Mandatory = $true)]$Plan,
         [Parameter(Mandatory = $true)]$State,
         [Parameter(Mandatory = $true)]$Batch,
-        [Parameter(Mandatory = $true)][string]$ResultPath
+        [Parameter(Mandatory = $true)][string]$ResultPath,
+        [Parameter(Mandatory = $true)]$Providers
     )
 
     $basePrompt = Get-Content -LiteralPath ".ai/workflow/orchestrator-prompt.md" -Raw
@@ -197,16 +407,29 @@ function Invoke-ClaudeBatch {
             title = $Plan.title
             branch = $Plan.branch
         }
+        providers = [ordered]@{
+            orchestrator = [ordered]@{
+                id = $Providers.Orchestrator.Id
+                command = $Providers.Orchestrator.Command
+            }
+            worker = [ordered]@{
+                id = $Providers.Worker.Id
+                command = $Providers.Worker.Command
+            }
+        }
         batch = $Batch
     } | ConvertTo-Json -Depth 100
 
-    $prompt = "$basePrompt`n`n## Controller payload`n```json`n$payload`n```"
-    Write-Host "Starting fresh Claude session for batch $($Batch.id)..."
-    $output = & claude -p $prompt 2>&1
+    $prompt = $basePrompt + [Environment]::NewLine + [Environment]::NewLine +
+        "## Controller payload" + [Environment]::NewLine +
+        '```json' + [Environment]::NewLine + $payload + [Environment]::NewLine + '```'
+    Write-Host "Starting fresh $($Providers.Orchestrator.DisplayName) session for batch $($Batch.id)..."
+    $orchestratorCommand = $Providers.Orchestrator.Command
+    $output = & $orchestratorCommand -p $prompt 2>&1
     $exitCode = $LASTEXITCODE
     $output | ForEach-Object { Write-Host $_ }
     if ($exitCode -ne 0) {
-        throw "Claude Code exited with code $exitCode for batch $($Batch.id)."
+        throw "$($Providers.Orchestrator.DisplayName) exited with code $exitCode for batch $($Batch.id)."
     }
     if (-not (Test-Path -LiteralPath $ResultPath)) {
         throw "Claude did not write the required batch result: $ResultPath"
@@ -243,22 +466,33 @@ function New-CheckpointCommit {
     return $sha
 }
 
-Assert-ToolAvailable "git"
-Assert-ToolAvailable "claude"
-Assert-ToolAvailable "codex"
-if ($OpenPullRequest) { Assert-ToolAvailable "gh" }
-
-$plan = Read-JsonFile $PlanPath
-$state = Read-JsonFile $StatePath
-
-if ($plan.status -ne "approved") {
-    throw "Master plan status must be 'approved' before automation begins."
+try {
+    Assert-WorkflowFilesExist -Paths (@($PlanPath, $StatePath) + $script:RequiredWorkflowFiles)
+    $plan = Read-JsonFile $PlanPath
+    $state = Read-JsonFile $StatePath
+    $null = Read-JsonFile ".ai/workflow/batch-result.schema.json"
+    Assert-WorkflowConfiguration -Plan $plan -State $state -RequirePullRequest:$OpenPullRequest
+    $providers = Resolve-ProviderConfiguration -Plan $plan
+    $requiredCommands = Get-RequiredCommandNames -Providers $providers -IncludeGitHubCli:$OpenPullRequest
+    Assert-CommandsAvailable -Names $requiredCommands
 }
-if ($plan.branch -ne $state.branch) {
-    throw "Plan and state branch values do not match."
+catch {
+    if ($SmokeTest) {
+        Write-Error "SMOKE TEST FAILED: $($_.Exception.Message)" -ErrorAction Continue
+        exit 1
+    }
+    throw
 }
-if (@($plan.batches).Count -gt [int]$plan.max_total_batches) {
-    throw "Plan exceeds max_total_batches."
+
+if ($SmokeTest) {
+    try {
+        Invoke-SmokeTest -Plan $plan -State $state -Providers $providers -RequiredCommands $requiredCommands
+        exit 0
+    }
+    catch {
+        Write-Error "SMOKE TEST FAILED: $($_.Exception.Message)" -ErrorAction Continue
+        exit 1
+    }
 }
 
 Assert-Branch $plan.branch
@@ -283,7 +517,7 @@ foreach ($batch in $plan.batches) {
     }
 
     try {
-        Invoke-ClaudeBatch -Plan $plan -State $state -Batch $batch -ResultPath $resultPath
+        Invoke-ClaudeBatch -Plan $plan -State $state -Batch $batch -ResultPath $resultPath -Providers $providers
         $result = Read-JsonFile $resultPath
         Assert-BatchResult -Result $result -FeatureId $plan.feature_id -BatchId $batch.id
         Invoke-ValidationCommands -Commands @($batch.validation_commands)

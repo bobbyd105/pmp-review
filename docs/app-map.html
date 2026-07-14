@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-13 (answer-bias closeout and Foundation Block ingestion).
+<p>Last updated: 2026-07-13 (batch-orchestrator provider and smoke-test refinement).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -167,6 +167,16 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>scripts/report-length-bias.mjs</code></td>
     <td>Pure answer-length analysis plus report generator: measures Unicode character length, correct/average-distractor ratios, strict-longest rate, worst-first ratio flags, and remediation status without changing content.</td>
     <td><code>npm run questions:report-length-bias</code>; <code>lengthBias.test.js</code></td>
+  </tr>
+  <tr>
+    <td><code>scripts/run-agent-workflow.ps1</code></td>
+    <td>Bounded Windows batch controller. Reads explicit <code>claude-code</code>/<code>codex-cli</code> provider IDs, runs one fresh Claude Code orchestration session per approved batch, independently validates results and paths, owns checkpoint commits/pushes and one final draft PR, and fails closed for unsupported providers. <code>-SmokeTest</code> performs a read-only configuration/file/command/Git preflight and prints every planned action before any live run.</td>
+    <td><code>.ai/workflow/</code> plan/state/prompt/result contracts; local <code>git</code>, <code>claude</code>, <code>codex</code>, and optional <code>gh</code> commands</td>
+  </tr>
+  <tr>
+    <td><code>.ai/workflow/master-plan.example.json</code> and related workflow contracts</td>
+    <td>Example approved batch plan with explicit provider configuration, resumable state shape, schema-validated batch result contract, and the bounded orchestrator prompt. These are automation inputs, not application runtime data.</td>
+    <td><code>run-agent-workflow.ps1</code>; one fresh Claude Code session per eligible batch</td>
   </tr>
 </table>
 
@@ -346,6 +356,8 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <li><code>docs/content/glossary_model.md</code>, <code>formula_model.md</code>, and <code>reference_sheet_model.md</code> — shared knowledge asset contracts</li>
   <li><code>docs/content/adaptive_learning_model.md</code>, <code>question_metadata_model.md</code>, and <code>lesson_metadata_model.md</code> — future learner-state and metadata boundaries</li>
   <li><code>docs/content/content_pipeline.md</code> and <code>repository_future_state.md</code> — production checkpoints and no-move-yet scalability design</li>
+  <li><code>docs/claude_codex_batch_orchestrator.md</code> — bounded controller model, provider configuration, smoke-test command, gates, and failure behavior</li>
+  <li><code>docs/decisions/2026-07-13-claude-codex-batch-orchestration.md</code> — approved fresh-session Claude/Codex orchestration decision</li>
   <li><code>docs/working/</code> — resumable phase progress, working decisions, and next actions</li>
 </ul>
 

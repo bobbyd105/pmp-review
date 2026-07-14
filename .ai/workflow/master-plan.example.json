@@ -4,6 +4,10 @@
   "branch": "feature/example-bounded-feature",
   "base_branch": "main",
   "status": "approved",
+  "providers": {
+    "orchestrator": "claude-code",
+    "worker": "codex-cli"
+  },
   "max_total_batches": 8,
   "final_validation_commands": [
     "npm test",

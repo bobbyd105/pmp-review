@@ -25,6 +25,12 @@ Before implementation, state in your working output:
 
 You are the orchestrator and reviewer. Codex CLI is the implementation worker.
 
+The controller payload includes the approved `providers` configuration. For
+this workflow, `providers.orchestrator.id` must be `claude-code` and
+`providers.worker.id` must be `codex-cli`. Invoke only the worker command named
+in that payload. Do not substitute an API, another model provider, or a local
+model, and do not design a provider plugin system inside a batch.
+
 Use Codex only against the supplied batch specification. Give Codex the objective, allowed paths, forbidden paths, acceptance criteria, and validation commands. Do not ask Codex to redesign the feature or choose product scope.
 
 Inspect Codex's changes, Git diff, and command output. When criteria are not met, give Codex targeted corrections. Do not restart the entire feature. Do not exceed `max_codex_attempts`.

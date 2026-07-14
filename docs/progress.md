@@ -6,6 +6,8 @@ knowledge-layer baseline. This closeout balances all 384 questions across the
 four correct-answer positions, adds reproducible answer-bias measurement, and
 ingests the complete ten-lesson Foundation Block (c001-c010) as Authored concept
 assets. Knowledge checks and direct production-question links remain pending.
+The open batch-orchestrator branch now adds explicit Claude Code/Codex CLI
+provider configuration and a read-only local smoke-test mode for PR #22.
 
 Prior v0.7 summary follows.
 
@@ -19,6 +21,22 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 155Q/10L, Business Environment 99Q/8L).
 
 ## Completed Work
+- Claude-Codex batch orchestrator refinement (PR #22, 2026-07-13):
+  - Added required master-plan provider IDs: `claude-code` orchestrator and
+    `codex-cli` worker. The controller resolves these through a two-entry local
+    registry and fails closed for missing, blank, or unsupported values.
+  - Added `-SmokeTest`, which parses workflow JSON, verifies required files and
+    command discovery, inspects branch/tree state, and prints the complete
+    planned batch/validation/checkpoint/push/PR flow without invoking agents or
+    mutating repository, Git, workflow state, or GitHub state.
+  - Preserved normal execution gates: exact feature branch, clean start,
+    fresh Claude session per batch, Codex worker, independent validation,
+    allowed/forbidden path enforcement, passed-batch checkpoint commits, and
+    one final draft PR under User merge authority.
+  - Validation: PowerShell parser passes; example smoke test exits 0; an
+    unsupported-worker smoke fixture exits 1 with the supported value named;
+    full suite 18 files / 139 tests passes; production build passes with the
+    existing non-blocking large-chunk warning.
 - Answer-bias closeout and Foundation Block ingestion (2026-07-13):
   - Reordered option arrays deterministically with the committed
     `pmp-options-v1` seed. Correct-answer text and all question wording are
@@ -287,6 +305,10 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   All 114 tests pass with the file-scoped Question Bank timeout.
 
 ## Files Modified
+- Batch-orchestrator refinement: `scripts/run-agent-workflow.ps1`,
+  `.ai/workflow/master-plan.example.json`,
+  `.ai/workflow/orchestrator-prompt.md`,
+  `docs/claude_codex_batch_orchestrator.md`, `docs/app-map.html`, and this file.
 - Answer-bias/Foundation closeout: `data/questions.json`,
   `data/concept_lessons.json`, `scripts/shuffle-question-options.mjs`,
   `scripts/report-length-bias.mjs`, three focused tests,
@@ -319,6 +341,10 @@ the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
   package.json (version bump), docs/app-map.html, docs/progress.md
 
 ## Architecture Changes
+- Batch orchestration reads explicit provider IDs from the approved plan but
+  supports only Claude Code and Codex CLI. The fixed registry is a fail-closed
+  dispatch boundary, not a plugin system. `-SmokeTest` returns before every
+  mutation path and provides an observable preflight for later live runs.
 - The production curriculum now has a separate validated concept-lesson
   catalog. It is an authored content source but has no runtime UI consumer yet;
   the existing ECO lesson schema and the 59-unit planning catalog are unchanged.
@@ -387,10 +413,11 @@ accuracy spot-check against the current ECO before merge.
 
 ## Current Status
 Knowledge-layer Phases 0-13 and their curriculum architecture baseline are
-merged on main via PR #21. The current closeout branch adds deterministic
-question option ordering, the length-bias report, and the Authored Foundation
-Block. `data/lessons.json` remains unchanged; concept lessons are isolated in
-`data/concept_lessons.json` and are not yet rendered by the app.
+merged on main via PR #21. The answer-bias/Foundation closeout is merged via
+PR #23. The current PR #22 branch adds the bounded batch controller plus its
+provider/preflight refinement; it does not change application runtime or
+curriculum content. `data/lessons.json` remains unchanged; concept lessons are
+isolated in `data/concept_lessons.json` and are not yet rendered by the app.
 
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
 to main (PR #6). Branch `content/eco-2026-remap` (open as PR #7) now holds
