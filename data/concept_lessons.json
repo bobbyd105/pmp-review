@@ -5901,5 +5901,396 @@
       "S8",
       "S9"
     ]
+  },
+  {
+    "id": "c048",
+    "lesson_type": "concept",
+    "title": "Risk Planning and Identification",
+    "module": "Risk and Uncertainty",
+    "production_group": "Risk Block",
+    "pmbok8_domains": [
+      "Risk"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 5: Plan and manage risk"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Structure risk identification as an inclusive, recurring, multi-category activity.",
+      "Record risks properly: register entries with owners and planned responses.",
+      "Distinguish threats from opportunities and treat both as risks."
+    ],
+    "sections": [
+      {
+        "title": "Risk Is Uncertainty That Matters",
+        "content": "A **risk** is an uncertain event or condition that, if it occurs, affects at least one project objective — and the effect can be negative (**threat**) or positive (**opportunity**). Real risk management works both sides: identifying only threats leaves value on the table, and identifying only technical risks leaves whole categories — organizational, financial, external, compliance — unexamined.\n\nA **risk breakdown structure (RBS)** of categories is the standard antidote to one-sided identification: it prompts the questions a technically-minded room won't ask itself."
+      },
+      {
+        "title": "Identification Is Inclusive and Recurring",
+        "content": "Who identifies matters: a register written by the project manager alone reliably misses risks the team knew about but was never asked for. Identification draws on the whole team, stakeholders, experts, historical information — through brainstorming, checklists, assumption analysis, and lessons from past projects.\n\nAnd it repeats: identification at initiation is a snapshot, not an inventory. New phases, major changes, and shifted external conditions all trigger reassessment. A register untouched since kickoff while the project entered new territory isn't stability — it's abandonment."
+      },
+      {
+        "title": "Recording That Actually Manages",
+        "content": "The **risk register** entry that manages (rather than merely lists) carries: description, category, assessed probability and impact, a **risk owner** (accountable for watching and responding — and reassigned promptly when the owner leaves), and a **planned response**. A low-probability, high-impact threat is a textbook case for documented response plus owner — passive acceptance because 'it probably won't happen' ignores the severity half of the assessment.\n\nRisk plans decay like any plan: response cost estimates age (inflation, market shifts), and responses built around a specific person's expertise break when that person leaves. Both need refreshing for the register to stay executable."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Signals: a register written solo → make identification inclusive, don't just patch the found gaps; all-technical risks → target the missing categories with the right participants; register untouched across major changes → facilitate reassessment; risk owner departed → reassign now, not when the risk fires. And 'we identified it, so we're done' is never credited — identification without owner and response is a list, not management."
+      }
+    ],
+    "key_terms": [
+      "threat",
+      "opportunity",
+      "risk breakdown structure",
+      "risk register",
+      "risk owner",
+      "assumption analysis"
+    ],
+    "exam_traps": [
+      "Building the register from one perspective (the PM's, or one discipline's) and missing whole categories.",
+      "Accepting a low-probability risk without weighing its severe impact.",
+      "Leaving a departed owner's risks unowned — unowned risks are unmonitored risks."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Risk",
+        "definition": "An uncertain event or condition that would affect objectives — negatively (threat) or positively (opportunity)."
+      },
+      {
+        "term": "Risk owner",
+        "definition": "The person accountable for monitoring a risk and executing its response."
+      },
+      {
+        "term": "Risk breakdown structure",
+        "definition": "A category hierarchy that prompts identification beyond the room's default perspective."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A risk workshop produced a register that is almost entirely technical risks, with organizational, financial, and external categories nearly empty. What is the credited response?",
+        "options": [
+          "Run targeted identification for the missing categories, involving different perspectives",
+          "Accept the register, since the attending engineers are the subject matter experts",
+          "Assume non-technical risks are minor for this project until one materializes",
+          "Close identification and revisit only if a non-technical risk actually occurs"
+        ],
+        "correct_answer": "Run targeted identification for the missing categories, involving different perspectives",
+        "explanation": "Category skew signals the room's composition, not the project's risk profile — different categories need different eyes. Engineer expertise doesn't cover finance or market risks, assuming the gaps are minor is unverified, and waiting for materialization forfeits the point of proactive identification."
+      },
+      {
+        "question": "The team identifies a low-probability threat whose impact would be severe: a key supplier may be acquired and deliveries interrupted. What does proper risk practice require?",
+        "options": [
+          "Accept the risk without action, since low probability means it likely never occurs",
+          "Switch suppliers immediately to eliminate the threat entirely",
+          "Record it in the register with a planned response and an assigned owner",
+          "Set aside contingency equal to the full impact amount, to be safe"
+        ],
+        "correct_answer": "Record it in the register with a planned response and an assigned owner",
+        "explanation": "Severity keeps low-probability risks in scope: a documented response (like qualifying an alternate supplier) and a named owner make it managed. Passive acceptance ignores the impact half; immediate switching pays a certain cost to dodge an uncertain event; and reserving the full impact ties up funds without reducing the risk."
+      },
+      {
+        "question": "A retrospective reveals team members knew of several risks that never reached the register — no one ever asked them. Beyond adding those risks, what needs to change?",
+        "options": [
+          "Nothing further — the register is now complete with the missing risks added",
+          "Risk identification should move entirely to the team, without PM involvement",
+          "Risk identification should require written submissions before every meeting",
+          "The identification process itself — make it regular and actively inclusive of team input"
+        ],
+        "correct_answer": "The identification process itself — make it regular and actively inclusive of team input",
+        "explanation": "The gap was systemic — a process that never solicited the team — so patching the found risks without fixing the process guarantees recurrence. Removing the PM swaps one exclusion for another (their cross-stakeholder view matters), and mandatory paperwork is a mechanism, not the fix itself."
+      }
+    ],
+    "related_question_ids": [
+      "q006",
+      "q105",
+      "q147",
+      "q241",
+      "q359"
+    ],
+    "source_refs": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "c049",
+    "lesson_type": "concept",
+    "title": "Risk Analysis and Response Strategies",
+    "module": "Risk and Uncertainty",
+    "production_group": "Risk Block",
+    "pmbok8_domains": [
+      "Risk",
+      "Finance"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 5: Plan and manage risk"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish qualitative from quantitative analysis and when each applies.",
+      "Compute and interpret expected monetary value (EMV).",
+      "Select threat and opportunity response strategies, and track secondary and residual risk."
+    ],
+    "sections": [
+      {
+        "title": "Qualitative, Then Quantitative",
+        "content": "**Qualitative analysis** rates each risk's probability and impact on scales, producing a prioritized list — fast, always done, and enough for most risks. **Quantitative analysis** models the priority risks numerically — **EMV** (probability × impact in money), decision trees, simulation — and is reserved for where the numbers justify the effort.\n\n**EMV** example: a 30% chance of a $200k loss carries EMV = 0.3 × (−$200k) = −$60k. Summing EMVs across identified risks is a standard way to size the contingency reserve. A **decision tree** compares options by rolling up each branch's EMV: option cost plus the probability-weighted outcomes along its path — the branch with the best net EMV wins on expected value."
+      },
+      {
+        "title": "Response Strategies",
+        "content": "Threat strategies: **avoid** (eliminate the risk by changing the plan), **transfer** (shift impact to a third party — insurance, fixed-price contracts; the risk itself doesn't vanish), **mitigate** (reduce probability or impact), **accept** (live with it — actively, with contingency, or passively), and **escalate** (it belongs above the project — hand it to the right owner).\n\nOpportunity mirrors: **exploit** (make it certain), **share** (partner to capture it), **enhance** (raise probability or impact), **accept**, **escalate**. Strategy selection weighs cost against exposure: spending $150k to mitigate a −$60k EMV risk needs a better justification than arithmetic."
+      },
+      {
+        "title": "Responses Create and Leave Risk",
+        "content": "A response can generate a **secondary risk** (new risk caused by the response itself — the alternate supplier you qualified has its own failure modes) and almost always leaves **residual risk** (what remains after the response). Both belong in the register.\n\nResponse plans are living artifacts: a plan whose mitigation cost was estimated pre-inflation may leave the contingency undersized; a plan that depends on a departed expert is no longer executable; and a risk that partially materializes in between best and worst case needs reassessment of what remains — not mechanical execution of the original worst-case play, and not premature closure."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "EMV arithmetic is directly tested (probability × monetary impact; decision trees roll branches up). Strategy classification too: insurance is transfer; changing the route to eliminate exposure is avoid; a partner joint venture on an opportunity is share. And the maintenance traps — stale cost estimates, orphaned response plans, partial materialization — all resolve to 'reassess and update the register,' never 'the plan said so.'"
+      }
+    ],
+    "key_terms": [
+      "qualitative analysis",
+      "quantitative analysis",
+      "expected monetary value",
+      "decision tree",
+      "avoid",
+      "transfer",
+      "mitigate",
+      "exploit",
+      "share",
+      "enhance",
+      "secondary risk",
+      "residual risk"
+    ],
+    "exam_traps": [
+      "Confusing transfer with elimination — insurance moves the financial impact, not the event.",
+      "Forgetting responses generate secondary risks and leave residual risk — both get registered.",
+      "Executing an outdated response plan mechanically after conditions or people changed."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Expected monetary value",
+        "definition": "Probability × monetary impact — sums size contingency; decision trees compare options."
+      },
+      {
+        "term": "Transfer",
+        "definition": "Shifting a threat's impact to a third party (insurance, contract terms) — the event itself remains possible."
+      },
+      {
+        "term": "Secondary risk",
+        "definition": "A new risk created by executing a risk response."
+      },
+      {
+        "term": "Residual risk",
+        "definition": "The risk remaining after the response is applied."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A risk has a 20% probability of causing a $150,000 loss. What is its expected monetary value?",
+        "options": [
+          "−$150,000 — the full impact is what matters for reserves",
+          "−$30,000 — probability times impact",
+          "−$75,000 — half the impact, since occurrence is uncertain",
+          "$0 — EMV applies only to opportunities, not threats"
+        ],
+        "correct_answer": "−$30,000 — probability times impact",
+        "explanation": "EMV = 0.20 × (−$150,000) = −$30,000 — the probability-weighted exposure used for reserve sizing and option comparison. Full impact ignores probability, halving is arbitrary, and EMV applies to threats (negative) and opportunities (positive) alike."
+      },
+      {
+        "question": "The project buys insurance covering a possible equipment loss during transport. Which threat strategy is this, and what remains true?",
+        "options": [
+          "Avoid — the transport threat has been fully eliminated from the project",
+          "Mitigate — the probability of the equipment loss has been meaningfully reduced",
+          "Transfer — the financial impact shifts to the insurer; the event can still occur",
+          "Accept — the project has simply chosen to live with the risk unchanged"
+        ],
+        "correct_answer": "Transfer — the financial impact shifts to the insurer; the event can still occur",
+        "explanation": "Insurance is the canonical transfer: a third party absorbs the financial consequence for a premium. The equipment can still be lost — schedule impact and disruption remain — so nothing was avoided or made less probable, and paying premiums is not acceptance."
+      },
+      {
+        "question": "To mitigate a supplier risk, the team qualifies an alternate supplier — who, the team notes, has occasional quality problems of their own. What is that new exposure called?",
+        "options": [
+          "Residual risk — what remains of the original risk after response",
+          "A secondary risk — a new risk created by the response itself",
+          "An issue — since the alternate supplier's problems are already known",
+          "An assumption — the team assumes the alternate will perform adequately"
+        ],
+        "correct_answer": "A secondary risk — a new risk created by the response itself",
+        "explanation": "The alternate supplier's quality exposure didn't exist until the response introduced that supplier — the definition of secondary risk, and it belongs in the register. Residual risk is the leftover of the original risk; nothing has occurred yet, so it isn't an issue; and known-possible quality problems are a risk, not a planning assumption."
+      }
+    ],
+    "related_question_ids": [
+      "q215",
+      "q293",
+      "q360"
+    ],
+    "source_refs": [
+      "S8",
+      "S10",
+      "S5"
+    ]
+  },
+  {
+    "id": "c050",
+    "lesson_type": "concept",
+    "title": "Monitoring Risks and Managing Issues",
+    "module": "Risk and Uncertainty",
+    "production_group": "Risk Block",
+    "pmbok8_domains": [
+      "Risk",
+      "Governance"
+    ],
+    "focus_areas": [
+      "Monitoring and Controlling",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 4: Remove impediments and manage issues"
+      },
+      {
+        "domain": "Business Environment",
+        "task": "Task 5: Plan and manage risk"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Keep risk monitoring alive: reassessment, audits, and honest register maintenance.",
+      "Run issue management with ownership, resolution dates, and root-cause capture.",
+      "Remove impediments actively, including cross-team and systemic blockers."
+    ],
+    "sections": [
+      {
+        "title": "Monitoring Keeps Risk Management Honest",
+        "content": "After planning, risk work becomes vigilance: watching trigger conditions, reassessing as conditions change, and auditing whether the process itself is functioning. The tell of dead monitoring is a register that never changes — the same five risks, unchanged for months, is far more likely abandonment than stability, and worth checking directly.\n\nWhen a risk materializes, it crosses the line: it stops being a risk and becomes an **issue** — ownership, resolution planning, active tracking. Closing it as 'no longer a risk' or leaving it in the register as a future possibility both mismanage a present reality."
+      },
+      {
+        "title": "Issue Management Is Ownership",
+        "content": "An **issue log** entry that manages carries an **owner**, a **target resolution date**, and status that moves. Visibility without ownership is the classic failure: an issue mentioned in four consecutive status reports with no owner and no date isn't being managed — it's being watched. Escalation has criteria too: issues genuinely beyond the team's authority go up promptly; routine issues escalated reflexively teach leadership to stop listening and teach the team it isn't trusted.\n\nClosure includes learning: recording the root cause and resolution so a recurrence is faster to handle — or prevented outright by feeding continuous improvement."
+      },
+      {
+        "title": "Impediment Removal Is Active Work",
+        "content": "Some blockers can't be resolved by the people they block: shared-resource conflicts between teams, another division's queue, an organizational bottleneck recurring across projects. The project manager owns coordination: taking initiative on cross-team fixes (a shared schedule, escalation for capacity), building interim workarounds when the root fix has no timeline, and raising *patterns* — the same impediment across multiple projects — to portfolio or organizational leadership, quantified so the case is concrete.\n\nWaiting for the affected parties to self-organize, logging without follow-through, and absorbing recurring disruption indefinitely are the anti-patterns."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Classification first: materialized risk → issue management. Then discipline: log + owner + date (not just visibility), escalation by criteria (not reflex), root cause on closure. For impediments: coordinate actively across boundaries, quantify impact when advocating for systemic fixes, and never let 'outside my authority' become 'not my problem' — influence and escalation paths exist precisely for that gap."
+      }
+    ],
+    "key_terms": [
+      "risk reassessment",
+      "risk audit",
+      "issue log",
+      "issue owner",
+      "escalation criteria",
+      "impediment",
+      "workaround"
+    ],
+    "exam_traps": [
+      "Reading a long-unchanged risk register as stability instead of checking whether monitoring died.",
+      "Treating status-report mentions as issue management while no owner or date exists.",
+      "Tolerating a recurring impediment indefinitely because its root fix sits in another team's queue."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Issue log",
+        "definition": "The record of present problems — each with owner, target resolution date, and moving status."
+      },
+      {
+        "term": "Workaround",
+        "definition": "An interim measure reducing an impediment's impact while the root cause awaits its fix."
+      },
+      {
+        "term": "Risk audit",
+        "definition": "A check on whether the risk management process itself is being performed and effective."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "An issue logged three weeks ago has no owner and no target date, though it appears in every weekly status report. What is the accurate assessment?",
+        "options": [
+          "It isn't being managed — visibility in reports is not ownership or a resolution path",
+          "It is being appropriately monitored through the regular reporting cycle",
+          "It must be low priority, or an owner would have volunteered by now",
+          "Status mention satisfies issue management for issues below a size threshold"
+        ],
+        "correct_answer": "It isn't being managed — visibility in reports is not ownership or a resolution path",
+        "explanation": "Management means someone accountable and a date to hit — reports provide visibility, not action. Absence of a volunteer signals a process gap, not low priority, and no size threshold exempts an issue from having an owner."
+      },
+      {
+        "question": "A shared testing environment keeps double-booking two teams; both report it in different meetings, but neither owns the conflict. What does impediment removal require of the project manager?",
+        "options": [
+          "Wait for the two teams to negotiate a schedule between themselves",
+          "Log the conflict in the issue register, since it has been verbally reported",
+          "Take ownership of coordinating a resolution — a shared schedule or escalation for capacity",
+          "Advise the blocked team to rely on local testing workarounds indefinitely"
+        ],
+        "correct_answer": "Take ownership of coordinating a resolution — a shared schedule or escalation for capacity",
+        "explanation": "A blocker spanning two teams with no natural owner is exactly what PM coordination exists for — and 'waiting for self-organization' has already demonstrably failed. Logging without follow-through is visibility again, and an indefinite degraded workaround accepts the impact without pursuing the fix."
+      },
+      {
+        "question": "The same slow legal-review turnaround has been raised as an issue on several projects across the organization. Beyond fixing it locally, what does the pattern warrant?",
+        "options": [
+          "Raising the quantified cross-project pattern to portfolio or organizational leadership",
+          "Nothing — each project should continue resolving its own instance independently",
+          "Avoiding mention of the pattern, since it could read as criticizing the legal team",
+          "Assuming other project managers will independently escalate their own instances"
+        ],
+        "correct_answer": "Raising the quantified cross-project pattern to portfolio or organizational leadership",
+        "explanation": "A recurring cross-project impediment is a systemic bottleneck needing a structural fix only broader leadership can make — and quantified impact makes the case concrete rather than complaint-shaped. Instance-by-instance handling never connects the dots, silence protects the problem, and 'someone else will raise it' is how patterns stay invisible."
+      }
+    ],
+    "related_question_ids": [
+      "q052",
+      "q053",
+      "q078",
+      "q174",
+      "q266",
+      "q292",
+      "q347",
+      "q357",
+      "q358"
+    ],
+    "source_refs": [
+      "S2",
+      "S8",
+      "S10"
+    ]
   }
 ]
