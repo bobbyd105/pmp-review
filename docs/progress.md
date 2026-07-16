@@ -59,6 +59,25 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Reference layer shipped (2026-07-16, this branch): expanded
+  `data/formula_catalog.json` from 10 representative entries to 18
+  production reference formulas (adding CV, SV, ETC, VAC, TCPI, triangular
+  three-point, payback period, and benefit-cost ratio to the existing
+  channels/PERT/float/CPI/SPI/EAC/EMV/ROI/NPV/Little's Law set) and
+  `data/glossary_catalog.json` from 14 to 38 entries (charter, baseline,
+  CCB, change request, both reserves, EEF/OPA, issue/assumption/constraint,
+  stakeholder register, sprint/increment/definition of done/Product Owner,
+  velocity, lead/cycle time, MVP, RACI, matrix organization, phase gate,
+  lessons learned). Both completeness notes updated honestly. New ninth nav
+  view `Reference` (`src/components/Reference.jsx`) renders the formula
+  sheet (equation, variables, interpretation, higher/lower guidance, tips,
+  mistakes) and glossary (definition, confusion, exam trap) with section
+  toggle and filter; `Reference.test.jsx` covers render, toggle, filter, and
+  empty state. Per-lesson glossary/formula/reference-sheet ID links remain a
+  tracked follow-up (the contract test still holds them empty); the layer is
+  learner-reachable through the Reference view and taught in context by the
+  Course lessons. Knowledge-layer contract passes against the expanded
+  catalogs.
 - Comprehensive Course authored in full: concept lessons c011-c062
   (2026-07-16, this branch): 52 new production concept lessons completing the
   planned curriculum in module order — Foundations II (c011-c015), Principles

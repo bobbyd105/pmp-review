@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus an eight-button view toggle between Quiz, Course, QuestionBank, Dashboard, Lessons, ContentStudio, PromptHelper, and CurriculumCoverage (no router)</td>
+    <td>Top-level layout: page header plus a nine-button view toggle between Quiz, Course, Reference, QuestionBank, Dashboard, Lessons, ContentStudio, PromptHelper, and CurriculumCoverage (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>Quiz</code>, <code>Course</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code>, <code>CurriculumCoverage</code></td>
-    <td>Local UI state only (<code>view</code>: quiz | course | browse | dashboard | lessons | studio | prompts | coverage)</td>
+    <td><code>Quiz</code>, <code>Course</code>, <code>Reference</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code>, <code>CurriculumCoverage</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | course | reference | browse | dashboard | lessons | studio | prompts | coverage)</td>
   </tr>
 </table>
 
@@ -83,6 +83,14 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>Course</code></td>
     <td>None</td>
     <td>Receives one concept lesson + pre-resolved related question objects as props. Local UI state only (<code>expanded</code>; per-check <code>selected</code>/<code>revealed</code>). Writes nothing.</td>
+    <td>React (<code>useState</code>)</td>
+  </tr>
+  <tr>
+    <td><code>src/components/Reference.jsx</code></td>
+    <td>Reference view: formula sheet (equation, variables, interpretation, higher/lower guidance, memory tips, common mistakes) and glossary (definition, common confusion, exam trap) with a section toggle and text filter</td>
+    <td><code>App</code></td>
+    <td>None</td>
+    <td>Reads <code>data/formula_catalog.json</code> and <code>data/glossary_catalog.json</code> (static imports). Local UI state only (<code>section</code>, <code>filter</code>). Writes nothing.</td>
     <td>React (<code>useState</code>)</td>
   </tr>
   <tr>
@@ -293,6 +301,10 @@ active toolchain.</p>
   <tr>
     <td><code>src/__tests__/conceptLessons.data.test.js</code></td>
     <td>Foundation Block contract: exact c001-c010 identity, required content shapes, module/PMBOK/focus-area/approach enums, live ECO mappings, valid source refs, authored knowledge-check shape (4 unique options, correct present exactly once, teaching explanations), knowledge-check position (≤40% per slot) and length (≤1.3 ratio) discipline, related-question referential integrity, and still-deferred glossary/reference/formula links.</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/Reference.test.jsx</code></td>
+    <td>Reference view: all formulas rendered with equation/variables/guidance, glossary section toggle rendering every term with confusion/trap text, name filtering, and empty-state message; no console.error.</td>
   </tr>
   <tr>
     <td><code>src/__tests__/Course.test.jsx</code></td>

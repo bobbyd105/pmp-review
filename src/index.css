@@ -839,3 +839,79 @@ body {
 .knowledge-check-result p {
   margin: 0;
 }
+
+/* Reference view (formula sheet + glossary) */
+
+.reference-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.reference-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #52606d;
+  font-size: 0.9rem;
+}
+
+.reference-filter input {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #d9e2ec;
+  border-radius: 6px;
+}
+
+.reference-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  gap: 1rem;
+}
+
+.reference-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.reference-card h4 {
+  margin: 0 0 0.5rem;
+}
+
+.reference-formula code {
+  background: #f0f5ff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.reference-variables {
+  margin: 0.5rem 0;
+}
+
+.reference-variable {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reference-variable dt {
+  font-weight: 600;
+  min-width: 3.5rem;
+}
+
+.reference-variable dd {
+  margin: 0;
+  color: #3e4c59;
+}
+
+.reference-guidance {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: #3e4c59;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}

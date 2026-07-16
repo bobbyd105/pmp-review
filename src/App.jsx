@@ -7,10 +7,12 @@ import Lessons from './components/Lessons.jsx'
 import ContentStudio from './components/ContentStudio.jsx'
 import PromptHelper from './components/PromptHelper.jsx'
 import CurriculumCoverage from './components/CurriculumCoverage.jsx'
+import Reference from './components/Reference.jsx'
 
 const VIEWS = [
   { id: 'quiz', label: 'Quiz' },
   { id: 'course', label: 'Course' },
+  { id: 'reference', label: 'Reference' },
   { id: 'browse', label: 'Browse questions' },
   { id: 'dashboard', label: 'Dashboard' },
   { id: 'lessons', label: 'Lessons' },
@@ -42,6 +44,7 @@ export default function App() {
       </header>
       {view === 'quiz' && <Quiz />}
       {view === 'course' && <Course />}
+      {view === 'reference' && <Reference />}
       {view === 'browse' && <QuestionBank />}
       {view === 'dashboard' && <Dashboard />}
       {view === 'lessons' && <Lessons />}
