@@ -25,12 +25,12 @@ export default function Course() {
 
   return (
     <section aria-label="Course">
-      <h2>Comprehensive Course — Foundation Block</h2>
+      <h2>Comprehensive Course</h2>
       <p className="course-intro">
-        {conceptLessons.length} concept lessons teaching the vocabulary and mental
-        models the rest of PMP study builds on. Work through them in order: each
-        lesson ends with a knowledge check, and linked practice questions from the
-        question bank let you apply the concept under exam-style conditions.
+        {conceptLessons.length} concept lessons in teaching order, from foundations
+        through delivery mechanics, agile, and AI. Work through them in sequence:
+        each lesson ends with a knowledge check, and linked practice questions from
+        the question bank let you apply the concept under exam-style conditions.
       </p>
       {groups.map((group, index) => (
         <div key={`${group.module}-${index}`} className="course-module">

@@ -1235,5 +1235,1517 @@
       "S2",
       "S10"
     ]
+  },
+  {
+    "id": "c011",
+    "lesson_type": "concept",
+    "title": "What Makes Work a Project?",
+    "module": "PM Foundations",
+    "production_group": "Foundations Block II",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Initiating"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Identify the two defining characteristics of a project — temporary and unique — in described work.",
+      "Explain how a project moves an organization from a current state to a desired future state.",
+      "Recognize the classic constraints (scope, schedule, cost, quality, resources, risk) and how changing one pressures the others."
+    ],
+    "sections": [
+      {
+        "title": "Temporary and Unique",
+        "content": "Work is a **project** when it is **temporary** — it has a defined beginning and end — and produces a **unique** product, service, or result. Temporary doesn't mean short: a five-year infrastructure build is still temporary because it ends. Unique doesn't require novelty in every detail: two office buildings built from similar blueprints are still unique projects because location, team, stakeholders, and conditions differ.\n\nThe test is simple: if the work will run indefinitely and produce the same output repeatedly, it's operations. If it ends and leaves something new behind, it's a project."
+      },
+      {
+        "title": "Current State to Future State",
+        "content": "Every project exists to move an organization from a **current state** to a **desired future state** — that gap is the reason the project is funded. A system migration, a new product launch, a process overhaul: each one is organizational change packaged with a start, an end, and an intended outcome.\n\nThis framing matters because it keeps attention on the outcome, not just the outputs. Producing deliverables that don't actually close the gap between current and future state is activity, not success."
+      },
+      {
+        "title": "The Constraints",
+        "content": "Projects operate inside competing constraints — the most commonly cited are **scope, schedule, cost, quality, resources, and risk**. They form a connected system: compressing the schedule usually raises cost or risk; cutting cost usually pressures scope or quality; expanding scope pressures everything.\n\nThe project manager's job is not to satisfy every constraint absolutely — it's to understand which constraints the sponsor considers fixed, which are flexible, and to make the tradeoffs visible when something has to give."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Scenario questions often hinge on recognizing that a constraint change is never free. When a stakeholder demands a faster date, a cheaper budget, or more scope 'without changing anything else,' the exam-credited behavior is to analyze the impact across the other constraints and present the tradeoffs — not to silently absorb the change or refuse it outright."
+      }
+    ],
+    "key_terms": [
+      "temporary",
+      "unique",
+      "current state",
+      "future state",
+      "constraints",
+      "tradeoff"
+    ],
+    "exam_traps": [
+      "Assuming long-running work can't be a project — duration doesn't matter; a defined end does.",
+      "Treating 'similar to past work' as 'not unique' — context and conditions make repeated work unique.",
+      "Accepting a constraint change as free instead of analyzing its impact on the other constraints."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Project",
+        "definition": "A temporary endeavor undertaken to create a unique product, service, or result."
+      },
+      {
+        "term": "Temporary",
+        "definition": "Having a defined start and end — not necessarily short in duration."
+      },
+      {
+        "term": "Constraints",
+        "definition": "Competing factors — scope, schedule, cost, quality, resources, risk — that bound a project and trade off against each other."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A utility company runs a nine-year effort to replace every meter in its territory with smart meters, after which the effort ends. Is this a project?",
+        "options": [
+          "No — nine years is far too long for any work to qualify as a project",
+          "No — meter replacement is repetitive, which makes it operations",
+          "Only if the company formally uses a predictive delivery approach for it",
+          "Yes — it is temporary (it ends) and produces a unique result (a converted territory)"
+        ],
+        "correct_answer": "Yes — it is temporary (it ends) and produces a unique result (a converted territory)",
+        "explanation": "Temporary means a defined end, not a short duration, and the converted meter network is a unique result even though individual replacements repeat. Delivery approach has nothing to do with whether work qualifies as a project — projects can be predictive, adaptive, or hybrid."
+      },
+      {
+        "question": "A sponsor asks the team to deliver the full scope one month earlier 'without any other changes.' What does the constraint model say about this request?",
+        "options": [
+          "Compressing schedule pressures other constraints, so the impact must be analyzed and surfaced",
+          "Schedule is independent of the other constraints, so the request is reasonable as stated",
+          "The request must simply be refused, since constraints can never be changed once set",
+          "The team should quietly absorb the change by working faster without raising it"
+        ],
+        "correct_answer": "Compressing schedule pressures other constraints, so the impact must be analyzed and surfaced",
+        "explanation": "Constraints form a connected system — compressing schedule typically raises cost, adds risk, or forces scope/quality tradeoffs. The professional response is impact analysis and visible tradeoffs, not silent absorption (which hides the real cost) or outright refusal (constraints can change, through informed decisions)."
+      },
+      {
+        "question": "Why is 'current state → future state' a useful way to frame a project's purpose?",
+        "options": [
+          "It guarantees that the project's deliverables will all be accepted on schedule",
+          "It keeps attention on the outcome being paid for, not just the outputs",
+          "It eliminates the need for any formal scope definition later in planning",
+          "It applies only to organizational change projects, never technical ones"
+        ],
+        "correct_answer": "It keeps attention on the outcome being paid for, not just the outputs",
+        "explanation": "Projects are funded to close a gap between where the organization is and where it wants to be. Deliverables that don't close that gap are activity without success. The framing doesn't guarantee acceptance or replace scope definition, and it applies to every project — technical projects change the organization's state too."
+      }
+    ],
+    "related_question_ids": [],
+    "source_refs": [
+      "S2",
+      "S4"
+    ]
+  },
+  {
+    "id": "c012",
+    "lesson_type": "concept",
+    "title": "Value, Benefits, and Project Success",
+    "module": "PM Foundations",
+    "production_group": "Foundations Block II",
+    "pmbok8_domains": [
+      "Governance",
+      "Finance"
+    ],
+    "focus_areas": [
+      "Initiating",
+      "Closing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish outputs, outcomes, benefits, and value.",
+      "Explain why on-time, on-budget delivery is not by itself project success.",
+      "Describe how value should drive prioritization and day-to-day decisions."
+    ],
+    "sections": [
+      {
+        "title": "Outputs, Outcomes, Benefits, Value",
+        "content": "These four terms form a chain, and the exam expects you to keep them straight. An **output** is what the project produces — the system, the building, the report. An **outcome** is the changed condition the output enables — users working differently, customers served faster. A **benefit** is the measurable gain from that outcome — hours saved, revenue added, risk reduced. **Value** is the worth of those benefits to the organization and its stakeholders, net of the cost of achieving them.\n\nA project can produce flawless outputs that generate no outcomes, no benefits, and no value. That is a delivery success and a business failure."
+      },
+      {
+        "title": "Success Is More Than the Triple Constraint",
+        "content": "Traditional success measures — on scope, on time, on budget — measure delivery performance, not value. A project that hits every baseline but delivers a product nobody uses failed at the only level that justified its funding.\n\nThis is why the business case and benefits management plan matter beyond initiation: they define what success actually looks like and who measures it, often long after the project team has dispersed."
+      },
+      {
+        "title": "Value-Driven Decisions",
+        "content": "Focusing on value changes daily behavior: backlogs are ordered by value, not convenience; features that no longer serve the business case are challenged rather than delivered on autopilot; and 'we finished everything we planned' is never confused with 'we delivered what was worth building.'\n\nWhen priorities conflict, value is the tiebreaker the exam rewards — compliance-mandatory and highest-value work first, delivered incrementally where the approach allows, so worth lands early rather than all at the end."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Watch for scenarios where a team measures success by completed items, shipped features, or met deadlines while the underlying business outcome goes unmeasured. The credited response almost always involves validating actual outcomes — usage, adoption, measured benefits — and reconnecting work to the value it was funded to produce."
+      }
+    ],
+    "key_terms": [
+      "output",
+      "outcome",
+      "benefit",
+      "value",
+      "business case",
+      "success criteria"
+    ],
+    "exam_traps": [
+      "Equating on-time/on-budget delivery with success — value realization is the deeper measure.",
+      "Treating 'all planned items completed' as proof of value — item counts can be inflated by low-value work.",
+      "Forgetting that benefits are often measured after project closure, by a named benefits owner."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Output",
+        "definition": "What the project produces — the deliverable itself."
+      },
+      {
+        "term": "Outcome",
+        "definition": "The changed condition that the output enables."
+      },
+      {
+        "term": "Benefit",
+        "definition": "The measurable gain resulting from an outcome."
+      },
+      {
+        "term": "Value",
+        "definition": "The worth of the benefits to the organization, net of the cost of achieving them."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A new self-service portal ships on time and passes every test, but six months later most customers still phone the call center. Which link in the value chain failed?",
+        "options": [
+          "The output — the portal itself must have been defectively built by the team",
+          "The schedule baseline — the project clearly finished later than it reported",
+          "The outcome — the output didn't change how customers actually behave",
+          "Nothing failed — a delivered, tested output is the definition of success"
+        ],
+        "correct_answer": "The outcome — the output didn't change how customers actually behave",
+        "explanation": "The output was delivered and worked; what's missing is the changed condition (customers self-serving) that would generate benefits. This is exactly why outputs and outcomes must be distinguished — and why a tested deliverable alone is not success. There's no evidence of defects or schedule misreporting in the scenario."
+      },
+      {
+        "question": "A regulatory deadline moved up and only part of the planned scope can ship in time. How should the team decide what to build first?",
+        "options": [
+          "Build items in their original plan order, since the plan was approved",
+          "Build whatever the loudest stakeholder most recently requested",
+          "Ship the easiest items first so the completed-item count looks strong",
+          "Prioritize compliance-required and highest-value items, delivering incrementally"
+        ],
+        "correct_answer": "Prioritize compliance-required and highest-value items, delivering incrementally",
+        "explanation": "When time is fixed, sequencing by value — mandatory compliance first, then highest business value — is the credited pattern. Plan order ignores the changed constraint, volume of easy items confuses activity with value, and stakeholder volume is not a value measure."
+      },
+      {
+        "question": "Who typically measures whether a project's promised benefits were actually realized, and when?",
+        "options": [
+          "The project manager, at the moment the final deliverable is accepted",
+          "A named benefits owner, often continuing after the project has closed",
+          "The steering committee, only during the project's initiation phase",
+          "No one — benefits are assumed once the business case is approved"
+        ],
+        "correct_answer": "A named benefits owner, often continuing after the project has closed",
+        "explanation": "Benefits frequently materialize after closure, so the benefits management plan names an owner who tracks realization beyond the project's end. The project manager's accountability typically ends at closure, initiation is when benefits are promised rather than measured, and approval of a business case guarantees nothing."
+      }
+    ],
+    "related_question_ids": [
+      "q011",
+      "q085",
+      "q166",
+      "q229"
+    ],
+    "source_refs": [
+      "S2",
+      "S3",
+      "S8"
+    ]
+  },
+  {
+    "id": "c013",
+    "lesson_type": "concept",
+    "title": "Projects as Vehicles for Organizational Change",
+    "module": "PM Foundations",
+    "production_group": "Foundations Block II",
+    "pmbok8_domains": [
+      "Governance",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Initiating",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 7: Support organizational change"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Explain why every project is also an organizational change effort.",
+      "Distinguish technical delivery success from adoption success.",
+      "Describe the project manager's role in preparing people for the change a project creates."
+    ],
+    "sections": [
+      {
+        "title": "Every Project Changes Something",
+        "content": "A project that changes nothing wasn't worth funding. New systems change how people work; new processes change who does what; new products change what customers experience. This means every project carries two workstreams, whether or not both are planned: building the thing, and helping people adopt the thing.\n\nOrganizations that plan only the technical workstream routinely deliver working products that nobody uses — a failure mode the exam tests heavily."
+      },
+      {
+        "title": "Delivery Success vs. Adoption Success",
+        "content": "**Delivery success** means the deliverable works as specified. **Adoption success** means the affected people actually change their behavior — they use the new system, follow the new process, stop using the old one. Adoption is where benefits live; without it, delivery success produces shelfware.\n\nSigns of an adoption gap include staff quietly continuing old processes in parallel, 'compliance-only' usage that follows steps without buy-in, and complaints that persist after go-live despite technically successful delivery."
+      },
+      {
+        "title": "Supporting the Change",
+        "content": "The project manager doesn't own organizational change alone — leadership sponsorship is essential — but the credited behaviors are consistent: communicate the *why*, not just the *how*; engage the people affected early, especially those whose expertise or roles the change threatens; use champions and early adopters; provide training and support through the transition; and treat resistance as information about unaddressed concerns rather than as insubordination to overcome."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Change-related scenarios almost never reward forcing compliance, escalating to punish resisters, or assuming people will adapt naturally. The credited pattern is: understand the source of resistance, address the underlying concern (often fear about future roles or lost expertise), pair rationale with practical support, and keep leadership visibly engaged through adoption — not just at kickoff."
+      }
+    ],
+    "key_terms": [
+      "organizational change",
+      "adoption",
+      "resistance",
+      "change champion",
+      "sponsorship"
+    ],
+    "exam_traps": [
+      "Declaring victory at technical go-live while adoption is still incomplete or merely compliance-deep.",
+      "Treating resistance as a discipline problem instead of information about unaddressed concerns.",
+      "Communicating only how to use the new thing while never explaining why the change is happening."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Adoption",
+        "definition": "The point at which affected people actually change their behavior to use what the project delivered."
+      },
+      {
+        "term": "Change champion",
+        "definition": "A respected insider who advocates for the change and supports peers through it."
+      },
+      {
+        "term": "Resistance",
+        "definition": "Opposition to change — best treated as information about unaddressed concerns."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A new expense tool launched successfully two months ago, yet finance discovers most staff still email spreadsheets the old way. What is the most accurate diagnosis?",
+        "options": [
+          "The project failed at delivery, so the tool should be rebuilt from scratch",
+          "The rollout achieved delivery success but not adoption success",
+          "Staff behavior is outside the project's concern once the tool ships",
+          "The old process must be superior, so the change should be reversed"
+        ],
+        "correct_answer": "The rollout achieved delivery success but not adoption success",
+        "explanation": "The tool works — delivery succeeded — but behavior hasn't changed, so the benefits the project promised aren't being realized. That's an adoption gap, not a build defect, and it's very much the project's concern. Reverting assumes the old way won on merit when the real issue is unmanaged change."
+      },
+      {
+        "question": "Long-tenured staff resist a change that automates part of their role, despite clear communication of the business rationale. What does the credited response address?",
+        "options": [
+          "The underlying concern — often what their expertise and daily work will become",
+          "The frequency of the rationale communication, repeating it until it lands",
+          "The resisters themselves, through escalation to their line managers",
+          "The rollout timeline, delaying until everyone feels fully positive"
+        ],
+        "correct_answer": "The underlying concern — often what their expertise and daily work will become",
+        "explanation": "Resistance rooted in feeling devalued isn't cured by repeating the business case — the concern is personal, not informational. Addressing what staff's roles and expertise will look like after the change targets the real cause. Escalation punishes a symptom, and waiting for universal enthusiasm is not a realistic bar."
+      },
+      {
+        "question": "Why do change champions lose effectiveness partway through many rollouts?",
+        "options": [
+          "Champions are only useful during the very first communication wave",
+          "Their peers inevitably grow immune to advocacy over time",
+          "Leadership stops giving them dedicated time and visible support",
+          "Champion programs work only in small organizations"
+        ],
+        "correct_answer": "Leadership stops giving them dedicated time and visible support",
+        "explanation": "Champions need sustained sponsorship — time carved out and visible leadership backing — through the whole adoption curve, not just at launch. When that support is withdrawn mid-rollout, momentum stalls. Nothing inherently limits champions to early phases, peer influence doesn't simply expire, and organization size isn't the determining factor."
+      }
+    ],
+    "related_question_ids": [
+      "q016",
+      "q081",
+      "q243",
+      "q295",
+      "q378"
+    ],
+    "source_refs": [
+      "S2",
+      "S3"
+    ]
+  },
+  {
+    "id": "c014",
+    "lesson_type": "concept",
+    "title": "Risks, Issues, Assumptions, and Constraints",
+    "module": "PM Foundations",
+    "production_group": "Foundations Block II",
+    "pmbok8_domains": [
+      "Risk",
+      "Governance"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 4: Remove impediments and manage issues"
+      },
+      {
+        "domain": "Business Environment",
+        "task": "Task 5: Plan and manage risk"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish risks (uncertain, future) from issues (certain, present).",
+      "Explain what happens when a risk materializes and how tracking changes.",
+      "Describe how assumptions and constraints shape planning and what to do when an assumption fails."
+    ],
+    "sections": [
+      {
+        "title": "Risk vs. Issue",
+        "content": "A **risk** is an uncertain future event that *would* affect the project if it occurred — it might never happen. An **issue** is a present, certain problem that *is* affecting the project now. The distinction drives different management: risks get probability/impact assessment, response plans, and owners in the **risk register**; issues get immediate ownership, target resolution dates, and tracking in the **issue log**.\n\nWhen a risk actually occurs, it stops being a risk. It transitions into issue management — same underlying event, different management mode, because uncertainty has collapsed into fact."
+      },
+      {
+        "title": "Assumptions",
+        "content": "An **assumption** is something planned as true without proof — 'the vendor API will remain free,' 'the specialist stays through Q3.' Assumptions are recorded in an **assumption log** precisely because they can fail. A failed assumption isn't a planning scandal; it's new information. The credited response is to reassess what depended on the assumption and route resulting changes through change control — not to defend the original plan or quietly absorb the difference."
+      },
+      {
+        "title": "Constraints",
+        "content": "A **constraint** is a limiting factor the project must live within — a fixed regulatory date, a capped budget, a mandated technology. Unlike assumptions, constraints are known and given. Planning means fitting the project inside its constraints and making visible what the constraints cost; pretending a constraint is negotiable when it isn't (or vice versa) produces plans that fail on contact with reality."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Classification questions are common and direct: 'might happen' language signals a risk; 'is happening' signals an issue; 'we're planning as if' signals an assumption; 'must' or 'cannot exceed' signals a constraint. Behavior questions follow the classification — a materialized risk needs issue-style ownership now, and a failed assumption needs reassessment through change control, not improvisation."
+      }
+    ],
+    "key_terms": [
+      "risk",
+      "issue",
+      "assumption",
+      "constraint",
+      "risk register",
+      "issue log",
+      "assumption log"
+    ],
+    "exam_traps": [
+      "Leaving a materialized risk in the risk register as if it were still a future possibility.",
+      "Treating a failed assumption as a reason to defend the plan rather than reassess it.",
+      "Logging an issue and mentioning it in status reports without assigning an owner or resolution date — visibility is not management."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Risk",
+        "definition": "An uncertain future event that would affect the project if it occurred."
+      },
+      {
+        "term": "Issue",
+        "definition": "A present, certain problem currently affecting the project."
+      },
+      {
+        "term": "Assumption",
+        "definition": "Something planned as true without proof, logged because it can fail."
+      },
+      {
+        "term": "Constraint",
+        "definition": "A known limiting factor the project must operate within."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "The team identified 'key supplier may be acquired, interrupting deliveries' months ago. Today the acquisition is announced and deliveries stop. What changes in how this is managed?",
+        "options": [
+          "It transitions to issue management — an owner and resolution path for a present problem",
+          "Nothing — it stays in the risk register exactly as originally assessed",
+          "Its probability is re-scored, since the event now has a 100% likelihood",
+          "It is deleted from all tracking, since prevention is no longer possible"
+        ],
+        "correct_answer": "It transitions to issue management — an owner and resolution path for a present problem",
+        "explanation": "A materialized risk is no longer uncertain; it's a live problem needing issue-style management: ownership, a resolution plan, and active tracking. Re-scoring probability is meaningless for a certain event, leaving it passively in the register mismanages an active problem, and deleting it loses the record entirely."
+      },
+      {
+        "question": "Planning assumed a third-party data source would stay free; the provider just announced significant fees. What is the credited response?",
+        "options": [
+          "Reassess what depended on the assumption and route needed changes through change control",
+          "Defend the original plan, since the assumption was reasonable when it was made",
+          "Absorb the fees quietly so the baseline doesn't have to change",
+          "Remove the assumption log from the project to prevent similar embarrassment"
+        ],
+        "correct_answer": "Reassess what depended on the assumption and route needed changes through change control",
+        "explanation": "A failed assumption is new information, not a fault to defend or hide. The plan components that relied on it need reassessment, and resulting adjustments belong in change control so the impact is visible and approved. Quiet absorption hides real cost; the assumption log exists precisely because assumptions sometimes fail."
+      },
+      {
+        "question": "Which phrasing in a scenario signals a CONSTRAINT rather than a risk, issue, or assumption?",
+        "options": [
+          "'The migration may slip if the vendor is late'",
+          "'Testing is currently blocked by the environment outage'",
+          "'The release cannot exceed the $2M regulatory filing deadline budget'",
+          "'We are planning as if the specialist remains through September'"
+        ],
+        "correct_answer": "'The release cannot exceed the $2M regulatory filing deadline budget'",
+        "explanation": "'Cannot exceed' is a known, given limit — a constraint. 'May slip' is uncertainty about the future (risk), 'currently blocked' is a present problem (issue), and 'planning as if' is an unproven planning premise (assumption). The exam frequently tests exactly this vocabulary discrimination."
+      }
+    ],
+    "related_question_ids": [
+      "q021",
+      "q052",
+      "q053",
+      "q079",
+      "q147",
+      "q228"
+    ],
+    "source_refs": [
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "c015",
+    "lesson_type": "concept",
+    "title": "Leadership vs. Management",
+    "module": "PM Foundations",
+    "production_group": "Foundations Block II",
+    "pmbok8_domains": [
+      "Resources",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish management activities (directing work) from leadership activities (guiding people).",
+      "Explain why project managers need both, and why influence matters more than authority.",
+      "Recognize when a scenario calls for adapting style rather than applying more of the same."
+    ],
+    "sections": [
+      {
+        "title": "Two Complementary Capabilities",
+        "content": "**Management** directs the work: planning, organizing, coordinating, measuring, correcting. **Leadership** guides the people: setting direction, aligning, motivating, building trust, developing capability. Neither substitutes for the other — a perfectly scheduled project with a disengaged team fails just as surely as an inspired team with no plan.\n\nProject managers are expected to do both, often at the same time and often without formal authority over the people involved."
+      },
+      {
+        "title": "Influence Over Authority",
+        "content": "In matrix and cross-functional environments, the project manager frequently holds less formal authority than the work requires. The credited response is never 'I can't act — I lack authority.' It's leading through **influence**: credibility, relationships, negotiation, and connecting work to purpose. Positional power is one tool among many, and the exam consistently rewards the option that works without it."
+      },
+      {
+        "title": "Adapting to the Situation",
+        "content": "Effective leaders adjust style to the team's maturity and the individual's needs — directive guidance for a newly formed team or an inexperienced member, delegation and light-touch support for a performing team, and coaching in between. The failure pattern the exam tests is stasis: continuing heavy oversight after a team has matured (which reads as distrust), or applying uniform light touch to someone who genuinely needs direction.\n\nThe same adaptation logic applies over time: a style that produced good results earlier isn't automatically right now."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "When a scenario contrasts giving orders with building alignment, alignment usually wins. When it contrasts escalating for authority with influencing directly, influence usually wins. And when a team has visibly matured, the credited move is expanding their autonomy — not preserving the oversight that got them there."
+      }
+    ],
+    "key_terms": [
+      "leadership",
+      "management",
+      "influence",
+      "authority",
+      "situational leadership",
+      "delegation"
+    ],
+    "exam_traps": [
+      "Treating lack of formal authority as a reason not to act — influence is the expected tool.",
+      "Keeping heavy oversight on a team that has reached high performance — adaptation is the test.",
+      "Assuming leadership and management are rival philosophies rather than complementary capabilities."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Management",
+        "definition": "Directing the work: planning, organizing, measuring, correcting."
+      },
+      {
+        "term": "Leadership",
+        "definition": "Guiding the people: direction, alignment, motivation, trust."
+      },
+      {
+        "term": "Influence",
+        "definition": "Achieving outcomes through credibility and relationships rather than positional power."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A project manager coordinating specialists from four departments has no formal authority over any of them, and a critical hand-off keeps slipping. What is the credited approach?",
+        "options": [
+          "Wait until a reorganization grants proper authority over the specialists",
+          "Ask the sponsor to formally reassign all four specialists to the project",
+          "Report to the sponsor that the structure makes the hand-off unmanageable",
+          "Use influence — relationships, shared goals, negotiation — to align the departments"
+        ],
+        "correct_answer": "Use influence — relationships, shared goals, negotiation — to align the departments",
+        "explanation": "Cross-functional coordination without authority is the normal condition of project management, and influence is the expected instrument. Declaring the problem unmanageable abdicates the role, and demanding structural change (reassignment, reorganization) escalates for authority that influence can usually substitute for — escalation remains a later resort, not the first move."
+      },
+      {
+        "question": "A team that needed close direction six months ago now resolves most problems independently, yet the project manager still reviews every decision. What should change?",
+        "options": [
+          "Nothing — the oversight clearly contributed to the team's development",
+          "Shift toward delegation and lighter touch to match the team's maturity",
+          "Oversight should increase, since the stakes rise as the project advances",
+          "The team should formally request reduced oversight through the sponsor"
+        ],
+        "correct_answer": "Shift toward delegation and lighter touch to match the team's maturity",
+        "explanation": "Situational leadership adapts to the team's current maturity: continuing close review of a performing team signals distrust and throttles the autonomy that drives performance. Past success of a style doesn't justify its continuation once conditions change, and the adjustment is the leader's to make — not something the team should have to petition for."
+      },
+      {
+        "question": "Which pairing correctly separates a management activity from a leadership activity?",
+        "options": [
+          "Management: building the schedule — Leadership: connecting the team to the vision",
+          "Management: motivating the team — Leadership: tracking cost variance",
+          "Management: developing trust — Leadership: correcting schedule slippage",
+          "They are the same set of activities described with different words"
+        ],
+        "correct_answer": "Management: building the schedule — Leadership: connecting the team to the vision",
+        "explanation": "Management directs the work (plans, schedules, measures, corrects); leadership guides the people (vision, motivation, trust). The reversed pairings put motivation and trust — people work — under management and measurement under leadership, and collapsing the two into synonyms erases a distinction the exam tests directly."
+      }
+    ],
+    "related_question_ids": [
+      "q069",
+      "q095",
+      "q177",
+      "q273",
+      "q305"
+    ],
+    "source_refs": [
+      "S2",
+      "S3",
+      "S9"
+    ]
+  },
+  {
+    "id": "c016",
+    "lesson_type": "concept",
+    "title": "The PMP Decision-Making Mindset",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Principles Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      },
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Describe the three mindset dimensions — proactive, ownership, value-driven — and the behaviors each implies.",
+      "Apply the 'assess before acting' pattern to situational questions.",
+      "Recognize the recurring wrong-answer archetypes the exam uses as distractors."
+    ],
+    "sections": [
+      {
+        "title": "Three Dimensions",
+        "content": "Nearly every situational question rewards the same underlying character: a project manager who is **proactive** (acts on signals early, before problems compound), takes **ownership** (leads with influence rather than deflecting to authority), and stays **value-driven** (connects every decision to the outcome the project exists to produce).\n\nThese aren't slogans — they're a prediction engine. Given four plausible actions, the credited one is usually the one a proactive, owning, value-focused manager would take."
+      },
+      {
+        "title": "Assess Before Acting",
+        "content": "The single most common credited pattern: when something changes or goes wrong, **understand it before responding to it**. Assess impact, gather the relevant facts, identify root cause — then decide. Options that skip straight to a big response (terminate, escalate, re-baseline, switch vendors) without analysis are usually wrong, no matter how decisive they sound.\n\n'First' questions sharpen this: several options may eventually be right, but the *first* action is almost always the assessing, clarifying, or root-cause step."
+      },
+      {
+        "title": "Recognizable Wrong Answers",
+        "content": "Distractors repeat recognizable failure archetypes: **premature escalation** (pushing the problem up before attempting resolution), **unilateral action** (deciding what belongs to the sponsor, board, or team), **passivity** (waiting, hoping, or deferring to the next scheduled meeting), **process bypass** (skipping change control or governance for speed), and **symptom whack-a-mole** (fixing instances while ignoring the pattern).\n\nLearning to spot the archetype is often faster than proving the right answer directly."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "When torn between two finalists, ask three questions: Which option acts on the root cause rather than the symptom? Which keeps the decision with its rightful owner? Which produces or protects value rather than just activity? The option that survives all three is nearly always the credited answer."
+      }
+    ],
+    "key_terms": [
+      "proactive",
+      "ownership",
+      "value-driven",
+      "root cause",
+      "escalation",
+      "assess first"
+    ],
+    "exam_traps": [
+      "Choosing a decisive-sounding action (terminate, escalate, re-plan) before any impact analysis has happened.",
+      "Confusing ownership with unilateralism — owning the outcome doesn't mean seizing others' decisions.",
+      "Waiting for a scheduled meeting or formal trigger when a signal warrants action now."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Proactive",
+        "definition": "Acting on early signals before problems compound, rather than waiting for formal triggers."
+      },
+      {
+        "term": "Ownership",
+        "definition": "Taking responsibility for outcomes and leading through influence, without seizing decisions that belong to others."
+      },
+      {
+        "term": "Assess before acting",
+        "definition": "Understanding impact and root cause before choosing a response — the most common credited first step."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A major vendor announces a price increase mid-project. Four responses are proposed. Which one exhibits the 'assess before acting' pattern?",
+        "options": [
+          "Immediately request additional budget from the sponsor to cover the increase",
+          "Switch to a cheaper vendor the same week to contain the exposure",
+          "Analyze the impact on cost, schedule, and the business case before recommending anything",
+          "Log the increase and wait for the next quarterly review to address it"
+        ],
+        "correct_answer": "Analyze the impact on cost, schedule, and the business case before recommending anything",
+        "explanation": "Understanding the change precedes responding to it: the analysis determines whether a budget request, re-sourcing, or descoping is actually warranted. Jumping to a budget ask or a vendor switch skips that analysis, and waiting for a quarterly cycle is passivity in the face of a live signal."
+      },
+      {
+        "question": "Which option is the classic 'premature escalation' distractor archetype?",
+        "options": [
+          "Facilitating the two disagreeing leads toward objective criteria",
+          "Meeting each party privately to understand their perspective first",
+          "Documenting the disagreement in the decision log for the record",
+          "Sending the disagreement straight to the sponsor before any resolution attempt"
+        ],
+        "correct_answer": "Sending the disagreement straight to the sponsor before any resolution attempt",
+        "explanation": "Escalation is legitimate after direct resolution has been genuinely attempted or when the decision truly exceeds the project manager's authority — not as a first move. Facilitation and private fact-finding are the credited early steps; documentation is neutral but doesn't resolve anything by itself."
+      },
+      {
+        "question": "Two finalist answers both sound plausible. One fixes the specific reported instance; the other addresses why instances keep occurring. The exam usually credits which, and why?",
+        "options": [
+          "The instance fix — it demonstrates responsiveness to the reporter",
+          "The pattern fix — root causes outrank symptoms in the credited mindset",
+          "Whichever option is described in more procedural detail",
+          "Neither — recurring problems should be escalated to the PMO"
+        ],
+        "correct_answer": "The pattern fix — root causes outrank symptoms in the credited mindset",
+        "explanation": "Repeatedly patching instances while the generating cause persists is the 'symptom whack-a-mole' archetype. The credited behavior addresses the root cause so the problem stops recurring. Detail level is not a validity signal, and PMO escalation of every recurring issue is its own premature-escalation trap."
+      }
+    ],
+    "related_question_ids": [
+      "q012",
+      "q072",
+      "q118",
+      "q134"
+    ],
+    "source_refs": [
+      "S3",
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c017",
+    "lesson_type": "concept",
+    "title": "Holistic and Systems Thinking",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Principles Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Explain what it means to treat a project as a system of interacting parts.",
+      "Trace how a local decision propagates into downstream effects on other domains.",
+      "Recognize when aggregate views hide offsetting local problems."
+    ],
+    "sections": [
+      {
+        "title": "Projects Are Systems",
+        "content": "A project is not a stack of independent parts — scope, schedule, cost, quality, risk, and stakeholders interact continuously. **Holistic thinking** means seeing those interactions: a scope decision is also a schedule and quality decision; a staffing change is also an estimate change; a vendor's problem is also your risk register's problem.\n\nThe alternative — optimizing each piece in isolation — produces plans that are individually correct and collectively contradictory."
+      },
+      {
+        "title": "Downstream Effects",
+        "content": "Systems thinking asks of every decision: *what else does this touch?* Compressing testing time touches defect rates, which touch support costs and reputation. Accepting an 'urgent small change' touches the baseline, downstream integrations, and every consumer of the changed component.\n\nThe practical discipline is tracing at least one step beyond the immediate effect before deciding — and inviting the people who own the touched areas into the decision."
+      },
+      {
+        "title": "Aggregates Can Lie",
+        "content": "System-level views summarize, and summaries can hide. A healthy overall budget can conceal one category's overrun offset by another's delayed spend. Green aggregate metrics can conceal one workstream far behind, masked by another far ahead. Holistic thinking doesn't mean staying at the top level — it means moving between levels, checking whether the aggregate story survives contact with the parts."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Scenarios reward the option that considers cross-domain impact: reconciling subsidiary plans that disagree, investigating offsetting variances instead of accepting a net-zero, and involving affected owners before a local decision lands on them. Options that treat one domain's problem as safely contained in that domain are usually wrong."
+      }
+    ],
+    "key_terms": [
+      "systems thinking",
+      "holistic view",
+      "downstream impact",
+      "integration",
+      "offsetting variance"
+    ],
+    "exam_traps": [
+      "Accepting a healthy aggregate (budget, dashboard, velocity) without checking whether it hides offsetting local problems.",
+      "Making a locally sensible change without tracing its effect on other domains or informing their owners.",
+      "Treating subsidiary plans as independent silos when integration requires them to agree."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Holistic view",
+        "definition": "Seeing the project as interacting parts whose decisions affect each other, not isolated domains."
+      },
+      {
+        "term": "Offsetting variance",
+        "definition": "Two opposite local deviations that cancel in the aggregate, hiding both problems."
+      },
+      {
+        "term": "Downstream effect",
+        "definition": "The impact a decision has on areas beyond its immediate target."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A team lead proposes shortening the test window by a week to protect the release date, noting that testing 'belongs to QA anyway.' What does systems thinking add to this decision?",
+        "options": [
+          "Nothing — schedule decisions inside one function belong to that function alone",
+          "Only that the change should be recorded in the schedule tool immediately afterward",
+          "It confirms the change is safe as long as QA formally agrees to it in writing",
+          "The compression touches defects, support costs, and acceptance — involve those owners"
+        ],
+        "correct_answer": "The compression touches defects, support costs, and acceptance — involve those owners",
+        "explanation": "Cutting test time is not a QA-local decision: it propagates into quality, support burden, and acceptance outcomes. Systems thinking traces those effects and involves the affected owners before deciding. QA's lone agreement doesn't cover the domains the change touches, and recording it afterward is bookkeeping, not analysis."
+      },
+      {
+        "question": "The project's overall budget shows on-track, but one cost category is well over while another is equally under. The holistic response is to:",
+        "options": [
+          "Accept the overall figure, since the deviations mathematically cancel",
+          "Rebalance the category budgets so each individual line looks clean",
+          "Investigate both deviations, since offsetting variances can hide two real problems",
+          "Report only the net figure going forward to reduce stakeholder confusion"
+        ],
+        "correct_answer": "Investigate both deviations, since offsetting variances can hide two real problems",
+        "explanation": "A net-zero aggregate can conceal an overspend problem and a delayed-work problem simultaneously — each needs understanding on its own terms. Accepting the net, cosmetically rebalancing, or hiding the detail all leave the underlying causes unexamined."
+      },
+      {
+        "question": "The risk plan flags a significant vendor risk, but the procurement plan doesn't address it at all. Each plan is internally consistent. What does integration require?",
+        "options": [
+          "Updating the procurement plan so the flagged risk is coherently addressed across both",
+          "Nothing — internal consistency within each plan is the applicable standard",
+          "Removing the vendor risk so the two documents no longer disagree",
+          "Waiting to see whether the vendor risk actually materializes first"
+        ],
+        "correct_answer": "Updating the procurement plan so the flagged risk is coherently addressed across both",
+        "explanation": "Integration is consistency across subsidiary plans, not just within each one — a significant risk flagged in one plan and ignored in the related plan is exactly the gap holistic planning exists to close. Deleting the risk erases information to manufacture agreement, and waiting forfeits the value of having identified it."
+      }
+    ],
+    "related_question_ids": [
+      "q057",
+      "q191",
+      "q329",
+      "q341"
+    ],
+    "source_refs": [
+      "S3",
+      "S5"
+    ]
+  },
+  {
+    "id": "c018",
+    "lesson_type": "concept",
+    "title": "Value-Driven Delivery",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Principles Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Finance"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Order work by value, including compliance-mandatory and risk-reducing work.",
+      "Explain incremental delivery as a value-acceleration strategy.",
+      "Detect and correct metrics that reward activity instead of value."
+    ],
+    "sections": [
+      {
+        "title": "Value Orders the Work",
+        "content": "If value is the point, value should order the backlog and the plan. That means highest-value and compliance-mandatory items first, low-value items challenged rather than delivered by default, and prioritization models reviewed when they drift — a scoring model that quietly overweights 'easy to build' is optimizing for throughput, not worth.\n\nValue isn't only revenue: risk reduction, compliance, enabling capabilities, and learning all carry value. What matters is that the ordering reflects a deliberate judgment about worth, not habit, convenience, or who asked loudest."
+      },
+      {
+        "title": "Deliver Value Early and Incrementally",
+        "content": "A usable subset delivered now usually beats a complete product delivered later: value starts accruing, feedback arrives while change is still cheap, and risk falls with each real release. Holding a finished, usable increment back until 'everything' is done delays value for no gain.\n\nThis logic applies beyond agile: phased predictive rollouts, early enabling deliverables, and pilot releases are all value-acceleration moves."
+      },
+      {
+        "title": "Activity Is Not Value",
+        "content": "Completed-item counts, velocity, and utilization all measure activity. They become harmful when they replace value measures: a team can inflate every one of them by shipping low-worth work. The check is simple and post-delivery: is the delivered thing *used*? Did the intended outcome move? Measuring that loop — and feeding surprising usage data back into prioritization — is what keeps delivery honest."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Credited options connect decisions to outcomes: sequencing by value under pressure, releasing usable subsets early, questioning metrics that reward volume, and validating post-release outcomes. Distractor options deliver everything as planned regardless of changed conditions, maximize visible counts, or declare success at shipment."
+      }
+    ],
+    "key_terms": [
+      "value-based prioritization",
+      "incremental delivery",
+      "usable subset",
+      "outcome validation",
+      "activity metrics"
+    ],
+    "exam_traps": [
+      "Holding back a usable increment until the full feature is complete — value delayed for no gain.",
+      "Letting a scoring model or sponsor pressure optimize for item counts over actual worth.",
+      "Declaring success at shipment without ever measuring usage or outcomes."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Value-based prioritization",
+        "definition": "Ordering work by worth — business value, compliance, risk reduction — rather than convenience or sequence."
+      },
+      {
+        "term": "Incremental delivery",
+        "definition": "Releasing usable subsets early so value and feedback start accruing before everything is complete."
+      },
+      {
+        "term": "Activity metric",
+        "definition": "A measure of work performed (counts, velocity, utilization) that says nothing directly about value delivered."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A usable subset of a feature has been ready since the end of the first iteration, but the team plans to hold it until the entire feature is complete two iterations from now. What is the value-driven critique?",
+        "options": [
+          "None — releasing partial functionality confuses users and should be avoided",
+          "Value is being delayed unnecessarily; the usable subset should ship and start earning",
+          "The subset should be released only if stakeholders explicitly demand it",
+          "Holding it back is correct because incomplete features inflate defect rates"
+        ],
+        "correct_answer": "Value is being delayed unnecessarily; the usable subset should ship and start earning",
+        "explanation": "A genuinely usable increment left on the shelf earns nothing and teaches nothing — early release starts the value and feedback clock. Partial-release confusion applies to unusable fragments, not usable subsets; waiting for demand is passivity; and no defect-rate claim in the scenario justifies withholding."
+      },
+      {
+        "question": "A sponsor asks the team to 'complete as many backlog items as possible before the demo, whichever they are.' What is the value-driven response?",
+        "options": [
+          "Comply — the sponsor owns the definition of progress for their own demo",
+          "Have the team pick items privately without engaging the sponsor's framing",
+          "Distribute effort evenly across the backlog to appear balanced",
+          "Discuss what progress should mean and recommend prioritizing by delivered value"
+        ],
+        "correct_answer": "Discuss what progress should mean and recommend prioritizing by delivered value",
+        "explanation": "Item counts can be gamed with low-worth work — the request optimizes an activity metric. The credited move is surfacing that distinction with the sponsor and recommending value ordering. Silent compliance and silent workaround both leave the flawed framing intact, and even distribution is prioritization by no criterion at all."
+      },
+      {
+        "question": "Post-release analytics show a delivered feature being used heavily for an unanticipated purpose, revealing an unmet need. What does value-driven delivery do with this?",
+        "options": [
+          "Restrict the feature to its intended use so behavior matches the plan",
+          "Ignore the signal, since the need wasn't part of approved scope",
+          "Feed the usage evidence to the product owner as reprioritization input",
+          "Build a solution for the new need immediately, before the signal fades"
+        ],
+        "correct_answer": "Feed the usage evidence to the product owner as reprioritization input",
+        "explanation": "Real usage is the best evidence of where value actually lives; routing it into prioritization closes the outcome-validation loop. Suppressing the behavior or dismissing it as out-of-scope discards the signal, while building immediately bypasses the owner of value decisions."
+      }
+    ],
+    "related_question_ids": [
+      "q005",
+      "q059",
+      "q203",
+      "q281",
+      "q335",
+      "q368"
+    ],
+    "source_refs": [
+      "S3",
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c019",
+    "lesson_type": "concept",
+    "title": "Building Quality In",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Principles Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Governance"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 7: Plan and optimize quality of products/deliverables"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Explain prevention over inspection and its cost-of-quality rationale.",
+      "Distinguish conformance to requirements from fitness for use.",
+      "Respond correctly when quality steps come under schedule pressure."
+    ],
+    "sections": [
+      {
+        "title": "Prevention Over Inspection",
+        "content": "Quality is **built into** processes and deliverables, not inspected in afterward. The economic argument is cost of quality: **prevention costs** (training, good process design, standards) are almost always far smaller than **failure costs** (rework, defects reaching customers, reputation damage), with **appraisal costs** (inspection, testing) in between.\n\nAn organization spending heavily on inspection and rework while starving prevention has the ratio backwards — catching defects is better than shipping them, but not creating them is better still."
+      },
+      {
+        "title": "Conformance vs. Fitness for Use",
+        "content": "**Conformance** means the deliverable meets its documented requirements. **Fitness for use** means it actually serves the user's real need. They can diverge: a product can pass every specified test and still be painful to use, because the specifications never captured usability. Quality includes both — which is why validation techniques that expose real usage (usability testing, early customer feedback) belong in the plan, not just requirement checklists."
+      },
+      {
+        "title": "Quality Under Pressure",
+        "content": "Schedule pressure predictably attacks quality steps: skip the peer review, compress the test window, drop the exploratory pass. The credited response is never reflexive — neither 'quality steps are sacred' nor 'the deadline wins.' It's analytical: understand what the threatened step actually catches, whether anything else covers it, and decide deliberately — reinstating the step, formally adjusting the plan, or consciously accepting documented risk. Silent erosion, where steps quietly stop happening, is the failure mode."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Recurring defects in the same area signal a root-cause analysis, not more inspection. Passing acceptance tests while skipping a planned review signals an undocumented deviation to address. And a customer calling a spec-compliant product unusable signals the conformance/fitness gap — with earlier validation as the lesson."
+      }
+    ],
+    "key_terms": [
+      "prevention",
+      "inspection",
+      "cost of quality",
+      "conformance",
+      "fitness for use",
+      "root cause analysis"
+    ],
+    "exam_traps": [
+      "Adding more inspection to a recurring defect pattern instead of analyzing the root cause.",
+      "Treating specification compliance as the whole of quality while users struggle with the result.",
+      "Letting quality steps erode silently under schedule pressure instead of deciding deliberately."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Prevention over inspection",
+        "definition": "Designing quality into the process rather than finding defects after the fact — cheaper and more reliable."
+      },
+      {
+        "term": "Cost of quality",
+        "definition": "The total of prevention, appraisal, and failure costs; failure typically dwarfs prevention."
+      },
+      {
+        "term": "Fitness for use",
+        "definition": "Whether the deliverable serves the user's real need — beyond meeting documented requirements."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "An organization spends heavily on inspection and rework but almost nothing on training and process design. What does cost-of-quality theory say?",
+        "options": [
+          "Shift investment toward prevention, which typically costs far less than failure",
+          "The balance is sound, since defects are being caught before delivery",
+          "Eliminate inspection spending entirely and rely on process discipline",
+          "Training and process design are outside the cost of quality model"
+        ],
+        "correct_answer": "Shift investment toward prevention, which typically costs far less than failure",
+        "explanation": "Prevention is the cheapest place to spend quality money; heavy appraisal-and-failure spending signals defects are being created and then expensively caught. Catching before delivery is better than shipping defects but worse than not producing them; inspection retains a role, and prevention costs are squarely inside the model."
+      },
+      {
+        "question": "A deliverable meets every documented requirement, yet the customer reports it is genuinely difficult to use. What does this reveal?",
+        "options": [
+          "The customer's expectations exceed the project's obligations",
+          "The requirements documentation was wasted effort from the start",
+          "Conformance was achieved but fitness for use was not — validation came too late",
+          "The deliverable must be rebuilt from scratch by a different team"
+        ],
+        "correct_answer": "Conformance was achieved but fitness for use was not — validation came too late",
+        "explanation": "Specs captured functionality but not usability, so the product conforms without serving the real need — the classic conformance/fitness gap, best closed with earlier usage-based validation. The obligation to deliver something fit for use isn't excess expectation, requirements still had value, and a full rebuild is unjustified by the evidence."
+      },
+      {
+        "question": "Under deadline pressure, developers have quietly stopped doing the peer review the quality plan requires; acceptance tests still pass. What is the credited response?",
+        "options": [
+          "Accept the new practice — consistently passing tests demonstrate adequate quality",
+          "Remove peer review from the quality plan so documentation matches actual behavior",
+          "Discipline the developers involved for deviating from the formally approved plan",
+          "Reinstate the review or formally change the plan, and address the pressure behind it"
+        ],
+        "correct_answer": "Reinstate the review or formally change the plan, and address the pressure behind it",
+        "explanation": "A silently skipped quality step is an undocumented deviation — the fix is deliberate: either restore the step or consciously, formally decide it's no longer needed, while addressing the schedule pressure that caused the erosion. Passing tests don't cover what reviews specifically catch, paper-matching behavior dodges the real question, and discipline attacks people instead of the cause."
+      }
+    ],
+    "related_question_ids": [
+      "q022",
+      "q038",
+      "q063",
+      "q133",
+      "q170",
+      "q189",
+      "q373"
+    ],
+    "source_refs": [
+      "S3",
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c020",
+    "lesson_type": "concept",
+    "title": "Accountability and Ethical Leadership",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Principles Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      },
+      {
+        "domain": "Business Environment",
+        "task": "Task 2: Plan and manage project compliance"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Apply truthful reporting standards when status is unflattering.",
+      "Recognize integrity issues: fabrication, conflicts of interest, misleading framing.",
+      "Explain why accountability cannot be delegated even when work is."
+    ],
+    "sections": [
+      {
+        "title": "Report the Truth, Especially When It Hurts",
+        "content": "Ethical leadership shows up most clearly in reporting. The standard is simple: stakeholders get an accurate picture, proactively, including known risks and bad news — before they hear it elsewhere, before it's forced out, and without cosmetic framing. Downplaying a growing risk to 'protect the relationship' trades short-term comfort for a much larger trust failure when reality lands.\n\nDistorted reporting takes subtle forms too: quietly shrinking item scope to keep a burndown smooth, choosing whichever data source flatters progress, or reporting an aggregate that hides a known problem."
+      },
+      {
+        "title": "Integrity Lines That Don't Move",
+        "content": "Some lines are absolute: never fabricate records or plausible details to fill documentation gaps — reconstruct honestly, with caveats. Never let an undisclosed **conflict of interest** stand in an evaluation — address it through recusal or independent review. Never misrepresent a decision's status (descoped vs. deprioritized, approved vs. assumed) because the accurate version is awkward.\n\nCompliance follows the same spirit: obligations are met through the proper process, and exceptions go through the compliance function — not through a project manager's private risk judgment."
+      },
+      {
+        "title": "Accountability Sticks to the Leader",
+        "content": "Work can be delegated; accountability cannot. A team member's error on delegated work is still the leader's outcome to own, and 'the team decided' is never an accountability escape hatch. Equally, taking ownership doesn't license grabbing decisions that belong to the sponsor, the board, or the customer — accountable leaders know which decisions are theirs and own the ones that are."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "When an option involves delaying bad news, softening a risk, fabricating a plausible record, or letting a conflict of interest slide, it is wrong regardless of how pragmatic the justification sounds. The credited option is transparent, timely, and routes exceptions through the process that owns them."
+      }
+    ],
+    "key_terms": [
+      "transparency",
+      "integrity",
+      "conflict of interest",
+      "fabrication",
+      "accountability",
+      "proactive disclosure"
+    ],
+    "exam_traps": [
+      "Delaying or softening bad news to manage a stakeholder's reaction — transparency loses value with every day of delay.",
+      "Filling documentation gaps with plausible invented detail instead of honest reconstruction with caveats.",
+      "Treating delegation of work as delegation of accountability."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Proactive disclosure",
+        "definition": "Communicating risks and bad news before being asked, and before stakeholders hear it elsewhere."
+      },
+      {
+        "term": "Conflict of interest",
+        "definition": "An interest or relationship that could bias a decision — handled by disclosure, recusal, or independent review."
+      },
+      {
+        "term": "Accountability",
+        "definition": "Ownership of outcomes that remains with the leader even when the work is delegated."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A growing risk could push the schedule out significantly, but nothing has slipped yet, and the stakeholder has been told 'on track' for weeks. What does ethical reporting require?",
+        "options": [
+          "Continue reporting on-track until an actual slip occurs, to avoid unnecessary alarm",
+          "Mention the risk only if the stakeholder specifically asks about schedule threats",
+          "Proactively communicate the risk, its potential impact, and the mitigation plan now",
+          "Downplay the risk's likelihood so the relationship stays constructive"
+        ],
+        "correct_answer": "Proactively communicate the risk, its potential impact, and the mitigation plan now",
+        "explanation": "Stakeholders are entitled to the real picture while there's still time to act on it — surfacing the risk with its mitigation is transparency plus competence. Waiting for the slip converts a managed disclosure into a surprise, answer-only-if-asked makes honesty conditional, and downplaying trades trust for comfort."
+      },
+      {
+        "question": "Closure documentation is missing records of several verbally-made decisions. A colleague suggests writing 'reasonable reconstructions' presented as contemporaneous records. What is the ethical path?",
+        "options": [
+          "Adopt the suggestion, since the decisions genuinely happened in some form",
+          "Reconstruct with those involved and label the records honestly as reconstructions",
+          "Omit the decisions entirely so nothing inaccurate enters the record",
+          "Delay closure indefinitely until original evidence of the decisions surfaces"
+        ],
+        "correct_answer": "Reconstruct with those involved and label the records honestly as reconstructions",
+        "explanation": "Honest reconstruction with explicit caveats preserves both completeness and truthfulness. Passing reconstructions off as contemporaneous records is fabrication regardless of good intent; omitting the decisions leaves the record misleadingly incomplete; and indefinite delay solves nothing the honest version doesn't."
+      },
+      {
+        "question": "An evaluator scoring vendor proposals turns out to have an undisclosed prior working relationship with one bidder. Why can't this simply be ignored if the scores 'look reasonable'?",
+        "options": [
+          "Because every vendor with any relationship to an evaluator must be disqualified",
+          "Because evaluators are never permitted to know any bidder in any capacity",
+          "Because reasonable-looking scores prove nothing about undisclosed pressure on future rounds",
+          "Because evaluation integrity requires addressing even the appearance of bias — via review or recusal"
+        ],
+        "correct_answer": "Because evaluation integrity requires addressing even the appearance of bias — via review or recusal",
+        "explanation": "Undisclosed conflicts undermine the process's credibility whether or not the scores were actually distorted — the appearance alone requires a structural response: independent review of the affected scores or recusal. Auto-disqualifying the vendor punishes the wrong party, and a blanket no-acquaintance rule is neither realistic nor the standard."
+      }
+    ],
+    "related_question_ids": [
+      "q161",
+      "q235",
+      "q236",
+      "q250",
+      "q339"
+    ],
+    "source_refs": [
+      "S3",
+      "S9",
+      "S11"
+    ]
+  },
+  {
+    "id": "c021",
+    "lesson_type": "concept",
+    "title": "Empowered Teams and Culture",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Principles Block",
+    "pmbok8_domains": [
+      "Resources"
+    ],
+    "focus_areas": [
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define empowerment as decision authority within explicit boundaries.",
+      "Diagnose behaviors that quietly destroy empowerment.",
+      "Explain psychological safety and its relationship to team performance."
+    ],
+    "sections": [
+      {
+        "title": "Empowerment Is Bounded Authority",
+        "content": "An **empowered team** holds real decision authority within explicit boundaries: routine decisions inside the boundary need no approval; decisions outside it escalate. The boundary is what makes empowerment workable — without it, either everything routes through the leader (a bottleneck) or nothing does (chaos followed by blame).\n\nEmpowerment pairs with information: teams can only decide well within their boundary if they hold the context — goals, constraints, and the reasoning behind them."
+      },
+      {
+        "title": "How Leaders Kill It Without Noticing",
+        "content": "Empowerment usually dies by a thousand small cuts: reviewing and correcting early-stage work so closely that people stop starting things independently; re-deciding decisions the team already made; demanding approval for actions inside the agreed boundary; or responding to one mistake by revoking autonomy wholesale.\n\nThe tell in scenarios is a team that *used to* act independently and now waits for direction — the credited diagnosis usually points back at the leader's own behavior."
+      },
+      {
+        "title": "Psychological Safety",
+        "content": "**Psychological safety** is the shared belief that speaking up — dissent, questions, admissions of error — won't be punished. Without it, teams agree publicly and disagree privately, problems surface late, and 'no objections' means nothing. Leaders build it by inviting dissent explicitly, responding to bad news without shooting the messenger, and treating errors as learning material rather than ammunition.\n\nSilent disagreement that later becomes poor decisions is the classic exam signal that safety, not process, is the gap."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Credited options define decision boundaries, restore autonomy after over-correction, create channels for quieter voices, and address the leader's own contribution to dependence. Distractors add approval layers, punish mistakes with revoked authority, or mistake public silence for genuine agreement."
+      }
+    ],
+    "key_terms": [
+      "empowerment",
+      "decision boundary",
+      "psychological safety",
+      "autonomy",
+      "micromanagement"
+    ],
+    "exam_traps": [
+      "Responding to one mistake by revoking a team's delegated authority wholesale.",
+      "Reading public silence as agreement when psychological safety is visibly low.",
+      "Preaching empowerment while requiring approval for decisions inside the agreed boundary."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Empowerment",
+        "definition": "Real decision authority within explicit boundaries, backed by the context needed to use it well."
+      },
+      {
+        "term": "Psychological safety",
+        "definition": "The shared belief that dissent, questions, and admitted errors won't be punished."
+      },
+      {
+        "term": "Decision boundary",
+        "definition": "The explicit line separating decisions a team makes alone from those that escalate."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A capable team member asks the project manager to approve every routine, low-risk technical decision, slowing delivery. What is the empowerment-based fix?",
+        "options": [
+          "Route the approvals to the team lead so the PM stops being the bottleneck",
+          "Keep approving each decision — oversight of technical choices protects quality",
+          "Agree on explicit decision boundaries so routine choices need no approval",
+          "Flag the approval-seeking as a performance concern at review time"
+        ],
+        "correct_answer": "Agree on explicit decision boundaries so routine choices need no approval",
+        "explanation": "The fix is structural: define what the person can decide alone, keeping only genuinely boundary-crossing decisions visible. Re-routing approvals just relocates the bottleneck, blanket approval keeps the dependence, and punishing someone for seeking guidance attacks the symptom the system created."
+      },
+      {
+        "question": "A team member's delegated decisions were sound, but they failed to inform affected colleagues, causing confusion. The leader considers revoking their autonomy. What is the better reading?",
+        "options": [
+          "Revocation is right — delegation clearly failed in practice",
+          "The gap is communication, not judgment — address that specifically and keep the delegation",
+          "The affected colleagues should adapt, since the decisions were within authority",
+          "All similar decisions should return to the leader until trust rebuilds"
+        ],
+        "correct_answer": "The gap is communication, not judgment — address that specifically and keep the delegation",
+        "explanation": "Autonomy over decisions and the duty to keep others informed are separable — the failure here is the second, so the fix targets it. Wholesale revocation over a communication gap is the classic over-correction that destroys empowerment, and telling affected colleagues to cope ignores the real coordination cost."
+      },
+      {
+        "question": "In meetings everyone agrees; afterward, team members privately tell the PM they had objections they didn't voice. Two poor decisions have already resulted. What is the underlying gap?",
+        "options": [
+          "The meeting agenda leaves too little time for genuinely full discussion",
+          "The team lacks the seniority to properly evaluate the decisions involved",
+          "Meeting minutes are not being circulated quickly enough after each session",
+          "Psychological safety — dissent hides, so silence masquerades as consensus"
+        ],
+        "correct_answer": "Psychological safety — dissent hides, so silence masquerades as consensus",
+        "explanation": "Objections that exist but only surface privately are the signature of low psychological safety. The leader's work is making dissent safe and explicitly invited — not more agenda time, faster minutes, or doubting the team's competence, none of which explain why concerns hide until after decisions."
+      }
+    ],
+    "related_question_ids": [
+      "q003",
+      "q094",
+      "q104",
+      "q247",
+      "q306",
+      "q307"
+    ],
+    "source_refs": [
+      "S3",
+      "S9"
+    ]
+  },
+  {
+    "id": "c022",
+    "lesson_type": "concept",
+    "title": "Sustainability Across the Project",
+    "module": "Principles and PMP Mindset",
+    "production_group": "Principles Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Risk"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 8: Evaluate external business environment changes"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Describe the three sustainability dimensions — environmental, social, economic — as project decision factors.",
+      "Apply long-term impact thinking to tradeoffs that look attractive short-term.",
+      "Connect sustainability to external environment monitoring and stakeholder expectations."
+    ],
+    "sections": [
+      {
+        "title": "Three Dimensions, One Principle",
+        "content": "PMBOK 8 elevates sustainability to a principle: integrate **environmental** (resource use, emissions, waste), **social** (worker wellbeing, community impact, equity), and **economic** (long-term viability, total cost of ownership) considerations into project decisions — not as an afterthought or a compliance checkbox.\n\nIn practice this means sustainability factors appear in option analysis, procurement criteria, design choices, and risk registers, alongside cost and schedule."
+      },
+      {
+        "title": "Short-Term Wins, Long-Term Costs",
+        "content": "Sustainability thinking is mostly disciplined tradeoff analysis over a longer horizon. The cheaper material with a heavy disposal cost, the delivery pace that burns the team out by Q3, the vendor whose labor practices become tomorrow's headline — each looks fine on this quarter's numbers and expensive on a three-year view.\n\nSustained team pace belongs here too: chronic overtime that visibly degrades productivity is a sustainability failure with immediate delivery consequences, and the credited fix is adjusting the plan, not pushing harder."
+      },
+      {
+        "title": "The Moving External Bar",
+        "content": "Sustainability expectations are external environment factors that shift — regulations tighten, customer expectations rise faster than law, investors ask new questions. Projects that monitor these shifts get lead time; projects that wait for formal mandates get retrofit costs. A publicized shift in public expectations can warrant proactive response even when no regulation requires it, because reputational and market risk are real business risks."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Credited options weigh long-term and stakeholder impact in decisions, respond proactively to shifting environmental and social expectations, and treat team burnout as a plan problem. Distractors optimize the current quarter, wait for regulation to force action, or treat sustainability as someone else's agenda item."
+      }
+    ],
+    "key_terms": [
+      "sustainability",
+      "environmental impact",
+      "social impact",
+      "economic viability",
+      "sustainable pace",
+      "total cost of ownership"
+    ],
+    "exam_traps": [
+      "Choosing the short-term-cheapest option while ignoring lifecycle and disposal costs.",
+      "Waiting for formal regulation when expectations have already visibly shifted.",
+      "Treating chronic team overtime as commitment rather than as an unsustainable plan."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Sustainability (principle)",
+        "definition": "Integrating environmental, social, and economic impact into project decisions across the life cycle."
+      },
+      {
+        "term": "Sustainable pace",
+        "definition": "A work rate the team can maintain indefinitely without degrading health or output."
+      },
+      {
+        "term": "Total cost of ownership",
+        "definition": "Full lifecycle cost of an option — acquisition, operation, maintenance, and disposal."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Two materials meet spec: one is 15% cheaper to buy but carries heavy end-of-life disposal costs and emissions. How does the sustainability principle enter the decision?",
+        "options": [
+          "It doesn't — procurement decisions are made on acquisition cost and spec compliance",
+          "Environmental and lifecycle costs belong in the analysis alongside purchase price",
+          "The greener option must always be selected regardless of any cost difference",
+          "The decision should be deferred until a regulator mandates one material"
+        ],
+        "correct_answer": "Environmental and lifecycle costs belong in the analysis alongside purchase price",
+        "explanation": "Sustainability integrates environmental and long-horizon economic factors into the tradeoff — it doesn't dictate the answer, it completes the analysis. Ignoring lifecycle costs optimizes the invoice rather than the outcome; an absolute always-green rule replaces analysis with dogma; and waiting for mandates surrenders the decision's lead time."
+      },
+      {
+        "question": "Months of sustained overtime are now visibly degrading the team's output. The deadline pressure remains. What is the credited response?",
+        "options": [
+          "Add still more overtime hours to compensate for the reduced productivity",
+          "Hold the current pace, since the deadline remains the project's priority",
+          "Adjust the plan and resourcing to restore a pace the team can sustain",
+          "Wait for the team to adapt to the workload on their own"
+        ],
+        "correct_answer": "Adjust the plan and resourcing to restore a pace the team can sustain",
+        "explanation": "When overtime is actively reducing output, more of it deepens the loss — the plan, not the people, is what's broken. Sustained pace is a social-sustainability commitment with hard delivery consequences; holding course or hoping for adaptation both ignore evidence that the current approach is now working against itself."
+      },
+      {
+        "question": "Public expectations about data privacy have visibly shifted after high-profile incidents elsewhere, though no new regulation exists. Customers are asking questions. What does sustainability-aware environment monitoring suggest?",
+        "options": [
+          "Assess whether proactive changes to practice or communication are warranted now",
+          "Take no action, since no legal requirement has actually changed",
+          "Respond only if a customer files a formal complaint about the product",
+          "Wait until the expectations are codified into regulation before evaluating"
+        ],
+        "correct_answer": "Assess whether proactive changes to practice or communication are warranted now",
+        "explanation": "Shifted public expectations are a real external change carrying reputational and market risk regardless of legal status — assessing a proactive response captures the lead-time advantage. Waiting for law, or for a formal complaint, treats a visible trend as nonexistent until it becomes expensive."
+      }
+    ],
+    "related_question_ids": [
+      "q086",
+      "q296",
+      "q363"
+    ],
+    "source_refs": [
+      "S3",
+      "S11"
+    ]
   }
 ]

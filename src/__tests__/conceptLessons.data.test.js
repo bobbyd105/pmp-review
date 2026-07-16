@@ -33,6 +33,14 @@ const MODULES = [
   'Principles and PMP Mindset',
   'Governance and Integration',
   'Common ITTO Layer',
+  'Scope and Quality',
+  'Schedule Management',
+  'Finance and Value Measurement',
+  'Stakeholders and Communications',
+  'Resources, Teams, and Leadership',
+  'Risk and Uncertainty',
+  'Agile and Hybrid Delivery',
+  'AI in Project Management',
 ]
 const PMBOK_8_DOMAINS = [
   'Governance',
@@ -53,16 +61,28 @@ const FOCUS_AREAS = [
 const APPROACHES = ['predictive', 'adaptive', 'hybrid']
 
 describe('concept_lessons.json data contract', () => {
-  it('contains the complete Foundation Block with unique sequential ids', () => {
+  it('contains sequential unique ids starting with the complete Foundation Block', () => {
     const ids = conceptLessons.map((lesson) => lesson.id)
 
     expect(ids).toEqual(
-      Array.from({ length: 10 }, (_, index) => `c${String(index + 1).padStart(3, '0')}`),
+      Array.from(
+        { length: conceptLessons.length },
+        (_, index) => `c${String(index + 1).padStart(3, '0')}`,
+      ),
     )
+    expect(conceptLessons.length).toBeGreaterThanOrEqual(10)
     expect(new Set(ids).size).toBe(ids.length)
-    expect(conceptLessons.every((lesson) => lesson.production_group === 'Foundation Block')).toBe(
-      true,
-    )
+    for (const lesson of conceptLessons.slice(0, 10)) {
+      expect(lesson.production_group, `${lesson.id} production group`).toBe(
+        'Foundation Block',
+      )
+    }
+    for (const lesson of conceptLessons) {
+      expect(
+        lesson.production_group.trim(),
+        `${lesson.id} must name a production group`,
+      ).not.toBe('')
+    }
   })
 
   it('has every required field and the expected authored-content shapes', () => {
