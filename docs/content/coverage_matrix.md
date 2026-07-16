@@ -49,8 +49,11 @@ The complete many-to-many ECO and PMBOK mappings, source references, and lesson 
 
 The Foundation Block is fully authored as a coherent prerequisite group. These
 ten records preserve the supplied module tags, mappings, and source references.
-Knowledge checks and related production-question links remain pending, so the
-canonical unit lifecycle matrix below is unchanged.
+As of 2026-07-16 each lesson carries three authored knowledge checks and
+curated related-question links (41 total; empty only where the bank has no
+genuine coverage of the concept yet), and all ten render in the learner-facing
+Course view. The canonical unit lifecycle matrix below still tracks the
+59-unit comprehensive plan separately.
 
 | Lesson ID | Title | Module tag | Asset status |
 |---|---|---|---|

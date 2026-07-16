@@ -80,10 +80,48 @@
         "definition": "Ongoing, repetitive work that sustains the business, distinct from the temporary nature of a project."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
-    "related_question_ids": [],
+    "knowledge_checks": [
+      {
+        "question": "A company groups a data-center migration, a network upgrade, and a staff retraining effort under one coordinating manager because together they deliver a shared modernization benefit none would achieve alone. What is this grouping?",
+        "options": [
+          "A portfolio, since it contains more than one related project at the same time",
+          "An operation, since all of the work supports ongoing company infrastructure",
+          "A phase, since the three efforts are scheduled to run one after another",
+          "A program, since related projects are coordinated for a shared benefit"
+        ],
+        "correct_answer": "A program, since related projects are coordinated for a shared benefit",
+        "explanation": "Related projects managed together for a benefit unavailable individually is the definition of a program. A portfolio groups work for strategic alignment, not shared benefit coordination; operations are ongoing rather than temporary; and a phase is a subdivision of a single project."
+      },
+      {
+        "question": "Which statement best captures the difference between portfolio management and project management?",
+        "options": [
+          "Portfolios select the right work for strategy; projects deliver that work correctly",
+          "Portfolio management simply involves larger budgets than project management does",
+          "Portfolio management replaces project management once an organization matures",
+          "Portfolios handle the ongoing operations while projects handle business change"
+        ],
+        "correct_answer": "Portfolios select the right work for strategy; projects deliver that work correctly",
+        "explanation": "The classic distinction: portfolios are about doing the right projects, projects are about doing the work right. Budget size isn't the differentiator, neither discipline replaces the other, and portfolios contain projects and programs (and may include operations) rather than dividing change from operations."
+      },
+      {
+        "question": "A payroll team processes salaries every month using the same system and procedures. Why is this not a project?",
+        "options": [
+          "It has no dedicated budget or cost baseline of its own",
+          "It does not require a certified project manager to run it",
+          "It is ongoing and repetitive rather than temporary and unique",
+          "It is largely automated, so no active management is needed"
+        ],
+        "correct_answer": "It is ongoing and repetitive rather than temporary and unique",
+        "explanation": "Projects are temporary and produce unique results; monthly payroll is continuing, repetitive operations. Budgets and management titles don't define project status, and operations still require active management even when partly automated."
+      }
+    ],
+    "related_question_ids": [
+      "q047",
+      "q120",
+      "q127",
+      "q240",
+      "q376"
+    ],
     "source_refs": [
       "S2",
       "S5"
@@ -179,9 +217,41 @@
         "definition": "A tailorable practice with recognizable ITTOs, offered as an option rather than a mandatory step."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
+    "knowledge_checks": [
+      {
+        "question": "In PMBOK 8, what do the seven Performance Domains describe?",
+        "options": [
+          "The strict sequence of stages every project must follow",
+          "The five lifecycle groupings that organize processes",
+          "The mandatory steps required for PMBOK compliance",
+          "The areas of practice that matter throughout a project"
+        ],
+        "correct_answer": "The areas of practice that matter throughout a project",
+        "explanation": "Performance Domains (Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk) are the 'what' — areas of practice relevant across the whole project. The lifecycle groupings are the Focus Areas, not the domains, and nothing in PMBOK 8 is a mandatory sequence or compliance checklist."
+      },
+      {
+        "question": "A project manager tailoring an agile project asks whether the 40 PMBOK 8 processes apply to their work. What is the best answer?",
+        "options": [
+          "They are tailorable options, not mandatory steps, across delivery approaches",
+          "They apply only to fully predictive projects, never to agile or hybrid ones",
+          "All 40 must be performed for the project to claim genuine PMBOK alignment",
+          "They were removed from PMBOK 8 for adaptive and hybrid projects entirely"
+        ],
+        "correct_answer": "They are tailorable options, not mandatory steps, across delivery approaches",
+        "explanation": "The 40 processes are deliberately non-prescriptive — options to tailor to context, applicable to predictive, agile, and hybrid work alike. Treating them as waterfall-only or as a mandatory checklist repeats the rigidity PMBOK 8 was designed to avoid."
+      },
+      {
+        "question": "Which pairing correctly describes the two axes of the PMBOK 8 structure?",
+        "options": [
+          "Focus Areas describe the 'what'; Performance Domains describe the 'when'",
+          "Both axes describe lifecycle timing at different levels of detail",
+          "Performance Domains describe the 'what'; Focus Areas describe the 'when'",
+          "Domains apply to agile work while Focus Areas apply to predictive work"
+        ],
+        "correct_answer": "Performance Domains describe the 'what'; Focus Areas describe the 'when'",
+        "explanation": "Domains are areas of practice (the what); Focus Areas are lifecycle groupings (the when). Reversing them is the most common confusion, and neither axis is approach-specific — both apply regardless of delivery method."
+      }
+    ],
     "related_question_ids": [],
     "source_refs": [
       "S1",
@@ -271,9 +341,41 @@
         "definition": "The tendency for the cost of making changes or fixing defects to rise as a project progresses."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
+    "knowledge_checks": [
+      {
+        "question": "At a phase-gate review, a project is significantly over budget and its business justification has weakened, but it has already consumed 60% of its funding. Sponsors argue it is 'too far along to stop.' What does sound gate discipline require?",
+        "options": [
+          "Continue the project, since the sunk investment already made justifies finishing",
+          "Decide based on current data and remaining value, not resources already spent",
+          "Skip the gate decision entirely this time, since it has become too contentious",
+          "End any project that arrives at a gate while running over its approved budget"
+        ],
+        "correct_answer": "Decide based on current data and remaining value, not resources already spent",
+        "explanation": "Phase gates exist precisely to stop bad investments continuing on momentum. 'Too far along to stop' is sunk cost reasoning — money already spent is gone either way; only remaining cost versus remaining value should drive the decision. Being over budget alone doesn't mandate termination, and skipping the gate abandons governance when it matters most."
+      },
+      {
+        "question": "Why does the rising cost of change over a project's life justify early planning rigor and phase gates?",
+        "options": [
+          "Because late changes are always rejected automatically by change control anyway",
+          "Because phase gates transfer the cost of late changes onto the vendor instead",
+          "Because early project phases have more schedule float available to absorb them",
+          "Problems are cheapest to fix early, so gates catch them while change is cheap"
+        ],
+        "correct_answer": "Problems are cheapest to fix early, so gates catch them while change is cheap",
+        "explanation": "The cost of change rises sharply as work accumulates, so catching problems at early gates is far cheaper than discovering them late. Change control evaluates late changes rather than automatically rejecting them, cost isn't transferred by gates, and float is a schedule concept unrelated to the cost-of-change curve."
+      },
+      {
+        "question": "A design phase begins before the preceding requirements phase has fully finished, in order to compress the overall schedule. Which phase relationship is this?",
+        "options": [
+          "Overlapping",
+          "Sequential",
+          "Iterative",
+          "Incremental"
+        ],
+        "correct_answer": "Overlapping",
+        "explanation": "Starting a phase before its predecessor finishes is the overlapping relationship, used to compress schedule at the price of rework risk. Sequential phases finish before the next starts; iterative phases repeat as understanding deepens; incremental describes delivering the product in usable pieces, not a phase relationship."
+      }
+    ],
     "related_question_ids": [],
     "source_refs": [
       "S4",
@@ -352,10 +454,48 @@
         "definition": "A team environment where people are trusted and capable of making decisions within their scope."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
-    "related_question_ids": [],
+    "knowledge_checks": [
+      {
+        "question": "Two exam options both seem defensible: one follows a documented process step precisely, the other adapts the step to protect the project's intended outcome. Which principle-based lens usually identifies the intended answer?",
+        "options": [
+          "Focus on value — connect the action to the intended outcome",
+          "Follow the documented process step exactly as it is written",
+          "Escalate to the sponsor whenever two options seem equally close",
+          "Defer to whichever senior stakeholder has stated a preference"
+        ],
+        "correct_answer": "Focus on value — connect the action to the intended outcome",
+        "explanation": "The principles are decision lenses, and value-focus is the most common tiebreaker: the intended answer usually reflects judgment in service of outcomes over rigid rule-following. Escalation and deference to seniority are both patterns the exam tends to punish when the project manager could reasonably decide."
+      },
+      {
+        "question": "What does 'Be an Accountable Leader' mean for a project manager who lacks formal authority over the people doing the work?",
+        "options": [
+          "Accountability transfers to whoever actually holds the formal authority instead",
+          "Act strictly within formally delegated boundaries and take nothing else on",
+          "Escalate every significant decision upward to the level that holds authority",
+          "Take ownership of outcomes anyway, leading through influence rather than position"
+        ],
+        "correct_answer": "Take ownership of outcomes anyway, leading through influence rather than position",
+        "explanation": "Accountable leadership is ownership regardless of formal authority — influence, relationship, and initiative fill the gap. Deflecting accountability to the org chart, retreating to formal boundaries, or escalating everything are all abdications of the principle."
+      },
+      {
+        "question": "How do the principles 'Be an Accountable Leader' and 'Build an Empowered Culture' work together rather than conflict?",
+        "options": [
+          "Empowerment removes the need for anyone on the team to stay accountable",
+          "Accountability requires the leader to personally approve each team decision",
+          "The team decides within its scope while the leader still owns the outcomes",
+          "They genuinely conflict, and the exam expects you to pick one over the other"
+        ],
+        "correct_answer": "The team decides within its scope while the leader still owns the outcomes",
+        "explanation": "Empowerment and accountability are complements: teams get defined decision space, and the leader remains answerable for results. Approving every decision destroys empowerment, and neither principle cancels the other — treating them as a forced choice is the trap."
+      }
+    ],
+    "related_question_ids": [
+      "q003",
+      "q069",
+      "q166",
+      "q247",
+      "q331"
+    ],
     "source_refs": [
       "S3"
     ]
@@ -441,10 +581,49 @@
         "definition": "Describes how and when a project's promised benefits will be delivered and measured, including after closure."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
-    "related_question_ids": [],
+    "knowledge_checks": [
+      {
+        "question": "Which document formally authorizes the project's existence and gives the project manager authority to apply organizational resources?",
+        "options": [
+          "The business case",
+          "The project charter",
+          "The benefits management plan",
+          "The integrated project management plan"
+        ],
+        "correct_answer": "The project charter",
+        "explanation": "Authorization is the charter's defining function. The business case justifies the investment but authorizes nothing, the benefits plan tracks value realization after delivery, and the project management plan describes how the work will be managed once the project already exists."
+      },
+      {
+        "question": "A project delivered on time and on budget, but a year later the promised efficiency gains never appeared. Which artifact was specifically designed to catch this?",
+        "options": [
+          "The schedule baseline, by comparing actual dates against the plan",
+          "The project charter, since it originally authorized the project",
+          "The benefits management plan, which tracks realization after delivery",
+          "The issue log, which records problems raised during execution"
+        ],
+        "correct_answer": "The benefits management plan, which tracks realization after delivery",
+        "explanation": "Benefits realization is measured after delivery, often after project closure, by the benefits management plan and its named benefits owner. On-time/on-budget delivery is a different measure — a project can meet every constraint and still fail to produce its promised value, which is exactly the gap this artifact exists to expose."
+      },
+      {
+        "question": "What is the correct sequence of justification, authorization, delivery, and value tracking?",
+        "options": [
+          "Charter authorizes → business case justifies → benefits plan delivers the outputs",
+          "Business case justifies → charter authorizes → project delivers → benefits plan tracks value",
+          "Benefits plan justifies → charter tracks value → business case closes the project",
+          "The charter and business case are one document reviewed at two different gates"
+        ],
+        "correct_answer": "Business case justifies → charter authorizes → project delivers → benefits plan tracks value",
+        "explanation": "The flow runs from why (business case) to formal existence (charter) to outputs (project) to whether the outputs produced the promised value (benefits plan). The distractors scramble that order or wrongly merge two distinct documents."
+      }
+    ],
+    "related_question_ids": [
+      "q011",
+      "q012",
+      "q056",
+      "q093",
+      "q108",
+      "q315"
+    ],
     "source_refs": [
       "S6",
       "S8"
@@ -522,10 +701,55 @@
         "definition": "The coherent collection of subsidiary plans describing how a project will be executed, monitored, controlled, and closed."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
-    "related_question_ids": [],
+    "knowledge_checks": [
+      {
+        "question": "How does a baseline differ from a plan?",
+        "options": [
+          "The approved measurement reference, changed only through formal change control",
+          "An early draft version of the plan kept for historical comparison purposes",
+          "A plan is formally approved, while a baseline always remains informal",
+          "A reference that exists only for cost, never for scope or for schedule"
+        ],
+        "correct_answer": "The approved measurement reference, changed only through formal change control",
+        "explanation": "A baseline is the frozen, approved reference point that actual performance is compared against, and it moves only through formal change control. It's the opposite of a draft or informal artifact, and scope, schedule, and cost all carry baselines."
+      },
+      {
+        "question": "The schedule assumes a delivery date two weeks earlier than the date the cost baseline was built on. What does integration require?",
+        "options": [
+          "Trusting whichever of the two plans was formally approved first",
+          "Letting each specialist keep the assumption their own plan was built on",
+          "Reconciling the subsidiary plans so they tell one consistent story",
+          "Averaging the two dates as a reasonable compromise"
+        ],
+        "correct_answer": "Reconciling the subsidiary plans so they tell one consistent story",
+        "explanation": "Integration means the subsidiary plans agree with each other — a discovered contradiction gets reconciled through the integrated plan, not resolved by approval order, left to stand, or split down the middle. Approval order says nothing about which assumption is right, and an average satisfies neither plan's logic."
+      },
+      {
+        "question": "Actual progress has drifted well behind the schedule baseline, and a team member suggests simply 'updating the baseline to match reality.' What is wrong with that suggestion?",
+        "options": [
+          "Nothing — baselines should continuously track actual progress as it happens",
+          "Baselines change only through change control, not to absorb performance drift",
+          "Baselines can never be changed at all once they have been formally approved",
+          "Only the sponsor is permitted to view or discuss baseline performance data"
+        ],
+        "correct_answer": "Baselines change only through change control, not to absorb performance drift",
+        "explanation": "Quietly moving the baseline to match actuals destroys the reference point that makes variance measurement meaningful. Baselines can legitimately change — but only through approved change control, typically for approved scope changes, not to hide slippage. Continuous tracking is what actuals do, not baselines."
+      }
+    ],
+    "related_question_ids": [
+      "q032",
+      "q051",
+      "q057",
+      "q123",
+      "q164",
+      "q183",
+      "q201",
+      "q279",
+      "q288",
+      "q326",
+      "q328",
+      "q329"
+    ],
     "source_refs": [
       "S6",
       "S8"
@@ -607,9 +831,41 @@
         "definition": "An organization's own accumulated assets — templates, historical data, lessons learned — available to support the project."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
+    "knowledge_checks": [
+      {
+        "question": "A new government regulation constrains how the project may store customer data. How is this classified?",
+        "options": [
+          "An OPA, since the organization has compliance templates for it",
+          "An EEF — a condition outside the team's control that constrains the project",
+          "A project document, since it must be recorded in the compliance plan",
+          "An OPA, because the organization is the one that must implement it"
+        ],
+        "correct_answer": "An EEF — a condition outside the team's control that constrains the project",
+        "explanation": "Regulations, market conditions, and organizational culture are Enterprise Environmental Factors: conditions that influence or constrain the project from outside the team's control. OPAs are the organization's own assets (templates, procedures, lessons learned); who implements compliance doesn't change the regulation's classification."
+      },
+      {
+        "question": "The project manager pulls a lessons-learned repository and an estimating template from the company's process library. What are these?",
+        "options": [
+          "EEFs — internal environmental factors influencing the project",
+          "Project documents created by the current project",
+          "OPAs — the organization's accumulated process assets",
+          "Components of the project management plan"
+        ],
+        "correct_answer": "OPAs — the organization's accumulated process assets",
+        "explanation": "Templates, historical information, and lessons-learned repositories are Organizational Process Assets — accumulated organizational property available to help the project. They weren't created by the current project (so not its project documents) and they describe help available, not conditions imposed (so not EEFs)."
+      },
+      {
+        "question": "Which of these is a project document rather than part of the project management plan?",
+        "options": [
+          "The risk register",
+          "The scope management plan",
+          "The cost management plan",
+          "The communications management plan"
+        ],
+        "correct_answer": "The risk register",
+        "explanation": "The risk register is a working record used during execution — a project document. The scope, cost, and communications management plans are subsidiary plans inside the integrated project management plan, which describes how the project is managed rather than recording day-to-day working state."
+      }
+    ],
     "related_question_ids": [],
     "source_refs": [
       "S6",
@@ -693,10 +949,47 @@
         "definition": "The compiled, formatted representation of performance information used for decision-making and communication."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
-    "related_question_ids": [],
+    "knowledge_checks": [
+      {
+        "question": "'The team logged 412 hours and found 9 defects this week.' In the work performance hierarchy, what is this?",
+        "options": [
+          "Work performance information, since it was formally collected",
+          "A work performance report, since it was written down",
+          "An organizational process asset, since it will be archived",
+          "Work performance data — raw, unanalyzed measurements"
+        ],
+        "correct_answer": "Work performance data — raw, unanalyzed measurements",
+        "explanation": "Raw observations with no analysis or context are work performance data. It becomes information only once analyzed against the plan, and a report only once formatted for distribution. Collection method and eventual archiving don't change its place in the hierarchy."
+      },
+      {
+        "question": "Comparing those logged hours against the plan reveals a 15% adverse variance and a worsening three-week trend. What has the data become?",
+        "options": [
+          "It remains raw data until leadership has formally reviewed and accepted it",
+          "Work performance information — analyzed and placed in planning context",
+          "A work performance report, since a numeric variance has been calculated",
+          "A formal revision to the schedule baseline reflecting the adverse trend"
+        ],
+        "correct_answer": "Work performance information — analyzed and placed in planning context",
+        "explanation": "Analysis against the plan — variances, trends, comparisons — turns raw data into work performance information, which is what actually informs decisions. Leadership review isn't the transformation step, formatting for distribution is what makes a report, and baselines change only through change control."
+      },
+      {
+        "question": "What distinguishes a work performance report from work performance information?",
+        "options": [
+          "A report formats information for distribution and decision-making",
+          "A report contains the raw numbers while information is the formatted product",
+          "Reports come before information in the processing hierarchy",
+          "Only reports are allowed to contain variance calculations"
+        ],
+        "correct_answer": "A report formats information for distribution and decision-making",
+        "explanation": "The hierarchy runs data → information → reports: the report is the packaged representation of analyzed information, compiled for stakeholders and decisions. The distractors invert the sequence or invent restrictions on where variances may appear."
+      }
+    ],
+    "related_question_ids": [
+      "q065",
+      "q138",
+      "q172",
+      "q348"
+    ],
     "source_refs": [
       "S6",
       "S8"
@@ -775,10 +1068,45 @@
         "definition": "An organizational structure where the project manager holds significant authority, though resources still have a functional reporting line."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
-    "related_question_ids": [],
+    "knowledge_checks": [
+      {
+        "question": "A PMO provides templates and best practices to project teams but cannot require any project to follow them. Which PMO type is this?",
+        "options": [
+          "Controlling",
+          "Supportive",
+          "Directive",
+          "Projectized"
+        ],
+        "correct_answer": "Supportive",
+        "explanation": "A supportive PMO plays an advisory role with low control — it offers assets but can't mandate their use. A controlling PMO requires compliance with frameworks, a directive PMO runs projects directly, and 'projectized' is an organizational structure, not a PMO type."
+      },
+      {
+        "question": "In which organizational structure does the project manager hold the least formal authority?",
+        "options": [
+          "Projectized",
+          "Strong matrix",
+          "Functional",
+          "Balanced matrix"
+        ],
+        "correct_answer": "Functional",
+        "explanation": "In a functional structure, resources report to functional managers and the project manager's authority is minimal. Authority rises through weak, balanced, and strong matrix forms and peaks in a projectized structure, where resources report directly to the project manager."
+      },
+      {
+        "question": "In a weak matrix organization, a functional manager keeps pulling a shared resource onto department work. Why does the structure matter to how the project manager responds?",
+        "options": [
+          "It does not matter — resource decisions work identically in every structure",
+          "The resource is entitled to choose whichever manager they prefer working for",
+          "The PM can simply order the resource to return to project work immediately",
+          "Low formal authority points to negotiating or escalating, not directing"
+        ],
+        "correct_answer": "Low formal authority points to negotiating or escalating, not directing",
+        "explanation": "In a weak matrix the functional manager holds most of the authority, so the effective play is negotiation with that manager and escalation through the sponsor if needed — not issuing orders the structure doesn't back. The exam frequently keys the 'right' action to how much authority the described structure actually gives the PM."
+      }
+    ],
+    "related_question_ids": [
+      "q112",
+      "q186"
+    ],
     "source_refs": [
       "S2",
       "S5"
@@ -859,10 +1187,50 @@
         "definition": "The full span of a product's existence, continuing beyond any single project delivering into it."
       }
     ],
-    "knowledge_checks": {
-      "status": "pending"
-    },
-    "related_question_ids": [],
+    "knowledge_checks": [
+      {
+        "question": "Who owns a product's ongoing vision, strategy, and value delivery beyond any single project?",
+        "options": [
+          "The project manager",
+          "The sponsor",
+          "The product manager",
+          "The PMO director"
+        ],
+        "correct_answer": "The product manager",
+        "explanation": "The product manager owns the product across its whole life cycle — the 'why' behind what gets built. The project manager delivers bounded outcomes within constraints, the sponsor champions and funds, and a PMO standardizes practice; none of them owns ongoing product vision."
+      },
+      {
+        "question": "A project delivering a major release into a product closes successfully. What happens to responsibility for the product's value?",
+        "options": [
+          "It ends completely, since the project met every one of its constraints",
+          "It continues with the product manager across the product life cycle",
+          "It transfers permanently to the steering committee going forward",
+          "It pauses until the next related project is formally chartered"
+        ],
+        "correct_answer": "It continues with the product manager across the product life cycle",
+        "explanation": "Product value responsibility outlives every individual project: the product manager keeps steering vision and value after the project team disbands. Project closure ends the project's accountability for its bounded deliverable, not the product's ongoing life."
+      },
+      {
+        "question": "In an agile team, who decides what is most valuable to build next, and who ensures the work is planned and executed effectively?",
+        "options": [
+          "The product owner prioritizes value; the delivery lead ensures execution",
+          "The project manager prioritizes value; the product owner manages execution",
+          "The sponsor performs both roles personally to avoid any conflict of interest",
+          "The team votes on both questions together at the start of each new sprint"
+        ],
+        "correct_answer": "The product owner prioritizes value; the delivery lead ensures execution",
+        "explanation": "Value prioritization belongs to the product owner (the product-management side); planning and execution discipline belongs to the delivery lead or project manager. Reversing the roles is the classic trap, and neither sponsor fiat nor team voting describes how these complementary accountabilities actually divide."
+      }
+    ],
+    "related_question_ids": [
+      "q005",
+      "q009",
+      "q034",
+      "q160",
+      "q185",
+      "q192",
+      "q335"
+    ],
     "source_refs": [
       "S2",
       "S10"

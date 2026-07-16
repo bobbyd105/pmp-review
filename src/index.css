@@ -714,3 +714,128 @@ body {
     justify-content: flex-start;
   }
 }
+
+/* Course view (Comprehensive Course concept lessons) */
+
+.course-intro {
+  color: #52606d;
+  max-width: 48rem;
+}
+
+.course-module {
+  margin-bottom: 2rem;
+}
+
+.course-module-title {
+  border-bottom: 2px solid #d9e2ec;
+  padding-bottom: 0.35rem;
+}
+
+.concept-lesson-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.concept-lesson-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.secondary-button {
+  background: #f0f5ff;
+  color: #1c64d9;
+  border: 1px solid #1c64d9;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.secondary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.concept-lesson-body section {
+  margin-top: 1.1rem;
+}
+
+.concept-lesson-body h4 {
+  margin: 0 0 0.5rem;
+}
+
+.concept-lesson-body p,
+.concept-lesson-body li {
+  color: #3e4c59;
+}
+
+.concept-flashcards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.concept-flashcard {
+  background: #f5f7fa;
+  border: 1px solid #d9e2ec;
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+}
+
+.concept-flashcard dt {
+  font-weight: 600;
+}
+
+.concept-flashcard dd {
+  margin: 0.25rem 0 0;
+  color: #3e4c59;
+}
+
+.knowledge-check {
+  border: 1px solid #d9e2ec;
+  border-radius: 6px;
+  padding: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.knowledge-check-question {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.knowledge-check-option {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+  color: #3e4c59;
+}
+
+.check-correct {
+  color: #14713d;
+  font-weight: 600;
+}
+
+.check-incorrect {
+  color: #c92a2a;
+  text-decoration: line-through;
+}
+
+.knowledge-check-result {
+  margin-top: 0.6rem;
+  border-left: 3px solid #1c64d9;
+  background: #f0f5ff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.knowledge-check-result p {
+  margin: 0;
+}

@@ -59,6 +59,26 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Course view + Foundation Block completion (2026-07-16, this branch):
+  - Authored 30 knowledge checks (3 per lesson, c001-c010): original
+    single-best-answer items with teaching explanations, correct positions
+    spread 8/8/8/6 and length-disciplined (both enforced by new contract
+    tests). Curated 41 `related_question_ids` links from concept lessons to
+    genuinely relevant bank questions; lessons whose concepts have no real
+    bank coverage yet (c002 PMBOK map, c003 phase gates, c007 EEF/OPA) keep
+    empty links until the targeted-question milestone.
+  - New eighth nav view `Course` (`src/components/Course.jsx` +
+    `ConceptLessonCard.jsx`): module-grouped, collapsed-by-default concept
+    lesson cards rendering objectives, sections (bold/italic/list subset, no
+    HTML injection), exam traps, flashcard grid, interactive knowledge checks
+    (immediate teaching feedback — deliberate contrast with the exam-condition
+    Quiz per decision_log.md #4), and resolved related bank questions.
+  - `conceptLessons.data.test.js` contract extended (knowledge-check shape,
+    cue discipline, referential integrity); new `Course.test.jsx` covers
+    render, collapse/expand, both knowledge-check outcomes, and question
+    resolution. Verification for this slice is jsdom component tests against
+    real data plus a passing production build (no headless browser is
+    currently installed in the repo). Full suite 19 files / 149 tests passes.
 - Answer-length bias editorial remediation + hard gate (2026-07-15/16, this
   branch): edited ~285 questions across eleven reviewed batches, worst
   length-ratio first. Correct answers trimmed to their core action (reasoning

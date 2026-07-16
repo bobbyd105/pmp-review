@@ -2,6 +2,7 @@ import { useState } from 'react'
 import QuestionBank from './components/QuestionBank.jsx'
 import Quiz from './components/Quiz.jsx'
 import Dashboard from './components/Dashboard.jsx'
+import Course from './components/Course.jsx'
 import Lessons from './components/Lessons.jsx'
 import ContentStudio from './components/ContentStudio.jsx'
 import PromptHelper from './components/PromptHelper.jsx'
@@ -9,6 +10,7 @@ import CurriculumCoverage from './components/CurriculumCoverage.jsx'
 
 const VIEWS = [
   { id: 'quiz', label: 'Quiz' },
+  { id: 'course', label: 'Course' },
   { id: 'browse', label: 'Browse questions' },
   { id: 'dashboard', label: 'Dashboard' },
   { id: 'lessons', label: 'Lessons' },
@@ -39,6 +41,7 @@ export default function App() {
         </nav>
       </header>
       {view === 'quiz' && <Quiz />}
+      {view === 'course' && <Course />}
       {view === 'browse' && <QuestionBank />}
       {view === 'dashboard' && <Dashboard />}
       {view === 'lessons' && <Lessons />}
