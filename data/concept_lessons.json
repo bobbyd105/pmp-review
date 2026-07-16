@@ -6292,5 +6292,1006 @@
       "S8",
       "S10"
     ]
+  },
+  {
+    "id": "c051",
+    "lesson_type": "concept",
+    "title": "Agile Values, Principles, and Mindset",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Resources"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      },
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      }
+    ],
+    "approaches": [
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "State the four Agile Manifesto value pairs and read them correctly ('over', not 'instead of').",
+      "Apply the recurring principle themes: early value, feedback loops, sustainable pace, simplicity.",
+      "Distinguish genuine agile mindset from ceremony-only 'agile theater.'"
+    ],
+    "sections": [
+      {
+        "title": "Four Values, Read Carefully",
+        "content": "The Agile Manifesto weighs four pairs: **individuals and interactions** over processes and tools; **working product** over comprehensive documentation; **customer collaboration** over contract negotiation; **responding to change** over following a plan.\n\nThe word 'over' does the work: the right-hand items retain value — agile teams still document, plan, and contract — but when the pairs conflict, the left side wins. Reading the values as 'no documentation, no plans' is the most common corruption, and exam distractors exploit it."
+      },
+      {
+        "title": "Principle Themes",
+        "content": "The twelve principles cluster into themes worth internalizing rather than memorizing verbatim: **deliver value early and continuously** (working product is the primary progress measure); **welcome change**, even late, because responsiveness is competitive advantage; **short feedback loops** — frequent delivery, daily business-developer collaboration, regular reflection (retrospectives) with behavior adjustment; **empowered, self-organizing teams** given environment and trust; **sustainable pace** indefinitely, because burnout pace is borrowed speed; and **simplicity** — maximizing work *not* done.\n\nEach theme is a decision lens: given options, the agile-credited one shortens feedback, delivers value sooner, or preserves team health."
+      },
+      {
+        "title": "Mindset vs. Theater",
+        "content": "Agile is a mindset expressed through practices — not the practices alone. A team holding daily standups while decisions still flow top-down, or running 'sprints' whose content is fixed a year ahead, has adopted ceremony without the mindset: **agile theater**. The diagnostic questions: Does customer feedback actually change the backlog? Do retrospectives actually change behavior? Can the team actually make decisions inside its boundary? When those answers are no, the fix is never more ceremony — it's restoring the feedback and empowerment loops the ceremonies exist to serve."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Value-pair questions test the 'over' reading — documentation and planning are reduced-emphasis, not eliminated. Scenario questions reward shortening feedback loops, welcoming (channeled) change, and protecting sustainable pace. And when a scenario shows ceremonies running but outcomes unchanged, the credited diagnosis is the missing mindset element, not a missing meeting."
+      }
+    ],
+    "key_terms": [
+      "Agile Manifesto",
+      "working product",
+      "customer collaboration",
+      "responding to change",
+      "sustainable pace",
+      "self-organizing team",
+      "retrospective"
+    ],
+    "exam_traps": [
+      "Reading 'over' as 'instead of' — agile still documents, plans, and contracts.",
+      "Prescribing more ceremony when the missing ingredient is feedback or empowerment.",
+      "Treating sustained overtime as agile commitment — sustainable pace is a principle, not a suggestion."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Agile values",
+        "definition": "Individuals/interactions, working product, customer collaboration, responding to change — each 'over' (not 'instead of') its pair."
+      },
+      {
+        "term": "Sustainable pace",
+        "definition": "A work rate maintainable indefinitely — the principle burnout-driven schedules violate."
+      },
+      {
+        "term": "Agile theater",
+        "definition": "Ceremonies without the mindset — standups and sprints with no real feedback or empowerment loops."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A stakeholder objects: 'Agile means no documentation, so we can't use it — we're regulated.' What is the accurate correction?",
+        "options": [
+          "Required documentation still gets produced — the value only weights conflicts",
+          "The stakeholder is right — agile and regulated environments are incompatible",
+          "Agile teams produce their documentation only after the product has shipped",
+          "Documentation in agile becomes the product owner's personal responsibility"
+        ],
+        "correct_answer": "Required documentation still gets produced — the value only weights conflicts",
+        "explanation": "The value statement weights priorities when they conflict; it doesn't abolish the right-hand side. Regulated agile teams build required documentation into their definition of done. Incompatibility is the myth being corrected, and neither deferral-until-shipping nor PO-only ownership is an agile rule."
+      },
+      {
+        "question": "A team runs every Scrum ceremony faithfully, but customer feedback never changes the backlog and retrospective actions never get done. What is the credited diagnosis?",
+        "options": [
+          "The ceremonies need to run longer and more frequently to finally take effect",
+          "The team has clearly outgrown agile and should return to predictive delivery",
+          "Agile theater — the ceremonies run, but the loops they serve are dead",
+          "The customer is at fault for giving feedback the team cannot readily use"
+        ],
+        "correct_answer": "Agile theater — the ceremonies run, but the loops they serve are dead",
+        "explanation": "Ceremonies are delivery mechanisms for feedback and adaptation; running them while ignoring their outputs is form without function. More ceremony amplifies the theater, abandoning agile misdiagnoses practice failure as approach failure, and blaming the customer deflects from loops the team controls."
+      },
+      {
+        "question": "Which option best expresses the 'simplicity' principle in day-to-day work?",
+        "options": [
+          "Building every requested feature to its most complete possible version",
+          "Maximizing the amount of work not done — building only what the outcome needs",
+          "Removing code comments and documentation to reduce artifact count",
+          "Refusing stakeholder requests that would add any complexity at all"
+        ],
+        "correct_answer": "Maximizing the amount of work not done — building only what the outcome needs",
+        "explanation": "Simplicity is the art of not building what the outcome doesn't need — the manifesto's own phrasing. Gold-plating every feature is its opposite; stripping useful documentation confuses simplicity with austerity; and blanket refusal of complexity ignores that some complexity earns its keep."
+      }
+    ],
+    "related_question_ids": [
+      "q008",
+      "q009"
+    ],
+    "source_refs": [
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c052",
+    "lesson_type": "concept",
+    "title": "Scrum: Roles, Events, Artifacts, and Pillars",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Resources"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "adaptive"
+    ],
+    "learning_objectives": [
+      "Assign responsibilities correctly across Product Owner, Scrum Master, and Developers.",
+      "Explain each Scrum event's purpose and timebox logic.",
+      "Connect the three artifacts to their commitments and the three empirical pillars."
+    ],
+    "sections": [
+      {
+        "title": "Three Accountabilities",
+        "content": "**Product Owner**: owns the *what* — maximizes product value, owns and orders the product backlog, is one person (not a committee), and is the single channel for what the team builds next. Stakeholders influence; the PO decides. **Scrum Master**: owns the *how the system works* — a servant leader who coaches the team, facilitates events, removes impediments, and protects the team from disruption; explicitly *not* a taskmaster or the team's boss. **Developers**: own the *how* — everyone building the increment, regardless of specialty; they self-organize, own the sprint backlog, and decide how much work fits a sprint.\n\nThe boundary questions are exam staples: prioritization belongs to the PO (not the SM, not the sponsor, not the loudest stakeholder); sprint workload belongs to the Developers; impediment removal and process health belong to the SM."
+      },
+      {
+        "title": "Five Events",
+        "content": "The **Sprint** is the container — a fixed timebox (a month or less) producing a done, usable increment. **Sprint Planning** starts it: the team selects backlog items and crafts a sprint goal. **Daily Scrum**: 15 minutes, by and for the Developers, to inspect progress toward the sprint goal and adapt the day's plan — not a status report to management. **Sprint Review**: inspect the increment with stakeholders, gather feedback that updates the backlog. **Sprint Retrospective**: the team inspects its own process and commits to concrete improvements.\n\nTimeboxes are protective: fixed length forces prioritization and guarantees the feedback cadence."
+      },
+      {
+        "title": "Artifacts, Commitments, Pillars",
+        "content": "Three artifacts, each with a commitment: the **product backlog** (commitment: the *product goal*), the **sprint backlog** (commitment: the *sprint goal*), and the **increment** (commitment: the *definition of done*). An increment that doesn't meet the definition of done isn't an increment — it's inventory.\n\nBeneath everything sit the empirical pillars: **transparency** (real state visible to those doing and receiving the work), **inspection** (frequent examination of artifacts and progress), and **adaptation** (adjusting when inspection finds deviation). Every event and artifact is a transparency-inspection-adaptation mechanism; that's the theory to reason from when a practice question gets novel."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Role-boundary scenarios dominate: a sponsor pushing items directly to the team (route through the PO), a Scrum Master assigning tasks (not their role — Developers self-organize), a stakeholder demanding mid-sprint additions (backlog, next sprint, PO's call). Event-purpose questions reward knowing the Daily Scrum belongs to the Developers and the Retrospective inspects process, not product — that's the Review's job."
+      }
+    ],
+    "key_terms": [
+      "Product Owner",
+      "Scrum Master",
+      "Developers",
+      "sprint",
+      "daily scrum",
+      "sprint review",
+      "retrospective",
+      "product backlog",
+      "sprint backlog",
+      "increment",
+      "definition of done",
+      "transparency",
+      "inspection",
+      "adaptation"
+    ],
+    "exam_traps": [
+      "Letting anyone but the Product Owner order the product backlog.",
+      "Treating the Daily Scrum as a status meeting for managers rather than the Developers' planning huddle.",
+      "Confusing the Sprint Review (inspect the product) with the Retrospective (inspect the process)."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Product Owner",
+        "definition": "One person owning product value and backlog order — the single channel for what gets built."
+      },
+      {
+        "term": "Scrum Master",
+        "definition": "Servant leader coaching the team, facilitating events, and removing impediments — not a taskmaster."
+      },
+      {
+        "term": "Definition of done",
+        "definition": "The increment's commitment — the quality bar that makes work genuinely complete."
+      },
+      {
+        "term": "Empirical pillars",
+        "definition": "Transparency, inspection, adaptation — the theory every Scrum event and artifact serves."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A sponsor walks directly to two developers and asks them to build a 'quick feature' this sprint. In Scrum, what is the correct routing?",
+        "options": [
+          "The developers build it, since sponsors outrank the backlog",
+          "The Scrum Master decides whether the feature enters the sprint",
+          "The request goes to the Product Owner for backlog prioritization",
+          "The developers vote as a team on whether to accept the work"
+        ],
+        "correct_answer": "The request goes to the Product Owner for backlog prioritization",
+        "explanation": "The Product Owner is the single channel for what gets built — stakeholder requests, sponsor requests included, enter through the backlog they order. Sponsor rank doesn't bypass the role, the Scrum Master owns process rather than product decisions, and team votes don't replace the PO's accountability for value."
+      },
+      {
+        "question": "During the Daily Scrum, a department manager attends and asks each developer to justify yesterday's hours. What has gone wrong?",
+        "options": [
+          "Nothing — the Daily Scrum exists precisely for management status checks",
+          "The event was repurposed — it belongs to the Developers' daily planning",
+          "The meeting exceeded its fifteen-minute timebox, which is the only real rule",
+          "The manager should have asked the Product Owner to collect the justifications"
+        ],
+        "correct_answer": "The event was repurposed — it belongs to the Developers' daily planning",
+        "explanation": "The Daily Scrum is the Developers' 15-minute inspection-and-adaptation huddle, not an accountability report to management — converting it into one damages the transparency it needs to work. The timebox isn't the issue here, and routing interrogation through the PO just relocates the dysfunction."
+      },
+      {
+        "question": "At sprint end, an item works in the demo environment but hasn't passed the security review the definition of done requires. What is its status?",
+        "options": [
+          "Done — a working demonstration is the practical meaning of an increment",
+          "Done, provided the Product Owner accepts the demonstration as sufficient",
+          "Not done — the definition of done is a commitment, and it is not met",
+          "Done at reduced story points, to reflect the missing security review"
+        ],
+        "correct_answer": "Not done — the definition of done is a commitment, and it is not met",
+        "explanation": "The definition of done is a hard quality bar — work that misses any element isn't an increment, whatever the demo shows. The PO can't waive it item-by-item without corrupting the standard, and 'partial credit' scoring hides undone work inside velocity."
+      }
+    ],
+    "related_question_ids": [],
+    "source_refs": [
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c053",
+    "lesson_type": "concept",
+    "title": "Kanban, Lean, and Flow",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Schedule",
+      "Resources"
+    ],
+    "focus_areas": [
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 6: Continuous improvement"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 9: Evaluate project status"
+      }
+    ],
+    "approaches": [
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Apply Kanban's core practices: visualize work, limit WIP, manage flow.",
+      "Interpret flow metrics: lead time, cycle time, throughput, and Little's Law.",
+      "Connect Lean thinking — waste elimination, pull, optimize the whole — to project work."
+    ],
+    "sections": [
+      {
+        "title": "Kanban's Core Moves",
+        "content": "**Kanban** manages work through flow rather than timeboxes. The core practices: **visualize the workflow** (a board where every work item and its state is visible — invisible work can't be managed), **limit work in progress** (explicit WIP caps per state), and **manage flow** (watch where work piles up, fix the bottleneck).\n\nWIP limits are the counterintuitive engine: capping simultaneous work *increases* completion rate, because task-switching and queue-aging are real costs. When a column hits its limit, the team swarms to finish existing work instead of starting more — 'stop starting, start finishing.'"
+      },
+      {
+        "title": "Flow Metrics",
+        "content": "**Lead time**: request to delivery — the customer's clock. **Cycle time**: work started to work finished — the team's clock. **Throughput**: items completed per period. **Little's Law** ties them: average cycle time = WIP ÷ throughput — which is *why* limiting WIP shortens cycle time at a given throughput.\n\nThese metrics are empirical forecasting inputs: 'we complete roughly eight similar items a week' predicts better than optimistic per-item estimates. A swelling WIP count with flat throughput is an early warning — cycle times are about to stretch."
+      },
+      {
+        "title": "Lean Thinking",
+        "content": "Kanban inherits **Lean**: eliminate **waste** (partially done work, waiting, handoffs, task-switching, defects, gold-plated features nobody uses), use **pull** (work is pulled when capacity exists, not pushed onto overloaded people), and **optimize the whole** (a locally faster step that floods the next step's queue made the *system* slower).\n\nPartially done work is the signature Lean insight for projects: ten items 80% finished deliver zero value; eight items 100% finished deliver eight items of value. Inventory of unfinished work is cost, not progress."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Scenario signals: a team drowning in simultaneous work → WIP limits, not more multitasking; complaints that 'everything takes forever' → measure and manage flow, find the bottleneck; a stakeholder pushing work onto a full team → pull systems and visible WIP make the overload undeniable. Kanban also fits where timeboxes don't: continuous intake work (support, operations-adjacent streams) flows better than it sprints."
+      }
+    ],
+    "key_terms": [
+      "Kanban",
+      "WIP limit",
+      "lead time",
+      "cycle time",
+      "throughput",
+      "Little's Law",
+      "pull system",
+      "waste",
+      "bottleneck"
+    ],
+    "exam_traps": [
+      "Responding to overload by starting more work in parallel — WIP limits exist to prevent exactly this.",
+      "Confusing lead time (customer's clock, from request) with cycle time (team's clock, from start).",
+      "Optimizing one workflow step in isolation while the downstream queue swells."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "WIP limit",
+        "definition": "An explicit cap on simultaneous work per state — finishing beats starting."
+      },
+      {
+        "term": "Little's Law",
+        "definition": "Average cycle time = WIP ÷ throughput — the math behind limiting work in progress."
+      },
+      {
+        "term": "Pull system",
+        "definition": "Work enters when capacity exists, rather than being pushed onto loaded people."
+      },
+      {
+        "term": "Lead vs. cycle time",
+        "definition": "Lead: request → delivery (customer's clock). Cycle: start → finish (team's clock)."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A team has 24 items in progress, everything is 'almost done,' and completion has slowed to a crawl. What is the Kanban-credited intervention?",
+        "options": [
+          "Start the remaining backlog items too, so nothing waits unattended",
+          "Impose WIP limits and swarm to finish existing work before starting more",
+          "Extend working hours until the parallel workload clears",
+          "Reassign the slowest items to the fastest team members"
+        ],
+        "correct_answer": "Impose WIP limits and swarm to finish existing work before starting more",
+        "explanation": "Massive parallel WIP is the disease: task-switching and aging queues stall completion. Capping WIP and finishing before starting restores flow — Little's Law makes the math explicit. Starting more work deepens the spiral, overtime burns people against a structural problem, and reshuffling assignees doesn't reduce the parallelism."
+      },
+      {
+        "question": "A customer asks why their request took six weeks when the team 'only worked on it for four days.' Which two metrics explain the gap?",
+        "options": [
+          "Velocity and story points — the item was simply under-estimated at intake",
+          "Throughput and takt time — the arrival rate exceeded the service rate",
+          "Lead time (six weeks with queue wait) versus cycle time (four active days)",
+          "Burndown and burnup — the sprint scope changed during the six weeks"
+        ],
+        "correct_answer": "Lead time (six weeks with queue wait) versus cycle time (four active days)",
+        "explanation": "Lead time runs on the customer's clock from request to delivery — including the five-plus weeks in queue; cycle time covers only the active work. The gap is queue time, which WIP limits attack. Velocity, takt, and burn charts don't decompose this particular customer-facing question."
+      },
+      {
+        "question": "One workflow step gets optimized and doubles its output — and total delivery slows as the next step's queue explodes. Which Lean principle was violated?",
+        "options": [
+          "Visualize the workflow — the board must have been out of date",
+          "Optimize the whole — a local improvement flooded the system's constraint",
+          "Eliminate defects — the faster step must have produced lower quality",
+          "Sustainable pace — the optimized step is working too fast to maintain"
+        ],
+        "correct_answer": "Optimize the whole — a local improvement flooded the system's constraint",
+        "explanation": "System throughput is set by the constraint; accelerating a non-constraint step just piles inventory in front of the bottleneck. That's the optimize-the-whole lesson. No evidence points to board staleness, defects, or pace problems — the queue explosion is pure local-optimization arithmetic."
+      }
+    ],
+    "related_question_ids": [],
+    "source_refs": [
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c054",
+    "lesson_type": "concept",
+    "title": "Product Vision, Backlogs, and User Stories",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Scope"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 2: Develop and manage project scope"
+      },
+      {
+        "domain": "People",
+        "task": "Task 1: Develop a common vision"
+      }
+    ],
+    "approaches": [
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Trace the cascade: vision → roadmap → releases → epics → stories.",
+      "Write and evaluate user stories: format, three Cs, INVEST, acceptance criteria.",
+      "Run backlog refinement and value-based ordering honestly."
+    ],
+    "sections": [
+      {
+        "title": "From Vision to Story",
+        "content": "Adaptive scope lives in a cascade: the **product vision** (why the product exists, for whom, what difference it makes) anchors a **roadmap** (major outcomes over time), which frames **releases**, which decompose into **epics** (large bodies of work) and finally **user stories** (small, deliverable slices of value). The cascade keeps daily work connected to purpose — a story that can't be traced upward to the vision is a candidate for not building it.\n\nThe backlog is the single, ordered list of all of it — one list, one owner (the product owner), continuously reordered by value."
+      },
+      {
+        "title": "User Stories Done Right",
+        "content": "The canonical format: *As a [role], I want [capability], so that [benefit]* — the 'so that' clause is the value test; when it's hollow, the story is suspect. The **three Cs** describe a story's lifecycle: **Card** (the brief written token), **Conversation** (the collaborative detail-filling — the story is a promise to talk, not a spec), and **Confirmation** (the acceptance criteria that define done for this story).\n\n**INVEST** is the quality checklist: **I**ndependent (schedulable on its own), **N**egotiable (details flex in conversation), **V**aluable (delivers something someone wants), **E**stimable (understood well enough to size), **S**mall (fits comfortably in an iteration), **T**estable (verifiable criteria exist)."
+      },
+      {
+        "title": "Refinement and Ordering",
+        "content": "**Backlog refinement** is the ongoing grooming that keeps the near-term backlog ready: splitting epics into stories, adding acceptance criteria, updating estimates, deleting the dead weight. Deep items get detail as they approach; distant items stay coarse — refinement is rolling wave in adaptive clothing.\n\nOrdering is by **value**, honestly measured: cost of delay, risk reduction, learning value, and dependencies all count. The recurring corruptions: ordering by convenience (easy first), by recency (newest request first), by volume (loudest stakeholder first) — and a scoring model quietly overweighting 'easy to build' produces throughput theater, not value delivery."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Story-format questions test the pieces (the 'so that' carries value; acceptance criteria are the Confirmation). INVEST questions test diagnosis — a story the team can't estimate usually isn't small or well-enough understood; a story with no user benefit fails Valuable. Backlog questions reward single-list, PO-ordered, value-driven discipline against every variant of queue-jumping."
+      }
+    ],
+    "key_terms": [
+      "product vision",
+      "roadmap",
+      "epic",
+      "user story",
+      "three Cs",
+      "INVEST",
+      "acceptance criteria",
+      "backlog refinement"
+    ],
+    "exam_traps": [
+      "Treating a user story as a mini-specification instead of a placeholder for conversation.",
+      "Writing stories with hollow 'so that' clauses — activity without a value claim.",
+      "Letting refinement detail the entire backlog uniformly instead of sharpening what's near."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "User story format",
+        "definition": "As a [role], I want [capability], so that [benefit] — the benefit clause carries the value test."
+      },
+      {
+        "term": "Three Cs",
+        "definition": "Card, Conversation, Confirmation — a story is a promise to talk, confirmed by acceptance criteria."
+      },
+      {
+        "term": "INVEST",
+        "definition": "Independent, Negotiable, Valuable, Estimable, Small, Testable — the story quality checklist."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A story reads: 'As a claims adjuster, I want one-click access to prior claims, so that I can resolve calls faster.' Which element makes this story's VALUE testable?",
+        "options": [
+          "The one-click phrasing, which specifies the interaction precisely",
+          "The claims-adjuster role, which identifies the requesting department",
+          "The 'so that I can resolve calls faster' clause — a measurable benefit claim",
+          "The story's brevity, which guarantees it fits within one iteration"
+        ],
+        "correct_answer": "The 'so that I can resolve calls faster' clause — a measurable benefit claim",
+        "explanation": "The benefit clause states why the capability matters and gives something to validate after delivery (did resolution speed improve?). Interaction detail and role identify the what and who; brevity relates to Small, not value."
+      },
+      {
+        "question": "A developer complains a story 'can't be estimated — nobody really knows what it involves.' Which INVEST failure is this, and what's the remedy?",
+        "options": [
+          "Estimable, likely Small too — refine it: split, clarify, add criteria",
+          "Independent — the story must first be merged with all of its dependencies",
+          "Negotiable — the team should simply commit and negotiate the details later",
+          "Testable — the story mainly needs a dedicated QA resource assigned to it"
+        ],
+        "correct_answer": "Estimable, likely Small too — refine it: split, clarify, add criteria",
+        "explanation": "Un-estimatable stories are usually too big or too vague — refinement (splitting, conversation, criteria) restores estimability. Merging dependencies makes stories bigger, not clearer; 'commit and figure it out' abuses Negotiable; and testability is about criteria, not staffing."
+      },
+      {
+        "question": "A backlog's top items are consistently the easiest to build, while a high-value, complex item sinks for months. What discipline has failed?",
+        "options": [
+          "Sprint capacity planning — the team's velocity has been set far too low",
+          "Value-based ordering — convenience is outranking worth; the PO should fix it",
+          "Story splitting — the complex item should become forty tiny stories instead",
+          "Definition of done — the completed easy items must be hiding many defects"
+        ],
+        "correct_answer": "Value-based ordering — convenience is outranking worth; the PO should fix it",
+        "explanation": "The backlog exists to put the most valuable work next; easy-first ordering is throughput theater that defers the value the product exists for. Velocity and DoD aren't implicated by the pattern, and while splitting may help the complex item move, the ordering discipline is the failed control."
+      }
+    ],
+    "related_question_ids": [
+      "q034",
+      "q185",
+      "q335"
+    ],
+    "source_refs": [
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c055",
+    "lesson_type": "concept",
+    "title": "Agile Estimation and Forecasting",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Schedule"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 8: Plan and manage schedule"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 9: Evaluate project status"
+      }
+    ],
+    "approaches": [
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Explain relative estimation: story points, planning poker, affinity sizing.",
+      "Use velocity correctly — an empirical planning input, never a performance target.",
+      "Read burndown/burnup charts and forecast from observed completion rates."
+    ],
+    "sections": [
+      {
+        "title": "Relative, Not Absolute",
+        "content": "Agile estimation sizes work *relative to other work*: **story points** express combined effort, complexity, and uncertainty against reference stories, usually on a Fibonacci-ish scale (1, 2, 3, 5, 8, 13) whose widening gaps mirror how uncertainty grows with size. Humans compare better than they measure — 'this is roughly twice that' is more reliable than 'this is 34 hours.'\n\n**Planning poker** (simultaneous reveal, discuss the outliers, converge) exists to counter anchoring and authority bias — the point is the conversation the divergence triggers. **Affinity estimation** and **T-shirt sizing** trade precision for speed across large backlogs."
+      },
+      {
+        "title": "Velocity: Input, Not Target",
+        "content": "**Velocity** is the empirical average of points completed per iteration — a *planning input*: capacity for next sprint ≈ demonstrated velocity, and remaining backlog ÷ velocity ≈ remaining iterations. Two laws govern its use. First, plan from *demonstrated* velocity, not aspiration — a team that commits to 40 and completes 25, sprint after sprint, has a planning-input problem, not a work-ethic problem. Second, velocity is not comparable across teams and collapses as a performance target: pressure it, and points inflate to match (story-point inflation), destroying the measure's forecasting value.\n\nThe quiet corruption to watch: scope trimmed informally to keep a smooth burndown — status integrity beats chart aesthetics."
+      },
+      {
+        "title": "Charts and Forecasts",
+        "content": "A **burndown** plots remaining work against time; a **burnup** plots completed work *and* total scope — making scope growth visible instead of disguising it as slow progress. Flow-based teams forecast from **throughput** (items/week) the same way sprint teams use velocity.\n\nEmpirical forecasting states ranges honestly: 'at 20–24 points per sprint, this backlog lands in 5–6 sprints' — updated every iteration as data arrives. That's the adaptive answer to 'when will it be done': a range from evidence, tightening over time."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Credited patterns: plan next sprint from demonstrated velocity; investigate persistent commit-vs-complete gaps as estimation/planning problems; prefer burnup when scope is moving; forecast in evidence-based ranges. Distractors: velocity as a whip, cross-team velocity comparisons, hour-precision promises from point-based data, and burndowns smoothed by quiet scope trimming."
+      }
+    ],
+    "key_terms": [
+      "story points",
+      "relative estimation",
+      "planning poker",
+      "velocity",
+      "burndown",
+      "burnup",
+      "throughput forecasting"
+    ],
+    "exam_traps": [
+      "Planning sprints from hoped-for velocity while demonstrated velocity says otherwise.",
+      "Comparing velocities across teams or setting velocity as a performance target.",
+      "Reading a smooth burndown as health when scope is being quietly trimmed to produce it."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Story points",
+        "definition": "Relative size — effort, complexity, uncertainty — measured against reference stories."
+      },
+      {
+        "term": "Velocity",
+        "definition": "Demonstrated points per iteration — a planning input, never a cross-team metric or target."
+      },
+      {
+        "term": "Burnup chart",
+        "definition": "Completed work plotted with total scope — makes scope growth visible."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A team commits to 40 points every sprint and completes about 25, sprint after sprint. What is the credited correction?",
+        "options": [
+          "Plan future sprints from the demonstrated ~25-point velocity, not the aspiration",
+          "Apply schedule pressure until completed points reach the 40-point commitment",
+          "Lengthen the sprint so the 40 points fit within the timebox",
+          "Add team members until capacity matches the 40-point plan"
+        ],
+        "correct_answer": "Plan future sprints from the demonstrated ~25-point velocity, not the aspiration",
+        "explanation": "Persistent commit-complete gaps are planning-input errors: the evidence says 25. Pressure produces point inflation or burnout, longer sprints just relabel the same throughput, and adding people first raises coordination costs — none of them fix planning against fiction."
+      },
+      {
+        "question": "Leadership wants to compare two teams' velocities to decide which is 'more productive.' What is wrong with this?",
+        "options": [
+          "Nothing — velocity exists precisely for cross-team productivity benchmarking",
+          "Points are team-relative; comparison invites inflation and ruins forecasts",
+          "Velocity comparisons are fine as long as both teams use Fibonacci numbers",
+          "The comparison becomes valid only after normalizing by each team's size"
+        ],
+        "correct_answer": "Points are team-relative; comparison invites inflation and ruins forecasts",
+        "explanation": "Each team's points are calibrated to its own reference stories — the units differ. Comparing them punishes honest calibration, and teams respond by inflating estimates, wrecking the planning signal. Shared scales and size normalization don't fix incommensurable units."
+      },
+      {
+        "question": "Stakeholders keep adding scope, and the burndown chart makes the team look slow even though completion is steady. Which chart fixes the visibility problem?",
+        "options": [
+          "A burnup chart — completed work and total scope plotted separately",
+          "A steeper ideal-line burndown to reset stakeholder expectations",
+          "A cumulative defect chart to shift attention toward quality",
+          "No chart change — the team should simply complete the added scope faster"
+        ],
+        "correct_answer": "A burnup chart — completed work and total scope plotted separately",
+        "explanation": "Burnups separate the two moving quantities: the completed line shows steady delivery while the scope line shows growth — exactly the story the burndown collapses into apparent slowness. Cosmetic ideal lines and topic changes don't restore the signal, and 'work faster' accepts a distorted picture."
+      }
+    ],
+    "related_question_ids": [
+      "q128"
+    ],
+    "source_refs": [
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c056",
+    "lesson_type": "concept",
+    "title": "MVP, MMF, and Early Value",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Finance"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish MVP (learning instrument) from MMF (value instrument).",
+      "Apply cost of delay to sequencing decisions.",
+      "Recognize when 'minimum' is being misused as 'sloppy' or 'everything.'"
+    ],
+    "sections": [
+      {
+        "title": "MVP: Built to Learn",
+        "content": "A **minimum viable product** is the smallest thing that tests the riskiest assumption — its output is *validated learning*, not revenue. 'Will adjusters actually use self-service?' is answered faster by a thin, real slice in front of real users than by a year of building on the untested assumption.\n\nMinimum modifies scope, not quality: an MVP is a small *good* thing, not a large sloppy one. And the definition is a negotiation hazard — stakeholders each defining 'minimum' as 'everything I want' produces an MVP the size of the product. When two parties hold different mental models of the MVP, that's an alignment conversation to have explicitly, early."
+      },
+      {
+        "title": "MMF: Built to Earn",
+        "content": "A **minimum marketable feature** is the smallest feature chunk that delivers real, standalone value to customers — the unit of incremental *delivery*, where MVP is the unit of *learning*. A payments product might ship card support as an MMF (customers can genuinely use it) while running an MVP experiment on whether invoice financing is worth building at all.\n\nThe sequencing logic both serve: value lands earlier, feedback arrives while change is cheap, and risk falls with each real release."
+      },
+      {
+        "title": "Cost of Delay",
+        "content": "**Cost of delay** prices time: what does each month of not shipping this item cost — in revenue missed, savings deferred, risk carried, deadlines (regulatory!) approached? It converts sequencing debates into economics: a feature worth $100k/month of delay outranks one worth $10k/month even if the second is easier — and 'easier first' is exactly the corruption cost-of-delay thinking exposes.\n\nCompliance deadlines are cost-of-delay cliffs: the cost isn't linear, it's a wall, which is why compliance-mandatory work jumps queues."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Definition questions: MVP tests assumptions (learning); MMF delivers standalone value (earning); neither means low quality. Scenario questions: divergent MVP definitions between stakeholders → align explicitly before building; sequencing under time pressure → compliance-mandatory and highest cost-of-delay first; and a 'minimum' that keeps absorbing everyone's wishlist → the scoping conversation, not silent acceptance."
+      }
+    ],
+    "key_terms": [
+      "minimum viable product",
+      "minimum marketable feature",
+      "validated learning",
+      "cost of delay",
+      "incremental value"
+    ],
+    "exam_traps": [
+      "Reading 'minimum' as permission for low quality rather than small scope.",
+      "Using MVP and MMF interchangeably — one tests assumptions, the other delivers value.",
+      "Sequencing by ease while cost of delay points the other way."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "MVP",
+        "definition": "The smallest thing that tests the riskiest assumption — output is validated learning."
+      },
+      {
+        "term": "MMF",
+        "definition": "The smallest feature delivering real standalone customer value — the unit of incremental delivery."
+      },
+      {
+        "term": "Cost of delay",
+        "definition": "What each period of not shipping an item costs — the economics behind sequencing."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A team wants to test whether customers would actually use a proposed self-service portal before investing a year in it. Which instrument fits, and what is its output?",
+        "options": [
+          "An MMF — the smallest marketable version, with revenue as the output",
+          "An MVP — a thin real slice for real users, yielding validated learning",
+          "A prototype review board, with formal approval sign-off as the output",
+          "A full pilot release across the market, with share growth as the output"
+        ],
+        "correct_answer": "An MVP — a thin real slice for real users, yielding validated learning",
+        "explanation": "The question is an assumption test — will they use it? — which is the MVP's exact job, and its yield is learning that steers the investment decision. MMFs deliver value once the direction is validated; approval boards test opinions, not behavior; and a full pilot spends the year the MVP exists to protect."
+      },
+      {
+        "question": "A product owner and a key customer each say 'MVP' but describe wildly different feature sets. What is the credited move?",
+        "options": [
+          "Build the union of both descriptions so neither party is disappointed",
+          "Build the intersection of both descriptions, since that must be the true minimum",
+          "Surface the divergence and explicitly align on what the MVP tests and contains",
+          "Proceed with the product owner's version, since they own the backlog"
+        ],
+        "correct_answer": "Surface the divergence and explicitly align on what the MVP tests and contains",
+        "explanation": "Different mental models of 'minimum' are an alignment gap that grows more expensive with every sprint built on it. The union is the everything-MVP corruption, the intersection is an arbitrary artifact of two wishlists, and PO authority doesn't remove the need to reconcile with a key customer before building."
+      },
+      {
+        "question": "Feature A saves $80k per month once shipped; Feature B saves $15k per month but is much easier to build. Cost-of-delay reasoning says?",
+        "options": [
+          "Ship A first — each month of delay on A costs over five times more",
+          "Ship B first — quick wins build momentum for the harder work",
+          "Ship both simultaneously by splitting the team down the middle",
+          "Ship neither until a full year's roadmap is finalized and approved"
+        ],
+        "correct_answer": "Ship A first — each month of delay on A costs over five times more",
+        "explanation": "Cost of delay prices the queue: every month B jumps ahead of A burns ~$65k net. 'Momentum' is the easy-first rationalization the economics exist to expose, splitting the team delays the high-value item anyway, and waiting for a perfect roadmap maximizes the delay cost on both."
+      }
+    ],
+    "related_question_ids": [
+      "q160"
+    ],
+    "source_refs": [
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c057",
+    "lesson_type": "concept",
+    "title": "Servant Leadership and Self-Organizing Teams",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Resources"
+    ],
+    "focus_areas": [
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      }
+    ],
+    "approaches": [
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Describe servant leadership behaviors: remove obstacles, shield, grow people.",
+      "Explain self-organization as bounded authority over the how.",
+      "Diagnose the failure modes: command-and-control relapse and abdication."
+    ],
+    "sections": [
+      {
+        "title": "The Leader Serves the Team",
+        "content": "**Servant leadership** inverts the traditional flow: instead of the team serving the leader's plan, the leader serves the team's ability to deliver — **removing impediments** (the blocked environment, the stalled dependency, the bureaucratic snag), **shielding** the team from disruption (scope injections, drive-by tasking, stakeholder interrupts routed properly instead of landing mid-sprint), and **growing people** (coaching, creating stretch opportunities, building safety to fail and learn).\n\nThe posture is 'what's blocking you and how do I clear it?' — asked genuinely and acted on. Influence and facilitation, not command, are the working tools."
+      },
+      {
+        "title": "Self-Organization Is Bounded",
+        "content": "A **self-organizing team** decides *how* to do the work: task assignment, technical approach, internal coordination. It operates inside boundaries: the *what and why* come from product ownership and the vision; standards and constraints (quality bars, compliance) still apply. Self-organization is authority over method, not anarchy over goals.\n\nIt also has prerequisites — clear goals, sufficient skills, access to information, and trust. Handing a team 'self-organization' without goals or context isn't empowerment; it's abdication with better branding."
+      },
+      {
+        "title": "Two Failure Modes",
+        "content": "**Command-and-control relapse**: the leader assigns tasks person by person, re-decides team decisions, or converts the daily standup into status interrogation — the ceremonies survive, the self-organization dies, and the team learns to wait for instructions. **Abdication**: 'you're self-organizing' as an excuse to withhold direction, feedback, and impediment removal — the team flails without the context and support self-organization requires.\n\nThe healthy middle: crystal-clear outcomes and boundaries, genuine authority within them, active service on obstacles, and coaching — not commanding, not vanishing."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Servant-leader scenarios reward clearing the blocker over reporting it, shielding the team over relaying every interrupt, and coaching over commanding. Self-organization scenarios reward letting the team own task assignment and method — while keeping goals, priorities, and standards explicit. The distractors are the two failure modes wearing reasonable-sounding clothes: 'ensuring quality' (micromanagement) and 'trusting the team' (abdication)."
+      }
+    ],
+    "key_terms": [
+      "servant leadership",
+      "impediment removal",
+      "shielding",
+      "self-organizing team",
+      "bounded authority",
+      "coaching"
+    ],
+    "exam_traps": [
+      "Reporting impediments upward while the team stays blocked — servant leaders clear paths.",
+      "Assigning tasks to individuals on a team that should own its own task distribution.",
+      "Using 'self-organization' to justify withholding direction, context, or support."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Servant leadership",
+        "definition": "Leading by serving the team's ability to deliver — clearing obstacles, shielding, growing people."
+      },
+      {
+        "term": "Self-organizing team",
+        "definition": "A team with authority over how work gets done — inside explicit goals, priorities, and standards."
+      },
+      {
+        "term": "Shielding",
+        "definition": "Routing disruptions (scope injections, drive-by requests) properly so the team's focus survives."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A team is blocked by another department's approval queue. The servant-leader response is:",
+        "options": [
+          "Note the blockage in the risk register and wait for the queue to clear itself",
+          "Work the impediment actively — engage the department, escalate if needed",
+          "Tell the team to quietly route around the approval requirement this once",
+          "Reassign the blocked team members to entirely unrelated work indefinitely"
+        ],
+        "correct_answer": "Work the impediment actively — engage the department, escalate if needed",
+        "explanation": "Impediment removal is the servant leader's core service: engage the blocker directly, escalate with quantified impact if direct engagement stalls. Logging-and-waiting is visibility without service, bypassing approvals trades one problem for a compliance problem, and permanent reassignment abandons the blocked work."
+      },
+      {
+        "question": "A newly 'self-organizing' team flounders: no clear goals, no priorities, and the leader has stepped entirely away 'to empower them.' What is the actual failure?",
+        "options": [
+          "Self-organization itself — the model simply doesn't work for most teams",
+          "The team's skill mix — self-organization requires senior engineers only",
+          "Abdication — goals, context, and active support were withheld",
+          "Insufficient ceremonies — daily standups would supply the missing direction"
+        ],
+        "correct_answer": "Abdication — goals, context, and active support were withheld",
+        "explanation": "Self-organization governs the how; the what and why must still be supplied, along with coaching and impediment service. Stepping away entirely is abdication branded as empowerment. The model isn't disproven by its prerequisites being unmet, seniority isn't the gate, and ceremonies can't substitute for missing goals."
+      },
+      {
+        "question": "A project manager on an agile team assigns each developer their tasks daily 'to keep things efficient.' What does this practice cost?",
+        "options": [
+          "Nothing — task assignment is a core project management duty everywhere",
+          "Only some PM time that could be delegated to the Scrum Master instead",
+          "A minor ceremony violation carrying no practical delivery consequence",
+          "The team's self-organization — task ownership keeps commitment with the team"
+        ],
+        "correct_answer": "The team's self-organization — task ownership keeps commitment with the team",
+        "explanation": "Daily task assignment relocates the how from the team to the leader: engagement drops to compliance, local knowledge stops informing distribution, and people wait to be told. It isn't universal PM duty in adaptive settings, delegating the controlling behavior doesn't fix it, and the consequence is practical, not ceremonial."
+      }
+    ],
+    "related_question_ids": [
+      "q003",
+      "q069",
+      "q247"
+    ],
+    "source_refs": [
+      "S3",
+      "S9"
+    ]
+  },
+  {
+    "id": "c058",
+    "lesson_type": "concept",
+    "title": "Hybrid Integration in Practice",
+    "module": "Agile and Hybrid Delivery",
+    "production_group": "Agile Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Scope"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      },
+      {
+        "domain": "Business Environment",
+        "task": "Task 3: Manage and control changes"
+      }
+    ],
+    "approaches": [
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Assign the right delivery mode per component within one project.",
+      "Wire the seams: reporting translation, dual change regimes, cadence connection.",
+      "Manage the cultural integration between plan-driven and adaptive groups."
+    ],
+    "sections": [
+      {
+        "title": "Mode per Component",
+        "content": "Hybrid's practical core is assigning delivery mode by component characteristics within a single project: the compliance module with fixed regulatory requirements runs predictive (baselined, formally controlled); the user-experience layer with high uncertainty runs adaptive (backlog, sprints, feedback); the infrastructure build with long lead times runs predictive with phased milestones.\n\nThe assignment follows the same tailoring factors as whole projects — uncertainty, feedback availability, cost of change, compliance demands — applied at component grain. What never works: assigning mode by team preference and hoping the seams sort themselves out."
+      },
+      {
+        "title": "Wiring the Seams",
+        "content": "The seams are where hybrid succeeds or dies. **Reporting**: sprint burnups and milestone variance must translate into one leadership picture — define the translation once (e.g., sprint outputs mapped to milestone progress) rather than forcing either side to fake the other's metrics. **Change**: each piece of work belongs to exactly one regime — baselined components go through change control, backlog components through the product owner — and cross-boundary changes (an adaptive discovery that moves a predictive interface) trigger *both*: impact analysis where baselines move, reprioritization where backlogs do. **Cadence**: sprint reviews feed gate reviews; gate decisions feed backlog priorities; dependencies between a sprinting team and a milestone-driven team get explicit synchronization points, not vibes."
+      },
+      {
+        "title": "Cultural Integration",
+        "content": "Hybrid also merges working cultures: the predictive side reads the adaptive side as undisciplined ('no commitments!'), the adaptive side reads the predictive side as bureaucratic ('gates everywhere!') — both misreadings of different-but-real discipline. The integration work is mutual literacy (each side understanding what the other's controls protect), shared definitions where the modes meet ('done,' 'approved,' 'committed' mean the same thing at the interface), and leadership that visibly values both disciplines rather than declaring one culture the winner."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Component-mode questions apply tailoring factors at component level. Seam questions reward: one change regime per work item with cross-boundary changes triggering both processes; honest reporting translation; explicit sync points for cross-mode dependencies. Culture questions reward mutual literacy and shared interface definitions over forcing uniformity in either direction."
+      }
+    ],
+    "key_terms": [
+      "component-level tailoring",
+      "change regime",
+      "reporting translation",
+      "synchronization points",
+      "mutual literacy"
+    ],
+    "exam_traps": [
+      "Letting a work item answer to two change regimes — or to none — at the same time.",
+      "Forcing one side's metrics onto the other instead of defining an honest translation.",
+      "Treating the other mode's discipline as dysfunction instead of different protection."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Component-level tailoring",
+        "definition": "Assigning delivery mode per component by its uncertainty, feedback, change-cost, and compliance profile."
+      },
+      {
+        "term": "Cross-boundary change",
+        "definition": "An adaptive discovery that moves baselined work (or vice versa) — triggers both change processes."
+      },
+      {
+        "term": "Synchronization point",
+        "definition": "An explicit meeting of cadences where sprint outputs and milestone gates exchange decisions."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "In a hybrid project, an adaptive team's discovery requires changing an interface owned by the predictive workstream's baseline. What does the change require?",
+        "options": [
+          "Both processes: change control for the baseline, backlog reprioritization for the adaptive side",
+          "Only backlog reprioritization, since the discovery originated in the adaptive workstream",
+          "Only a courtesy notification sent to the predictive team after the implementation",
+          "Nothing formal at all — hybrid projects exist to eliminate change ceremony entirely"
+        ],
+        "correct_answer": "Both processes: change control for the baseline, backlog reprioritization for the adaptive side",
+        "explanation": "The change crosses the regime boundary: baselined work moves only through change control, and the adaptive side's plans reorder through its backlog. Origin doesn't exempt the baseline, after-the-fact notification bypasses control entirely, and hybrid combines disciplines rather than dissolving them."
+      },
+      {
+        "question": "Leadership complains they can't see one coherent status picture: half the project reports burnups, half reports milestone variance. What is the credited fix?",
+        "options": [
+          "Require the adaptive teams to convert entirely to milestone-variance reporting",
+          "Require the predictive teams to convert entirely to burnup-style reporting",
+          "Define a translation once — sprint outputs mapped into one integrated view",
+          "Send leadership both raw formats and let them integrate the picture mentally"
+        ],
+        "correct_answer": "Define a translation once — sprint outputs mapped into one integrated view",
+        "explanation": "Each mode's native metrics carry its real signal; forcing either side to fake the other's numbers degrades both. The integration work is a defined translation into one leadership picture. Dumping raw duality on leadership is the complaint, not the cure."
+      },
+      {
+        "question": "The predictive-side lead calls the agile teams 'undisciplined'; the agile lead calls the gates 'pointless bureaucracy.' What does hybrid integration actually require here?",
+        "options": [
+          "Declaring one culture the standard and converting the other side over to it",
+          "Keeping the two groups permanently separated so the friction cannot surface",
+          "Mutual literacy about what each side's controls protect, plus shared interface definitions",
+          "Escalating the culture clash to human resources as an interpersonal conflict"
+        ],
+        "correct_answer": "Mutual literacy about what each side's controls protect, plus shared interface definitions",
+        "explanation": "Both perceptions misread genuine discipline as dysfunction; the fix is understanding (backlogs and timeboxes are control; gates protect investment decisions) plus agreed interface meanings for 'done' and 'approved.' Forced conversion loses one mode's real protections, separation entrenches the stereotypes, and HR escalation treats a structural literacy gap as a personality problem."
+      }
+    ],
+    "related_question_ids": [
+      "q183",
+      "q326"
+    ],
+    "source_refs": [
+      "S4",
+      "S10",
+      "S9"
+    ]
   }
 ]
