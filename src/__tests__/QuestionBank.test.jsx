@@ -6,7 +6,10 @@ import questions from '../../data/questions.json'
 
 let consoleErrorSpy
 
-vi.setConfig({ testTimeout: 15000 })
+// Full-bank render tests scale with total option text; the 2026-07 length-bias
+// remediation lengthened average distractor text, pushing renders past the
+// previous 15s allowance.
+vi.setConfig({ testTimeout: 30000 })
 
 beforeEach(() => {
   consoleErrorSpy = vi.spyOn(console, 'error')
