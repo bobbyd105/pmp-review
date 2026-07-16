@@ -2747,5 +2747,1264 @@
       "S3",
       "S11"
     ]
+  },
+  {
+    "id": "c023",
+    "lesson_type": "concept",
+    "title": "Predictive Delivery",
+    "module": "Life Cycles and Tailoring",
+    "production_group": "Approaches Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Scope",
+      "Schedule"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "predictive"
+    ],
+    "learning_objectives": [
+      "Describe the predictive life cycle: plan comprehensively, baseline, execute, control variances.",
+      "Identify the conditions under which predictive delivery is the right choice.",
+      "Explain how change and progressive elaboration work inside a predictive approach."
+    ],
+    "sections": [
+      {
+        "title": "Plan, Baseline, Control",
+        "content": "**Predictive delivery** (often called waterfall or plan-driven) defines scope, schedule, and cost as fully as possible up front, freezes them into **baselines**, and then manages execution by controlling variances against those baselines. Change is possible — but it flows through formal change control, because every approved change moves the reference points everything else is measured against.\n\nThe payoff is predictability: when requirements genuinely hold still, a predictive project can commit to dates, budgets, and content with confidence and coordinate large supplier and stakeholder networks around those commitments."
+      },
+      {
+        "title": "When Predictive Fits",
+        "content": "Predictive suits work where requirements are stable and knowable up front, regulatory or contractual obligations demand fixed commitments, integration partners need long-range coordination, or the cost of late change is severe (construction, hardware, compliance-driven programs). A customer who cannot participate in frequent feedback loops also pushes toward predictive — adaptive approaches starve without regular customer input.\n\nChoosing predictive is a judgment about the *work and its context*, not about organizational tradition or comfort."
+      },
+      {
+        "title": "Predictive Doesn't Mean Rigid",
+        "content": "Even predictive projects elaborate progressively: **rolling wave planning** details near-term work precisely while leaving far-future work at higher level, refining it as it approaches. And predictive projects still iterate within phases — design reviews, prototype checks, phased rollouts. What distinguishes predictive is that scope is fixed by baseline and change is exceptional and controlled, not that learning is forbidden."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Predictive scenarios reward respect for the baseline discipline: impact analysis and change control for any scope/schedule/cost movement, variance analysis against baselines for status, and formal acceptance against documented criteria. Watch for scenarios where predictive is simply the wrong fit — highly uncertain requirements and available customers point adaptive instead."
+      }
+    ],
+    "key_terms": [
+      "predictive",
+      "baseline",
+      "change control",
+      "rolling wave planning",
+      "variance analysis"
+    ],
+    "exam_traps": [
+      "Treating predictive as 'no changes allowed' rather than 'changes go through control.'",
+      "Assuming every project should be predictive because the organization has always worked that way.",
+      "Planning distant, uncertain work at the same detail as near-term work instead of rolling wave."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Predictive delivery",
+        "definition": "Plan-driven approach: comprehensive up-front planning, baselines, and variance control."
+      },
+      {
+        "term": "Rolling wave planning",
+        "definition": "Detailed planning for near-term work; progressive elaboration of distant work as it approaches."
+      },
+      {
+        "term": "Baseline discipline",
+        "definition": "Measuring against approved references and moving them only through change control."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A project has stable, well-documented regulatory requirements and a customer unavailable for frequent feedback sessions. Which delivery approach do these conditions favor?",
+        "options": [
+          "Adaptive, since regulation makes fast iteration even more valuable",
+          "Whichever approach the delivery team has the most experience with",
+          "A coin flip — approach choice barely affects outcomes in practice",
+          "Predictive — stable requirements and scarce customer feedback fit plan-driven work"
+        ],
+        "correct_answer": "Predictive — stable requirements and scarce customer feedback fit plan-driven work",
+        "explanation": "Stable, knowable requirements remove the main reason to iterate, and adaptive approaches depend on frequent customer feedback that this customer can't provide. Team familiarity matters but doesn't override fit, and approach choice materially drives how change, planning, and feedback work."
+      },
+      {
+        "question": "In a predictive project, a stakeholder requests a scope addition mid-execution. What does the approach require?",
+        "options": [
+          "Impact analysis and formal change control before the baseline moves",
+          "Automatic rejection — predictive projects do not accept scope changes",
+          "Adding the work informally if the team has any spare capacity",
+          "Converting the project to hybrid so the change can enter a backlog"
+        ],
+        "correct_answer": "Impact analysis and formal change control before the baseline moves",
+        "explanation": "Predictive doesn't forbid change — it routes change through analysis and formal approval so the baselines stay meaningful. Auto-rejection is the rigidity myth, informal absorption silently corrupts the baseline, and switching approaches to dodge change control mistakes what both approaches are for."
+      },
+      {
+        "question": "A predictive project's plan details the next three months precisely but leaves month 7+ work at milestone level, to be elaborated later. What is this?",
+        "options": [
+          "A planning defect — predictive plans must be fully detailed end to end",
+          "Rolling wave planning — appropriate progressive elaboration within predictive",
+          "Evidence the project is actually adaptive and mislabeled as predictive",
+          "Scope creep entering the plan through the back door"
+        ],
+        "correct_answer": "Rolling wave planning — appropriate progressive elaboration within predictive",
+        "explanation": "Rolling wave is standard predictive practice: detail matches knowledge, and far-future work is elaborated as it approaches. Demanding uniform detail regardless of certainty wastes effort on plans that will change; progressive elaboration is not iteration-by-sprint, and no scope is being added."
+      }
+    ],
+    "related_question_ids": [
+      "q007",
+      "q019",
+      "q083"
+    ],
+    "source_refs": [
+      "S4",
+      "S8"
+    ]
+  },
+  {
+    "id": "c024",
+    "lesson_type": "concept",
+    "title": "Iterative and Incremental Delivery",
+    "module": "Life Cycles and Tailoring",
+    "production_group": "Approaches Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Schedule"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish iterative (refine the thing) from incremental (deliver usable pieces).",
+      "Explain what problem each strategy solves — uncertainty vs. delayed value.",
+      "Recognize how agile combines both."
+    ],
+    "sections": [
+      {
+        "title": "Two Different Ideas",
+        "content": "**Iterative** development builds a version, learns from it, and refines it in repeated passes — the whole product gets progressively *better and more correct*. It attacks **uncertainty**: when you don't yet know exactly what's right, iterations converge on it.\n\n**Incremental** development delivers the product in usable pieces — each increment adds working capability that could ship. It attacks **delayed value**: instead of everything arriving at the end, value lands early and accumulates.\n\nThey're independent dials: you can iterate without shipping increments (prototype refinement), ship increments without much iteration (well-understood work in slices), or do both."
+      },
+      {
+        "title": "Combined in Agile",
+        "content": "Agile approaches deliberately combine the two: each sprint refines understanding (iterative learning through feedback) *and* delivers a potentially shippable increment (incremental value). That combination is why agile handles uncertain, fast-moving product work well — the feedback loop and the value stream run simultaneously.\n\nA useful diagnostic: if a team runs 'iterations' but nothing usable exists until the very end, they have iterative ceremony without incremental delivery — and the value-delay problem remains unsolved."
+      },
+      {
+        "title": "Choosing the Dials",
+        "content": "High uncertainty about *what's right* argues for iteration and feedback. High cost of *waiting for value* argues for increments. Stable requirements with severe integration constraints may argue for neither — a predictive single delivery. The dials are tailoring decisions, made per project and even per deliverable, not identities to adopt."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Watch for the mismatch patterns: stakeholders expecting usable releases while the plan delivers everything at the end (an increment expectation unmet), or a team polishing internally for months without user feedback (iteration without its feedback fuel). The credited responses connect the strategy back to what it exists to solve."
+      }
+    ],
+    "key_terms": [
+      "iterative",
+      "incremental",
+      "increment",
+      "feedback loop",
+      "usable subset"
+    ],
+    "exam_traps": [
+      "Using 'iterative' and 'incremental' as synonyms — they solve different problems.",
+      "Running iterations that never produce anything usable — ceremony without incremental value.",
+      "Assuming increments require agile — phased predictive rollouts deliver incrementally too."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Iterative development",
+        "definition": "Repeated refinement passes that converge on the right product — attacks uncertainty."
+      },
+      {
+        "term": "Incremental development",
+        "definition": "Delivery in usable pieces so value lands early and accumulates — attacks delayed value."
+      },
+      {
+        "term": "Increment",
+        "definition": "A usable, potentially shippable addition of working capability."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A team repeatedly refines a recommendation engine's algorithm against test data, releasing nothing until the final version. Which strategy are they using, and what problem does it address?",
+        "options": [
+          "Iterative — converging on the right solution under uncertainty",
+          "Incremental — delivering usable value in accumulating pieces",
+          "Predictive — controlling variances against an approved baseline",
+          "Hybrid — mixing plan-driven governance with adaptive delivery"
+        ],
+        "correct_answer": "Iterative — converging on the right solution under uncertainty",
+        "explanation": "Repeated refinement of the same artifact toward correctness is iteration, aimed at uncertainty about what's right. Nothing usable is shipping along the way, so it isn't incremental; no baseline-variance discipline or governance mix is described."
+      },
+      {
+        "question": "An executive sponsor expects usable quarterly releases, but the current plan delivers the entire system in one final release. What is the actual gap?",
+        "options": [
+          "A schedule compression gap — the team simply needs to crash the critical path harder",
+          "A quality gap — a single big-bang release will inevitably contain far more defects",
+          "An incremental-delivery gap — all value arrives at the end while the sponsor expects it to accumulate",
+          "No gap at all — a single final delivery remains the professional standard everywhere"
+        ],
+        "correct_answer": "An incremental-delivery gap — all value arrives at the end while the sponsor expects it to accumulate",
+        "explanation": "The sponsor's expectation is about when usable value lands — an incremental delivery question, not speed or defect rates. Crashing changes the date of the single release, not its all-at-the-end shape, and 'single delivery is standard' simply isn't true as a universal rule."
+      },
+      {
+        "question": "Why do agile approaches combine iterative and incremental strategies rather than picking one?",
+        "options": [
+          "Because certifications require both strategies to be present in any agile framework",
+          "Because iteration alone is far too slow to satisfy modern quarterly release schedules",
+          "Because delivering increments eliminates the need for direct customer feedback entirely",
+          "Because the feedback loop and the value stream solve two problems uncertain work has at once"
+        ],
+        "correct_answer": "Because the feedback loop and the value stream solve two problems uncertain work has at once",
+        "explanation": "Uncertain product work suffers both from not knowing what's right (solved by iterative feedback) and from value arriving late (solved by increments) — agile runs both solutions at once. Certification requirements don't drive the design, speed isn't iteration's failing, and increments increase rather than replace the need for feedback."
+      }
+    ],
+    "related_question_ids": [
+      "q026",
+      "q059"
+    ],
+    "source_refs": [
+      "S4",
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c025",
+    "lesson_type": "concept",
+    "title": "Adaptive Delivery",
+    "module": "Life Cycles and Tailoring",
+    "production_group": "Approaches Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 2: Develop and manage project scope"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      }
+    ],
+    "approaches": [
+      "adaptive"
+    ],
+    "learning_objectives": [
+      "Describe how adaptive delivery fixes time and cost while flexing scope.",
+      "Explain backlog-mediated change: welcomed between iterations, protected within them.",
+      "Identify the conditions adaptive delivery requires to function."
+    ],
+    "sections": [
+      {
+        "title": "Flip the Constraint Triangle",
+        "content": "**Adaptive (agile) delivery** inverts the predictive constraint logic. Predictive fixes scope and estimates time and cost; adaptive fixes time (timeboxed iterations) and cost (stable team) and lets **scope flex** — the backlog is reprioritized continuously so the most valuable remaining work is always next.\n\nChange is not an exception to control but the expected input: new information arrives, the backlog reorders, and the next iteration picks up whatever now matters most."
+      },
+      {
+        "title": "The Backlog Is the Change Control",
+        "content": "Adaptive change discipline lives in the **product backlog**: anyone can propose items, the product owner orders them by value, and the team pulls from the top each iteration. The protected zone is the **current iteration** — mid-sprint scope injection disrupts the commitment the timebox exists to protect. The credited pattern for a mid-iteration request: into the backlog, prioritized for the next planning boundary, unless it's a genuine emergency the product owner explicitly trades in.\n\nThis is why 'welcoming change' and 'protecting the sprint' aren't contradictory — they operate at different boundaries."
+      },
+      {
+        "title": "What Adaptive Requires",
+        "content": "Adaptive delivery has real prerequisites: an engaged customer or product owner who provides frequent feedback and priority calls; work that can be sliced into increments; a team stable and empowered enough to self-organize; and stakeholders who accept evolving scope in exchange for fixed cadence. Remove those — an absent customer, unshippable monolithic work, command-and-control oversight — and adaptive mechanics stall."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Adaptive scenarios test boundary discipline: requests during a sprint go to the backlog (not absorbed, not refused); the product owner (not the PM, sponsor, or loudest stakeholder) orders value; and velocity or scope adjustments respond to evidence at planning boundaries. The recurring distractors are freezing the backlog, working weekends to absorb injections, and bypassing the product owner."
+      }
+    ],
+    "key_terms": [
+      "adaptive delivery",
+      "backlog",
+      "timebox",
+      "product owner",
+      "sprint commitment",
+      "reprioritization"
+    ],
+    "exam_traps": [
+      "Absorbing mid-sprint scope injections instead of routing them through the backlog.",
+      "Letting anyone but the product owner decide backlog order.",
+      "Confusing 'welcoming change' with 'no change discipline' — the discipline is the backlog and the timebox."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Adaptive delivery",
+        "definition": "Fixed time and cost, flexible scope, with continuous backlog reprioritization."
+      },
+      {
+        "term": "Product backlog",
+        "definition": "The single, value-ordered list of remaining work — adaptive delivery's change-control mechanism."
+      },
+      {
+        "term": "Timebox",
+        "definition": "A fixed-length iteration whose commitment is protected from mid-cycle scope injection."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A stakeholder emails a 'small' enhancement request while the team is mid-iteration. What is the adaptive-credited handling?",
+        "options": [
+          "Refuse the request — the scope was fixed when the project was approved",
+          "Add it to the backlog for the product owner to prioritize at the next boundary",
+          "Squeeze it into the current sprint, since small requests don't disrupt much",
+          "Escalate the stakeholder's behavior to the sponsor for bypassing process"
+        ],
+        "correct_answer": "Add it to the backlog for the product owner to prioritize at the next boundary",
+        "explanation": "Adaptive welcomes change through the backlog while protecting the current timebox's commitment. Refusal contradicts the approach's premise, mid-sprint absorption erodes the commitment ('small' requests compound), and escalation punishes a normal, expected input."
+      },
+      {
+        "question": "In adaptive delivery, which two constraints are typically held fixed, and which flexes?",
+        "options": [
+          "Time and cost fixed; scope flexes through backlog reprioritization",
+          "Scope and quality fixed; time flexes as needed to finish everything",
+          "Cost and scope fixed; time flexes with each replanning cycle",
+          "Nothing is fixed — adaptive means all constraints stay open"
+        ],
+        "correct_answer": "Time and cost fixed; scope flexes through backlog reprioritization",
+        "explanation": "Timeboxed iterations fix cadence and a stable team fixes cost; scope is the adjustable dimension, always reordered so the most valuable remaining work goes next. The reversed patterns describe predictive-style logic, and 'nothing fixed' is chaos, not adaptive."
+      },
+      {
+        "question": "A company wants adaptive delivery, but the customer can only meet twice a year and the deliverable can't ship in pieces. What's the honest assessment?",
+        "options": [
+          "Perfect conditions — adaptive thrives regardless of feedback frequency",
+          "Adaptive works if the team simply simulates customer feedback internally",
+          "Key adaptive prerequisites are missing — frequent feedback and sliceable work",
+          "The approach question should be deferred until execution begins"
+        ],
+        "correct_answer": "Key adaptive prerequisites are missing — frequent feedback and sliceable work",
+        "explanation": "Adaptive mechanics run on frequent customer input and incremental delivery; without either, iterations lose their feedback fuel and increments have nowhere to land. Simulated feedback is guessing with ceremony, and deferring the approach decision just discovers the mismatch later at higher cost."
+      }
+    ],
+    "related_question_ids": [
+      "q005",
+      "q008",
+      "q009",
+      "q185"
+    ],
+    "source_refs": [
+      "S4",
+      "S9",
+      "S10"
+    ]
+  },
+  {
+    "id": "c026",
+    "lesson_type": "concept",
+    "title": "Hybrid Delivery",
+    "module": "Life Cycles and Tailoring",
+    "production_group": "Approaches Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Scope"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Describe common hybrid patterns and why organizations use them.",
+      "Explain the integration work hybrid requires — reporting, change, and cadence reconciliation.",
+      "Avoid the 'worst of both' failure mode."
+    ],
+    "sections": [
+      {
+        "title": "What Hybrid Actually Is",
+        "content": "**Hybrid delivery** deliberately combines predictive and adaptive elements where each fits best. Common patterns: predictive governance (fixed budget approvals, phase gates, milestone reporting) wrapped around adaptive product development; predictive delivery for well-understood components (infrastructure, compliance) alongside adaptive delivery for uncertain ones (user experience, novel features); or adaptive construction of deliverables inside a phase-gated program.\n\nThe key word is *deliberate*: hybrid is a designed combination, not whatever happens when a team does sprints without telling governance."
+      },
+      {
+        "title": "The Integration Tax",
+        "content": "Hybrid's cost is reconciliation work. Reporting must translate between burnups and milestone variance so leadership sees one coherent picture. Change must be routed correctly — backlog reprioritization for the adaptive parts, formal change control where baselines exist — with clarity about which regime governs which work. Cadences must connect: sprint outputs feeding gate reviews, gate decisions feeding backlog priorities.\n\nWhen the actual approach drifts from the documented one (a team quietly going iterative inside a predictive plan), the credited move is updating the integrated plan to reflect and connect the reality — not forcing a retreat, and not leaving it undocumented."
+      },
+      {
+        "title": "The 'Worst of Both' Trap",
+        "content": "Badly designed hybrid keeps predictive's rigidity where flexibility was the point (fixed full scope 'delivered in sprints') and adaptive's looseness where discipline was the point (no baselines *and* no backlog discipline). Diagnostic questions: does each part of the work have exactly one change regime? Does anyone get sprint flexibility while also holding a fixed-scope commitment? Contradictions there mean redesign."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Hybrid scenarios reward explicit integration: updating the plan when the delivery mix changes, defining how the two change regimes divide the work, and translating status honestly across both worlds. Distractors force uniformity (all predictive or all agile 'for consistency') or let the two halves run disconnected."
+      }
+    ],
+    "key_terms": [
+      "hybrid delivery",
+      "governance wrapper",
+      "change regime",
+      "cadence reconciliation",
+      "integration"
+    ],
+    "exam_traps": [
+      "Promising fixed full scope 'delivered in sprints' — a fixed-scope commitment with agile ceremony is not hybrid, it's contradiction.",
+      "Running informal sprints inside a documented predictive plan without ever updating the plan.",
+      "Forcing one uniform approach onto all work 'for consistency' when the components genuinely differ."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Hybrid delivery",
+        "definition": "A deliberate combination of predictive and adaptive elements, each applied where it fits."
+      },
+      {
+        "term": "Change regime",
+        "definition": "The rule set governing change for a piece of work — formal control for baselined work, backlog for adaptive work."
+      },
+      {
+        "term": "Governance wrapper",
+        "definition": "Predictive oversight (gates, budgets, milestones) around adaptive delivery inside."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A program keeps phase gates and fixed annual budgets, while its product teams work in two-week sprints feeding those gates. What is this arrangement?",
+        "options": [
+          "A process violation — gates and sprints cannot legitimately coexist",
+          "Pure adaptive delivery, since sprints are present in the delivery layer",
+          "Pure predictive delivery, since gates dominate everything beneath them",
+          "A common hybrid pattern — predictive governance around adaptive delivery"
+        ],
+        "correct_answer": "A common hybrid pattern — predictive governance around adaptive delivery",
+        "explanation": "Predictive governance wrapping adaptive execution is the most common deliberate hybrid: leadership keeps funding and gate discipline while teams keep iterative flexibility. Neither element cancels the other, and the combination is a designed pattern, not a violation."
+      },
+      {
+        "question": "Midway through a documented-predictive project, the team has informally adopted sprints for part of the work, and it's going well. What should the project manager do?",
+        "options": [
+          "Instruct the team to return to the documented predictive approach immediately",
+          "Update the integrated plan to reflect the hybrid reality and define how the parts connect",
+          "Let the informal arrangement continue, since results are currently good",
+          "Split into two unrelated plans, one predictive and one adaptive"
+        ],
+        "correct_answer": "Update the integrated plan to reflect the hybrid reality and define how the parts connect",
+        "explanation": "The plan must describe reality and integrate it — how sprint work reports into governance and which change regime covers what. Forcing a retreat discards an approach that fits the work, leaving it informal keeps governance blind, and two disconnected plans abandon integration entirely."
+      },
+      {
+        "question": "A sponsor demands the complete, fixed scope list AND two-week sprint flexibility on the same work. Why is this the 'worst of both' trap?",
+        "options": [
+          "Because sprint ceremonies take too much valuable time away from the fixed-scope work",
+          "Because sponsors are not permitted to attend sprint reviews under governance rules",
+          "Because freezing full scope removes the flexing dimension sprints exist for — both costs, neither benefit",
+          "Because two-week sprints are simply too short for genuine enterprise-scale work"
+        ],
+        "correct_answer": "Because freezing full scope removes the flexing dimension sprints exist for — both costs, neither benefit",
+        "explanation": "Sprints derive their value from reprioritizing scope by evidence; freeze the scope completely and you pay agile's ceremony cost plus predictive's rigidity with neither's payoff. Ceremony time, sponsor attendance, and sprint length are all beside the structural contradiction."
+      }
+    ],
+    "related_question_ids": [
+      "q003",
+      "q183"
+    ],
+    "source_refs": [
+      "S4",
+      "S10"
+    ]
+  },
+  {
+    "id": "c027",
+    "lesson_type": "concept",
+    "title": "Tailoring the Approach",
+    "module": "Life Cycles and Tailoring",
+    "production_group": "Approaches Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Initiating",
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 1: Develop an integrated project management plan and plan delivery"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Name the factors that drive approach selection.",
+      "Explain tailoring as an ongoing obligation, not a one-time kickoff choice.",
+      "Apply tailoring to processes and ceremonies, not just the delivery approach."
+    ],
+    "sections": [
+      {
+        "title": "Selection Factors",
+        "content": "**Tailoring** means fitting the approach to the project rather than the project to a favorite approach. The driving factors: **requirements uncertainty** (stable → predictive; volatile → adaptive), **feedback availability** (engaged customer → adaptive works; absent → predictive), **cost and reversibility of change** (expensive late change → plan more up front), **compliance and contractual demands** (fixed commitments → predictive elements), **deliverable sliceability** (shippable pieces → incremental), and **team and organizational readiness**.\n\nNo single factor decides alone; tailoring weighs the profile."
+      },
+      {
+        "title": "Tailoring Never Ends",
+        "content": "Conditions change mid-project: requirements stabilize or destabilize, customers engage or vanish, organizations issue new mandates. Tailoring is therefore a standing obligation — reassess when conditions shift, and reflect real changes in the integrated plan. An organizational mandate (say, mandatory quarterly customer feedback loops regardless of approach) isn't a threat to the plan; it's a tailoring input the plan must incorporate.\n\nEvery process and ceremony is also tailorable in weight: a two-person internal tool needs lighter risk ceremony than a regulated medical device. The PMBOK 8 processes are explicitly options to tailor, not obligations."
+      },
+      {
+        "title": "Tailoring Is Not License",
+        "content": "Tailoring has discipline: decisions are deliberate, documented, and justified by project characteristics — not by convenience ('we skip retrospectives because they're annoying') or by silent erosion (steps that just stop happening). If a control is dropped, something must consciously cover the risk it managed, or the risk is consciously accepted and recorded."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Tailoring questions reward matching approach to described conditions (never to team preference or fashion), reassessing when conditions change, and incorporating organizational mandates into the plan. Distractors apply a uniform methodology everywhere, defend the original choice after its premises died, or drop controls informally in the name of 'being agile.'"
+      }
+    ],
+    "key_terms": [
+      "tailoring",
+      "requirements uncertainty",
+      "feedback availability",
+      "cost of change",
+      "compliance demands",
+      "readiness"
+    ],
+    "exam_traps": [
+      "Selecting the approach by organizational habit or team preference instead of project characteristics.",
+      "Treating the kickoff approach decision as permanent when its premises have changed.",
+      "Dropping processes informally and calling it tailoring — real tailoring is deliberate and documented."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Tailoring",
+        "definition": "Deliberately fitting approach, processes, and ceremony weight to the project's actual characteristics."
+      },
+      {
+        "term": "Selection factors",
+        "definition": "Uncertainty, feedback availability, cost of change, compliance, sliceability, readiness."
+      },
+      {
+        "term": "Ongoing tailoring",
+        "definition": "Reassessing the approach as conditions change, reflecting real shifts in the plan."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Which factor profile most strongly argues for adding ADAPTIVE elements to a project's approach?",
+        "options": [
+          "Volatile requirements, an engaged customer, and work that slices into shippable pieces",
+          "Stable requirements, a fixed-price contract, and severely expensive late-stage changes",
+          "A delivery team that enjoyed running sprints on a previous project and wants more",
+          "A regulator requiring certified documentation delivered at fixed program milestones"
+        ],
+        "correct_answer": "Volatile requirements, an engaged customer, and work that slices into shippable pieces",
+        "explanation": "Those three conditions are exactly what adaptive mechanics need: uncertainty to justify iteration, feedback to fuel it, and sliceable work to ship increments. Stability, fixed commitments, and milestone certification argue predictive, and team enjoyment is preference, not a project characteristic."
+      },
+      {
+        "question": "The organization mandates quarterly customer feedback loops for all projects, including this predictive one. What does good tailoring do?",
+        "options": [
+          "Push back on the mandate as incompatible with the chosen predictive approach",
+          "Adopt the feedback loops informally without touching the documented plan at all",
+          "Ignore the mandate entirely, since it postdates the project's original approval",
+          "Incorporate the loops into the integrated plan, adjusting schedule and process"
+        ],
+        "correct_answer": "Incorporate the loops into the integrated plan, adjusting schedule and process",
+        "explanation": "Organizational mandates are tailoring inputs — the plan absorbs them explicitly, with schedule and process adjusted. Predictive projects can and do include feedback loops; informal adoption leaves the documented plan false, and 'it postdates approval' doesn't exempt an active project from current policy."
+      },
+      {
+        "question": "A team stops doing risk reviews 'as a tailoring decision' — no analysis, no documentation, no compensating control. Why does this fail as tailoring?",
+        "options": [
+          "Because risk reviews are the one project process that can never be tailored away",
+          "Because only the sponsor holds the authority to make tailoring decisions of any kind",
+          "Because tailoring documents the decision plus a compensating control or accepted risk",
+          "Because tailoring applies only to the delivery approach itself, never to processes"
+        ],
+        "correct_answer": "Because tailoring documents the decision plus a compensating control or accepted risk",
+        "explanation": "Tailoring is deliberate: dropped controls leave a documented trail showing what now covers the risk or that it's consciously accepted. Silent erosion is just process abandonment wearing tailoring's name. No process is untouchable in principle, tailoring authority isn't sponsor-exclusive, and processes are precisely what tailoring adjusts."
+      }
+    ],
+    "related_question_ids": [
+      "q019",
+      "q326"
+    ],
+    "source_refs": [
+      "S4",
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c028",
+    "lesson_type": "concept",
+    "title": "Phases, Deliverables, and Acceptance",
+    "module": "Life Cycles and Tailoring",
+    "production_group": "Approaches Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Governance"
+    ],
+    "focus_areas": [
+      "Executing",
+      "Closing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 10: Manage project closure"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 2: Develop and manage project scope"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Trace a deliverable's path from produced to verified to accepted.",
+      "Distinguish internal verification (control quality) from external validation (formal acceptance).",
+      "Explain acceptance criteria and definition of done as the agreed finish lines."
+    ],
+    "sections": [
+      {
+        "title": "The Deliverable Pipeline",
+        "content": "A **deliverable** is any unique, verifiable product, result, or capability the project must produce. Deliverables move through a pipeline: *produced* by the work, *verified* internally against specifications (control quality — an inside check), then *validated and formally accepted* by the customer or sponsor (validate scope — an outside check). Only accepted deliverables count toward completing scope.\n\nSkipping the distinction causes the classic failure: 'QA signed off, so we're done' — when formal acceptance by the customer never happened."
+      },
+      {
+        "title": "Acceptance Criteria and Done",
+        "content": "**Acceptance criteria** define, in advance and in writing, what the accepting party will check. Their power is timing: agreed *before* the work, they prevent the moving-goalpost dispute at delivery. In adaptive work the **definition of done** plays the same role at increment level — a shared, explicit standard for 'complete.'\n\nWhen a stakeholder rejects a deliverable that meets documented criteria, the credited first step is clarifying the disconnect — a genuine criteria gap, a misunderstanding, or new expectations — before either reworking or standing on the paperwork."
+      },
+      {
+        "title": "Phase Ends and Interim Acceptance",
+        "content": "Phases end with deliverables and decisions: a **phase gate** reviews evidence and decides continue/modify/stop. Interim deliverables can be formally accepted at phase boundaries rather than everything at the end — reducing acceptance risk and creating clean audit points. In multi-vendor and hybrid contexts, whose acceptance counts and when must be explicit, or each party's different 'done' surfaces as a dispute at the milestone."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Signals to recognize: internal sign-off treated as project completion (missing formal acceptance), deliverables 'complete' with no criteria to check them against (missing definition of done), and acceptance disputes at delivery time (criteria that were never mutually explicit). The credited options make acceptance explicit, external, and agreed early."
+      }
+    ],
+    "key_terms": [
+      "deliverable",
+      "acceptance criteria",
+      "definition of done",
+      "validate scope",
+      "control quality",
+      "phase gate"
+    ],
+    "exam_traps": [
+      "Treating internal QA sign-off as equivalent to formal customer acceptance.",
+      "Leaving 'done' undefined between parties until the milestone forces the dispute.",
+      "Closing a project with deliverables delivered but never formally accepted."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Acceptance criteria",
+        "definition": "Pre-agreed, written conditions the accepting party will check — set before the work, not at delivery."
+      },
+      {
+        "term": "Validate scope",
+        "definition": "Obtaining formal external acceptance of deliverables — distinct from internal quality control."
+      },
+      {
+        "term": "Definition of done",
+        "definition": "The shared explicit standard for 'complete' applied to every increment in adaptive work."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Internal QA confirms a deliverable meets all technical specifications, and the team marks scope validation complete. What is missing?",
+        "options": [
+          "A second, independent internal QA pass to confirm the first one",
+          "Formal acceptance from the customer or sponsor — validation is an external act",
+          "Nothing — technical verification is precisely what validation means",
+          "A retrospective on the QA process before the milestone closes"
+        ],
+        "correct_answer": "Formal acceptance from the customer or sponsor — validation is an external act",
+        "explanation": "Control quality is the internal check; validate scope is the customer's formal acceptance — different actors, different questions. Doubling the internal check adds nothing external, and a retrospective, however useful, is not acceptance."
+      },
+      {
+        "question": "A vendor treats 'code complete' as done; the internal team means 'tested and deployed.' The mismatch surfaces at the milestone as mutual blame. What should have existed?",
+        "options": [
+          "A penalty clause making the vendor's definition legally irrelevant",
+          "Longer status meetings where the difference might have emerged",
+          "A jointly documented definition of done agreed before the work began",
+          "An escrow arrangement holding payment until both sides settled"
+        ],
+        "correct_answer": "A jointly documented definition of done agreed before the work began",
+        "explanation": "Divergent unstated definitions of 'done' are an alignment failure whose fix is explicit, early, mutual documentation. Penalties and escrow punish the symptom without creating shared understanding, and hoping the gap surfaces in meetings is chance, not design."
+      },
+      {
+        "question": "A customer rejects a deliverable that demonstrably meets every documented acceptance criterion. What is the credited FIRST step?",
+        "options": [
+          "Begin rework immediately based on whatever the customer has described verbally",
+          "Close validation over the objection, since the documented criteria are all met",
+          "Escalate the customer's conduct to the sponsor as an emerging relationship risk",
+          "Clarify the disconnect first — criteria gap, misunderstanding, or new expectation"
+        ],
+        "correct_answer": "Clarify the disconnect first — criteria gap, misunderstanding, or new expectation",
+        "explanation": "Meeting the letter of criteria while missing the customer's need means something diverged — and identifying what (gap, misreading, or genuinely new scope) determines the right response. Immediate rework invites uncontrolled scope, closing over the objection wins the argument and loses the customer, and escalation outsources a conversation the PM should have first."
+      }
+    ],
+    "related_question_ids": [
+      "q041",
+      "q084",
+      "q165",
+      "q192"
+    ],
+    "source_refs": [
+      "S4",
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c029",
+    "lesson_type": "concept",
+    "title": "Project Execution and Knowledge Management",
+    "module": "Governance and Integration",
+    "production_group": "Governance Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Resources"
+    ],
+    "focus_areas": [
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 7: Help ensure knowledge transfer"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish explicit from tacit knowledge and match transfer methods to each.",
+      "Recognize single-point-of-knowledge risk and address it before departure forces the issue.",
+      "Explain lessons learned as a continuous practice feeding organizational assets."
+    ],
+    "sections": [
+      {
+        "title": "Explicit and Tacit Knowledge",
+        "content": "**Explicit knowledge** can be written down — procedures, configurations, decisions, designs. **Tacit knowledge** lives in experience — judgment, context, the reasons behind choices, the tricks that never made it into any document. Documentation transfers explicit knowledge; tacit knowledge moves through structured conversation: pairing, mentoring, shadowing, walkthroughs, and Q&A against real scenarios.\n\nThe classic failure is treating a document handoff as complete knowledge transfer — the receiving team gets the *what* and loses the *why*."
+      },
+      {
+        "title": "Single Points of Knowledge",
+        "content": "When exactly one person can configure the tool, run the integration, or explain the legacy process, the project carries a **single point of knowledge failure** — a risk whether or not that person plans to leave, because availability can change without notice. The credited posture is proactive: cross-train a second person, capture key guidance while the expert is present and engaged, and treat a known departure date as a countdown for *structured* transfer sessions with a topic plan — not open-ended chats that cover whatever comes up.\n\nInformal promises ('I'll answer questions after I leave') are fragile; real arrangements have defined scope and time."
+      },
+      {
+        "title": "Lessons Learned as a Living Practice",
+        "content": "Lessons learned are captured throughout the project, not just at the end — and they only create value when they change something: fed into the organization's **lessons learned repository** (an OPA), applied to the next phase's plans, or shared across teams facing the same problems. Capture works best while the people and context are still available; a team dispersing tomorrow makes today the deadline.\n\nA genuinely effective process one team invents is organizational knowledge too — sharing it beyond the team multiplies its value."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Knowledge scenarios reward structure and timing: structured sessions before departure beats documentation alone, beats informal promises, beats reverse-engineering after the fact. Watch for the onboarding variant — thousands of chat messages technically 'contain' the context, but extraction into organized form is what makes knowledge usable."
+      }
+    ],
+    "key_terms": [
+      "explicit knowledge",
+      "tacit knowledge",
+      "knowledge transfer",
+      "lessons learned",
+      "single point of knowledge",
+      "cross-training"
+    ],
+    "exam_traps": [
+      "Treating a documentation dump as complete knowledge transfer while the tacit judgment walks out the door.",
+      "Waiting for a departure announcement before addressing an obvious single-point-of-knowledge risk.",
+      "Capturing lessons learned only at closure, after the people who hold them have dispersed."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Tacit knowledge",
+        "definition": "Experience-based judgment and context that transfers through conversation and mentoring, not documents."
+      },
+      {
+        "term": "Lessons learned repository",
+        "definition": "The organizational asset (an OPA) where project lessons accumulate for future teams."
+      },
+      {
+        "term": "Single point of knowledge",
+        "definition": "Critical knowledge held by exactly one person — a standing availability risk."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A departing expert's replacement received complete, well-written documentation, yet struggles with every non-routine situation. What did the handoff miss?",
+        "options": [
+          "Tacit knowledge — the judgment and context that only structured conversation transfers",
+          "Formatting — the documentation likely needed more diagrams and indexes",
+          "Nothing — struggle during transition is normal and resolves on its own",
+          "Authorization — the replacement may lack system permissions the expert had"
+        ],
+        "correct_answer": "Tacit knowledge — the judgment and context that only structured conversation transfers",
+        "explanation": "Documents carry explicit knowledge; the judgment for non-routine situations is tacit and needs pairing, shadowing, or scenario walkthroughs to move. Formatting polish doesn't add missing experience, hoping struggle self-resolves wastes the transition window, and nothing suggests a permissions problem."
+      },
+      {
+        "question": "The only person who can configure a critical tool isn't leaving and has no plans to. Why act anyway?",
+        "options": [
+          "No action is needed — knowledge risk only exists when a departure is announced",
+          "Because the configuration should be outsourced to remove the dependency",
+          "Because certification bodies require at least two named administrators",
+          "Availability can change without notice — cross-training now is cheap insurance"
+        ],
+        "correct_answer": "Availability can change without notice — cross-training now is cheap insurance",
+        "explanation": "Illness, reassignment, or sudden departure can remove the expert at any time; a single point of knowledge is a standing risk, not a departure-triggered one. Proactive cross-training is far cheaper than a rushed transfer under pressure. Outsourcing swaps one dependency for another, and no certification rule drives this."
+      },
+      {
+        "question": "A project ends tomorrow and the team disperses to new assignments; no lessons learned session has happened. What is the credited move?",
+        "options": [
+          "Skip the session — a successful project has few lessons worth capturing",
+          "Prioritize the session now, before the knowledge disperses with the team",
+          "Have the project manager write the lessons alone from memory later",
+          "Defer the session until the team reassembles at some future point"
+        ],
+        "correct_answer": "Prioritize the session now, before the knowledge disperses with the team",
+        "explanation": "The capture window closes when the team disperses — afterwards, recollection fades and calendars never align. Success doesn't reduce the value of lessons, a solo memory exercise loses every perspective but one, and 'when the team reassembles' is a polite word for never."
+      }
+    ],
+    "related_question_ids": [
+      "q066",
+      "q073",
+      "q199",
+      "q225",
+      "q251",
+      "q320",
+      "q365"
+    ],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c030",
+    "lesson_type": "concept",
+    "title": "Monitoring Performance and Managing Change",
+    "module": "Governance and Integration",
+    "production_group": "Governance Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 9: Evaluate project status"
+      },
+      {
+        "domain": "Business Environment",
+        "task": "Task 3: Manage and control changes"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Run the integrated change control loop: request, impact analysis, decision, baseline update, communication.",
+      "Use variance thresholds to scale responses to deviations.",
+      "Spot the change-control failure patterns: bypass, cumulative drift, and incomplete implementation."
+    ],
+    "sections": [
+      {
+        "title": "The Change Control Loop",
+        "content": "Integrated change control is a loop with no skippable steps: a **change request** is documented; its **impact** is analyzed across scope, schedule, cost, quality, and risk; the right **authority** (project manager within delegated limits, change control board above them) decides; approved changes update the **baselines and plans**; and the outcome is **communicated** to everyone affected — including the stakeholder who asked.\n\nEach step exists because of a specific failure: undocumented requests get forgotten or disputed; unanalyzed changes surprise; wrong-level decisions undermine governance; un-updated baselines corrupt every later variance; and uncommunicated outcomes let stale expectations persist."
+      },
+      {
+        "title": "Thresholds Scale the Response",
+        "content": "Not every deviation deserves the same machinery. **Variance thresholds**, agreed in advance, define which deviations are noise to monitor and which trigger action or escalation. Applying full escalation to trivial variances buries real signals; ignoring threshold breaches defeats the point of measuring. The same logic tiers change control itself — lightweight paths for low-risk changes, rigorous review for high-risk ones — and the tiers only work if changes are routed honestly by their real risk."
+      },
+      {
+        "title": "Failure Patterns",
+        "content": "Three patterns dominate exam scenarios. **Bypass**: changes implemented informally — 'small tweaks,' emergency paths used for convenience, verbal approvals — eroding the baseline's meaning. **Cumulative drift**: individually approved small changes whose combined effect nobody assessed; thresholds keyed to single changes miss the aggregate. **Incomplete implementation**: a change approved but its baseline updates, documentation, or timing quietly diverging — approved-but-unreflected changes make future measurement fiction.\n\nThe credited response to each: restore the loop, assess the aggregate, and close the paperwork the loop requires."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "When new information invalidates an approved change's analysis (a ripple effect, an infeasibility), the credited move returns to the approving authority with updated facts — neither proceeding as approved nor improvising a substitute. And remember who owns what: the PM analyzes and recommends; approval belongs to the level governance assigns."
+      }
+    ],
+    "key_terms": [
+      "change request",
+      "impact analysis",
+      "change control board",
+      "variance threshold",
+      "baseline update",
+      "cumulative impact"
+    ],
+    "exam_traps": [
+      "Implementing 'small' changes informally — size doesn't exempt a change from the loop.",
+      "Assessing changes only individually while their cumulative drift goes unmeasured.",
+      "Treating an approved change as done without updating baselines and informing the affected."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Integrated change control",
+        "definition": "Request → impact analysis → authorized decision → baseline update → communication; no skippable steps."
+      },
+      {
+        "term": "Variance threshold",
+        "definition": "Pre-agreed deviation limits separating monitoring noise from action and escalation triggers."
+      },
+      {
+        "term": "Cumulative impact",
+        "definition": "The combined effect of many individually small approved changes — needs periodic aggregate review."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A change was properly approved and implemented, but the schedule and cost baselines were never updated to reflect it. What is the consequence?",
+        "options": [
+          "None — approval is the governance step that matters; baselines are bookkeeping",
+          "The change becomes invalid and must therefore be reversed immediately",
+          "The change must be re-submitted and re-approved by the board a second time",
+          "Future variances get measured against references that no longer reflect the plan"
+        ],
+        "correct_answer": "Future variances get measured against references that no longer reflect the plan",
+        "explanation": "Baselines are the measuring stick; leave them stale after an approved change and all subsequent variance analysis compares actuals to a fiction. The fix is completing the loop — updating the baselines — not reversing or re-approving a legitimately approved change."
+      },
+      {
+        "question": "A minor schedule variance well inside the agreed threshold is triggering the same escalation as major variances. What should change?",
+        "options": [
+          "Apply the agreed thresholds so escalation matches the deviation's significance",
+          "Nothing — treating all variances identically ensures consistent governance",
+          "Stop tracking minor variances entirely to reduce reporting noise",
+          "Remove thresholds and escalate everything, since caution is costless"
+        ],
+        "correct_answer": "Apply the agreed thresholds so escalation matches the deviation's significance",
+        "explanation": "Thresholds exist precisely to scale response to significance — escalating noise buries real signals and wastes attention. Uniform escalation isn't consistency, it's the absence of judgment; and minor variances still get monitored, just not escalated."
+      },
+      {
+        "question": "During implementation, an approved change turns out to have an unanticipated ripple effect on another system, missed by the original impact analysis. What is the credited path?",
+        "options": [
+          "Proceed exactly as approved — the change already passed formal review",
+          "Quietly engineer around the ripple effect without informing anyone",
+          "Pause, assess the new impact, and return to the board with updated facts",
+          "Reverse the change entirely, since its analysis proved incomplete"
+        ],
+        "correct_answer": "Pause, assess the new impact, and return to the board with updated facts",
+        "explanation": "The approval rested on an impact analysis that's now known to be incomplete — the authority that approved deserves the corrected picture before implementation continues. Proceeding rides an invalidated approval, silent workarounds bypass oversight, and automatic reversal overreacts before the new information is even assessed."
+      }
+    ],
+    "related_question_ids": [
+      "q051",
+      "q065",
+      "q077",
+      "q091",
+      "q103",
+      "q239",
+      "q291",
+      "q355"
+    ],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c031",
+    "lesson_type": "concept",
+    "title": "Project and Phase Closure",
+    "module": "Governance and Integration",
+    "production_group": "Governance Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Closing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 10: Manage project closure"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "List the closure activities that make a project genuinely done.",
+      "Explain why closure discipline applies equally to cancelled and terminated projects.",
+      "Distinguish deliverable acceptance from administrative and contract closure."
+    ],
+    "sections": [
+      {
+        "title": "What Closure Actually Includes",
+        "content": "Closure is a work package, not a ceremony: confirm **formal acceptance** of deliverables; complete **contract closure** with vendors (final payments, performance evaluations, liability release); finalize **documentation** — including reconstructing any records, like change logs, that execution left incomplete; capture and file **lessons learned**; **transition** the deliverable to operations with the receiving team genuinely ready; **release resources** properly; and close the books.\n\nDeliverables accepted but contracts open, or records missing, means the project is not closed — it's abandoned in place."
+      },
+      {
+        "title": "Cancelled Projects Close Too",
+        "content": "Early termination doesn't waive closure. A cancelled project still owes the organization formal closure: documented reasons and state at termination, lessons learned (often the most valuable kind), released resources, closed contracts, and archived records. 'Leave it open in case funding returns' or 'skip closure since it failed' both leave the organization with dangling obligations and lost learning."
+      },
+      {
+        "title": "Transition Readiness",
+        "content": "Handoff to operations is complete when the receiving team can actually operate — trained people, tooling configured (down to details like ticket categories), documentation usable by *their* audience, and support processes live. Announcing the transition is not the transition. The support gap right after handoff is where unready operations teams meet their first real incidents; verifying readiness before closure is the cheap version of that discovery."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Closure scenarios test completeness under pressure: the team dispersing before lessons learned, sponsors pushing to skip 'formalities,' vendor contracts left open after acceptance, or informal scope-drop decisions never documented. The credited options finish the closure work — proportionately (a lean lessons format beats none), but genuinely."
+      }
+    ],
+    "key_terms": [
+      "formal acceptance",
+      "administrative closure",
+      "contract closure",
+      "transition",
+      "lessons learned",
+      "early termination"
+    ],
+    "exam_traps": [
+      "Treating customer acceptance of deliverables as complete closure while vendor contracts remain open.",
+      "Skipping closure for cancelled projects — termination increases, not removes, the need to close properly.",
+      "Declaring transition complete when responsibility was announced but the receiving team can't yet operate."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Contract closure",
+        "definition": "Final payments, vendor performance evaluation, and liability release — required before project closure."
+      },
+      {
+        "term": "Administrative closure",
+        "definition": "Finalizing records, lessons learned, archives, and resource release."
+      },
+      {
+        "term": "Transition readiness",
+        "definition": "The receiving team's genuine ability to operate the deliverable — verified, not announced."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Deliverables are accepted, but two vendor contracts still have open final payments and performance evaluations. Can the project close?",
+        "options": [
+          "Yes — customer acceptance is the milestone that defines project completion",
+          "Not yet — contract closure is part of project closure, not an optional epilogue",
+          "Yes, if procurement agrees to inherit the contracts without PM involvement",
+          "Only the sponsor can decide whether open contracts block closure"
+        ],
+        "correct_answer": "Not yet — contract closure is part of project closure, not an optional epilogue",
+        "explanation": "Open contracts are unfinished project obligations — payments, evaluations, and liability release remain the project's to complete. Acceptance is necessary but not sufficient; handing the leftovers to procurement without oversight abandons accountability, and this is a process requirement, not a sponsor preference."
+      },
+      {
+        "question": "A project is cancelled by a funding cut before producing any deliverable. What does the organization still need from the project manager?",
+        "options": [
+          "Nothing — closure activities exist to celebrate successfully delivered outcomes",
+          "Only the financial books; the other closure steps assume deliverables exist",
+          "Formal closure: documented state, lessons learned, released resources, closed contracts",
+          "An indefinite pause status maintained in case the funding is later restored"
+        ],
+        "correct_answer": "Formal closure: documented state, lessons learned, released resources, closed contracts",
+        "explanation": "Termination changes the outcome, not the obligations: the organization needs the record, the learning (often richest from cancelled work), its people back, and its contracts settled. Books-only closure leaves everything else dangling, and 'paused indefinitely' is unclosed by another name."
+      },
+      {
+        "question": "Support responsibility for a new system was formally announced to operations, but their ticketing system has no category for it and no one is trained. What's the closure-relevant reading?",
+        "options": [
+          "Transition is complete — the formal announcement assigned the responsibility",
+          "Any operations problem occurring after handoff belongs to operations by definition",
+          "Training for the receiving team is a nice-to-have that shouldn't gate closure",
+          "Transition isn't done — verify their readiness to operate before closing"
+        ],
+        "correct_answer": "Transition isn't done — verify their readiness to operate before closing",
+        "explanation": "A transition succeeds when the receiving team can actually operate — announcement without capability leaves a support gap exactly when the first incidents arrive. Blaming operations after handoff ignores that the project controlled the readiness verification, and training for the receiving team is foundational, not cosmetic."
+      }
+    ],
+    "related_question_ids": [
+      "q023",
+      "q092",
+      "q140",
+      "q173",
+      "q288",
+      "q376"
+    ],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c032",
+    "lesson_type": "concept",
+    "title": "Procurement, Contracts, and Sourcing",
+    "module": "Governance and Integration",
+    "production_group": "Governance Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Finance",
+      "Risk"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing",
+      "Closing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 5: Plan and manage procurement"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Apply make-or-buy analysis with total cost of ownership.",
+      "Match contract types to scope certainty and risk allocation.",
+      "Manage the procurement life cycle: solicitation, selection, administration, closure."
+    ],
+    "sections": [
+      {
+        "title": "Make or Buy, Honestly Costed",
+        "content": "The **make-or-buy** decision weighs cost, internal capability and capacity, strategic importance, and risk — never a standing preference for building or buying. Cost comparisons must use **total cost of ownership**: a custom build that looks cheaper up front can carry years of maintenance burden that reverses the economics. Strategic value matters too — capabilities the organization must retain argue for making; commodities argue for buying."
+      },
+      {
+        "title": "Contract Types Allocate Risk",
+        "content": "Contract type is a risk-allocation decision keyed to scope certainty. **Fixed-price** suits well-defined, stable scope — the seller carries cost risk, so sellers price vague scope defensively. **Cost-reimbursable** suits uncertain or evolving scope — the buyer carries cost risk in exchange for flexibility. **Time and materials** suits small or staff-augmentation work where defining scope up front isn't worth it. Mechanisms like pricing tiers or incentive fees tune the allocation — a fixed-price contract with volume tiers handles quantity uncertainty without abandoning the fixed-price core.\n\nThe recurring dispute generator is a vague **statement of work**: ambiguity about deliverables becomes a fight about what the price includes."
+      },
+      {
+        "title": "Selection and Administration",
+        "content": "Bidder selection applies **predefined weighted criteria** — price, capability, timeline, references, risk — not price alone; an unusually low bid is a signal to investigate (misunderstood scope, planned shortcuts, financial distress), and evaluation integrity requires addressing conflicts of interest and treating bidders fairly under shared rules.\n\nProcurement continues after signature: monitor vendor performance against the agreement, document deviations like missed milestones formally, and use renewals as the natural point to renegotiate terms the current contract got wrong (loose SLAs, missing metrics). Legitimate leverage comes from the contract and the record — which is why both need maintaining."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Credited options: analysis before commitment (make-or-buy with TCO, weighted selection), matching contract type to scope certainty, formal documentation of vendor issues even when the contract is silent, and constructive engagement (negotiate intent-vs-wording gaps with procurement/legal support) over either capitulation or instant termination."
+      }
+    ],
+    "key_terms": [
+      "make-or-buy",
+      "total cost of ownership",
+      "fixed-price",
+      "cost-reimbursable",
+      "time and materials",
+      "statement of work",
+      "weighted selection criteria"
+    ],
+    "exam_traps": [
+      "Comparing build-vs-buy on upfront cost while ignoring years of maintenance burden.",
+      "Selecting the lowest bid without investigating why it's so low.",
+      "Assuming procurement ends at contract signature — administration and closure remain."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Make-or-buy analysis",
+        "definition": "Weighing cost (TCO), capability, capacity, and strategic value — not defaulting to build or buy."
+      },
+      {
+        "term": "Fixed-price contract",
+        "definition": "Seller carries cost risk; fits well-defined, stable scope."
+      },
+      {
+        "term": "Cost-reimbursable contract",
+        "definition": "Buyer carries cost risk; fits uncertain or evolving scope."
+      },
+      {
+        "term": "Statement of work",
+        "definition": "The procurement's scope definition — ambiguity here becomes a dispute later."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Scope for a component is well-defined and stable, but production volumes are genuinely uncertain. Which contracting approach fits?",
+        "options": [
+          "Time and materials, since volume uncertainty makes all scope definition pointless",
+          "Cost-reimbursable, to keep maximum flexibility for the buyer throughout",
+          "Any type works equally well when the vendor has a strong track record",
+          "Fixed-price with a volume mechanism such as pricing tiers"
+        ],
+        "correct_answer": "Fixed-price with a volume mechanism such as pricing tiers",
+        "explanation": "Stable, well-defined scope earns fixed-price economics; the one genuine uncertainty (volume) gets a targeted mechanism rather than abandoning the fixed-price core. Cost-reimbursable shifts all cost risk to the buyer needlessly, T&M answers a scope-definition problem this contract doesn't have, and track record doesn't erase risk-allocation differences."
+      },
+      {
+        "question": "One bid comes in dramatically below every competitor for the same scope. What does sound procurement practice require before selecting?",
+        "options": [
+          "Select it — lowest responsive bid wins under standard procurement rules",
+          "Investigate the cause — misunderstood scope, planned shortcuts, or vendor distress",
+          "Disqualify it automatically, since outlier bids indicate gaming",
+          "Ask the low bidder to raise their price to match the field average"
+        ],
+        "correct_answer": "Investigate the cause — misunderstood scope, planned shortcuts, or vendor distress",
+        "explanation": "An outlier price is information: it may be genuine advantage or a misread SOW, quality shortcuts, or a vendor in trouble — each with different consequences for the project. Auto-selecting inherits the unknown cause; auto-disqualifying may discard a legitimately strong bid; price-matching requests manipulate the field instead of understanding it."
+      },
+      {
+        "question": "A build-vs-buy comparison favors building based on upfront cost alone. What is the most important missing element?",
+        "options": [
+          "Total cost of ownership — the long maintenance burden custom builds carry",
+          "The vendor's published marketing references supporting the buy option",
+          "A team vote on which of the two options they would prefer to work on",
+          "Legal review of the standard license terms attached to the buy option"
+        ],
+        "correct_answer": "Total cost of ownership — the long maintenance burden custom builds carry",
+        "explanation": "Custom builds carry a long maintenance tail that upfront comparisons systematically miss — TCO is what makes the economics honest. References and license review have their place but don't correct the core analytical gap, and team preference is not a costing input."
+      }
+    ],
+    "related_question_ids": [
+      "q036",
+      "q061",
+      "q087",
+      "q129",
+      "q130",
+      "q187",
+      "q231",
+      "q257"
+    ],
+    "source_refs": [
+      "S6",
+      "S8",
+      "S5"
+    ]
   }
 ]
