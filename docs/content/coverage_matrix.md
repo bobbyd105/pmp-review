@@ -30,6 +30,20 @@ The count shown is derived from unique questions matching the unit’s ECO mappi
 
 The complete many-to-many ECO and PMBOK mappings, source references, and lesson IDs are canonical in `data/content_coverage.json`.
 
+## 2026-07-16 production update
+
+The full Comprehensive Course is now **Authored** as production content:
+`data/concept_lessons.json` holds 62 concept lessons (c001-c062) covering all
+13 modules and every planned unit below (some planning units were merged or
+refined during authoring — e.g., WPD/WPI/WPR and the ITTO layer became their
+own lessons, and the six-principle overview is complemented by seven
+per-principle lessons). Each lesson carries objectives, sections, key terms,
+exam traps, flashcards, three cue-disciplined knowledge checks, and curated
+links to genuinely related bank questions. The lifecycle matrix below is
+retained as the planning-time record; per Decision #11's conversational-
+approval model, the mission draft PR is the User's approval gate before any
+unit is marked Approved/Implemented in `data/content_coverage.json`.
+
 ## Portfolio summary
 
 | Metric | Result |

@@ -215,7 +215,7 @@ active toolchain.</p>
   </tr>
   <tr>
     <td><code>data/concept_lessons.json</code></td>
-    <td>Ten Authored production concept lessons (c001-c010) forming the Foundation Block, now learner-facing via the Course view. Each lesson carries 3 authored knowledge checks (position/length-disciplined, enforced by test) and curated <code>related_question_ids</code> links into the bank (41 links; empty where no genuine bank coverage exists yet). Reusable glossary/reference/formula links remain intentionally pending until the reference layer ships.</td>
+    <td>62 Authored production concept lessons (c001-c062) — the complete Comprehensive Course in module order from PM Foundations through Agile/Hybrid and AI, learner-facing via the Course view. Each lesson carries 3 authored knowledge checks (position/length-disciplined, enforced by test) and curated <code>related_question_ids</code> links into the bank (empty where no genuine bank coverage exists yet — Scrum, Kanban, PMBOK map, EEF/OPA, AI). Reusable glossary/reference/formula links remain intentionally pending until the reference layer ships.</td>
     <td>Array of concept records with structured objectives, sections, terms, exam traps, flashcards, mappings, deferred-reference arrays, <code>knowledge_checks[]</code> ({question, options[4], correct_answer, explanation}), <code>related_question_ids[]</code>, and source refs.</td>
     <td><code>Course</code>; <code>conceptLessons.data.test.js</code>; <code>Course.test.jsx</code></td>
   </tr>
@@ -378,15 +378,15 @@ active toolchain.</p>
 </ul>
 
 <h2>Not built yet</h2>
-<p>Forty-nine planned Comprehensive Course concept lessons beyond the authored
-ten-lesson Foundation Block, reviewed production objective mappings, stable question option IDs, calibrated difficulty,
-diagnostics, adaptive recommendation algorithms, spaced repetition, history management
-(clearing/exporting quiz history), and richer lesson rendering. No routing,
-state library, backend, or AI API integration (constitution Section 2).</p>
-<p>The knowledge/objective/glossary/formula/reference catalogs remain validated
-planning inputs only. The ten Foundation Block concept lessons are now rendered
-by the Course view with authored knowledge checks and curated bank-question
-links; their glossary/formula/reference-sheet links stay deferred until the
-reference layer ships.</p>
+<p>Reviewed production objective mappings, stable question option IDs, calibrated
+difficulty, diagnostics, adaptive recommendation algorithms, spaced repetition,
+history management (clearing/exporting quiz history), and richer lesson
+rendering. No routing, state library, backend, or AI API integration
+(constitution Section 2).</p>
+<p>The knowledge/objective/glossary/formula/reference planning catalogs remain
+validated planning inputs. All 62 Comprehensive Course concept lessons are now
+authored and rendered by the Course view with knowledge checks and curated
+bank-question links; per-lesson glossary/formula/reference-sheet links stay
+deferred until the reference layer ships.</p>
 </body>
 </html>

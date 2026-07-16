@@ -59,6 +59,28 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Comprehensive Course authored in full: concept lessons c011-c062
+  (2026-07-16, this branch): 52 new production concept lessons completing the
+  planned curriculum in module order — Foundations II (c011-c015), Principles
+  and PMP Mindset (c016-c022), Life Cycles and Tailoring (c023-c028),
+  Governance and Integration (c029-c032), Scope and Quality (c033-c037),
+  Schedule Management and Finance (c038-c042, including PERT, critical
+  path/compression, reserves, full EVM with worked examples, and
+  NPV/IRR/ROI/payback interpretation), Stakeholders/Communications/Resources/
+  Teams/Conflict (c043-c047), Risk and Uncertainty (c048-c050, including EMV
+  and response strategies), Agile and Hybrid (c051-c058, including Scrum,
+  Kanban/Lean/flow metrics, user stories/INVEST, velocity discipline,
+  MVP/MMF/cost of delay, servant leadership, hybrid integration), and AI in
+  Project Management (c059-c062). The catalog now holds 62 concept lessons
+  with 186 knowledge checks (positions 44/49/51/42, all cue-disciplined and
+  test-enforced) and 199 curated related-question links. Concepts with no
+  genuine bank coverage yet (Scrum, Kanban, PMBOK map, phase gates, EEF/OPA,
+  AI) intentionally keep empty links until the targeted-question milestone.
+  These lessons were authored against the master curriculum map and the
+  planning objectives in data/learning_objectives.json, in original wording
+  from the repository's source-topic summaries; per the coverage matrix's
+  Authored status, User review at the draft PR remains the approval gate.
+  Full suite 19 files / 149 tests passes; production build passes.
 - Course view + Foundation Block completion (2026-07-16, this branch):
   - Authored 30 knowledge checks (3 per lesson, c001-c010): original
     single-best-answer items with teaching explanations, correct positions

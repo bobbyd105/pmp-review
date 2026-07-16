@@ -7293,5 +7293,484 @@
       "S10",
       "S9"
     ]
+  },
+  {
+    "id": "c059",
+    "lesson_type": "concept",
+    "title": "AI Foundations for Project Managers",
+    "module": "AI in Project Management",
+    "production_group": "AI Block",
+    "pmbok8_domains": [
+      "Governance"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 8: Evaluate external business environment changes"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Define the core vocabulary: AI, machine learning, generative AI, large language models.",
+      "Explain what these systems fundamentally do — and the failure modes that follow.",
+      "Position AI as decision support under human judgment, never autonomous authority."
+    ],
+    "sections": [
+      {
+        "title": "The Vocabulary",
+        "content": "**Artificial intelligence** is the broad field: systems performing tasks that historically required human intelligence. **Machine learning** is the dominant approach within it: systems that learn patterns from data rather than following hand-written rules. **Generative AI** is the subset that produces new content — text, images, code — and **large language models (LLMs)** are its text engines, trained on vast corpora to predict likely continuations of language.\n\nThe hierarchy matters for precision: every LLM is generative AI, every generative model is (in practice) machine learning, and all of it is AI — but 'AI' in a vendor pitch can mean anything from a regression model to a chatbot."
+      },
+      {
+        "title": "What They Do — and Get Wrong",
+        "content": "Pattern-learning systems inherit their training data's blind spots: **bias** in the data becomes bias in the output, at scale and with a confident tone. Generative systems can **hallucinate** — produce fluent, plausible, *wrong* content, including invented facts, citations, and numbers. Neither failure announces itself; the output looks exactly like the correct kind.\n\nThe project-management consequence is a validation rule: AI output is a *draft* or a *signal*, never evidence. A generated risk analysis, status summary, or schedule suggestion is unverified until a human with context checks it — precisely because its errors are camouflaged as competence."
+      },
+      {
+        "title": "Decision Support, Not Decision Maker",
+        "content": "The governing frame: AI supports human decisions; it doesn't own them. A project manager remains accountable for every estimate, analysis, and communication the project produces — 'the model said so' transfers nothing. This holds even as capability grows: delegation of *tasks* to AI can deepen, but delegation of *accountability* cannot.\n\nFor exam purposes, options where AI decides autonomously (auto-rejecting change requests, auto-updating baselines, auto-communicating to stakeholders without review) are wrong regardless of efficiency framing."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Vocabulary questions test the hierarchy (LLMs ⊂ generative AI ⊂ ML ⊂ AI). Judgment questions test the two reflexes: validate before relying (hallucination and bias hide in fluent output), and keep accountability human (AI as instrument, never authority). Any option that treats AI output as self-certifying fact is a distractor."
+      }
+    ],
+    "key_terms": [
+      "artificial intelligence",
+      "machine learning",
+      "generative AI",
+      "large language model",
+      "hallucination",
+      "bias",
+      "decision support"
+    ],
+    "exam_traps": [
+      "Treating fluent AI output as verified fact — hallucinations look exactly like competence.",
+      "Letting 'the model recommended it' stand in for human accountability.",
+      "Assuming bias problems are rare edge cases rather than inherited defaults needing checks."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Generative AI",
+        "definition": "AI that produces new content — text, images, code — rather than only classifying or predicting."
+      },
+      {
+        "term": "Hallucination",
+        "definition": "Fluent, plausible, wrong output — invented facts or citations delivered with confidence."
+      },
+      {
+        "term": "Decision support",
+        "definition": "AI's proper project role: informing human decisions, never owning them."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "An AI assistant produces a polished risk analysis for the project, complete with statistics and citations. What must happen before it informs any decision?",
+        "options": [
+          "Human validation of its claims — fluent output can contain invented facts and figures",
+          "Nothing further — statistical output from an AI system is inherently objective",
+          "Reformatting into the organization's template, which is the PM's only remaining task",
+          "A second AI system should cross-check the first one's analysis automatically"
+        ],
+        "correct_answer": "Human validation of its claims — fluent output can contain invented facts and figures",
+        "explanation": "Generative systems hallucinate — confident, well-formatted output can embed fabricated statistics and citations, and nothing in the polish signals the errors. Objectivity isn't conferred by being machine-generated, formatting isn't validation, and stacking a second unvalidated system compounds rather than solves the problem."
+      },
+      {
+        "question": "Which statement correctly orders the vocabulary?",
+        "options": [
+          "Machine learning is a subset of large language models",
+          "AI and generative AI are unrelated fields that happen to share a name",
+          "Generative AI produces classification labels only, never new content",
+          "Large language models are generative AI, which is machine learning, which is AI"
+        ],
+        "correct_answer": "Large language models are generative AI, which is machine learning, which is AI",
+        "explanation": "The nesting runs LLM ⊂ generative AI ⊂ machine learning ⊂ AI. Reversing ML and LLMs inverts the hierarchy, generative systems produce content rather than only labels, and generative AI sits inside — not beside — the broader AI field."
+      },
+      {
+        "question": "A vendor proposes an AI feature that automatically approves or rejects low-value change requests 'to free up governance time.' What is the principled objection?",
+        "options": [
+          "The threshold for 'low-value' is probably set incorrectly in the configuration",
+          "Approval is an accountable human decision — AI can analyze and recommend, not decide",
+          "The feature would be acceptable if it only auto-approved rather than auto-rejected",
+          "Governance time savings are too small to justify the licensing cost"
+        ],
+        "correct_answer": "Approval is an accountable human decision — AI can analyze and recommend, not decide",
+        "explanation": "Change decisions carry accountability that cannot transfer to a model — AI legitimately drafts the impact analysis and recommendation, but the decision stays human. Threshold tuning and cost arguments miss the principle, and auto-approving is no more delegable than auto-rejecting."
+      }
+    ],
+    "related_question_ids": [],
+    "source_refs": [
+      "S11",
+      "S2"
+    ]
+  },
+  {
+    "id": "c060",
+    "lesson_type": "concept",
+    "title": "Automation, Assistance, and Augmentation",
+    "module": "AI in Project Management",
+    "production_group": "AI Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Resources"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 6: Continuous improvement"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish the three AI adoption levels by task complexity and human involvement.",
+      "Match project tasks to the appropriate adoption level.",
+      "Explain why oversight increases — not decreases — as the level rises."
+    ],
+    "sections": [
+      {
+        "title": "Three Levels",
+        "content": "**Automation** hands AI repetitive, low-complexity, well-defined work: generating routine reports, organizing and categorizing information, meeting transcription and summaries, data entry. Output is checked, but the task itself needs little judgment.\n\n**Assistance** pairs AI with human work that requires judgment: drafting documents the human revises, brainstorming risks or options, first-pass analysis the human refines. The human shapes and owns every output.\n\n**Augmentation** applies AI to complex judgment work: scenario analysis, forecasting, multi-criteria trade-off exploration, pattern detection across large project datasets. AI extends what the human can consider — and human judgment matters *most* here, because the stakes and subtlety are highest."
+      },
+      {
+        "title": "Matching Task to Level",
+        "content": "The matching logic: how well-defined is the task, and how much judgment does it embed? Formatting a weekly status report from structured data → automation. Drafting a stakeholder communication about a sensitive delay → assistance (tone and relationship judgment stay human). Exploring how three staffing scenarios interact with schedule risk → augmentation (AI widens the analysis; the human weighs what the organization can absorb).\n\nMis-matching runs both directions: using judgment-level AI for rote work wastes capability, but pushing accountable judgment onto automation-level trust — auto-sending, auto-deciding — is the dangerous one."
+      },
+      {
+        "title": "Oversight Scales Up",
+        "content": "Counterintuitively, higher adoption levels demand *more* human engagement, not less. Automation errors are usually visible and cheap (a misformatted report). Augmentation errors are subtle and expensive (a forecast quietly built on a biased assumption, steering a major decision). The oversight rule: the more consequential the judgment AI is informing, the more rigorous the human validation — check the inputs, challenge the assumptions, and never let the tool's confidence substitute for the organization's."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Classification questions give a task and ask the level — key on task complexity and judgment content, not tool branding. Judgment questions test the oversight rule: augmentation-level output feeding big decisions gets the most scrutiny, and any option where rising AI capability justifies shrinking human review is a distractor."
+      }
+    ],
+    "key_terms": [
+      "automation",
+      "assistance",
+      "augmentation",
+      "adoption levels",
+      "oversight"
+    ],
+    "exam_traps": [
+      "Auto-sending or auto-deciding — automation-level trust applied to judgment-level stakes.",
+      "Assuming more capable AI means less human oversight — the relationship runs the other way.",
+      "Classifying by tool sophistication instead of by the task's judgment content."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Automation",
+        "definition": "AI on repetitive, well-defined, low-judgment work — reports, organization, transcription."
+      },
+      {
+        "term": "Assistance",
+        "definition": "AI drafting and analyzing alongside a human who shapes, revises, and owns the output."
+      },
+      {
+        "term": "Augmentation",
+        "definition": "AI extending complex judgment — scenarios, forecasts, trade-offs — where human validation matters most."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A PM uses AI to transcribe meetings and file the notes by topic; separately, AI explores how three staffing scenarios affect schedule risk for a major decision. Which levels are these?",
+        "options": [
+          "Both are automation, since the same underlying model can perform each task",
+          "Assistance and automation respectively, based on which task came first",
+          "Transcription is augmentation because meetings involve human judgment",
+          "Automation (transcription and filing) and augmentation (scenario analysis)"
+        ],
+        "correct_answer": "Automation (transcription and filing) and augmentation (scenario analysis)",
+        "explanation": "Transcription and categorization are repetitive, well-defined work — automation. Multi-scenario risk exploration informs complex judgment — augmentation. The level follows the task's judgment content, not the model used or task order, and meetings containing judgment doesn't make transcribing them judgment work."
+      },
+      {
+        "question": "As an organization moves from automation toward augmentation uses of AI, what happens to the need for human oversight?",
+        "options": [
+          "It increases — subtler, higher-stakes errors demand more rigorous validation",
+          "It decreases — more capable systems require proportionally less checking",
+          "It stays flat — oversight is a fixed compliance obligation at every level",
+          "It disappears once the system passes an initial certification review"
+        ],
+        "correct_answer": "It increases — subtler, higher-stakes errors demand more rigorous validation",
+        "explanation": "Augmentation informs consequential judgments, and its failure modes (biased assumptions, plausible-but-wrong analysis) are harder to spot than a malformed report. Capability doesn't reduce the stakes; flat-compliance framing misses the scaling; and no certification makes ongoing validation unnecessary."
+      },
+      {
+        "question": "A team configures AI to draft AND automatically send weekly stakeholder updates 'since the drafts have been accurate lately.' What is the flaw?",
+        "options": [
+          "Weekly cadence is wrong — stakeholder updates should always be daily instead",
+          "The drafts should be substantially longer before automation becomes appropriate",
+          "Communication embeds judgment and accountability — accuracy streaks don't make auto-send safe",
+          "Nothing — demonstrated accuracy is exactly how automation legitimately earns trust"
+        ],
+        "correct_answer": "Communication embeds judgment and accountability — accuracy streaks don't make auto-send safe",
+        "explanation": "Outbound stakeholder communication carries tone, relationship, and accountability judgment — assistance-level work where a human reviews before send. A streak of good drafts doesn't change the category: the first hallucinated or tone-deaf message goes straight to stakeholders. Cadence and length are beside the point."
+      }
+    ],
+    "related_question_ids": [],
+    "source_refs": [
+      "S11"
+    ]
+  },
+  {
+    "id": "c061",
+    "lesson_type": "concept",
+    "title": "Responsible AI and Human Accountability",
+    "module": "AI in Project Management",
+    "production_group": "AI Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Risk"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Business Environment",
+        "task": "Task 2: Plan and manage project compliance"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Apply the responsible-AI checklist: oversight, accuracy, bias, privacy, security, transparency, copyright, sustainability.",
+      "Handle data protection when AI tools enter project workflows.",
+      "Keep accountability human in every AI-assisted decision path."
+    ],
+    "sections": [
+      {
+        "title": "The Non-Negotiables",
+        "content": "Responsible AI use in projects reduces to a checklist of standing obligations. **Human oversight**: a person reviews and owns consequential outputs. **Accuracy validation**: claims get verified before they inform decisions. **Bias and fairness**: outputs affecting people (resource assignments, evaluations, prioritizations touching groups differently) get checked for inherited bias. **Privacy and confidentiality**: sensitive data doesn't enter tools without authorization and safeguards. **Security**: AI tools are an attack and leakage surface, governed like any system handling project data. **Transparency**: where AI materially contributed to an analysis or decision, that's disclosable, not hidden. **Copyright and licensing**: generated content can carry IP risk, and feeding proprietary material into external tools can violate agreements. **Sustainability**: compute has real resource costs that belong in the environmental ledger."
+      },
+      {
+        "title": "Data Discipline",
+        "content": "The most common project-level violation is casual data leakage: pasting confidential stakeholder information, unpublished financials, or a partner's proprietary material into an external AI tool 'to summarize it.' The discipline mirrors any data-handling rule: know the tool's data terms (is input retained? used for training?), use only approved tools for sensitive categories, and when in doubt, don't paste. A convenience summary is never worth a confidentiality breach — and the breach happens at paste time, not at output time."
+      },
+      {
+        "title": "Accountability Cannot Transfer",
+        "content": "Every responsible-AI principle folds back into one: a human owns the outcome. 'The AI screened the résumés,' 'the model flagged the vendor,' 'the tool wrote the risk assessment' — none of these sentences moves accountability anywhere. If an AI-assisted decision harms someone, misstates status, or violates an obligation, the accountability question is answered exactly as if a human staffer had drafted it: the person who relied on it owns it.\n\nThis is the same accountable-leadership principle from the mindset lessons, extended to a new class of instrument."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Scenario signals: sensitive data + external tool → stop at the paste; AI output affecting people → bias check before use; 'the model decided' → return the decision to its human owner; undisclosed AI contribution to a stakeholder-facing analysis → transparency failure. The credited option validates, discloses, protects data, and keeps a named human accountable."
+      }
+    ],
+    "key_terms": [
+      "human oversight",
+      "bias",
+      "privacy",
+      "confidentiality",
+      "transparency",
+      "copyright",
+      "accountability",
+      "data leakage"
+    ],
+    "exam_traps": [
+      "Pasting confidential project or partner data into external AI tools for convenience.",
+      "Using AI outputs that affect people without checking for inherited bias.",
+      "Letting 'the model decided' obscure the human who owns the decision."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Human oversight",
+        "definition": "A person reviews and owns every consequential AI-assisted output — the anchor principle."
+      },
+      {
+        "term": "Data leakage",
+        "definition": "Sensitive information entering an external tool without authorization — the breach happens at input."
+      },
+      {
+        "term": "AI transparency",
+        "definition": "Disclosing where AI materially contributed to analyses or decisions others rely on."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A team member wants to paste a partner company's confidential technical specification into a public AI chatbot 'just to get a quick summary.' What is the responsible-AI ruling?",
+        "options": [
+          "Stop — sensitive data entering an unapproved external tool is itself the breach",
+          "Proceed, since summarization is a low-risk, effectively read-only operation",
+          "Proceed as long as the summary is deleted immediately after being read once",
+          "Proceed if the chatbot's terms of service are carefully reviewed afterward"
+        ],
+        "correct_answer": "Stop — sensitive data entering an unapproved external tool is itself the breach",
+        "explanation": "The violation occurs at paste time: confidential partner material has left authorized custody, whatever happens next. Summarization intent, output deletion, and after-the-fact terms reading don't retrieve the data — the check happens before input, with approved tools for sensitive categories."
+      },
+      {
+        "question": "An AI tool ranks subcontractor bids, and the PM notices its training reflects historical decisions that favored certain vendor profiles. Before using the ranking, what does responsible AI require?",
+        "options": [
+          "Nothing — historical data is the most objective basis a ranking can have",
+          "Using only the top-ranked bid, since deeper inspection would introduce human bias",
+          "Discarding AI from procurement entirely, since bias can never be assessed",
+          "A bias check — inherited historical skew must be examined before the ranking informs the decision"
+        ],
+        "correct_answer": "A bias check — inherited historical skew must be examined before the ranking informs the decision",
+        "explanation": "Models learn the past, including its skew — an output affecting vendor selection needs its inherited bias examined, not presumed neutral. Historical data isn't objectivity, blind adoption of the top rank automates the skew, and wholesale abandonment overcorrects when examination is available."
+      },
+      {
+        "question": "A status analysis sent to the steering committee was substantially AI-generated, unreviewed, and contained a fabricated trend figure that influenced a funding decision. Who is accountable?",
+        "options": [
+          "The AI vendor, since their model fabricated the figure",
+          "No one — tooling errors are a recognized cost of modern work",
+          "The project manager who relied on and transmitted the unvalidated analysis",
+          "The steering committee, for failing to independently verify what they read"
+        ],
+        "correct_answer": "The project manager who relied on and transmitted the unvalidated analysis",
+        "explanation": "Accountability doesn't transfer to instruments: the person who adopted and sent the unverified output owns the consequence, exactly as if a staffer's unchecked draft had gone out. Vendor liability and committee diligence are separate questions — neither relocates the professional obligation to validate before relying."
+      }
+    ],
+    "related_question_ids": [],
+    "source_refs": [
+      "S11",
+      "S3"
+    ]
+  },
+  {
+    "id": "c062",
+    "lesson_type": "concept",
+    "title": "AI Use Cases Across the Project Life Cycle",
+    "module": "AI in Project Management",
+    "production_group": "AI Block",
+    "pmbok8_domains": [
+      "Governance",
+      "Schedule",
+      "Risk",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 9: Evaluate project status"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Map high-value AI use cases to project processes and life-cycle stages.",
+      "Pair every use case with its validation requirement.",
+      "Evaluate proposed AI applications with the level + responsibility framework."
+    ],
+    "sections": [
+      {
+        "title": "Where AI Earns Its Keep",
+        "content": "Across the life cycle, the recurring high-value patterns: **information work** — meeting summaries, status report drafting, document organization, knowledge retrieval from project archives (automation/assistance); **analysis work** — schedule optimization suggestions, risk pattern detection across historical projects, forecast modeling, multi-criteria decision analysis (assistance/augmentation); **communication support** — drafting tailored stakeholder communications, sentiment signals from feedback channels (assistance — human review before anything external); and **monitoring** — real-time anomaly alerts on cost, schedule, and quality data streams (automation feeding human attention)."
+      },
+      {
+        "title": "Every Use Case Carries a Validation Clause",
+        "content": "Each application pairs with a check: generated summaries → verified against the source before distribution; schedule suggestions → sanity-checked against constraints the model can't see (politics, contracts, people); risk patterns → treated as candidates for the register, not entries; sentiment signals → treated as prompts for human conversation, not verdicts on stakeholders; anomaly alerts → tuned and triaged by humans, because alert fatigue kills monitoring faster than missing alerts do.\n\nThe pattern is constant: AI widens the funnel; humans remain the filter."
+      },
+      {
+        "title": "Evaluating a Proposed Use",
+        "content": "A proposed AI application gets three questions. *What level is this?* (automation, assistance, augmentation — sets the oversight bar.) *What are the responsibility exposures?* (sensitive data in? biased output affecting people? IP in the output? disclosure owed?) *What's the validation loop?* (who checks, against what, before the output matters?) A use case that can't answer the third question isn't ready — efficiency claims don't substitute for a validation design.\n\nThis rubric also keeps adoption grounded in value: an AI feature that saves an hour of drafting but creates two hours of validation isn't automation, it's overhead."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Use-case questions reward matching applications to processes with the oversight intact: AI drafts the report, the PM verifies and owns it; AI flags the risk pattern, the team assesses it into (or out of) the register; AI suggests the schedule optimization, the human checks it against unmodeled reality. Distractors ship unvalidated output, skip the data-protection question, or promise oversight-free efficiency."
+      }
+    ],
+    "key_terms": [
+      "use case",
+      "anomaly detection",
+      "sentiment analysis",
+      "forecast modeling",
+      "validation loop",
+      "alert fatigue"
+    ],
+    "exam_traps": [
+      "Adopting AI schedule or risk suggestions without checking constraints the model can't see.",
+      "Distributing generated summaries or communications without source verification.",
+      "Approving a use case with no designed validation loop because the efficiency story is good."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Validation loop",
+        "definition": "The designed human check every AI use case needs: who verifies, against what, before the output matters."
+      },
+      {
+        "term": "Anomaly detection",
+        "definition": "AI monitoring of data streams that feeds human attention — automation in service of judgment."
+      },
+      {
+        "term": "Alert fatigue",
+        "definition": "Untuned alerting that trains humans to ignore alerts — a monitoring failure mode AI can amplify."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "AI analysis of historical projects flags three risk patterns that may apply to the current project. What is the credited handling?",
+        "options": [
+          "Enter all three directly into the risk register with AI-estimated probabilities",
+          "Discard the analysis, since historical patterns rarely transfer between projects",
+          "Ask the tool to re-run the analysis until the patterns stabilize",
+          "Treat the three as candidates for team assessment before any enters the register"
+        ],
+        "correct_answer": "Treat the three as candidates for team assessment before any enters the register",
+        "explanation": "AI pattern detection widens the identification funnel — valuable input, but the team's contextual assessment decides what's real for this project. Direct entry with model-estimated numbers skips validation; discarding wastes a legitimate signal; and re-running until stable is ritual, not assessment."
+      },
+      {
+        "question": "An AI scheduling tool proposes a resequencing that shortens the critical path by three weeks. Before adopting it, the essential check is:",
+        "options": [
+          "Whether the tool's vendor formally certifies the algorithm as PMBOK-aligned",
+          "Whether the sequence survives constraints the model can't see — contracts, politics, people",
+          "Whether the three weeks recovered exceed the project's total float across all paths",
+          "No check is needed — mathematical optimization is correct by construction"
+        ],
+        "correct_answer": "Whether the sequence survives constraints the model can't see — contracts, politics, people",
+        "explanation": "Optimizers work the modeled world; real schedules answer to unmodeled constraints — contractual sequencing, stakeholder commitments, who can actually do what when. That's the human sanity check. Vendor certification and float arithmetic don't address it, and 'correct by construction' is true only inside the model."
+      },
+      {
+        "question": "A proposed AI use case promises major reporting time savings but has no answer to 'who validates the output, against what, before it goes out?' What is the verdict?",
+        "options": [
+          "Approve — the efficiency case is strong and validation can evolve later",
+          "Approve for external stakeholders first, since they're less familiar with the details",
+          "Not ready — a use case without a designed validation loop isn't adoptable, whatever it saves",
+          "Reject AI reporting permanently, since validation overhead always exceeds savings"
+        ],
+        "correct_answer": "Not ready — a use case without a designed validation loop isn't adoptable, whatever it saves",
+        "explanation": "The validation loop is a design requirement, not a later patch — unverified output going where it matters is how fabricated figures reach steering committees. 'External first' inverts the risk (less familiar audiences detect errors worse), and permanent rejection overcorrects: the fix is designing the loop, then adopting."
+      }
+    ],
+    "related_question_ids": [],
+    "source_refs": [
+      "S11"
+    ]
   }
 ]
