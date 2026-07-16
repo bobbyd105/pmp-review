@@ -20,6 +20,28 @@ Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 155Q/10L, Business Environment 99Q/8L).
 
+## Batch-orchestrator infrastructure archived (2026-07-15)
+
+The Claude Code + Codex CLI batch-orchestration infrastructure built and
+verified through PR #22/B01 is out of scope for the current mission
+(completing the PMP learning system) and has been archived — not deleted —
+to `archive/orchestration-infrastructure/`, preserving its internal
+structure:
+
+- `.ai/workflow/` (controller contracts, launcher, cleanliness helper,
+  their PowerShell tests, example/smoke plans, orchestrator prompt, and the
+  B01 run record) → `archive/orchestration-infrastructure/.ai/workflow/`
+- `scripts/run-agent-workflow.ps1` →
+  `archive/orchestration-infrastructure/scripts/`
+- `docs/claude_codex_batch_orchestrator.md` →
+  `archive/orchestration-infrastructure/docs/`
+
+The milestone history below is retained unchanged. Note: the "Bounded
+Claude–Codex batch orchestration" section of `AGENTS.md` and the decision
+record `docs/decisions/2026-07-13-claude-codex-batch-orchestration.md`
+still reference the original paths; they are historical records and were
+deliberately not rewritten.
+
 ## Milestone — Multi-Agent Orchestration Operational
 
 PR #22 established and verified an end-to-end bounded workflow:
