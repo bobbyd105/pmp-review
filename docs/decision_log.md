@@ -360,3 +360,50 @@ turn incomplete assessment assets into complete ones.
 the local repository workflow, or the User requests separate review gates.
 
 **Approved by:** User (explicit closeout instruction in this session)
+
+---
+
+## Decision #12 — Answer-length bias remediated editorially; length gates become hard content-acceptance rules
+
+**Date:** 2026-07-16
+
+**Decision:** The full question bank was editorially remediated for
+answer-length cueing (trimming over-elaborate correct answers to their core
+action, extending thin distractors to comparable specificity), and
+`src/__tests__/lengthBias.test.js` now enforces hard gates on the committed
+bank: no more than 40% of questions may have a strictly longest correct
+answer, no question may exceed the 1.3 correct/average-distractor length
+ratio, and no more than 30% may have a strictly shortest correct answer (an
+over-correction guard). Every future content batch must pass these gates.
+
+**Alternatives considered:**
+1. Mechanically padding distractors or truncating correct answers by script.
+2. Leaving the measurement-only test and deferring remediation indefinitely.
+3. Remediating only the worst offenders (ratio > 2) and gating at a looser
+   threshold.
+
+**Why rejected:**
+1. Mechanical rewriting risks changing which option is defensibly best and
+   produces unnatural wording; the audits explicitly required editorial
+   judgment per item.
+2. 94.8% strictly-longest correct answers let a learner pass quizzes on a
+   length heuristic that fails on the real exam — an actively harmful teaching
+   signal for the platform's core purpose.
+3. A partial pass leaves the heuristic exploitable; the ratio flags list only
+   shrinks to zero with a full pass, and gating at the target with real margin
+   (actual: 18.5%) prevents silent regression as the bank grows.
+
+**Tradeoffs:** ~285 questions had option wording changed (substance,
+correct-answer meaning, and explanations preserved; positions unchanged by
+the ID-keyed seed). Learners' stored quiz history remains comparable since
+question IDs and correctness semantics did not change. Future authors must
+draft options with length discipline or fail CI.
+
+**Evidence:** `docs/content/length_bias_report.md` (regenerated, WITHIN
+TARGET); before/after measurements 364/384 → 71/384 strictly-longest,
+315 → 0 ratio flags; full suite 18 files / 141 tests passing; option-position
+distribution unchanged at 96/96/96/96.
+
+**Approved by:** Mission agent (Claude) under the 2026-07-15 mission
+authority; subject to User ratification at draft-PR review — nothing merges
+to main without explicit User approval.

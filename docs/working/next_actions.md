@@ -19,22 +19,16 @@
 
 ## Tracked follow-up — Length-bias remediation
 
-**Status:** Known and tracked, but not scheduled. No target date is set; revisit
-when content-authoring capacity allows.
+**Status: COMPLETE (2026-07-16).** The editorial pass was performed in eleven
+reviewed batches (~285 questions), trimming over-elaborate correct answers and
+extending thin distractors with content judgment, not mechanical rewriting.
+Final state: 0/384 questions over the 1.3 ratio, 71/384 (18.5%) strictly
+longest correct, 72/384 (18.8%) strictly shortest correct.
 
-`docs/content/length_bias_report.md` documents the current state: 315/384
-questions exceed the 1.3 correct-answer/average-distractor ratio, and 364/384
-have a strictly longest correct answer.
-
-Remediation requires editorial wording changes to option text. The content
-author should address the report in reviewed batches by trimming over-elaborate
-correct answers and/or extending thin distractors. This is content judgment and
-must not be performed as a mechanical rewrite.
-
-`src/__tests__/lengthBias.test.js` will continue to report this condition as
-unresolved until the editorial pass is complete. That result is expected and is
-not a build blocker. Answer-position bias has already been remediated separately
-and remains protected by its hard distribution guard.
+`src/__tests__/lengthBias.test.js` now enforces hard gates: strict-longest
+<= 40% with zero ratio flags, and strict-shortest <= 30% to prevent
+over-correction. Answer-position bias remains protected by its own hard
+distribution guard.
 
 ## Later sequence
 

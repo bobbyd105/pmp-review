@@ -129,6 +129,8 @@ closed.
   PMBOK 8 map, Scrum, sustainability, and AI), then Thin predictive/agile
   mechanics. Do not add production content until unit objectives and
   metadata are User-approved.
-- **Question quality:** remediate answer-position and answer-length cues in
-  a dedicated reviewed slice before treating quiz scores as calibrated
-  mastery evidence; see `docs/content/question_bank_audit.md`.
+- **Question quality:** answer-position cues (remediated 2026-07-13, hard
+  40% position gate) and answer-length cues (remediated 2026-07-16, hard
+  strict-longest/ratio/strict-shortest gates — see decision_log.md #12) are
+  both resolved. Quiz scores are no longer inflatable through answer-form
+  heuristics; psychometric difficulty calibration remains future work.

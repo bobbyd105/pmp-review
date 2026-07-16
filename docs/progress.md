@@ -59,6 +59,18 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Answer-length bias editorial remediation + hard gate (2026-07-15/16, this
+  branch): edited ~285 questions across eleven reviewed batches, worst
+  length-ratio first. Correct answers trimmed to their core action (reasoning
+  stays in explanations); thin distractors extended to comparable specificity;
+  no question substance, correct-answer meaning, or explanation logic changed.
+  Option order re-normalized with the committed `pmp-options-v1` seed after
+  every batch (positions stay 96/96/96/96). Final state: strictly-longest
+  correct 71/384 (18.5%, was 94.8%), zero questions over the 1.3 length ratio
+  (was 315), strictly-shortest correct 72/384 (18.8%, guarded at <=30%).
+  `lengthBias.test.js` now enforces these as hard regression gates; the
+  generated report reflects WITHIN TARGET status. Full suite 18 files / 141
+  tests passes.
 - Claude-Codex batch orchestrator refinement (PR #22, 2026-07-13):
   - Added required master-plan provider IDs: `claude-code` orchestrator and
     `codex-cli` worker. The controller resolves these through a two-entry local
@@ -453,17 +465,19 @@ expanding the orchestration system without a demonstrated need.
   or lessons, no execution, no external calls.
 
 ## Known Issues
-- **Content-quality blocker (partially resolved):** correct-answer positions
-  are now exactly balanced at 96 per position and protected by a hard test.
-  Length bias remains: 364/384 questions (94.8%) have a strictly longest
-  correct answer, and 315/384 exceed the 1.3 correct/average-distractor ratio.
-  Editorial wording remediation remains required before quiz scores can be
-  treated as strong content evidence. This follow-up is tracked but not
-  scheduled; no target date is set. A content author must address it in reviewed
-  batches by trimming over-elaborate correct answers and/or extending thin
-  distractors, not through a mechanical rewrite. The `lengthBias.test.js`
-  unresolved signal is expected until that pass is complete and is not a build
-  blocker.
+- **Content-quality blocker: RESOLVED (2026-07-16).** Correct-answer positions
+  remain exactly balanced at 96 per position under the committed seed and hard
+  test. The answer-length bias has now been editorially remediated across the
+  full bank in eleven reviewed batches (~285 questions edited): over-elaborate
+  correct answers were trimmed to their core action and thin distractors were
+  extended to comparable specificity, preserving each item's substance and
+  single defensible best answer. Bank measurements moved from 364/384 (94.8%)
+  strictly-longest correct and 315 over the 1.3 length ratio to 71/384 (18.5%)
+  strictly-longest and 0 over the ratio. `lengthBias.test.js` now enforces two
+  hard gates: strict-longest <= 40% of the bank with zero ratio flags, and
+  strictly-shortest <= 30% (guarding against over-correction into a
+  shortest-answer tell). Quiz scores can now be treated as reasonable content
+  evidence with respect to answer cues.
 - Production build emits a large-chunk warning because the full local
   content bank is statically bundled. It is non-blocking for the local MVP.
 
@@ -525,12 +539,14 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-Current tracked follow-up: revisit editorial length-bias remediation when
-content-authoring capacity allows; it is not yet scheduled. After the reviewed
-batch pass, enable a hard <=40% strict-longest acceptance gate. Independently,
-review and author knowledge checks and direct question mappings for c001-c010
-before exposing the Foundation Block in a learner-facing Comprehensive Course
-view.
+Length-bias remediation is complete and the hard <=40% strict-longest gate is
+enabled (see Known Issues). The next mission milestones are: expose the
+Foundation Block concept lessons (c001-c010) in a learner-facing Course view
+with knowledge checks and question links, then author the remaining 49 planned
+concept lessons (c011-c059) in module order, complete the formula/glossary
+reference layer, and add targeted questions for named-concept gaps (Scrum,
+EVM calculations, financial metrics, stakeholder models, PMBOK 8 map,
+responsible AI).
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using
