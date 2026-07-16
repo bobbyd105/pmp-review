@@ -5262,5 +5262,644 @@
       "S8",
       "S10"
     ]
+  },
+  {
+    "id": "c043",
+    "lesson_type": "concept",
+    "title": "Identifying and Analyzing Stakeholders",
+    "module": "Stakeholders and Communications",
+    "production_group": "People Block",
+    "pmbok8_domains": [
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Initiating",
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 4: Engage stakeholders"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Identify stakeholders by actual influence and interest, not job titles.",
+      "Apply analysis models: power/interest grid, salience model, engagement assessment matrix.",
+      "Keep stakeholder analysis current as the project and its context change."
+    ],
+    "sections": [
+      {
+        "title": "Identification: Influence, Not Titles",
+        "content": "A **stakeholder** is anyone who affects, or is affected by, the project. Identification fails most often by proxy: relying on the org chart and missing real influence — the regulatory liaison with release-blocking authority, the executive assistant who controls what reaches a decision-maker, the end users represented only by their managers. Managers speaking 'for' users is a convenient assumption that reliably misses what users would actually say.\n\nIdentification is also never finished: new markets, new phases, and reorganizations introduce stakeholders the original register never anticipated."
+      },
+      {
+        "title": "Analysis Models",
+        "content": "Analysis turns the list into strategy. The **power/interest grid** sorts stakeholders into four postures: high power/high interest → *manage closely*; high power/low interest → *keep satisfied*; low power/high interest → *keep informed*; low power/low interest → *monitor*. The **salience model** refines prioritization with three attributes — **power** (ability to impose will), **legitimacy** (appropriateness of involvement), and **urgency** (need for immediate attention) — stakeholders holding all three demand priority.\n\nThe **stakeholder engagement assessment matrix** compares each stakeholder's *current* engagement level (unaware, resistant, neutral, supportive, leading) against the *desired* level — the gaps are the engagement plan's to-do list."
+      },
+      {
+        "title": "Analysis Decays",
+        "content": "Stakeholder positions move: a resistant stakeholder becomes an advocate (keep investing — and consider their influence on other resisters); an engaged one goes quiet (investigate, don't assume satisfaction); committee membership turns over (revisit what 'approved' meant to people no longer in the room). Direction of influence matters too — upward (sponsors, executives), downward (team), outward (vendors, regulators, customers), sideward (peer PMs competing for the same resources).\n\nRe-analysis triggers: phase transitions, scope changes, org changes, and any surprising stakeholder behavior."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Credited options identify by real influence (adding the mid-project regulatory liaison to the register and engaging them now, not at release), analyze before engaging (a fresh analysis for genuinely new stakeholder populations), and treat informal influence as real (the assistant filtering the executive's inputs). Distractors defer to titles, freeze the register at initiation, or route around inconvenient stakeholders."
+      }
+    ],
+    "key_terms": [
+      "stakeholder register",
+      "power/interest grid",
+      "salience model",
+      "engagement assessment matrix",
+      "direction of influence"
+    ],
+    "exam_traps": [
+      "Identifying stakeholders from the org chart while real influence sits elsewhere.",
+      "Letting managers 'represent' end users instead of engaging users directly.",
+      "Treating the initiation-time register as final while the stakeholder landscape shifts."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Power/interest grid",
+        "definition": "Manage closely / keep satisfied / keep informed / monitor — posture by power and interest."
+      },
+      {
+        "term": "Salience model",
+        "definition": "Prioritizes stakeholders by power, legitimacy, and urgency — all three demands priority."
+      },
+      {
+        "term": "Engagement assessment matrix",
+        "definition": "Current vs. desired engagement level per stakeholder — the gaps drive the plan."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A security architect with de facto authority to block release has never been included in planning, because their role has low visibility on the org chart. What does sound stakeholder practice require?",
+        "options": [
+          "Include them in relevant planning now — actual influence over outcomes defines a stakeholder",
+          "Continue as-is, since the charter's stakeholder list controls who participates",
+          "Wait until the release approval stage, when their role becomes formally active",
+          "Ask a more senior architect to informally represent their concerns instead"
+        ],
+        "correct_answer": "Include them in relevant planning now — actual influence over outcomes defines a stakeholder",
+        "explanation": "Stakeholder engagement follows real influence, not chart visibility — discovering blocking concerns at release time maximizes rework. The charter list isn't a permission boundary, deferral guarantees late surprises, and proxy representation loses exactly the specific concerns that can block release."
+      },
+      {
+        "question": "In the power/interest grid, what is the standard posture for a high-power, LOW-interest stakeholder?",
+        "options": [
+          "Manage closely, with detailed hands-on involvement in every project decision",
+          "Monitor only, with no proactive communication effort directed their way",
+          "Keep informed through frequent, detailed working-level status updates",
+          "Keep satisfied — enough attention to stay comfortable, without detail floods"
+        ],
+        "correct_answer": "Keep satisfied — enough attention to stay comfortable, without detail floods",
+        "explanation": "High power demands care, low interest demands economy: keep them satisfied without burying them in detail they don't want — over-consulting powerful-but-uninterested stakeholders breeds disengagement. Manage-closely is for high/high, monitoring is for low/low, and detailed working updates fit high-interest profiles."
+      },
+      {
+        "question": "The project expands into two new geographic markets with entirely new local stakeholder populations. What does the engagement approach require?",
+        "options": [
+          "Extending the existing engagement plan unchanged, since it was formally approved",
+          "Fresh identification and analysis for the new markets — local context changes influence and interest",
+          "Relying on original-market stakeholders to represent the new markets' interests",
+          "Deferring new-market engagement until the expansion work is further along"
+        ],
+        "correct_answer": "Fresh identification and analysis for the new markets — local context changes influence and interest",
+        "explanation": "New populations mean new influence structures, interests, and local considerations the original analysis had no way to capture. Extending the old plan assumes context doesn't matter, borrowed representation substitutes the wrong voices, and deferral repeats the discover-stakeholders-late failure."
+      }
+    ],
+    "related_question_ids": [
+      "q070",
+      "q178",
+      "q196",
+      "q248",
+      "q312"
+    ],
+    "source_refs": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "c044",
+    "lesson_type": "concept",
+    "title": "Engagement and Communications Planning",
+    "module": "Stakeholders and Communications",
+    "production_group": "People Block",
+    "pmbok8_domains": [
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 4: Engage stakeholders"
+      },
+      {
+        "domain": "People",
+        "task": "Task 8: Plan and manage communication"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Choose communication methods — interactive, push, pull — by purpose.",
+      "Apply the channels formula and what it implies about team size.",
+      "Keep the communication plan effective: tailored, current, and structurally sound."
+    ],
+    "sections": [
+      {
+        "title": "Methods and Tailoring",
+        "content": "Three method families: **interactive** (conversation — meetings, calls; best for resolving, deciding, de-escalating), **push** (sent to recipients — email, reports; efficient, but delivery ≠ understanding), and **pull** (recipients retrieve — dashboards, repositories; right for reference material and large audiences).\n\nEffective plans tailor by audience: format to preference (executives skim — lead with what matters; engineers need detail), channel to urgency (critical alerts don't ride routine email), and language to reality (a stakeholder group that can't comfortably read the reports isn't being communicated with). When engagement drops, adapt the plan — repetition of a failing format is not persistence, it's noise."
+      },
+      {
+        "title": "Channels Grow Quadratically",
+        "content": "Communication complexity scales with the square of team size: **channels = n(n−1)/2**. Five people → 10 channels; ten people → 45; doubling the team more than quadruples the pathways where misunderstanding can live.\n\nThe implication isn't 'keep teams tiny' — it's that larger groups need deliberate structure: defined channels, documented decisions, and information radiators, because informal osmosis stops scaling. Symptoms of osmosis failure: co-located subgroups deciding in hallways while remote members learn after the fact, and important decisions living in nobody-knows-which of five tools."
+      },
+      {
+        "title": "Structural Soundness",
+        "content": "Communication plans need maintenance and failure-mode design: the recipient list must track the *current* stakeholder register, not initiation's; urgent issues need a defined escalation path that doesn't depend on one person's availability (single points of contact fail on weekends); and decisions need a documented home every member can access, regardless of location or time zone.\n\nMeasurement closes the loop: declining open rates, missed messages, and 'I never saw that' incidents are data about the plan, and the credited response is diagnosis and adaptation, not blame or volume."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Match method to purpose (de-escalation → interactive, never email); fix structure, not people (missed messages across five tools → consolidate channels; hallway decisions → documented decision channel); and adapt to evidence (skimmed reports → restructure for skimmability; disengaged group → investigate and tailor). The wrong answers add volume, add tools, or add blame."
+      }
+    ],
+    "key_terms": [
+      "interactive communication",
+      "push communication",
+      "pull communication",
+      "communication channels",
+      "n(n-1)/2",
+      "escalation path",
+      "information radiator"
+    ],
+    "exam_traps": [
+      "Sending more email into a channel that's demonstrably failing to reach its audience.",
+      "Leaving urgent escalation dependent on one person's availability.",
+      "Forgetting channel math — team growth quadratically multiplies communication pathways."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Communication channels",
+        "definition": "n(n−1)/2 — pathways grow with the square of team size."
+      },
+      {
+        "term": "Interactive communication",
+        "definition": "Two-way conversation — the method for resolving, deciding, and de-escalating."
+      },
+      {
+        "term": "Pull communication",
+        "definition": "Recipients retrieve at need — dashboards and repositories for reference material."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A project team grows from 5 to 10 people. How do communication channels change?",
+        "options": [
+          "They double from 10 to 20, tracking the headcount increase linearly",
+          "They rise from 10 to 45 — more than quadrupling as headcount doubles",
+          "They rise from 5 to 10, adding exactly one channel for each new person",
+          "They are unaffected — channel count depends on tools rather than people"
+        ],
+        "correct_answer": "They rise from 10 to 45 — more than quadrupling as headcount doubles",
+        "explanation": "n(n−1)/2: 5×4/2 = 10 and 10×9/2 = 45. The quadratic growth is the point — informal communication that worked at five people structurally cannot survive at ten without deliberate channels and documentation."
+      },
+      {
+        "question": "Critical updates keep getting buried in stakeholders' overflowing inboxes. Which response fixes the actual problem?",
+        "options": [
+          "Send each critical update several times to improve the odds that one lands",
+          "Stop written updates entirely and rely on recall from the live meetings",
+          "Evaluate a more visible channel or format — the current one isn't cutting through",
+          "Keep the current approach, since email is the organization's standard tool"
+        ],
+        "correct_answer": "Evaluate a more visible channel or format — the current one isn't cutting through",
+        "explanation": "A channel that demonstrably fails its critical messages needs rethinking — distinct alerts, a dashboard, or format changes. Repetition amplifies the very flood burying the messages, dropping written records loses the durable reference, and 'it's the standard' is how failing channels persist."
+      },
+      {
+        "question": "A critical production issue arose over a weekend; the communication plan routes all urgent escalation through the project manager, who was unreachable. What is the structural fix?",
+        "options": [
+          "The project manager commits to unlimited availability going forward",
+          "The team waits for the project manager in any future urgent situation",
+          "Urgent issues get downgraded to routine handling when the PM is away",
+          "A defined backup escalation contact and process enters the communication plan"
+        ],
+        "correct_answer": "A defined backup escalation contact and process enters the communication plan",
+        "explanation": "One person as the sole urgent path is a single point of failure — the durable fix is structural: a named backup and process. Unlimited personal availability is neither sustainable nor reliable, and waiting or downgrading during real emergencies just re-runs this incident."
+      }
+    ],
+    "related_question_ids": [
+      "q074",
+      "q100",
+      "q116",
+      "q122",
+      "q182",
+      "q200",
+      "q309",
+      "q311"
+    ],
+    "source_refs": [
+      "S8",
+      "S9"
+    ]
+  },
+  {
+    "id": "c045",
+    "lesson_type": "concept",
+    "title": "Resource Planning and Acquisition",
+    "module": "Resources, Teams, and Leadership",
+    "production_group": "People Block",
+    "pmbok8_domains": [
+      "Resources"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 4: Plan and manage resources"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Plan both human and physical resources, including lead times and calendars.",
+      "Resolve overallocation through leveling, smoothing, and cross-project negotiation.",
+      "Keep resource assumptions honest: capability differences, ramp-up, and known absences."
+    ],
+    "sections": [
+      {
+        "title": "More Than Staffing",
+        "content": "Resource planning covers people *and* physical resources — equipment, facilities, materials. Physical resources carry their own planning obligations: **procurement lead times** built into the schedule (discovering a long-lead component the week it's needed is a planning failure, not bad luck), shared assets coordinated across teams before conflicts hit, and **resource calendars** capturing real availability — including mandated leave, holidays, and part-time allocations.\n\nKnown future constraints (an announced facility renovation, a required leave block) are planning inputs the moment they're known — not surprises to react to when they arrive."
+      },
+      {
+        "title": "Overallocation and Its Cures",
+        "content": "A resource committed beyond capacity — 150% across three projects, or 100% here plus 50% there — is a planning conflict that never resolves itself; someone silently under-delivers. Within a project, **resource leveling** delays or resequences work to fit real capacity (often extending the schedule — an honest extension beats a fictional date); **resource smoothing** adjusts within existing float, protecting the end date but fixing less. Across projects, the conflict exceeds any one PM's authority: it goes to the resource/portfolio owner or the sponsors for a joint priority call.\n\nThe anti-patterns: splitting a person evenly regardless of priorities, assigning by who asked first, and asking the individual to just absorb both commitments."
+      },
+      {
+        "title": "Honest Capacity Assumptions",
+        "content": "Plans quietly embed capability assumptions worth auditing: headcount is not capacity (junior and senior output differ; two juniors don't equal the departed expert whose pace set the estimates); ramp-up time is real and varies with background; and matching *skills* to tasks beats assigning whoever's free — availability-based assignment leaves quality and efficiency on the table. When the organization's staffing model changes (flexible reassignment every few months), the plan changes too: onboarding time and knowledge-transfer checkpoints become recurring line items, not surprises."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Signals: a long-lead item discovered late → the lesson is identifying lead times during planning; a cross-project resource conflict → escalate for joint prioritization, don't split arbitrarily; a departed expert's estimates → reassess against actual staff; a mandated absence not in the schedule → plan around it now (cross-train, redistribute, adjust), never pressure the person to skip entitled leave."
+      }
+    ],
+    "key_terms": [
+      "resource calendar",
+      "lead time",
+      "resource leveling",
+      "resource smoothing",
+      "overallocation",
+      "ramp-up",
+      "skills matching"
+    ],
+    "exam_traps": [
+      "Treating headcount as capacity while capability and ramp-up differences are known.",
+      "Splitting an overallocated person evenly between projects instead of getting priorities decided.",
+      "Reacting to known future constraints (leave, renovations, lead times) only when they arrive."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Resource leveling",
+        "definition": "Resequencing or delaying work to fit real resource capacity — may extend the schedule."
+      },
+      {
+        "term": "Resource smoothing",
+        "definition": "Adjusting within existing float — protects the end date but resolves less."
+      },
+      {
+        "term": "Overallocation",
+        "definition": "Commitment beyond capacity — a planning conflict that someone silently absorbs unless resolved."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Two projects need the same senior DBA at full capacity for the same three weeks, and neither schedule has slack. What is the credited first move?",
+        "options": [
+          "Escalate to the portfolio owner or both sponsors for a joint priority decision",
+          "Split the DBA's time evenly between projects so neither one feels disadvantaged",
+          "Assign the DBA to whichever of the two projects submitted its request first",
+          "Ask the DBA to work extended hours and personally cover both commitments"
+        ],
+        "correct_answer": "Escalate to the portfolio owner or both sponsors for a joint priority decision",
+        "explanation": "A genuine cross-project conflict with no slack exceeds either PM's authority — it needs a priority call from whoever sees both efforts. Even splits under-resource both projects, first-come ignores business priority, and 'just work more' converts a planning failure into personal burnout."
+      },
+      {
+        "question": "A construction milestone depends on materials with a long procurement lead time that never made it into the schedule, discovered the week the materials are needed. What is the planning lesson?",
+        "options": [
+          "Order all materials at project start regardless of when they're needed",
+          "Identify long-lead resource needs during planning and build them into the schedule",
+          "Add a standard two-week buffer to every milestone as general protection",
+          "Treat material delays as force majeure outside project accountability"
+        ],
+        "correct_answer": "Identify long-lead resource needs during planning and build them into the schedule",
+        "explanation": "Physical-resource lead times are plannable, knowable inputs — this failure was in planning, not luck. Ordering everything immediately ties up capital and storage; generic buffers are imprecise insurance against a specific, identifiable need; and 'force majeure' mislabels a foreseeable omission."
+      },
+      {
+        "question": "Duration estimates were built around a senior expert who has left; two less experienced people now split that work. The person-hours available are similar. What should happen to the estimates?",
+        "options": [
+          "Nothing — similar total person-hours means similar total capacity",
+          "Add a blanket project-wide buffer without touching the specific estimates",
+          "Reassess the affected activities against the actual, current team's pace and capability",
+          "Assume the two replacements will jointly outpace the original expert"
+        ],
+        "correct_answer": "Reassess the affected activities against the actual, current team's pace and capability",
+        "explanation": "Estimates encode who does the work — expertise and pace don't transfer by headcount arithmetic. Hour-equivalence is the exact fallacy, a generic buffer smears the correction across unaffected work, and assuming the replacements outpace the expert is optimism, not analysis."
+      }
+    ],
+    "related_question_ids": [
+      "q028",
+      "q035",
+      "q060",
+      "q127",
+      "q186",
+      "q337",
+      "q338"
+    ],
+    "source_refs": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "c046",
+    "lesson_type": "concept",
+    "title": "Team Leadership and Development",
+    "module": "Resources, Teams, and Leadership",
+    "production_group": "People Block",
+    "pmbok8_domains": [
+      "Resources"
+    ],
+    "focus_areas": [
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 3: Lead the project team"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Apply the Tuckman stages and the leadership behavior each stage needs.",
+      "Build team foundations: working agreements, ownership clarity, development opportunity.",
+      "Lead distributed teams deliberately — equal access, designed connection."
+    ],
+    "sections": [
+      {
+        "title": "Tuckman's Stages, Leader's Dial",
+        "content": "Teams develop through **forming** (polite, guarded, orienting — needs clear direction and deliberate trust-building), **storming** (friction over approaches and roles — needs facilitation and conflict navigation, not suppression), **norming** (working agreements settle — needs reinforcement), **performing** (self-directed, high output — needs delegation and light touch), and **adjourning** (wrap-up — needs closure and recognition).\n\nThe leadership dial moves with the stage: directive early, facilitative through friction, delegating at maturity. The two classic errors are stage-blind: staying directive with a performing team (reads as distrust, throttles the performance) and going hands-off with a forming one (abandonment, not empowerment). Regression happens too — a re-formed or reorganized team revisits earlier stages."
+      },
+      {
+        "title": "Foundations That Prevent Problems",
+        "content": "New teams skip foundations at their own cost: **working agreements** (roles, communication norms, definition of done) turn miscommunication and duplicated work from chronic into rare; **ownership clarity** for cross-cutting tasks prevents the everyone's-job-is-no-one's-job pattern behind many missed deadlines; and **development** — matching stretch opportunities to skill and potential, not just to who volunteers loudest — keeps quieter members growing instead of stagnating in routine work.\n\nBuilding capability internally (upskilling with lead time) frequently beats renting it, when timeline allows and the organization wants to retain the capability."
+      },
+      {
+        "title": "Distributed Teams Need Design",
+        "content": "Remote and hybrid teams lose the accidental infrastructure of co-location — hallway decisions, osmotic context, spontaneous rapport — and it must be rebuilt deliberately: decisions documented where every member can reach them regardless of location; meeting times that don't structurally disadvantage the same time zone every week (rotate, record, or split); and informal connection created through optional structures, since it no longer happens by proximity. 'Remote members always find out last' is a design failure, not a geography fact."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Stage questions reward matching behavior to development stage — clear direction for forming, facilitation for storming, delegation for performing. Team-problem questions reward structural fixes (agreements, ownership, channels) over exhortation or blame. Distributed-team questions reward equal-access design over 'ask the office folks to relay things.'"
+      }
+    ],
+    "key_terms": [
+      "Tuckman stages",
+      "forming",
+      "storming",
+      "performing",
+      "working agreements",
+      "psychological safety",
+      "distributed teams"
+    ],
+    "exam_traps": [
+      "Applying performing-stage delegation to a forming team, or forming-stage direction to a performing one.",
+      "Fixing coordination problems with more meetings instead of working agreements and ownership.",
+      "Letting informal, location-based information flow decide who on a distributed team stays informed."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Forming",
+        "definition": "Polite, guarded orientation — the stage needing clear direction and deliberate trust-building."
+      },
+      {
+        "term": "Storming",
+        "definition": "Friction over roles and approaches — needs facilitation, not suppression; a normal stage, not a failure."
+      },
+      {
+        "term": "Working agreements",
+        "definition": "Explicit roles, norms, and definition of done — the structural cure for chronic miscommunication."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A newly formed team is polite but won't challenge each other's ideas, producing shallow design discussions. Which stage is this, and what does the leader do?",
+        "options": [
+          "Performing — delegate more authority so the team can self-organize",
+          "Storming — mediate the underlying disagreements between members directly",
+          "Norming — step back and let the established norms operate on their own",
+          "Forming — give clear direction and deliberately build the trust that enables challenge"
+        ],
+        "correct_answer": "Forming — give clear direction and deliberately build the trust that enables challenge",
+        "explanation": "Guarded politeness with no productive disagreement is forming: members are still orienting and don't yet feel safe to push. The leader supplies structure and builds psychological safety so the team can storm productively. The other options prescribe behaviors for stages this team hasn't reached."
+      },
+      {
+        "question": "A team needs a machine-learning skill nobody has; work starts in three months, budget is tight, and the organization wants to keep the capability afterward. What is the strongest option?",
+        "options": [
+          "Delay the project until a qualified specialist can be recruited externally",
+          "Upskill an interested internal team member through training and mentoring",
+          "Hire an external contractor with the skill for the project's duration",
+          "Outsource the machine-learning work package to a specialist vendor"
+        ],
+        "correct_answer": "Upskill an interested internal team member through training and mentoring",
+        "explanation": "Three months of lead time, a constrained budget, and a retention goal all point the same direction: build the capability internally. Contractors and vendors cost more and take the knowledge with them, and delaying is unnecessary given the runway available."
+      },
+      {
+        "question": "Remote team members repeatedly learn about decisions after the fact, because discussion happens informally among co-located colleagues. What is the credited fix?",
+        "options": [
+          "Ask the co-located members to remember to relay decisions informally each time",
+          "Require the whole team to relocate to a single office for the project's duration",
+          "Establish norms and tools giving every member equal access to decisions",
+          "Document decisions only once final, to avoid slowing down the office group"
+        ],
+        "correct_answer": "Establish norms and tools giving every member equal access to decisions",
+        "explanation": "Location-based information inequality is a structural problem — the fix is structural: documented decisions in shared channels, norms that move decisions out of hallways. Informal relay preserves the inequity with extra steps, relocation is disproportionate, and after-the-fact documentation is precisely the current failure."
+      }
+    ],
+    "related_question_ids": [
+      "q002",
+      "q004",
+      "q017",
+      "q158",
+      "q195",
+      "q221",
+      "q308"
+    ],
+    "source_refs": [
+      "S3",
+      "S8",
+      "S9"
+    ]
+  },
+  {
+    "id": "c047",
+    "lesson_type": "concept",
+    "title": "Conflict Resolution and Negotiation",
+    "module": "Resources, Teams, and Leadership",
+    "production_group": "People Block",
+    "pmbok8_domains": [
+      "Resources",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Executing"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "People",
+        "task": "Task 2: Manage conflicts"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Apply the five conflict approaches and know when each fits.",
+      "Resolve conflict with objective criteria, close to the source, at the root.",
+      "Negotiate on interests rather than positions."
+    ],
+    "sections": [
+      {
+        "title": "Five Approaches, One Default",
+        "content": "The five classic responses: **collaborate/problem-solve** (dig into the underlying issue for a durable win-win — the default when time and stakes allow), **compromise** (each side yields; moderately satisfying, moderately durable), **smooth/accommodate** (emphasize agreement, cede the point — for preserving relationships on low-stakes issues), **force/direct** (impose — for emergencies and non-negotiables like safety, at relationship cost), and **withdraw/avoid** (postpone or exit — occasionally right for cooling off, never a resolution).\n\nCollaboration earns its default status because it alone resolves the *cause*; everything else manages the symptom at varying cost."
+      },
+      {
+        "title": "Resolution Discipline",
+        "content": "Three principles do most of the work. **Objective criteria**: steer technical disputes to evaluation against requirements, data, and agreed standards — defensible, repeatable, and it depersonalizes the fight. **Close to the source**: those nearest the disagreement resolve it, with facilitation; escalation comes after genuine attempts fail or when authority is truly exceeded. **Root cause**: recurring conflicts have a generator — a values difference, a structural ambiguity, suppressed dissent — and settling instances while the generator persists guarantees sequels.\n\nWatch the aftermath too: an agreement reached because someone felt outnumbered isn't resolution — check in, and reopen if it isn't durable. And when conflict turns personal (public jabs, disengagement), the interpersonal harm needs its own direct attention, separate from the substantive issue."
+      },
+      {
+        "title": "Interests, Not Positions",
+        "content": "A **position** is what someone demands; an **interest** is why they demand it. Positions collide ('I need the resource in March' vs. 'I need them in March too'); interests often don't (one needs a report generated, the other needs migration expertise — divisible). Negotiating on interests — asking *why* until the real needs surface, then designing options that satisfy both — turns zero-sum standoffs into solvable design problems.\n\nWith external parties (vendors, contractors), the same logic applies, with influence substituting for authority: clarify the shared interest (a working deliverable, a continuing relationship), and use the contract as a framework rather than a weapon."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Defaults: collaborate when feasible; objective criteria for technical disputes; direct engagement before escalation; root cause for anything recurring. Recognize the misfits — forcing a resolvable disagreement, avoiding an active blocker, splitting the difference on a safety issue — and the aftermath traps: treating suppressed agreement as consensus, and leaving personal damage unaddressed because the technical question got settled."
+      }
+    ],
+    "key_terms": [
+      "collaborate",
+      "compromise",
+      "smooth",
+      "force",
+      "withdraw",
+      "objective criteria",
+      "interests vs positions",
+      "root cause"
+    ],
+    "exam_traps": [
+      "Escalating a conflict before those closest to it have genuinely attempted resolution.",
+      "Settling recurring conflict instances while the underlying generator keeps producing them.",
+      "Reading an outnumbered stakeholder's silence as genuine agreement."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Collaborate/problem-solve",
+        "definition": "Dig into the underlying issue for a durable resolution — the default when time and stakes allow."
+      },
+      {
+        "term": "Objective criteria",
+        "definition": "Requirements, data, and agreed standards as the referee for technical disputes."
+      },
+      {
+        "term": "Interests vs. positions",
+        "definition": "Positions are demands; interests are the reasons — negotiate the reasons."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Two senior developers' technical disagreement has stalled sprint work; both have valid arguments. What is the credited first move?",
+        "options": [
+          "Escalate to the sponsor so an authoritative decision unblocks the work",
+          "Facilitate an evaluation of both options against documented requirements and criteria",
+          "Reassign one developer so the disagreement physically cannot continue",
+          "Decide personally as project manager, since the schedule is slipping"
+        ],
+        "correct_answer": "Facilitate an evaluation of both options against documented requirements and criteria",
+        "explanation": "Technical disputes between capable people resolve best against objective criteria, close to the source — it settles this dispute and models how to settle the next one. Escalation and PM fiat move the decision away from the expertise, and reassignment avoids rather than resolves."
+      },
+      {
+        "question": "Two stakeholders each cite a different informal promise made by different project staff. How should the priority conflict be resolved?",
+        "options": [
+          "Honor whichever informal promise was chronologically made first",
+          "Let the two stakeholders negotiate it between themselves without facilitation",
+          "Escalate immediately to the sponsor before attempting any resolution",
+          "Facilitate resolution against the project's documented priority criteria"
+        ],
+        "correct_answer": "Facilitate resolution against the project's documented priority criteria",
+        "explanation": "Documented criteria give a defensible, repeatable basis that also fixes the root cause — priorities being set informally. First-promise-wins rewards process bypass, unfacilitated negotiation between the aggrieved rarely lands well, and immediate escalation skips the resolution the PM can facilitate."
+      },
+      {
+        "question": "In interest-based negotiation, what distinguishes an interest from a position?",
+        "options": [
+          "A position is what someone demands; an interest is why they need it",
+          "An interest is the opening offer; a position is the final settlement",
+          "Positions are held by buyers while interests belong to sellers",
+          "The two terms describe the same thing at different meeting stages"
+        ],
+        "correct_answer": "A position is what someone demands; an interest is why they need it",
+        "explanation": "The demand (position) is one proposed way of meeting the underlying need (interest) — and different interests can often both be satisfied where identical positions cannot. The other options invent distinctions — offer sequence, buyer/seller roles, meeting stages — that aren't the concept."
+      }
+    ],
+    "related_question_ids": [
+      "q001",
+      "q043",
+      "q068",
+      "q111",
+      "q157",
+      "q176",
+      "q246",
+      "q303"
+    ],
+    "source_refs": [
+      "S2",
+      "S8",
+      "S9"
+    ]
   }
 ]
