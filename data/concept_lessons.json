@@ -4006,5 +4006,1261 @@
       "S8",
       "S5"
     ]
+  },
+  {
+    "id": "c033",
+    "lesson_type": "concept",
+    "title": "Requirements Elicitation and Analysis",
+    "module": "Scope and Quality",
+    "production_group": "Scope and Quality Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Stakeholders"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 2: Develop and manage project scope"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Name the major requirement categories and why classification matters.",
+      "Match elicitation techniques to the information being sought.",
+      "Explain traceability: every requirement linked to its origin and its verification."
+    ],
+    "sections": [
+      {
+        "title": "Requirement Categories",
+        "content": "Requirements come in layers, and confusing them causes real defects: **business requirements** (why the organization is doing this — objectives, measurable outcomes), **stakeholder requirements** (what specific groups need), **solution requirements**, split into **functional** (what the product does) and **nonfunctional** (how well — performance, security, usability), **transition requirements** (what's needed to move from old to new — training, migration), and **project requirements** (conditions the project itself must meet, like compliance milestones).\n\nNonfunctional and transition requirements are the chronically forgotten ones — products that work but can't handle load, and go-lives with no one trained."
+      },
+      {
+        "title": "Elicitation Is Active Work",
+        "content": "Requirements are *elicited*, not collected — stakeholders rarely hand over complete, consistent, testable statements. Techniques match the situation: **interviews** for depth from individuals; **workshops** for cross-functional reconciliation (conflicts surface and resolve in the room); **surveys** for breadth at scale; **observation** for what people actually do (which differs from what they say); **prototypes** for reactions to something concrete when words fail; **document analysis** for rules buried in existing systems and regulations.\n\nAmbiguity is the enemy: a requirement two reasonable developers implement contradictorily wasn't a requirement — it was a coin toss. Testable, specific language is the standard."
+      },
+      {
+        "title": "Traceability",
+        "content": "A **requirements traceability matrix** links each requirement backward to its origin (who needs it, which business objective it serves) and forward to design, build, and test. Traceability answers two questions that otherwise generate disputes: 'why is this requirement here?' (origin) and 'how do we know it's met?' (verification). It also exposes orphans — requirements no objective justifies, and objectives no requirement serves."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Scenario signals: contradictory implementations trace back to ambiguous requirements — clarify and formally update the requirement, don't just pick a winner. Stakeholders insisting on undocumented needs signal elicitation gaps — validate against the documented baseline, route genuinely new needs through change control. And 'the requirements were complete but users hate it' usually means nonfunctional or usability requirements never got captured."
+      }
+    ],
+    "key_terms": [
+      "functional requirements",
+      "nonfunctional requirements",
+      "transition requirements",
+      "elicitation",
+      "traceability matrix",
+      "testable requirement"
+    ],
+    "exam_traps": [
+      "Capturing functional requirements thoroughly while nonfunctional (performance, usability, security) go unstated.",
+      "Resolving an ambiguous requirement informally between developers without fixing the documentation.",
+      "Treating stakeholder statements as finished requirements without analysis for conflicts, gaps, and testability."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Nonfunctional requirement",
+        "definition": "How well the product must perform — performance, security, usability, reliability."
+      },
+      {
+        "term": "Transition requirement",
+        "definition": "What's needed to move from current to future state — training, migration, cutover."
+      },
+      {
+        "term": "Requirements traceability matrix",
+        "definition": "Links each requirement to its origin and its verification — exposing orphans in both directions."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A delivered system does everything specified but collapses under normal user load. Which requirements category was most likely neglected?",
+        "options": [
+          "Nonfunctional requirements — performance was never specified, so it was never built or tested",
+          "Business requirements — the organization's objectives were clearly never documented",
+          "Transition requirements — the cutover plan obviously lacked a training component",
+          "Project requirements — a compliance milestone must have been missed during execution"
+        ],
+        "correct_answer": "Nonfunctional requirements — performance was never specified, so it was never built or tested",
+        "explanation": "Functionality worked, so functional requirements were captured; what failed is how well the system performs under load — the definition of a nonfunctional gap. Business objectives, training, and compliance milestones don't explain a load collapse."
+      },
+      {
+        "question": "Stakeholders from four departments hold conflicting expectations about a shared feature. Which elicitation technique best surfaces and resolves the conflict?",
+        "options": [
+          "Separate structured interviews with each department, documented independently",
+          "A facilitated cross-functional workshop where the conflicts surface and reconcile",
+          "A broad anonymous survey quantifying each department's stated preference",
+          "Observation sessions covering each department's current workflow in isolation"
+        ],
+        "correct_answer": "A facilitated cross-functional workshop where the conflicts surface and reconcile",
+        "explanation": "Conflicting cross-group expectations need the groups in one room where the conflict becomes visible and negotiable — that's the workshop's specific strength. Separate interviews, surveys, and isolated observation each capture the positions but leave the reconciliation undone."
+      },
+      {
+        "question": "Two developers implemented the same documented requirement in contradictory ways; integration testing caught it. Beyond fixing the code, what does good requirements practice demand?",
+        "options": [
+          "Assigning both of the developers to a requirements-writing refresher course",
+          "Accepting whichever of the two implementations was finished first as standard",
+          "Letting the developers agree verbally on one interpretation and moving on quickly",
+          "Clarifying and formally updating the requirement, then verifying both against it"
+        ],
+        "correct_answer": "Clarifying and formally updating the requirement, then verifying both against it",
+        "explanation": "The requirement itself was ambiguous — fix the source, or the same ambiguity bites the next reader. Verbal agreement leaves the documented ambiguity alive; first-finished is arbitrary; and training may help someday but doesn't repair this requirement."
+      }
+    ],
+    "related_question_ids": [
+      "q058",
+      "q184",
+      "q330"
+    ],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c034",
+    "lesson_type": "concept",
+    "title": "Product Scope vs. Project Scope",
+    "module": "Scope and Quality",
+    "production_group": "Scope and Quality Block",
+    "pmbok8_domains": [
+      "Scope"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 2: Develop and manage project scope"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish product scope (the deliverable's features) from project scope (the work to deliver it).",
+      "Explain why project scope always exceeds product scope.",
+      "Recognize scope creep and gold plating as distinct scope failures."
+    ],
+    "sections": [
+      {
+        "title": "Two Scopes, One Project",
+        "content": "**Product scope** is the set of features and functions of the deliverable — what the thing *is*. **Project scope** is all the work required to deliver it — which includes building the product *plus* everything around it: planning, testing, training, documentation, deployment, management itself.\n\nProject scope therefore always exceeds product scope. Estimating only the product work — and forgetting testing, migration, training, coordination — is a classic underestimation pattern."
+      },
+      {
+        "title": "Verification Differs Too",
+        "content": "The two scopes are verified differently: product scope is measured against the **requirements** (does the product do what was specified?); project scope is measured against the **project management plan** (was all the agreed work performed?). A project can complete its product scope while leaving project scope unfinished — the system works, but nobody was trained and the documentation doesn't exist."
+      },
+      {
+        "title": "Creep and Gold Plating",
+        "content": "**Scope creep** is uncontrolled growth — additions that never passed through change control (or backlog prioritization in adaptive work), each 'small tweak' individually harmless and collectively baseline-destroying. **Gold plating** is the team's own contribution: adding unrequested extras 'to delight the customer.' Both are scope failures — gold plating included, because unrequested work spends budget and adds risk for value nobody validated, and the customer now owns features they never asked to maintain.\n\nThe discipline is the same for both: scope changes go through the process, whoever proposes them — stakeholder or developer."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Watch for the estimation trap (product work estimated, project work forgotten), the 'it's just a small addition' pattern (creep), and the well-intentioned engineer adding an unrequested improvement (gold plating — credited response: route it through the process, don't quietly ship it). In adaptive contexts, the backlog and definition of done carry the same discipline."
+      }
+    ],
+    "key_terms": [
+      "product scope",
+      "project scope",
+      "scope creep",
+      "gold plating",
+      "verification"
+    ],
+    "exam_traps": [
+      "Estimating the product work and forgetting the project work — testing, training, documentation, coordination.",
+      "Treating gold plating as generosity — unrequested extras spend budget and add unvalidated risk.",
+      "Letting 'small' additions bypass control because each one individually seems harmless."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Product scope",
+        "definition": "The features and functions of the deliverable — verified against requirements."
+      },
+      {
+        "term": "Project scope",
+        "definition": "All work required to deliver the product — verified against the plan."
+      },
+      {
+        "term": "Gold plating",
+        "definition": "Team-added unrequested extras — a scope failure even when well-intentioned."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "An estimate covers designing and building the product but omits testing cycles, user training, and deployment work. Which concept explains the gap?",
+        "options": [
+          "Gold plating — the estimate includes more than was requested",
+          "Scope creep — requirements grew during the estimation process",
+          "Rolling wave planning — the omitted work will be estimated later",
+          "Project scope exceeds product scope — the work around the product was forgotten"
+        ],
+        "correct_answer": "Project scope exceeds product scope — the work around the product was forgotten",
+        "explanation": "Testing, training, and deployment are project scope: required work that isn't part of the product's feature set. Estimating only product work is the classic underestimation pattern. Nothing was added (so neither creep nor gold plating), and rolling wave defers detail deliberately — this omission wasn't deliberate."
+      },
+      {
+        "question": "A developer adds an unrequested 'bonus' export feature, confident the customer will love it. Why is this a scope failure rather than generosity?",
+        "options": [
+          "Because the exam simply forbids any feature not written in the contract",
+          "Because customers never actually value features they didn't request",
+          "Because developers lack the skill to judge which features have value",
+          "Because it spends budget and adds unvalidated risk and maintenance no one approved"
+        ],
+        "correct_answer": "Because it spends budget and adds unvalidated risk and maintenance no one approved",
+        "explanation": "Gold plating consumes real resources, introduces defect and integration risk nobody assessed, and hands the customer a maintenance obligation they never chose — regardless of good intent. It isn't about rules for their own sake, customer ingratitude, or developer judgment; it's that value and cost decisions belong to the process."
+      },
+      {
+        "question": "A stakeholder frames a request as 'just a small tweak,' but technical review shows significant architectural rework. What should drive the decision about the change?",
+        "options": [
+          "The stakeholder's framing, since they own the requirement being changed",
+          "The actual technical impact analysis, not the requester's characterization",
+          "The team's available slack — small tweaks can proceed when capacity exists",
+          "The precedent — if past tweaks were absorbed, this one should be too"
+        ],
+        "correct_answer": "The actual technical impact analysis, not the requester's characterization",
+        "explanation": "Requesters often genuinely underestimate what looks simple from outside; decisions must rest on real analyzed impact. Framing isn't evidence, spare capacity doesn't make unassessed rework free, and 'we absorbed the last one' is how creep compounds rather than a justification."
+      }
+    ],
+    "related_question_ids": [
+      "q202",
+      "q280"
+    ],
+    "source_refs": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "c035",
+    "lesson_type": "concept",
+    "title": "Scope Statements, WBS, and the Scope Baseline",
+    "module": "Scope and Quality",
+    "production_group": "Scope and Quality Block",
+    "pmbok8_domains": [
+      "Scope"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 2: Develop and manage project scope"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "List the components of a scope statement, including exclusions.",
+      "Explain WBS decomposition rules: deliverable-oriented, 100% rule, work packages.",
+      "Assemble the scope baseline and explain what it controls."
+    ],
+    "sections": [
+      {
+        "title": "The Scope Statement",
+        "content": "The **project scope statement** documents what the project will deliver and the boundaries around it: the product scope description, major **deliverables**, **acceptance criteria**, **exclusions** (what the project will *not* do), assumptions, and constraints.\n\nExclusions are the underrated component: writing down what's out of scope prevents the later dispute where a stakeholder 'always assumed' something was included. Boundaries protect both sides."
+      },
+      {
+        "title": "The WBS",
+        "content": "The **work breakdown structure** decomposes the total scope into a deliverable-oriented hierarchy, bottoming out in **work packages** — units small enough to estimate, assign, and verify. Two rules govern it. The **100% rule**: the WBS captures *all* the work, and each level sums exactly to its parent — nothing extra, nothing missing. And **deliverable orientation**: elements are outcomes ('approved design,' 'migrated data'), not vague activities.\n\nA work package like 'ongoing support' with no deliverable and no completion criterion violates the design — it can't be estimated or verified and needs further decomposition. The **WBS dictionary** carries each element's details: boundaries, acceptance criteria, owner."
+      },
+      {
+        "title": "The Scope Baseline",
+        "content": "The **scope baseline** = approved scope statement + WBS + WBS dictionary. It's the reference against which scope performance is measured and deliverables are validated — and like every baseline, it changes only through change control. When a stakeholder claims a deliverable is incomplete, the baseline is what you check: is the expectation documented, or is it new scope arriving in the form of a complaint?"
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Scenario signals: disputes about 'what the price includes' trace to missing exclusions or vague statements; unestimatable work traces to under-decomposed packages; and 'the stakeholder expected X but it's nowhere in the documentation' is resolved against the baseline, with genuinely new needs routed through change control — not silently added, not dismissed."
+      }
+    ],
+    "key_terms": [
+      "scope statement",
+      "exclusions",
+      "WBS",
+      "100% rule",
+      "work package",
+      "WBS dictionary",
+      "scope baseline"
+    ],
+    "exam_traps": [
+      "Omitting exclusions and paying for it later in 'I assumed that was included' disputes.",
+      "Writing activity-shaped WBS entries ('ongoing support') that can't be estimated or verified.",
+      "Forgetting the scope baseline is three things — statement, WBS, and dictionary — not just the statement."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Scope baseline",
+        "definition": "Approved scope statement + WBS + WBS dictionary — changed only through change control."
+      },
+      {
+        "term": "100% rule",
+        "definition": "The WBS captures all the work and only the work — each level sums exactly to its parent."
+      },
+      {
+        "term": "Work package",
+        "definition": "The lowest WBS level — small enough to estimate, assign, and verify completion."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A stakeholder insists a capability is missing from a deliverable, but it appears nowhere in the scope statement, requirements, or WBS. What is the credited handling?",
+        "options": [
+          "Add the capability immediately, since stakeholder satisfaction is the project goal",
+          "Validate against the documented baseline; route the new need through change control",
+          "Refuse to discuss the request at all, since it was never documented anywhere",
+          "Ask the stakeholder to escalate directly to the sponsor if they feel strongly"
+        ],
+        "correct_answer": "Validate against the documented baseline; route the new need through change control",
+        "explanation": "The baseline is the arbiter of what was agreed; an undocumented expectation, however sincere, is new scope if accepted — which means change control. Silent addition is creep, refusal to engage burns the relationship over a solvable gap, and premature escalation outsources a conversation the PM owns."
+      },
+      {
+        "question": "A WBS entry reads 'ongoing support' with no deliverable and no completion criterion. What does WBS design require?",
+        "options": [
+          "Leaving it — support entries are a customary exception to the rules",
+          "Deleting it, since work that resists estimation doesn't belong in scope",
+          "Decomposing it into specific deliverables with completion criteria",
+          "Estimating it by analogy to support entries on previous projects"
+        ],
+        "correct_answer": "Decomposing it into specific deliverables with completion criteria",
+        "explanation": "Work packages must be deliverable-oriented and verifiable; a vague activity bucket can't be estimated, assigned, or checked complete. Deleting real work violates the 100% rule from the other direction, analogy-estimating a vague bucket compounds the vagueness, and there is no customary exception."
+      },
+      {
+        "question": "Why do exclusions belong in a scope statement when they describe work the project will NOT do?",
+        "options": [
+          "They pad the document so the scope section looks appropriately thorough",
+          "They document boundary decisions before differing assumptions become disputes",
+          "They exist only for fixed-price contracts, where scope defines the price",
+          "They give the team grounds to reject any future stakeholder request"
+        ],
+        "correct_answer": "They document boundary decisions before differing assumptions become disputes",
+        "explanation": "Explicit exclusions convert silent, conflicting assumptions into an agreed boundary while agreement is cheap. They matter in every contracting and delivery model, they're substance rather than padding, and they inform — not weaponize — future change discussions, which still go through change control on their merits."
+      }
+    ],
+    "related_question_ids": [
+      "q126",
+      "q254",
+      "q367"
+    ],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c036",
+    "lesson_type": "concept",
+    "title": "Scope Validation and Control",
+    "module": "Scope and Quality",
+    "production_group": "Scope and Quality Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Governance"
+    ],
+    "focus_areas": [
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 2: Develop and manage project scope"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Sequence control quality (internal) before validate scope (external acceptance).",
+      "Run scope control: detect deviations, route changes, protect the baseline.",
+      "Handle acceptance disputes when documentation and expectations diverge."
+    ],
+    "sections": [
+      {
+        "title": "Verify Inside, Validate Outside",
+        "content": "Two checks stand between 'built' and 'done,' in order. **Control quality** verifies deliverables internally against specifications — producing *verified deliverables*. **Validate scope** then obtains the customer or sponsor's formal acceptance — producing *accepted deliverables*. Internal sign-off, however rigorous, never substitutes for external acceptance: QA passing is the entry ticket to validation, not its replacement.\n\nValidating incrementally at phase boundaries beats one grand acceptance at the end — disputes surface while they're small and fixable."
+      },
+      {
+        "title": "Scope Control",
+        "content": "**Scope control** keeps actual scope aligned with the baseline: monitoring what's being built against what was approved, catching informal additions (the stakeholder's hallway request a developer quietly started), and routing every real change through change control. When unplanned work is discovered mid-flight, the credited pattern is to stop it, assess it, and route it properly — plus reinforce the process so the bypass doesn't repeat.\n\nControl also runs in the other direction: work quietly *dropped* (an informal agreement to skip two backlog items) needs the same formal treatment — documented decisions, appropriate approval."
+      },
+      {
+        "title": "When Acceptance Goes Sideways",
+        "content": "The hard cases: a customer rejects a deliverable that meets every documented criterion (clarify the disconnect first — criteria gap, misunderstanding, or new expectation — before reworking or standing on paperwork); a deliverable passes criteria but visibly fails the underlying business need (raise it with stakeholders before treating validation as final — criteria are means, not ends); and internal pressure to 'mark it accepted' without the accepting party's actual sign-off (never — acceptance is the customer's act, not a status field)."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "The recurring discriminations: control quality vs. validate scope (who checks, against what), stopping-and-routing vs. absorbing informal work, and clarifying-first vs. reflexive rework in acceptance disputes. All three reward keeping the baseline meaningful and acceptance genuinely external."
+      }
+    ],
+    "key_terms": [
+      "validate scope",
+      "control quality",
+      "verified deliverables",
+      "accepted deliverables",
+      "scope control",
+      "acceptance dispute"
+    ],
+    "exam_traps": [
+      "Marking scope validated on the strength of internal QA sign-off alone.",
+      "Letting informally started work continue because stopping it feels wasteful.",
+      "Reworking immediately on verbal complaint when the deliverable meets documented criteria — clarify the disconnect first."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Control quality",
+        "definition": "Internal verification against specifications — produces verified deliverables."
+      },
+      {
+        "term": "Validate scope",
+        "definition": "Formal external acceptance by customer or sponsor — produces accepted deliverables."
+      },
+      {
+        "term": "Scope control",
+        "definition": "Keeping actual scope aligned to the baseline — catching both informal additions and informal drops."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "What is the correct sequence between control quality and validate scope, and why?",
+        "options": [
+          "Validate scope first — customer priorities should drive the internal testing order",
+          "Either order works equally, since both checks examine the very same deliverable",
+          "Control quality first — verify internally before seeking formal external acceptance",
+          "They are the same process merely performed by two different departments"
+        ],
+        "correct_answer": "Control quality first — verify internally before seeking formal external acceptance",
+        "explanation": "Deliverables are verified internally against spec, then presented for external acceptance — bringing unverified work to the customer wastes their acceptance act on things that may bounce. The checks differ in actor and question (spec compliance vs. formal acceptance), so neither ordering-indifference nor same-process is right."
+      },
+      {
+        "question": "Mid-sprint, the PM discovers a developer building a feature a stakeholder requested informally in a hallway. What is the credited response?",
+        "options": [
+          "Let it finish — stopping now would waste the effort already invested",
+          "Retroactively add the feature to the baseline, since work has started",
+          "Publicly reprimand the developer as a lesson to the whole team",
+          "Halt the work, route the request through the change process, and reinforce the process"
+        ],
+        "correct_answer": "Halt the work, route the request through the change process, and reinforce the process",
+        "explanation": "Uncontrolled scope must stop and enter the process — sunk effort doesn't legitimize a bypass, and retroactive baselining rewards it. The developer likely acted in good faith on a stakeholder request, so the fix is process reinforcement, not public punishment."
+      },
+      {
+        "question": "A deliverable meets every documented acceptance criterion, but the PM can see it doesn't actually solve the business problem the project exists for. What should happen before validation is treated as final?",
+        "options": [
+          "Nothing — meeting documented criteria is the definition of complete",
+          "Raise the gap with stakeholders, since criteria are means to the business end",
+          "Quietly rework the deliverable until it solves the problem, then validate",
+          "Assume the business problem changed and update the charter accordingly"
+        ],
+        "correct_answer": "Raise the gap with stakeholders, since criteria are means to the business end",
+        "explanation": "Acceptance criteria operationalize the business need — when they demonstrably fail to, the gap goes to stakeholders before validation closes. Standing on the paperwork ships a known miss; silent rework spends resources without authorization or confirmation the concern is right; and assuming the problem changed is a guess where a conversation is available."
+      }
+    ],
+    "related_question_ids": [
+      "q084",
+      "q125",
+      "q165",
+      "q202",
+      "q331"
+    ],
+    "source_refs": [
+      "S6",
+      "S8"
+    ]
+  },
+  {
+    "id": "c037",
+    "lesson_type": "concept",
+    "title": "Quality Planning, Assurance, and Control",
+    "module": "Scope and Quality",
+    "production_group": "Scope and Quality Block",
+    "pmbok8_domains": [
+      "Scope",
+      "Governance"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Executing",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 7: Plan and optimize quality of products/deliverables"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Distinguish quality planning, assurance (process), and control (product).",
+      "Apply the core quality toolkit: Pareto analysis, root cause analysis, metrics validity.",
+      "Keep the quality management plan current as new defect types and evidence emerge."
+    ],
+    "sections": [
+      {
+        "title": "Plan, Assure, Control",
+        "content": "Three distinct activities share the word 'quality.' **Quality planning** decides the standards, metrics, and verification approach for this project — written into the quality management plan. **Quality assurance** audits the *processes*: are we working the way the plan says, and are those processes actually capable of producing quality? **Quality control** inspects the *products*: do deliverables meet their criteria?\n\nThe shorthand: assurance is process-facing and preventive; control is product-facing and detective. An audit finding that a required review step is being skipped is assurance; a failed test is control."
+      },
+      {
+        "title": "The Working Toolkit",
+        "content": "**Pareto analysis** concentrates improvement effort where it pays: rank defect categories by frequency and attack the vital few causing most of the problems, rather than spreading effort evenly or chasing the most recent complaint. **Root cause analysis** (five whys, fishbone diagrams) turns recurring defects from an endless patching exercise into a solvable systemic problem.\n\nMetrics need auditing too: a defect count improving while customer satisfaction stagnates suggests the metric no longer captures what customers experience as quality — investigate the metric's validity, don't just push it harder. And severity classifications must evolve: a new defect category that fits no existing severity level gets a proper classification and a plan update, not a force-fit."
+      },
+      {
+        "title": "The Plan Is a Living Document",
+        "content": "Quality plans change on evidence, through deliberate decision: production issues from an edge-case category the coverage thresholds miss mean updating the plan and tests; a proposal to cut a testing type for budget means first assessing what that testing uniquely catches. What's never credited is silent drift — steps skipped under pressure without decision or documentation — or its mirror image, refusing to reconsider any quality step regardless of evidence."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Classification questions test assurance-vs-control (process audit vs. deliverable inspection). Scenario questions test the toolkit: recurring defects → root cause, not more inspection; many defect types → Pareto, not even spread; improving metric with flat outcomes → question the metric. And every quality-vs-pressure scenario rewards deliberate, documented adjustment over silent erosion."
+      }
+    ],
+    "key_terms": [
+      "quality planning",
+      "quality assurance",
+      "quality control",
+      "Pareto analysis",
+      "root cause analysis",
+      "quality metrics"
+    ],
+    "exam_traps": [
+      "Confusing assurance (process audits) with control (product inspection).",
+      "Spreading defect-fix effort evenly instead of Pareto-ranking the vital few causes.",
+      "Pushing a quality metric harder when it visibly no longer tracks customer-experienced quality."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Quality assurance",
+        "definition": "Process-facing and preventive — auditing whether the processes are followed and capable."
+      },
+      {
+        "term": "Quality control",
+        "definition": "Product-facing and detective — inspecting deliverables against their criteria."
+      },
+      {
+        "term": "Pareto analysis",
+        "definition": "Ranking causes by frequency to focus effort on the vital few driving most defects."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "An audit finds the team has been skipping a documented review step, though all deliverables still pass their tests. Which quality activity produced this finding, and why does it matter despite passing tests?",
+        "options": [
+          "Quality assurance — process audits, catching what passing tests don't cover",
+          "Quality control — it inspected the deliverables themselves and found them lacking",
+          "Quality planning — it discovered the quality plan itself was incorrectly written",
+          "Scope validation — the customer's formal acceptance surfaced the missing step"
+        ],
+        "correct_answer": "Quality assurance — process audits, catching what passing tests don't cover",
+        "explanation": "Process-facing findings are assurance's territory — and passing tests don't cover what the skipped review uniquely catches (design, maintainability, edge thinking). Control would flag failing products, planning wrote the standard rather than auditing it, and no customer act is described."
+      },
+      {
+        "question": "Nine defect categories are open; the team wants maximum improvement from limited effort. Which tool directs the investment?",
+        "options": [
+          "A fishbone diagram for the defect reported most recently",
+          "Even distribution of effort across all nine categories for fairness",
+          "First-in-first-out processing of the defect backlog by report date",
+          "Pareto analysis — rank categories by frequency and attack the vital few"
+        ],
+        "correct_answer": "Pareto analysis — rank categories by frequency and attack the vital few",
+        "explanation": "Pareto's premise is that most defects flow from few causes — ranking by frequency concentrates limited effort where it moves the number most. Even spread and FIFO ignore impact entirely, and a fishbone on the newest report analyzes one cause without knowing whether it's a major one."
+      },
+      {
+        "question": "The team's tracked defect metric has improved steadily for two quarters, yet customer satisfaction with product quality is flat. What should the project manager investigate?",
+        "options": [
+          "Nothing — satisfaction data always lags process metrics by several quarters",
+          "Whether the metric still captures what customers actually experience as quality",
+          "Whether the satisfaction survey vendor has a methodology problem",
+          "How to push the defect metric further, since improvement compounds eventually"
+        ],
+        "correct_answer": "Whether the metric still captures what customers actually experience as quality",
+        "explanation": "A proxy improving while the outcome it proxies stagnates is the signature of metric drift — perhaps usability or performance issues that defect counts never see. Assuming a fixed lag or blaming the survey dodges the question, and optimizing the same possibly-invalid metric harder invests in the disconnect."
+      }
+    ],
+    "related_question_ids": [
+      "q089",
+      "q207",
+      "q259",
+      "q285",
+      "q344"
+    ],
+    "source_refs": [
+      "S3",
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c038",
+    "lesson_type": "concept",
+    "title": "Building the Project Schedule",
+    "module": "Schedule Management",
+    "production_group": "Schedule and Finance Block",
+    "pmbok8_domains": [
+      "Schedule"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 8: Plan and manage schedule"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Sequence activities using the four dependency types plus leads and lags.",
+      "Classify dependencies as mandatory, discretionary, internal, or external.",
+      "Select estimation methods — analogous, parametric, bottom-up, three-point/PERT — by information available."
+    ],
+    "sections": [
+      {
+        "title": "From Scope to Network",
+        "content": "Schedule building runs: decompose work packages into **activities**, sequence them into a **network diagram** with dependencies, estimate durations, then derive the schedule. Four logical relationships connect activities: **finish-to-start** (FS — predecessor finishes, successor starts; the overwhelmingly common case), **start-to-start** (SS), **finish-to-finish** (FF), and the rare **start-to-finish** (SF).\n\nA **lag** inserts mandatory waiting into a dependency (pour concrete, then FS + 2-day lag for curing). A **lead** overlaps it (start successor 3 days before predecessor finishes). Lag is required delay — not float, which is schedule flexibility, and not something to 'compress away' without addressing the underlying constraint."
+      },
+      {
+        "title": "Dependency Character",
+        "content": "Each dependency is also classified by nature: **mandatory** (hard logic — physically or legally required), **discretionary** (soft logic — preferred practice, and the first place to look when compressing), **internal** (within the team's control), and **external** (a vendor, a regulator, another team — outside your control but still yours to track and plan around).\n\nExternal dependencies deserve realistic durations: an approval agency's *actual historical* turnaround, not its best-case published figure, plus risk buffer for known variability. Removing an uncertain external activity from the schedule doesn't remove its uncertainty — it just hides a real risk."
+      },
+      {
+        "title": "Estimating Durations",
+        "content": "Method follows information: **analogous** (top-down from similar past work — fast, rough, fine for early passes), **parametric** (rate × quantity where a reliable rate exists), **bottom-up** (sum detailed components — accurate but slow, and watch for the coordination overhead the parts don't include), and **three-point**, using optimistic/most-likely/pessimistic values. The **PERT (beta) estimate** weights the most likely: E = (O + 4M + P) / 6. Triangular averages all three equally: E = (O + M + P) / 3.\n\nEstimates embed assumptions about *who* does the work: durations built on a departed expert's pace need reassessment for the actual, current team — headcount equivalence is not capability equivalence."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Classification is directly tested: curing time between dependent activities is lag on an FS dependency, not float and not a separate activity. Best-case external durations, uniform planning detail regardless of certainty, and estimates that outlive their staffing assumptions are the recurring realism traps. For PERT arithmetic: O=4, M=6, P=14 → (4+24+14)/6 = 7."
+      }
+    ],
+    "key_terms": [
+      "network diagram",
+      "finish-to-start",
+      "lead",
+      "lag",
+      "mandatory dependency",
+      "discretionary dependency",
+      "external dependency",
+      "PERT",
+      "analogous estimating",
+      "parametric estimating",
+      "bottom-up estimating"
+    ],
+    "exam_traps": [
+      "Confusing lag (required waiting built into a dependency) with float (schedule flexibility).",
+      "Scheduling external approvals at best-case published turnaround despite known variability.",
+      "Keeping durations estimated for a departed expert after less experienced staff take over the work."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Lag",
+        "definition": "Mandatory waiting time inserted into a dependency — required delay, not flexibility."
+      },
+      {
+        "term": "PERT (beta) estimate",
+        "definition": "E = (O + 4M + P) / 6 — three-point estimate weighting the most likely value."
+      },
+      {
+        "term": "Discretionary dependency",
+        "definition": "Soft logic based on preferred practice — the first candidate when compressing a schedule."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Two sequential critical-path activities require a two-day curing wait between them. How is this represented in the schedule?",
+        "options": [
+          "As lag on the finish-to-start dependency between the two activities",
+          "As float, since a gap exists between the two activities",
+          "As a separate, independent activity with its own resources assigned",
+          "It should be removed, since the schedule needs compression anyway"
+        ],
+        "correct_answer": "As lag on the finish-to-start dependency between the two activities",
+        "explanation": "A mandatory waiting period inside a dependency is lag. Float is unused flexibility — this wait is required, not flexible. It consumes no resources, so it isn't an activity, and 'removing' it doesn't remove the physics of curing."
+      },
+      {
+        "question": "Using PERT (beta), what is the expected duration for O=4 days, M=6 days, P=14 days?",
+        "options": [
+          "8 days — the simple triangular average of the three points",
+          "6 days — the most likely value always dominates the estimate",
+          "7 days — (4 + 4×6 + 14) ÷ 6",
+          "10 days — the midpoint of the optimistic and pessimistic values"
+        ],
+        "correct_answer": "7 days — (4 + 4×6 + 14) ÷ 6",
+        "explanation": "PERT beta weights the most likely value ×4: (4 + 24 + 14)/6 = 42/6 = 7. The triangular average (4+6+14)/3 = 8 is a different formula; taking M alone ignores the spread; and the O–P midpoint ignores M entirely."
+      },
+      {
+        "question": "A schedule uses a government agency's best-case published approval turnaround, though its actual processing times are known to vary widely and run longer. What should the project manager do?",
+        "options": [
+          "Keep the published figure, since it is the officially citable number",
+          "Remove the approval from the critical path, since its duration is uncertain",
+          "Assume the agency will improve, since published targets create accountability",
+          "Re-plan using the agency's actual historical turnaround plus schedule risk buffer"
+        ],
+        "correct_answer": "Re-plan using the agency's actual historical turnaround plus schedule risk buffer",
+        "explanation": "Realistic scheduling uses observed behavior, not aspirational figures — plus buffer proportional to the known variability. Official citability doesn't make a number realistic, hiding the activity hides the risk without removing it, and hoping the agency improves is not a planning method."
+      }
+    ],
+    "related_question_ids": [
+      "q090",
+      "q234",
+      "q286",
+      "q345"
+    ],
+    "source_refs": [
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c039",
+    "lesson_type": "concept",
+    "title": "Critical Path, Float, and Schedule Compression",
+    "module": "Schedule Management",
+    "production_group": "Schedule and Finance Block",
+    "pmbok8_domains": [
+      "Schedule"
+    ],
+    "focus_areas": [
+      "Planning",
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 8: Plan and manage schedule"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Identify the critical path and interpret total float and free float.",
+      "Choose between crashing and fast tracking, with each technique's cost.",
+      "Evaluate whether compression is even feasible before committing to it."
+    ],
+    "sections": [
+      {
+        "title": "Critical Path and Float",
+        "content": "The **critical path** is the longest path through the schedule network — it determines the minimum project duration, and its activities have zero (or minimum) float. **Total float** is how long an activity can slip without delaying the project finish; **free float** is how long it can slip without delaying its immediate successor.\n\nDelay on a critical activity delays the project, day for day. Delay on a non-critical activity consumes float first — and float is a shared buffer: once an activity eats the path's float, everything downstream on that path is critical too. A schedule built from best-case estimates with zero float anywhere is fragile by design: any single overrun cascades, and that fragility deserves challenge before baselining."
+      },
+      {
+        "title": "Crashing vs. Fast Tracking",
+        "content": "Two compression techniques, two different costs. **Crashing** adds resources to critical-path activities — it trades **cost** for time. **Fast tracking** overlaps activities normally done in sequence (turning discretionary FS dependencies into parallel work) — it trades **risk** (of rework) for time, at no direct added cost.\n\nSelection follows the constraint: no budget available → fast tracking is the one to evaluate first; no tolerable rework risk → crashing. Both apply only to the critical path — compressing non-critical activities shortens nothing."
+      },
+      {
+        "title": "Is Compression Even Possible?",
+        "content": "Before choosing a technique, test feasibility: can these specific activities actually be shortened? Some work doesn't crash — a fixed-duration regulatory review gains nothing from extra staff, and adding people to deeply sequential or knowledge-heavy work can slow it down through coordination overhead (Brooks' law territory). Fast tracking needs dependencies that are genuinely discretionary — you cannot parallel-run what is physically sequential.\n\nIf neither technique works, the honest options are scope, quality trade-offs made visible, or the date — pretending otherwise just schedules a future failure."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Given 'no more budget,' fast tracking beats crashing. Given 'quality cannot be risked,' crashing beats fast tracking. Given 'add people to everything' — check whether the specific activities compress at all. And remember the diagnostic: an activity with float slipping is monitoring news; a critical activity slipping is a project-end-date event."
+      }
+    ],
+    "key_terms": [
+      "critical path",
+      "total float",
+      "free float",
+      "crashing",
+      "fast tracking",
+      "compression feasibility"
+    ],
+    "exam_traps": [
+      "Crashing when the stated constraint is 'no additional budget' — that's fast tracking's case.",
+      "Compressing non-critical activities and expecting the end date to move.",
+      "Adding people to work that doesn't compress — fixed-duration or coordination-heavy activities."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Critical path",
+        "definition": "The longest network path — sets minimum project duration; its activities have zero float."
+      },
+      {
+        "term": "Crashing",
+        "definition": "Adding resources to critical activities — trades cost for time."
+      },
+      {
+        "term": "Fast tracking",
+        "definition": "Overlapping normally sequential activities — trades rework risk for time."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A critical-path activity is two weeks late, the end date cannot move, and no additional budget exists. Which compression technique should be evaluated first, and why?",
+        "options": [
+          "Fast tracking — overlapping sequential work re-sequences at no direct added cost",
+          "Crashing — additional resources reliably restore any schedule",
+          "Resource leveling — smoothing assignments recovers the two weeks",
+          "Scope reduction — quietly trimming deliverables protects the date"
+        ],
+        "correct_answer": "Fast tracking — overlapping sequential work re-sequences at no direct added cost",
+        "explanation": "With no budget for added resources, crashing is off the table; fast tracking compresses by overlapping where dependencies allow, paying in rework risk instead of money. Leveling typically extends rather than compresses schedules, and silent scope trimming bypasses change control."
+      },
+      {
+        "question": "The plan is to add staff to every activity on the critical path to recover a slip. What must be checked before spending the money?",
+        "options": [
+          "Whether the specific activities can actually be shortened by added resources",
+          "Whether the non-critical paths should receive additional staff as well",
+          "Whether the added staff can also reduce the project's total float",
+          "Nothing — added resources shorten activities roughly proportionally"
+        ],
+        "correct_answer": "Whether the specific activities can actually be shortened by added resources",
+        "explanation": "Crashing only works on crashable activities: fixed-duration reviews don't accelerate, and coordination-heavy work can slow down with more people. Proportional speed-up is exactly the assumption to test, non-critical staffing shortens nothing, and float isn't something staff 'reduce.'"
+      },
+      {
+        "question": "A schedule reaches baseline review with best-case durations and zero float on every path. What is the professional concern?",
+        "options": [
+          "None — zero float indicates an efficiently optimized schedule",
+          "The schedule should be compressed further while morale is high",
+          "Any single overrun cascades through the whole downstream sequence with no buffer",
+          "Float should be added only to non-critical paths for appearance"
+        ],
+        "correct_answer": "Any single overrun cascades through the whole downstream sequence with no buffer",
+        "explanation": "Zero float everywhere plus optimistic durations means the first surprise delays the project — fragility, not efficiency. Baselining it institutionalizes that fragility; further compression deepens it; and float isn't cosmetic decoration to sprinkle on side paths."
+      }
+    ],
+    "related_question_ids": [
+      "q007",
+      "q039",
+      "q135",
+      "q260"
+    ],
+    "source_refs": [
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c040",
+    "lesson_type": "concept",
+    "title": "Cost Estimating, Reserves, and Budget Development",
+    "module": "Finance and Value Measurement",
+    "production_group": "Schedule and Finance Block",
+    "pmbok8_domains": [
+      "Finance"
+    ],
+    "focus_areas": [
+      "Planning"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 6: Plan and manage finance"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Match estimate precision to information available and stage (ROM through definitive).",
+      "Distinguish contingency reserve (known risks) from management reserve (unknown unknowns).",
+      "Build the cost baseline and reconcile it with funding constraints."
+    ],
+    "sections": [
+      {
+        "title": "Estimates Sharpen Over Time",
+        "content": "Cost estimates carry declared precision: a **rough order of magnitude (ROM)** estimate early (commonly cited around −25%/+75%) narrows toward a **definitive** estimate (around ±5–10%) as information improves. Precision should match knowledge: near-term work with detailed information available deserves detailed estimating techniques; using ROM everywhere when better data exists produces needless imprecision, and false precision on far-future work wastes effort.\n\nThe same toolbox as durations applies — analogous, parametric, bottom-up, three-point — with bottom-up's known blind spot: summed component costs miss integration and coordination overhead unless explicitly added."
+      },
+      {
+        "title": "Two Reserves, Two Purposes",
+        "content": "**Contingency reserve** covers *identified* risks — sized by risk analysis, owned by the project manager, spent when a planned-for risk occurs. It's inside the **cost baseline**. **Management reserve** covers *unidentified* risks (unknown unknowns) — held above the baseline, released through management approval, not the PM's discretion.\n\nDiscipline follows the definitions: a known risk materializing draws contingency, not management reserve. Funding new scope from management reserve is a category error — scope changes go through change control and proper budgeting. And when risks close without occurring, their contingency returns to the pool with reserve adequacy reassessed — not quietly redirected into extra scope."
+      },
+      {
+        "title": "Baseline Meets Funding Reality",
+        "content": "The **cost baseline** is the time-phased approved budget — spending mapped over time, not one number. It must be reconciled with **funding constraints**: if funding arrives in fixed quarterly releases that don't match the planned spending curve, the plan adjusts to reality (re-phasing work, negotiating releases) rather than assuming money appears when needed.\n\nHonest financial visibility also means tracking **committed** costs (signed purchase orders not yet invoiced) alongside actual spend — committed-but-uninvoiced obligations are real exposure that actual-only reporting understates."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Reserve classification is heavily tested: identified risk occurs → contingency; unforeseen event → management reserve (with approval); new scope → neither, use change control. Estimation scenarios reward precision-matched-to-knowledge and the bottom-up coordination-overhead correction. Funding scenarios reward reconciling the spending plan with the actual release schedule."
+      }
+    ],
+    "key_terms": [
+      "rough order of magnitude",
+      "definitive estimate",
+      "contingency reserve",
+      "management reserve",
+      "cost baseline",
+      "funding limits",
+      "committed costs"
+    ],
+    "exam_traps": [
+      "Drawing management reserve for an identified, planned-for risk — that's contingency's job.",
+      "Funding scope additions from reserves instead of change control and budgeting.",
+      "Reporting only actual spend while large committed purchase orders sit invisible."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "Contingency reserve",
+        "definition": "Budget for identified risks — inside the baseline, PM-managed, spent when a planned-for risk occurs."
+      },
+      {
+        "term": "Management reserve",
+        "definition": "Budget for unknown unknowns — above the baseline, released by management approval."
+      },
+      {
+        "term": "Cost baseline",
+        "definition": "The time-phased approved budget — the reference for cost performance measurement."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A risk that was identified and planned for months ago has just occurred. Which money covers it?",
+        "options": [
+          "Management reserve, since actual risk events are by definition unforeseen",
+          "A formal change request asking the board to increase the project budget",
+          "Contingency reserve — it exists for exactly this: identified risks occurring",
+          "The performing department's operational budget, since the work is departmental"
+        ],
+        "correct_answer": "Contingency reserve — it exists for exactly this: identified risks occurring",
+        "explanation": "Identified, planned-for risks are contingency's exact purpose — the reserve was sized from this risk analysis. Management reserve covers what was never identified; a budget change request isn't needed for a planned-for draw; and pushing project risk costs onto operations misstates both budgets."
+      },
+      {
+        "question": "The sponsor asks to fund a new feature from management reserve, 'since the money is just sitting there.' What should the project manager explain?",
+        "options": [
+          "Agree — management reserve is ultimately the sponsor's money to direct as they wish",
+          "Suggest drawing contingency reserve instead, since the new feature carries some risk",
+          "Refuse and end the conversation, since reserves are simply untouchable by anyone",
+          "Explain management reserve covers unforeseen risks; new scope needs change control"
+        ],
+        "correct_answer": "Explain management reserve covers unforeseen risks; new scope needs change control",
+        "explanation": "New scope is plannable work, not an unforeseen risk — funding it from any reserve strips protection the reserves exist to provide and bypasses scope governance. Swapping to contingency commits the same category error; flat refusal without the correct path leaves the sponsor's need unaddressed."
+      },
+      {
+        "question": "A bottom-up estimate sums forty small tasks' costs precisely, yet the work involves heavy cross-task coordination that appears nowhere in the sum. What correction applies?",
+        "options": [
+          "Switch to a rough order of magnitude estimate, since bottom-up clearly failed",
+          "None — bottom-up estimates are the most accurate method by definition",
+          "Add an explicit allowance for the integration and coordination overhead",
+          "Assume coordination is negligible, since each individual task is small"
+        ],
+        "correct_answer": "Add an explicit allowance for the integration and coordination overhead",
+        "explanation": "Bottom-up's known blind spot is the work between the pieces — more small tasks means more coordination points, not fewer. The targeted fix is adding the missing overhead, not retreating to a cruder method or trusting the technique's reputation over its visible gap."
+      }
+    ],
+    "related_question_ids": [
+      "q037",
+      "q062",
+      "q088",
+      "q132",
+      "q188",
+      "q284",
+      "q372"
+    ],
+    "source_refs": [
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c041",
+    "lesson_type": "concept",
+    "title": "Earned Value: Measurement and Forecasting",
+    "module": "Finance and Value Measurement",
+    "production_group": "Schedule and Finance Block",
+    "pmbok8_domains": [
+      "Finance",
+      "Schedule"
+    ],
+    "focus_areas": [
+      "Monitoring and Controlling"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 6: Plan and manage finance"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 9: Evaluate project status"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Compute and interpret PV, EV, AC, CV, SV, CPI, and SPI.",
+      "Select the right EAC formula for the variance's expected persistence.",
+      "Interpret TCPI and the classic mixed-signal patterns."
+    ],
+    "sections": [
+      {
+        "title": "The Three Base Numbers",
+        "content": "Everything in earned value builds on three measurements at a status date. **PV (planned value)**: the budgeted cost of work *scheduled* to be done by now. **EV (earned value)**: the budgeted cost of work *actually* done by now. **AC (actual cost)**: what that work actually cost. **BAC (budget at completion)** is the total planned budget.\n\nWorked example used throughout: BAC $100k, halfway point. PV = $50k (half the work was scheduled), EV = $40k (40% of the work is done), AC = $48k (spent so far)."
+      },
+      {
+        "title": "Variances and Indices",
+        "content": "**CV = EV − AC** (negative = over cost): $40k − $48k = −$8k. **SV = EV − PV** (negative = behind schedule): $40k − $50k = −$10k. **CPI = EV / AC**: 40/48 ≈ 0.83 — each dollar spent earned 83 cents of planned work. **SPI = EV / PV**: 40/50 = 0.80 — progressing at 80% of planned pace.\n\nBelow 1.0 is unfavorable, above is favorable, for both indices. The classic misread: 'we've only spent $48k of the $50k planned — we're under budget!' Spending less than planned while doing even less work is *poor* performance (CPI < 1), not savings — being 'under budget and behind schedule' usually means exactly this."
+      },
+      {
+        "title": "Forecasting: EAC, ETC, VAC, TCPI",
+        "content": "**EAC (estimate at completion)** forecasts total cost — the formula choice depends on whether the variance will persist. Variance was a one-time anomaly, remaining work at plan: **EAC = AC + (BAC − EV)** = 48 + 60 = $108k. Current cost performance will continue: **EAC = BAC / CPI** = 100/0.83 ≈ $120k. Both cost and schedule pressure persist: EAC = AC + (BAC − EV)/(CPI × SPI).\n\n**ETC = EAC − AC** (what's left to spend); **VAC = BAC − EAC** (negative = forecast overrun). **TCPI = (BAC − EV)/(BAC − AC)**: the efficiency required on remaining funds to hit BAC — here 60/52 ≈ 1.15, meaning every remaining dollar must earn $1.15 of work. TCPI far above achieved CPI is the honest signal that the original budget is no longer credible."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Formula selection outranks arithmetic: 'atypical, won't recur' → AC + (BAC − EV); 'trend continues' → BAC / CPI. Interpretation patterns: CPI 0.8 means over cost for work performed (not 'scope grew,' not 'behind schedule' — that's SPI's job); one good month doesn't make a trend (check multiple periods before re-forecasting); and healthy aggregates can hide offsetting work-package problems — drill down before declaring health."
+      }
+    ],
+    "key_terms": [
+      "planned value",
+      "earned value",
+      "actual cost",
+      "CPI",
+      "SPI",
+      "EAC",
+      "ETC",
+      "VAC",
+      "TCPI"
+    ],
+    "exam_traps": [
+      "Reading 'spent less than planned' as good news when even less work was done — that's CPI < 1.",
+      "Using BAC/CPI when the variance was explicitly a one-time anomaly (or vice versa).",
+      "Attributing schedule meaning to CPI or cost meaning to SPI — each index answers its own question."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "CPI",
+        "definition": "EV ÷ AC — cost efficiency of work performed; below 1.0 means over cost."
+      },
+      {
+        "term": "SPI",
+        "definition": "EV ÷ PV — schedule efficiency; below 1.0 means behind planned pace."
+      },
+      {
+        "term": "EAC (typical variance)",
+        "definition": "BAC ÷ CPI — total cost forecast when current cost performance continues."
+      },
+      {
+        "term": "EAC (atypical variance)",
+        "definition": "AC + (BAC − EV) — forecast when the variance won't recur and remaining work runs at plan."
+      },
+      {
+        "term": "TCPI",
+        "definition": "(BAC − EV) ÷ (BAC − AC) — efficiency required on remaining funds to finish on budget."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "A project reports CPI 0.8. What does this mean, precisely?",
+        "options": [
+          "The project is currently running behind its planned schedule pace",
+          "The project's formally approved scope has grown by twenty percent",
+          "The project is under budget, having spent less money than planned",
+          "Each dollar spent earned only 80 cents of planned work — over cost"
+        ],
+        "correct_answer": "Each dollar spent earned only 80 cents of planned work — over cost",
+        "explanation": "CPI = EV/AC measures cost efficiency of the work actually done. Schedule pace is SPI's question, scope changes are change control's record, and 'under budget' misreads low spend that reflects even lower earning — the trap CPI exists to expose."
+      },
+      {
+        "question": "BAC = $200k, EV = $80k, AC = $100k. The overrun came from a one-time vendor failure not expected to recur. What is the appropriate EAC?",
+        "options": [
+          "$250k — from BAC ÷ CPI, assuming the trend continues",
+          "$220k — from AC + (BAC − EV), remaining work at planned rate",
+          "$200k — the original BAC still stands as the forecast",
+          "EAC cannot be estimated until the project is complete"
+        ],
+        "correct_answer": "$220k — from AC + (BAC − EV), remaining work at planned rate",
+        "explanation": "An atypical, non-recurring variance means remaining work is forecast at plan: 100 + (200 − 80) = $220k. BAC/CPI (= 200/0.8 = 250) assumes the poor efficiency persists — contradicting the premise; sticking with BAC ignores the $20k already lost; and waiting until completion is not forecasting."
+      },
+      {
+        "question": "A project is 'under budget' ($52k spent vs. $60k planned) and also behind schedule by a similar margin. What is the most likely correct reading?",
+        "options": [
+          "Excellent cost management deserving recognition in the next status report",
+          "Evidence that the budget was simply set too high and should now be reduced",
+          "Less spent because less work is done — likely poor performance; check CPI",
+          "A finance recording error, since the two signals appear to contradict"
+        ],
+        "correct_answer": "Less spent because less work is done — likely poor performance; check CPI",
+        "explanation": "Underspend paired with schedule lag usually means low earned value: spending trails plan because progress does. Celebrating it mistakes the pattern; cutting the budget entrenches the misreading; and the signals don't contradict — they jointly point at exactly this diagnosis."
+      }
+    ],
+    "related_question_ids": [
+      "q029",
+      "q040",
+      "q065",
+      "q131",
+      "q191"
+    ],
+    "source_refs": [
+      "S8",
+      "S10"
+    ]
+  },
+  {
+    "id": "c042",
+    "lesson_type": "concept",
+    "title": "Financial Selection Metrics: ROI, NPV, IRR, and Payback",
+    "module": "Finance and Value Measurement",
+    "production_group": "Schedule and Finance Block",
+    "pmbok8_domains": [
+      "Finance",
+      "Governance"
+    ],
+    "focus_areas": [
+      "Initiating"
+    ],
+    "eco_mappings": [
+      {
+        "domain": "Process",
+        "task": "Task 3: Help ensure value-based delivery"
+      },
+      {
+        "domain": "Process",
+        "task": "Task 6: Plan and manage finance"
+      }
+    ],
+    "approaches": [
+      "predictive",
+      "adaptive",
+      "hybrid"
+    ],
+    "learning_objectives": [
+      "Interpret NPV, IRR, ROI, payback period, and benefit-cost ratio as selection signals.",
+      "Apply the comparison rules: higher NPV wins; NPV > 0 creates value.",
+      "Distinguish sunk cost and opportunity cost and use each correctly in decisions."
+    ],
+    "sections": [
+      {
+        "title": "The Time Value Family",
+        "content": "Money later is worth less than money now — **present value (PV)** discounts future cash to today. **NPV (net present value)** sums all discounted inflows minus outflows: **NPV > 0 means the investment creates value** after the discount rate is paid; between alternatives, **higher NPV wins**. NPV already accounts for timing — no extra adjustment needed for one option paying off later.\n\n**IRR (internal rate of return)** is the discount rate at which NPV hits zero — effectively the investment's earning rate; higher is better, and it must clear the organization's hurdle rate to be worth doing."
+      },
+      {
+        "title": "Simpler Signals",
+        "content": "**ROI** = (benefit − cost) / cost, a percentage return ignoring timing. **Payback period** = time until cumulative inflows repay the investment — a liquidity/risk signal, blind to everything after payback and to the time value of money. **Benefit-cost ratio (BCR)** > 1 means benefits exceed costs.\n\nBecause the simple metrics ignore timing (and payback ignores post-payback benefits entirely), organizations comparing serious alternatives lean on NPV; payback matters most when capital is tight or early recovery reduces risk exposure."
+      },
+      {
+        "title": "Sunk and Opportunity Cost",
+        "content": "**Sunk cost** is money already spent — unrecoverable, and *irrelevant* to any forward-looking decision. 'We've invested too much to stop' is the sunk cost fallacy; the only valid comparison is remaining cost versus remaining value. **Opportunity cost** is the value of the best alternative foregone by choosing this option — real, forward-looking, and frequently what a selection question is actually asking about.\n\nThese two are exam favorites precisely because human intuition gets them backwards: we cling to sunk costs and ignore opportunity costs."
+      },
+      {
+        "title": "Exam Perspective",
+        "content": "Selection questions: given competing projects, pick the higher NPV unless the question explicitly weights liquidity (payback) or hurdle rates (IRR). Interpretation questions: NPV −$50k means the project destroys value at the discount rate, regardless of a positive raw ROI. And any 'we've already spent $X' argument at a gate review is sunk cost bait — the credited reasoning uses current data and remaining value only."
+      }
+    ],
+    "key_terms": [
+      "present value",
+      "NPV",
+      "IRR",
+      "ROI",
+      "payback period",
+      "benefit-cost ratio",
+      "sunk cost",
+      "opportunity cost",
+      "hurdle rate"
+    ],
+    "exam_traps": [
+      "Letting money already spent influence a continue/stop decision — sunk cost is decision-irrelevant.",
+      "Choosing by shortest payback when the question gives NPV — payback ignores time value and later benefits.",
+      "Reading NPV > 0 as merely 'profitable' — it means value creation after the discount rate is already paid."
+    ],
+    "glossary_refs": [],
+    "reference_sheet_refs": [],
+    "formula_refs": [],
+    "flashcards": [
+      {
+        "term": "NPV",
+        "definition": "Discounted inflows minus outflows; positive = creates value; higher wins between alternatives."
+      },
+      {
+        "term": "IRR",
+        "definition": "The discount rate at which NPV equals zero — the investment's effective earning rate."
+      },
+      {
+        "term": "Sunk cost",
+        "definition": "Money already spent — unrecoverable and irrelevant to forward-looking decisions."
+      },
+      {
+        "term": "Opportunity cost",
+        "definition": "The value of the best alternative foregone by committing resources here."
+      }
+    ],
+    "knowledge_checks": [
+      {
+        "question": "Project A has NPV $120k; Project B has NPV $95k but pays back sooner and 'feels safer.' Using standard selection logic with no stated liquidity constraint, which is chosen?",
+        "options": [
+          "Project A — higher NPV wins when no other constraint is specified",
+          "Project B — earlier payback always dominates other financial signals",
+          "Either — NPV differences under $50k are within estimation noise",
+          "Neither — IRR must be computed before any selection is possible"
+        ],
+        "correct_answer": "Project A — higher NPV wins when no other constraint is specified",
+        "explanation": "NPV is the default comparator because it already prices timing via the discount rate — payback only takes precedence when the question explicitly raises liquidity or capital constraints. No 'noise threshold' rule exists, and IRR is an alternative lens, not a prerequisite."
+      },
+      {
+        "question": "At a gate review, a struggling project's sponsor argues: 'We've already spent $3M — stopping now wastes it.' What is the financially sound framing?",
+        "options": [
+          "The $3M justifies continuing until at least partial value is recovered",
+          "The $3M is sunk either way; compare remaining cost against remaining value",
+          "The $3M should be amortized into the continuation budget for fairness",
+          "The decision should defer to whoever authorized the original $3M"
+        ],
+        "correct_answer": "The $3M is sunk either way; compare remaining cost against remaining value",
+        "explanation": "Sunk cost is unrecoverable under every future choice, so it cannot differentiate the options — only the forward comparison matters. 'Recovering' sunk cost by spending more is the fallacy itself, amortizing it into future budgets double-counts it, and deference to the original authorizer substitutes politics for analysis."
+      },
+      {
+        "question": "A proposal shows ROI of +18% but NPV of −$40k at the organization's discount rate. How can both be true, and what does it mean?",
+        "options": [
+          "They cannot both be true — one of the two calculations must contain an error",
+          "The NPV should be recomputed without discounting so it matches the ROI figure",
+          "ROI ignores timing; at the required rate the returns arrive too late to create value",
+          "The proposal creates value, since a positive ROI overrides any negative NPV"
+        ],
+        "correct_answer": "ROI ignores timing; at the required rate the returns arrive too late to create value",
+        "explanation": "ROI compares raw totals with no time dimension; NPV prices when the money moves. Returns that look positive undiscounted can fall below the hurdle once timing is priced — meaning the investment destroys value at the required rate. Undiscounting NPV defeats its purpose, and ROI doesn't override it."
+      }
+    ],
+    "related_question_ids": [
+      "q056",
+      "q108",
+      "q232"
+    ],
+    "source_refs": [
+      "S8",
+      "S10"
+    ]
   }
 ]
