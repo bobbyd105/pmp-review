@@ -27,6 +27,17 @@ and `data/lessons.json` — not estimated.
   26 questions (q245–q270), exactly one per ECO task. Phase 11 adds another
   26 questions (q271–q296), exactly one per ECO task. Phase 12 adds 88
   questions (q297–q384) across all three domains.
+- Named-concept gap batches (2026-07-16) add 40 questions (q385–q424)
+  targeting concepts the audits found at zero named coverage: the PMBOK 8
+  domain/focus-area model and process tailorability, phase gates and sunk
+  cost, program/portfolio/PMO/matrix structures, EEF vs. OPA, work
+  performance data/information, EVM calculations (CV, SPI/CPI reading,
+  EAC selection, TCPI), PERT, communication channels, EMV and decision
+  trees, NPV/payback/ROI-vs-NPV, power/interest and salience models, the
+  engagement assessment matrix, RACI, Scrum (roles, events, pillars),
+  Kanban/flow (WIP, lead vs. cycle time, Little's Law), user stories/
+  INVEST, velocity forecasting, MVP vs. MMF, agile values, and responsible
+  AI (data leakage, accountability, bias, adoption levels).
 
 ## Concept-level curriculum architecture
 
@@ -56,10 +67,10 @@ build sequence.
 
 | Domain | Exam weight | Tasks | Questions | Lessons |
 |---|---|---|---|---|
-| People | 33% | 8 | 130 | 8 |
-| Process | 41% | 10 | 155 | 10 |
-| Business Environment | 26% | 8 | 99 | 8 |
-| **Total** | **100%** | **26** | **384** | **26** |
+| People | 33% | 8 | 138 | 8 |
+| Process | 41% | 10 | 176 | 10 |
+| Business Environment | 26% | 8 | 110 | 8 |
+| **Total** | **100%** | **26** | **424** | **26** |
 
 Business Environment carries roughly a quarter of the exam (26%), not
 one-twelfth (8%) as under the 2021 ECO. Its earlier zero-lesson gap is now
@@ -78,57 +89,63 @@ closed.
 |---|---|---|---|---|
 | People | Task 1: Develop a common vision | 16 | 1 | Q+L |
 | People | Task 2: Manage conflicts | 16 | 1 | Q+L |
-| People | Task 3: Lead the project team | 16 | 1 | Q+L |
-| People | Task 4: Engage stakeholders | 16 | 1 | Q+L |
+| People | Task 3: Lead the project team | 20 | 1 | Q+L |
+| People | Task 4: Engage stakeholders | 19 | 1 | Q+L |
 | People | Task 5: Align stakeholder expectations | 16 | 1 | Q+L |
 | People | Task 6: Manage stakeholder expectations | 17 | 1 | Q+L |
 | People | Task 7: Help ensure knowledge transfer | 16 | 1 | Q+L |
-| People | Task 8: Plan and manage communication | 17 | 1 | Q+L |
+| People | Task 8: Plan and manage communication | 18 | 1 | Q+L |
 
 ## Process (10 tasks, 41%)
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| Process | Task 1: Develop an integrated project management plan and plan delivery | 16 | 1 | Q+L |
-| Process | Task 2: Develop and manage project scope | 16 | 1 | Q+L |
-| Process | Task 3: Help ensure value-based delivery | 16 | 1 | Q+L |
-| Process | Task 4: Plan and manage resources | 16 | 1 | Q+L |
+| Process | Task 1: Develop an integrated project management plan and plan delivery | 21 | 1 | Q+L |
+| Process | Task 2: Develop and manage project scope | 18 | 1 | Q+L |
+| Process | Task 3: Help ensure value-based delivery | 20 | 1 | Q+L |
+| Process | Task 4: Plan and manage resources | 17 | 1 | Q+L |
 | Process | Task 5: Plan and manage procurement | 16 | 1 | Q+L |
-| Process | Task 6: Plan and manage finance | 15 | 1 | Q+L |
+| Process | Task 6: Plan and manage finance | 19 | 1 | Q+L |
 | Process | Task 7: Plan and optimize quality of products/deliverables | 15 | 1 | Q+L |
-| Process | Task 8: Plan and manage schedule | 15 | 1 | Q+L |
-| Process | Task 9: Evaluate project status | 15 | 1 | Q+L |
+| Process | Task 8: Plan and manage schedule | 17 | 1 | Q+L |
+| Process | Task 9: Evaluate project status | 18 | 1 | Q+L |
 | Process | Task 10: Manage project closure | 15 | 1 | Q+L |
 
 ## Business Environment (8 tasks, 26%)
 
 | Domain | Task | Questions | Lessons | Status |
 |---|---|---|---|---|
-| Business Environment | Task 1: Define and establish project governance | 12 | 1 | Q+L |
-| Business Environment | Task 2: Plan and manage project compliance | 12 | 1 | Q+L |
+| Business Environment | Task 1: Define and establish project governance | 15 | 1 | Q+L |
+| Business Environment | Task 2: Plan and manage project compliance | 14 | 1 | Q+L |
 | Business Environment | Task 3: Manage and control changes | 12 | 1 | Q+L |
 | Business Environment | Task 4: Remove impediments and manage issues | 12 | 1 | Q+L |
-| Business Environment | Task 5: Plan and manage risk | 12 | 1 | Q+L |
-| Business Environment | Task 6: Continuous improvement | 13 | 1 | Q+L |
+| Business Environment | Task 5: Plan and manage risk | 14 | 1 | Q+L |
+| Business Environment | Task 6: Continuous improvement | 16 | 1 | Q+L |
 | Business Environment | Task 7: Support organizational change | 13 | 1 | Q+L |
-| Business Environment | Task 8: Evaluate external business environment changes | 13 | 1 | Q+L |
+| Business Environment | Task 8: Evaluate external business environment changes | 14 | 1 | Q+L |
 
 ## Open items
 
 - **Breadth: complete.** All 26 tasks now have at least one question and at
   least one lesson. No Questions-only, Lesson-only, or No-content tasks
   remain.
-- **Question depth:** People tasks have 16–17 questions, Process tasks have
-  15–16, and Business Environment tasks have 12–13.
-- **Lesson depth:** every task has exactly one lesson except where noted;
-  adding depth per task is the Phase 2 counterpart to question depth.
+- **Question depth:** People tasks have 16–20 questions, Process tasks
+  15–21, and Business Environment tasks 12–16 (per-task tables above are
+  generated from the live bank).
+- **Lesson depth:** each ECO task keeps its one overview lesson (ECO Review
+  track); instructional depth now lives in the 62-lesson Comprehensive
+  Course in `data/concept_lessons.json`, rendered by the Course view.
 - **Cross-references:** at the end of every future content phase, regenerate
   every lesson's `related_question_ids` from exact `eco_domain` + `eco_task`
-  matches, then validate that no lesson has an empty match set.
-- **Concept depth:** prioritize Missing structural units (foundations,
-  PMBOK 8 map, Scrum, sustainability, and AI), then Thin predictive/agile
-  mechanics. Do not add production content until unit objectives and
-  metadata are User-approved.
-- **Question quality:** remediate answer-position and answer-length cues in
-  a dedicated reviewed slice before treating quiz scores as calibrated
-  mastery evidence; see `docs/content/question_bank_audit.md`.
+  matches, then validate that no lesson has an empty match set. Concept
+  lessons carry additional hand-curated question links.
+- **Concept depth:** the previously Missing structural units (foundations,
+  PMBOK 8 map, Scrum, sustainability, AI) now have authored concept lessons
+  and targeted questions; see `docs/content/coverage_matrix.md`'s 2026-07-16
+  production update. User review at the mission draft PR is the approval
+  gate.
+- **Question quality:** answer-position cues (remediated 2026-07-13, hard
+  40% position gate) and answer-length cues (remediated 2026-07-16, hard
+  strict-longest/ratio/strict-shortest gates — see decision_log.md #12) are
+  both resolved. Quiz scores are no longer inflatable through answer-form
+  heuristics; psychometric difficulty calibration remains future work.

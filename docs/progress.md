@@ -1,15 +1,42 @@
 # Progress
 
 ## Current Version
-Current working state: v0.7 runtime plus the merged curriculum architecture and
-knowledge-layer baseline. This closeout balances all 384 questions across the
-four correct-answer positions, adds reproducible answer-bias measurement, and
-ingests the complete ten-lesson Foundation Block (c001-c010) as Authored concept
-assets. Knowledge checks and direct production-question links remain pending.
-The open batch-orchestrator branch now adds explicit Claude Code/Codex CLI
-provider configuration and a read-only local smoke-test mode for PR #22.
+Current working state: v0.8 — the completion mission branch
+(`feature/pmp-completion-mission`, 2026-07-15 through 2026-07-17) turns the
+platform into a complete PMP learning system:
 
-Prior v0.7 summary follows.
+- **Question bank:** 424 original questions (People 138 / Process 176 /
+  Business Environment 110), correct-answer positions exactly balanced at
+  106 per position, answer-length cues editorially remediated bank-wide and
+  protected by hard gates (decision_log.md #12), and 40 targeted questions
+  covering the named concepts the audits found at zero coverage.
+- **Comprehensive Course:** all 62 concept lessons authored (c001-c062) in
+  module order from PM Foundations through Agile/Hybrid and AI, each with
+  objectives, sections, key terms, exam traps, flashcards, three
+  cue-disciplined knowledge checks, and curated bank-question links —
+  rendered by the learner-facing Course view.
+- **Reference layer:** 18-formula sheet (full EVM set, PERT, channels,
+  float, EMV, NPV/ROI/payback/BCR, Little's Law) and 38-entry glossary,
+  rendered by the Reference view, with every formula/glossary entry's
+  `related_lesson_ids` pointing at the real authored lesson that teaches it
+  (bidirectionally validated — decision_log.md #13) and reachable from that
+  lesson's new "Reference sheet" section.
+- **ECO Review track:** the 26 task-overview lessons retained, links
+  regenerated against the live bank.
+- The retired Claude/Codex batch-orchestration infrastructure is archived
+  under `archive/orchestration-infrastructure/`.
+- **PR #24 review remediation (2026-07-17):** related practice questions in
+  the Course are now answerable in place and can be opened directly in the
+  Question Bank; lesson completion and knowledge-check results persist via
+  `src/course/courseProgress.js` (localStorage, load-validated) across
+  collapse/navigation/refresh; the Course-Reference lesson-ID schemes were
+  reconciled onto one scheme (see decision_log.md #13 for why the obvious
+  `PL-Cxxx` → `cxxx` rewrite would have been wrong); and a minimal CI
+  workflow (`npm test` + `npm run build` on PRs) was added. Full detail in
+  decision_log.md #13.
+
+User review of this branch's draft PR is the approval gate for all content
+authored during the mission. Prior v0.7 summary follows.
 
 v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 (8 questions, 2 lessons) via the direct-PR pipeline per Decision #9; all
@@ -19,6 +46,28 @@ Phase 1 ECO breadth coverage now COMPLETE on both sides — every one of the
 26 lessons total; 26 of 26 tasks have both). Phase 12 questions are added:
 the bank now contains 384 questions and 26 lessons (People 130Q/8L, Process
 155Q/10L, Business Environment 99Q/8L).
+
+## Batch-orchestrator infrastructure archived (2026-07-15)
+
+The Claude Code + Codex CLI batch-orchestration infrastructure built and
+verified through PR #22/B01 is out of scope for the current mission
+(completing the PMP learning system) and has been archived — not deleted —
+to `archive/orchestration-infrastructure/`, preserving its internal
+structure:
+
+- `.ai/workflow/` (controller contracts, launcher, cleanliness helper,
+  their PowerShell tests, example/smoke plans, orchestrator prompt, and the
+  B01 run record) → `archive/orchestration-infrastructure/.ai/workflow/`
+- `scripts/run-agent-workflow.ps1` →
+  `archive/orchestration-infrastructure/scripts/`
+- `docs/claude_codex_batch_orchestrator.md` →
+  `archive/orchestration-infrastructure/docs/`
+
+The milestone history below is retained unchanged. Note: the "Bounded
+Claude–Codex batch orchestration" section of `AGENTS.md` and the decision
+record `docs/decisions/2026-07-13-claude-codex-batch-orchestration.md`
+still reference the original paths; they are historical records and were
+deliberately not rewritten.
 
 ## Milestone — Multi-Agent Orchestration Operational
 
@@ -37,6 +86,97 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Named-concept gap questions q385-q424 (2026-07-16/17, this branch): 40
+  original questions targeting concepts the audits found at zero named
+  coverage — PMBOK 8 structure/tailoring, phase gates and sunk cost,
+  program/portfolio/PMO/matrix, EEF vs OPA, WPD/WPI, EVM calculations
+  (CV, index reading, EAC selection, TCPI), PERT, communication channels,
+  EMV/decision trees, NPV/payback/ROI-vs-NPV, stakeholder analysis models,
+  RACI, Scrum roles/events/pillars, Kanban flow metrics and Little's Law,
+  user stories/INVEST, velocity forecasting, MVP vs MMF, agile values, and
+  responsible AI. Item types mix calculation, interpretation, distinction,
+  and scenario forms per the question generation contract. Bank now 424
+  (People 138 / Process 176 / Business Environment 110), positions
+  106/106/106/106 under the committed seed, 0 questions over the 1.3
+  length ratio, strict-longest 78/424 (18.4%). ECO lesson links regenerated
+  (no empty sets); 61 of 62 concept lessons now carry curated question
+  links (290 total; c011 remains intentionally unlinked pending a suitable
+  bank item). content_plan.md tables regenerated from the live bank; the
+  contentCoverage derived-count assertion updated (C007: 24 -> 26) to track
+  the live bank. Full suite 20 files / 153 tests passes; build passes.
+- Reference layer shipped (2026-07-16, this branch): expanded
+  `data/formula_catalog.json` from 10 representative entries to 18
+  production reference formulas (adding CV, SV, ETC, VAC, TCPI, triangular
+  three-point, payback period, and benefit-cost ratio to the existing
+  channels/PERT/float/CPI/SPI/EAC/EMV/ROI/NPV/Little's Law set) and
+  `data/glossary_catalog.json` from 14 to 38 entries (charter, baseline,
+  CCB, change request, both reserves, EEF/OPA, issue/assumption/constraint,
+  stakeholder register, sprint/increment/definition of done/Product Owner,
+  velocity, lead/cycle time, MVP, RACI, matrix organization, phase gate,
+  lessons learned). Both completeness notes updated honestly. New ninth nav
+  view `Reference` (`src/components/Reference.jsx`) renders the formula
+  sheet (equation, variables, interpretation, higher/lower guidance, tips,
+  mistakes) and glossary (definition, confusion, exam trap) with section
+  toggle and filter; `Reference.test.jsx` covers render, toggle, filter, and
+  empty state. Per-lesson glossary/formula/reference-sheet ID links remain a
+  tracked follow-up (the contract test still holds them empty); the layer is
+  learner-reachable through the Reference view and taught in context by the
+  Course lessons. Knowledge-layer contract passes against the expanded
+  catalogs.
+- Comprehensive Course authored in full: concept lessons c011-c062
+  (2026-07-16, this branch): 52 new production concept lessons completing the
+  planned curriculum in module order — Foundations II (c011-c015), Principles
+  and PMP Mindset (c016-c022), Life Cycles and Tailoring (c023-c028),
+  Governance and Integration (c029-c032), Scope and Quality (c033-c037),
+  Schedule Management and Finance (c038-c042, including PERT, critical
+  path/compression, reserves, full EVM with worked examples, and
+  NPV/IRR/ROI/payback interpretation), Stakeholders/Communications/Resources/
+  Teams/Conflict (c043-c047), Risk and Uncertainty (c048-c050, including EMV
+  and response strategies), Agile and Hybrid (c051-c058, including Scrum,
+  Kanban/Lean/flow metrics, user stories/INVEST, velocity discipline,
+  MVP/MMF/cost of delay, servant leadership, hybrid integration), and AI in
+  Project Management (c059-c062). The catalog now holds 62 concept lessons
+  with 186 knowledge checks (positions 44/49/51/42, all cue-disciplined and
+  test-enforced) and 199 curated related-question links. Concepts with no
+  genuine bank coverage yet (Scrum, Kanban, PMBOK map, phase gates, EEF/OPA,
+  AI) intentionally keep empty links until the targeted-question milestone.
+  These lessons were authored against the master curriculum map and the
+  planning objectives in data/learning_objectives.json, in original wording
+  from the repository's source-topic summaries; per the coverage matrix's
+  Authored status, User review at the draft PR remains the approval gate.
+  Full suite 19 files / 149 tests passes; production build passes.
+- Course view + Foundation Block completion (2026-07-16, this branch):
+  - Authored 30 knowledge checks (3 per lesson, c001-c010): original
+    single-best-answer items with teaching explanations, correct positions
+    spread 8/8/8/6 and length-disciplined (both enforced by new contract
+    tests). Curated 41 `related_question_ids` links from concept lessons to
+    genuinely relevant bank questions; lessons whose concepts have no real
+    bank coverage yet (c002 PMBOK map, c003 phase gates, c007 EEF/OPA) keep
+    empty links until the targeted-question milestone.
+  - New eighth nav view `Course` (`src/components/Course.jsx` +
+    `ConceptLessonCard.jsx`): module-grouped, collapsed-by-default concept
+    lesson cards rendering objectives, sections (bold/italic/list subset, no
+    HTML injection), exam traps, flashcard grid, interactive knowledge checks
+    (immediate teaching feedback — deliberate contrast with the exam-condition
+    Quiz per decision_log.md #4), and resolved related bank questions.
+  - `conceptLessons.data.test.js` contract extended (knowledge-check shape,
+    cue discipline, referential integrity); new `Course.test.jsx` covers
+    render, collapse/expand, both knowledge-check outcomes, and question
+    resolution. Verification for this slice is jsdom component tests against
+    real data plus a passing production build (no headless browser is
+    currently installed in the repo). Full suite 19 files / 149 tests passes.
+- Answer-length bias editorial remediation + hard gate (2026-07-15/16, this
+  branch): edited ~285 questions across eleven reviewed batches, worst
+  length-ratio first. Correct answers trimmed to their core action (reasoning
+  stays in explanations); thin distractors extended to comparable specificity;
+  no question substance, correct-answer meaning, or explanation logic changed.
+  Option order re-normalized with the committed `pmp-options-v1` seed after
+  every batch (positions stay 96/96/96/96). Final state: strictly-longest
+  correct 71/384 (18.5%, was 94.8%), zero questions over the 1.3 length ratio
+  (was 315), strictly-shortest correct 72/384 (18.8%, guarded at <=30%).
+  `lengthBias.test.js` now enforces these as hard regression gates; the
+  generated report reflects WITHIN TARGET status. Full suite 18 files / 141
+  tests passes.
 - Claude-Codex batch orchestrator refinement (PR #22, 2026-07-13):
   - Added required master-plan provider IDs: `claude-code` orchestrator and
     `codex-cli` worker. The controller resolves these through a two-entry local
@@ -431,17 +571,19 @@ expanding the orchestration system without a demonstrated need.
   or lessons, no execution, no external calls.
 
 ## Known Issues
-- **Content-quality blocker (partially resolved):** correct-answer positions
-  are now exactly balanced at 96 per position and protected by a hard test.
-  Length bias remains: 364/384 questions (94.8%) have a strictly longest
-  correct answer, and 315/384 exceed the 1.3 correct/average-distractor ratio.
-  Editorial wording remediation remains required before quiz scores can be
-  treated as strong content evidence. This follow-up is tracked but not
-  scheduled; no target date is set. A content author must address it in reviewed
-  batches by trimming over-elaborate correct answers and/or extending thin
-  distractors, not through a mechanical rewrite. The `lengthBias.test.js`
-  unresolved signal is expected until that pass is complete and is not a build
-  blocker.
+- **Content-quality blocker: RESOLVED (2026-07-16).** Correct-answer positions
+  remain exactly balanced at 96 per position under the committed seed and hard
+  test. The answer-length bias has now been editorially remediated across the
+  full bank in eleven reviewed batches (~285 questions edited): over-elaborate
+  correct answers were trimmed to their core action and thin distractors were
+  extended to comparable specificity, preserving each item's substance and
+  single defensible best answer. Bank measurements moved from 364/384 (94.8%)
+  strictly-longest correct and 315 over the 1.3 length ratio to 71/384 (18.5%)
+  strictly-longest and 0 over the ratio. `lengthBias.test.js` now enforces two
+  hard gates: strict-longest <= 40% of the bank with zero ratio flags, and
+  strictly-shortest <= 30% (guarding against over-correction into a
+  shortest-answer tell). Quiz scores can now be treated as reasonable content
+  evidence with respect to answer cues.
 - Production build emits a large-chunk warning because the full local
   content bank is statically bundled. It is non-blocking for the local MVP.
 
@@ -473,12 +615,22 @@ data-contract tests (shape only) and still need the User's manual
 accuracy spot-check against the current ECO before merge.
 
 ## Current Status
+The completion mission branch (`feature/pmp-completion-mission`) is the
+current state: 424-question bank with hard answer-cue gates, the complete
+62-lesson Comprehensive Course rendered by the Course view (with persistent
+completion/knowledge-check progress and answerable, bank-linked practice
+questions), the Reference view over the expanded formula/glossary catalogs
+(now bidirectionally cross-referenced with the Course), the ECO Review
+track with regenerated links, a minimal CI workflow gating PRs, and the
+batch-orchestrator infrastructure archived. Its draft PR against main
+awaits User review, which is the approval gate for all mission content.
+See decision_log.md #13 for the PR #24 review remediation. The historical
+record below describes earlier merged states and is retained unchanged.
+
 Knowledge-layer Phases 0-13 and their curriculum architecture baseline are
 merged on main via PR #21. The answer-bias/Foundation closeout is merged via
-PR #23. The current PR #22 branch adds the bounded batch controller plus its
-provider/preflight refinement; it does not change application runtime or
-curriculum content. `data/lessons.json` remains unchanged; concept lessons are
-isolated in `data/concept_lessons.json` and are not yet rendered by the app.
+PR #23. PR #22 added the bounded batch controller plus its
+provider/preflight refinement (since archived by this branch).
 
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
 to main (PR #6). Branch `content/eco-2026-remap` (open as PR #7) now holds
@@ -503,12 +655,20 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-Current tracked follow-up: revisit editorial length-bias remediation when
-content-authoring capacity allows; it is not yet scheduled. After the reviewed
-batch pass, enable a hard <=40% strict-longest acceptance gate. Independently,
-review and author knowledge checks and direct question mappings for c001-c010
-before exposing the Foundation Block in a learner-facing Comprehensive Course
-view.
+All mission milestones are complete: bank remediation with hard gates, the
+Course view, all 62 concept lessons, the reference layer, and the
+named-concept gap questions. Per-lesson glossary/formula ID links (item 3
+below, formerly a follow-up) are now done — see decision_log.md #13. The
+immediate next step is User review of the draft PR. After merge, the
+highest-value follow-ups in learner-impact order: (1) a domain/task-filtered
+and timed quiz mode (blueprint-weighted assembly toward exam simulation),
+(2) reviewed difficulty/cognitive-level metadata to enable diagnostics,
+(3) a decision on whether to build a Reference-sheet UI for
+`reference_sheet_catalog.json` (currently unbuilt/planned — see
+decision_log.md #13) or drop it, (4) a genuine bank question for c011
+(holistic/systems thinking) so every concept lesson carries links, and
+(5) course content for the two glossary terms with no lesson coverage yet
+(RACI chart, risk appetite — see decision_log.md #13).
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using

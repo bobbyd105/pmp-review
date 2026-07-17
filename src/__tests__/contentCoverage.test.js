@@ -49,8 +49,10 @@ describe('coverage derivations', () => {
   it('derives unique question counts from all ECO mappings', () => {
     const unit = coverage.curriculum_units.find(({ id }) => id === 'C007')
     const aligned = getEcoAlignedQuestions(unit, questions)
-    expect(aligned).toHaveLength(24)
-    expect(new Set(aligned.map(({ id }) => id)).size).toBe(24)
+    // C007 maps to BE Task 4 and BE Task 5; the count tracks the live bank
+    // (26 after the 2026-07 named-concept gap batches).
+    expect(aligned).toHaveLength(26)
+    expect(new Set(aligned.map(({ id }) => id)).size).toBe(26)
   })
 
   it('resolves existing lesson ids without changing their order', () => {

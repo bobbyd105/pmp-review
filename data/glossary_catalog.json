@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "as_of": "2026-07-13",
+  "as_of": "2026-07-16",
   "status": "representative-schema-validation",
-  "completeness_note": "Representative entries only. This catalog is not a complete PMP glossary and does not authorize production publication.",
+  "completeness_note": "Expanded 2026-07-16 with high-confusion exam terms across governance, reserves, EEF/OPA, risk/issue vocabulary, Scrum, flow metrics, and organizational structures. Not an exhaustive PMP dictionary; additions go through the same review.",
   "entries": [
     {
       "id": "G-PROJECT",
@@ -14,7 +14,7 @@
         "C001"
       ],
       "related_lesson_ids": [
-        "PL-C001"
+        "c011"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -36,7 +36,7 @@
         "C003"
       ],
       "related_lesson_ids": [
-        "PL-C003"
+        "c001"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -58,7 +58,7 @@
         "C003"
       ],
       "related_lesson_ids": [
-        "PL-C003"
+        "c001"
       ],
       "related_question_ids": [],
       "related_formula_ids": [
@@ -84,8 +84,7 @@
         "C003"
       ],
       "related_lesson_ids": [
-        "PL-C001",
-        "PL-C003"
+        "c001"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -107,7 +106,7 @@
         "C009"
       ],
       "related_lesson_ids": [
-        "PL-C009"
+        "c009"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -135,7 +134,7 @@
         "C024"
       ],
       "related_lesson_ids": [
-        "PL-C024"
+        "c005"
       ],
       "related_question_ids": [],
       "related_formula_ids": [
@@ -164,7 +163,7 @@
         "C032"
       ],
       "related_lesson_ids": [
-        "PL-C032"
+        "c035"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -186,7 +185,7 @@
         "C036"
       ],
       "related_lesson_ids": [
-        "PL-C036"
+        "c039"
       ],
       "related_question_ids": [],
       "related_formula_ids": [
@@ -216,7 +215,7 @@
         "C038"
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_formula_ids": [
@@ -247,9 +246,7 @@
       "related_concept_ids": [
         "C045"
       ],
-      "related_lesson_ids": [
-        "PL-C045"
-      ],
+      "related_lesson_ids": [],
       "related_question_ids": [],
       "related_formula_ids": [
         "F-EMV"
@@ -275,8 +272,7 @@
         "C054"
       ],
       "related_lesson_ids": [
-        "PL-C049",
-        "PL-C054"
+        "c052"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -301,8 +297,7 @@
         "C051"
       ],
       "related_lesson_ids": [
-        "PL-C049",
-        "PL-C051"
+        "c052"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -331,8 +326,7 @@
         "C052"
       ],
       "related_lesson_ids": [
-        "PL-C050",
-        "PL-C052"
+        "c053"
       ],
       "related_question_ids": [],
       "related_formula_ids": [
@@ -364,8 +358,7 @@
         "C059"
       ],
       "related_lesson_ids": [
-        "PL-C058",
-        "PL-C059"
+        "c061"
       ],
       "related_question_ids": [],
       "related_formula_ids": [],
@@ -376,6 +369,532 @@
         {
           "source_id": "S11",
           "topic": "responsible AI and human accountability"
+        }
+      ]
+    },
+    {
+      "id": "G-CHARTER",
+      "term": "Project charter",
+      "definition": "The document that formally authorizes the project and gives the project manager authority to apply organizational resources.",
+      "common_confusion": "The business case justifies the investment; the charter authorizes the project.",
+      "exam_trap": "Assuming a project manager can commit resources before charter approval.",
+      "related_concept_ids": [
+        "C024"
+      ],
+      "related_lesson_ids": [
+        "c005"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S6",
+          "topic": "charter and authorization"
+        }
+      ]
+    },
+    {
+      "id": "G-BASELINE",
+      "term": "Baseline",
+      "definition": "The approved version of a plan component (scope, schedule, cost) used as the reference for measuring performance.",
+      "common_confusion": "A plan describes intent; the baseline is the frozen approved reference that variances are measured against.",
+      "exam_trap": "Updating a baseline informally to match actual progress instead of through change control.",
+      "related_concept_ids": [
+        "C025"
+      ],
+      "related_lesson_ids": [
+        "c006"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S6",
+          "topic": "plans and baselines"
+        }
+      ]
+    },
+    {
+      "id": "G-CHANGE-CONTROL-BOARD",
+      "term": "Change control board",
+      "definition": "The governance body that reviews, approves, or rejects change requests above delegated thresholds.",
+      "common_confusion": "The board decides; the project manager analyzes impact and recommends.",
+      "exam_trap": "The project manager approving above-threshold changes personally to save time.",
+      "related_concept_ids": [
+        "C027"
+      ],
+      "related_lesson_ids": [
+        "c030"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S6",
+          "topic": "integrated change control"
+        }
+      ]
+    },
+    {
+      "id": "G-CHANGE-REQUEST",
+      "term": "Change request",
+      "definition": "A formal proposal to modify a document, deliverable, or baseline, evaluated through integrated change control.",
+      "common_confusion": "Corrective action, preventive action, and defect repair are all raised as change requests.",
+      "exam_trap": "Implementing verbally requested \"small tweaks\" without a formal change request.",
+      "related_concept_ids": [
+        "C027"
+      ],
+      "related_lesson_ids": [
+        "c030"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S6",
+          "topic": "integrated change control"
+        }
+      ]
+    },
+    {
+      "id": "G-CONTINGENCY-RESERVE",
+      "term": "Contingency reserve",
+      "definition": "Budget or time set aside for identified risks, sized by risk analysis and held within the baseline.",
+      "common_confusion": "Management reserve covers unidentified risks and sits above the baseline.",
+      "exam_trap": "Drawing management reserve for a risk that was identified and planned for.",
+      "related_concept_ids": [
+        "C037"
+      ],
+      "related_lesson_ids": [
+        "c040"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "reserves"
+        }
+      ]
+    },
+    {
+      "id": "G-MANAGEMENT-RESERVE",
+      "term": "Management reserve",
+      "definition": "Budget held outside the cost baseline for unforeseen work within project scope — unknown unknowns.",
+      "common_confusion": "Not the project manager’s to spend at discretion; release requires management approval.",
+      "exam_trap": "Funding new scope from management reserve instead of change control and budgeting.",
+      "related_concept_ids": [
+        "C037"
+      ],
+      "related_lesson_ids": [
+        "c040"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "reserves"
+        }
+      ]
+    },
+    {
+      "id": "G-EEF",
+      "term": "Enterprise environmental factors",
+      "definition": "Internal or external conditions, not controlled by the team, that influence or constrain the project — culture, regulations, market conditions, infrastructure.",
+      "common_confusion": "OPAs are the organization’s own assets; EEFs are conditions imposed on the work.",
+      "exam_trap": "Classifying a government regulation as an OPA because the organization must implement it.",
+      "related_concept_ids": [
+        "C024"
+      ],
+      "related_lesson_ids": [
+        "c007"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S6",
+          "topic": "EEFs and OPAs"
+        }
+      ]
+    },
+    {
+      "id": "G-OPA",
+      "term": "Organizational process assets",
+      "definition": "The organization’s accumulated assets available to projects — templates, procedures, historical data, lessons learned repositories.",
+      "common_confusion": "EEFs constrain from outside the team’s control; OPAs are usable organizational property.",
+      "exam_trap": "Treating a company template pulled from the process library as an EEF.",
+      "related_concept_ids": [
+        "C026"
+      ],
+      "related_lesson_ids": [
+        "c007"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S6",
+          "topic": "EEFs and OPAs"
+        }
+      ]
+    },
+    {
+      "id": "G-ISSUE",
+      "term": "Issue",
+      "definition": "A present, certain problem currently affecting the project, tracked in the issue log with an owner and target resolution date.",
+      "common_confusion": "A risk is uncertain and future; an issue is certain and present.",
+      "exam_trap": "Leaving a materialized risk in the risk register instead of transitioning it to issue management.",
+      "related_concept_ids": [
+        "C047"
+      ],
+      "related_lesson_ids": [
+        "c014"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "risk versus issue"
+        }
+      ]
+    },
+    {
+      "id": "G-ASSUMPTION",
+      "term": "Assumption",
+      "definition": "A factor treated as true for planning purposes without proof, recorded in the assumption log because it can fail.",
+      "common_confusion": "Constraints are known, given limits; assumptions are unproven planning premises.",
+      "exam_trap": "Defending the plan when an assumption fails instead of reassessing through change control.",
+      "related_concept_ids": [
+        "C007"
+      ],
+      "related_lesson_ids": [
+        "c014"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "assumptions and constraints"
+        }
+      ]
+    },
+    {
+      "id": "G-CONSTRAINT",
+      "term": "Constraint",
+      "definition": "A known limiting factor the project must operate within — a fixed date, capped budget, or mandated technology.",
+      "common_confusion": "An assumption might prove false; a constraint is a given boundary.",
+      "exam_trap": "Accepting a constraint change as free instead of analyzing impact across the other constraints.",
+      "related_concept_ids": [
+        "C007"
+      ],
+      "related_lesson_ids": [
+        "c014"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "assumptions and constraints"
+        }
+      ]
+    },
+    {
+      "id": "G-STAKEHOLDER-REGISTER",
+      "term": "Stakeholder register",
+      "definition": "The project document recording identified stakeholders, their interests, influence, and engagement information.",
+      "common_confusion": "A living document — new phases, markets, and reorganizations add stakeholders after initiation.",
+      "exam_trap": "Treating the initiation-time register as final while the stakeholder landscape shifts.",
+      "related_concept_ids": [
+        "C040"
+      ],
+      "related_lesson_ids": [
+        "c043"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "stakeholder identification"
+        }
+      ]
+    },
+    {
+      "id": "G-SPRINT",
+      "term": "Sprint",
+      "definition": "A fixed-length timebox (one month or less) in which a Scrum team produces a done, usable increment.",
+      "common_confusion": "The sprint’s commitment is protected; change enters through the backlog at planning boundaries.",
+      "exam_trap": "Absorbing mid-sprint scope injections instead of routing them to the backlog.",
+      "related_concept_ids": [
+        "C049"
+      ],
+      "related_lesson_ids": [
+        "c052"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S9",
+          "topic": "Scrum events"
+        }
+      ]
+    },
+    {
+      "id": "G-INCREMENT",
+      "term": "Increment",
+      "definition": "A concrete, usable addition of working product that meets the definition of done.",
+      "common_confusion": "Work that misses the definition of done is inventory, not an increment.",
+      "exam_trap": "Counting demo-ready but not-done work as a completed increment.",
+      "related_concept_ids": [
+        "C049"
+      ],
+      "related_lesson_ids": [
+        "c052"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S9",
+          "topic": "Scrum artifacts"
+        }
+      ]
+    },
+    {
+      "id": "G-DEFINITION-OF-DONE",
+      "term": "Definition of done",
+      "definition": "The shared, explicit quality standard an increment must meet to count as complete.",
+      "common_confusion": "Acceptance criteria are per-item; the definition of done applies to every increment.",
+      "exam_trap": "Letting the product owner waive the definition of done item-by-item.",
+      "related_concept_ids": [
+        "C049"
+      ],
+      "related_lesson_ids": [
+        "c052"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S9",
+          "topic": "Scrum artifacts"
+        }
+      ]
+    },
+    {
+      "id": "G-PRODUCT-OWNER",
+      "term": "Product Owner",
+      "definition": "The single person accountable for maximizing product value and ordering the product backlog.",
+      "common_confusion": "Stakeholders and sponsors influence; the Product Owner decides backlog order.",
+      "exam_trap": "Letting a sponsor or the Scrum Master reprioritize the backlog directly.",
+      "related_concept_ids": [
+        "C049"
+      ],
+      "related_lesson_ids": [
+        "c052"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S9",
+          "topic": "Scrum roles"
+        }
+      ]
+    },
+    {
+      "id": "G-VELOCITY",
+      "term": "Velocity",
+      "definition": "A team’s demonstrated average of story points completed per iteration, used as an empirical planning input.",
+      "common_confusion": "Team-relative — velocities are not comparable across teams.",
+      "exam_trap": "Using velocity as a performance target, which invites point inflation.",
+      "related_concept_ids": [
+        "C052"
+      ],
+      "related_lesson_ids": [
+        "c055"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "agile estimation"
+        }
+      ]
+    },
+    {
+      "id": "G-LEAD-TIME",
+      "term": "Lead time",
+      "definition": "Elapsed time from request to delivery — the customer’s clock, including queue wait.",
+      "common_confusion": "Cycle time starts when work starts; lead time starts when the request arrives.",
+      "exam_trap": "Explaining a long lead time by pointing only at active work time.",
+      "related_concept_ids": [
+        "C050"
+      ],
+      "related_lesson_ids": [
+        "c053"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "flow metrics"
+        }
+      ]
+    },
+    {
+      "id": "G-CYCLE-TIME",
+      "term": "Cycle time",
+      "definition": "Elapsed time from work started to work finished — the team’s clock on an item.",
+      "common_confusion": "Little’s Law ties it to WIP and throughput: cycle time = WIP ÷ throughput.",
+      "exam_trap": "Trying to shorten cycle time by starting more work in parallel — WIP growth lengthens it.",
+      "related_concept_ids": [
+        "C050"
+      ],
+      "related_lesson_ids": [
+        "c053"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "flow metrics"
+        }
+      ]
+    },
+    {
+      "id": "G-MVP",
+      "term": "Minimum viable product",
+      "definition": "The smallest thing that tests the riskiest assumption with real users; its output is validated learning.",
+      "common_confusion": "An MMF delivers standalone marketable value; an MVP buys learning.",
+      "exam_trap": "Reading ‘minimum’ as permission for low quality rather than small scope.",
+      "related_concept_ids": [
+        "C053"
+      ],
+      "related_lesson_ids": [
+        "c056"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "MVP and MMF"
+        }
+      ]
+    },
+    {
+      "id": "G-RACI",
+      "term": "RACI chart",
+      "definition": "A responsibility assignment matrix marking who is Responsible, Accountable, Consulted, and Informed for each work item.",
+      "common_confusion": "Exactly one Accountable per item; several people can be Responsible.",
+      "exam_trap": "Assigning two Accountable parties and calling the ambiguity collaboration.",
+      "related_concept_ids": [
+        "C042"
+      ],
+      "related_lesson_ids": [],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "resource responsibility"
+        }
+      ]
+    },
+    {
+      "id": "G-MATRIX-ORGANIZATION",
+      "term": "Matrix organization",
+      "definition": "A structure where staff report to both functional and project managers, with authority split by matrix strength (weak, balanced, strong).",
+      "common_confusion": "In a weak matrix the functional manager holds most authority; in a strong matrix the project manager does.",
+      "exam_trap": "Prescribing directive PM behavior in a weak matrix where negotiation is the real tool.",
+      "related_concept_ids": [
+        "C009"
+      ],
+      "related_lesson_ids": [
+        "c009"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S2",
+          "topic": "organizational structures"
+        }
+      ]
+    },
+    {
+      "id": "G-PHASE-GATE",
+      "term": "Phase gate",
+      "definition": "A review at a phase end deciding continue, modify, repeat, or stop, based on current evidence.",
+      "common_confusion": "Also called stage gate or kill point; it exists to stop bad investments continuing on momentum.",
+      "exam_trap": "Letting sunk cost reasoning drive a continue decision at the gate.",
+      "related_concept_ids": [
+        "C017"
+      ],
+      "related_lesson_ids": [
+        "c003"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S4",
+          "topic": "phases and gates"
+        }
+      ]
+    },
+    {
+      "id": "G-LESSONS-LEARNED",
+      "term": "Lessons learned register",
+      "definition": "The project document capturing knowledge gained, feeding the organizational repository as a process asset.",
+      "common_confusion": "Captured throughout the project, not only at closure.",
+      "exam_trap": "Deferring lessons capture until after the team has dispersed.",
+      "related_concept_ids": [
+        "C026"
+      ],
+      "related_lesson_ids": [
+        "c029"
+      ],
+      "related_question_ids": [],
+      "related_formula_ids": [],
+      "related_reference_sheet_ids": [],
+      "source_references": [
+        {
+          "source_id": "S6",
+          "topic": "project knowledge"
         }
       ]
     }
