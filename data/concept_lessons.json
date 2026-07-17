@@ -59,7 +59,11 @@
       "Confusing 'doing projects right' (project management) with 'doing the right projects' (portfolio management) — the exam tests this distinction directly.",
       "Treating a project's handoff to operations as the project's failure rather than its normal, intended conclusion."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-PROGRAM",
+      "G-PORTFOLIO",
+      "G-OPERATIONS"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -329,7 +333,9 @@
       "Assuming phase gates only exist in predictive projects.",
       "Confusing 'phase' (project-specific, variable count) with 'Focus Area' (fixed, universal five)."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-PHASE-GATE"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -571,7 +577,10 @@
       "Assuming the project manager can commit resources before the charter is approved.",
       "Forgetting the benefits management plan's tracking often continues after the project itself has closed."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-BUSINESS-CASE",
+      "G-CHARTER"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -695,7 +704,9 @@
       "Confusing a 'plan' (intended approach) with a 'baseline' (the approved reference point performance is measured against).",
       "Assuming a baseline can be informally adjusted to match actual progress rather than only through formal change control."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-BASELINE"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -825,7 +836,10 @@
       "Assuming ITTOs must be memorized process-by-process rather than recognized as a repeating input-tool-output pattern.",
       "Treating project documents as part of the formal management plan rather than separate working records."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-EEF",
+      "G-OPA"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -1066,7 +1080,10 @@
       "Confusing matrix strength (weak/balanced/strong) with the project manager's actual formal authority, which varies significantly across that spectrum.",
       "Assuming a projectized structure has no PMO involvement — a PMO can still exist to standardize practice even where the PM holds high authority."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-PMO",
+      "G-MATRIX-ORGANIZATION"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -1308,7 +1325,9 @@
       "Treating 'similar to past work' as 'not unique' — context and conditions make repeated work unique.",
       "Accepting a constraint change as free instead of analyzing its impact on the other constraints."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-PROJECT"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -1685,7 +1704,11 @@
       "Treating a failed assumption as a reason to defend the plan rather than reassess it.",
       "Logging an issue and mentioning it in status reports without assigning an owner or resolution date — visibility is not management."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-ISSUE",
+      "G-ASSUMPTION",
+      "G-CONSTRAINT"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -3565,7 +3588,9 @@
       "Waiting for a departure announcement before addressing an obvious single-point-of-knowledge risk.",
       "Capturing lessons learned only at closure, after the people who hold them have dispersed."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-LESSONS-LEARNED"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -3693,7 +3718,10 @@
       "Assessing changes only individually while their cumulative drift goes unmeasured.",
       "Treating an approved change as done without updating baselines and informing the affected."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-CHANGE-CONTROL-BOARD",
+      "G-CHANGE-REQUEST"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -4320,7 +4348,9 @@
       "Writing activity-shaped WBS entries ('ongoing support') that can't be estimated or verified.",
       "Forgetting the scope baseline is three things — statement, WBS, and dictionary — not just the statement."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-WBS"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -4697,7 +4727,10 @@
     ],
     "glossary_refs": [],
     "reference_sheet_refs": [],
-    "formula_refs": [],
+    "formula_refs": [
+      "F-PERT-BETA",
+      "F-PERT-TRIANGULAR"
+    ],
     "flashcards": [
       {
         "term": "Lag",
@@ -4818,9 +4851,13 @@
       "Compressing non-critical activities and expecting the end date to move.",
       "Adding people to work that doesn't compress — fixed-duration or coordination-heavy activities."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-CRITICAL-PATH"
+    ],
     "reference_sheet_refs": [],
-    "formula_refs": [],
+    "formula_refs": [
+      "F-TOTAL-FLOAT"
+    ],
     "flashcards": [
       {
         "term": "Critical path",
@@ -4940,7 +4977,10 @@
       "Funding scope additions from reserves instead of change control and budgeting.",
       "Reporting only actual spend while large committed purchase orders sit invisible."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-CONTINGENCY-RESERVE",
+      "G-MANAGEMENT-RESERVE"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -5072,9 +5112,20 @@
       "Using BAC/CPI when the variance was explicitly a one-time anomaly (or vice versa).",
       "Attributing schedule meaning to CPI or cost meaning to SPI — each index answers its own question."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-EARNED-VALUE"
+    ],
     "reference_sheet_refs": [],
-    "formula_refs": [],
+    "formula_refs": [
+      "F-CPI",
+      "F-SPI",
+      "F-EAC",
+      "F-CV",
+      "F-SV",
+      "F-ETC",
+      "F-VAC",
+      "F-TCPI"
+    ],
     "flashcards": [
       {
         "term": "CPI",
@@ -5217,7 +5268,12 @@
     ],
     "glossary_refs": [],
     "reference_sheet_refs": [],
-    "formula_refs": [],
+    "formula_refs": [
+      "F-ROI",
+      "F-NPV",
+      "F-PAYBACK",
+      "F-BCR"
+    ],
     "flashcards": [
       {
         "term": "NPV",
@@ -5342,7 +5398,9 @@
       "Letting managers 'represent' end users instead of engaging users directly.",
       "Treating the initiation-time register as final while the stakeholder landscape shifts."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-STAKEHOLDER-REGISTER"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -5476,7 +5534,9 @@
     ],
     "glossary_refs": [],
     "reference_sheet_refs": [],
-    "formula_refs": [],
+    "formula_refs": [
+      "F-COMMUNICATION-CHANNELS"
+    ],
     "flashcards": [
       {
         "term": "Communication channels",
@@ -6118,7 +6178,9 @@
     ],
     "glossary_refs": [],
     "reference_sheet_refs": [],
-    "formula_refs": [],
+    "formula_refs": [
+      "F-EMV"
+    ],
     "flashcards": [
       {
         "term": "Expected monetary value",
@@ -6518,7 +6580,14 @@
       "Treating the Daily Scrum as a status meeting for managers rather than the Developers' planning huddle.",
       "Confusing the Sprint Review (inspect the product) with the Retrospective (inspect the process)."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-SCRUM-MASTER",
+      "G-PRODUCT-BACKLOG",
+      "G-SPRINT",
+      "G-INCREMENT",
+      "G-DEFINITION-OF-DONE",
+      "G-PRODUCT-OWNER"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -6653,9 +6722,15 @@
       "Confusing lead time (customer's clock, from request) with cycle time (team's clock, from start).",
       "Optimizing one workflow step in isolation while the downstream queue swells."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-WIP",
+      "G-LEAD-TIME",
+      "G-CYCLE-TIME"
+    ],
     "reference_sheet_refs": [],
-    "formula_refs": [],
+    "formula_refs": [
+      "F-LITTLES-LAW"
+    ],
     "flashcards": [
       {
         "term": "WIP limit",
@@ -6911,7 +6986,9 @@
       "Comparing velocities across teams or setting velocity as a performance target.",
       "Reading a smooth burndown as health when scope is being quietly trimmed to produce it."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-VELOCITY"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -7030,7 +7107,9 @@
       "Using MVP and MMF interchangeably — one tests assumptions, the other delivers value.",
       "Sequencing by ease while cost of delay points the other way."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-MVP"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [
@@ -7640,7 +7719,9 @@
       "Using AI outputs that affect people without checking for inherited bias.",
       "Letting 'the model decided' obscure the human who owns the decision."
     ],
-    "glossary_refs": [],
+    "glossary_refs": [
+      "G-RESPONSIBLE-AI"
+    ],
     "reference_sheet_refs": [],
     "formula_refs": [],
     "flashcards": [

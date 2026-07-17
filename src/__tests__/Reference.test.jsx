@@ -63,4 +63,35 @@ describe('Reference', () => {
 
     expect(screen.getByText('No formulas match the filter.')).toBeInTheDocument()
   })
+
+  it('resets the filter when switching sections so entries are not hidden by a stale query', async () => {
+    const user = userEvent.setup()
+    render(<Reference />)
+
+    await user.type(screen.getByLabelText('Filter'), 'to-complete')
+    await user.click(screen.getByRole('button', { name: `Glossary (${glossaryCatalog.entries.length})` }))
+
+    expect(screen.getByLabelText('Filter')).toHaveValue('')
+    for (const entry of glossaryCatalog.entries) {
+      expect(screen.getByText(entry.term)).toBeInTheDocument()
+    }
+  })
+
+  it('deep-links to a focused entry: switches section and marks the card focused', () => {
+    const formula = formulaCatalog.formulas[0]
+    render(<Reference focusEntry={{ section: 'formulas', id: formula.id }} />)
+
+    const card = screen.getByText(formula.name).closest('article')
+    expect(card).toHaveClass('focused-item')
+  })
+
+  it('deep-links into the glossary section when the focused entry lives there', () => {
+    const entry = glossaryCatalog.entries[0]
+    render(<Reference focusEntry={{ section: 'glossary', id: entry.id }} />)
+
+    expect(
+      screen.getByRole('button', { name: `Glossary (${glossaryCatalog.entries.length})` }),
+    ).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.getByText(entry.term).closest('article')).toHaveClass('focused-item')
+  })
 })

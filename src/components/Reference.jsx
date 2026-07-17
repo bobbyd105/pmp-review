@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import formulaCatalog from '../../data/formula_catalog.json'
 import glossaryCatalog from '../../data/glossary_catalog.json'
 
-function FormulaCard({ formula }) {
+function FormulaCard({ formula, cardRef, focused }) {
   return (
-    <article className="reference-card">
+    <article ref={cardRef} className={focused ? 'reference-card focused-item' : 'reference-card'}>
       <h4>{formula.name}</h4>
       <p className="reference-formula">
         <code>{formula.formula}</code>
@@ -40,9 +40,9 @@ function FormulaCard({ formula }) {
   )
 }
 
-function GlossaryCard({ entry }) {
+function GlossaryCard({ entry, cardRef, focused }) {
   return (
-    <article className="reference-card">
+    <article ref={cardRef} className={focused ? 'reference-card focused-item' : 'reference-card'}>
       <h4>{entry.term}</h4>
       <p>{entry.definition}</p>
       <ul className="reference-guidance">
@@ -57,9 +57,25 @@ function GlossaryCard({ entry }) {
   )
 }
 
-export default function Reference() {
+// focusEntry, when set, is { section: 'formulas' | 'glossary', id }. It
+// switches to that section, clears any active filter that would hide the
+// entry, and scrolls the matching card into view.
+export default function Reference({ focusEntry = null }) {
   const [section, setSection] = useState('formulas')
   const [filter, setFilter] = useState('')
+  const cardRefs = useRef(new Map())
+
+  useEffect(() => {
+    if (!focusEntry) return
+    setSection(focusEntry.section)
+    setFilter('')
+  }, [focusEntry])
+
+  useEffect(() => {
+    if (!focusEntry) return
+    cardRefs.current.get(focusEntry.id)?.scrollIntoView?.({ block: 'center' })
+  }, [focusEntry, section, filter])
+
   const query = filter.trim().toLowerCase()
 
   const formulas = formulaCatalog.formulas.filter(
@@ -75,6 +91,11 @@ export default function Reference() {
       entry.definition.toLowerCase().includes(query),
   )
 
+  const selectSection = (next) => {
+    setSection(next)
+    setFilter('')
+  }
+
   return (
     <section aria-label="Reference">
       <h2>Reference</h2>
@@ -88,7 +109,7 @@ export default function Reference() {
           type="button"
           className={section === 'formulas' ? 'nav-button active' : 'nav-button'}
           aria-pressed={section === 'formulas'}
-          onClick={() => setSection('formulas')}
+          onClick={() => selectSection('formulas')}
         >
           Formulas ({formulaCatalog.formulas.length})
         </button>
@@ -96,7 +117,7 @@ export default function Reference() {
           type="button"
           className={section === 'glossary' ? 'nav-button active' : 'nav-button'}
           aria-pressed={section === 'glossary'}
-          onClick={() => setSection('glossary')}
+          onClick={() => selectSection('glossary')}
         >
           Glossary ({glossaryCatalog.entries.length})
         </button>
@@ -113,7 +134,15 @@ export default function Reference() {
       {section === 'formulas' && (
         <div className="reference-list">
           {formulas.map((formula) => (
-            <FormulaCard key={formula.id} formula={formula} />
+            <FormulaCard
+              key={formula.id}
+              formula={formula}
+              focused={focusEntry?.id === formula.id}
+              cardRef={(node) => {
+                if (node) cardRefs.current.set(formula.id, node)
+                else cardRefs.current.delete(formula.id)
+              }}
+            />
           ))}
           {formulas.length === 0 && <p>No formulas match the filter.</p>}
         </div>
@@ -121,7 +150,15 @@ export default function Reference() {
       {section === 'glossary' && (
         <div className="reference-list">
           {entries.map((entry) => (
-            <GlossaryCard key={entry.id} entry={entry} />
+            <GlossaryCard
+              key={entry.id}
+              entry={entry}
+              focused={focusEntry?.id === entry.id}
+              cardRef={(node) => {
+                if (node) cardRefs.current.set(entry.id, node)
+                else cardRefs.current.delete(entry.id)
+              }}
+            />
           ))}
           {entries.length === 0 && <p>No glossary entries match the filter.</p>}
         </div>

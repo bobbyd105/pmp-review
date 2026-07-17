@@ -27,7 +27,7 @@
         "Treating the result as the number of actual messages."
       ],
       "related_lesson_ids": [
-        "PL-C041"
+        "c044"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [],
@@ -69,8 +69,7 @@
         "Changing units between estimates."
       ],
       "related_lesson_ids": [
-        "PL-C035",
-        "PL-C036"
+        "c038"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -122,7 +121,7 @@
         "Assuming the network and critical path never change."
       ],
       "related_lesson_ids": [
-        "PL-C036"
+        "c039"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -162,7 +161,7 @@
         "Interpreting a higher CPI as over budget."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -206,7 +205,7 @@
         "Assuming SPI alone predicts final completion."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -250,7 +249,7 @@
         "Selecting a formula without checking scenario assumptions."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -294,7 +293,7 @@
         "Ignoring sign conventions or non-monetary criteria."
       ],
       "related_lesson_ids": [
-        "PL-C046"
+        "c049"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -334,7 +333,7 @@
         "Comparing projects with different timing or risk using ROI alone."
       ],
       "related_lesson_ids": [
-        "PL-C039"
+        "c042"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -379,7 +378,7 @@
         "Choosing the shortest project without comparing NPV."
       ],
       "related_lesson_ids": [
-        "PL-C039"
+        "c042"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -424,8 +423,7 @@
         "Mixing time units."
       ],
       "related_lesson_ids": [
-        "PL-C050",
-        "PL-C052"
+        "c053"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -465,7 +463,7 @@
         "Reading CV as a schedule signal."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -505,7 +503,7 @@
         "Forgetting SV converges to zero at completion regardless of lateness."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -545,7 +543,7 @@
         "Using BAC instead of EAC when performance has shifted."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -585,7 +583,7 @@
         "Treating VAC as current variance rather than a completion forecast."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -629,7 +627,7 @@
         "Using EAC in the denominator when the target is BAC."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -672,7 +670,7 @@
         "Mixing up triangular (O+M+P)/3 with beta (O+4M+P)/6 on exam arithmetic."
       ],
       "related_lesson_ids": [
-        "PL-C035"
+        "c038"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [],
@@ -710,7 +708,7 @@
         "Ignoring everything the investment earns after the payback point."
       ],
       "related_lesson_ids": [
-        "PL-C039"
+        "c042"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [],
@@ -748,7 +746,7 @@
         "Using undiscounted figures when timing differs materially."
       ],
       "related_lesson_ids": [
-        "PL-C039"
+        "c042"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [],

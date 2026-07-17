@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import conceptLessons from '../../data/concept_lessons.json'
 import questions from '../../data/questions.json'
+import formulaCatalog from '../../data/formula_catalog.json'
+import glossaryCatalog from '../../data/glossary_catalog.json'
 import sourceTopicIndex from '../../docs/content/source_topic_index.json'
 
 const REQUIRED_FIELDS = [
@@ -150,11 +152,78 @@ describe('concept_lessons.json data contract', () => {
     }
   })
 
-  it('keeps deferred reference-layer links intentionally empty until that layer ships', () => {
+  it('keeps the still-unbuilt reference-sheet layer intentionally empty', () => {
+    // reference_sheet_catalog.json is "status": "planned" and has no rendered
+    // UI (unlike formula_catalog.json / glossary_catalog.json, which the
+    // Reference view renders), so there is nothing valid to link to yet.
     for (const lesson of conceptLessons) {
-      expect(lesson.glossary_refs, `${lesson.id} glossary refs`).toEqual([])
       expect(lesson.reference_sheet_refs, `${lesson.id} reference-sheet refs`).toEqual([])
-      expect(lesson.formula_refs, `${lesson.id} formula refs`).toEqual([])
+    }
+  })
+
+  it('links formula/glossary refs only to real catalog entries, with no duplicates', () => {
+    const formulaIds = new Set(formulaCatalog.formulas.map((formula) => formula.id))
+    const glossaryIds = new Set(glossaryCatalog.entries.map((entry) => entry.id))
+
+    for (const lesson of conceptLessons) {
+      expect(
+        new Set(lesson.formula_refs).size,
+        `${lesson.id} has duplicate formula refs`,
+      ).toBe(lesson.formula_refs.length)
+      expect(
+        new Set(lesson.glossary_refs).size,
+        `${lesson.id} has duplicate glossary refs`,
+      ).toBe(lesson.glossary_refs.length)
+
+      for (const formulaId of lesson.formula_refs) {
+        expect(formulaIds, `${lesson.id} references unknown formula "${formulaId}"`).toContain(
+          formulaId,
+        )
+      }
+      for (const glossaryId of lesson.glossary_refs) {
+        expect(glossaryIds, `${lesson.id} references unknown glossary entry "${glossaryId}"`).toContain(
+          glossaryId,
+        )
+      }
+    }
+  })
+
+  it('keeps formula/glossary cross-references bidirectional between the Course and Reference', () => {
+    for (const formula of formulaCatalog.formulas) {
+      for (const lessonId of formula.related_lesson_ids) {
+        const lesson = conceptLessons.find((candidate) => candidate.id === lessonId)
+        expect(lesson, `formula ${formula.id} points at unknown lesson "${lessonId}"`).toBeDefined()
+        expect(
+          lesson.formula_refs,
+          `${lessonId}.formula_refs is missing "${formula.id}", which claims to teach it`,
+        ).toContain(formula.id)
+      }
+    }
+    for (const entry of glossaryCatalog.entries) {
+      for (const lessonId of entry.related_lesson_ids) {
+        const lesson = conceptLessons.find((candidate) => candidate.id === lessonId)
+        expect(lesson, `glossary entry ${entry.id} points at unknown lesson "${lessonId}"`).toBeDefined()
+        expect(
+          lesson.glossary_refs,
+          `${lessonId}.glossary_refs is missing "${entry.id}", which claims to teach it`,
+        ).toContain(entry.id)
+      }
+    }
+    for (const lesson of conceptLessons) {
+      for (const formulaId of lesson.formula_refs) {
+        const formula = formulaCatalog.formulas.find((candidate) => candidate.id === formulaId)
+        expect(
+          formula.related_lesson_ids,
+          `formula ${formulaId}.related_lesson_ids is missing "${lesson.id}", which claims to teach it`,
+        ).toContain(lesson.id)
+      }
+      for (const glossaryId of lesson.glossary_refs) {
+        const entry = glossaryCatalog.entries.find((candidate) => candidate.id === glossaryId)
+        expect(
+          entry.related_lesson_ids,
+          `glossary entry ${glossaryId}.related_lesson_ids is missing "${lesson.id}", which claims to teach it`,
+        ).toContain(lesson.id)
+      }
     }
   })
 

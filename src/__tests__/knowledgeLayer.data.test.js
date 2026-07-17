@@ -7,6 +7,7 @@ import objectives from '../../data/learning_objectives.json'
 import questions from '../../data/questions.json'
 import referenceSheets from '../../data/reference_sheet_catalog.json'
 import lessons from '../../data/lessons.json'
+import conceptLessons from '../../data/concept_lessons.json'
 import sourceIndex from '../../docs/content/source_topic_index.json'
 
 const unique = (values) => new Set(values).size === values.length
@@ -20,6 +21,7 @@ const referencesById = byId(referenceSheets.reference_sheets)
 const knownSources = new Set(sourceIndex.sources.map(({ id }) => id))
 const knownLessons = new Set(lessons.map(({ id }) => id))
 const knownQuestions = new Set(questions.map(({ id }) => id))
+const knownConceptLessons = new Set(conceptLessons.map(({ id }) => id))
 
 function expectKnown(values, registry) {
   expect(values.every((value) => registry.has(value))).toBe(true)
@@ -137,7 +139,10 @@ describe('shared knowledge asset contracts', () => {
       }
       expectKnown(entry.related_concept_ids, conceptsById)
       expect(entry.related_concept_ids.length).toBeGreaterThan(0)
-      expectKnown(entry.related_lesson_ids, new Set(objectives.planned_lessons.map(({ lesson_id }) => lesson_id)))
+      // related_lesson_ids points at the authored Course (concept_lessons.json),
+      // not the planning-layer lesson ids in objectives.planned_lessons — see
+      // conceptLessons.data.test.js for the bidirectional cross-reference check.
+      expectKnown(entry.related_lesson_ids, knownConceptLessons)
       expectKnown(entry.related_question_ids, knownQuestions)
       expectKnown(entry.related_formula_ids, formulasById)
       expectKnown(entry.related_reference_sheet_ids, referencesById)
@@ -159,7 +164,9 @@ describe('shared knowledge asset contracts', () => {
       expect(formula.comparison_guidance.less_than.trim()).not.toBe('')
       expect(formula.memory_tips.length).toBeGreaterThan(0)
       expect(formula.common_mistakes.length).toBeGreaterThan(0)
-      expectKnown(formula.related_lesson_ids, new Set(objectives.planned_lessons.map(({ lesson_id }) => lesson_id)))
+      // related_lesson_ids points at the authored Course (concept_lessons.json);
+      // see conceptLessons.data.test.js for the bidirectional cross-reference check.
+      expectKnown(formula.related_lesson_ids, knownConceptLessons)
       expectKnown(formula.related_question_ids, knownQuestions)
       expectKnown(formula.related_glossary_ids, glossaryById)
       expectKnown(formula.source_references.map(({ source_id }) => source_id), knownSources)
