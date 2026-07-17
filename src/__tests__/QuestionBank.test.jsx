@@ -80,4 +80,14 @@ describe('QuestionBank', () => {
     expect(within(firstCard).getByText(first.explanation)).toBeInTheDocument()
     expect(screen.queryByText(second.explanation)).not.toBeInTheDocument()
   })
+
+  it('deep-links to a focused question: answer pre-expanded and item marked focused', () => {
+    const target = questions[Math.min(5, questions.length - 1)]
+    render(<QuestionBank focusQuestionId={target.id} />)
+
+    const card = screen.getByText(target.question).closest('article')
+    expect(within(card).getByText(target.explanation)).toBeInTheDocument()
+    expect(within(card).getByRole('button', { name: 'Hide answer' })).toBeInTheDocument()
+    expect(card.closest('.question-list-item')).toHaveClass('focused-item')
+  })
 })

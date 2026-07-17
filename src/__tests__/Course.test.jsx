@@ -9,6 +9,7 @@ describe('Course', () => {
   let errorSpy
 
   beforeEach(() => {
+    localStorage.clear()
     errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
   })
 
@@ -97,9 +98,49 @@ describe('Course', () => {
     ).toBeInTheDocument()
   })
 
-  it('resolves related questions to their actual bank prompts', async () => {
+  it('resolves related questions to their actual bank prompts and makes them answerable', async () => {
     const user = userEvent.setup()
     render(<Course />)
+    const lessonWithLinks = conceptLessons.find(
+      (lesson) => lesson.related_question_ids.length > 0,
+    )
+    const lessonIndex = conceptLessons.indexOf(lessonWithLinks)
+    const question = questions.find(
+      (entry) => entry.id === lessonWithLinks.related_question_ids[0],
+    )
+
+    await user.click(
+      screen.getAllByRole('button', { name: 'Open lesson' })[lessonIndex],
+    )
+
+    for (const questionId of lessonWithLinks.related_question_ids) {
+      const relatedQuestion = questions.find((entry) => entry.id === questionId)
+      expect(screen.getByText(relatedQuestion.question)).toBeInTheDocument()
+    }
+
+    // The first related question is answerable in place, not just readable.
+    const practiceGroup = screen.getByRole('radiogroup', {
+      name: `Practice question ${question.id}`,
+    })
+    const practiceContainer = practiceGroup.closest('.knowledge-check')
+    const practiceButton = within(practiceContainer).getByRole('button', {
+      name: 'Check answer',
+    })
+    expect(practiceButton).toBeDisabled()
+
+    await user.click(within(practiceGroup).getByLabelText(question.correct_answer))
+    await user.click(practiceButton)
+
+    expect(within(practiceContainer).getByText('Correct.')).toBeInTheDocument()
+    expect(
+      within(practiceContainer).getByText(question.explanation, { exact: false }),
+    ).toBeInTheDocument()
+  })
+
+  it('opens a related question directly in the Question Bank via the provided callback', async () => {
+    const user = userEvent.setup()
+    const onOpenQuestion = vi.fn()
+    render(<Course onOpenQuestion={onOpenQuestion} />)
     const lessonWithLinks = conceptLessons.find(
       (lesson) => lesson.related_question_ids.length > 0,
     )
@@ -108,10 +149,84 @@ describe('Course', () => {
     await user.click(
       screen.getAllByRole('button', { name: 'Open lesson' })[lessonIndex],
     )
+    await user.click(screen.getAllByRole('button', { name: 'Open in Question Bank' })[0])
 
-    for (const questionId of lessonWithLinks.related_question_ids) {
-      const question = questions.find((entry) => entry.id === questionId)
-      expect(screen.getByText(question.question)).toBeInTheDocument()
-    }
+    expect(onOpenQuestion).toHaveBeenCalledWith(lessonWithLinks.related_question_ids[0])
+  })
+
+  it('surfaces linked formula and glossary entries with navigation into Reference', async () => {
+    const user = userEvent.setup()
+    const onOpenReference = vi.fn()
+    const lessonWithFormula = conceptLessons.find((lesson) => lesson.formula_refs.length > 0)
+    render(<Course onOpenReference={onOpenReference} />)
+    const lessonIndex = conceptLessons.indexOf(lessonWithFormula)
+
+    await user.click(screen.getAllByRole('button', { name: 'Open lesson' })[lessonIndex])
+
+    const section = screen
+      .getByRole('heading', { level: 4, name: 'Reference sheet' })
+      .closest('section')
+    const links = within(section).getAllByRole('button')
+    expect(links.length).toBe(
+      lessonWithFormula.formula_refs.length + lessonWithFormula.glossary_refs.length,
+    )
+    await user.click(links[0])
+    expect(onOpenReference).toHaveBeenCalledWith('formulas', lessonWithFormula.formula_refs[0])
+  })
+
+  it('marks a lesson complete and shows the running completion count', async () => {
+    const user = userEvent.setup()
+    render(<Course />)
+
+    expect(screen.getByText(`0 of ${conceptLessons.length} lessons marked complete.`, {
+      exact: false,
+    })).toBeInTheDocument()
+
+    await user.click(screen.getAllByRole('button', { name: 'Mark complete' })[0])
+
+    expect(screen.getByText(`1 of ${conceptLessons.length} lessons marked complete.`, {
+      exact: false,
+    })).toBeInTheDocument()
+    expect(screen.getAllByRole('button', { name: 'Completed ✓' })[0]).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    )
+  })
+
+  it('persists lesson completion and knowledge-check results across collapse, remount, and reload', async () => {
+    const user = userEvent.setup()
+    const { unmount } = render(<Course />)
+    const lesson = conceptLessons[0]
+    const check = lesson.knowledge_checks[0]
+
+    await user.click(screen.getAllByRole('button', { name: 'Open lesson' })[0])
+    await user.click(screen.getAllByRole('button', { name: 'Mark complete' })[0])
+
+    const checkGroup = screen.getByRole('radiogroup', { name: 'Knowledge check 1' })
+    await user.click(within(checkGroup).getByLabelText(check.correct_answer))
+    await user.click(
+      within(checkGroup.closest('.knowledge-check')).getByRole('button', {
+        name: 'Check answer',
+      }),
+    )
+
+    // Collapse and reopen within the same mount: state must not reset.
+    await user.click(screen.getAllByRole('button', { name: 'Collapse lesson' })[0])
+    await user.click(screen.getAllByRole('button', { name: 'Open lesson' })[0])
+    expect(
+      within(screen.getByRole('radiogroup', { name: 'Knowledge check 1' }).closest('.knowledge-check'))
+        .getByText('Correct.'),
+    ).toBeInTheDocument()
+
+    // Simulate a full page refresh: unmount and render a fresh Course.
+    unmount()
+    render(<Course />)
+
+    expect(screen.getAllByRole('button', { name: 'Completed ✓' })[0]).toBeInTheDocument()
+    await user.click(screen.getAllByRole('button', { name: 'Open lesson' })[0])
+    expect(
+      within(screen.getByRole('radiogroup', { name: 'Knowledge check 1' }).closest('.knowledge-check'))
+        .getByText('Correct.'),
+    ).toBeInTheDocument()
   })
 })

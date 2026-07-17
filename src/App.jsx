@@ -23,6 +23,27 @@ const VIEWS = [
 
 export default function App() {
   const [view, setView] = useState('quiz')
+  // A real handoff from the Course into the existing quiz/question-bank
+  // experience: opening a related practice question or reference entry from
+  // a lesson switches views and scrolls straight to it.
+  const [focusQuestionId, setFocusQuestionId] = useState(null)
+  const [focusReference, setFocusReference] = useState(null)
+
+  const navigateTo = (id) => {
+    setView(id)
+    if (id !== 'browse') setFocusQuestionId(null)
+    if (id !== 'reference') setFocusReference(null)
+  }
+
+  const openQuestion = (questionId) => {
+    setFocusQuestionId(questionId)
+    setView('browse')
+  }
+
+  const openReference = (section, id) => {
+    setFocusReference({ section, id })
+    setView('reference')
+  }
 
   return (
     <main className="app">
@@ -35,7 +56,7 @@ export default function App() {
               type="button"
               className={view === id ? 'nav-button active' : 'nav-button'}
               aria-pressed={view === id}
-              onClick={() => setView(id)}
+              onClick={() => navigateTo(id)}
             >
               {label}
             </button>
@@ -43,9 +64,9 @@ export default function App() {
         </nav>
       </header>
       {view === 'quiz' && <Quiz />}
-      {view === 'course' && <Course />}
-      {view === 'reference' && <Reference />}
-      {view === 'browse' && <QuestionBank />}
+      {view === 'course' && <Course onOpenQuestion={openQuestion} onOpenReference={openReference} />}
+      {view === 'reference' && <Reference focusEntry={focusReference} />}
+      {view === 'browse' && <QuestionBank focusQuestionId={focusQuestionId} />}
       {view === 'dashboard' && <Dashboard />}
       {view === 'lessons' && <Lessons />}
       {view === 'studio' && <ContentStudio />}

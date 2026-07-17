@@ -1,8 +1,13 @@
 import { useState } from 'react'
+import formulaCatalog from '../../data/formula_catalog.json'
+import glossaryCatalog from '../../data/glossary_catalog.json'
 
 // Renders the concept-lesson content subset: paragraphs separated by blank
 // lines, "- " bullet lists, numbered "1. " lists, **bold**, and *italic*.
 // Everything is emitted as React elements — no HTML injection surface.
+
+const formulaById = new Map(formulaCatalog.formulas.map((formula) => [formula.id, formula]))
+const glossaryById = new Map(glossaryCatalog.entries.map((entry) => [entry.id, entry]))
 
 function renderInline(text, keyPrefix) {
   const boldParts = text.split(/\*\*(.+?)\*\*/g)
@@ -42,16 +47,21 @@ function renderContent(content) {
   })
 }
 
-function KnowledgeCheck({ check, lessonId, index }) {
-  const [selected, setSelected] = useState(null)
-  const [revealed, setRevealed] = useState(false)
-  const groupName = `${lessonId}-check-${index}`
+// Shared answerable-question UI: a radiogroup, a locked-until-selected "Check
+// answer" button, and a reveal showing correctness plus an explanation. Used
+// both for authored knowledge checks (result persists via props) and for
+// related practice questions pulled from the bank (result stays local to the
+// card — see RelatedQuestionPractice).
+function AnswerableQuestion({ prompt, options, correctAnswer, explanation, groupName, groupLabel, result, onAnswer }) {
+  const [pendingSelection, setPendingSelection] = useState(null)
+  const revealed = result?.revealed ?? false
+  const selected = revealed ? result.selected : pendingSelection
 
   return (
     <div className="knowledge-check">
-      <p className="knowledge-check-question">{check.question}</p>
-      <div role="radiogroup" aria-label={`Knowledge check ${index + 1}`}>
-        {check.options.map((option) => (
+      <p className="knowledge-check-question">{prompt}</p>
+      <div role="radiogroup" aria-label={groupLabel}>
+        {options.map((option) => (
           <label key={option} className="knowledge-check-option">
             <input
               type="radio"
@@ -59,11 +69,11 @@ function KnowledgeCheck({ check, lessonId, index }) {
               value={option}
               checked={selected === option}
               disabled={revealed}
-              onChange={() => setSelected(option)}
+              onChange={() => setPendingSelection(option)}
             />
             <span
               className={
-                revealed && option === check.correct_answer
+                revealed && option === correctAnswer
                   ? 'check-correct'
                   : revealed && option === selected
                     ? 'check-incorrect'
@@ -80,7 +90,7 @@ function KnowledgeCheck({ check, lessonId, index }) {
           type="button"
           className="secondary-button"
           disabled={selected === null}
-          onClick={() => setRevealed(true)}
+          onClick={() => onAnswer(selected)}
         >
           Check answer
         </button>
@@ -88,8 +98,7 @@ function KnowledgeCheck({ check, lessonId, index }) {
       {revealed && (
         <div className="knowledge-check-result" role="status">
           <p>
-            <strong>{selected === check.correct_answer ? 'Correct.' : 'Not quite.'}</strong>{' '}
-            {check.explanation}
+            <strong>{selected === correctAnswer ? 'Correct.' : 'Not quite.'}</strong> {explanation}
           </p>
         </div>
       )}
@@ -97,8 +106,64 @@ function KnowledgeCheck({ check, lessonId, index }) {
   )
 }
 
-export default function ConceptLessonCard({ lesson, relatedQuestions }) {
+function KnowledgeCheck({ check, lessonId, index, result, onAnswer }) {
+  return (
+    <AnswerableQuestion
+      prompt={check.question}
+      options={check.options}
+      correctAnswer={check.correct_answer}
+      explanation={check.explanation}
+      groupName={`${lessonId}-check-${index}`}
+      groupLabel={`Knowledge check ${index + 1}`}
+      result={result}
+      onAnswer={(selected) => onAnswer(selected)}
+    />
+  )
+}
+
+// A related bank question rendered as a real, answerable question (not a
+// static stem), plus a direct handoff into the Question Bank view.
+function RelatedQuestionPractice({ question, onOpenQuestion }) {
+  const [result, setResult] = useState(null)
+
+  return (
+    <li className="lesson-related-question">
+      <AnswerableQuestion
+        prompt={question.question}
+        options={question.options}
+        correctAnswer={question.correct_answer}
+        explanation={question.explanation}
+        groupName={`related-${question.id}`}
+        groupLabel={`Practice question ${question.id}`}
+        result={result}
+        onAnswer={(selected) => setResult({ selected, revealed: true })}
+      />
+      {onOpenQuestion && (
+        <button
+          type="button"
+          className="secondary-button"
+          onClick={() => onOpenQuestion(question.id)}
+        >
+          Open in Question Bank
+        </button>
+      )}
+    </li>
+  )
+}
+
+export default function ConceptLessonCard({
+  lesson,
+  relatedQuestions,
+  completed,
+  onToggleComplete,
+  getCheckResult,
+  onAnswerCheck,
+  onOpenQuestion,
+  onOpenReference,
+}) {
   const [expanded, setExpanded] = useState(false)
+  const relatedFormulas = lesson.formula_refs.map((id) => formulaById.get(id)).filter(Boolean)
+  const relatedGlossary = lesson.glossary_refs.map((id) => glossaryById.get(id)).filter(Boolean)
 
   return (
     <article className="concept-lesson-card">
@@ -114,14 +179,24 @@ export default function ConceptLessonCard({ lesson, relatedQuestions }) {
             ))}
           </p>
         </div>
-        <button
-          type="button"
-          className="secondary-button"
-          aria-expanded={expanded}
-          onClick={() => setExpanded((value) => !value)}
-        >
-          {expanded ? 'Collapse lesson' : 'Open lesson'}
-        </button>
+        <div className="concept-lesson-actions">
+          <button
+            type="button"
+            className={completed ? 'secondary-button lesson-complete active' : 'secondary-button lesson-complete'}
+            aria-pressed={completed}
+            onClick={onToggleComplete}
+          >
+            {completed ? 'Completed ✓' : 'Mark complete'}
+          </button>
+          <button
+            type="button"
+            className="secondary-button"
+            aria-expanded={expanded}
+            onClick={() => setExpanded((value) => !value)}
+          >
+            {expanded ? 'Collapse lesson' : 'Open lesson'}
+          </button>
+        </div>
       </header>
 
       {expanded && (
@@ -163,6 +238,36 @@ export default function ConceptLessonCard({ lesson, relatedQuestions }) {
             </dl>
           </section>
 
+          {(relatedFormulas.length > 0 || relatedGlossary.length > 0) && (
+            <section>
+              <h4>Reference sheet</h4>
+              <ul className="lesson-reference-links">
+                {relatedFormulas.map((formula) => (
+                  <li key={formula.id}>
+                    <button
+                      type="button"
+                      className="link-button"
+                      onClick={() => onOpenReference?.('formulas', formula.id)}
+                    >
+                      {formula.name}
+                    </button>
+                  </li>
+                ))}
+                {relatedGlossary.map((entry) => (
+                  <li key={entry.id}>
+                    <button
+                      type="button"
+                      className="link-button"
+                      onClick={() => onOpenReference?.('glossary', entry.id)}
+                    >
+                      {entry.term}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <section>
             <h4>Knowledge check</h4>
             {lesson.knowledge_checks.map((check, index) => (
@@ -171,6 +276,8 @@ export default function ConceptLessonCard({ lesson, relatedQuestions }) {
                 check={check}
                 lessonId={lesson.id}
                 index={index}
+                result={getCheckResult(index)}
+                onAnswer={(selected) => onAnswerCheck(index, selected)}
               />
             ))}
           </section>
@@ -178,9 +285,13 @@ export default function ConceptLessonCard({ lesson, relatedQuestions }) {
           {relatedQuestions.length > 0 && (
             <section className="lesson-related">
               <h4>Practice questions covering this concept</h4>
-              <ul>
+              <ul className="lesson-related-list">
                 {relatedQuestions.map((question) => (
-                  <li key={question.id}>{question.question}</li>
+                  <RelatedQuestionPractice
+                    key={question.id}
+                    question={question}
+                    onOpenQuestion={onOpenQuestion}
+                  />
                 ))}
               </ul>
             </section>
