@@ -407,3 +407,80 @@ distribution unchanged at 96/96/96/96.
 **Approved by:** Mission agent (Claude) under the 2026-07-15 mission
 authority; subject to User ratification at draft-PR review — nothing merges
 to main without explicit User approval.
+
+---
+
+## Decision #13 — PR #24 review remediation: actionable practice questions, durable course progress, and a single reconciled lesson-ID scheme
+
+**Date:** 2026-07-17
+
+**Decision:** Addressed all four blocking findings from the PR #24 review
+(recorded as a PR comment, since GitHub does not let an account formally
+request changes on its own pull request):
+
+1. **Actionable practice questions.** `ConceptLessonCard.jsx` now renders
+   each related bank question through a shared `AnswerableQuestion`
+   component (radiogroup, locked-until-selected "Check answer", reveal with
+   correctness and explanation) instead of a static `<li>` stem, and adds an
+   "Open in Question Bank" handoff that switches the app to the Browse view
+   and scrolls to/auto-expands that exact question (`App.jsx` →
+   `QuestionBank.jsx`'s new `focusQuestionId` prop).
+2. **Durable course progress.** New `src/course/courseProgress.js` (pure
+   logic + localStorage, load-validated against the current course —
+   mirrors `quiz/quizSession.js`) persists lesson-completion toggles and
+   knowledge-check selections/reveals. `Course.jsx` owns this state and
+   passes it down, so collapsing a lesson, switching views, or refreshing
+   the page no longer loses knowledge-check results, and a visible "X of Y
+   lessons complete" summary gives a resume signal.
+3. **Reconciled Course–Reference linking.** `formula_catalog.json` and
+   `glossary_catalog.json` carried a stale `related_lesson_ids` scheme
+   (`PL-Cxxx`) from a pre-authoring 59-unit planning pass
+   (`knowledge_graph.json` / `learning_objectives.json`). Investigation
+   showed this scheme's numbering does **not** correspond to the authored
+   62-lesson `concept_lessons.json` (e.g. planning-layer `C038` is "Earned
+   Value Interpretation"; authored `c038` is "Building the Project
+   Schedule") — a naive `PL-Cxxx` → `cxxx` rewrite would have produced
+   confidently wrong links. Every one of the 18 formula and 38 glossary
+   entries was instead re-matched to the authored course by content (title,
+   key terms, and section text), `related_lesson_ids` rewritten to real
+   `cxxx` ids, and `concept_lessons.json`'s `formula_refs`/`glossary_refs`
+   populated as the reverse relationship. Two glossary terms (RACI chart,
+   risk appetite) do not appear in any authored lesson yet and were left
+   unlinked rather than forced onto an approximate lesson — a genuine
+   content gap, not a bug. `reference_sheet_refs` stays empty everywhere:
+   `reference_sheet_catalog.json` is `"status": "planned"` with zero UI
+   integration (the Reference view never imports it), so there is nothing
+   valid to point at until that layer actually ships.
+   `conceptLessons.data.test.js` gained a bidirectional resolution test
+   (every populated ref resolves in both directions) and
+   `knowledgeLayer.data.test.js`'s `related_lesson_ids` assertions now check
+   against `concept_lessons.json` instead of the planning-layer id set.
+   `ConceptLessonCard.jsx` surfaces the populated refs as a "Reference
+   sheet" section with the same open-and-scroll handoff into `Reference.jsx`
+   (new `focusEntry` prop), which also now resets its filter on section
+   switch (a non-blocking finding from the same review).
+4. **CI.** Added `.github/workflows/ci.yml`: one job, `npm ci` → `npm test`
+   → `npm run build`, triggered on `pull_request`. Deliberately minimal —
+   no coverage tooling, no matrix, no additional checks — since the review
+   asked only for reproducible evidence at the head SHA, not a build system.
+
+**Alternatives considered (item 3):** Adding a third, new field for
+authored-course lesson ids instead of repurposing `related_lesson_ids`.
+
+**Why rejected:** The review's instruction was to use *one* valid lesson ID
+scheme, not add a fourth. `related_lesson_ids` on these two catalogs had no
+consumer relying on the old `PL-Cxxx` meaning outside the one test updated
+here, so repurposing it is the reconciliation the review asked for rather
+than a workaround.
+
+**Not implemented / flagged for User decision:** whether to build a
+Reference-sheet UI for `reference_sheet_catalog.json` at all (it is
+currently unbuilt, unrendered planning content); if not, its "planned"
+status and the PR/README language around the Reference layer should say so
+explicitly rather than implying full three-catalog integration.
+
+**Evidence:** full suite 21 files / 174 tests passing; `npm run build`
+succeeds.
+
+**Approved by:** Mission agent (Claude), responding to the PR #24 review
+comment; subject to User re-review before approval/merge.

@@ -17,11 +17,23 @@ platform into a complete PMP learning system:
   rendered by the learner-facing Course view.
 - **Reference layer:** 18-formula sheet (full EVM set, PERT, channels,
   float, EMV, NPV/ROI/payback/BCR, Little's Law) and 38-entry glossary,
-  rendered by the Reference view.
+  rendered by the Reference view, with every formula/glossary entry's
+  `related_lesson_ids` pointing at the real authored lesson that teaches it
+  (bidirectionally validated — decision_log.md #13) and reachable from that
+  lesson's new "Reference sheet" section.
 - **ECO Review track:** the 26 task-overview lessons retained, links
   regenerated against the live bank.
 - The retired Claude/Codex batch-orchestration infrastructure is archived
   under `archive/orchestration-infrastructure/`.
+- **PR #24 review remediation (2026-07-17):** related practice questions in
+  the Course are now answerable in place and can be opened directly in the
+  Question Bank; lesson completion and knowledge-check results persist via
+  `src/course/courseProgress.js` (localStorage, load-validated) across
+  collapse/navigation/refresh; the Course-Reference lesson-ID schemes were
+  reconciled onto one scheme (see decision_log.md #13 for why the obvious
+  `PL-Cxxx` → `cxxx` rewrite would have been wrong); and a minimal CI
+  workflow (`npm test` + `npm run build` on PRs) was added. Full detail in
+  decision_log.md #13.
 
 User review of this branch's draft PR is the approval gate for all content
 authored during the mission. Prior v0.7 summary follows.
@@ -605,12 +617,15 @@ accuracy spot-check against the current ECO before merge.
 ## Current Status
 The completion mission branch (`feature/pmp-completion-mission`) is the
 current state: 424-question bank with hard answer-cue gates, the complete
-62-lesson Comprehensive Course rendered by the Course view, the Reference
-view over the expanded formula/glossary catalogs, the ECO Review track with
-regenerated links, and the batch-orchestrator infrastructure archived. Its
-draft PR against main awaits User review, which is the approval gate for
-all mission content. The historical record below describes earlier merged
-states and is retained unchanged.
+62-lesson Comprehensive Course rendered by the Course view (with persistent
+completion/knowledge-check progress and answerable, bank-linked practice
+questions), the Reference view over the expanded formula/glossary catalogs
+(now bidirectionally cross-referenced with the Course), the ECO Review
+track with regenerated links, a minimal CI workflow gating PRs, and the
+batch-orchestrator infrastructure archived. Its draft PR against main
+awaits User review, which is the approval gate for all mission content.
+See decision_log.md #13 for the PR #24 review remediation. The historical
+record below describes earlier merged states and is retained unchanged.
 
 Knowledge-layer Phases 0-13 and their curriculum architecture baseline are
 merged on main via PR #21. The answer-bias/Foundation closeout is merged via
@@ -642,13 +657,18 @@ from exact domain/task matching.
 ## Next Recommended Task
 All mission milestones are complete: bank remediation with hard gates, the
 Course view, all 62 concept lessons, the reference layer, and the
-named-concept gap questions. The immediate next step is User review of the
-draft PR. After merge, the highest-value follow-ups in learner-impact order:
-(1) a domain/task-filtered and timed quiz mode (blueprint-weighted assembly
-toward exam simulation), (2) reviewed difficulty/cognitive-level metadata to
-enable diagnostics, (3) per-lesson glossary/formula/reference-sheet ID links
-now that the reference layer exists, and (4) a genuine bank question for
-c011 (holistic/systems thinking) so every concept lesson carries links.
+named-concept gap questions. Per-lesson glossary/formula ID links (item 3
+below, formerly a follow-up) are now done — see decision_log.md #13. The
+immediate next step is User review of the draft PR. After merge, the
+highest-value follow-ups in learner-impact order: (1) a domain/task-filtered
+and timed quiz mode (blueprint-weighted assembly toward exam simulation),
+(2) reviewed difficulty/cognitive-level metadata to enable diagnostics,
+(3) a decision on whether to build a Reference-sheet UI for
+`reference_sheet_catalog.json` (currently unbuilt/planned — see
+decision_log.md #13) or drop it, (4) a genuine bank question for c011
+(holistic/systems thinking) so every concept lesson carries links, and
+(5) course content for the two glossary terms with no lesson coverage yet
+(RACI chart, risk appetite — see decision_log.md #13).
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using
