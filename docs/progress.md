@@ -1,15 +1,30 @@
 # Progress
 
 ## Current Version
-Current working state: v0.7 runtime plus the merged curriculum architecture and
-knowledge-layer baseline. This closeout balances all 384 questions across the
-four correct-answer positions, adds reproducible answer-bias measurement, and
-ingests the complete ten-lesson Foundation Block (c001-c010) as Authored concept
-assets. Knowledge checks and direct production-question links remain pending.
-The open batch-orchestrator branch now adds explicit Claude Code/Codex CLI
-provider configuration and a read-only local smoke-test mode for PR #22.
+Current working state: v0.8 — the completion mission branch
+(`feature/pmp-completion-mission`, 2026-07-15 through 2026-07-17) turns the
+platform into a complete PMP learning system:
 
-Prior v0.7 summary follows.
+- **Question bank:** 424 original questions (People 138 / Process 176 /
+  Business Environment 110), correct-answer positions exactly balanced at
+  106 per position, answer-length cues editorially remediated bank-wide and
+  protected by hard gates (decision_log.md #12), and 40 targeted questions
+  covering the named concepts the audits found at zero coverage.
+- **Comprehensive Course:** all 62 concept lessons authored (c001-c062) in
+  module order from PM Foundations through Agile/Hybrid and AI, each with
+  objectives, sections, key terms, exam traps, flashcards, three
+  cue-disciplined knowledge checks, and curated bank-question links —
+  rendered by the learner-facing Course view.
+- **Reference layer:** 18-formula sheet (full EVM set, PERT, channels,
+  float, EMV, NPV/ROI/payback/BCR, Little's Law) and 38-entry glossary,
+  rendered by the Reference view.
+- **ECO Review track:** the 26 task-overview lessons retained, links
+  regenerated against the live bank.
+- The retired Claude/Codex batch-orchestration infrastructure is archived
+  under `archive/orchestration-infrastructure/`.
+
+User review of this branch's draft PR is the approval gate for all content
+authored during the mission. Prior v0.7 summary follows.
 
 v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 (8 questions, 2 lessons) via the direct-PR pipeline per Decision #9; all
@@ -588,12 +603,19 @@ data-contract tests (shape only) and still need the User's manual
 accuracy spot-check against the current ECO before merge.
 
 ## Current Status
+The completion mission branch (`feature/pmp-completion-mission`) is the
+current state: 424-question bank with hard answer-cue gates, the complete
+62-lesson Comprehensive Course rendered by the Course view, the Reference
+view over the expanded formula/glossary catalogs, the ECO Review track with
+regenerated links, and the batch-orchestrator infrastructure archived. Its
+draft PR against main awaits User review, which is the approval gate for
+all mission content. The historical record below describes earlier merged
+states and is retained unchanged.
+
 Knowledge-layer Phases 0-13 and their curriculum architecture baseline are
 merged on main via PR #21. The answer-bias/Foundation closeout is merged via
-PR #23. The current PR #22 branch adds the bounded batch controller plus its
-provider/preflight refinement; it does not change application runtime or
-curriculum content. `data/lessons.json` remains unchanged; concept lessons are
-isolated in `data/concept_lessons.json` and are not yet rendered by the app.
+PR #23. PR #22 added the bounded batch controller plus its
+provider/preflight refinement (since archived by this branch).
 
 Slices 5 and 6 merged to main (PR #5); curriculum content batch 2 merged
 to main (PR #6). Branch `content/eco-2026-remap` (open as PR #7) now holds
@@ -618,14 +640,15 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-Length-bias remediation is complete and the hard <=40% strict-longest gate is
-enabled (see Known Issues). The next mission milestones are: expose the
-Foundation Block concept lessons (c001-c010) in a learner-facing Course view
-with knowledge checks and question links, then author the remaining 49 planned
-concept lessons (c011-c059) in module order, complete the formula/glossary
-reference layer, and add targeted questions for named-concept gaps (Scrum,
-EVM calculations, financial metrics, stakeholder models, PMBOK 8 map,
-responsible AI).
+All mission milestones are complete: bank remediation with hard gates, the
+Course view, all 62 concept lessons, the reference layer, and the
+named-concept gap questions. The immediate next step is User review of the
+draft PR. After merge, the highest-value follow-ups in learner-impact order:
+(1) a domain/task-filtered and timed quiz mode (blueprint-weighted assembly
+toward exam simulation), (2) reviewed difficulty/cognitive-level metadata to
+enable diagnostics, (3) per-lesson glossary/formula/reference-sheet ID links
+now that the reference layer exists, and (4) a genuine bank question for
+c011 (holistic/systems thinking) so every concept lesson carries links.
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using
