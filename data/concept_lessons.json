@@ -120,7 +120,8 @@
       "q120",
       "q127",
       "q240",
-      "q376"
+      "q376",
+      "q389"
     ],
     "source_refs": [
       "S2",
@@ -252,7 +253,11 @@
         "explanation": "Domains are areas of practice (the what); Focus Areas are lifecycle groupings (the when). Reversing them is the most common confusion, and neither axis is approach-specific — both apply regardless of delivery method."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q385",
+      "q386",
+      "q387"
+    ],
     "source_refs": [
       "S1",
       "S8"
@@ -376,7 +381,9 @@
         "explanation": "Starting a phase before its predecessor finishes is the overlapping relationship, used to compress schedule at the price of rework risk. Sequential phases finish before the next starts; iterative phases repeat as understanding deepens; incremental describes delivering the product in usable pieces, not a phase relationship."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q388"
+    ],
     "source_refs": [
       "S4",
       "S8"
@@ -866,7 +873,10 @@
         "explanation": "The risk register is a working record used during execution — a project document. The scope, cost, and communications management plans are subsidiary plans inside the integrated project management plan, which describes how the project is managed rather than recording day-to-day working state."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q392",
+      "q393"
+    ],
     "source_refs": [
       "S6",
       "S8"
@@ -988,7 +998,8 @@
       "q065",
       "q138",
       "q172",
-      "q348"
+      "q348",
+      "q393"
     ],
     "source_refs": [
       "S6",
@@ -1105,7 +1116,9 @@
     ],
     "related_question_ids": [
       "q112",
-      "q186"
+      "q186",
+      "q390",
+      "q391"
     ],
     "source_refs": [
       "S2",
@@ -4738,7 +4751,8 @@
       "q090",
       "q234",
       "q286",
-      "q345"
+      "q345",
+      "q398"
     ],
     "source_refs": [
       "S8",
@@ -5123,7 +5137,11 @@
       "q040",
       "q065",
       "q131",
-      "q191"
+      "q191",
+      "q394",
+      "q395",
+      "q396",
+      "q397"
     ],
     "source_refs": [
       "S8",
@@ -5256,7 +5274,9 @@
     "related_question_ids": [
       "q056",
       "q108",
-      "q232"
+      "q232",
+      "q402",
+      "q403"
     ],
     "source_refs": [
       "S8",
@@ -5379,7 +5399,10 @@
       "q178",
       "q196",
       "q248",
-      "q312"
+      "q312",
+      "q404",
+      "q405",
+      "q407"
     ],
     "source_refs": [
       "S5",
@@ -5511,7 +5534,8 @@
       "q182",
       "q200",
       "q309",
-      "q311"
+      "q311",
+      "q399"
     ],
     "source_refs": [
       "S8",
@@ -5638,7 +5662,8 @@
       "q127",
       "q186",
       "q337",
-      "q338"
+      "q338",
+      "q406"
     ],
     "source_refs": [
       "S5",
@@ -6150,7 +6175,9 @@
     "related_question_ids": [
       "q215",
       "q293",
-      "q360"
+      "q360",
+      "q400",
+      "q401"
     ],
     "source_refs": [
       "S8",
@@ -6412,7 +6439,8 @@
     ],
     "related_question_ids": [
       "q008",
-      "q009"
+      "q009",
+      "q420"
     ],
     "source_refs": [
       "S9",
@@ -6546,7 +6574,13 @@
         "explanation": "The definition of done is a hard quality bar — work that misses any element isn't an increment, whatever the demo shows. The PO can't waive it item-by-item without corrupting the standard, and 'partial credit' scoring hides undone work inside velocity."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q408",
+      "q409",
+      "q410",
+      "q411",
+      "q412"
+    ],
     "source_refs": [
       "S9",
       "S10"
@@ -6675,7 +6709,11 @@
         "explanation": "System throughput is set by the constraint; accelerating a non-constraint step just piles inventory in front of the bottleneck. That's the optimize-the-whole lesson. No evidence points to board staleness, defects, or pace problems — the queue explosion is pure local-optimization arithmetic."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q413",
+      "q414",
+      "q415"
+    ],
     "source_refs": [
       "S9",
       "S10"
@@ -6800,7 +6838,9 @@
     "related_question_ids": [
       "q034",
       "q185",
-      "q335"
+      "q335",
+      "q416",
+      "q417"
     ],
     "source_refs": [
       "S9",
@@ -6924,7 +6964,8 @@
       }
     ],
     "related_question_ids": [
-      "q128"
+      "q128",
+      "q418"
     ],
     "source_refs": [
       "S9",
@@ -7042,7 +7083,8 @@
       }
     ],
     "related_question_ids": [
-      "q160"
+      "q160",
+      "q419"
     ],
     "source_refs": [
       "S9",
@@ -7407,7 +7449,9 @@
         "explanation": "Change decisions carry accountability that cannot transfer to a model — AI legitimately drafts the impact analysis and recommendation, but the decision stays human. Threshold tuning and cost arguments miss the principle, and auto-approving is no more delegable than auto-rejecting."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q422"
+    ],
     "source_refs": [
       "S11",
       "S2"
@@ -7525,7 +7569,9 @@
         "explanation": "Outbound stakeholder communication carries tone, relationship, and accountability judgment — assistance-level work where a human reviews before send. A streak of good drafts doesn't change the category: the first hallucinated or tone-deaf message goes straight to stakeholders. Cadence and length are beside the point."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q423"
+    ],
     "source_refs": [
       "S11"
     ]
@@ -7646,7 +7692,11 @@
         "explanation": "Accountability doesn't transfer to instruments: the person who adopted and sent the unverified output owns the consequence, exactly as if a staffer's unchecked draft had gone out. Vendor liability and committee diligence are separate questions — neither relocates the professional obligation to validate before relying."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q421",
+      "q422",
+      "q424"
+    ],
     "source_refs": [
       "S11",
       "S3"
@@ -7768,7 +7818,9 @@
         "explanation": "The validation loop is a design requirement, not a later patch — unverified output going where it matters is how fabricated figures reach steering committees. 'External first' inverts the risk (less familiar audiences detect errors worse), and permanent rejection overcorrects: the fix is designing the loop, then adopting."
       }
     ],
-    "related_question_ids": [],
+    "related_question_ids": [
+      "q424"
+    ],
     "source_refs": [
       "S11"
     ]

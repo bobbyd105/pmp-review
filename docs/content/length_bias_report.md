@@ -8,10 +8,10 @@ it does not change question wording.
 
 | Metric | Result |
 |---|---:|
-| Questions analyzed | 384 |
+| Questions analyzed | 424 |
 | Correct answer / average distractor ratio threshold | > 1.3 |
 | Questions above ratio threshold | 0 |
-| Correct answer is strictly longest | 71 (18.5%) |
+| Correct answer is strictly longest | 78 (18.4%) |
 | Strict-longest target | <= 40.0% |
 | Status | **WITHIN TARGET** |
 

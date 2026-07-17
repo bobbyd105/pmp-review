@@ -59,6 +59,24 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Named-concept gap questions q385-q424 (2026-07-16/17, this branch): 40
+  original questions targeting concepts the audits found at zero named
+  coverage — PMBOK 8 structure/tailoring, phase gates and sunk cost,
+  program/portfolio/PMO/matrix, EEF vs OPA, WPD/WPI, EVM calculations
+  (CV, index reading, EAC selection, TCPI), PERT, communication channels,
+  EMV/decision trees, NPV/payback/ROI-vs-NPV, stakeholder analysis models,
+  RACI, Scrum roles/events/pillars, Kanban flow metrics and Little's Law,
+  user stories/INVEST, velocity forecasting, MVP vs MMF, agile values, and
+  responsible AI. Item types mix calculation, interpretation, distinction,
+  and scenario forms per the question generation contract. Bank now 424
+  (People 138 / Process 176 / Business Environment 110), positions
+  106/106/106/106 under the committed seed, 0 questions over the 1.3
+  length ratio, strict-longest 78/424 (18.4%). ECO lesson links regenerated
+  (no empty sets); 61 of 62 concept lessons now carry curated question
+  links (290 total; c011 remains intentionally unlinked pending a suitable
+  bank item). content_plan.md tables regenerated from the live bank; the
+  contentCoverage derived-count assertion updated (C007: 24 -> 26) to track
+  the live bank. Full suite 20 files / 153 tests passes; build passes.
 - Reference layer shipped (2026-07-16, this branch): expanded
   `data/formula_catalog.json` from 10 representative entries to 18
   production reference formulas (adding CV, SV, ETC, VAC, TCPI, triangular
