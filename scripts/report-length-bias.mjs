@@ -82,9 +82,10 @@ it does not change question wording.
 | Strict-longest target | <= ${percentage(STRICT_LONGEST_TARGET)} |
 | Status | **${status}** |
 
-The strict-longest threshold is a measurement target, not a passing content
-gate in this closeout. The current no-wording-edit scope requires an editorial
-remediation pass before that target can be enforced as a hard regression gate.
+The strict-longest target is enforced as a hard regression gate by
+\`src/__tests__/lengthBias.test.js\` following the 2026-07 editorial
+remediation pass: no future content batch may push the bank back above it,
+and no question may exceed the correct/average-distractor ratio threshold.
 
 ## Flagged questions, worst first
 

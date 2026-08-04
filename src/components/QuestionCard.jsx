@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-export default function QuestionCard({ question }) {
-  const [showAnswer, setShowAnswer] = useState(false)
+export default function QuestionCard({ question, defaultShowAnswer = false }) {
+  const [showAnswer, setShowAnswer] = useState(defaultShowAnswer)
 
   return (
     <article className="question-card">

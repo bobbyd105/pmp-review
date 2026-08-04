@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import conceptLessons from '../../data/concept_lessons.json'
 import questions from '../../data/questions.json'
+import formulaCatalog from '../../data/formula_catalog.json'
+import glossaryCatalog from '../../data/glossary_catalog.json'
 import sourceTopicIndex from '../../docs/content/source_topic_index.json'
 
 const REQUIRED_FIELDS = [
@@ -33,6 +35,14 @@ const MODULES = [
   'Principles and PMP Mindset',
   'Governance and Integration',
   'Common ITTO Layer',
+  'Scope and Quality',
+  'Schedule Management',
+  'Finance and Value Measurement',
+  'Stakeholders and Communications',
+  'Resources, Teams, and Leadership',
+  'Risk and Uncertainty',
+  'Agile and Hybrid Delivery',
+  'AI in Project Management',
 ]
 const PMBOK_8_DOMAINS = [
   'Governance',
@@ -53,16 +63,28 @@ const FOCUS_AREAS = [
 const APPROACHES = ['predictive', 'adaptive', 'hybrid']
 
 describe('concept_lessons.json data contract', () => {
-  it('contains the complete Foundation Block with unique sequential ids', () => {
+  it('contains sequential unique ids starting with the complete Foundation Block', () => {
     const ids = conceptLessons.map((lesson) => lesson.id)
 
     expect(ids).toEqual(
-      Array.from({ length: 10 }, (_, index) => `c${String(index + 1).padStart(3, '0')}`),
+      Array.from(
+        { length: conceptLessons.length },
+        (_, index) => `c${String(index + 1).padStart(3, '0')}`,
+      ),
     )
+    expect(conceptLessons.length).toBeGreaterThanOrEqual(10)
     expect(new Set(ids).size).toBe(ids.length)
-    expect(conceptLessons.every((lesson) => lesson.production_group === 'Foundation Block')).toBe(
-      true,
-    )
+    for (const lesson of conceptLessons.slice(0, 10)) {
+      expect(lesson.production_group, `${lesson.id} production group`).toBe(
+        'Foundation Block',
+      )
+    }
+    for (const lesson of conceptLessons) {
+      expect(
+        lesson.production_group.trim(),
+        `${lesson.id} must name a production group`,
+      ).not.toBe('')
+    }
   })
 
   it('has every required field and the expected authored-content shapes', () => {
@@ -130,15 +152,150 @@ describe('concept_lessons.json data contract', () => {
     }
   })
 
-  it('keeps deferred references and assessment assets intentionally empty', () => {
+  it('keeps the still-unbuilt reference-sheet layer intentionally empty', () => {
+    // reference_sheet_catalog.json is "status": "planned" and has no rendered
+    // UI (unlike formula_catalog.json / glossary_catalog.json, which the
+    // Reference view renders), so there is nothing valid to link to yet.
     for (const lesson of conceptLessons) {
-      expect(lesson.glossary_refs, `${lesson.id} glossary refs`).toEqual([])
       expect(lesson.reference_sheet_refs, `${lesson.id} reference-sheet refs`).toEqual([])
-      expect(lesson.formula_refs, `${lesson.id} formula refs`).toEqual([])
-      expect(lesson.related_question_ids, `${lesson.id} related questions`).toEqual([])
-      expect(lesson.knowledge_checks, `${lesson.id} knowledge-check status`).toEqual({
-        status: 'pending',
-      })
+    }
+  })
+
+  it('links formula/glossary refs only to real catalog entries, with no duplicates', () => {
+    const formulaIds = new Set(formulaCatalog.formulas.map((formula) => formula.id))
+    const glossaryIds = new Set(glossaryCatalog.entries.map((entry) => entry.id))
+
+    for (const lesson of conceptLessons) {
+      expect(
+        new Set(lesson.formula_refs).size,
+        `${lesson.id} has duplicate formula refs`,
+      ).toBe(lesson.formula_refs.length)
+      expect(
+        new Set(lesson.glossary_refs).size,
+        `${lesson.id} has duplicate glossary refs`,
+      ).toBe(lesson.glossary_refs.length)
+
+      for (const formulaId of lesson.formula_refs) {
+        expect(formulaIds, `${lesson.id} references unknown formula "${formulaId}"`).toContain(
+          formulaId,
+        )
+      }
+      for (const glossaryId of lesson.glossary_refs) {
+        expect(glossaryIds, `${lesson.id} references unknown glossary entry "${glossaryId}"`).toContain(
+          glossaryId,
+        )
+      }
+    }
+  })
+
+  it('keeps formula/glossary cross-references bidirectional between the Course and Reference', () => {
+    for (const formula of formulaCatalog.formulas) {
+      for (const lessonId of formula.related_lesson_ids) {
+        const lesson = conceptLessons.find((candidate) => candidate.id === lessonId)
+        expect(lesson, `formula ${formula.id} points at unknown lesson "${lessonId}"`).toBeDefined()
+        expect(
+          lesson.formula_refs,
+          `${lessonId}.formula_refs is missing "${formula.id}", which claims to teach it`,
+        ).toContain(formula.id)
+      }
+    }
+    for (const entry of glossaryCatalog.entries) {
+      for (const lessonId of entry.related_lesson_ids) {
+        const lesson = conceptLessons.find((candidate) => candidate.id === lessonId)
+        expect(lesson, `glossary entry ${entry.id} points at unknown lesson "${lessonId}"`).toBeDefined()
+        expect(
+          lesson.glossary_refs,
+          `${lessonId}.glossary_refs is missing "${entry.id}", which claims to teach it`,
+        ).toContain(entry.id)
+      }
+    }
+    for (const lesson of conceptLessons) {
+      for (const formulaId of lesson.formula_refs) {
+        const formula = formulaCatalog.formulas.find((candidate) => candidate.id === formulaId)
+        expect(
+          formula.related_lesson_ids,
+          `formula ${formulaId}.related_lesson_ids is missing "${lesson.id}", which claims to teach it`,
+        ).toContain(lesson.id)
+      }
+      for (const glossaryId of lesson.glossary_refs) {
+        const entry = glossaryCatalog.entries.find((candidate) => candidate.id === glossaryId)
+        expect(
+          entry.related_lesson_ids,
+          `glossary entry ${glossaryId}.related_lesson_ids is missing "${lesson.id}", which claims to teach it`,
+        ).toContain(lesson.id)
+      }
+    }
+  })
+
+  it('has authored knowledge checks with valid single-best-answer shape', () => {
+    for (const lesson of conceptLessons) {
+      expect(
+        Array.isArray(lesson.knowledge_checks) && lesson.knowledge_checks.length >= 2,
+        `${lesson.id} must have at least two authored knowledge checks`,
+      ).toBe(true)
+
+      for (const [index, check] of lesson.knowledge_checks.entries()) {
+        const label = `${lesson.id} knowledge check ${index + 1}`
+        expect(check.question.trim(), `${label} question`).not.toBe('')
+        expect(check.options.length, `${label} option count`).toBe(4)
+        expect(new Set(check.options).size, `${label} option uniqueness`).toBe(4)
+        expect(
+          check.options.filter((option) => option === check.correct_answer).length,
+          `${label} correct_answer must appear exactly once in options`,
+        ).toBe(1)
+        expect(
+          check.explanation.trim().length,
+          `${label} explanation must teach, not just mark`,
+        ).toBeGreaterThan(40)
+      }
+    }
+  })
+
+  it('links related questions only to real bank questions', () => {
+    const questionIds = new Set(questions.map((question) => question.id))
+
+    for (const lesson of conceptLessons) {
+      expect(
+        new Set(lesson.related_question_ids).size,
+        `${lesson.id} has duplicate related question ids`,
+      ).toBe(lesson.related_question_ids.length)
+      for (const questionId of lesson.related_question_ids) {
+        expect(
+          questionIds,
+          `${lesson.id} references missing question "${questionId}"`,
+        ).toContain(questionId)
+      }
+    }
+  })
+
+  it('keeps knowledge-check correct answers free of position and length cues', () => {
+    const positionCounts = [0, 0, 0, 0]
+    let checkTotal = 0
+
+    for (const lesson of conceptLessons) {
+      for (const check of lesson.knowledge_checks) {
+        const correctIndex = check.options.indexOf(check.correct_answer)
+        positionCounts[correctIndex] += 1
+        checkTotal += 1
+
+        const lengths = check.options.map((option) => [...option].length)
+        const distractorLengths = lengths.filter((_, index) => index !== correctIndex)
+        const ratio =
+          lengths[correctIndex] /
+          (distractorLengths.reduce((total, length) => total + length, 0) /
+            distractorLengths.length)
+        expect(
+          ratio,
+          `${lesson.id} knowledge check correct answer is conspicuously long (ratio ${ratio.toFixed(2)})`,
+        ).toBeLessThanOrEqual(1.3)
+      }
+    }
+
+    for (const [position, count] of positionCounts.entries()) {
+      expect(
+        count / checkTotal,
+        `knowledge-check position ${position + 1} holds ${count}/${checkTotal} correct answers`,
+      ).toBeLessThanOrEqual(0.4)
     }
   })
 

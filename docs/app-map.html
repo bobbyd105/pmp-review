@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-14 (batch-orchestrator Claude launcher compatibility refinement).
+<p>Last updated: 2026-07-15 (batch-orchestrator infrastructure archived to <code>archive/orchestration-infrastructure/</code>).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -35,10 +35,10 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/App.jsx</code></td>
-    <td>Top-level layout: page header plus a seven-button view toggle between Quiz, QuestionBank, Dashboard, Lessons, ContentStudio, PromptHelper, and CurriculumCoverage (no router)</td>
+    <td>Top-level layout: page header plus a nine-button view toggle between Quiz, Course, Reference, QuestionBank, Dashboard, Lessons, ContentStudio, PromptHelper, and CurriculumCoverage (no router)</td>
     <td><code>src/main.jsx</code></td>
-    <td><code>Quiz</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code>, <code>CurriculumCoverage</code></td>
-    <td>Local UI state only (<code>view</code>: quiz | browse | dashboard | lessons | studio | prompts | coverage)</td>
+    <td><code>Quiz</code>, <code>Course</code>, <code>Reference</code>, <code>QuestionBank</code>, <code>Dashboard</code>, <code>Lessons</code>, <code>ContentStudio</code>, <code>PromptHelper</code>, <code>CurriculumCoverage</code></td>
+    <td>Local UI state only (<code>view</code>: quiz | course | reference | browse | dashboard | lessons | studio | prompts | coverage)</td>
   </tr>
 </table>
 
@@ -68,6 +68,30 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>None</td>
     <td>Reads quiz history from <code>localStorage</code> via <code>quizHistory.js</code> (read-only; never writes)</td>
     <td>React; <code>quizHistory.js</code> (<code>loadHistory</code>, <code>getAggregateStats</code>)</td>
+  </tr>
+  <tr>
+    <td><code>src/components/Course.jsx</code></td>
+    <td>Comprehensive Course view: groups the authored concept lessons by module in authored (c001…) order, resolves each lesson's <code>related_question_ids</code> against the question bank, and renders one ConceptLessonCard per lesson</td>
+    <td><code>App</code></td>
+    <td><code>ConceptLessonCard</code> (one per concept lesson)</td>
+    <td>Reads <code>data/concept_lessons.json</code> and <code>data/questions.json</code> (static imports). Writes nothing.</td>
+    <td>React; <code>ConceptLessonCard</code></td>
+  </tr>
+  <tr>
+    <td><code>src/components/ConceptLessonCard.jsx</code></td>
+    <td>Collapsible concept-lesson card: objectives, content sections (paragraphs/bold/italic/bullet/numbered subset, React elements only), exam traps, flashcard grid, interactive knowledge checks (select → check → correct/incorrect + teaching explanation), and resolved related bank questions</td>
+    <td><code>Course</code></td>
+    <td>None</td>
+    <td>Receives one concept lesson + pre-resolved related question objects as props. Local UI state only (<code>expanded</code>; per-check <code>selected</code>/<code>revealed</code>). Writes nothing.</td>
+    <td>React (<code>useState</code>)</td>
+  </tr>
+  <tr>
+    <td><code>src/components/Reference.jsx</code></td>
+    <td>Reference view: formula sheet (equation, variables, interpretation, higher/lower guidance, memory tips, common mistakes) and glossary (definition, common confusion, exam trap) with a section toggle and text filter</td>
+    <td><code>App</code></td>
+    <td>None</td>
+    <td>Reads <code>data/formula_catalog.json</code> and <code>data/glossary_catalog.json</code> (static imports). Local UI state only (<code>section</code>, <code>filter</code>). Writes nothing.</td>
+    <td>React (<code>useState</code>)</td>
   </tr>
   <tr>
     <td><code>src/components/Lessons.jsx</code></td>
@@ -168,34 +192,20 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td>Pure answer-length analysis plus report generator: measures Unicode character length, correct/average-distractor ratios, strict-longest rate, worst-first ratio flags, and remediation status without changing content.</td>
     <td><code>npm run questions:report-length-bias</code>; <code>lengthBias.test.js</code></td>
   </tr>
-  <tr>
-    <td><code>scripts/run-agent-workflow.ps1</code></td>
-    <td>Bounded Windows batch controller. Reads explicit <code>claude-code</code>/<code>codex-cli</code> provider IDs, runs one fresh Claude Code orchestration session per approved batch, independently validates results and paths, owns checkpoint commits/pushes and one final draft PR, and fails closed for unsupported providers or Claude CLI capabilities. <code>-SmokeTest</code> performs a read-only configuration/file/command/Git preflight and prints every planned action before any live run. Clean-tree checks exclude only controller-owned <code>current-state*.json</code>/<code>master-plan*.json</code> runtime files under <code>.ai/workflow/</code>.</td>
-    <td><code>.ai/workflow/</code> plan/state/prompt/result contracts; local <code>git</code>, <code>claude</code>, <code>codex</code>, and optional <code>gh</code> commands</td>
-  </tr>
-  <tr>
-    <td><code>.ai/workflow/claude-launcher.ps1</code></td>
-    <td>Claude Code launcher boundary: resolves a non-terminating Windows entry point, detects help/version capabilities, selects supported print/version flags, fails closed when required flags are absent, constructs probe arguments, and sends prompt content through stdin so prompt text cannot become CLI options.</td>
-    <td><code>run-agent-workflow.ps1</code>; focused launcher construction tests</td>
-  </tr>
-  <tr>
-    <td><code>.ai/workflow/git-cleanliness.ps1</code></td>
-    <td>Fail-closed Git cleanliness helper. Parses NUL-delimited <code>git status --porcelain</code> records into actual paths, excludes the two controller runtime JSON filename families, and leaves every other modified, staged, conflicted, deleted, or untracked entry blocking.</td>
-    <td><code>run-agent-workflow.ps1</code>; focused PowerShell regression script</td>
-  </tr>
-  <tr>
-    <td><code>.ai/workflow/master-plan.example.json</code> and related workflow contracts</td>
-    <td>Example approved batch plan with explicit provider configuration, resumable state shape, schema-validated batch result contract, and the bounded orchestrator prompt. These are automation inputs, not application runtime data.</td>
-    <td><code>run-agent-workflow.ps1</code>; one fresh Claude Code session per eligible batch</td>
-  </tr>
 </table>
+
+<p>The Claude/Codex batch-orchestration controller, launcher, cleanliness helper,
+workflow contracts, and their tests were archived to
+<code>archive/orchestration-infrastructure/</code> (2026-07-15) as out of scope for
+current work. They are preserved, not deleted, and are no longer part of the
+active toolchain.</p>
 
 <h2>Data sources</h2>
 <table>
   <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
   <tr>
     <td><code>data/questions.json</code></td>
-    <td>Question bank data: 384 original PMP-style questions across all 3 ECO domains (People 130, Process 155, Business Environment 99). Phase 1 established breadth; Phase 2 added depth through <code>q082</code>; Phases 3–5 added <code>q083–q155</code>; Phase 6 added <code>q156–q174</code>; Phase 7 added <code>q175–q192</code>; Phase 8 added <code>q193–q218</code>; Phase 9 added <code>q219–q244</code>; Phase 10 added <code>q245–q270</code>; Phase 11 added <code>q271–q296</code>; Phase 12 added <code>q297–q384</code>. People tasks now have 16–17 questions, Process tasks have 15–16, and Business Environment tasks have 12–13. Option order is generated reproducibly with seed <code>pmp-options-v1</code>; all four correct-answer positions contain 96 questions. Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Question bank data: 424 original PMP-style questions across all 3 ECO domains (People 138, Process 176, Business Environment 110). Phases 1–12 built ECO breadth and depth through <code>q384</code>; the 2026-07 named-concept gap batches added <code>q385–q424</code> (PMBOK 8 structure, EVM calculations, PERT, EMV, NPV/payback, stakeholder models, RACI, Scrum, Kanban/flow, INVEST, velocity, MVP/MMF, responsible AI). Option order is generated reproducibly with seed <code>pmp-options-v1</code>; all four correct-answer positions contain 106 questions. Answer-length cues were editorially remediated in 2026-07 (18.4% strictly-longest correct, zero over the 1.3 length ratio) and are protected by hard gates (decision_log.md #12). Local JSON per constitution Section 3 — no database, no API.</td>
     <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
     <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
   </tr>
@@ -213,9 +223,9 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>data/concept_lessons.json</code></td>
-    <td>Ten Authored production concept lessons (c001-c010) forming the Foundation Block. Supplied module/ECO/PMBOK/focus-area/approach mappings and source references are preserved. Knowledge checks, related production questions, and reusable glossary/reference/formula links remain intentionally pending.</td>
-    <td>Array of concept records with structured objectives, sections, terms, exam traps, flashcards, mappings, deferred-reference arrays, <code>knowledge_checks</code> status, and source refs.</td>
-    <td><code>conceptLessons.data.test.js</code> only. No runtime UI consumer yet.</td>
+    <td>62 Authored production concept lessons (c001-c062) — the complete Comprehensive Course in module order from PM Foundations through Agile/Hybrid and AI, learner-facing via the Course view. Each lesson carries 3 authored knowledge checks (position/length-disciplined, enforced by test) and curated <code>related_question_ids</code> links into the bank (empty where no genuine bank coverage exists yet — Scrum, Kanban, PMBOK map, EEF/OPA, AI). Reusable glossary/reference/formula links remain intentionally pending until the reference layer ships.</td>
+    <td>Array of concept records with structured objectives, sections, terms, exam traps, flashcards, mappings, deferred-reference arrays, <code>knowledge_checks[]</code> ({question, options[4], correct_answer, explanation}), <code>related_question_ids[]</code>, and source refs.</td>
+    <td><code>Course</code>; <code>conceptLessons.data.test.js</code>; <code>Course.test.jsx</code></td>
   </tr>
   <tr>
     <td><code>data/prompts.json</code></td>
@@ -277,14 +287,6 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
 <table>
   <tr><th>File</th><th>Covers</th></tr>
   <tr>
-    <td><code>.ai/workflow/claude-launcher.tests.ps1</code></td>
-    <td>Dependency-free launcher construction tests for Windows native/<code>.cmd</code> selection, preferred and fallback flags, unsupported-capability failure, tool-disabled probe arguments, and keeping prompt content such as <code>--check</code> out of argv.</td>
-  </tr>
-  <tr>
-    <td><code>.ai/workflow/git-cleanliness.tests.ps1</code></td>
-    <td>Dependency-free temporary-repository regression cases proving clean and runtime-only trees pass while unrelated modified tracked and unrelated untracked files block with the actual path named.</td>
-  </tr>
-  <tr>
     <td><code>src/__tests__/questions.data.test.js</code></td>
     <td>Data contract for <code>data/questions.json</code>: ≥10 questions, ≥3 ECO domains, valid domain names, all required fields present, unique ids, ≥2 unique options each, correct_answer present in options</td>
   </tr>
@@ -294,11 +296,19 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>src/__tests__/lengthBias.test.js</code></td>
-    <td>Length-bias measurement regression: proves a bank over the 40% strict-longest target is flagged, verifies worst-first ratio sorting, and prevents the committed generated report from drifting from the question bank.</td>
+    <td>Length-bias hard gates (post-remediation, decision_log.md #12): the committed bank must stay at or below 40% strictly-longest correct answers with zero questions over the 1.3 length ratio, and at or below 30% strictly-shortest (over-correction guard); also verifies worst-first ratio sorting and keeps the generated report in sync with the bank.</td>
   </tr>
   <tr>
     <td><code>src/__tests__/conceptLessons.data.test.js</code></td>
-    <td>Foundation Block contract: exact c001-c010 identity, required content shapes, module/PMBOK/focus-area/approach enums, live ECO mappings, intentionally deferred assessment/reference arrays, and valid source refs.</td>
+    <td>Foundation Block contract: exact c001-c010 identity, required content shapes, module/PMBOK/focus-area/approach enums, live ECO mappings, valid source refs, authored knowledge-check shape (4 unique options, correct present exactly once, teaching explanations), knowledge-check position (≤40% per slot) and length (≤1.3 ratio) discipline, related-question referential integrity, and still-deferred glossary/reference/formula links.</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/Reference.test.jsx</code></td>
+    <td>Reference view: all formulas rendered with equation/variables/guidance, glossary section toggle rendering every term with confusion/trap text, name filtering, and empty-state message; no console.error.</td>
+  </tr>
+  <tr>
+    <td><code>src/__tests__/Course.test.jsx</code></td>
+    <td>Course view: every lesson title rendered under its module, collapsed-by-default bodies, open-lesson flow (objectives/sections/traps/flashcards), knowledge-check interaction (disabled until selection, correct and incorrect reveal paths both show the teaching explanation), and related-question resolution to real bank prompts.</td>
   </tr>
   <tr>
     <td><code>src/__tests__/QuestionBank.test.jsx</code></td>
@@ -374,20 +384,21 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   <li><code>docs/content/glossary_model.md</code>, <code>formula_model.md</code>, and <code>reference_sheet_model.md</code> — shared knowledge asset contracts</li>
   <li><code>docs/content/adaptive_learning_model.md</code>, <code>question_metadata_model.md</code>, and <code>lesson_metadata_model.md</code> — future learner-state and metadata boundaries</li>
   <li><code>docs/content/content_pipeline.md</code> and <code>repository_future_state.md</code> — production checkpoints and no-move-yet scalability design</li>
-  <li><code>docs/claude_codex_batch_orchestrator.md</code> — bounded controller model, provider configuration, smoke-test command, gates, and failure behavior</li>
+  <li><code>archive/orchestration-infrastructure/</code> — archived Claude/Codex batch-orchestrator controller, workflow contracts, and documentation (out of scope for current work; preserved for history)</li>
   <li><code>docs/decisions/2026-07-13-claude-codex-batch-orchestration.md</code> — approved fresh-session Claude/Codex orchestration decision</li>
   <li><code>docs/working/</code> — resumable phase progress, working decisions, and next actions</li>
 </ul>
 
 <h2>Not built yet</h2>
-<p>Forty-nine planned Comprehensive Course concept lessons beyond the authored
-ten-lesson Foundation Block, reviewed production objective mappings, stable question option IDs, calibrated difficulty,
-diagnostics, adaptive recommendation algorithms, spaced repetition, history management
-(clearing/exporting quiz history), and richer lesson rendering. No routing,
-state library, backend, or AI API integration (constitution Section 2).</p>
-<p>The knowledge/objective/glossary/formula/reference catalogs remain validated
-planning inputs only. The ten concept lessons are Authored assets, but no current
-runtime screen consumes them; pending assessment links remain incomplete and no
-canonical lifecycle record was changed to Approved or Implemented.</p>
+<p>Reviewed production objective mappings, stable question option IDs, calibrated
+difficulty, diagnostics, adaptive recommendation algorithms, spaced repetition,
+history management (clearing/exporting quiz history), and richer lesson
+rendering. No routing, state library, backend, or AI API integration
+(constitution Section 2).</p>
+<p>The knowledge/objective/glossary/formula/reference planning catalogs remain
+validated planning inputs. All 62 Comprehensive Course concept lessons are now
+authored and rendered by the Course view with knowledge checks and curated
+bank-question links; per-lesson glossary/formula/reference-sheet links stay
+deferred until the reference layer ships.</p>
 </body>
 </html>

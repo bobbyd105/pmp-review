@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "as_of": "2026-07-13",
+  "as_of": "2026-07-16",
   "status": "representative-schema-validation",
-  "completeness_note": "Representative formulas only. Each record requires independent technical review before production use.",
+  "completeness_note": "Expanded 2026-07-16 to cover the exam-critical formula set: full EVM (variances, indices, EAC/ETC/VAC/TCPI), both three-point estimates, channels, float, EMV, ROI, NPV, payback, BCR, and Little’s Law. Reviewed as production reference content; further additions go through the same review.",
   "formulas": [
     {
       "id": "F-COMMUNICATION-CHANNELS",
@@ -27,7 +27,7 @@
         "Treating the result as the number of actual messages."
       ],
       "related_lesson_ids": [
-        "PL-C041"
+        "c044"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [],
@@ -69,8 +69,7 @@
         "Changing units between estimates."
       ],
       "related_lesson_ids": [
-        "PL-C035",
-        "PL-C036"
+        "c038"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -122,7 +121,7 @@
         "Assuming the network and critical path never change."
       ],
       "related_lesson_ids": [
-        "PL-C036"
+        "c039"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -162,7 +161,7 @@
         "Interpreting a higher CPI as over budget."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -206,7 +205,7 @@
         "Assuming SPI alone predicts final completion."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -250,7 +249,7 @@
         "Selecting a formula without checking scenario assumptions."
       ],
       "related_lesson_ids": [
-        "PL-C038"
+        "c041"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -294,7 +293,7 @@
         "Ignoring sign conventions or non-monetary criteria."
       ],
       "related_lesson_ids": [
-        "PL-C046"
+        "c049"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -334,7 +333,7 @@
         "Comparing projects with different timing or risk using ROI alone."
       ],
       "related_lesson_ids": [
-        "PL-C039"
+        "c042"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -379,7 +378,7 @@
         "Choosing the shortest project without comparing NPV."
       ],
       "related_lesson_ids": [
-        "PL-C039"
+        "c042"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -424,8 +423,7 @@
         "Mixing time units."
       ],
       "related_lesson_ids": [
-        "PL-C050",
-        "PL-C052"
+        "c053"
       ],
       "related_question_ids": [],
       "related_glossary_ids": [
@@ -435,6 +433,327 @@
         {
           "source_id": "S10",
           "topic": "flow metrics"
+        }
+      ]
+    },
+    {
+      "id": "F-CV",
+      "name": "Cost variance",
+      "formula": "CV = EV - AC",
+      "variables": [
+        {
+          "symbol": "EV",
+          "meaning": "earned value: budgeted cost of work performed"
+        },
+        {
+          "symbol": "AC",
+          "meaning": "actual cost of the work performed"
+        }
+      ],
+      "interpretation": "How far the work performed is over or under its budgeted cost, in currency.",
+      "comparison_guidance": {
+        "greater_than": "Positive: work performed cost less than budgeted — under cost.",
+        "less_than": "Negative: work performed cost more than budgeted — over cost."
+      },
+      "memory_tips": [
+        "Both variances start from EV; cost variance subtracts Actual Cost."
+      ],
+      "common_mistakes": [
+        "Computing AC - EV and reversing the sign convention.",
+        "Reading CV as a schedule signal."
+      ],
+      "related_lesson_ids": [
+        "c041"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value management"
+        }
+      ]
+    },
+    {
+      "id": "F-SV",
+      "name": "Schedule variance",
+      "formula": "SV = EV - PV",
+      "variables": [
+        {
+          "symbol": "EV",
+          "meaning": "earned value: budgeted cost of work performed"
+        },
+        {
+          "symbol": "PV",
+          "meaning": "planned value: budgeted cost of work scheduled"
+        }
+      ],
+      "interpretation": "How far ahead or behind the planned schedule the performed work is, expressed in currency.",
+      "comparison_guidance": {
+        "greater_than": "Positive: more work done than scheduled — ahead of plan.",
+        "less_than": "Negative: less work done than scheduled — behind plan."
+      },
+      "memory_tips": [
+        "Both variances start from EV; schedule variance subtracts Planned Value."
+      ],
+      "common_mistakes": [
+        "Reading SV as money over/under budget rather than schedule position.",
+        "Forgetting SV converges to zero at completion regardless of lateness."
+      ],
+      "related_lesson_ids": [
+        "c041"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value management"
+        }
+      ]
+    },
+    {
+      "id": "F-ETC",
+      "name": "Estimate to complete",
+      "formula": "ETC = EAC - AC",
+      "variables": [
+        {
+          "symbol": "EAC",
+          "meaning": "estimate at completion: forecast total cost"
+        },
+        {
+          "symbol": "AC",
+          "meaning": "actual cost spent to date"
+        }
+      ],
+      "interpretation": "The expected cost of the remaining work from this point forward.",
+      "comparison_guidance": {
+        "greater_than": "More money still required to finish than the comparison point.",
+        "less_than": "Less remaining spend expected; check the EAC assumption behind it."
+      },
+      "memory_tips": [
+        "To complete = total forecast minus what is already spent."
+      ],
+      "common_mistakes": [
+        "Confusing ETC (remaining) with EAC (total).",
+        "Using BAC instead of EAC when performance has shifted."
+      ],
+      "related_lesson_ids": [
+        "c041"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value forecasting"
+        }
+      ]
+    },
+    {
+      "id": "F-VAC",
+      "name": "Variance at completion",
+      "formula": "VAC = BAC - EAC",
+      "variables": [
+        {
+          "symbol": "BAC",
+          "meaning": "budget at completion: original total budget"
+        },
+        {
+          "symbol": "EAC",
+          "meaning": "estimate at completion: forecast total cost"
+        }
+      ],
+      "interpretation": "The forecast overrun or underrun at project end against the original budget.",
+      "comparison_guidance": {
+        "greater_than": "Positive: forecast finish under the original budget.",
+        "less_than": "Negative: forecast finish over the original budget."
+      },
+      "memory_tips": [
+        "Original budget minus the new forecast — negative means trouble."
+      ],
+      "common_mistakes": [
+        "Computing EAC - BAC and misreading the sign.",
+        "Treating VAC as current variance rather than a completion forecast."
+      ],
+      "related_lesson_ids": [
+        "c041"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value forecasting"
+        }
+      ]
+    },
+    {
+      "id": "F-TCPI",
+      "name": "To-complete performance index",
+      "formula": "TCPI = (BAC - EV) / (BAC - AC)",
+      "variables": [
+        {
+          "symbol": "BAC",
+          "meaning": "budget at completion"
+        },
+        {
+          "symbol": "EV",
+          "meaning": "earned value to date"
+        },
+        {
+          "symbol": "AC",
+          "meaning": "actual cost to date"
+        }
+      ],
+      "interpretation": "The cost efficiency required on all remaining work to finish exactly on the original budget.",
+      "comparison_guidance": {
+        "greater_than": "Above 1.0: remaining work must run more efficiently than planned — the further above achieved CPI, the less credible the budget.",
+        "less_than": "Below 1.0: remaining work can run below planned efficiency and still hit the budget."
+      },
+      "memory_tips": [
+        "Work remaining over funds remaining."
+      ],
+      "common_mistakes": [
+        "Comparing TCPI to 1.0 instead of to the achieved CPI.",
+        "Using EAC in the denominator when the target is BAC."
+      ],
+      "related_lesson_ids": [
+        "c041"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [
+        "G-EARNED-VALUE"
+      ],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "earned value forecasting"
+        }
+      ]
+    },
+    {
+      "id": "F-PERT-TRIANGULAR",
+      "name": "Three-point estimate (triangular)",
+      "formula": "E = (O + M + P) / 3",
+      "variables": [
+        {
+          "symbol": "O",
+          "meaning": "optimistic estimate"
+        },
+        {
+          "symbol": "M",
+          "meaning": "most likely estimate"
+        },
+        {
+          "symbol": "P",
+          "meaning": "pessimistic estimate"
+        }
+      ],
+      "interpretation": "A simple average of the three point estimates, weighting each scenario equally.",
+      "comparison_guidance": {
+        "greater_than": "Higher than the beta estimate when the pessimistic tail is long.",
+        "less_than": "Lower than the beta estimate when the optimistic tail dominates."
+      },
+      "memory_tips": [
+        "Triangular = plain average; beta weights M four times."
+      ],
+      "common_mistakes": [
+        "Mixing up triangular (O+M+P)/3 with beta (O+4M+P)/6 on exam arithmetic."
+      ],
+      "related_lesson_ids": [
+        "c038"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [],
+      "source_references": [
+        {
+          "source_id": "S8",
+          "topic": "duration estimating"
+        }
+      ]
+    },
+    {
+      "id": "F-PAYBACK",
+      "name": "Payback period",
+      "formula": "Payback = time until cumulative inflows equal the investment",
+      "variables": [
+        {
+          "symbol": "investment",
+          "meaning": "initial outlay"
+        },
+        {
+          "symbol": "inflows",
+          "meaning": "periodic returns from the investment"
+        }
+      ],
+      "interpretation": "How quickly the investment is recovered — a liquidity and exposure signal, blind to time value and to benefits after payback.",
+      "comparison_guidance": {
+        "greater_than": "Longer payback: capital exposed longer; riskier when funding is tight.",
+        "less_than": "Shorter payback: faster recovery, but says nothing about total value."
+      },
+      "memory_tips": [
+        "Payback answers \"when is my money back,\" never \"how much value.\""
+      ],
+      "common_mistakes": [
+        "Selecting by shortest payback when NPV comparison is available.",
+        "Ignoring everything the investment earns after the payback point."
+      ],
+      "related_lesson_ids": [
+        "c042"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "financial selection metrics"
+        }
+      ]
+    },
+    {
+      "id": "F-BCR",
+      "name": "Benefit-cost ratio",
+      "formula": "BCR = benefits / costs",
+      "variables": [
+        {
+          "symbol": "benefits",
+          "meaning": "total expected benefits (ideally discounted)"
+        },
+        {
+          "symbol": "costs",
+          "meaning": "total expected costs (ideally discounted)"
+        }
+      ],
+      "interpretation": "Value produced per unit of cost; above 1.0 means benefits exceed costs.",
+      "comparison_guidance": {
+        "greater_than": "Above 1.0: benefits exceed costs; higher ratios stretch each invested unit further.",
+        "less_than": "Below 1.0: costs exceed benefits — the investment destroys value as scoped."
+      },
+      "memory_tips": [
+        "Bigger than one, benefits won."
+      ],
+      "common_mistakes": [
+        "Comparing BCRs across radically different investment sizes without noting absolute value.",
+        "Using undiscounted figures when timing differs materially."
+      ],
+      "related_lesson_ids": [
+        "c042"
+      ],
+      "related_question_ids": [],
+      "related_glossary_ids": [],
+      "source_references": [
+        {
+          "source_id": "S10",
+          "topic": "financial selection metrics"
         }
       ]
     }

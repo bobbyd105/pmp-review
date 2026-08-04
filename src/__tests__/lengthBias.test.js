@@ -43,4 +43,34 @@ describe('question answer-length bias measurement', () => {
     expect(ratios).toEqual([...ratios].sort((left, right) => right - left))
     expect(report).toBe(renderLengthBiasReport(analysis))
   })
+
+  it('HARD GATE: keeps the real bank within the strict-longest target with no ratio flags', () => {
+    const analysis = analyzeLengthBias(questions)
+
+    expect(
+      analysis.strictLongestRate,
+      `strictly-longest correct answers are at ${(analysis.strictLongestRate * 100).toFixed(1)}% of the bank (target <= ${STRICT_LONGEST_TARGET * 100}%)`,
+    ).toBeLessThanOrEqual(STRICT_LONGEST_TARGET)
+    expect(
+      analysis.flagged.map((row) => row.id),
+      `questions exceeding the ${LENGTH_RATIO_THRESHOLD} correct/average-distractor length ratio`,
+    ).toEqual([])
+    expect(analysis.remediationRequired).toBe(false)
+  })
+
+  it('HARD GATE: the correct answer must not be strictly shortest more often than random chance', () => {
+    // Guards against over-correcting the longest-answer tell into a shortest-answer tell.
+    const strictShortest = questions.filter((question) => {
+      const correctLength = [...question.correct_answer].length
+      const distractorLengths = question.options
+        .filter((option) => option !== question.correct_answer)
+        .map((option) => [...option].length)
+      return correctLength < Math.min(...distractorLengths)
+    }).length
+
+    expect(
+      strictShortest / questions.length,
+      `strictly-shortest correct answers are at ${((strictShortest / questions.length) * 100).toFixed(1)}% of the bank`,
+    ).toBeLessThanOrEqual(0.3)
+  })
 })

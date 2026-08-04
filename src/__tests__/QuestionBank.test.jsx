@@ -6,7 +6,10 @@ import questions from '../../data/questions.json'
 
 let consoleErrorSpy
 
-vi.setConfig({ testTimeout: 15000 })
+// Full-bank render tests scale with total option text; the 2026-07 length-bias
+// remediation lengthened average distractor text, pushing renders past the
+// previous 15s allowance.
+vi.setConfig({ testTimeout: 30000 })
 
 beforeEach(() => {
   consoleErrorSpy = vi.spyOn(console, 'error')
@@ -76,5 +79,15 @@ describe('QuestionBank', () => {
     await user.click(within(firstCard).getByRole('button', { name: 'Show answer' }))
     expect(within(firstCard).getByText(first.explanation)).toBeInTheDocument()
     expect(screen.queryByText(second.explanation)).not.toBeInTheDocument()
+  })
+
+  it('deep-links to a focused question: answer pre-expanded and item marked focused', () => {
+    const target = questions[Math.min(5, questions.length - 1)]
+    render(<QuestionBank focusQuestionId={target.id} />)
+
+    const card = screen.getByText(target.question).closest('article')
+    expect(within(card).getByText(target.explanation)).toBeInTheDocument()
+    expect(within(card).getByRole('button', { name: 'Hide answer' })).toBeInTheDocument()
+    expect(card.closest('.question-list-item')).toHaveClass('focused-item')
   })
 })
