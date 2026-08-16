@@ -1,5 +1,11 @@
 # Question Metadata Classification Log
 
+> **Scope note:** This log documents the editorial classification of the
+> merged 424-question PR #26 baseline (`q001`-`q424`). Questions `q425`-
+> `q447` were subsequently authored with the same rubric; their metadata and
+> review table are recorded in
+> `docs/content/exam_simulator_targeted_top_up_review.md`.
+
 Records how `approach`, `item_style`, and `concept_ids` were assigned to
 all 424 questions in `data/questions.json` (2026-08, this branch — see
 `docs/decision_log.md` #15 and `docs/exam_simulator_readiness_audit.md`).

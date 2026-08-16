@@ -1,15 +1,17 @@
 # Progress
 
 ## Current Version
-Current working state: v0.8 — the completion mission branch
-(`feature/pmp-completion-mission`, 2026-07-15 through 2026-07-17) turns the
-platform into a complete PMP learning system:
+Current working state: v0.9 — the Exam Simulator targeted content top-up
+branch (`content/exam-simulator-targeted-top-up`, 2026-08) deepens only the
+exam-critical pools identified by the merged PR #26 metadata audit:
 
-- **Question bank:** 424 original questions (People 138 / Process 176 /
-  Business Environment 110), correct-answer positions exactly balanced at
-  106 per position, answer-length cues editorially remediated bank-wide and
-  protected by hard gates (decision_log.md #12), and 40 targeted questions
-  covering the named concepts the audits found at zero coverage.
+- **Question bank:** 447 original questions (People 142 / Process 192 /
+  Business Environment 113), correct-answer positions 112/112/112/111,
+  answer-length cues protected by the unchanged hard gates (0 ratio flags;
+  19.0% strictly longest), and 23 evidence-sized top-up questions covering
+  the 12 previously unexercised taught formulas, hybrid integration,
+  servant leadership, product/project scope, and the two zero-question AI
+  concepts.
 - **Comprehensive Course:** all 62 concept lessons authored (c001-c062) in
   module order from PM Foundations through Agile/Hybrid and AI, each with
   objectives, sections, key terms, exam traps, flashcards, three
@@ -35,8 +37,8 @@ platform into a complete PMP learning system:
   workflow (`npm test` + `npm run build` on PRs) was added. Full detail in
   decision_log.md #13.
 
-User review of this branch's draft PR is the approval gate for all content
-authored during the mission. Prior v0.7 summary follows.
+User review of this branch's draft PR is the approval gate for the 23 new
+questions. Prior v0.8/v0.7 history follows.
 
 v0.7 — Slice 6 complete (Prompt Helper); curriculum content batch 2 added
 (8 questions, 2 lessons) via the direct-PR pipeline per Decision #9; all
@@ -86,6 +88,29 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Exam Simulator targeted content top-up (2026-08,
+  `content/exam-simulator-targeted-top-up`): added 23 original questions
+  (`q425`-`q447`) after verifying the PR #26 baseline directly from the
+  data. The minimum batch comprises 12 true calculations (one for every
+  taught formula that previously had no arithmetic item), 4 genuine
+  hybrid-integration scenarios, 4 responsible-use AI scenarios, 2 product-
+  vs.-project-scope items, and 1 additional servant-leadership scenario.
+  The hybrid pool rises 2 -> 6, calculation 8 -> 20, and AI 4 -> 8; all
+  exam-critical zero concepts now have at least 2 questions. Only `c010`
+  and `c011` remain at zero by documented low-frequency/supplemental
+  decision. ECO links and curated concept-lesson links were updated, and
+  the generated bank/length reports were regenerated. Full sizing logic and
+  the per-question review table are in
+  `docs/content/exam_simulator_targeted_top_up_review.md`. The seeded option
+  script repositions options on 169 existing questions when the complete-bank
+  ordering expands; a field comparison confirms zero existing stem, option
+  text, answer, explanation, ECO, or metadata changes. No simulator code or
+  test thresholds changed. Dependency-free validation passes for JSON/schema
+  integrity, ECO and concept links, deterministic option order, generated-
+  report reproducibility, all answer-length/position gates, formula coverage,
+  and `git diff --check`. The full Vitest/build run remains pending CI because
+  this environment has no installed project dependencies and blocks npm
+  registry access.
 - Exam Simulator question metadata remediation (2026-08,
   `content/exam-simulator-question-metadata`): implemented PR #25's
   recommended remediation slice. Added `approach`, `item_style`, and
@@ -650,8 +675,10 @@ expanding the orchestration system without a demonstrated need.
 ## Content Accuracy Note
 The curriculum audit validates structure and traceability, not the factual
 accuracy of every lesson/question. Source-derived planning language is
-original, and the local PDFs/planning maps remain ignored. New concept
-lessons/questions require the review contracts under `docs/content/`.
+original. This top-up was checked against the repository's production
+lessons/formula catalog and the supplied approach, agile/hybrid, AI, terms,
+and process source PDFs. New concept lessons/questions still require the
+review contracts under `docs/content/`.
 
 Constitution Section 10 manual accuracy spot-check (questions AND
 lessons) remains pending User review. Content Studio checks shape, not
@@ -662,8 +689,17 @@ data-contract tests (shape only) and still need the User's manual
 accuracy spot-check against the current ECO before merge.
 
 ## Current Status
+**The targeted content top-up is implemented on
+`content/exam-simulator-targeted-top-up`.** The bank now contains 447
+questions with exact metadata counts of 328 universal / 80 predictive / 33
+adaptive / 6 hybrid and 377 scenario / 23 interpretation / 23 definition /
+20 calculation / 4 sequence. The AI pool contains 8 questions. The batch
+sizing, accepted low-frequency gaps, ECO impact, and all new IDs are recorded
+in `docs/content/exam_simulator_targeted_top_up_review.md`. The Exam Simulator
+itself remains unimplemented.
+
 **PR #24 is merged into `main`; the completion mission is COMPLETE.** `main`
-is the current baseline: 424-question bank with hard answer-cue gates, the
+was the 424-question baseline before this top-up, with hard answer-cue gates, the
 complete 62-lesson Comprehensive Course rendered by the Course view (with
 persistent completion/knowledge-check progress and answerable, bank-linked
 practice questions), the Reference view over the expanded formula/glossary
@@ -739,26 +775,18 @@ from exact domain/task matching.
 The completion mission is done (PR #24 merged) and the Exam Simulator
 metadata remediation is done (PR #25's audit, then the 2026-08 metadata
 branch — see `docs/content/exam_simulator_metadata_remediation.md`). The
-next milestone is still **Exam Simulator readiness/design**, now at its
-"targeted content top-up first" decision point:
-(1) build the 180-question assembly algorithm against `eco_domain`/
-`eco_task` (hard constraint, already sufficient) with `approach`/
-`item_style`/concept soft targets, per the metadata-remediation report's
-§7 recommendations — this does not need to wait for new content; (2) in
-parallel or shortly after, run one bounded, targeted content batch sized
-against the real gaps the new metadata surfaced: roughly +6 to +10 AI
-questions across all 4 AI concepts (`c059`–`c062`, currently 4 questions
-total), roughly +28 calculation questions sized to bring each of the 18
-taught formulas to at least 2 items (currently only 8 real calculation
-questions, concentrated in ~7 of the 18 formulas), and a small batch (on
-the order of a dozen questions) for the delivery-approach foundational
-cluster (`c023`–`c026`, `c057`, `c058`, `c034`) which the new data showed
-is thinner than expected. Other previously-identified follow-ups, in
-learner-impact order: (3) reviewed difficulty/cognitive-level metadata to
+targeted content top-up is now also complete on this branch. The next
+milestone is to build the pure 180-question assembly algorithm against
+`eco_domain`/`eco_task` as the hard constraint, with `approach`/
+`item_style`/concept soft targets and the documented fallback order. Do not
+build the UI, timer, breaks, or exam-session persistence in that first slice.
+
+Other previously identified follow-ups, in learner-impact order: (2)
+reviewed difficulty/cognitive-level metadata to
 enable diagnostics (still no calibrated basis — needs attempt-based
-evidence first), (4) a decision on whether to build a Reference-sheet UI
+evidence first), (3) a decision on whether to build a Reference-sheet UI
 for `reference_sheet_catalog.json` (currently unbuilt/planned — see
-decision_log.md #13) or drop it, (5) course content for the two glossary
+decision_log.md #13) or drop it, (4) course content for the two glossary
 terms with no lesson coverage yet (RACI chart, risk appetite — see
 decision_log.md #13; note `data/concept_lessons.json` also has no
 dedicated RACI concept, surfaced during this branch's classification).
