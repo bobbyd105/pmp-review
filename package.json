@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "questions:shuffle-options": "node scripts/shuffle-question-options.mjs",
-    "questions:report-length-bias": "node scripts/report-length-bias.mjs"
+    "questions:report-length-bias": "node scripts/report-length-bias.mjs",
+    "questions:analyze-bank": "node scripts/analyze-question-bank.mjs"
   },
   "dependencies": {
     "react": "^19.2.7",

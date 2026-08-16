@@ -1,5 +1,20 @@
 # Knowledge Layer & Content Production Framework — Next Actions
 
+## Current milestone (2026-08-16): Exam Simulator readiness/design
+
+PR #24 is merged into `main`; the completion mission is complete. The
+current milestone is Exam Simulator readiness/design. See
+`docs/exam_simulator_readiness_audit.md` for the full audit (verdict:
+READY WITH SMALL METADATA REMEDIATION) and `docs/progress.md`'s "Next
+Recommended Task" for the prioritized follow-up sequence: (1) add
+`approach`/`item_style`/`concept_ids` metadata to the existing 424
+questions, (2) build the 180-question assembly algorithm per the audit's
+blueprint, (3) a later, separate small content top-up for the two shallow
+categories the audit found (AI-related, calculation/formula). The audit
+itself implemented no simulator code, added no metadata, and generated no
+new questions. The sections below are the earlier knowledge-layer
+framework's next actions, retained for history.
+
 ## Review order
 
 1. Review `docs/content/knowledge_layer_report.md` for outcomes, risks, and implementation order.

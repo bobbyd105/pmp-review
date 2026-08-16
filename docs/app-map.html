@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-07-15 (batch-orchestrator infrastructure archived to <code>archive/orchestration-infrastructure/</code>).
+<p>Last updated: 2026-08-16 (Exam Simulator Readiness Audit — PR #24 is merged into <code>main</code>, the completion mission is complete, and the next milestone is Exam Simulator readiness/design; see <code>docs/exam_simulator_readiness_audit.md</code>. This audit added analysis tooling only — no simulator UI, no new metadata fields, no new questions).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -191,6 +191,11 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
     <td><code>scripts/report-length-bias.mjs</code></td>
     <td>Pure answer-length analysis plus report generator: measures Unicode character length, correct/average-distractor ratios, strict-longest rate, worst-first ratio flags, and remediation status without changing content.</td>
     <td><code>npm run questions:report-length-bias</code>; <code>lengthBias.test.js</code></td>
+  </tr>
+  <tr>
+    <td><code>scripts/analyze-question-bank.mjs</code></td>
+    <td>Read-only Exam Simulator Readiness Audit tooling (2026-08-16): exact ECO domain/task counts, keyword-heuristic content-category counts (clearly labeled as estimates, not certified tags), and concept-lesson linkage coverage. Never writes to <code>data/questions.json</code>.</td>
+    <td><code>npm run questions:analyze-bank</code>; <code>questionBankAnalysis.test.js</code></td>
   </tr>
 </table>
 
@@ -377,6 +382,8 @@ active toolchain.</p>
   <li><code>docs/content/curriculum_model.md</code> — canonical course/ECO-review/reference/assessment architecture</li>
   <li><code>docs/content/coverage_matrix.md</code> — concept-level strengths, gaps, mappings, and priorities</li>
   <li><code>docs/content/length_bias_report.md</code> — generated answer-length measurements and worst-first editorial remediation list</li>
+  <li><code>docs/exam_simulator_readiness_audit.md</code> — Exam Simulator Readiness Audit (2026-08-16): metadata-schema gap analysis, bank composition, viability findings, assembly-algorithm blueprint (not implemented), sampled quality review, and test-guardrail proposals</li>
+  <li><code>docs/content/exam_simulator_bank_analysis.md</code> — generated exact ECO domain/task counts plus heuristic content-category counts, supporting the audit above</li>
   <li><code>docs/content/curriculum_audit_report.md</code> — final audit findings and roadmap</li>
   <li><code>docs/content/knowledge_layer_report.md</code> — final knowledge-layer outcomes, risks, and implementation order</li>
   <li><code>docs/content/knowledge_graph.md</code> — graph semantics, dependencies, traversal, and governance</li>
@@ -390,11 +397,17 @@ active toolchain.</p>
 </ul>
 
 <h2>Not built yet</h2>
-<p>Reviewed production objective mappings, stable question option IDs, calibrated
-difficulty, diagnostics, adaptive recommendation algorithms, spaced repetition,
-history management (clearing/exporting quiz history), and richer lesson
-rendering. No routing, state library, backend, or AI API integration
-(constitution Section 2).</p>
+<p>The 180-question Exam Simulator itself — timer UI, exam session state,
+breaks, section sequencing, scoring history — is designed but not
+implemented; see <code>docs/exam_simulator_readiness_audit.md</code> for the
+assembly-algorithm blueprint and the small metadata remediation
+(<code>approach</code>, <code>item_style</code>, <code>concept_ids</code>
+fields) recommended before building it. Also not built: reviewed production
+objective mappings, stable question option IDs, calibrated difficulty,
+diagnostics, adaptive recommendation algorithms, spaced repetition, history
+management (clearing/exporting quiz history), and richer lesson rendering.
+No routing, state library, backend, or AI API integration (constitution
+Section 2).</p>
 <p>The knowledge/objective/glossary/formula/reference planning catalogs remain
 validated planning inputs. All 62 Comprehensive Course concept lessons are now
 authored and rendered by the Course view with knowledge checks and curated
