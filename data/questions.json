@@ -8323,9 +8323,9 @@
       "Assign each task personally because predictive gates suspend team self-organization",
       "Escalate the delay and wait for the sponsor to redesign the regulatory review process",
       "Skip the evidence template because adaptive teams value delivery over documentation",
-      "Clarify the gate evidence, remove access blockers, and let the team organize the work"
+      "Clarify the gate evidence, remove the impediment, and let the team organize the work"
     ],
-    "correct_answer": "Clarify the gate evidence, remove access blockers, and let the team organize the work",
+    "correct_answer": "Clarify the gate evidence, remove the impediment, and let the team organize the work",
     "explanation": "The regulatory boundary remains predictive, but the team can still self-organize how it satisfies that boundary. Servant leadership clarifies constraints and removes the impediment without taking over task assignment. Skipping required evidence violates governance, personal assignment destroys bounded autonomy, and passive escalation leaves a removable blocker in place."
   },
   {
@@ -8417,15 +8417,15 @@
     "concept_ids": [
       "c034"
     ],
-    "question": "A new system passes every functional requirement, but user training, migration support, and operating documentation in the approved plan remain incomplete. A sponsor says the project is finished because the product works. What should the project manager explain?",
+    "question": "A new system meets all approved product requirements and has been accepted as a product, but user training, migration support, and other supporting project work in the approved plan remain incomplete. A sponsor says the project is finished because the product works. What should the project manager explain?",
     "options": [
       "Both scopes are complete, and the unfinished activities should move into operations informally",
-      "Product scope remains incomplete because training and documentation are product features",
+      "Project scope is satisfied because functional acceptance automatically closes all supporting work",
       "Product scope is satisfied, but project scope remains incomplete until the agreed work is done",
-      "Project scope is satisfied because functional acceptance automatically closes all supporting work"
+      "Product scope remains incomplete because training and migration support are product features"
     ],
     "correct_answer": "Product scope is satisfied, but project scope remains incomplete until the agreed work is done",
-    "explanation": "Product scope concerns the deliverable's features, which passed their requirements; project scope includes all approved work needed to deliver and transition it, including training, migration support, and documentation. Functional acceptance does not erase that work, supporting activities are not automatically product features, and informal transfer would bypass agreed completion and acceptance responsibilities."
+    "explanation": "Product scope concerns the requirements, features, and functions of the deliverable; those approved product requirements have been satisfied and accepted. Project scope includes all approved work required to deliver and complete the project, including training, migration support, and other supporting work. Product acceptance does not erase that work, supporting activities are not automatically product features, and informal transfer would bypass agreed completion responsibilities."
   },
   {
     "id": "q444",
