@@ -1,26 +1,31 @@
-# Question Bank Composition Analysis (Heuristic)
+# Question Bank Composition Analysis (Explicit Metadata)
 
 Generated from `data/questions.json` by
 `node scripts/analyze-question-bank.mjs` (also `npm run
 questions:analyze-bank`). Supports the Exam Simulator Readiness Audit
-(`docs/exam_simulator_readiness_audit.md`). This script never writes to
-`data/questions.json`.
+(`docs/exam_simulator_readiness_audit.md`) and its 2026-08 metadata
+remediation follow-up (`docs/decision_log.md` #15). This script never
+writes to `data/questions.json`.
 
 ## Schema fields present on every question
 
+- `approach`
+- `concept_ids`
 - `correct_answer`
 - `eco_domain`
 - `eco_task`
 - `explanation`
 - `id`
+- `item_style`
 - `options`
 - `question`
 
-No question currently carries item-style, delivery-approach, complexity,
-PMBOK-8, or topic-tag metadata as explicit fields. The category counts
-below are keyword-heuristic estimates over question/option/explanation
-text, not derived from real metadata, and are reported as such — they are
-NOT a substitute for explicit tagging.
+`approach`, `item_style`, and `concept_ids` are explicit, editorially
+classified per-question metadata (not keyword-derived) — see
+`docs/content/question_metadata_classification_log.md` for the
+classification rules and rationale. The five categories below them
+(stakeholder/leadership/risk/governance/business-environment) still have no
+canonical field and remain keyword-heuristic estimates, clearly labeled.
 
 ## ECO domain distribution (exact, from schema)
 
@@ -61,36 +66,95 @@ NOT a substitute for explicit tagging.
 | Process — Task 8: Plan and manage schedule | 17 |
 | Process — Task 9: Evaluate project status | 18 |
 
-## Content-category signals (HEURISTIC — keyword matching, not certified topic tags)
+## Approach distribution (exact, from `approach`)
+
+| Approach | Questions | Share of bank |
+|---|---:|---:|
+| predictive | 72 | 17.0% |
+| adaptive | 32 | 7.5% |
+| hybrid | 2 | 0.5% |
+| universal | 318 | 75.0% |
+
+## Item-style distribution (exact, from `item_style`)
+
+| Item style | Questions | Share of bank |
+|---|---:|---:|
+| scenario_judgment | 367 | 86.6% |
+| definition_distinction | 22 | 5.2% |
+| calculation | 8 | 1.9% |
+| interpretation | 23 | 5.4% |
+| process_sequence | 4 | 0.9% |
+
+## Concept coverage (exact, from `concept_ids`)
+
+- Concepts in the catalog: 62
+- Questions tagged with more than one concept: 5 (1.2%)
+- Concepts with ZERO questions: 7
+- Concepts with 1–2 questions (shallow): 14
+
+### Concepts with zero questions
+
+| Concept | Title |
+|---|---|
+| c010 | Project vs. Product Management |
+| c011 | What Makes Work a Project? |
+| c034 | Product Scope vs. Project Scope |
+| c057 | Servant Leadership and Self-Organizing Teams |
+| c058 | Hybrid Integration in Practice |
+| c059 | AI Foundations for Project Managers |
+| c062 | AI Use Cases Across the Project Life Cycle |
+
+### Concepts with 1–2 questions, fewest first
+
+| Concept | Title | Questions |
+|---|---|---:|
+| c001 | Projects, Programs, Portfolios, and Operations | 1 |
+| c005 | Project Charter, Business Case, and Benefits Plan | 1 |
+| c007 | Common ITTO Patterns: EEFs, OPAs, Plans, and Documents | 1 |
+| c017 | Holistic and Systems Thinking | 1 |
+| c023 | Predictive Delivery | 1 |
+| c026 | Hybrid Delivery | 1 |
+| c027 | Tailoring the Approach | 1 |
+| c033 | Requirements Elicitation and Analysis | 1 |
+| c060 | Automation, Assistance, and Augmentation | 1 |
+| c003 | Project Phases, Deliverables, and Phase Gates | 2 |
+| c024 | Iterative and Incremental Delivery | 2 |
+| c025 | Adaptive Delivery | 2 |
+| c051 | Agile Values, Principles, and Mindset | 2 |
+| c056 | MVP, MMF, and Early Value | 2 |
+
+## True AI coverage (exact, via concept_ids mapped to the AI module)
+
+AI module concepts (`data/concept_lessons.json`, module "AI in Project
+Management"): c059, c060, c061, c062.
+
+- Questions tagged to an AI-module concept: 4 (0.9%)
+- IDs: q421, q422, q423, q424
+
+## True calculation coverage (exact, via item_style = "calculation")
+
+- Questions: 8 (1.9%)
+- IDs: q394, q396, q398, q399, q400, q401, q415, q418
+
+## Remaining heuristic signals (keyword matching — no canonical field exists for these)
 
 | Category | Questions matched | Share of bank |
 |---|---:|---:|
-| Scenario-style stem ("what should the PM do first/next") | 253 | 59.7% |
-| Calculation / formula cues | 27 | 6.4% |
-| Predictive-approach cues | 36 | 8.5% |
-| Agile / adaptive cues | 46 | 10.8% |
-| Hybrid cues | 4 | 0.9% |
-| AI-related cues | 4 | 0.9% |
 | Stakeholder / communication cues | 115 | 27.1% |
 | Leadership / team / conflict cues | 100 | 23.6% |
 | Risk cues | 98 | 23.1% |
 | Governance / change-control cues | 72 | 17.0% |
 | Business-environment / value cues | 84 | 19.8% |
 
-Categories are not mutually exclusive; a question can match zero or several
-patterns. A question matching zero calculation/agile/AI/etc. keywords is
-not necessarily uncategorizable — it may simply use different phrasing.
-Treat every count in this section as an estimate requiring editorial
-confirmation before it drives exam assembly.
+These five categories are cross-cutting content signals, not assembly
+dimensions — `docs/exam_simulator_readiness_audit.md` §1 judged that
+`eco_task` already isolates most of this content well enough for exam
+assembly, so no dedicated field was added. Treat every count in this
+section as an estimate.
 
-## Concept-lesson linkage coverage
+## Concept-lesson linkage coverage (legacy — superseded by `concept_ids` above)
 
-- Questions referenced by at least one `concept_lessons.json` entry
-  (`related_question_ids`): 239 (56.4%)
-- Questions with no concept-lesson link: 185 (43.6%)
-
-Linked questions inherit their lesson's `pmbok8_domains`, `focus_areas`,
-and `approaches` tags only by association (one lesson can link many
-questions, and the tag describes the lesson's topic, not a verified
-per-question judgment). Unlinked questions have no topic/approach signal
-beyond ECO domain/task and the heuristic keyword scan above.
+- Questions referenced by at least one `concept_lessons.json` entry via
+  `related_question_ids` (the old, lesson-authored linkage — retained for
+  comparison): 239 (56.4%)
+- Questions with no such link: 185 (43.6%)

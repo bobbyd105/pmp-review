@@ -1,8 +1,10 @@
 // Read-only analysis of data/questions.json for the Exam Simulator Readiness
-// Audit. Produces reproducible counts by ECO domain/task (exact, from the
-// schema) and by content category (heuristic keyword matching, since the
-// current schema has no style/approach/topic metadata to query directly).
-// Never writes to data/questions.json.
+// Audit. Produces exact counts by ECO domain/task, approach, item style, and
+// concept coverage — all read directly from explicit per-question metadata
+// (docs/decision_log.md #15). A small set of cross-cutting content signals
+// (stakeholder, leadership, risk, governance, business-environment) still
+// have no canonical field and remain heuristic keyword estimates, clearly
+// labeled as such. Never writes to data/questions.json.
 
 import fs from 'node:fs'
 import path from 'node:path'
@@ -14,71 +16,22 @@ export const ECO_DOMAIN_WEIGHTS = {
   'Business Environment': 0.26,
 }
 
-// Heuristic keyword categories. Every match here is a SIGNAL, not a
-// certified label — a question can match zero, one, or several categories,
-// and matching a keyword does not mean the question is "about" that topic
-// in an exam-blueprint sense. Patterns are matched against the lowercased
-// question stem + options + explanation.
-const CATEGORY_PATTERNS = {
-  scenarioStyle: [
-    /\bwhat should the project manager do\b/,
-    /\bwhat is the (best|most appropriate|next) (action|thing|step)\b/,
-    /\bwhat should (the|a) .*\bdo (first|next)\b/,
-    /\bhow should the project manager\b/,
-  ],
-  calculation: [
-    /\bcalculate\b/,
-    /\bcpi\b/,
-    /\bspi\b/,
-    /\beac\b/,
-    /\betc\b/,
-    /\btcpi\b/,
-    /\bvac\b/,
-    /\bbac\b/,
-    /\bpert\b/,
-    /\bemv\b/,
-    /\bnpv\b/,
-    /\birr\b/,
-    /\bpayback period\b/,
-    /\bfloat\b/,
-    /\bcritical path\b/,
-    /\bstandard deviation\b/,
-    /\$[\d,]+/,
-    /\b\d+%/,
-  ],
-  predictive: [
-    /\bpredictive\b/,
-    /\bwaterfall\b/,
-    /\bwbs\b/,
-    /\bwork breakdown structure\b/,
-    /\bgantt\b/,
-    /\bbaseline\b/,
-    /\bfixed-price\b/,
-  ],
-  agileAdaptive: [
-    /\bsprint\b/,
-    /\bscrum\b/,
-    /\bkanban\b/,
-    /\bbacklog\b/,
-    /\bvelocity\b/,
-    /\buser stor(y|ies)\b/,
-    /\bretrospective\b/,
-    /\bproduct owner\b/,
-    /\biteration\b/,
-    /\bincrement\b/,
-    /\bagile\b/,
-    /\bmvp\b/,
-    /\bwip\b/,
-  ],
-  hybrid: [/\bhybrid\b/],
-  aiRelated: [
-    /\bai\b/,
-    /\bartificial intelligence\b/,
-    /\bmachine learning\b/,
-    /\balgorithm\b/,
-    /\bautomation, assistance\b/,
-    /\bresponsible ai\b/,
-  ],
+export const APPROACHES = ['predictive', 'adaptive', 'hybrid', 'universal']
+export const ITEM_STYLES = [
+  'scenario_judgment',
+  'definition_distinction',
+  'calculation',
+  'interpretation',
+  'process_sequence',
+]
+
+// Heuristic cross-cutting content signals. These categories have no
+// canonical per-question field (docs/exam_simulator_readiness_audit.md §1
+// judged a dedicated boolean unnecessary — eco_task already isolates most
+// of this content). Every match here is a SIGNAL, not a certified label.
+// Patterns are matched against the lowercased question stem + options +
+// explanation.
+const HEURISTIC_CATEGORY_PATTERNS = {
   stakeholderComms: [
     /\bstakeholder\b/,
     /\bcommunicat/,
@@ -122,10 +75,10 @@ function matchesAny(text, patterns) {
   return patterns.some((pattern) => pattern.test(text))
 }
 
-export function categorize(question) {
+export function categorizeHeuristic(question) {
   const text = questionText(question)
   const result = {}
-  for (const [category, patterns] of Object.entries(CATEGORY_PATTERNS)) {
+  for (const [category, patterns] of Object.entries(HEURISTIC_CATEGORY_PATTERNS)) {
     result[category] = matchesAny(text, patterns)
   }
   return result
@@ -142,11 +95,44 @@ export function analyzeBank(questions, conceptLessons = []) {
     taskCounts[taskKey] = (taskCounts[taskKey] ?? 0) + 1
   }
 
-  const categoryCounts = {}
-  const categorized = questions.map((q) => ({ id: q.id, ...categorize(q) }))
-  for (const category of Object.keys(CATEGORY_PATTERNS)) {
-    categoryCounts[category] = categorized.filter((row) => row[category]).length
+  const approachCounts = Object.fromEntries(APPROACHES.map((a) => [a, 0]))
+  const itemStyleCounts = Object.fromEntries(ITEM_STYLES.map((s) => [s, 0]))
+  for (const q of questions) {
+    approachCounts[q.approach] = (approachCounts[q.approach] ?? 0) + 1
+    itemStyleCounts[q.item_style] = (itemStyleCounts[q.item_style] ?? 0) + 1
   }
+
+  const heuristicCounts = {}
+  const heuristicRows = questions.map((q) => ({ id: q.id, ...categorizeHeuristic(q) }))
+  for (const category of Object.keys(HEURISTIC_CATEGORY_PATTERNS)) {
+    heuristicCounts[category] = heuristicRows.filter((row) => row[category]).length
+  }
+
+  // Concept coverage — exact, from question.concept_ids.
+  const allConceptIds = conceptLessons.map((c) => c.id)
+  const conceptQuestionCounts = Object.fromEntries(allConceptIds.map((id) => [id, 0]))
+  let multiConceptCount = 0
+  for (const q of questions) {
+    const ids = q.concept_ids ?? []
+    if (ids.length > 1) multiConceptCount += 1
+    for (const id of ids) {
+      if (id in conceptQuestionCounts) conceptQuestionCounts[id] += 1
+    }
+  }
+  const zeroQuestionConcepts = allConceptIds.filter((id) => conceptQuestionCounts[id] === 0)
+  const shallowConcepts = allConceptIds
+    .filter((id) => conceptQuestionCounts[id] >= 1 && conceptQuestionCounts[id] <= 2)
+    .sort((a, b) => conceptQuestionCounts[a] - conceptQuestionCounts[b] || a.localeCompare(b))
+
+  // True AI coverage: questions whose concept_ids intersect the AI module's
+  // concept lessons (exact, from concept_lessons.json's module field) —
+  // not keyword matching.
+  const aiConceptIds = new Set(
+    conceptLessons.filter((c) => c.module === 'AI in Project Management').map((c) => c.id),
+  )
+  const aiQuestionIds = questions
+    .filter((q) => (q.concept_ids ?? []).some((id) => aiConceptIds.has(id)))
+    .map((q) => q.id)
 
   const linkedQuestionIds = new Set()
   for (const lesson of conceptLessons) {
@@ -166,8 +152,16 @@ export function analyzeBank(questions, conceptLessons = []) {
     schemaFields: [...schemaFields].sort(),
     domainCounts,
     taskCounts,
-    categoryCounts,
-    categorized,
+    approachCounts,
+    itemStyleCounts,
+    heuristicCounts,
+    conceptQuestionCounts,
+    zeroQuestionConcepts,
+    shallowConcepts,
+    multiConceptCount,
+    aiConceptIds: [...aiConceptIds].sort(),
+    aiQuestionIds,
+    calculationQuestionIds: questions.filter((q) => q.item_style === 'calculation').map((q) => q.id),
     linkedQuestionCount: linked,
     unlinkedQuestionCount: total - linked,
   }
@@ -177,8 +171,18 @@ function pct(count, total) {
   return total === 0 ? '0.0%' : `${((count / total) * 100).toFixed(1)}%`
 }
 
-export function renderAnalysisReport(analysis) {
-  const { total, domainCounts, taskCounts, categoryCounts, schemaFields } = analysis
+export function renderAnalysisReport(analysis, conceptLessons = []) {
+  const {
+    total,
+    domainCounts,
+    taskCounts,
+    approachCounts,
+    itemStyleCounts,
+    heuristicCounts,
+    schemaFields,
+  } = analysis
+
+  const conceptTitleById = Object.fromEntries(conceptLessons.map((c) => [c.id, c.title]))
 
   const domainRows = Object.entries(ECO_DOMAIN_WEIGHTS)
     .map(([domain, weight]) => {
@@ -192,41 +196,58 @@ export function renderAnalysisReport(analysis) {
     .map(([task, count]) => `| ${task} | ${count} |`)
     .join('\n')
 
-  const categoryLabels = {
-    scenarioStyle: 'Scenario-style stem ("what should the PM do first/next")',
-    calculation: 'Calculation / formula cues',
-    predictive: 'Predictive-approach cues',
-    agileAdaptive: 'Agile / adaptive cues',
-    hybrid: 'Hybrid cues',
-    aiRelated: 'AI-related cues',
+  const approachRows = APPROACHES.map(
+    (a) => `| ${a} | ${approachCounts[a]} | ${pct(approachCounts[a], total)} |`,
+  ).join('\n')
+
+  const itemStyleRows = ITEM_STYLES.map(
+    (s) => `| ${s} | ${itemStyleCounts[s]} | ${pct(itemStyleCounts[s], total)} |`,
+  ).join('\n')
+
+  const heuristicLabels = {
     stakeholderComms: 'Stakeholder / communication cues',
     leadershipTeam: 'Leadership / team / conflict cues',
     risk: 'Risk cues',
     governanceChangeControl: 'Governance / change-control cues',
     businessEnvironmentValue: 'Business-environment / value cues',
   }
-
-  const categoryRows = Object.entries(categoryLabels)
-    .map(([key, label]) => `| ${label} | ${categoryCounts[key]} | ${pct(categoryCounts[key], total)} |`)
+  const heuristicRowsMd = Object.entries(heuristicLabels)
+    .map(([key, label]) => `| ${label} | ${heuristicCounts[key]} | ${pct(heuristicCounts[key], total)} |`)
     .join('\n')
 
-  return `# Question Bank Composition Analysis (Heuristic)
+  const zeroConceptRows =
+    analysis.zeroQuestionConcepts.length === 0
+      ? '| None | — |'
+      : analysis.zeroQuestionConcepts
+          .map((id) => `| ${id} | ${conceptTitleById[id] ?? '(unknown)'} |`)
+          .join('\n')
+
+  const shallowConceptRows = analysis.shallowConcepts
+    .map(
+      (id) =>
+        `| ${id} | ${conceptTitleById[id] ?? '(unknown)'} | ${analysis.conceptQuestionCounts[id]} |`,
+    )
+    .join('\n')
+
+  return `# Question Bank Composition Analysis (Explicit Metadata)
 
 Generated from \`data/questions.json\` by
 \`node scripts/analyze-question-bank.mjs\` (also \`npm run
 questions:analyze-bank\`). Supports the Exam Simulator Readiness Audit
-(\`docs/exam_simulator_readiness_audit.md\`). This script never writes to
-\`data/questions.json\`.
+(\`docs/exam_simulator_readiness_audit.md\`) and its 2026-08 metadata
+remediation follow-up (\`docs/decision_log.md\` #15). This script never
+writes to \`data/questions.json\`.
 
 ## Schema fields present on every question
 
 ${schemaFields.map((f) => `- \`${f}\``).join('\n')}
 
-No question currently carries item-style, delivery-approach, complexity,
-PMBOK-8, or topic-tag metadata as explicit fields. The category counts
-below are keyword-heuristic estimates over question/option/explanation
-text, not derived from real metadata, and are reported as such — they are
-NOT a substitute for explicit tagging.
+\`approach\`, \`item_style\`, and \`concept_ids\` are explicit, editorially
+classified per-question metadata (not keyword-derived) — see
+\`docs/content/question_metadata_classification_log.md\` for the
+classification rules and rationale. The five categories below them
+(stakeholder/leadership/risk/governance/business-environment) still have no
+canonical field and remain keyword-heuristic estimates, clearly labeled.
 
 ## ECO domain distribution (exact, from schema)
 
@@ -240,29 +261,68 @@ ${domainRows}
 |---|---:|
 ${taskRows}
 
-## Content-category signals (HEURISTIC — keyword matching, not certified topic tags)
+## Approach distribution (exact, from \`approach\`)
+
+| Approach | Questions | Share of bank |
+|---|---:|---:|
+${approachRows}
+
+## Item-style distribution (exact, from \`item_style\`)
+
+| Item style | Questions | Share of bank |
+|---|---:|---:|
+${itemStyleRows}
+
+## Concept coverage (exact, from \`concept_ids\`)
+
+- Concepts in the catalog: ${conceptLessons.length}
+- Questions tagged with more than one concept: ${analysis.multiConceptCount} (${pct(analysis.multiConceptCount, total)})
+- Concepts with ZERO questions: ${analysis.zeroQuestionConcepts.length}
+- Concepts with 1–2 questions (shallow): ${analysis.shallowConcepts.length}
+
+### Concepts with zero questions
+
+| Concept | Title |
+|---|---|
+${zeroConceptRows}
+
+### Concepts with 1–2 questions, fewest first
+
+| Concept | Title | Questions |
+|---|---|---:|
+${shallowConceptRows || '| None | — | — |'}
+
+## True AI coverage (exact, via concept_ids mapped to the AI module)
+
+AI module concepts (\`data/concept_lessons.json\`, module "AI in Project
+Management"): ${analysis.aiConceptIds.join(', ')}.
+
+- Questions tagged to an AI-module concept: ${analysis.aiQuestionIds.length} (${pct(analysis.aiQuestionIds.length, total)})
+- IDs: ${analysis.aiQuestionIds.join(', ') || 'none'}
+
+## True calculation coverage (exact, via item_style = "calculation")
+
+- Questions: ${analysis.calculationQuestionIds.length} (${pct(analysis.calculationQuestionIds.length, total)})
+- IDs: ${analysis.calculationQuestionIds.join(', ') || 'none'}
+
+## Remaining heuristic signals (keyword matching — no canonical field exists for these)
 
 | Category | Questions matched | Share of bank |
 |---|---:|---:|
-${categoryRows}
+${heuristicRowsMd}
 
-Categories are not mutually exclusive; a question can match zero or several
-patterns. A question matching zero calculation/agile/AI/etc. keywords is
-not necessarily uncategorizable — it may simply use different phrasing.
-Treat every count in this section as an estimate requiring editorial
-confirmation before it drives exam assembly.
+These five categories are cross-cutting content signals, not assembly
+dimensions — \`docs/exam_simulator_readiness_audit.md\` §1 judged that
+\`eco_task\` already isolates most of this content well enough for exam
+assembly, so no dedicated field was added. Treat every count in this
+section as an estimate.
 
-## Concept-lesson linkage coverage
+## Concept-lesson linkage coverage (legacy — superseded by \`concept_ids\` above)
 
-- Questions referenced by at least one \`concept_lessons.json\` entry
-  (\`related_question_ids\`): ${analysis.linkedQuestionCount} (${pct(analysis.linkedQuestionCount, total)})
-- Questions with no concept-lesson link: ${analysis.unlinkedQuestionCount} (${pct(analysis.unlinkedQuestionCount, total)})
-
-Linked questions inherit their lesson's \`pmbok8_domains\`, \`focus_areas\`,
-and \`approaches\` tags only by association (one lesson can link many
-questions, and the tag describes the lesson's topic, not a verified
-per-question judgment). Unlinked questions have no topic/approach signal
-beyond ECO domain/task and the heuristic keyword scan above.
+- Questions referenced by at least one \`concept_lessons.json\` entry via
+  \`related_question_ids\` (the old, lesson-authored linkage — retained for
+  comparison): ${analysis.linkedQuestionCount} (${pct(analysis.linkedQuestionCount, total)})
+- Questions with no such link: ${analysis.unlinkedQuestionCount} (${pct(analysis.unlinkedQuestionCount, total)})
 `
 }
 
@@ -281,7 +341,7 @@ function main() {
     'content',
     'exam_simulator_bank_analysis.md',
   )
-  fs.writeFileSync(reportPath, renderAnalysisReport(analysis))
+  fs.writeFileSync(reportPath, renderAnalysisReport(analysis, conceptLessons))
   console.log(`Analyzed ${analysis.total} questions.`)
   console.log(`Wrote ${path.relative(repositoryRoot, reportPath)}`)
 }
