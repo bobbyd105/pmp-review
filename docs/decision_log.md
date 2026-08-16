@@ -543,3 +543,85 @@ and this branch's PR description; `lengthBias.test.js` and
 **Approved by:** Audit agent (Claude) under this branch's task authority;
 subject to User review at draft-PR review — nothing merges to main without
 explicit User approval.
+
+---
+
+## Decision #15 — Exam Simulator question metadata: three explicit fields, editorial classification in reviewed batches, no keyword-only tagging
+
+**Date:** 2026-08
+
+**Decision:** Add three explicit per-question metadata fields to all 424
+questions — `approach` (predictive/adaptive/hybrid/universal), `item_style`
+(scenario_judgment/definition_distinction/calculation/interpretation/
+process_sequence), and `concept_ids` (1–2 ids from the existing 62
+concept-lesson namespace `c001`–`c062`) — completing the remediation slice
+PR #25's audit recommended. Classification was done by reading every
+question's full stem/options/explanation against a written rubric
+(`docs/content/question_metadata_classification_log.md`) in 10 batches of
+~42–43 questions, not by keyword/regex matching. `questions.data.test.js`
+and `contentValidator.js`/`ContentStudio.jsx` (which duplicates the schema
+contract for the ad-hoc authoring tool, per the existing convention noted
+in `docs/progress.md`'s Technical Debt section) were extended to require
+and validate all three fields. `scripts/analyze-question-bank.mjs` was
+rewritten to report exact counts for the three new fields and concept
+coverage, keeping only the cross-cutting categories that still lack a
+canonical field (stakeholder/leadership/risk/governance/business-
+environment) as clearly-labeled heuristics.
+
+**Alternatives considered:**
+1. Classify all 424 questions with a single regex/keyword script, the way
+   the original PR #25 heuristic analysis worked.
+2. Have one reviewer (this agent) read and tag all 424 questions serially
+   in one pass.
+3. Add a fourth `difficulty` field alongside the three requested ones,
+   since a metadata branch was already touching every question.
+4. Trust each lesson's `related_question_ids` link as authoritative for
+   `concept_ids` rather than re-verifying per question.
+
+**Why rejected:**
+1. The whole point of this branch was to stop relying on keyword
+   heuristics — PR #25's own analysis showed keyword matching
+   systematically overcounts (calculation: ~27 heuristic vs. 8 real,
+   because keyword matching can't distinguish "compute this value" from
+   "explain this already-given value") and undercounts nothing checkable
+   without reading the actual reasoning each item tests.
+2. 424 questions read individually by one reviewer in one sitting risks
+   fatigue-driven drift far more than 10 independent batches classified
+   against the same written rubric, each of which surfaced and reported
+   ambiguous patterns for cross-batch reconciliation (see the
+   classification log's "Reconciliation pass").
+3. No calibrated difficulty rubric or attempt-based evidence exists (this
+   was already rejected once in Decision #14 for the same reason); adding
+   an unfounded difficulty label now would still be worse than omitting
+   it, and the task's own scope named exactly three fields.
+4. `related_question_ids` was authored per-lesson, sometimes generously,
+   and predates this classification effort — treating it as ground truth
+   would have imported that generosity into `concept_ids` uncritically.
+   It was used as a candidate hint, verified against each concept's actual
+   title/objectives/key terms, per the classification rubric.
+
+**Tradeoffs:** classifying 424 questions across 10 independently-run
+batches risks some residual inconsistency the single reconciliation pass
+(§ "Reconciliation pass" in the classification log) may not have fully
+caught — the log documents the rules applied and the one systematic
+inconsistency found and fixed (12 "what does this indicate" items moved
+from `scenario_judgment` to `interpretation`), but it is not a formal
+inter-rater-reliability process. The real metadata also surfaced that the
+bank is shallower in several places than PR #25's heuristics suggested
+(true calculation pool: 8, not ~27; a newly-identified thin cluster around
+the delivery-approach foundational concepts) — this is better information,
+not a regression, but it changes the PR #25 recommendation from "small
+metadata remediation" to "targeted content top-up first" (see
+`docs/content/exam_simulator_metadata_remediation.md`).
+
+**Evidence:** 424/424 questions carry valid `approach`/`item_style`/
+non-empty, ID-resolving `concept_ids`; 0 invalid enum values; 0 unresolved
+concept ids; a full diff against the pre-branch bank confirms 0 changes to
+`question`/`options`/`correct_answer`/`explanation`/`eco_domain`/
+`eco_task` for all 424 records; `lengthBias.test.js` and
+`answerDistribution.test.js` hard gates re-verified passing and unchanged;
+full test suite and build results recorded in this branch's PR description.
+
+**Approved by:** Metadata-remediation agent (Claude) under this branch's
+task authority; subject to User review at draft-PR review — nothing merges
+to main without explicit User approval.

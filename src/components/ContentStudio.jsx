@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import questions from '../../data/questions.json'
 import lessons from '../../data/lessons.json'
+import conceptLessons from '../../data/concept_lessons.json'
 import {
   parseEntry,
   validateNewQuestion,
@@ -14,13 +15,16 @@ const CONTENT_TYPES = {
   question: {
     label: 'Question',
     file: 'data/questions.json',
-    validate: (entry) => validateNewQuestion(entry, { questions, lessons }),
+    validate: (entry) => validateNewQuestion(entry, { questions, lessons, conceptLessons }),
     fieldOrder: QUESTION_FIELDS,
     placeholder: `Paste one question as a JSON object, e.g.
 {
   "id": "q013",
   "eco_domain": "People",
   "eco_task": "Task 1: Manage conflict",
+  "approach": "universal",
+  "item_style": "scenario_judgment",
+  "concept_ids": ["c010"],
   "question": "...",
   "options": ["...", "...", "...", "..."],
   "correct_answer": "...",

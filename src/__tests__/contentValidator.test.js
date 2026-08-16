@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import questions from '../../data/questions.json'
 import lessons from '../../data/lessons.json'
+import conceptLessons from '../../data/concept_lessons.json'
 import {
   parseEntry,
   validateNewQuestion,
@@ -9,12 +10,15 @@ import {
   QUESTION_FIELDS,
 } from '../studio/contentValidator.js'
 
-const bank = { questions, lessons }
+const bank = { questions, lessons, conceptLessons }
 
 const validQuestion = {
   id: 'q900',
   eco_domain: 'People',
   eco_task: 'Task 1: Manage conflict',
+  approach: 'universal',
+  item_style: 'scenario_judgment',
+  concept_ids: ['c010'],
   question: 'A stakeholder disagrees with the team about acceptance criteria. What first?',
   options: ['Escalate to the sponsor', 'Facilitate a working session', 'Update the register'],
   correct_answer: 'Facilitate a working session',
@@ -142,6 +146,46 @@ describe('validateNewQuestion', () => {
       errors.some((e) => e.includes('does not exactly match any entry in options')),
     ).toBe(true)
   })
+
+  it('rejects an unknown approach, naming the valid ones', () => {
+    const errors = validateNewQuestion({ ...validQuestion, approach: 'agile' }, bank)
+    expect(
+      errors.some(
+        (e) => e.includes('approach "agile"') && e.includes('predictive, adaptive, hybrid, universal'),
+      ),
+    ).toBe(true)
+  })
+
+  it('rejects an unknown item_style, naming the valid ones', () => {
+    const errors = validateNewQuestion({ ...validQuestion, item_style: 'memorization' }, bank)
+    expect(errors.some((e) => e.includes('item_style "memorization"'))).toBe(true)
+  })
+
+  it('rejects an empty concept_ids array', () => {
+    const errors = validateNewQuestion({ ...validQuestion, concept_ids: [] }, bank)
+    expect(errors).toContain(
+      'Field "concept_ids" must be a non-empty array of concept lesson ids.',
+    )
+  })
+
+  it('rejects a concept_ids entry that does not resolve to a real concept lesson', () => {
+    const errors = validateNewQuestion({ ...validQuestion, concept_ids: ['c999'] }, bank)
+    expect(errors).toContain(
+      'concept_ids references "c999", which does not exist in data/concept_lessons.json.',
+    )
+  })
+
+  it('rejects a stale planning-namespace concept id', () => {
+    const errors = validateNewQuestion({ ...validQuestion, concept_ids: ['PL-C001'] }, bank)
+    expect(errors).toContain(
+      'concept_ids references "PL-C001", which does not exist in data/concept_lessons.json.',
+    )
+  })
+
+  it('rejects duplicate concept_ids', () => {
+    const errors = validateNewQuestion({ ...validQuestion, concept_ids: ['c010', 'c010'] }, bank)
+    expect(errors).toContain('concept_ids contains a duplicate entry: "c010".')
+  })
 })
 
 describe('validateNewLesson', () => {
@@ -231,7 +275,10 @@ describe('toSnippet', () => {
       id: validQuestion.id,
       correct_answer: validQuestion.correct_answer,
       question: validQuestion.question,
+      concept_ids: validQuestion.concept_ids,
+      item_style: validQuestion.item_style,
       eco_task: validQuestion.eco_task,
+      approach: validQuestion.approach,
       eco_domain: validQuestion.eco_domain,
     }
     const snippet = toSnippet(shuffled, QUESTION_FIELDS)

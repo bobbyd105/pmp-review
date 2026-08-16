@@ -6,10 +6,24 @@
 
 export const ECO_DOMAINS = ['People', 'Process', 'Business Environment']
 
+// Exam Simulator metadata enums (docs/decision_log.md #15) — mirrors
+// src/__tests__/questions.data.test.js exactly; both must move together.
+export const APPROACHES = ['predictive', 'adaptive', 'hybrid', 'universal']
+export const ITEM_STYLES = [
+  'scenario_judgment',
+  'definition_distinction',
+  'calculation',
+  'interpretation',
+  'process_sequence',
+]
+
 export const QUESTION_FIELDS = [
   'id',
   'eco_domain',
   'eco_task',
+  'approach',
+  'item_style',
+  'concept_ids',
   'question',
   'options',
   'correct_answer',
@@ -93,7 +107,7 @@ function checkIdUnique(id, questions, lessons, errors) {
 // cross-file id uniqueness (lessons.data.test.js forbids lesson/question id
 // collisions, so a new question id must avoid lesson ids too).
 // Returns an array of specific error messages; empty means valid.
-export function validateNewQuestion(entry, { questions, lessons }) {
+export function validateNewQuestion(entry, { questions, lessons, conceptLessons = [] }) {
   const errors = []
   checkFields(entry, QUESTION_FIELDS, QUESTION_FIELDS, errors)
   for (const field of ['id', 'eco_domain', 'eco_task', 'question', 'correct_answer', 'explanation']) {
@@ -101,6 +115,36 @@ export function validateNewQuestion(entry, { questions, lessons }) {
   }
   checkDomain(entry, errors)
   checkIdUnique(entry.id, questions, lessons, errors)
+
+  if (isNonEmptyString(entry.approach) && !APPROACHES.includes(entry.approach)) {
+    errors.push(`approach "${entry.approach}" is not one of: ${APPROACHES.join(', ')}.`)
+  }
+  if (isNonEmptyString(entry.item_style) && !ITEM_STYLES.includes(entry.item_style)) {
+    errors.push(`item_style "${entry.item_style}" is not one of: ${ITEM_STYLES.join(', ')}.`)
+  }
+  if ('concept_ids' in entry) {
+    if (!Array.isArray(entry.concept_ids) || entry.concept_ids.length === 0) {
+      errors.push('Field "concept_ids" must be a non-empty array of concept lesson ids.')
+    } else {
+      const validIds = new Set(conceptLessons.map((c) => c.id))
+      const seen = new Set()
+      for (const id of entry.concept_ids) {
+        if (!isNonEmptyString(id)) {
+          errors.push('Every entry in "concept_ids" must be a non-empty string.')
+          continue
+        }
+        if (validIds.size > 0 && !validIds.has(id)) {
+          errors.push(
+            `concept_ids references "${id}", which does not exist in data/concept_lessons.json.`,
+          )
+        }
+        if (seen.has(id)) {
+          errors.push(`concept_ids contains a duplicate entry: "${id}".`)
+        }
+        seen.add(id)
+      }
+    }
+  }
 
   if ('options' in entry) {
     if (!Array.isArray(entry.options)) {

@@ -13,6 +13,18 @@ smallest documentation correction needed to reflect that PR #24 is merged.
 No new questions were generated. The answer-position and answer-length
 protections were re-verified and are unchanged.
 
+> **2026-08 update:** the metadata remediation this report recommended
+> (§1, "READY WITH SMALL METADATA REMEDIATION") is now done — see
+> `docs/content/exam_simulator_metadata_remediation.md` and
+> `docs/decision_log.md` #15. All 424 questions now carry explicit
+> `approach`/`item_style`/`concept_ids` fields. The heuristic composition
+> counts in §2–§3 below and in `docs/content/exam_simulator_bank_analysis.md`
+> have been **superseded by exact counts** in that follow-up document —
+> read this report for the metadata-schema analysis (§1), the sampled
+> quality review (§5), and the assembly blueprint (§4, still accurate in
+> shape), but treat §2–§3's specific numbers as historical. The revised
+> recommendation is **READY — TARGETED CONTENT TOP-UP FIRST**.
+
 ---
 
 ## How to read this report
@@ -508,3 +520,8 @@ mock exam is metadata, not volume:
 None of this requires touching existing question wording, and none of it
 weakens the answer-position or answer-length protections, which remain
 exactly as they were at the PR #24 merge.
+
+> **Status (2026-08):** steps 1–2 of this remediation slice are complete —
+> see `docs/content/exam_simulator_metadata_remediation.md` for the
+> resulting exact counts and the revised recommendation, **READY —
+> TARGETED CONTENT TOP-UP FIRST**, which supersedes this section's verdict.

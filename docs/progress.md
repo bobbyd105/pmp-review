@@ -86,6 +86,32 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Exam Simulator question metadata remediation (2026-08,
+  `content/exam-simulator-question-metadata`): implemented PR #25's
+  recommended remediation slice. Added `approach`, `item_style`, and
+  `concept_ids` to all 424 questions in `data/questions.json`, classified
+  by reading each question's full stem/options/explanation in 10 reviewed
+  batches against a shared written rubric
+  (`docs/content/question_metadata_classification_log.md`) — not by
+  keyword matching. Extended `questions.data.test.js` with required-field
+  and enum/referential-integrity checks for the three new fields, and kept
+  `src/studio/contentValidator.js` (Content Studio's duplicate schema
+  contract) in sync so ad-hoc question submission still validates
+  correctly. Rewrote `scripts/analyze-question-bank.mjs` to report exact
+  counts from the new fields (replacing the prior keyword-heuristic
+  scenario/calculation/predictive/agile/hybrid/AI categories), keeping
+  heuristics only for the cross-cutting categories that still lack a
+  canonical field. A targeted reconciliation pass fixed one cross-batch
+  inconsistency (12 "what does this indicate" items moved from
+  `scenario_judgment` to `interpretation` for consistency). Full findings
+  and the revised recommendation (READY — TARGETED CONTENT TOP-UP FIRST)
+  are in `docs/content/exam_simulator_metadata_remediation.md`; see
+  `docs/decision_log.md` #15. Verified: 424/424 questions have all three
+  fields with 0 invalid enum values and 0 unresolved/empty `concept_ids`;
+  a full diff against the pre-branch bank confirms 0 changes to any
+  question's wording, options, correct answer, or explanation; the
+  answer-position and answer-length hard gates re-verified unchanged. No
+  simulator code was implemented and no new questions were generated.
 - Exam Simulator Readiness Audit (2026-08-16, `claude/exam-simulator-readiness-audit-6xg18g`):
   bounded audit of whether the merged PR #24 baseline (424 questions, 62
   lessons) can support a realistic 180-question mock exam. Added
@@ -649,21 +675,37 @@ earlier merged states and is retained unchanged.
 
 **Next milestone: Exam Simulator readiness/design.** The Exam Simulator
 Readiness Audit (`docs/exam_simulator_readiness_audit.md`, 2026-08-16,
-branch `claude/exam-simulator-readiness-audit-6xg18g`) evaluated whether the
-424-question bank and its metadata can support a realistic 180-question
-mock exam. It found a single domain-weighted 180-question exam is buildable
-today from the existing `eco_domain`/`eco_task` fields, but repeated mocks
-with balanced predictive/adaptive/hybrid exposure need three new narrow
-per-question metadata fields (`approach`, `item_style`, `concept_ids`)
-before assembly can honestly enforce them, and identified two shallow
-content pools (AI-related: 4 questions; calculation/formula: ~27
-heuristic) that would repeat visibly under repeated use. Verdict: **READY
-WITH SMALL METADATA REMEDIATION** — see the audit for the full blueprint,
-composition analysis (`docs/content/exam_simulator_bank_analysis.md`,
-reproducible via `npm run questions:analyze-bank`), and remediation slice.
-**This audit did not implement the simulator, add metadata, or generate new
-questions** — it is audit and design only, deliberately bounded per its
-own scope. The answer-position and answer-length hard gates were
+branch `claude/exam-simulator-readiness-audit-6xg18g`, merged via PR #25)
+evaluated whether the 424-question bank and its metadata can support a
+realistic 180-question mock exam and recommended a small metadata
+remediation before building it.
+
+**That remediation is now done** (2026-08, branch
+`content/exam-simulator-question-metadata`): all 424 questions carry
+explicit, editorially classified `approach`, `item_style`, and
+`concept_ids` fields (added in 10 reviewed batches against a written
+rubric, not keyword-tagged — see
+`docs/content/question_metadata_classification_log.md`). The resulting
+exact counts revise the original audit's heuristic estimates: real
+`approach` is 318 universal / 72 predictive / 32 adaptive / 2 hybrid; real
+`item_style` is 367 scenario_judgment / 23 interpretation / 22
+definition_distinction / 8 calculation / 4 process_sequence. True AI
+coverage (via `concept_ids`, not keywords) is 4 questions — matching the
+original heuristic exactly. True calculation coverage is only 8 questions
+(not the ~27 the keyword scan estimated — most EVM-flavored items turned
+out to be `interpretation` of an already-given metric, not real
+arithmetic). A newly-identified thin cluster is the delivery-approach
+foundational concepts (`c023`–`c026`, plus `c057`/`c058`), which explains
+the 2-question hybrid-approach shallowness. Full findings, the
+revised assembly-engine recommendations (hard vs. soft constraints), the
+suspicious-question review (no high-severity issues found across all 424),
+and the revised verdict are in
+`docs/content/exam_simulator_metadata_remediation.md`. **Verdict revised
+to READY — TARGETED CONTENT TOP-UP FIRST** (from PR #25's READY WITH SMALL
+METADATA REMEDIATION, now that the remediation itself is complete). The
+simulator itself is still not implemented — this branch is metadata and
+tooling only, no question wording changed, no new questions were
+generated, and the answer-position/answer-length hard gates were
 re-verified unchanged.
 
 Knowledge-layer Phases 0-13 and their curriculum architecture baseline are
@@ -694,28 +736,32 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-The completion mission is done and PR #24 is merged. The next milestone is
-**Exam Simulator readiness/design**, per the 2026-08-16 audit
-(`docs/exam_simulator_readiness_audit.md`): implement the smallest viable
-remediation slice before building the simulator —
-(1) add three narrow per-question metadata fields (`approach`, `item_style`,
-`concept_ids`) by batch-tagging the existing 424 questions (no wording
-changes), extending `questions.data.test.js` with matching schema/enum
-checks; (2) build the 180-question assembly algorithm against
-`eco_domain`/`eco_task` (already sufficient) per the audit's blueprint,
-wiring in `approach`/`item_style` balancing once (1) lands; (3) as a
-separate, later content batch (not part of the metadata slice), a small
-targeted top-up of the two shallow categories the audit identified
-(AI-related: 4 → ~15-20 questions; calculation/formula: ~27 → ~45-55
-questions). Other previously-identified follow-ups, in learner-impact
-order: (4) reviewed difficulty/cognitive-level metadata to enable
-diagnostics (the audit found no calibrated basis for this yet — needs
-attempt-based evidence first), (5) a decision on whether to build a
-Reference-sheet UI for `reference_sheet_catalog.json` (currently
-unbuilt/planned — see decision_log.md #13) or drop it, (6) a genuine bank
-question for c011 (holistic/systems thinking) so every concept lesson
-carries links, and (7) course content for the two glossary terms with no
-lesson coverage yet (RACI chart, risk appetite — see decision_log.md #13).
+The completion mission is done (PR #24 merged) and the Exam Simulator
+metadata remediation is done (PR #25's audit, then the 2026-08 metadata
+branch — see `docs/content/exam_simulator_metadata_remediation.md`). The
+next milestone is still **Exam Simulator readiness/design**, now at its
+"targeted content top-up first" decision point:
+(1) build the 180-question assembly algorithm against `eco_domain`/
+`eco_task` (hard constraint, already sufficient) with `approach`/
+`item_style`/concept soft targets, per the metadata-remediation report's
+§7 recommendations — this does not need to wait for new content; (2) in
+parallel or shortly after, run one bounded, targeted content batch sized
+against the real gaps the new metadata surfaced: roughly +6 to +10 AI
+questions across all 4 AI concepts (`c059`–`c062`, currently 4 questions
+total), roughly +28 calculation questions sized to bring each of the 18
+taught formulas to at least 2 items (currently only 8 real calculation
+questions, concentrated in ~7 of the 18 formulas), and a small batch (on
+the order of a dozen questions) for the delivery-approach foundational
+cluster (`c023`–`c026`, `c057`, `c058`, `c034`) which the new data showed
+is thinner than expected. Other previously-identified follow-ups, in
+learner-impact order: (3) reviewed difficulty/cognitive-level metadata to
+enable diagnostics (still no calibrated basis — needs attempt-based
+evidence first), (4) a decision on whether to build a Reference-sheet UI
+for `reference_sheet_catalog.json` (currently unbuilt/planned — see
+decision_log.md #13) or drop it, (5) course content for the two glossary
+terms with no lesson coverage yet (RACI chart, risk appetite — see
+decision_log.md #13; note `data/concept_lessons.json` also has no
+dedicated RACI concept, surfaced during this branch's classification).
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using

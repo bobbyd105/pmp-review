@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>PMP Study Platform — App Map</h1>
-<p>Last updated: 2026-08-16 (Exam Simulator Readiness Audit — PR #24 is merged into <code>main</code>, the completion mission is complete, and the next milestone is Exam Simulator readiness/design; see <code>docs/exam_simulator_readiness_audit.md</code>. This audit added analysis tooling only — no simulator UI, no new metadata fields, no new questions).
+<p>Last updated: 2026-08 (Exam Simulator question metadata remediation — PR #24 and PR #25 are merged into <code>main</code>; the metadata slice PR #25 recommended is now done, so every question in <code>data/questions.json</code> carries explicit <code>approach</code>/<code>item_style</code>/<code>concept_ids</code>. See <code>docs/content/exam_simulator_metadata_remediation.md</code> for the resulting exact counts and revised verdict. This branch added metadata and analysis tooling only — still no simulator UI, no new questions).
 Updated after each vertical slice per docs/project_constitution.md Sections 4–5.</p>
 
 <h2>Application shell</h2>
@@ -194,7 +194,7 @@ Updated after each vertical slice per docs/project_constitution.md Sections 4–
   </tr>
   <tr>
     <td><code>scripts/analyze-question-bank.mjs</code></td>
-    <td>Read-only Exam Simulator Readiness Audit tooling (2026-08-16): exact ECO domain/task counts, keyword-heuristic content-category counts (clearly labeled as estimates, not certified tags), and concept-lesson linkage coverage. Never writes to <code>data/questions.json</code>.</td>
+    <td>Read-only Exam Simulator analysis tooling, rewritten 2026-08 once explicit per-question metadata existed: exact ECO domain/task/<code>approach</code>/<code>item_style</code> counts, exact concept coverage (via <code>concept_ids</code>), exact AI/calculation coverage, plus a handful of remaining keyword-heuristic cross-cutting signals (stakeholder/leadership/risk/governance/business-environment) clearly labeled as estimates. Never writes to <code>data/questions.json</code>.</td>
     <td><code>npm run questions:analyze-bank</code>; <code>questionBankAnalysis.test.js</code></td>
   </tr>
 </table>
@@ -210,9 +210,9 @@ active toolchain.</p>
   <tr><th>File</th><th>Purpose</th><th>Schema</th><th>Consumed by</th></tr>
   <tr>
     <td><code>data/questions.json</code></td>
-    <td>Question bank data: 424 original PMP-style questions across all 3 ECO domains (People 138, Process 176, Business Environment 110). Phases 1–12 built ECO breadth and depth through <code>q384</code>; the 2026-07 named-concept gap batches added <code>q385–q424</code> (PMBOK 8 structure, EVM calculations, PERT, EMV, NPV/payback, stakeholder models, RACI, Scrum, Kanban/flow, INVEST, velocity, MVP/MMF, responsible AI). Option order is generated reproducibly with seed <code>pmp-options-v1</code>; all four correct-answer positions contain 106 questions. Answer-length cues were editorially remediated in 2026-07 (18.4% strictly-longest correct, zero over the 1.3 length ratio) and are protected by hard gates (decision_log.md #12). Local JSON per constitution Section 3 — no database, no API.</td>
-    <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
-    <td><code>QuestionBank</code>, <code>Quiz</code>; test files</td>
+    <td>Question bank data: 424 original PMP-style questions across all 3 ECO domains (People 138, Process 176, Business Environment 110). Phases 1–12 built ECO breadth and depth through <code>q384</code>; the 2026-07 named-concept gap batches added <code>q385–q424</code> (PMBOK 8 structure, EVM calculations, PERT, EMV, NPV/payback, stakeholder models, RACI, Scrum, Kanban/flow, INVEST, velocity, MVP/MMF, responsible AI). Option order is generated reproducibly with seed <code>pmp-options-v1</code>; all four correct-answer positions contain 106 questions. Answer-length cues were editorially remediated in 2026-07 (18.4% strictly-longest correct, zero over the 1.3 length ratio) and are protected by hard gates (decision_log.md #12). 2026-08 (decision_log.md #15): every question also carries explicit Exam Simulator metadata — <code>approach</code>, <code>item_style</code>, <code>concept_ids</code> — editorially classified in 10 reviewed batches (<code>docs/content/question_metadata_classification_log.md</code>), not keyword-tagged. Local JSON per constitution Section 3 — no database, no API.</td>
+    <td>Array of objects: <code>id</code>, <code>eco_domain</code>, <code>eco_task</code>, <code>approach</code> (predictive/adaptive/hybrid/universal), <code>item_style</code> (scenario_judgment/definition_distinction/calculation/interpretation/process_sequence), <code>concept_ids[]</code> (1–2 ids resolving into <code>data/concept_lessons.json</code>), <code>question</code>, <code>options[]</code>, <code>correct_answer</code> (exact string match to one entry in <code>options</code>), <code>explanation</code></td>
+    <td><code>QuestionBank</code>, <code>Quiz</code>, <code>ContentStudio</code>; test files</td>
   </tr>
   <tr>
     <td><code>localStorage</code> key <code>pmp-quiz-session-v1</code></td>
@@ -293,7 +293,7 @@ active toolchain.</p>
   <tr><th>File</th><th>Covers</th></tr>
   <tr>
     <td><code>src/__tests__/questions.data.test.js</code></td>
-    <td>Data contract for <code>data/questions.json</code>: ≥10 questions, ≥3 ECO domains, valid domain names, all required fields present, unique ids, ≥2 unique options each, correct_answer present in options</td>
+    <td>Data contract for <code>data/questions.json</code>: ≥10 questions, ≥3 ECO domains, valid domain names, all required fields present, unique ids, ≥2 unique options each, correct_answer present in options, valid <code>approach</code>/<code>item_style</code> enums, and non-empty/unique/id-resolving <code>concept_ids</code> against <code>data/concept_lessons.json</code></td>
   </tr>
   <tr>
     <td><code>src/__tests__/answerDistribution.test.js</code></td>
@@ -382,8 +382,10 @@ active toolchain.</p>
   <li><code>docs/content/curriculum_model.md</code> — canonical course/ECO-review/reference/assessment architecture</li>
   <li><code>docs/content/coverage_matrix.md</code> — concept-level strengths, gaps, mappings, and priorities</li>
   <li><code>docs/content/length_bias_report.md</code> — generated answer-length measurements and worst-first editorial remediation list</li>
-  <li><code>docs/exam_simulator_readiness_audit.md</code> — Exam Simulator Readiness Audit (2026-08-16): metadata-schema gap analysis, bank composition, viability findings, assembly-algorithm blueprint (not implemented), sampled quality review, and test-guardrail proposals</li>
-  <li><code>docs/content/exam_simulator_bank_analysis.md</code> — generated exact ECO domain/task counts plus heuristic content-category counts, supporting the audit above</li>
+  <li><code>docs/exam_simulator_readiness_audit.md</code> — Exam Simulator Readiness Audit (2026-08-16): metadata-schema gap analysis, assembly-algorithm blueprint (not implemented), sampled quality review, and test-guardrail proposals. Its §2–§3 composition numbers are superseded by the exact-metadata follow-up below (see the update note at the top of that file)</li>
+  <li><code>docs/content/exam_simulator_metadata_remediation.md</code> — 2026-08 follow-up: exact <code>approach</code>/<code>item_style</code>/concept-coverage counts from real per-question metadata (not heuristics), true AI/calculation coverage, suspicious-question review table, revised assembly recommendations (hard vs. soft constraints), and the revised verdict (READY — TARGETED CONTENT TOP-UP FIRST)</li>
+  <li><code>docs/content/question_metadata_classification_log.md</code> — the classification rubric, resolved ambiguous-pattern rules, known concept-catalog gaps, and the one cross-batch reconciliation performed while tagging all 424 questions</li>
+  <li><code>docs/content/exam_simulator_bank_analysis.md</code> — generated exact ECO domain/task/approach/item-style/concept counts (rewritten 2026-08 to use real metadata instead of keyword heuristics)</li>
   <li><code>docs/content/curriculum_audit_report.md</code> — final audit findings and roadmap</li>
   <li><code>docs/content/knowledge_layer_report.md</code> — final knowledge-layer outcomes, risks, and implementation order</li>
   <li><code>docs/content/knowledge_graph.md</code> — graph semantics, dependencies, traversal, and governance</li>
@@ -399,15 +401,18 @@ active toolchain.</p>
 <h2>Not built yet</h2>
 <p>The 180-question Exam Simulator itself — timer UI, exam session state,
 breaks, section sequencing, scoring history — is designed but not
-implemented; see <code>docs/exam_simulator_readiness_audit.md</code> for the
-assembly-algorithm blueprint and the small metadata remediation
+implemented. The metadata remediation the readiness audit recommended
 (<code>approach</code>, <code>item_style</code>, <code>concept_ids</code>
-fields) recommended before building it. Also not built: reviewed production
-objective mappings, stable question option IDs, calibrated difficulty,
-diagnostics, adaptive recommendation algorithms, spaced repetition, history
-management (clearing/exporting quiz history), and richer lesson rendering.
-No routing, state library, backend, or AI API integration (constitution
-Section 2).</p>
+fields) is now done; see <code>docs/content/exam_simulator_metadata_remediation.md</code>
+for the resulting assembly recommendations (hard vs. soft constraints) and
+the revised verdict — READY, but with a targeted content top-up
+recommended first in the two shallowest categories (AI, calculation) and a
+newly-identified thin cluster (delivery-approach foundational concepts).
+Also not built: reviewed production objective mappings, stable question
+option IDs, calibrated difficulty, diagnostics, adaptive recommendation
+algorithms, spaced repetition, history management (clearing/exporting quiz
+history), and richer lesson rendering. No routing, state library, backend,
+or AI API integration (constitution Section 2).</p>
 <p>The knowledge/objective/glossary/formula/reference planning catalogs remain
 validated planning inputs. All 62 Comprehensive Course concept lessons are now
 authored and rendered by the Course view with knowledge checks and curated
