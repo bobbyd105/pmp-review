@@ -1,24 +1,18 @@
 # Knowledge Layer & Content Production Framework — Next Actions
 
-## Current milestone (2026-08): Exam Simulator readiness/design
+## Current milestone (2026-08): Exam Simulator assembly-engine design
 
 PR #24 (completion mission) and PR #25 (Exam Simulator Readiness Audit)
 are both merged into `main`. The audit's recommended metadata remediation
 is now also done (2026-08, `content/exam-simulator-question-metadata`):
-all 424 questions carry explicit `approach`/`item_style`/`concept_ids`
-fields, classified in 10 reviewed batches, not by keyword matching. See
-`docs/content/exam_simulator_metadata_remediation.md` for the resulting
-exact counts, the suspicious-question review, and the revised verdict
-(**READY — TARGETED CONTENT TOP-UP FIRST**, superseding PR #25's READY
-WITH SMALL METADATA REMEDIATION now that the remediation is complete).
-`docs/progress.md`'s "Next Recommended Task" has the prioritized follow-up
-sequence: (1) build the 180-question assembly algorithm against the now-
-complete metadata, (2) a separate, later bounded content batch targeting
-the specific gaps the real metadata surfaced (AI, calculation, and the
-delivery-approach foundational concepts — sized in the remediation report,
-not round numbers). This branch implemented no simulator code and
-generated no new questions — metadata and tooling only. The sections below
-are the earlier knowledge-layer
+all baseline questions carry explicit `approach`/`item_style`/`concept_ids`
+fields, classified in reviewed batches rather than by keyword matching. The
+subsequent targeted content top-up is now implemented: 23 questions raise the
+live bank to 447 with 20 calculations, 6 hybrid items, and 8 AI-module items.
+See `docs/content/exam_simulator_targeted_top_up_review.md` for the sizing
+evidence and per-question table. `docs/progress.md`'s next recommended task is
+the pure 180-question assembly algorithm; the UI remains a later slice. The
+sections below are the earlier knowledge-layer
 framework's next actions, retained for history.
 
 ## Review order

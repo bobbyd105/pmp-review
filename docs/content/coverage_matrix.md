@@ -44,6 +44,19 @@ retained as the planning-time record; per Decision #11's conversational-
 approval model, the mission draft PR is the User's approval gate before any
 unit is marked Approved/Implemented in `data/content_coverage.json`.
 
+## 2026-08 Exam Simulator assessment update
+
+The targeted top-up adds 23 questions (`q425`-`q447`) based on explicit
+`concept_ids` and item-style evidence. It closes the exam-critical zero pools
+for product/project scope (`c034`), servant leadership (`c057`), hybrid
+integration (`c058`), AI foundations (`c059`), and AI life-cycle use cases
+(`c062`); each now has at least two direct questions. Hybrid approach depth is
+6, AI-module depth is 8, and true calculation depth is 20, with all 18 taught
+formula-catalog entries now exercised by at least one arithmetic item. The
+planning-time unit matrix below remains unchanged; the direct simulator-gap
+classification and accepted low-frequency exceptions are in
+`docs/content/exam_simulator_targeted_top_up_review.md`.
+
 ## Portfolio summary
 
 | Metric | Result |

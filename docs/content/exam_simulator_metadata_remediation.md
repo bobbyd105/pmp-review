@@ -1,5 +1,15 @@
 # Exam Simulator Metadata Remediation — 2026-08 Follow-Up
 
+> **Post-top-up status:** This document records the 424-question PR #26
+> baseline and the gaps it exposed. The subsequent
+> `content/exam-simulator-targeted-top-up` slice implemented a smaller,
+> evidence-sized 23-question batch than the rough proposal in §8. The live
+> bank now has 447 questions, including 20 calculations, 6 hybrid items, and
+> 8 AI-module items. See
+> `docs/content/exam_simulator_targeted_top_up_review.md` for the superseding
+> sizing rationale and final counts. Historical baseline counts below remain
+> intentionally unchanged.
+
 **Branch:** `content/exam-simulator-question-metadata`
 **Supersedes (for the sections below):** the heuristic composition estimates
 in `docs/exam_simulator_readiness_audit.md` §2–§3 and its
