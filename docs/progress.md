@@ -86,6 +86,27 @@ should use this infrastructure for real bounded project batches rather than
 expanding the orchestration system without a demonstrated need.
 
 ## Completed Work
+- Exam Simulator Readiness Audit (2026-08-16, `claude/exam-simulator-readiness-audit-6xg18g`):
+  bounded audit of whether the merged PR #24 baseline (424 questions, 62
+  lessons) can support a realistic 180-question mock exam. Added
+  `scripts/analyze-question-bank.mjs` (exact ECO domain/task counts plus
+  clearly-labeled heuristic content-category counts, reproducible via
+  `npm run questions:analyze-bank`) and its generated report
+  `docs/content/exam_simulator_bank_analysis.md`, validated by
+  `src/__tests__/questionBankAnalysis.test.js`. Found the question schema
+  has only 7 fields (no item-style, approach, or topic metadata); a single
+  domain-weighted 180-question exam is buildable today from
+  `eco_domain`/`eco_task` alone, but the bank supports only 2 fully
+  non-overlapping exams before forced repetition, and two content pools
+  (AI-related: 4 questions; calculation/formula: ~27 heuristic) are too
+  shallow for repeated weighted exposure. Reviewed a stratified 37-question
+  sample (8.7%) for authenticity/quality (no issues found) and the existing
+  test suite for simulator-relevant guardrails. Verdict: READY WITH SMALL
+  METADATA REMEDIATION. Full findings, the exam-assembly blueprint (not
+  implemented), and the proposed minimum test additions (not implemented)
+  are in `docs/exam_simulator_readiness_audit.md`. No question wording
+  changed, no new questions were generated, and the answer-position/
+  answer-length hard gates were re-verified unchanged.
 - Named-concept gap questions q385-q424 (2026-07-16/17, this branch): 40
   original questions targeting concepts the audits found at zero named
   coverage — PMBOK 8 structure/tailoring, phase gates and sunk cost,
@@ -615,17 +636,35 @@ data-contract tests (shape only) and still need the User's manual
 accuracy spot-check against the current ECO before merge.
 
 ## Current Status
-The completion mission branch (`feature/pmp-completion-mission`) is the
-current state: 424-question bank with hard answer-cue gates, the complete
-62-lesson Comprehensive Course rendered by the Course view (with persistent
-completion/knowledge-check progress and answerable, bank-linked practice
-questions), the Reference view over the expanded formula/glossary catalogs
-(now bidirectionally cross-referenced with the Course), the ECO Review
-track with regenerated links, a minimal CI workflow gating PRs, and the
-batch-orchestrator infrastructure archived. Its draft PR against main
-awaits User review, which is the approval gate for all mission content.
-See decision_log.md #13 for the PR #24 review remediation. The historical
-record below describes earlier merged states and is retained unchanged.
+**PR #24 is merged into `main`; the completion mission is COMPLETE.** `main`
+is the current baseline: 424-question bank with hard answer-cue gates, the
+complete 62-lesson Comprehensive Course rendered by the Course view (with
+persistent completion/knowledge-check progress and answerable, bank-linked
+practice questions), the Reference view over the expanded formula/glossary
+catalogs (now bidirectionally cross-referenced with the Course), the ECO
+Review track with regenerated links, a minimal CI workflow gating PRs, and
+the batch-orchestrator infrastructure archived. See decision_log.md #13 for
+the PR #24 review remediation. The historical record below describes
+earlier merged states and is retained unchanged.
+
+**Next milestone: Exam Simulator readiness/design.** The Exam Simulator
+Readiness Audit (`docs/exam_simulator_readiness_audit.md`, 2026-08-16,
+branch `claude/exam-simulator-readiness-audit-6xg18g`) evaluated whether the
+424-question bank and its metadata can support a realistic 180-question
+mock exam. It found a single domain-weighted 180-question exam is buildable
+today from the existing `eco_domain`/`eco_task` fields, but repeated mocks
+with balanced predictive/adaptive/hybrid exposure need three new narrow
+per-question metadata fields (`approach`, `item_style`, `concept_ids`)
+before assembly can honestly enforce them, and identified two shallow
+content pools (AI-related: 4 questions; calculation/formula: ~27
+heuristic) that would repeat visibly under repeated use. Verdict: **READY
+WITH SMALL METADATA REMEDIATION** — see the audit for the full blueprint,
+composition analysis (`docs/content/exam_simulator_bank_analysis.md`,
+reproducible via `npm run questions:analyze-bank`), and remediation slice.
+**This audit did not implement the simulator, add metadata, or generate new
+questions** — it is audit and design only, deliberately bounded per its
+own scope. The answer-position and answer-length hard gates were
+re-verified unchanged.
 
 Knowledge-layer Phases 0-13 and their curriculum architecture baseline are
 merged on main via PR #21. The answer-bias/Foundation closeout is merged via
@@ -655,20 +694,28 @@ contains 384 questions and
 from exact domain/task matching.
 
 ## Next Recommended Task
-All mission milestones are complete: bank remediation with hard gates, the
-Course view, all 62 concept lessons, the reference layer, and the
-named-concept gap questions. Per-lesson glossary/formula ID links (item 3
-below, formerly a follow-up) are now done — see decision_log.md #13. The
-immediate next step is User review of the draft PR. After merge, the
-highest-value follow-ups in learner-impact order: (1) a domain/task-filtered
-and timed quiz mode (blueprint-weighted assembly toward exam simulation),
-(2) reviewed difficulty/cognitive-level metadata to enable diagnostics,
-(3) a decision on whether to build a Reference-sheet UI for
-`reference_sheet_catalog.json` (currently unbuilt/planned — see
-decision_log.md #13) or drop it, (4) a genuine bank question for c011
-(holistic/systems thinking) so every concept lesson carries links, and
-(5) course content for the two glossary terms with no lesson coverage yet
-(RACI chart, risk appetite — see decision_log.md #13).
+The completion mission is done and PR #24 is merged. The next milestone is
+**Exam Simulator readiness/design**, per the 2026-08-16 audit
+(`docs/exam_simulator_readiness_audit.md`): implement the smallest viable
+remediation slice before building the simulator —
+(1) add three narrow per-question metadata fields (`approach`, `item_style`,
+`concept_ids`) by batch-tagging the existing 424 questions (no wording
+changes), extending `questions.data.test.js` with matching schema/enum
+checks; (2) build the 180-question assembly algorithm against
+`eco_domain`/`eco_task` (already sufficient) per the audit's blueprint,
+wiring in `approach`/`item_style` balancing once (1) lands; (3) as a
+separate, later content batch (not part of the metadata slice), a small
+targeted top-up of the two shallow categories the audit identified
+(AI-related: 4 → ~15-20 questions; calculation/formula: ~27 → ~45-55
+questions). Other previously-identified follow-ups, in learner-impact
+order: (4) reviewed difficulty/cognitive-level metadata to enable
+diagnostics (the audit found no calibrated basis for this yet — needs
+attempt-based evidence first), (5) a decision on whether to build a
+Reference-sheet UI for `reference_sheet_catalog.json` (currently
+unbuilt/planned — see decision_log.md #13) or drop it, (6) a genuine bank
+question for c011 (holistic/systems thinking) so every concept lesson
+carries links, and (7) course content for the two glossary terms with no
+lesson coverage yet (RACI chart, risk appetite — see decision_log.md #13).
 
 Prior recommendation (superseded by this audit):
 Continue curriculum lesson depth authoring (Claude-chat lane), using

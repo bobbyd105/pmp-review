@@ -484,3 +484,62 @@ succeeds.
 
 **Approved by:** Mission agent (Claude), responding to the PR #24 review
 comment; subject to User re-review before approval/merge.
+
+---
+
+## Decision #14 — Exam Simulator Readiness Audit: audit and design only, no simulator implementation, no new metadata, no new questions
+
+**Date:** 2026-08-16
+
+**Decision:** Before building a 180-question mock-exam simulator, run a
+bounded audit of the merged PR #24 baseline (424 questions) rather than
+starting implementation directly. Scope was deliberately capped to: (1)
+metadata-schema gap analysis, (2) a reproducible composition-analysis
+script (`scripts/analyze-question-bank.mjs`, heuristic counts explicitly
+labeled as such), (3) a stratified sampled quality review, (4) a test/
+guardrail inventory, (5) a written exam-assembly algorithm blueprint, and
+(6) minimal documentation correction stating PR #24 is merged. No
+simulator UI, session state, or scoring history was built; no per-question
+metadata field was added; no new questions were generated; no existing
+question wording changed. Verdict: READY WITH SMALL METADATA REMEDIATION
+— see `docs/exam_simulator_readiness_audit.md`.
+
+**Alternatives considered:**
+1. Start building the simulator directly against the existing 7-field
+   schema (`eco_domain`, `eco_task`, plus the 5 content fields).
+2. Generate a large batch of new questions first, on the assumption 424
+   was too few for a 180-question exam.
+3. Add difficulty/complexity metadata now, estimated from question wording.
+
+**Why rejected:**
+1. The existing schema has no `approach`, `item_style`, or topic field, so
+   an assembler built directly against it could not honestly enforce the
+   requested predictive/adaptive/hybrid balance or item-style mix — it
+   would either silently fail to balance those dimensions or fabricate a
+   signal the data doesn't support.
+2. The audit's own math shows 424 questions comfortably support one
+   domain-weighted 180-question exam (each domain pool is >2x a single
+   exam's draw) and two fully non-overlapping exams; the real gap is
+   metadata and two specific shallow categories (AI: 4 questions;
+   calculation: ~27 heuristic), not aggregate bank size. Generating a
+   large new batch without first tagging `approach`/`item_style` would
+   also make the tagging backlog larger, not smaller.
+3. No calibrated difficulty rubric or attempt-based evidence exists yet;
+   a guessed label would need re-validation later and could mislabel
+   items in the meantime — explicitly deferred rather than faked.
+
+**Tradeoffs:** the simulator is not one branch closer to being usable by
+learners today — this branch produced findings and a blueprint, not
+working code. The next branch(es) still need to add the three metadata
+fields (mechanical batch-tagging, no wording changes) and implement the
+assembly algorithm before any learner-facing simulator exists.
+
+**Evidence:** `docs/content/exam_simulator_bank_analysis.md` (generated,
+reproducible via `npm run questions:analyze-bank`); full test suite and
+`npm run build` results recorded in `docs/exam_simulator_readiness_audit.md`
+and this branch's PR description; `lengthBias.test.js` and
+`answerDistribution.test.js` hard gates re-verified unchanged.
+
+**Approved by:** Audit agent (Claude) under this branch's task authority;
+subject to User review at draft-PR review — nothing merges to main without
+explicit User approval.
